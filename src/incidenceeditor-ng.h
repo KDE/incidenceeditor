@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_NG_H
 #define INCIDENCEEDITOR_NG_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KCalCore/Incidence>
 #include <AkonadiCore/Item>
@@ -34,7 +34,7 @@ namespace IncidenceEditorNG
  * approach to this complexity. An IncidenceEditor is an editor for a specific
  * part(s) of an Incidence.
  */
-class INCIDENCEEDITORS_NG_EXPORT IncidenceEditor : public QObject
+class INCIDENCEEDITOR_EXPORT IncidenceEditor : public QObject
 {
     Q_OBJECT
 public:
