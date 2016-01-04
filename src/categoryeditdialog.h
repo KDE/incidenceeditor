@@ -21,8 +21,6 @@
 #ifndef INCIDENCEEDITOR_CATEGORYEDITDIALOG_H
 #define INCIDENCEEDITOR_CATEGORYEDITDIALOG_H
 
-#include "incidenceeditors_ng_export.h"
-
 #include <QDialog>
 
 class QTreeWidgetItem;

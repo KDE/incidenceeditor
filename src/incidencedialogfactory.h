@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_INCIDENCEDIALOGFACTORY_H
 #define INCIDENCEEDITOR_INCIDENCEDIALOGFACTORY_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KCalCore/IncidenceBase>
 #include <Collection>
@@ -52,13 +52,13 @@ namespace IncidenceDialogFactory
  * TODO: Implement support for Journals.
  * NOTE: There is no editor for Incidence::TypeFreeBusy
  */
-INCIDENCEEDITORS_NG_EXPORT IncidenceDialog *create(
+INCIDENCEEDITOR_EXPORT IncidenceDialog *create(
     bool needsSaving,
     KCalCore::IncidenceBase::IncidenceType type,
     Akonadi::IncidenceChanger *changer,
     QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = 0);
 
-INCIDENCEEDITORS_NG_EXPORT IncidenceDialog *createTodoEditor(
+INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(
     const QString &summary,
     const QString &description,
     const QStringList &attachments,
@@ -70,7 +70,7 @@ INCIDENCEEDITORS_NG_EXPORT IncidenceDialog *createTodoEditor(
     bool cleanupAttachmentTemp,
     QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = 0);
 
-INCIDENCEEDITORS_NG_EXPORT IncidenceDialog *createEventEditor(
+INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(
     const QString &summary,
     const QString &description,
     const QStringList &attachments,

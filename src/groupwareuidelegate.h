@@ -16,7 +16,7 @@
   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <Akonadi/Calendar/ITIPHandler>
 
@@ -24,7 +24,7 @@
 namespace IncidenceEditorNG
 {
 
-class INCIDENCEEDITORS_NG_EXPORT GroupwareUiDelegate : public Akonadi::GroupwareUiDelegate
+class INCIDENCEEDITOR_EXPORT GroupwareUiDelegate : public Akonadi::GroupwareUiDelegate
 {
 public:
 

@@ -26,7 +26,7 @@
 namespace IncidenceEditorNG
 {
 
-class INCIDENCEEDITORS_NG_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
+class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
 {
 public:
     KOrganizerEditorConfig();

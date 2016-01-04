@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_INCIDENCEDIALOG_H
 #define INCIDENCEEDITOR_INCIDENCEDIALOG_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 #include "editoritemmanager.h"
 
 #include <KDialog>
@@ -36,7 +36,7 @@ namespace IncidenceEditorNG
 
 class IncidenceDialogPrivate;
 
-class INCIDENCEEDITORS_NG_EXPORT IncidenceDialog : public KDialog
+class INCIDENCEEDITOR_EXPORT IncidenceDialog : public KDialog
 {
     Q_OBJECT
 public:

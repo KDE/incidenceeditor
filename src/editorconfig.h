@@ -23,7 +23,7 @@
 #ifndef INCIDENCEEDITOR_EDITORCONFIG_H
 #define INCIDENCEEDITOR_EDITORCONFIG_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KCalCore/IncidenceBase>
 
@@ -42,7 +42,7 @@ namespace IncidenceEditorNG
  * to provide application specific configurations to the editor.
  *
  */
-class INCIDENCEEDITORS_NG_EXPORT EditorConfig
+class INCIDENCEEDITOR_EXPORT EditorConfig
 {
 public:
     EditorConfig();

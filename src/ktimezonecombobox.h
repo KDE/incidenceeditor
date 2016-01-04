@@ -24,7 +24,7 @@
 #ifndef INCIDENCEEDITOR_KTIMEZONECOMBOBOX_H
 #define INCIDENCEEDITOR_KTIMEZONECOMBOBOX_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KComboBox>
 #include <KDateTime>
@@ -43,7 +43,7 @@ namespace IncidenceEditorNG
  * KDateTime::Spec or to retrieve the KDateTime::Spec associated with the
  * selected item.
  */
-class INCIDENCEEDITORS_NG_EXPORT KTimeZoneComboBox : public KComboBox
+class INCIDENCEEDITOR_EXPORT KTimeZoneComboBox : public KComboBox
 {
     Q_OBJECT
 public:

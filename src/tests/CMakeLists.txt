@@ -9,7 +9,7 @@ if (BUILD_TESTING)
     KF5::AkonadiCore
     KF5::CalendarCore
     KF5::CalendarUtils
-    KF5::IncidenceEditorsng
+    KF5::IncidenceEditor
     KF5::CalendarSupport
     KF5::KdepimDBusInterfaces
   )

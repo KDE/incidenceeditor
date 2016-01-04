@@ -10,4 +10,4 @@ find_dependency(KF5Mime "@KMIME_LIB_VERSION@")
 
 
 
-include("${CMAKE_CURRENT_LIST_DIR}/KF5IncidenceEditorsngTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KF5IncidenceEditorTargets.cmake")

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.12)
 
-project(incidenceeditorsng)
+project(incidenceeditor)
 
 find_package(ECM 5.17.0 CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -20,7 +20,7 @@ include(ECMAddTests)
 
 
 set(KF5_VERSION "5.17.0")
-set(INCIDENCEEDITOR_LIB_VERSION "5.1.42")
+set(INCIDENCEEDITOR_LIB_VERSION "5.1.50")
 set(KDEPIMLIBS_LIB_VERSION "5.1.42")
 set(KDEPIM_LIB_VERSION "5.1.42")
 set(QT_REQUIRED_VERSION "5.4.0")
@@ -51,9 +51,9 @@ find_package(KF5CalendarUtils ${CALENDARUTILS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5CalendarCore ${KCALENDARCORE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 
-ecm_setup_version(${INCIDENCEEDITOR_LIB_VERSION} VARIABLE_PREFIX INCIDENCEEDITORSNG
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/incidenceeditorsng_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorsngConfigVersion.cmake"
+ecm_setup_version(${INCIDENCEEDITOR_LIB_VERSION} VARIABLE_PREFIX INCIDENCEEDITOR
+                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_version.h"
+                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorConfigVersion.cmake"
                         SOVERSION 5
 )
 
@@ -71,25 +71,25 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 remove_definitions("-DQT_NO_URL_CAST_FROM_STRING")
 remove_definitions( -DQT_NO_CAST_FROM_BYTEARRAY )
 ########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5IncidenceEditorsng")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5IncidenceEditor")
 
 ecm_configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5IncidenceEditorsngConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorsngConfig.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/KF5IncidenceEditorConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorConfig.cmake"
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorsngConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorsngConfigVersion.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/KF5IncidenceEditorConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )
 
-install(EXPORT KF5IncidenceEditorsngTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5IncidenceEditorsngTargets.cmake NAMESPACE KF5::)
+install(EXPORT KF5IncidenceEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5IncidenceEditorTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditorsng_version.h
+   ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
 

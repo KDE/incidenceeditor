@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_INCIDENCEDEFAULTS_H
 #define INCIDENCEEDITOR_INCIDENCEDEFAULTS_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KCalCore/Incidence>
 
@@ -30,7 +30,7 @@ namespace IncidenceEditorNG
 
 class IncidenceDefaultsPrivate;
 
-class INCIDENCEEDITORS_NG_EXPORT IncidenceDefaults
+class INCIDENCEEDITOR_EXPORT IncidenceDefaults
 {
 public:
     explicit IncidenceDefaults(bool cleanupAttachmentTEmporaryFiles = false);

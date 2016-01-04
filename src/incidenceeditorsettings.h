@@ -22,14 +22,14 @@
 #ifndef INCIDENCEEDITORSETTINGS_H
 #define INCIDENCEEDITORSETTINGS_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include "globalsettings_incidenceeditor.h"
 
 namespace IncidenceEditorNG
 {
 
-class INCIDENCEEDITORS_NG_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase
+class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase
 {
     Q_OBJECT
 

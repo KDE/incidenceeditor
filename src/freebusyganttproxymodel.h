@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_FREEBUSYGANTTPROXYMODEL_H
 #define INCIDENCEEDITOR_FREEBUSYGANTTPROXYMODEL_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <KDateTime>
 
@@ -45,7 +45,7 @@ namespace IncidenceEditorNG
  * @see FreeBusyItemMode
  * @see FreeBusyItem
  */
-class INCIDENCEEDITORS_NG_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
+class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
 {
 public:
     explicit FreeBusyGanttProxyModel(QObject *parent = Q_NULLPTR);

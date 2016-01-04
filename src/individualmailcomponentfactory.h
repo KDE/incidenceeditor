@@ -23,7 +23,7 @@
 #ifndef INCIDENCEEDITOR_INDUVIDUALMAILJOBFACTORY_H
 #define INCIDENCEEDITOR_INDUVIDUALMAILJOBFACTORY_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include "opencomposerjob.h"
 
@@ -97,7 +97,7 @@ private:
     IndividualMailDialog *mDialog;
 };
 
-class INCIDENCEEDITORS_NG_EXPORT IndividualMailComponentFactory : public Akonadi::ITIPHandlerComponentFactory
+class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::ITIPHandlerComponentFactory
 {
     Q_OBJECT
 public:

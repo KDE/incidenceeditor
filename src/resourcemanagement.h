@@ -23,7 +23,7 @@
 #ifndef RESOURCEMANAGEMENT_H
 #define RESOURCEMANAGEMENT_H
 
-#include "incidenceeditors_ng_export.h"
+#include "incidenceeditor_export.h"
 
 #include <Libkdepim/LdapClient>
 #include <Libkdepim/LdapClientSearch>
@@ -49,7 +49,7 @@ class AgendaView;
 namespace IncidenceEditorNG
 {
 
-class INCIDENCEEDITORS_NG_EXPORT ResourceManagement : public QDialog
+class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT
 public:
