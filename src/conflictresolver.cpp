@@ -265,12 +265,9 @@ void ConflictResolver::findAllFreeSlots()
         return;
     }
 
-//QT5
-#if 0
-    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin << " to " << end
+    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin.dateTime() << " to " << end.dateTime()
                                  << "; mSlotResolutionSeconds = " << mSlotResolutionSeconds
                                  << "; range = " << range;
-#endif
     // filter out attendees for which we don't have FB data
     // and which don't match the mandatory role contrstaint
     QList<KCalCore::FreeBusy::Ptr> filteredFBItems;
