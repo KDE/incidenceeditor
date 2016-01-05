@@ -36,6 +36,7 @@
 #include <QTemporaryFile>
 #include <QDir>
 
+#include <KIconEngine>
 #include <QDrag>
 #include <QKeyEvent>
 #include <QMimeData>
@@ -138,19 +139,12 @@ QPixmap AttachmentIconItem::icon(const QMimeType &mimeType,
                                  const QString &uri,
                                  bool binary)
 {
-//QT5 use KIconEngine
-#if 0
-    QString iconStr = mimeType.iconName(uri);
+    QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
         overlays << "emblem-link";
     }
-    return KIconLoader::global()->loadIcon(iconStr, KIconLoader::Desktop, 0,
-                                           KIconLoader::DefaultState,
-                                           overlays);
-#else
-    return QPixmap();
-#endif
+    return QIcon(new KIconEngine(iconStr, KIconLoader::global(), overlays)).pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
 }
 
 void AttachmentIconItem::readAttachment()
