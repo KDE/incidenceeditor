@@ -134,7 +134,6 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     mainLayout->addWidget(buttonBox);
 
-    QVariantList list;
     mModel = new KPIM::FreeBusyItemModel(this);
     mFreebusyCalendar.setModel(mModel);
 
