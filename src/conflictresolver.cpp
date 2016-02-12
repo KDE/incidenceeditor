@@ -310,34 +310,33 @@ void ConflictResolver::findAllFreeSlots()
     // etareti
     foreach (const KCalCore::FreeBusy::Ptr &currentFB, filteredFBItems) {
         Q_ASSERT(currentFB);   // sanity check
-        KCalCore::Period::List busyPeriods = currentFB->busyPeriods();
+        const KCalCore::Period::List busyPeriods = currentFB->busyPeriods();
         QVector<int> fbArray(range);
         fbArray.fill(0);   // initialize to zero
-        for (KCalCore::Period::List::Iterator it = busyPeriods.begin();
-                it != busyPeriods.end(); ++it) {
-            if (it->end() >= begin && it->start() <= end) {
+        for (const auto &period : busyPeriods) {
+            if (period.end() >= begin && period.start() <= end) {
                 int start_index = -1; // Initialize it to an invalid value.
                 int duration = -1;    // Initialize it to an invalid value.
                 // case1: the period is completely in our timeframe
-                if (it->end() <= end && it->start() >= begin) {
-                    start_index = begin.secsTo(it->start()) / mSlotResolutionSeconds;
-                    duration = it->start().secsTo(it->end()) / mSlotResolutionSeconds;
+                if (period.end() <= end && period.start() >= begin) {
+                    start_index = begin.secsTo(period.start()) / mSlotResolutionSeconds;
+                    duration = period.start().secsTo(period.end()) / mSlotResolutionSeconds;
                     duration -= 1; // vector starts at 0
                     // case2: the period begins before our timeframe begins
-                } else if (it->start() <= begin && it->end() <= end) {
+                } else if (period.start() <= begin && period.end() <= end) {
                     start_index = 0;
-                    duration = (begin.secsTo(it->end()) / mSlotResolutionSeconds) - 1;
+                    duration = (begin.secsTo(period.end()) / mSlotResolutionSeconds) - 1;
                     // case3: the period ends after our timeframe ends
-                } else if (it->end() >= end && it->start() >= begin) {
-                    start_index = begin.secsTo(it->start()) / mSlotResolutionSeconds;
+                } else if (period.end() >= end && period.start() >= begin) {
+                    start_index = begin.secsTo(period.start()) / mSlotResolutionSeconds;
                     duration = range - start_index - 1;
                     // case4: case2+case3: our timeframe is inside the period
-                } else if (it->start() <= begin  && it->end() >= end) {
+                } else if (period.start() <= begin  && period.end() >= end) {
                     start_index = 0;
                     duration = range - 1;
                 } else {
                     //QT5
-                    //qCCritical(INCIDENCEEDITOR_LOG) << "impossible condition reached" << it->start() << it->end();
+                    //qCCritical(INCIDENCEEDITOR_LOG) << "impossible condition reached" << period.start() << period.end();
                 }
                 //      qCDebug(INCIDENCEEDITOR_LOG) << start_index << "+" << duration << "="
                 //               << start_index + duration << "<=" << range;
