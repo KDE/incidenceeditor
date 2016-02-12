@@ -88,9 +88,8 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
         mUi->mInlineCheck->setEnabled(true);
         mUi->mStackedWidget->setCurrentIndex(1);
         mUi->mSizeLabel->setText(QStringLiteral("%1 (%2)").
-                                 arg(KIO::convertSize(item->attachment()->size())).
-                                 arg(KLocale::global()->formatNumber(
-                                         item->attachment()->size(), 0)));
+                                 arg(KIO::convertSize(item->attachment()->size()),
+                                     KLocale::global()->formatNumber(item->attachment()->size(), 0)));
     }
 
     connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this, &AttachmentEditDialog::inlineChanged);
