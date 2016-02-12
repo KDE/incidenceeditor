@@ -794,7 +794,7 @@ void IncidenceRecurrence::selectYearlyItem(KCalCore::Recurrence *recurrence, ush
     } else if (recurenceType == KCalCore::Recurrence::rYearlyMonth) {
 
         const int day = recurrence->yearDates().isEmpty() ? currentDate().day() :
-                        recurrence->yearDates().first();
+                        recurrence->yearDates().at(0);
 
         /*
         int month = currentDate().month();
@@ -823,7 +823,7 @@ void IncidenceRecurrence::selectYearlyItem(KCalCore::Recurrence *recurrence, ush
         // count is the nth weekday of the month or the ith last weekday of the month.
         int count = (currentDate().day() - 1) / 7;
         if (!recurrence->yearPositions().isEmpty()) {
-            count = recurrence->yearPositions().first().pos();
+            count = recurrence->yearPositions().at(0).pos();
         }
 
         // TODO check month,count and day to be correct values with respect to what is
