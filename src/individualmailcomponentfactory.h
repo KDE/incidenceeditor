@@ -29,7 +29,6 @@
 
 #include <mailtransport/messagequeuejob.h>
 #include <Akonadi/Calendar/IncidenceChanger>
-#include <KIdentityManagement/Identity>
 
 namespace IncidenceEditorNG
 {

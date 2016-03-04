@@ -33,7 +33,6 @@
 #include <QHeaderView>
 #include <QList>
 #include <QStringList>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

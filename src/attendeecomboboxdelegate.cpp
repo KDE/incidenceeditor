@@ -24,12 +24,10 @@
 
 #include "attendeeline.h"
 
-#include <KLocalizedString>
-
+#include <QMenu>
 #include <QAbstractItemView>
 #include <QApplication>
 #include <QHelpEvent>
-#include <QMenu>
 #include <QToolTip>
 #include <QWhatsThis>
 

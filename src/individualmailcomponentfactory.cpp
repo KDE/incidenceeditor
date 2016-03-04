@@ -24,14 +24,11 @@
 #include "individualmaildialog.h"
 
 #include <CalendarSupport/KCalPrefs>
-#include <KEmailAddress>
 
 #include <KMessageBox>
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
-#include <QDBusInterface>
-#include <QDBusReply>
 
 using namespace IncidenceEditorNG;
 

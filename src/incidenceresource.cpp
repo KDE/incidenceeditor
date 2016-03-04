@@ -31,11 +31,9 @@
 
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
-#include <KMessageBox>
 #include <KGlobalSettings>
 
 #include <QCompleter>
-#include <QDebug>
 
 using namespace IncidenceEditorNG;
 

@@ -28,7 +28,6 @@
 #include <KCompletionBox>
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
-#include <KIconLoader>
 
 #include <QBoxLayout>
 #include <QKeyEvent>

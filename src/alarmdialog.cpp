@@ -24,7 +24,6 @@
 
 #include <KEmailAddress>
 #include <KLocalizedString>
-#include <KConfigGroup>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>

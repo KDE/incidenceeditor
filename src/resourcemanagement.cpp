@@ -36,9 +36,6 @@
 #include <KCalCore/MemoryCalendar>
 
 #include <KDGantt2/KDGanttGraphicsView>
-#include <KDGantt2/KDGanttView>
-#include <KDGantt2/KDGanttDateTimeGrid>
-#include <KDGantt2/KDGanttAbstractRowController>
 
 #include <akonadi/calendar/freebusymanager.h>
 #include <kldap/ldapobject.h>
@@ -46,14 +43,11 @@
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
-#include <QPointer>
 #include <QPushButton>
-#include <QSplitter>
 #include <QStringList>
 #include <QLabel>
 #include <QColor>
 
-#include <QDebug>
 
 using namespace IncidenceEditorNG;
 

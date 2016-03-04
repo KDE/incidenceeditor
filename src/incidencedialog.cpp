@@ -52,7 +52,6 @@
 
 #include <KMessageBox>
 #include <KSystemTimeZones>
-#include <KIconLoader>
 #include <KSharedConfig>
 
 #include <QCloseEvent>

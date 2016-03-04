@@ -30,7 +30,6 @@
 #include <KCalCore/Attachment>
 #include <QUrl>
 #include <QDialog>
-#include <QMimeDatabase>
 #include <QMimeType>
 
 class QPushButton;

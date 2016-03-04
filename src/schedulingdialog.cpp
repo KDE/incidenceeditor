@@ -24,9 +24,7 @@
 #include "visualfreebusywidget.h"
 #include <KCalUtils/Stringify>
 
-#include <KIconLoader>
 #include <KLocalizedString>
-#include <KConfigGroup>
 
 #include <QDialogButtonBox>
 #include <QLocale>

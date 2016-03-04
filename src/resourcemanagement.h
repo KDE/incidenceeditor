@@ -35,7 +35,6 @@
 
 #include <QDialog>
 #include <QStringList>
-#include <QStringListModel>
 
 class  Ui_resourceManagement;
 

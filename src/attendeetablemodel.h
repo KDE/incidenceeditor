@@ -25,7 +25,6 @@
 #include <QAbstractTableModel>
 #include <QSortFilterProxyModel>
 #include <QModelIndex>
-#include <QVector>
 
 namespace IncidenceEditorNG
 {

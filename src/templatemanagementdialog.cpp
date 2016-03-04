@@ -44,7 +44,6 @@
 #include <KLocalizedString>
 
 #include <QTimer>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

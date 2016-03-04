@@ -27,7 +27,6 @@
 #include "incidenceattendee.h"
 #include "attendeetablemodel.h"
 
-#include <QModelIndex>
 #include <QCompleter>
 
 namespace Ui

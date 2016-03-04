@@ -31,11 +31,9 @@
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <KLocale>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QMimeDatabase>
-#include <QMimeType>
 
 using namespace IncidenceEditorNG;
 

@@ -44,7 +44,6 @@
 
 #include "incidenceeditor_debug.h"
 #include <QTreeView>
-#include <KIconLoader>
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KGlobalSettings>

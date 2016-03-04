@@ -26,7 +26,6 @@
 
 #include <QIcon>
 #include <KLocalizedString>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
