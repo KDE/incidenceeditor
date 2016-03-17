@@ -48,7 +48,6 @@
 #include <QLabel>
 #include <QColor>
 
-
 using namespace IncidenceEditorNG;
 
 class FreebusyViewCalendar : public EventViews::ViewCalendar
