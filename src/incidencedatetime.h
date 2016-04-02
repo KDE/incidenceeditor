@@ -130,7 +130,7 @@ private:
     bool timeZonesAreLocal(const KDateTime &start, const KDateTime &end);
 
 private:
-    KCalCore::ICalTimeZones *mTimeZones;
+    QVector<QByteArray> mTimeZones;
     Ui::EventOrTodoDesktop *mUi;
 
     QDate mActiveDate;

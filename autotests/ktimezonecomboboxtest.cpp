@@ -22,16 +22,20 @@
 
 #include "qtest.h"
 
+#include <KTimeZone>
+
 QTEST_MAIN(KTimeZoneComboBoxTest)
 
 void KTimeZoneComboBoxTest::test_timeSpec()
 {
     IncidenceEditorNG::KTimeZoneComboBox combo;
     KDateTime::Spec spec;
-
     spec.setType(KDateTime::LocalZone);
     combo.selectTimeSpec(spec);
-    QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::TimeZone);   // KDateTime::Spec stores it as TimeZone, not LocalTime
+    if (spec.timeZone().name() != "UTC")
+        QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::TimeZone);   // KDateTime::Spec stores it as TimeZone, not LocalTime
+    else
+        QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::UTC);
 
     spec = KDateTime::Spec(KDateTime::ClockTime);
     combo.selectTimeSpec(spec);

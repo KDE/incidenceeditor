@@ -28,11 +28,13 @@
 
 #include <KComboBox>
 #include <KDateTime>
+#include <QVector>
 
 namespace KCalCore
 {
 class ICalTimeZones;
 }
+class QByteArray;
 
 namespace IncidenceEditorNG
 {
@@ -63,7 +65,7 @@ public:
       Sets additional time @p zones (usually from a calendar) which should be displayed
       additionally to the system time zones.
     */
-    void setAdditionalTimeZones(const KCalCore::ICalTimeZones *zones);
+    void setAdditionalTimeZones(const QVector<QByteArray> &zones);
 
     /**
      * Selects the item in the combobox corresponding to the given @p spec.

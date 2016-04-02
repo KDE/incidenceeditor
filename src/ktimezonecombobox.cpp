@@ -22,7 +22,10 @@
 #include <KCalCore/ICalTimeZones>
 
 #include <KLocalizedString>
-#include <KSystemTimeZone>
+#include <KTimeZone>
+#include <KSystemTimeZones>
+
+#include <QTimeZone>
 
 using namespace IncidenceEditorNG;
 
@@ -36,7 +39,7 @@ public:
     void fillComboBox();
     KTimeZoneComboBox *const mParent;
     QStringList mZones;
-    const KCalCore::ICalTimeZones *mAdditionalZones;
+    QVector<QByteArray> mAdditionalZones;
 };
 
 void KTimeZoneComboBox::Private::fillComboBox()
@@ -45,24 +48,19 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.clear();
 
     // Read all system time zones
-    const KTimeZones::ZoneMap timezones = KSystemTimeZones::zones();
-    for (KTimeZones::ZoneMap::ConstIterator it = timezones.begin(); it != timezones.end(); ++it) {
-        mZones.append(it.key().toUtf8());
+    foreach (const auto &id, QTimeZone::availableTimeZoneIds()) {
+        mZones.push_back(id);
     }
     mZones.sort();
 
     // Prepend the list of additional timezones
-    if (mAdditionalZones) {
-        const KCalCore::ICalTimeZones::ZoneMap calzones = mAdditionalZones->zones();
-        for (KCalCore::ICalTimeZones::ZoneMap::ConstIterator it = calzones.begin();
-                it != calzones.end(); ++it) {
-            mZones.prepend(it.key().toUtf8());
-        }
-    }
+    foreach (const auto &id, mAdditionalZones)
+        mZones.prepend(id);
+
     // Prepend Local, UTC and Floating, for convenience
     mZones.prepend(QStringLiteral("UTC"));        // do not use i18n here  index=2
     mZones.prepend(QStringLiteral("Floating"));   // do not use i18n here  index=1
-    mZones.prepend(KSystemTimeZones::local().name());    // index=0
+    mZones.prepend(QTimeZone::systemTimeZoneId());    // index=0
 
     // Put translated zones into the combobox
     foreach (const QString &z, mZones) {
@@ -76,7 +74,7 @@ KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
     d->fillComboBox();
 }
 
-void KTimeZoneComboBox::setAdditionalTimeZones(const KCalCore::ICalTimeZones *zones)
+void KTimeZoneComboBox::setAdditionalTimeZones(const QVector<QByteArray> &zones)
 {
     d->mAdditionalZones = zones;
     d->fillComboBox();
@@ -129,8 +127,8 @@ KDateTime::Spec KTimeZoneComboBox::selectedTimeSpec() const
             if (systemTz.isValid()) {
                 spec.setType(systemTz);
             } else {
-                const KCalCore::ICalTimeZone additionalTz =
-                    d->mAdditionalZones->zone(d->mZones[currentIndex()]);
+                KCalCore::ICalTimeZones zones;
+                const KCalCore::ICalTimeZone additionalTz = zones.zone(d->mZones[currentIndex()]);
                 spec.setType(additionalTz);
             }
         }

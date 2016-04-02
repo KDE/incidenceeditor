@@ -69,7 +69,7 @@ static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
 }
 
 IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(0), mTimeZones(new KCalCore::ICalTimeZones), mUi(ui),
+    : IncidenceEditor(0), mUi(ui),
       mTimezoneCombosWereVisibile(false)
 {
     setTimeZonesVisibility(false);
@@ -104,7 +104,6 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
 
 IncidenceDateTime::~IncidenceDateTime()
 {
-    delete mTimeZones;
 }
 
 bool IncidenceDateTime::eventFilter(QObject *obj, QEvent *event)
@@ -746,16 +745,14 @@ void IncidenceDateTime::setDateTimes(const KDateTime &start, const KDateTime &en
     if (startSpec.type() == KDateTime::TimeZone) {
         const KTimeZone systemTz = KSystemTimeZones::zone(startSpec.timeZone().name());
         if (!systemTz.isValid()) {
-            const KCalCore::ICalTimeZone icalTz(startSpec.timeZone());
-            mTimeZones->add(icalTz);
+            mTimeZones.push_back(startSpec.timeZone().name().toUtf8());
         }
     }
 
     if (endSpec.type() == KDateTime::TimeZone) {
         const KTimeZone systemTz = KSystemTimeZones::zone(endSpec.timeZone().name());
         if (!systemTz.isValid()) {
-            const KCalCore::ICalTimeZone icalTz(endSpec.timeZone());
-            mTimeZones->add(icalTz);
+            mTimeZones.push_back(endSpec.timeZone().name().toUtf8());
         }
     }
 
