@@ -1668,6 +1668,13 @@
     </layout>
    </item>
    <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="CalendarSupport::MessageWidget" name="mMessageWidget" native="true">
      <property name="visible">
       <bool>false</bool>

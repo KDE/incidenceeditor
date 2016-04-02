@@ -121,7 +121,6 @@ public:
     void load(const Akonadi::Item &item) Q_DECL_OVERRIDE;
     Akonadi::Item save(const Akonadi::Item &item) Q_DECL_OVERRIDE;
     Akonadi::Collection selectedCollection() const Q_DECL_OVERRIDE;
-    void slotButtonClicked(int button);
 
     void reject(RejectReason reason, const QString &errorMessage = QString()) Q_DECL_OVERRIDE;
 };
@@ -139,7 +138,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
       mInitiallyDirty(false)
 {
     Q_Q(IncidenceDialog);
-    mUi->setupUi(q->mainWidget());
+    mUi->setupUi(q);
     QGridLayout *layout = new QGridLayout(mUi->mCalSelectorPlaceHolder);
     layout->setSpacing(0);
     layout->addWidget(mCalSelector);
@@ -464,7 +463,7 @@ void IncidenceDialogPrivate::updateResourceCount(int newCount)
 void IncidenceDialogPrivate::updateButtonStatus(bool isDirty)
 {
     Q_Q(IncidenceDialog);
-    q->enableButton(KDialog::Apply, isDirty || mInitiallyDirty);
+    mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(isDirty || mInitiallyDirty);
 }
 
 bool IncidenceDialogPrivate::containsPayloadIdentifiers(
@@ -491,8 +490,8 @@ void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction,
         mItemManager->save();
     } else {
         updateButtonStatus(isDirty());
-        q->enableButtonOk(true);
-        q->enableButtonCancel(true);
+        mUi->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+        mUi->buttonBox->button(QDialogButtonBox::Cancel)->setEnabled(true);
     }
 }
 
@@ -514,9 +513,9 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 
         // Set the buttons to a reasonable state as well (ok and apply should be
         // disabled at this point).
-        q->enableButtonOk(true);
-        q->enableButtonCancel(true);
-        q->enableButtonApply(isDirty());
+        mUi->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+        mUi->buttonBox->button(QDialogButtonBox::Cancel)->setEnabled(true);
+        mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(isDirty());
     }
 
     if (saveAction == EditorItemManager::Create) {
@@ -671,7 +670,7 @@ void IncidenceDialogPrivate::reject(RejectReason reason, const QString &errorMes
 
 IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer,
                                  QWidget *parent, Qt::WFlags flags)
-    : KDialog(parent, flags),
+    : QDialog(parent, flags),
       d_ptr(new IncidenceDialogPrivate(changer, this))
 {
     Q_D(IncidenceDialog);
@@ -680,22 +679,16 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer,
     d->mUi->mTabWidget->setCurrentIndex(0);
     d->mUi->mSummaryEdit->setFocus();
 
-    setButtons(KDialog::Ok | KDialog::Apply | KDialog::Cancel | KDialog::Default);
-    setButtonToolTip(KDialog::Apply,
-                     i18nc("@info:tooltip", "Save current changes"));
-    setButtonToolTip(KDialog::Ok,
-                     i18nc("@action:button", "Save changes and close dialog"));
-    setButtonToolTip(KDialog::Cancel,
-                     i18nc("@action:button", "Discard changes and close dialog"));
-    setDefaultButton(KDialog::Ok);
-    enableButton(Apply, false);
+    d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(i18nc("@info:tooltip", "Save current changes"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setToolTip(i18nc("@action:button", "Save changes and close dialog"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(i18nc("@action:button", "Discard changes and close dialog"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
-    setButtonText(Default, i18nc("@action:button", "&Templates..."));
-    setButtonIcon(Default, QIcon::fromTheme(QStringLiteral("project-development-new-template")));
-    setButtonToolTip(Default,
-                     i18nc("@info:tooltip",
-                           "Manage templates for this item"));
-    setButtonWhatsThis(Default,
+    auto defaultButton = d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults);
+    defaultButton->setText(i18nc("@action:button", "&Templates..."));
+    defaultButton->setIcon(QIcon::fromTheme(QStringLiteral("project-development-new-template")));
+    defaultButton->setToolTip(i18nc("@info:tooltip", "Manage templates for this item"));
+    defaultButton->setWhatsThis(
                        i18nc("@info:whatsthis",
                              "Push this button to show a dialog that helps "
                              "you manage a set of templates. Templates "
@@ -703,8 +696,9 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer,
                              "by putting your favorite default values into "
                              "the editor automatically."));
 
+    connect(d->mUi->buttonBox, &QDialogButtonBox::clicked, this, &IncidenceDialog::slotButtonClicked);
+
     setModal(false);
-    showButtonSeparator(false);
 
     connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked,
             d->mIeAttendee, &IncidenceAttendee::acceptForMe);
@@ -786,51 +780,43 @@ QObject *IncidenceDialog::typeAheadReceiver() const
     return d->mUi->mSummaryEdit;
 }
 
-void IncidenceDialog::slotButtonClicked(int button)
+void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
 {
     Q_D(IncidenceDialog);
 
-    switch (button) {
-    case KDialog::Ok: {
+    if (d->mUi->buttonBox->button(QDialogButtonBox::Ok) == button) {
         if (d->isDirty() || d->mInitiallyDirty) {
-            enableButtonOk(false);
-            enableButtonCancel(false);
-            enableButtonApply(false);
+            d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+            d->mUi->buttonBox->button(QDialogButtonBox::Cancel)->setEnabled(false);
+            d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
             d->mCloseOnSave = true;
             d->mInitiallyDirty = false;
             d->mItemManager->save();
         } else {
             close();
         }
-        break;
-    }
-    case KDialog::Apply: {
-        enableButtonOk(false);
-        enableButtonCancel(false);
-        enableButtonApply(false);
+    } else if (d->mUi->buttonBox->button(QDialogButtonBox::Apply) == button) {
+        d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+        d->mUi->buttonBox->button(QDialogButtonBox::Cancel)->setEnabled(false);
+        d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
         d->mCloseOnSave = false;
         d->mInitiallyDirty = false;
         d->mItemManager->save();
-        break;
-    }
-    case KDialog::Cancel:
+    } else if (d->mUi->buttonBox->button(QDialogButtonBox::Cancel) == button) {
         if (d->isDirty() &&
                 KMessageBox::questionYesNo(
                     this,
                     i18nc("@info", "Do you really want to cancel?"),
                     i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
-            KDialog::reject(); // Discard current changes
+            QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
-            KDialog::reject(); // No pending changes, just close the dialog.
+            QDialog::reject(); // No pending changes, just close the dialog.
         } // else { // the user wasn't finished editting after all }
-        break;
-    case KDialog::Default:
+    } else if (d->mUi->buttonBox-> button(QDialogButtonBox::RestoreDefaults)) {
         d->manageTemplates();
-        break;
-    default:
+    } else {
         Q_ASSERT(false);   // Shouldn't happen
-        break;
     }
 }
 
@@ -842,11 +828,11 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
                 this,
                 i18nc("@info", "Do you really want to cancel?"),
                 i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
-        KDialog::reject(); // Discard current changes
-        KDialog::closeEvent(event);
+        QDialog::reject(); // Discard current changes
+        QDialog::closeEvent(event);
     } else if (!d->isDirty()) {
-        KDialog::reject(); // No pending changes, just close the dialog.
-        KDialog::closeEvent(event);
+        QDialog::reject(); // No pending changes, just close the dialog.
+        QDialog::closeEvent(event);
     } else {
         event->ignore();
     }
@@ -868,7 +854,7 @@ void IncidenceDialog::handleSelectedCollectionChange(const Akonadi::Collection &
 {
     Q_D(IncidenceDialog);
     if (d->mItem.parentCollection().isValid()) {
-        enableButton(Apply, collection.id() != d->mItem.parentCollection().id());
+        d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(collection.id() != d->mItem.parentCollection().id());
     }
 }
 

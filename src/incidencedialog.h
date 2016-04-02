@@ -24,7 +24,10 @@
 #include "incidenceeditor_export.h"
 #include "editoritemmanager.h"
 
-#include <KDialog>
+#include <QDate>
+#include <QDialog>
+
+class QAbstractButton;
 
 namespace Akonadi
 {
@@ -36,7 +39,7 @@ namespace IncidenceEditorNG
 
 class IncidenceDialogPrivate;
 
-class INCIDENCEEDITOR_EXPORT IncidenceDialog : public KDialog
+class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -93,7 +96,7 @@ protected:
     void closeEvent(QCloseEvent *event) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
-    void slotButtonClicked(int button) Q_DECL_OVERRIDE;
+    void slotButtonClicked(QAbstractButton *button);
     void handleSelectedCollectionChange(const Akonadi::Collection &collection);
 
 private:
