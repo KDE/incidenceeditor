@@ -28,6 +28,7 @@
 
 #include "incidenceeditor_debug.h"
 #include <KSystemTimeZone>
+#include <QTimeZone>
 
 using namespace IncidenceEditorNG;
 
@@ -743,14 +744,14 @@ void IncidenceDateTime::setDateTimes(const KDateTime &start, const KDateTime &en
 
     // Combo boxes only have system time zones
     if (startSpec.type() == KDateTime::TimeZone) {
-        const KTimeZone systemTz = KSystemTimeZones::zone(startSpec.timeZone().name());
+        const auto systemTz = QTimeZone(startSpec.timeZone().name().toUtf8());
         if (!systemTz.isValid()) {
             mTimeZones.push_back(startSpec.timeZone().name().toUtf8());
         }
     }
 
     if (endSpec.type() == KDateTime::TimeZone) {
-        const KTimeZone systemTz = KSystemTimeZones::zone(endSpec.timeZone().name());
+        const auto systemTz = QTimeZone(endSpec.timeZone().name().toUtf8());
         if (!systemTz.isValid()) {
             mTimeZones.push_back(endSpec.timeZone().name().toUtf8());
         }
