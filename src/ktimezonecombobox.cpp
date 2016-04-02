@@ -76,13 +76,6 @@ KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
     d->fillComboBox();
 }
 
-KTimeZoneComboBox::KTimeZoneComboBox(const KCalCore::ICalTimeZones *zones, QWidget *parent)
-    : KComboBox(parent), d(new KTimeZoneComboBox::Private(this))
-{
-    d->mAdditionalZones = zones;
-    d->fillComboBox();
-}
-
 void KTimeZoneComboBox::setAdditionalTimeZones(const KCalCore::ICalTimeZones *zones)
 {
     d->mAdditionalZones = zones;

@@ -55,14 +55,6 @@ public:
     explicit KTimeZoneComboBox(QWidget *parent = Q_NULLPTR);
 
     /**
-     * Creates a new time zone combobox.
-     *
-     * @param additionalZones Additional time zones that shall be included in the combobox.
-     * @param parent The parent widget.
-     */
-    explicit KTimeZoneComboBox(const KCalCore::ICalTimeZones *additionalZones, QWidget *parent = Q_NULLPTR);
-
-    /**
      * Destroys the time zone combobox.
      */
     ~KTimeZoneComboBox();
