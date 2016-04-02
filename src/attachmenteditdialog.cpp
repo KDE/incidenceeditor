@@ -30,7 +30,7 @@
 #include <KLocalizedString>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
-#include <KLocale>
+#include <QLocale>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QMimeDatabase>
@@ -87,7 +87,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
         mUi->mStackedWidget->setCurrentIndex(1);
         mUi->mSizeLabel->setText(QStringLiteral("%1 (%2)").
                                  arg(KIO::convertSize(item->attachment()->size()),
-                                     KLocale::global()->formatNumber(item->attachment()->size(), 0)));
+                                     QLocale().toString(item->attachment()->size())));
     }
 
     connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this, &AttachmentEditDialog::inlineChanged);
