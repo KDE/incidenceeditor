@@ -18,9 +18,10 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 
+set(PIM_VERSION "5.2.40")
 
 set(KF5_VERSION "5.19.0")
-set(INCIDENCEEDITOR_LIB_VERSION "5.2.40")
+set(INCIDENCEEDITOR_LIB_VERSION ${PIM_VERSION})
 set(KDEPIMLIBS_LIB_VERSION "5.2.40")
 set(KDEPIM_LIB_VERSION "5.2.40")
 set(QT_REQUIRED_VERSION "5.4.0")
