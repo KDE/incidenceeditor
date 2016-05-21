@@ -94,6 +94,7 @@ public:
 
     QString iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE
     {
+        Q_UNUSED(incidence);
         return QString();
     }
 

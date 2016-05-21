@@ -113,6 +113,7 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
 
 void IncidenceResource::load(const KCalCore::Incidence::Ptr &incidence)
 {
+    Q_UNUSED(incidence);
     slotDateChanged();
 }
 
@@ -123,6 +124,7 @@ void IncidenceResource::slotDateChanged()
 
 void IncidenceResource::save(const KCalCore::Incidence::Ptr &incidence)
 {
+    Q_UNUSED(incidence);
     //all logic inside IncidenceAtendee (using same model)
 }
 
@@ -197,4 +199,3 @@ int IncidenceResource::resourceCount() const
     return c;
 
 }
-
