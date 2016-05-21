@@ -325,17 +325,6 @@ bool AttendeeLine::isModified() const
     return mModified || mEdit->isModified();
 }
 
-void AttendeeLine::moveCompletionPopup()
-{
-    if (mEdit->completionBox(false)) {
-        if (mEdit->completionBox()->isVisible()) {
-            // ### trigger moving, is there a nicer way to do that?
-            mEdit->completionBox()->hide();
-            mEdit->completionBox()->show();
-        }
-    }
-}
-
 int AttendeeLine::setColumnWidth(int w)
 {
     w = qMax(w, mRoleCombo->sizeHint().width());
