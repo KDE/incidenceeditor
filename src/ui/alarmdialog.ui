@@ -14,6 +14,18 @@
    <string>Alarms</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
@@ -247,7 +259,16 @@
        <property name="spacing">
         <number>6</number>
        </property>
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -264,7 +285,16 @@
      </widget>
      <widget class="QWidget" name="AudioStack">
       <layout class="QGridLayout" name="gridLayout_2">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item row="0" column="0">
@@ -313,7 +343,16 @@
      </widget>
      <widget class="QWidget" name="ApplicationStack">
       <layout class="QGridLayout" name="gridLayout_3">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item row="0" column="0">
@@ -379,7 +418,16 @@
      </widget>
      <widget class="QWidget" name="EmailStack">
       <layout class="QGridLayout" name="gridLayout_4">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item row="0" column="0">
@@ -440,18 +488,23 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <header>Libkdepim/AddresseeLineEdit</header>
   </customwidget>
   <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
    <class>KTextEdit</class>
    <extends>QTextEdit</extends>
    <header>ktextedit.h</header>
   </customwidget>
   <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>KUrlRequester</class>
-   <extends>QFrame</extends>
+   <extends>QWidget</extends>
    <header>kurlrequester.h</header>
   </customwidget>
  </customwidgets>
