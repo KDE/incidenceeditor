@@ -142,7 +142,7 @@ QPixmap AttachmentIconItem::icon(const QMimeType &mimeType,
     QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
-        overlays << "emblem-link";
+        overlays << QStringLiteral("emblem-link");
     }
     return QIcon(new KIconEngine(iconStr, KIconLoader::global(), overlays)).pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
 }
@@ -195,7 +195,7 @@ QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &
     QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
 
     if (!patterns.empty()) {
-        file = new QTemporaryFile(QDir::tempPath() + QLatin1String("/attachementview_XXXXX") + patterns.first().remove('*'));
+        file = new QTemporaryFile(QDir::tempPath() + QLatin1String("/attachementview_XXXXX") + patterns.first().remove(QLatin1Char('*')));
     } else {
         file = new QTemporaryFile();
     }
