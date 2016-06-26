@@ -156,7 +156,7 @@ void AttachmentIconItem::readAttachment()
     if (mAttachment->mimeType().isEmpty() || !(db.mimeTypeForName(mAttachment->mimeType()).isDefault())) {
         QMimeType mimeType;
         if (mAttachment->isUri()) {
-            mimeType = db.mimeTypeForUrl(mAttachment->uri());
+            mimeType = db.mimeTypeForUrl(QUrl(mAttachment->uri()));
         } else {
             mimeType = db.mimeTypeForData(mAttachment->decodedData());
         }
@@ -206,7 +206,7 @@ QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &
     // read-only not to give the idea that it could be written to
     file->setPermissions(QFile::ReadUser);
     file->write(QByteArray::fromBase64(attachment->data()));
-    mTempFiles.insert(attachment, file->fileName());
+    mTempFiles.insert(attachment, QUrl::fromLocalFile(file->fileName()));
     file->close();
     return mTempFiles.value(attachment);
 }
@@ -222,7 +222,7 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
             if (item->isBinary()) {
                 urls.append(tempFileForAttachment(item->attachment()));
             } else {
-                urls.append(item->uri());
+                urls.append(QUrl(item->uri()));
             }
             labels.append(QUrl::toPercentEncoding(item->label()));
         }
@@ -230,7 +230,7 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
     if (selectionMode() == NoSelection) {
         AttachmentIconItem *item = static_cast<AttachmentIconItem *>(currentItem());
         if (item) {
-            urls.append(item->uri());
+            urls.append(QUrl(item->uri()));
             labels.append(QUrl::toPercentEncoding(item->label()));
         }
     }

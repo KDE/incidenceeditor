@@ -255,7 +255,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
 
     QUrl sourceUrl;
     if (att->isUri()) {
-        sourceUrl = att->uri();
+        sourceUrl = QUrl(att->uri());
     } else {
         sourceUrl = mAttachmentView->tempFileForAttachment(att);
     }
@@ -287,7 +287,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
 
     KCalCore::Attachment::Ptr att = attitem->attachment();
     if (att->isUri()) {
-        Q_EMIT openURL(att->uri());
+        Q_EMIT openURL(QUrl(att->uri()));
     } else {
         KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), 0, true);
     }
@@ -393,7 +393,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         labels.reserve(addressees.count());
         for (KContacts::Addressee::List::ConstIterator it = addressees.constBegin();
                 it != addressees.constEnd(); ++it) {
-            urls.append(QString(QLatin1String("uid:") + (*it).uid()));
+            urls.append(QUrl(QStringLiteral("uid:") + (*it).uid()));
             // there is some weirdness about realName(), hence fromUtf8
             labels.append(QString::fromUtf8((*it).realName().toLatin1()));
         }
@@ -413,7 +413,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         QStringList lst = text.split(QLatin1Char('\n'), QString::SkipEmptyParts);
         urls.reserve(lst.count());
         for (QStringList::ConstIterator it = lst.constBegin(); it != lst.constEnd(); ++it) {
-            urls.append(*it);
+            urls.append(QUrl(*it));
         }
         probablyWeHaveUris = true;
     }
@@ -592,11 +592,11 @@ void IncidenceAttachment::addUriAttachment(const QString &uri,
                 item->setMimeType(QStringLiteral("message/news"));
             } else {
                 QMimeDatabase db;
-                item->setMimeType(db.mimeTypeForUrl(uri).name());
+                item->setMimeType(db.mimeTypeForUrl(QUrl(uri)).name());
             }
         }
     } else {
-        auto job = KIO::storedGet(uri);
+        auto job = KIO::storedGet(QUrl(uri));
         KJobWidgets::setWindow(job, 0);
         if (job->exec()) {
             const QByteArray data = job->data();

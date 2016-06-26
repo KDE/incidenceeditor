@@ -83,7 +83,7 @@ bool KOrganizerEditorConfig::defaultAudioFileReminders() const
 
 QUrl KOrganizerEditorConfig::audioFilePath() const
 {
-    return CalendarSupport::KCalPrefs::instance()->audioFilePath();
+    return QUrl::fromLocalFile(CalendarSupport::KCalPrefs::instance()->audioFilePath());
 }
 
 int KOrganizerEditorConfig::reminderTime() const

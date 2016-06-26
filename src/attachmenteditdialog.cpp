@@ -80,7 +80,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
     mUi->mInlineCheck->setEnabled(false);
     if (item->attachment()->isUri() || item->attachment()->data().isEmpty()) {
         mUi->mStackedWidget->setCurrentIndex(0);
-        mUi->mURLRequester->setUrl(item->uri());
+        mUi->mURLRequester->setUrl(QUrl(item->uri()));
         urlChanged(item->uri());
     } else {
         mUi->mInlineCheck->setEnabled(true);
@@ -164,9 +164,9 @@ void AttachmentEditDialog::inlineChanged(int state)
     if (state == Qt::Unchecked && mUi->mStackedWidget->currentIndex() == 1) {
         mUi->mStackedWidget->setCurrentIndex(0);
         if (!mItem->savedUri().isEmpty()) {
-            mUi->mURLRequester->setUrl(mItem->savedUri());
+            mUi->mURLRequester->setUrl(QUrl(mItem->savedUri()));
         } else {
-            mUi->mURLRequester->setUrl(mItem->uri());
+            mUi->mURLRequester->setUrl(QUrl(mItem->uri()));
         }
     }
 }

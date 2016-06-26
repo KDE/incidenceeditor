@@ -124,12 +124,12 @@ void AlarmDialog::load(const KCalCore::Alarm::Ptr &alarm)
     switch (alarm->type()) {
     case KCalCore::Alarm::Audio:
         mUi->mTypeCombo->setCurrentIndex(1);
-        mUi->mSoundFile->setUrl(alarm->audioFile());
+        mUi->mSoundFile->setUrl(QUrl::fromLocalFile(alarm->audioFile()));
         id = 1;
         break;
     case KCalCore::Alarm::Procedure:
         mUi->mTypeCombo->setCurrentIndex(2);
-        mUi->mApplication->setUrl(alarm->programFile());
+        mUi->mApplication->setUrl(QUrl::fromLocalFile(alarm->programFile()));
         mUi->mAppArguments->setText(alarm->programArguments());
         id = 2;
         break;
