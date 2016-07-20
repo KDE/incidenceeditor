@@ -47,7 +47,8 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <KHelpClient>
+#include <QUrlQuery>
+#include <QDesktopServices>
 
 using namespace IncidenceEditorNG;
 
@@ -57,7 +58,7 @@ TemplateManagementDialog::TemplateManagementDialog(
 {
     QString m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18n("Manage %1 Templates", m_type_translated));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -90,7 +91,13 @@ TemplateManagementDialog::TemplateManagementDialog(
 
 void TemplateManagementDialog::slotHelp()
 {
-    KHelpClient::invokeHelp(QStringLiteral("entering-data-events-template-buttons"), QStringLiteral("korganizer"));
+    QUrl url;
+    url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/entering-data.html")));
+    QUrlQuery query(url);
+    query.addQueryItem(QStringLiteral("anchor"), QStringLiteral("entering-data-events-template-buttons"));
+    url.setQuery(query);
+    // launch khelpcenter, or a browser for URIs not handled by khelpcenter
+    QDesktopServices::openUrl(url);
 }
 
 void TemplateManagementDialog::slotItemSelected()
