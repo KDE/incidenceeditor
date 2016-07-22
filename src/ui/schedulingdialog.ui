@@ -14,6 +14,18 @@
    <string>Schedule a time</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item row="0" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
@@ -246,14 +258,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KTimeComboBox</class>
-   <extends>QComboBox</extends>
-   <header>ktimecombobox.h</header>
-  </customwidget>
-  <customwidget>
    <class>KPIM::KCheckComboBox</class>
    <extends>KComboBox</extends>
    <header>Libkdepim/KCheckComboBox</header>
+  </customwidget>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KDateComboBox</class>
@@ -261,9 +273,9 @@
    <header>kdatecombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>KComboBox</class>
+   <class>KTimeComboBox</class>
    <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
+   <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KPIM::KWeekdayCheckCombo</class>
