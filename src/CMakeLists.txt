@@ -94,6 +94,14 @@ add_library(KF5IncidenceEditor ${incidenceeditors_ng_desktop_LIB_SRCS})
 generate_export_header(KF5IncidenceEditor BASE_NAME incidenceeditor)
 
 add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
+
+if (KDIAGRAM_SUPPORT)
+    set(grant_lib KGantt)
+else()
+    set(grant_lib KF5::KDGantt2)
+endif()
+
+
 target_link_libraries(KF5IncidenceEditor
 PUBLIC
   KF5::AkonadiCalendar
@@ -103,7 +111,7 @@ PUBLIC
   KF5::MailTransport
   KF5::CalendarSupport      # For KCalPrefs
   KF5::EventViews
-  KF5::KDGantt2             # For FreeBusy Editor
+  ${grant_lib}              # For FreeBusy Editor
 PRIVATE
   KF5::Libkdepim
   KF5::KdepimDBusInterfaces # For UriHandler
