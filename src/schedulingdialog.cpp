@@ -37,8 +37,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
                                    ConflictResolver *resolver, QWidget *parent)
     : QDialog(parent), mResolver(resolver), mPeriodModel(new KPIM::FreePeriodModel(this))
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QWidget *w = new QWidget(this);
     setupUi(w);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -48,8 +47,8 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SchedulingDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SchedulingDialog::reject);
 
-    mainLayout->addWidget(buttonBox);
     mainLayout->addWidget(w);
+    mainLayout->addWidget(buttonBox);
     fillCombos();
 
     Q_ASSERT(duration > 0);
