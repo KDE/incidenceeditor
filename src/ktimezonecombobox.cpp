@@ -48,23 +48,23 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.clear();
 
     // Read all system time zones
-    foreach (const auto &id, QTimeZone::availableTimeZoneIds()) {
-        mZones.push_back(id);
+    foreach (const QByteArray &id, QTimeZone::availableTimeZoneIds()) {
+        mZones.push_back(QString::fromLatin1(id));
     }
     mZones.sort();
 
     // Prepend the list of additional timezones
-    foreach (const auto &id, mAdditionalZones)
-        mZones.prepend(id);
+    foreach (const QByteArray &id, mAdditionalZones)
+        mZones.prepend(QString::fromLatin1(id));
 
     // Prepend Local, UTC and Floating, for convenience
     mZones.prepend(QStringLiteral("UTC"));        // do not use i18n here  index=2
     mZones.prepend(QStringLiteral("Floating"));   // do not use i18n here  index=1
-    mZones.prepend(QTimeZone::systemTimeZoneId());    // index=0
+    mZones.prepend(QString::fromLatin1(QTimeZone::systemTimeZoneId()));    // index=0
 
     // Put translated zones into the combobox
     foreach (const QString &z, mZones) {
-        mParent->addItem(i18n(z.toUtf8()).replace('_', ' '));
+        mParent->addItem(i18n(z.toUtf8().constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
     }
 }
 

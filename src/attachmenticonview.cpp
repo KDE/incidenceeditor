@@ -224,14 +224,14 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
             } else {
                 urls.append(QUrl(item->uri()));
             }
-            labels.append(QUrl::toPercentEncoding(item->label()));
+            labels.append(QString::fromLatin1(QUrl::toPercentEncoding(item->label())));
         }
     }
     if (selectionMode() == NoSelection) {
         AttachmentIconItem *item = static_cast<AttachmentIconItem *>(currentItem());
         if (item) {
             urls.append(QUrl(item->uri()));
-            labels.append(QUrl::toPercentEncoding(item->label()));
+            labels.append(QString::fromLatin1(QUrl::toPercentEncoding(item->label())));
         }
     }
 

@@ -158,7 +158,7 @@ void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &/*client*/,
         if (!obj.attributes()[header].isEmpty()) {
             itemData << QString::fromUtf8(obj.attributes()[header][0]);
         } else {
-            itemData << "";
+            itemData << QString();
         }
     }
     Q_EMIT searchFinished();

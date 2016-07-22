@@ -101,25 +101,25 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &peri
         const KDateTime::Spec &timeSpec) const
 {
     QString toolTip = QStringLiteral("<qt>");
-    toolTip += "<b>" + i18nc("@info:tooltip", "Free/Busy Period") + "</b>";
-    toolTip += QLatin1String("<hr>");
+    toolTip += QStringLiteral("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QStringLiteral("</b>");
+    toolTip += QStringLiteral("<hr>");
     if (!period.summary().isEmpty()) {
-        toolTip += "<i>" + i18nc("@info:tooltip", "Summary:") + "</i>" + "&nbsp;";
+        toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip", "Summary:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
         toolTip += period.summary();
-        toolTip += QLatin1String("<br>");
+        toolTip += QStringLiteral("<br>");
     }
     if (!period.location().isEmpty()) {
-        toolTip += "<i>" + i18nc("@info:tooltip", "Location:") + "</i>" + "&nbsp;";
+        toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip", "Location:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
         toolTip += period.location();
-        toolTip += QLatin1String("<br>");
+        toolTip += QStringLiteral("<br>");
     }
-    toolTip += "<i>" + i18nc("@info:tooltip period start time", "Start:") + "</i>" + "&nbsp;";
+    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period start time", "Start:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
     toolTip += QLocale::system().toString(period.start().toTimeSpec(timeSpec).dateTime(), QLocale::ShortFormat);
-    toolTip += QLatin1String("<br>");
-    toolTip += "<i>" + i18nc("@info:tooltip period end time", "End:") + "</i>" + "&nbsp;";
+    toolTip += QStringLiteral("<br>");
+    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period end time", "End:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
     toolTip += QLocale::system().toString(period.end().toTimeSpec(timeSpec).dateTime(), QLocale::ShortFormat);
-    toolTip += QLatin1String("<br>");
-    toolTip += QLatin1String("</qt>");
+    toolTip += QStringLiteral("<br>");
+    toolTip += QStringLiteral("</qt>");
     return toolTip;
 }
 

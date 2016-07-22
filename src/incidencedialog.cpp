@@ -295,8 +295,8 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 
     const QString fileName = QStandardPaths::locate(
                                  QStandardPaths::GenericDataLocation,
-                                 "korganizer/templates/" +
-                                 typeToString(mEditor->type()) + '/' +
+                                 QStringLiteral("korganizer/templates/") +
+                                 typeToString(mEditor->type()) + QLatin1Char('/') +
                                  templateName);
 
     if (fileName.isEmpty()) {
@@ -383,7 +383,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
     }
 
     QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-                       "korganizer/templates/" + typeToString(mEditor->type()) + '/';
+                       QStringLiteral("korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/');
     QDir::root().mkpath(fileName);
     fileName += templateName;
 
@@ -398,8 +398,8 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
     const QStringList origTemplates =
         IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
     const QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-                                "korganizer/templates/" +
-                                typeToString(mEditor->type()) + '/';
+                                QStringLiteral("korganizer/templates/") +
+                                typeToString(mEditor->type()) + QLatin1Char('/');
     QDir::root().mkpath(defaultPath);
     Q_FOREACH (const QString &tmpl, origTemplates) {
         if (!templateNames.contains(tmpl)) {

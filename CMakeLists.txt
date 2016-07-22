@@ -80,10 +80,7 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 
 add_definitions("-DQT_NO_URL_CAST_FROM_STRING")
 
-#TODO REACTIVATE
-#add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-#TODO verify it
-remove_definitions( -DQT_NO_CAST_FROM_BYTEARRAY )
+add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5IncidenceEditor")
 

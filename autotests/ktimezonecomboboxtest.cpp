@@ -32,7 +32,7 @@ void KTimeZoneComboBoxTest::test_timeSpec()
     KDateTime::Spec spec;
     spec.setType(KDateTime::LocalZone);
     combo.selectTimeSpec(spec);
-    if (spec.timeZone().name() != "UTC")
+    if (spec.timeZone().name() != QString::fromLatin1("UTC"))
         QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::TimeZone);   // KDateTime::Spec stores it as TimeZone, not LocalTime
     else
         QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::UTC);

@@ -155,8 +155,8 @@ void IncidenceResource::dialogOkPressed()
 {
     ResourceItem::Ptr item = resourceDialog->selectedItem();
     if (item) {
-        const QString name = item->ldapObject().value(QStringLiteral("cn"));
-        const QString email = item->ldapObject().value(QStringLiteral("mail"));
+        const QString name = QString::fromLatin1(item->ldapObject().value(QStringLiteral("cn")));
+        const QString email = QString::fromLatin1(item->ldapObject().value(QStringLiteral("mail")));
         KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(name, email));
         attendee->setCuType(KCalCore::Attendee::Resource);
         dataModel->insertAttendee(dataModel->rowCount(), attendee);

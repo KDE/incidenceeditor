@@ -184,7 +184,7 @@ void ResourceModel::startSearch()
     if (searchString.isEmpty()) {
         ldapSearch.startSearch(QStringLiteral("*"));
     } else {
-        ldapSearch.startSearch("*" + searchString + "*");
+        ldapSearch.startSearch(QStringLiteral("*") + searchString + QStringLiteral("*"));
     }
 }
 
@@ -206,7 +206,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
         ldapCollections.insert(item);
 
         // Resources in a collection add this link into ldapCollectionsMap
-        foreach (const QByteArray &member, result.object.attributes()["uniqueMember"]) {
+        foreach (const QByteArray &member, result.object.attributes()[QString::fromLatin1("uniqueMember")]) {
             ldapCollectionsMap.insert(QString::fromLatin1(member), item);
         }
     }

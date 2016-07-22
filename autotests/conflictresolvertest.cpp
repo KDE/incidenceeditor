@@ -41,7 +41,7 @@ void ConflictResolverTest::insertAttendees()
 void ConflictResolverTest::addAttendee(const QString &email, const KCalCore::FreeBusy::Ptr &fb,
                                        KCalCore::Attendee::Role role)
 {
-    QString name = QString("attendee %1").arg(attendees.count());
+    QString name = QStringLiteral("attendee %1").arg(attendees.count());
     KPIM::FreeBusyItem::Ptr item(new KPIM::FreeBusyItem(KCalCore::Attendee::Ptr(
                                      new KCalCore::Attendee(name, email, false,
                                              KCalCore::Attendee::Accepted,
@@ -73,7 +73,7 @@ void ConflictResolverTest::cleanup()
 void ConflictResolverTest::simpleTest()
 {
     KCalCore::Period meeting(end.addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
-    addAttendee("albert@einstein.net",
+    addAttendee(QStringLiteral("albert@einstein.net"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting)));
 
@@ -105,13 +105,13 @@ void ConflictResolverTest::stillPrettySimpleTest()
     KCalCore::Period meeting1(base, KCalCore::Duration(2 * 60 * 60));
     KCalCore::Period meeting2(base.addSecs(60 * 60), KCalCore::Duration(2 * 60 * 60));
     KCalCore::Period meeting3(end.addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
-    addAttendee("john.f@kennedy.com",
+    addAttendee(QStringLiteral("john.f@kennedy.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting1 << meeting3)));
-    addAttendee("elvis@rock.com",
+    addAttendee(QStringLiteral("elvis@rock.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting2 << meeting3)));
-    addAttendee("albert@einstein.net",
+    addAttendee(QStringLiteral("albert@einstein.net"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting3)));
 
@@ -174,39 +174,39 @@ void ConflictResolverTest::akademy2010()
 
 //  for ( int i = 1; i < 80; ++i ) {
     // adds 80 people (adds the same 8 peopl 10 times)
-    addAttendee("akademyattendee1@email.com",
+    addAttendee(QStringLiteral("akademyattendee1@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << keynote
                                         << oviStore << wikimedia
                                         << direction)));
-    addAttendee("akademyattendee2@email.com",
+    addAttendee(QStringLiteral("akademyattendee2@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << keynote
                                         << commAsService << highlights
                                         << pimp)));
-    addAttendee("akademyattendee3@email.com",
+    addAttendee(QStringLiteral("akademyattendee3@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << kdeForums
                                         << styles << pimp  << plasma)));
-    addAttendee("akademyattendee4@email.com",
+    addAttendee(QStringLiteral("akademyattendee4@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << keynote
                                         << oviStore << pimp << blurr)));
-    addAttendee("akademyattendee5@email.com",
+    addAttendee(QStringLiteral("akademyattendee5@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << keynote << oviStore
                                         << highlights << avalanche)));
-    addAttendee("akademyattendee6@email.com",
+    addAttendee(QStringLiteral("akademyattendee6@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << keynote
                                         << commAsService
                                         << highlights)));
-    addAttendee("akademyattendee7@email.com",
+    addAttendee(QStringLiteral("akademyattendee7@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << kdeForums
                                         << styles << avalanche
                                         << pimp << plasma)));
-    addAttendee("akademyattendee8@email.com",
+    addAttendee(QStringLiteral("akademyattendee8@email.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << opening << keynote
                                         << oviStore << wikimedia
@@ -242,10 +242,10 @@ void ConflictResolverTest::testPeriodIsLargerThenTimeframe()
 
     KCalCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee("kdabtest1@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << testEvent)));
-    addAttendee("kdabtest2@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List())));
 
     insertAttendees();
@@ -266,10 +266,10 @@ void ConflictResolverTest::testPeriodBeginsBeforeTimeframeBegins()
 
     KCalCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee("kdabtest1@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << testEvent)));
-    addAttendee("kdabtest2@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List())));
 
     insertAttendees();
@@ -293,10 +293,10 @@ void ConflictResolverTest::testPeriodEndsAfterTimeframeEnds()
 
     KCalCore::Period testEvent(_time(8, 00), _time(9, 45));
 
-    addAttendee("kdabtest1@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << testEvent)));
-    addAttendee("kdabtest2@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List())));
 
     insertAttendees();
@@ -321,10 +321,10 @@ void ConflictResolverTest::testPeriodEndsAtSametimeAsTimeframe()
 
     KCalCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee("kdabtest1@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << testEvent)));
-    addAttendee("kdabtest2@demo.kolab.org",
+    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List())));
 
     insertAttendees();

@@ -587,19 +587,19 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
     switch (currentIndex) {
     case 2:
         labelFreq = i18ncp("repeat every N >weeks<", "week", "weeks", frequency);
-        freqKey = 'w';
+        freqKey = QLatin1Char('w');
         break;
     case 3:
         labelFreq = i18ncp("repeat every N >months<", "month", "months", frequency);
-        freqKey = 'm';
+        freqKey = QLatin1Char('m');
         break;
     case 4:
         labelFreq = i18ncp("repeat every N >years<", "year", "years", frequency);
-        freqKey = 'y';
+        freqKey = QLatin1Char('y');
         break;
     default:
         labelFreq = i18ncp("repeat every N >days<", "day", "days", frequency);
-        freqKey = 'd';
+        freqKey = QLatin1Char('d');
     }
 
     QString labelEvery;
