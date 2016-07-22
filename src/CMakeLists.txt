@@ -111,8 +111,8 @@ PUBLIC
   KF5::MailTransport
   KF5::CalendarSupport      # For KCalPrefs
   KF5::EventViews
-  ${grant_lib}              # For FreeBusy Editor
 PRIVATE
+  ${grant_lib}              # For FreeBusy Editor
   KF5::Libkdepim
   KF5::KdepimDBusInterfaces # For UriHandler
   KF5::Codecs

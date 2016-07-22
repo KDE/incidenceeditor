@@ -1,6 +1,5 @@
 @PACKAGE_INIT@
 
-find_dependency(KF5KDGantt2 "@KDGANTT2_LIB_VERSION@")
 find_dependency(KF5EventViews "@EVENTVIEW_LIB_VERSION@")
 find_dependency(KF5CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
 find_dependency(KF5CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
