@@ -22,10 +22,17 @@
 #include "freebusyganttproxymodel.h"
 #include "CalendarSupport/FreeBusyItemModel"
 
+#ifdef KDIAGRAM_SUPPORT
+#include <KGantt/KGanttGraphicsView>
+#include <KGantt/KGanttView>
+#include <KGantt/KGanttDateTimeGrid>
+#include <KGantt/KGanttAbstractRowController>
+#else
 #include <KDGantt2/KDGanttGraphicsView>
 #include <KDGantt2/KDGanttView>
 #include <KDGantt2/KDGanttDateTimeGrid>
 #include <KDGantt2/KDGanttAbstractRowController>
+#endif
 
 #include <KComboBox>
 #include "incidenceeditor_debug.h"
