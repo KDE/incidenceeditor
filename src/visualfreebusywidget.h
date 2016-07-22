@@ -25,11 +25,19 @@
 
 #include <QWidget>
 
+#ifdef KDIAGRAM_SUPPORT
+namespace KGantt
+{
+class DateTimeGrid;
+class GraphicsView;
+}
+#else
 namespace KDGantt
 {
 class DateTimeGrid;
 class GraphicsView;
 }
+#endif
 
 namespace KPIM
 {
@@ -71,10 +79,19 @@ private Q_SLOTS:
     void splitterMoved();
 
 private:
+#ifdef KDIAGRAM_SUPPORT
+    KGantt::GraphicsView *mGanttGraphicsView;
+#else
     KDGantt::GraphicsView *mGanttGraphicsView;
+#endif
     QTreeView *mLeftView;
     RowController *mRowController;
+#ifdef KDIAGRAM_SUPPORT
+    KGantt::DateTimeGrid *mGanttGrid;
+#else
     KDGantt::DateTimeGrid *mGanttGrid;
+#endif
+
     KComboBox *mScaleCombo;
     FreeBusyGanttProxyModel *mModel;
 

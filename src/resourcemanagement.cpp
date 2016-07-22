@@ -34,9 +34,11 @@
 
 #include <KCalCore/Event>
 #include <KCalCore/MemoryCalendar>
-
+#ifdef KDIAGRAM_SUPPORT
+#include <KGantt/KGanttGraphicsView>
+#else
 #include <KDGantt2/KDGanttGraphicsView>
-
+#endif
 #include <akonadi/calendar/freebusymanager.h>
 #include <kldap/ldapobject.h>
 

@@ -4,12 +4,19 @@ include_directories(
  ../
 )
 
+if (KDIAGRAM_SUPPORT)
+    set(grant_lib KGantt)
+else()
+    set(grant_lib KF5::KDGantt2)
+endif()
+
+
 MACRO(IE_UNIT_TESTS)
   FOREACH(_testname ${ARGN})
     add_executable( ${_testname} ${_testname}.cpp modeltest.cpp )
     add_test( ${_testname} ${_testname} )
     ecm_mark_as_test(${_testname})
-    target_link_libraries(${_testname} Qt5::Test   KF5::AkonadiCore  KF5::KDGantt2 KF5::CalendarUtils KF5::CalendarCore KF5::IncidenceEditor KF5::KdepimDBusInterfaces KF5::Libkdepim)
+    target_link_libraries(${_testname} Qt5::Test   KF5::AkonadiCore  ${grant_lib} KF5::CalendarUtils KF5::CalendarCore KF5::IncidenceEditor KF5::KdepimDBusInterfaces KF5::Libkdepim)
   ENDFOREACH(_testname)
 ENDMACRO(IE_UNIT_TESTS)
 
