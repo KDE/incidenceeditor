@@ -4,11 +4,7 @@ include_directories(
  ../
 )
 
-if (KDIAGRAM_SUPPORT)
-    set(grant_lib KGantt)
-else()
-    set(grant_lib KF5::KDGantt2)
-endif()
+set(grant_lib KGantt)
 
 
 MACRO(IE_UNIT_TESTS)

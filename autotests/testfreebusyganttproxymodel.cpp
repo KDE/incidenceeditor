@@ -24,11 +24,7 @@
 #include "CalendarSupport/FreeBusyItemModel"
 #include "../src/freebusyganttproxymodel.h"
 
-#ifdef KDIAGRAM_SUPPORT
 #include <KGantt/KGanttGraphicsView>
-#else
-#include <KDGantt2/KDGanttGraphicsView>
-#endif
 #include <KCalCore/Attendee>
 
 #include <qtest.h>
@@ -83,19 +79,11 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     QModelIndex source_parent0 = fbModel->index(0, 0);
     QCOMPARE(parent0.data(), source_parent0.data());
-#ifdef KDIAGRAM_SUPPORT
     QCOMPARE(parent0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeMulti);
-#else
-    QCOMPARE(parent0.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeMulti);
-#endif
 
     QModelIndex source_parent1 = fbModel->index(1, 0);
     QCOMPARE(parent1.data(), source_parent1.data());
-#ifdef KDIAGRAM_SUPPORT
     QCOMPARE(parent1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeMulti);
-#else
-    QCOMPARE(parent1.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeMulti);
-#endif
 
 
     QModelIndex child0_0 = ganttModel->index(0, 0, parent0);
@@ -103,34 +91,20 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QVERIFY(child0_0.isValid());
     QVERIFY(child0_1.isValid());
 
-#ifdef KDIAGRAM_SUPPORT
     QCOMPARE(child0_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
     QCOMPARE(child0_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt1.dateTime());
     QCOMPARE(child0_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
     QCOMPARE(child0_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt2.dateTime());
-#else
-    QCOMPARE(child0_0.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeTask);
-    QCOMPARE(child0_0.data(KDGantt::StartTimeRole).value<QDateTime>(), dt1.dateTime());
-    QCOMPARE(child0_1.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeTask);
-    QCOMPARE(child0_1.data(KDGantt::StartTimeRole).value<QDateTime>(), dt2.dateTime());
-#endif
 
     QModelIndex child1_0 = ganttModel->index(0, 0, parent1);
     QModelIndex child1_1 = ganttModel->index(1, 0, parent1);
     QVERIFY(child1_0.isValid());
     QVERIFY(child1_1.isValid());
 
-#ifdef KDIAGRAM_SUPPORT
     QCOMPARE(child1_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
     QCOMPARE(child1_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt3.dateTime());
     QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
     QCOMPARE(child1_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt4.dateTime());
-#else
-    QCOMPARE(child1_0.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeTask);
-    QCOMPARE(child1_0.data(KDGantt::StartTimeRole).value<QDateTime>(), dt3.dateTime());
-    QCOMPARE(child1_1.data(KDGantt::ItemTypeRole).toInt(), (int) KDGantt::TypeTask);
-    QCOMPARE(child1_1.data(KDGantt::StartTimeRole).value<QDateTime>(), dt4.dateTime());
-#endif
 
 }
 

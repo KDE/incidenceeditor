@@ -21,11 +21,7 @@
 #include "freebusyganttproxymodel.h"
 #include "CalendarSupport/FreeBusyItemModel"
 
-#ifdef KDIAGRAM_SUPPORT
 #include <KGantt/KGanttGraphicsView>
-#else
-#include <KDGantt2/KDGanttGraphicsView>
-#endif
 #include <KCalCore/FreeBusyPeriod>
 
 #include <KLocalizedString>
@@ -50,13 +46,8 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     // if the index is not valid, then its a toplevel item, which is an attendee
     if (!source_index.parent().isValid()) {
         switch (role) {
-#ifdef KDIAGRAM_SUPPORT
         case KGantt::ItemTypeRole:
             return KGantt::TypeMulti;
-#else
-        case KDGantt::ItemTypeRole:
-            return KDGantt::TypeMulti;
-#endif
         case Qt::DisplayRole:
             return source_index.data(Qt::DisplayRole);
         default:
@@ -71,21 +62,12 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
         value<KCalCore::FreeBusyPeriod>();
 
     switch (role) {
-#ifdef KDIAGRAM_SUPPORT
     case KGantt::ItemTypeRole:
         return KGantt::TypeTask;
     case KGantt::StartTimeRole:
         return period.start().toTimeSpec(timeSpec).dateTime();
     case KGantt::EndTimeRole:
         return period.end().toTimeSpec(timeSpec).dateTime();
-#else
-    case KDGantt::ItemTypeRole:
-        return KDGantt::TypeTask;
-    case KDGantt::StartTimeRole:
-        return period.start().toTimeSpec(timeSpec).dateTime();
-    case KDGantt::EndTimeRole:
-        return period.end().toTimeSpec(timeSpec).dateTime();
-#endif
     case Qt::BackgroundRole:
         return QColor(Qt::red);
     case Qt::ToolTipRole:

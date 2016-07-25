@@ -19,8 +19,6 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 
-option(KDIAGRAM_SUPPORT "Enable it to test build against KDIAGRAM" FALSE)
-
 set(PIM_VERSION "5.3.40")
 
 set(INCIDENCEEDITOR_LIB_VERSION ${PIM_VERSION})
@@ -38,15 +36,8 @@ set(EVENTVIEW_LIB_VERSION "5.3.40")
 set(AKONADI_VERSION "5.3.40")
 
 
-if (KDIAGRAM_SUPPORT)
-    set(KDIAGRAM_LIB_VERSION "1.4.0")
-    find_package(KGantt ${KDIAGRAM_LIB_VERSION} CONFIG REQUIRED)
-    add_definitions(-DKDIAGRAM_SUPPORT)
-else()
-    set(KDGANTT2_LIB_VERSION "5.3.40")
-    find_package(KF5KDGantt2 ${KDGANTT2_LIB_VERSION} CONFIG REQUIRED)
-endif()
-
+set(KDIAGRAM_LIB_VERSION "1.4.0")
+find_package(KGantt ${KDIAGRAM_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)

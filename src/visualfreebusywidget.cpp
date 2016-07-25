@@ -22,17 +22,10 @@
 #include "freebusyganttproxymodel.h"
 #include "CalendarSupport/FreeBusyItemModel"
 
-#ifdef KDIAGRAM_SUPPORT
 #include <KGantt/KGanttGraphicsView>
 #include <KGantt/KGanttView>
 #include <KGantt/KGanttDateTimeGrid>
 #include <KGantt/KGanttAbstractRowController>
-#else
-#include <KDGantt2/KDGanttGraphicsView>
-#include <KDGantt2/KDGanttView>
-#include <KDGantt2/KDGanttDateTimeGrid>
-#include <KDGantt2/KDGanttAbstractRowController>
-#endif
 
 #include <KComboBox>
 #include "incidenceeditor_debug.h"
@@ -51,11 +44,7 @@ using namespace IncidenceEditorNG;
 
 namespace IncidenceEditorNG
 {
-#ifdef KDIAGRAM_SUPPORT
 class RowController : public KGantt::AbstractRowController
-#else
-class RowController : public KDGantt::AbstractRowController
-#endif
 {
 private:
     static const int ROW_HEIGHT;
@@ -86,17 +75,10 @@ public:
     {
         return false;
     }
-#ifdef KDIAGRAM_SUPPORT
     KGantt::Span rowGeometry(const QModelIndex &idx) const Q_DECL_OVERRIDE
     {
         return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
-#else
-    KDGantt::Span rowGeometry(const QModelIndex &idx) const Q_DECL_OVERRIDE
-    {
-        return KDGantt::Span(idx.row() * mRowHeight, mRowHeight);
-    }
-#endif
 
     int maximumItemHeight() const Q_DECL_OVERRIDE
     {
@@ -182,7 +164,6 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int s
                "and 'Month' shows a range of a few years,<nl/>"
                "while 'Automatic' selects the range most "
                "appropriate for the current event or to-do."));
-#ifdef KDIAGRAM_SUPPORT
     mScaleCombo->addItem(i18nc("@item:inlistbox range in hours", "Hour"),
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleHour));
     mScaleCombo->addItem(i18nc("@item:inlistbox range in days", "Day"),
@@ -193,18 +174,6 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int s
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleMonth));
     mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
-#else
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in hours", "Hour"),
-                         QVariant::fromValue<int>(KDGantt::DateTimeGrid::ScaleHour));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in days", "Day"),
-                         QVariant::fromValue<int>(KDGantt::DateTimeGrid::ScaleDay));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in weeks", "Week"),
-                         QVariant::fromValue<int>(KDGantt::DateTimeGrid::ScaleWeek));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in months", "Month"),
-                         QVariant::fromValue<int>(KDGantt::DateTimeGrid::ScaleMonth));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
-                         QVariant::fromValue<int>(KDGantt::DateTimeGrid::ScaleAuto));
-#endif
     mScaleCombo->setCurrentIndex(0);   // start with "hour"
     connect(mScaleCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
@@ -258,11 +227,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int s
     mLeftView->setRootIsDecorated(false);
     mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mLeftView->setContextMenuPolicy(Qt::CustomContextMenu);
-#ifdef KDIAGRAM_SUPPORT
     mGanttGraphicsView = new KGantt::GraphicsView(this);
-#else
-    mGanttGraphicsView = new KDGantt::GraphicsView(this);
-#endif
     mGanttGraphicsView->setObjectName(QStringLiteral("mGanttGraphicsView"));
     mGanttGraphicsView->setToolTip(
         i18nc("@info:tooltip",
@@ -282,13 +247,8 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int s
     mRowController->setModel(mModel);
     mGanttGraphicsView->setRowController(mRowController);
 
-#ifdef KDIAGRAM_SUPPORT
     mGanttGrid = new KGantt::DateTimeGrid;
     mGanttGrid->setScale(KGantt::DateTimeGrid::ScaleHour);
-#else
-    mGanttGrid = new KDGantt::DateTimeGrid;
-    mGanttGrid->setScale(KDGantt::DateTimeGrid::ScaleHour);
-#endif
     mGanttGrid->setDayWidth(800);
     mGanttGrid->setRowSeparators(true);
     mGanttGraphicsView->setGrid(mGanttGrid);
@@ -332,11 +292,7 @@ void VisualFreeBusyWidget::showAttendeeStatusMenu()
 
 void VisualFreeBusyWidget::slotCenterOnStart()
 {
-#ifdef KDIAGRAM_SUPPORT
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-#else
-    KDGantt::DateTimeGrid *grid = static_cast<KDGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-#endif
     int daysTo = grid->startDateTime().daysTo(mDtStart.dateTime());
     mGanttGraphicsView->horizontalScrollBar()->setValue(daysTo * 800);
 }
@@ -362,11 +318,7 @@ void VisualFreeBusyWidget::slotScaleChanged(int newScale)
     Q_ASSERT(var.isValid());
 
     int value = var.toInt();
-#ifdef KDIAGRAM_SUPPORT
     mGanttGrid->setScale((KGantt::DateTimeGrid::Scale)value);
-#else
-    mGanttGrid->setScale((KDGantt::DateTimeGrid::Scale)value);
-#endif
 }
 
 void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const KDateTime &dtFrom,
@@ -375,11 +327,7 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const KDateTime &dtFrom,
     mDtStart = dtFrom;
     mDtEnd = dtTo;
     QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date());
-#ifdef KDIAGRAM_SUPPORT
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-#else
-    KDGantt::DateTimeGrid *grid = static_cast<KDGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-#endif
     grid->setStartDateTime(horizonStart);
     slotCenterOnStart();
     mGanttGrid->setStartDateTime(horizonStart);
