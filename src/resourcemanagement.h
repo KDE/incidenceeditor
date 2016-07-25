@@ -87,6 +87,8 @@ private Q_SLOTS:
     void slotLayoutChanged();
 
 private:
+    void readConfig();
+    void writeConfig();
     KPIM::FreeBusyItemModel *mModel;
     KPIM::FreeBusyCalendar mFreebusyCalendar;
     ResourceItem::Ptr mOwnerItem;

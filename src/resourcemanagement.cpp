@@ -43,6 +43,8 @@
 #include <kldap/ldapobject.h>
 
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -158,13 +160,32 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     connect(mUi->treeResults, &QTreeView::clicked, this, &ResourceManagement::slotShowDetails);
 
     connect(resourcemodel, &ResourceModel::layoutChanged, this, &ResourceManagement::slotLayoutChanged);
+    readConfig();
 }
 
 ResourceManagement::~ResourceManagement()
 {
+    writeConfig();
     delete mModel;
     delete mUi;
 }
+
+void ResourceManagement::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ResourceManagement");
+    const QSize size = group.readEntry("Size", QSize(600, 400));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void ResourceManagement::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ResourceManagement");
+    group.writeEntry("Size", size());
+    group.sync();
+}
+
 
 ResourceItem::Ptr ResourceManagement::selectedItem() const
 {
