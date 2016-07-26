@@ -65,7 +65,7 @@ public:
 Q_SIGNALS:
     void recurrenceChanged(IncidenceEditorNG::RecurrenceType type);
 
-private Q_SLOTS:
+private:
     void addException();
     void fillCombos();
     void handleDateTimeToggle();
@@ -77,8 +77,6 @@ private Q_SLOTS:
     void updateRemoveExceptionButton();
     void updateWeekDays(const QDate &newStartDate);
     void handleStartDateChange(const QDate &);
-
-private:
 
     /**
        I needed save() to be const, so created this func.

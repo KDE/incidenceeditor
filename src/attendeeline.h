@@ -60,10 +60,8 @@ public Q_SLOTS:
 protected:
     void keyPressEvent(QKeyEvent *ev) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotActionTriggered();
-
 private:
+    void slotActionTriggered();
     QMenu *mMenu;
     QVector<QPair<QString, QIcon> > mList;
     int mCurrentIndex;
@@ -127,12 +125,10 @@ Q_SIGNALS:
                  const KCalCore::Attendee::Ptr &newAttendee);
     void editingFinished(KPIM::MultiplyingLine *);
 
-private Q_SLOTS:
+private:
     void slotTextChanged(const QString &);
     void slotHandleChange();
     void slotComboChanged();
-
-private:
     void dataFromFields();
     void fieldsFromData();
 

@@ -62,14 +62,12 @@ public:
 public Q_SLOTS:
     void clear();
 
-private Q_SLOTS:
+private:
     void handleTextChanged(const QString &newText);
     void handleSelectionChanged();
     void handleColorChanged(const QColor &);
     void addCategory();
     void removeCategory();
-
-private:
     QStringList mCategoryList;
     CategoryWidgetBase *mWidgets;
     CalendarSupport::CategoryConfig *mCategoryConfig;

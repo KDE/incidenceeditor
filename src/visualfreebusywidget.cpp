@@ -265,7 +265,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int s
     // set start to even hours, i.e. to 12:AM 0 Min 0 Sec
     QDateTime horizonStart =
         QDateTime(QDateTime::currentDateTime().addDays(-15).date());
-    QDateTime horizonEnd = QDateTime::currentDateTime().addDays(15);
+    //QDateTime horizonEnd = QDateTime::currentDateTime().addDays(15);
     mGanttGrid->setStartDateTime(horizonStart);
 
 //connect( mGanttGraphicsView, SIGNAL(timeIntervalSelected(KDateTime,KDateTime)),

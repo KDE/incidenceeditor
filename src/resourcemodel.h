@@ -119,7 +119,7 @@ private:
      */
     QStringList headers;
 
-private Q_SLOTS:
+private:
     /* Slot for founded collections
      *
      */

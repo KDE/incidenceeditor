@@ -59,8 +59,7 @@ Q_SIGNALS:
      * @arg: new count of resources.
      */
     void resourceCountChanged(int);
-
-private Q_SLOTS:
+private:
     void findResources();
     void bookResource();
     void layoutChanged();
@@ -69,7 +68,6 @@ private Q_SLOTS:
     void slotDateChanged();
 
     void dialogOkPressed();
-private:
     Ui::EventOrTodoDesktop *mUi;
 
     /** completer for findResources */

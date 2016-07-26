@@ -78,9 +78,8 @@ protected Q_SLOTS:
     void slotApplyTemplate();
     void slotOk();
 
-private Q_SLOTS:
-    void slotHelp();
 private:
+    void slotHelp();
     void updateButtons();
     Ui::TemplateManagementDialog_base m_base;
     QStringList m_templates;

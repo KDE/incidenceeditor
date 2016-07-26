@@ -48,7 +48,7 @@ public:
 Q_SIGNALS:
     void alarmCountChanged(int newCount);
 
-private Q_SLOTS:
+private:
     void editCurrentAlarm();
     void handleDateTimeToggle();
     void newAlarm();
@@ -57,8 +57,6 @@ private Q_SLOTS:
     void toggleCurrentAlarm();
     void updateAlarmList();
     void updateButtons();
-
-private:
     QString stringForAlarm(const KCalCore::Alarm::Ptr &alarm);
 
 private:

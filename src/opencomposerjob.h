@@ -40,12 +40,10 @@ public:
 
     void start() Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void slotServiceOwnerChanged(const QString &, const QString &, const QString &);
     void timeout();
     void processMail();
-
-private:
     QString mDBusService;
     QString mError;
     QString mTo, mCc, mBcc;

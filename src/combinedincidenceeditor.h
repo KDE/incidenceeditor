@@ -64,13 +64,11 @@ public:
     void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
     void save(Akonadi::Item &item) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void handleDirtyStatusChange(bool isDirty);
-
 Q_SIGNALS:
     void showMessage(const QString &reason, KMessageWidget::MessageType) const;
 
 private:
+    void handleDirtyStatusChange(bool isDirty);
     QVector<IncidenceEditor *> mCombinedEditors;
     int mDirtyEditorCount;
 };

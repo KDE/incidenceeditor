@@ -42,12 +42,11 @@ public:
     explicit IndividualMessageQueueJob(const KIdentityManagement::Identity &identity, const KCalCore::Attendee::List &update, const KCalCore::Attendee::List &edit, QObject *parent);
 
     void start() Q_DECL_OVERRIDE;
-private Q_SLOTS:
+
+private:
     void startQueueJob(const QStringList &to, const QStringList &cc);
     void startComposerJob(const QStringList &to, const QStringList &cc);
     void handleJobFinished(KJob *job);
-
-private:
     KCalCore::Attendee::List mUpdate;
     KCalCore::Attendee::List mEdit;
     KIdentityManagement::Identity mIdentity;
@@ -90,9 +89,8 @@ protected:
                     Action action,
                     const KGuiItem &buttonYes, const KGuiItem &buttonNo);
 
-private Q_SLOTS:
-    void onDialogClosed(int result);
 private:
+    void onDialogClosed(int result);
     IndividualMailDialog *mDialog;
 };
 

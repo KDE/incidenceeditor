@@ -37,7 +37,7 @@ class AttendeeLineEditDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    AttendeeLineEditDelegate(QObject *parent = Q_NULLPTR);
+    explicit AttendeeLineEditDelegate(QObject *parent = Q_NULLPTR);
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
     void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;
@@ -49,11 +49,9 @@ public:
 public Q_SLOTS:
     bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void rightPressed();
     void leftPressed();
-
-private:
     QString mToolTip;
     QString mWhatsThis;
     KCompletion::CompletionMode mCompletionMode;

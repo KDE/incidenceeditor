@@ -58,15 +58,13 @@ Q_SIGNALS:
     void endDateChanged(const QDate &newDate);
     void endTimeChanged(const QTime &newTime);
 
-private Q_SLOTS:
+private:
     void slotWeekdaysChanged();
     void slotMandatoryRolesChanged();
     void slotStartDateChanged(const QDate &newDate);
 
     void slotRowSelectionChanged(const QModelIndex &current, const QModelIndex &previous);
     void slotSetEndTimeLabel(const QTime &startTime);
-
-private:
     void updateWeekDays(const QDate &oldDate);
     void fillCombos();
 

@@ -52,7 +52,7 @@ void AttendeeComboBox::addItem(const QIcon &icon, const QString &text)
         setCurrentIndex(0);
     }
     int index = mList.size() - 1;
-    QAction *act = menu()->addAction(icon, text, this, SLOT(slotActionTriggered()));
+    QAction *act = menu()->addAction(icon, text, this, &AttendeeComboBox::slotActionTriggered);
     act->setData(index);
 }
 

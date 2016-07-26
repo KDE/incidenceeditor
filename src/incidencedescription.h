@@ -57,11 +57,9 @@ public:
 
     void printDebugInfo() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void toggleRichTextDescription();
     void enableRichTextDescription(bool enable);
-
-private:
     void setupToolBar();
 
 private:

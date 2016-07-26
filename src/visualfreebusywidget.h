@@ -67,10 +67,8 @@ protected Q_SLOTS:
     void showAttendeeStatusMenu();
     void slotIntervalColorRectangleMoved(const KDateTime &start, const KDateTime &end);
 
-private Q_SLOTS:
-    void splitterMoved();
-
 private:
+    void splitterMoved();
     KGantt::GraphicsView *mGanttGraphicsView;
     QTreeView *mLeftView;
     RowController *mRowController;
