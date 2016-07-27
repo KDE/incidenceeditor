@@ -156,6 +156,14 @@ void IncidenceDescription::setupToolBar()
     mEditToolBar->addAction(collection->action(QStringLiteral("format_text_strikeout")));
     mEditToolBar->addSeparator();
 
+    mEditToolBar->addAction(collection->action(QStringLiteral("format_font_family")));
+    mEditToolBar->addAction(collection->action(QStringLiteral("format_font_size")));
+    mEditToolBar->addSeparator();
+
+    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_foreground_color")));
+    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_background_color")));
+    mEditToolBar->addSeparator();
+
     mEditToolBar->addAction(collection->action(QStringLiteral("format_list_style")));
     mEditToolBar->addSeparator();
 
