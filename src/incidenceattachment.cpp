@@ -351,7 +351,7 @@ void IncidenceAttachment::editSelectedAttachments()
             QPointer<AttachmentEditDialog> dialog(
                 new AttachmentEditDialog(attitem, mAttachmentView, false));
             dialog->setModal(false);
-            connect(dialog.data(), SIGNAL(hidden()), dialog.data(), SLOT(delayedDestruct()));
+            dialog->setAttribute(Qt::WA_DeleteOnClose, true);
             dialog->show();
         }
     }
