@@ -67,7 +67,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mDataModel = new AttendeeTableModel(attendees, this);
     mDataModel->setKeepEmpty(true);
     mDataModel->setRemoveEmptyLines(true);
-
+    QIcon::setThemeName(QStringLiteral("oxygen"));
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
