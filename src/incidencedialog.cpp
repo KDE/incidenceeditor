@@ -141,6 +141,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mUi->setupUi(q);
     QGridLayout *layout = new QGridLayout(mUi->mCalSelectorPlaceHolder);
     layout->setSpacing(0);
+    layout->setMargin(0);
     layout->addWidget(mCalSelector);
     mCalSelector->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
 
