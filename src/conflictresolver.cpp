@@ -32,7 +32,7 @@ using namespace IncidenceEditorNG;
 
 ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
     : QObject(parent),
-      mFBModel(new KPIM::FreeBusyItemModel(this)),
+      mFBModel(new CalendarSupport::FreeBusyItemModel(this)),
       mParentWidget(parentWidget),
       mWeekdays(7),
       mSlotResolutionSeconds(DEFAULT_RESOLUTION_SECONDS)
@@ -60,7 +60,7 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
                     << KCalCore::Attendee::NonParticipant
                     << KCalCore::Attendee::Chair;
 
-    connect(mFBModel, &KPIM::FreeBusyItemModel::dataChanged, this, &ConflictResolver::freebusyDataChanged);
+    connect(mFBModel, &CalendarSupport::FreeBusyItemModel::dataChanged, this, &ConflictResolver::freebusyDataChanged);
 
     connect(&mCalculateTimer, &QTimer::timeout, this, &ConflictResolver::findAllFreeSlots);
     mCalculateTimer.setSingleShot(true);
@@ -69,11 +69,11 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
 void ConflictResolver::insertAttendee(const KCalCore::Attendee::Ptr &attendee)
 {
     if (!mFBModel->containsAttendee(attendee)) {
-        mFBModel->addItem(KPIM::FreeBusyItem::Ptr(new KPIM::FreeBusyItem(attendee, mParentWidget)));
+        mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(attendee, mParentWidget)));
     }
 }
 
-void ConflictResolver::insertAttendee(const KPIM::FreeBusyItem::Ptr &freebusy)
+void ConflictResolver::insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy)
 {
     if (!mFBModel->containsAttendee(freebusy->attendee())) {
         mFBModel->addItem(freebusy);
@@ -151,12 +151,12 @@ int ConflictResolver::tryDate(KDateTime &tryFrom, KDateTime &tryTo)
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
         KCalCore::Attendee::Ptr attendee =
-            mFBModel->data(index, KPIM::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
         KCalCore::FreeBusy::Ptr freebusy =
-            mFBModel->data(index, KPIM::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (!tryDate(freebusy, tryFrom, tryTo)) {
             ++conflicts_count;
         }
@@ -274,12 +274,12 @@ void ConflictResolver::findAllFreeSlots()
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
         KCalCore::Attendee::Ptr attendee =
-            mFBModel->data(index, KPIM::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
         KCalCore::FreeBusy::Ptr freebusy =
-            mFBModel->data(index, KPIM::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (freebusy) {
             filteredFBItems << freebusy;
         }
@@ -489,7 +489,7 @@ void ConflictResolver::setResolution(int seconds)
     mSlotResolutionSeconds = seconds;
 }
 
-KPIM::FreeBusyItemModel *ConflictResolver::model() const
+CalendarSupport::FreeBusyItemModel *ConflictResolver::model() const
 {
     return mFBModel;
 }

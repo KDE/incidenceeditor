@@ -89,8 +89,8 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    KPIM::FreeBusyItemModel *mModel;
-    KPIM::FreeBusyCalendar mFreebusyCalendar;
+    CalendarSupport::FreeBusyItemModel *mModel;
+    CalendarSupport::FreeBusyCalendar mFreebusyCalendar;
     ResourceItem::Ptr mOwnerItem;
     ResourceItem::Ptr mSelectedItem;
     EventViews::ViewCalendar::Ptr mFbCalendar;

@@ -34,7 +34,7 @@ using namespace IncidenceEditorNG;
 
 void FreeBusyGanttProxyModelTest::testModelValidity()
 {
-    KPIM::FreeBusyItemModel *fbModel = new KPIM::FreeBusyItemModel();
+    CalendarSupport::FreeBusyItemModel *fbModel = new CalendarSupport::FreeBusyItemModel();
     FreeBusyGanttProxyModel *ganttModel = new FreeBusyGanttProxyModel();
     ganttModel->setSourceModel(fbModel);
     ModelTest *modelTest = new ModelTest(ganttModel);
@@ -51,7 +51,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     fb1->addPeriod(dt1, KCalCore::Duration(60 * 60));
     fb1->addPeriod(dt2, KCalCore::Duration(60 * 60));
 
-    KPIM::FreeBusyItem::Ptr item1(new KPIM::FreeBusyItem(a1, 0));
+    CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, 0));
     item1->setFreeBusy(fb1);
 
     const KDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), KDateTime::UTC);
@@ -62,7 +62,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     fb2->addPeriod(dt3, KCalCore::Duration(60 * 60));
     fb2->addPeriod(dt4, KCalCore::Duration(60 * 60));
 
-    KPIM::FreeBusyItem::Ptr item2(new KPIM::FreeBusyItem(a2, 0));
+    CalendarSupport::FreeBusyItem::Ptr item2(new CalendarSupport::FreeBusyItem(a2, 0));
     item2->setFreeBusy(fb2);
 
     fbModel->addItem(item1);

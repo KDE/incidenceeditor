@@ -58,7 +58,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     // if the index is valid, then it corrsponds to a free busy period
     KDateTime::Spec timeSpec = KSystemTimeZones::local();
     KCalCore::FreeBusyPeriod period =
-        sourceModel()->data(source_index, KPIM::FreeBusyItemModel::FreeBusyPeriodRole).
+        sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).
         value<KCalCore::FreeBusyPeriod>();
 
     switch (role) {

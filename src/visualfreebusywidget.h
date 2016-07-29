@@ -31,7 +31,7 @@ class DateTimeGrid;
 class GraphicsView;
 }
 
-namespace KPIM
+namespace CalendarSupport
 {
 class FreeBusyItemModel;
 }
@@ -49,7 +49,7 @@ class VisualFreeBusyWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit VisualFreeBusyWidget(KPIM::FreeBusyItemModel *model, int spacing = 8, QWidget *parent = Q_NULLPTR);
+    explicit VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing = 8, QWidget *parent = Q_NULLPTR);
     ~VisualFreeBusyWidget();
 
 public Q_SLOTS:

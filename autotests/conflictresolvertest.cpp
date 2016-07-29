@@ -33,7 +33,7 @@ using namespace IncidenceEditorNG;
 
 void ConflictResolverTest::insertAttendees()
 {
-    foreach (KPIM::FreeBusyItem::Ptr item, attendees) {
+    foreach (CalendarSupport::FreeBusyItem::Ptr item, attendees) {
         resolver->insertAttendee(item);
     }
 }
@@ -42,7 +42,7 @@ void ConflictResolverTest::addAttendee(const QString &email, const KCalCore::Fre
                                        KCalCore::Attendee::Role role)
 {
     QString name = QStringLiteral("attendee %1").arg(attendees.count());
-    KPIM::FreeBusyItem::Ptr item(new KPIM::FreeBusyItem(KCalCore::Attendee::Ptr(
+    CalendarSupport::FreeBusyItem::Ptr item(new CalendarSupport::FreeBusyItem(KCalCore::Attendee::Ptr(
                                      new KCalCore::Attendee(name, email, false,
                                              KCalCore::Attendee::Accepted,
                                              role)), 0));

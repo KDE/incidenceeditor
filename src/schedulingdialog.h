@@ -26,7 +26,7 @@
 #include <QDialog>
 #include <KDateTime>
 
-namespace KPIM
+namespace CalendarSupport
 {
 class FreePeriodModel;
 }
@@ -74,7 +74,7 @@ private:
     int mDuration; //!< In seconds
 
     ConflictResolver *mResolver;
-    KPIM::FreePeriodModel *mPeriodModel;
+    CalendarSupport::FreePeriodModel *mPeriodModel;
     VisualFreeBusyWidget *mVisualWidget;
 };
 

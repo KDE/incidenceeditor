@@ -30,7 +30,7 @@
 #include <QSet>
 #include <QTimer>
 
-namespace KPIM
+namespace CalendarSupport
 {
 class FreeBusyItemModel;
 }
@@ -62,7 +62,7 @@ public:
      */
     void insertAttendee(const KCalCore::Attendee::Ptr &attendee);
 
-    void insertAttendee(const KPIM::FreeBusyItem::Ptr &freebusy);
+    void insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy);
     /**
      * Removes an attendee
      * The attendee will no longer be considered when
@@ -114,9 +114,9 @@ public:
     */
     bool findFreeSlot(const KCalCore::Period &dateTimeRange);
 
-    QList<KPIM::FreeBusyItem::Ptr> freeBusyItems() const;
+    QList<CalendarSupport::FreeBusyItem::Ptr> freeBusyItems() const;
 
-    KPIM::FreeBusyItemModel *model() const;
+    CalendarSupport::FreeBusyItemModel *model() const;
 
 Q_SIGNALS:
     /**
@@ -192,7 +192,7 @@ private:
     // to prevent the process from being repeated many times
     // after a series of quick parameter changes.
 
-    KPIM::FreeBusyItemModel *mFBModel;
+    CalendarSupport::FreeBusyItemModel *mFBModel;
     QWidget *mParentWidget;
 
     QSet<KCalCore::Attendee::Role> mMandatoryRoles;

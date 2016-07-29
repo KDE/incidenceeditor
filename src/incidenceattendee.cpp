@@ -559,8 +559,8 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
         QModelIndex index = model->index(i, 0, parent);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, KPIM::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, KPIM::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -576,8 +576,8 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, KPIM::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, KPIM::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -589,8 +589,8 @@ void IncidenceAttendee::updateFBStatus()
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, KPIM::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, KPIM::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }

@@ -128,7 +128,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     mainLayout->addWidget(buttonBox);
 
-    mModel = new KPIM::FreeBusyItemModel(this);
+    mModel = new CalendarSupport::FreeBusyItemModel(this);
     mFreebusyCalendar.setModel(mModel);
 
     mAgendaView = new EventViews::AgendaView(QDate(), QDate(), false,  false);
@@ -238,7 +238,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
     QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
     QString email = QString::fromUtf8(obj.attributes().value(QStringLiteral("mail"))[0]);
     KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(name,  email));
-    KPIM::FreeBusyItem::Ptr freebusy(new KPIM::FreeBusyItem(attendee, this));
+    CalendarSupport::FreeBusyItem::Ptr freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
     mModel->addItem(freebusy);
 }

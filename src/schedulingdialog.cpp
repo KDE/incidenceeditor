@@ -35,7 +35,7 @@ using namespace IncidenceEditorNG;
 
 SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTime, int duration,
                                    ConflictResolver *resolver, QWidget *parent)
-    : QDialog(parent), mResolver(resolver), mPeriodModel(new KPIM::FreePeriodModel(this))
+    : QDialog(parent), mResolver(resolver), mPeriodModel(new CalendarSupport::FreePeriodModel(this))
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QWidget *w = new QWidget(this);
@@ -70,7 +70,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     connect(mWeekdayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this, &SchedulingDialog::slotWeekdaysChanged);
     connect(mWeekdayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this, &SchedulingDialog::slotMandatoryRolesChanged);
 
-    connect(mResolver, &ConflictResolver::freeSlotsAvailable, mPeriodModel, &KPIM::FreePeriodModel::slotNewFreePeriods);
+    connect(mResolver, &ConflictResolver::freeSlotsAvailable, mPeriodModel, &CalendarSupport::FreePeriodModel::slotNewFreePeriods);
     connect(mMoveBeginTimeEdit, &KTimeComboBox::timeEdited, this, &SchedulingDialog::slotSetEndTimeLabel);
 
     mTableView->setModel(mPeriodModel);
@@ -175,7 +175,7 @@ void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current,
         mMoveApptGroupBox->hide();
         return;
     }
-    KCalCore::Period period = current.data(KPIM::FreePeriodModel::PeriodRole).value<KCalCore::Period>();
+    KCalCore::Period period = current.data(CalendarSupport::FreePeriodModel::PeriodRole).value<KCalCore::Period>();
     const QDate startDate = period.start().date();
 
     const int dayOfWeek = startDate.dayOfWeek();
