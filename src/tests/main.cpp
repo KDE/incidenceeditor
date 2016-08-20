@@ -39,10 +39,10 @@ using namespace IncidenceEditorNG;
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
     QCoreApplication::setApplicationName("IncidenceEditorNGApp");
     QCoreApplication::setApplicationVersion("0.1");
 
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     parser.addHelpOption();
     parser.addVersionOption();
