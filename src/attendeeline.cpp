@@ -420,3 +420,8 @@ void AttendeeLine::aboutToBeDeleted()
     Q_EMIT changed(mData->attendee(), KCalCore::Attendee::Ptr(new KCalCore::Attendee(QLatin1String(""), QLatin1String(""))));
 }
 
+bool AttendeeLine::canDeleteLineEdit() const
+{
+    return mEdit->canDeleteLineEdit();
+}
+
