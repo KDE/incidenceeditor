@@ -118,6 +118,7 @@ public:
     int setColumnWidth(int w) Q_DECL_OVERRIDE;
 
     void aboutToBeDeleted() Q_DECL_OVERRIDE;
+    bool canDeleteLineEdit() const Q_DECL_OVERRIDE;
 
     void setActions(AttendeeActions actions);
 
