@@ -41,15 +41,14 @@ using namespace IncidenceEditorNG;
 FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget *parent)
     : QDialog(parent)
 {
-    QFrame *topFrame = new QFrame(this);
     setModal(true);
     setWindowTitle(i18n("Edit Free/Busy Location"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    QFrame *topFrame = new QFrame(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(topFrame);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &FreeBusyUrlDialog::reject);
     mainLayout->addWidget(buttonBox);
