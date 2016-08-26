@@ -26,7 +26,10 @@
 #include <Libkdepim/TagWidgets>
 #include "incidenceeditor_debug.h"
 
+#include <TagAttribute>
 #include <TagCreateJob>
+#include <TagFetchJob>
+#include <TagFetchScope>
 
 using namespace IncidenceEditorNG;
 
@@ -50,13 +53,15 @@ void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     mDirty = false;
-    if (mLoadedIncidence) {
-        checkForUnknownCategories(mLoadedIncidence->categories());
-    } else {
-        mSelectedTags.clear();
-    }
-
     mWasDirty = false;
+    mSelectedTags.clear();
+    mMissingCategories = incidence->categories();
+
+    if (mLoadedIncidence) {
+        Akonadi::TagFetchJob *fetchJob = new Akonadi::TagFetchJob(this);
+        fetchJob->fetchScope().fetchAttribute<Akonadi::TagAttribute>();
+        connect(fetchJob, &Akonadi::TagFetchJob::result, this, &IncidenceCategories::onTagsFetched);
+    }
 }
 
 void IncidenceCategories::load(const Akonadi::Item &item)
@@ -82,11 +87,21 @@ void IncidenceCategories::save(Akonadi::Item &item)
 QStringList IncidenceCategories::categories() const
 {
     QStringList list;
-    list.reserve(mSelectedTags.count());
+    list.reserve(mSelectedTags.count() + mMissingCategories.count());
     Q_FOREACH (const Akonadi::Tag &tag, mSelectedTags) {
         list << tag.name();
     }
+    list << mMissingCategories;
     return list;
+}
+
+void IncidenceCategories::createMissingCategories()
+{
+    Q_FOREACH (const QString &category, mMissingCategories) {
+        Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
+        Akonadi::TagCreateJob *createJob = new Akonadi::TagCreateJob(missingTag, this);
+        connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
+    }
 }
 
 bool IncidenceCategories::isDirty() const
@@ -100,11 +115,48 @@ void IncidenceCategories::printDebugInfo() const
     qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = " << mLoadedIncidence->categories();
 }
 
-void IncidenceCategories::checkForUnknownCategories(const QStringList &categoriesToCheck)
+void IncidenceCategories::matchExistingCategories(const QStringList &categories,
+                                                  const Akonadi::Tag::List &existingTags)
 {
-    foreach (const QString &category, categoriesToCheck) {
-        Akonadi::TagCreateJob *tagCreateJob = new Akonadi::TagCreateJob(Akonadi::Tag::genericTag(category), this);
-        tagCreateJob->setMergeIfExisting(true);
-        //TODO add the missing tags to the item and add them to the list of selected tags in the widget
+    for (const QString &category : categories) {
+        auto matchedTagIter = std::find_if(existingTags.cbegin(), existingTags.cend(),
+            [&category](const Akonadi::Tag &tag) {
+                return tag.name() == category;
+            });
+        Q_ASSERT(matchedTagIter != existingTags.cend());
+        if (!mSelectedTags.contains(*matchedTagIter)) {
+            mSelectedTags << *matchedTagIter;
+        }
     }
+}
+
+void IncidenceCategories::onTagsFetched(KJob *job)
+{
+    if (job->error()) {
+        qCWarning(INCIDENCEEDITOR_LOG) << "Failed to load tags " << job->errorString();
+        return;
+    }
+    Akonadi::TagFetchJob *fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
+    const Akonadi::Tag::List jobTags = fetchJob->tags();
+    QStringList matchedCategories;
+    for (const Akonadi::Tag &tag : jobTags) {
+        if (mMissingCategories.removeAll(tag.name()) > 0) {
+            matchedCategories << tag.name();
+        }
+    }
+    matchExistingCategories(matchedCategories, jobTags);
+    createMissingCategories();
+    mUi->mTagWidget->setSelection(mSelectedTags);
+}
+
+void IncidenceCategories::onMissingTagCreated(KJob *job)
+{
+    if (job->error()) {
+        qCWarning(INCIDENCEEDITOR_LOG) << "Failed to create tag " << job->errorString();
+        return;
+    }
+    Akonadi::TagCreateJob *createJob = static_cast<Akonadi::TagCreateJob *>(job);
+    mMissingCategories.removeAll(createJob->tag().name());
+    mSelectedTags << createJob->tag();
+    mUi->mTagWidget->setSelection(mSelectedTags);
 }
