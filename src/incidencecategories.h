@@ -50,21 +50,28 @@ public:
     bool isDirty() const Q_DECL_OVERRIDE;
     void printDebugInfo() const Q_DECL_OVERRIDE;
 
+private:
+    void matchExistingCategories(const QStringList &categories, const Akonadi::Tag::List &existingTags);
+    void createMissingCategories();
+
 private Q_SLOTS:
     void onSelectionChanged(const Akonadi::Tag::List &);
+    void onTagsFetched(KJob *);
+    void onMissingTagCreated(KJob *);
 
 private:
-
-    /** If the incidence comes from outside of KDE it can contain unknown categories.
-     * KOrganizer usually checks for these, but it can happen that it checks before the
-     * items are in the ETM, due to akonadi's async nature.
-     * So we make the check inside the editor, and add new categories to config. This way
-     * the editor can be used standalone too.
-     * */
-    void checkForUnknownCategories(const QStringList &categoriesToCheck);
-
     Ui::EventOrTodoDesktop *mUi;
     Akonadi::Tag::List mSelectedTags;
+
+    /**
+     * List of categories for which no tag might exist.
+     *
+     * For each category of the editted incidence, we want to  make sure that there exists a
+     * corresponding tag in Akonadi. For missing categories, a \a TagCreateJob is issued.
+     * Eventually, there should be no missing categories left. In case tag creation fails for some
+     * categories, this list still holds these categories so they don't get lost
+     */
+    QStringList mMissingCategories;
     bool mDirty;
 };
 
