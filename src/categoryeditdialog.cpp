@@ -45,9 +45,8 @@ CategoryEditDialog::CategoryEditDialog(CategoryConfig *categoryConfig,
     : QDialog(parent), mCategoryConfig(categoryConfig)
 {
     setWindowTitle(i18n("Edit Categories"));
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

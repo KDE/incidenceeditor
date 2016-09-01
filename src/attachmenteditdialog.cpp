@@ -53,8 +53,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
     QMimeDatabase db;
     mMimeType = db.mimeTypeForName(item->mimeType());
     QWidget *page = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);

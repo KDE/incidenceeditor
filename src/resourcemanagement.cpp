@@ -122,8 +122,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     QWidget *w = new QWidget(this);
     mUi->setupUi(w);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
 
     mainLayout->addWidget(buttonBox);

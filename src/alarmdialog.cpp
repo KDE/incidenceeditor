@@ -35,8 +35,7 @@ AlarmDialog::AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidg
       mAllowBeginReminders(true), mAllowEndReminders(true)
 {
     setWindowTitle(i18n("Create a new reminder"));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
