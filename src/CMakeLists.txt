@@ -158,7 +158,6 @@ install(FILES
 )
 
 install(FILES
-    ${IncidenceEditor_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/globalsettings_incidenceeditor.h
     ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_export.h
     ${IncidenceEditor_HEADERS}
