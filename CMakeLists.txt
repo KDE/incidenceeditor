@@ -97,7 +97,7 @@ install(FILES
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
-install( FILES incidenceeditor.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES incidenceeditor.categories incidenceeditor.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 add_subdirectory(src)
 if (BUILD_TESTING)
