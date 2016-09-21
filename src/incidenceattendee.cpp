@@ -67,6 +67,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mDataModel = new AttendeeTableModel(attendees, this);
     mDataModel->setKeepEmpty(true);
     mDataModel->setRemoveEmptyLines(true);
+    mOldIconName = QIcon::themeName();
     QIcon::setThemeName(QStringLiteral("oxygen"));
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
@@ -168,6 +169,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
 
 IncidenceAttendee::~IncidenceAttendee()
 {
+    QIcon::setThemeName(mOldIconName);
 }
 
 void IncidenceAttendee::load(const KCalCore::Incidence::Ptr &incidence)

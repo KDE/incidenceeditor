@@ -136,6 +136,7 @@ private:
 
     IncidenceDateTime *mDateTime;
     QString mOrganizer;
+    QString mOldIconName;
 
     /** used dataModel to rely on*/
     AttendeeTableModel *mDataModel;
