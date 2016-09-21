@@ -1,10 +1,9 @@
 
-if (BUILD_TESTING)
-  set(testincidenceeditor_SRCS main.cpp)
+set(testincidenceeditor_SRCS main.cpp)
 
-  add_executable(kincidenceeditor ${testincidenceeditor_SRCS})
+add_executable(kincidenceeditor ${testincidenceeditor_SRCS})
 
-  target_link_libraries(kincidenceeditor
+target_link_libraries(kincidenceeditor
     KF5::AkonadiCalendar
     KF5::AkonadiCore
     KF5::CalendarCore
@@ -12,7 +11,6 @@ if (BUILD_TESTING)
     KF5::IncidenceEditor
     KF5::CalendarSupport
     KF5::KdepimDBusInterfaces
-  )
+    )
 
-  install(TARGETS kincidenceeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-endif()
+install(TARGETS kincidenceeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
