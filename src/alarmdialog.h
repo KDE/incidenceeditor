@@ -35,6 +35,7 @@ namespace IncidenceEditorNG
 
 class  AlarmDialog : public QDialog
 {
+    Q_OBJECT
 public:
     enum Unit {
         Minutes,

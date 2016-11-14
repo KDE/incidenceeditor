@@ -47,6 +47,7 @@ namespace IncidenceEditorNG
  */
 class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
 {
+    Q_OBJECT
 public:
     explicit FreeBusyGanttProxyModel(QObject *parent = Q_NULLPTR);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
