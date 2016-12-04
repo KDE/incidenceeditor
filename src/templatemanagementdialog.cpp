@@ -42,6 +42,7 @@
 #include <QInputDialog>
 #include <KMessageBox>
 #include <KLocalizedString>
+#include <KStandardGuiItem>
 
 #include <QTimer>
 #include <QDialogButtonBox>
@@ -122,7 +123,7 @@ void TemplateManagementDialog::slotAddTemplate()
         int rc = KMessageBox::warningContinueCancel(
                      this,
                      i18n("A template with that name already exists, do you want to overwrite it?"),
-                     i18n("Duplicate Template Name"), KGuiItem(i18n("Overwrite")));
+                     i18n("Duplicate Template Name"), KStandardGuiItem::overwrite());
         if (rc == KMessageBox::Cancel) {
             QTimer::singleShot(0, this, &TemplateManagementDialog::slotAddTemplate);
             return;
@@ -157,7 +158,7 @@ void TemplateManagementDialog::slotRemoveTemplate()
     int rc = KMessageBox::warningContinueCancel(
                  this,
                  i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
-                 i18n("Remove Template"), KGuiItem(i18n("Remove")));
+                 i18n("Remove Template"), KStandardGuiItem::remove());
 
     if (rc == KMessageBox::Cancel) {
         return;
