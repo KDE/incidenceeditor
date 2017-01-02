@@ -40,7 +40,7 @@ private Q_SLOTS:
 
         attendees << attendee1 << attendee2 << attendee3;
 
-        IndividualMailDialog dialog(QStringLiteral("title"), attendees, buttonYes, buttonNo, Q_NULLPTR);
+        IndividualMailDialog dialog(QStringLiteral("title"), attendees, buttonYes, buttonNo, nullptr);
 
         QCOMPARE(dialog.editAttendees().count(), 0);
         QCOMPARE(dialog.updateAttendees().count(), 3);

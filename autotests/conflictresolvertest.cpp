@@ -45,7 +45,7 @@ void ConflictResolverTest::addAttendee(const QString &email, const KCalCore::Fre
     CalendarSupport::FreeBusyItem::Ptr item(new CalendarSupport::FreeBusyItem(KCalCore::Attendee::Ptr(
                                      new KCalCore::Attendee(name, email, false,
                                              KCalCore::Attendee::Accepted,
-                                             role)), Q_NULLPTR));
+                                             role)), nullptr));
     item->setFreeBusy(KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(*fb.data())));
     attendees << item;
 }
@@ -66,7 +66,7 @@ void ConflictResolverTest::init()
 void ConflictResolverTest::cleanup()
 {
     delete resolver;
-    resolver = Q_NULLPTR;
+    resolver = nullptr;
     attendees.clear();
 }
 

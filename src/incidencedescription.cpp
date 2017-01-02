@@ -46,7 +46,7 @@ public:
 }
 
 IncidenceDescription::IncidenceDescription(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(Q_NULLPTR), mUi(ui), d(new IncidenceDescriptionPrivate())
+    : IncidenceEditor(nullptr), mUi(ui), d(new IncidenceDescriptionPrivate())
 {
     setObjectName(QStringLiteral("IncidenceDescription"));
     mUi->mRichTextLabel->setContextMenuPolicy(Qt::NoContextMenu);

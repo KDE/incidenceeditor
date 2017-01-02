@@ -42,7 +42,7 @@ class CategoryWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CategoryWidget(CalendarSupport::CategoryConfig *config, QWidget *parent = Q_NULLPTR);
+    explicit CategoryWidget(CalendarSupport::CategoryConfig *config, QWidget *parent = nullptr);
     ~CategoryWidget();
 
     void setCategories(const QStringList &categoryList = QStringList());
@@ -77,7 +77,7 @@ class CategoryDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit CategoryDialog(CalendarSupport::CategoryConfig *cfg, QWidget *parent = Q_NULLPTR);
+    explicit CategoryDialog(CalendarSupport::CategoryConfig *cfg, QWidget *parent = nullptr);
     ~CategoryDialog();
 
     QStringList selectedCategories() const;

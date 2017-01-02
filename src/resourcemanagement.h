@@ -52,7 +52,7 @@ class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ResourceManagement(QWidget *parent = Q_NULLPTR);
+    explicit ResourceManagement(QWidget *parent = nullptr);
     ~ResourceManagement();
 
     ResourceItem::Ptr selectedItem() const;

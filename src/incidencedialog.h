@@ -43,8 +43,8 @@ class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit IncidenceDialog(Akonadi::IncidenceChanger *changer = Q_NULLPTR,
-                             QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = 0);
+    explicit IncidenceDialog(Akonadi::IncidenceChanger *changer = nullptr,
+                             QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
     ~IncidenceDialog();
 
     /**

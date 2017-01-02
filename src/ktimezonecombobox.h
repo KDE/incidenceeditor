@@ -54,7 +54,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit KTimeZoneComboBox(QWidget *parent = Q_NULLPTR);
+    explicit KTimeZoneComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroys the time zone combobox.

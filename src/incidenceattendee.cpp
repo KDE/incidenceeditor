@@ -54,7 +54,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
                                      Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
     , mParentWidget(parent)
-    , mConflictResolver(Q_NULLPTR)
+    , mConflictResolver(nullptr)
     , mDateTime(dateTime)
     , mStateDelegate(new AttendeeComboBoxDelegate(this))
     , mRoleDelegate(new AttendeeComboBoxDelegate(this))
@@ -232,7 +232,7 @@ void IncidenceAttendee::save(const KCalCore::Incidence::Ptr &incidence)
         }
         if (KEmailAddress::isValidAddress(attendee->email())) {
             if (KMessageBox::warningYesNo(
-                        Q_NULLPTR,
+                        nullptr,
                         i18nc("@info",
                               "%1 does not look like a valid email address. "
                               "Are you sure you want to invite this participant?",
@@ -354,7 +354,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &
 
     // stop old job
     KJob *oldJob = mMightBeGroupJobs.key(attendee);
-    if (oldJob !=  Q_NULLPTR) {
+    if (oldJob !=  nullptr) {
         disconnect(oldJob);
         oldJob->deleteLater();
         mMightBeGroupJobs.remove(oldJob);

@@ -41,7 +41,7 @@ class SwitchRoleProxy: public QSortFilterProxyModel
 {
 
 public:
-    explicit SwitchRoleProxy(QObject *parent = Q_NULLPTR)
+    explicit SwitchRoleProxy(QObject *parent = nullptr)
         : QSortFilterProxyModel(parent)
     {
 
@@ -60,7 +60,7 @@ public:
 };
 
 IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(Q_NULLPTR)
+    : IncidenceEditor(nullptr)
     , mUi(ui)
     , dataModel(ieAttendee->dataModel())
     , mDateTime(dateTime)

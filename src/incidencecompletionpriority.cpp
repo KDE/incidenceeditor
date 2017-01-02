@@ -30,7 +30,7 @@ class IncidenceCompletionPriority::Private
     IncidenceCompletionPriority *const q;
 public:
     explicit Private(IncidenceCompletionPriority *parent)
-        : q(parent), mUi(Q_NULLPTR), mOrigPercentCompleted(-1)
+        : q(parent), mUi(nullptr), mOrigPercentCompleted(-1)
     {
     }
 
@@ -55,7 +55,7 @@ void IncidenceCompletionPriority::Private::sliderValueChanged(int value)
 IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(), d(new Private(this))
 {
-    Q_ASSERT(ui != Q_NULLPTR);
+    Q_ASSERT(ui != nullptr);
     setObjectName(QStringLiteral("IncidenceCompletionPriority"));
 
     d->mUi = ui;
@@ -83,7 +83,7 @@ void IncidenceCompletionPriority::load(const KCalCore::Incidence::Ptr &incidence
     // TODO priority might be valid for other incidence types as well
     // only for Todos
     KCalCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalCore::Todo>();
-    if (todo == Q_NULLPTR) {
+    if (todo == nullptr) {
         mWasDirty = false;
         return;
     }
@@ -110,7 +110,7 @@ void IncidenceCompletionPriority::save(const KCalCore::Incidence::Ptr &incidence
     // TODO priority might be valid for other incidence types as well
     // only for Todos
     KCalCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalCore::Todo>(incidence);
-    if (todo == Q_NULLPTR) {
+    if (todo == nullptr) {
         return;
     }
 

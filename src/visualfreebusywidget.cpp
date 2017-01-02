@@ -124,7 +124,7 @@ private:
 class GanttHeaderView : public QHeaderView
 {
 public:
-    explicit GanttHeaderView(QWidget *parent = Q_NULLPTR) : QHeaderView(Qt::Horizontal, parent)
+    explicit GanttHeaderView(QWidget *parent = nullptr) : QHeaderView(Qt::Horizontal, parent)
     {
     }
 
@@ -139,7 +139,7 @@ public:
 }
 
 VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)
-    : QWidget(parent), mGanttGrid(Q_NULLPTR), mScaleCombo(Q_NULLPTR)
+    : QWidget(parent), mGanttGrid(nullptr), mScaleCombo(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setSpacing(spacing);

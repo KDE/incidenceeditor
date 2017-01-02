@@ -49,7 +49,7 @@ class VisualFreeBusyWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing = 8, QWidget *parent = Q_NULLPTR);
+    explicit VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing = 8, QWidget *parent = nullptr);
     ~VisualFreeBusyWidget();
 
 public Q_SLOTS:

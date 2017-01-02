@@ -46,7 +46,7 @@ public:
         Edit            /**< open composer for attendee */
     };
     explicit IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees,
-                                  const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = Q_NULLPTR);
+                                  const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
     virtual ~IndividualMailDialog();
 
     KCalCore::Attendee::List editAttendees() const;

@@ -46,7 +46,7 @@ class AttendeeEditor : public KPIM::MultiplyingLineEditor
 {
     Q_OBJECT
 public:
-    explicit AttendeeEditor(QWidget *parent = Q_NULLPTR);
+    explicit AttendeeEditor(QWidget *parent = nullptr);
 
     AttendeeData::List attendees() const;
 

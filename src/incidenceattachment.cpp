@@ -51,7 +51,7 @@
 using namespace IncidenceEditorNG;
 
 IncidenceAttachment::IncidenceAttachment(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(Q_NULLPTR),
+    : IncidenceEditor(nullptr),
       mUi(ui),
       mPopupMenu(new QMenu)
 {
@@ -201,7 +201,7 @@ void IncidenceAttachment::removeSelectedAttachments()
     QString labelsStr = labels.join(QStringLiteral("<nl/>"));
 
     if (KMessageBox::questionYesNo(
-                Q_NULLPTR,
+                nullptr,
                 xi18nc("@info",
                        "Do you really want to remove these attachments?<nl/>%1", labelsStr),
                 i18nc("@title:window", "Remove Attachments?"),
@@ -241,13 +241,13 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     KCalCore::Attachment::Ptr att = attitem->attachment();
 
     // get the saveas file name
-    QString saveAsFile = QFileDialog::getSaveFileName(Q_NULLPTR, i18nc("@title", "Save Attachment"),
+    QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
                          att->label());
 
     if (saveAsFile.isEmpty() ||
             (QFile(saveAsFile).exists() &&
              (KMessageBox::warningYesNo(
-                  Q_NULLPTR,
+                  nullptr,
                   i18nc("@info", "%1 already exists. Do you want to overwrite it?",
                         saveAsFile)) == KMessageBox::No))) {
         return;
@@ -262,7 +262,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     // save the attachment url
     auto job = KIO::file_copy(sourceUrl, QUrl::fromLocalFile(saveAsFile));
     if (!job->exec() && job->error()) {
-        KMessageBox::error(Q_NULLPTR, job->errorString());
+        KMessageBox::error(nullptr, job->errorString());
     }
 }
 
@@ -289,14 +289,14 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     if (att->isUri()) {
         Q_EMIT openURL(QUrl(att->uri()));
     } else {
-        KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), Q_NULLPTR, true);
+        KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), nullptr, true);
     }
 }
 
 void IncidenceAttachment::showContextMenu(const QPoint &pos)
 {
     QListWidgetItem *item = mAttachmentView->itemAt(pos);
-    const bool enable = item != Q_NULLPTR;
+    const bool enable = item != nullptr;
 
     int numSelected = 0;
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
@@ -418,7 +418,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
     }
     QMenu menu;
-    QAction *linkAction = Q_NULLPTR, *cancelAction;
+    QAction *linkAction = nullptr, *cancelAction;
     if (probablyWeHaveUris) {
         linkAction = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")), i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
@@ -598,7 +598,7 @@ void IncidenceAttachment::addUriAttachment(const QString &uri,
         }
     } else {
         auto job = KIO::storedGet(QUrl(uri));
-        KJobWidgets::setWindow(job, Q_NULLPTR);
+        KJobWidgets::setWindow(job, nullptr);
         if (job->exec()) {
             const QByteArray data = job->data();
             addDataAttachment(data, mimeType, label);

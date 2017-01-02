@@ -70,7 +70,7 @@ static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
 }
 
 IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(Q_NULLPTR), mUi(ui),
+    : IncidenceEditor(nullptr), mUi(ui),
       mTimezoneCombosWereVisibile(false)
 {
     setTimeZonesVisibility(false);

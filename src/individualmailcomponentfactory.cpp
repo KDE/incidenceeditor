@@ -41,8 +41,8 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::
     , mUpdate(update)
     , mEdit(edit)
     , mIdentity(identity)
-    , mQueueJob(Q_NULLPTR)
-    , mComposerJob(Q_NULLPTR)
+    , mQueueJob(nullptr)
+    , mComposerJob(nullptr)
 {
 }
 
@@ -115,10 +115,10 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
     if (job->error()) {
         if (job == mQueueJob && mComposerJob) {
             mComposerJob->kill();
-            mComposerJob = Q_NULLPTR;
+            mComposerJob = nullptr;
         } else if (job == mComposerJob && mQueueJob) {
             mQueueJob->kill();
-            mQueueJob = Q_NULLPTR;
+            mQueueJob = nullptr;
         }
         setError(job->error());
         setErrorText(job->errorString());
@@ -129,12 +129,12 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
         if (!mComposerJob) {
             emitResult();
         }
-        mQueueJob = Q_NULLPTR;
+        mQueueJob = nullptr;
     } else {
         if (!mQueueJob) {
             emitResult();
         }
-        mComposerJob = Q_NULLPTR;
+        mComposerJob = nullptr;
     }
 
 }
@@ -144,7 +144,7 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
 IndividualMailITIPHandlerDialogDelegate::IndividualMailITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence,
         KCalCore::iTIPMethod method, QWidget *parent)
     : Akonadi::ITIPHandlerDialogDelegate(incidence, method, parent),
-      mDialog(Q_NULLPTR)
+      mDialog(nullptr)
 {
 }
 

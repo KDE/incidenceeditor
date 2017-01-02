@@ -57,7 +57,7 @@ public:
         Tentative
     };
 
-    explicit AttendeeTableModel(const KCalCore::Attendee::List &resources, QObject *parent = Q_NULLPTR);
+    explicit AttendeeTableModel(const KCalCore::Attendee::List &resources, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
@@ -95,7 +95,7 @@ class ResourceFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit ResourceFilterProxyModel(QObject *parent = Q_NULLPTR);
+    explicit ResourceFilterProxyModel(QObject *parent = nullptr);
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
 };
 
@@ -103,7 +103,7 @@ class AttendeeFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit AttendeeFilterProxyModel(QObject *parent = Q_NULLPTR);
+    explicit AttendeeFilterProxyModel(QObject *parent = nullptr);
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
 };
 

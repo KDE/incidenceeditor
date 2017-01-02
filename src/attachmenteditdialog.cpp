@@ -145,7 +145,7 @@ void AttachmentEditDialog::slotApply()
     if (mUi->mStackedWidget->currentIndex() == 0) {
         if (mUi->mInlineCheck->isChecked()) {
             auto job = KIO::storedGet(url);
-            KJobWidgets::setWindow(job, Q_NULLPTR);
+            KJobWidgets::setWindow(job, nullptr);
             if (job->exec()) {
                 QByteArray data  = job->data();
                 mItem->setData(data);

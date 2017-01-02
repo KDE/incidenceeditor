@@ -47,7 +47,7 @@ public:
     };
 
     ResourceModel(const QStringList &headers,
-                  QObject *parent = Q_NULLPTR);
+                  QObject *parent = nullptr);
     ~ResourceModel();
 
     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;

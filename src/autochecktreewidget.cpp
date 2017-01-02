@@ -52,12 +52,12 @@ AutoCheckTreeWidget::~AutoCheckTreeWidget()
 QTreeWidgetItem *AutoCheckTreeWidget::itemByPath(const QStringList &path) const
 {
     QStringList newPath = path;
-    QTreeWidgetItem *item = Q_NULLPTR;
+    QTreeWidgetItem *item = nullptr;
 
     while (newPath.count()) {
         item = findItem(item, newPath.takeFirst());
         if (!item) {
-            return Q_NULLPTR;
+            return nullptr;
         }
     }
 
@@ -113,7 +113,7 @@ QTreeWidgetItem *AutoCheckTreeWidget::findItem(QTreeWidgetItem *parent, const QS
         }
     }
 
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent,

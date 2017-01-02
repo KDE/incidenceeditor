@@ -43,7 +43,7 @@ class CategoryEditDialog : public QDialog
     Q_OBJECT
 public:
     explicit CategoryEditDialog(CalendarSupport::CategoryConfig *categoryConfig,
-                                QWidget *parent = Q_NULLPTR);
+                                QWidget *parent = nullptr);
 
     ~CategoryEditDialog();
 

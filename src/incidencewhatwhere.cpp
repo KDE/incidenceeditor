@@ -27,7 +27,7 @@
 using namespace IncidenceEditorNG;
 
 IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(Q_NULLPTR), mUi(ui)
+    : IncidenceEditor(nullptr), mUi(ui)
 {
     setObjectName(QStringLiteral("IncidenceWhatWhere"));
     connect(mUi->mSummaryEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);

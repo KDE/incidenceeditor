@@ -38,7 +38,7 @@ class CombinedIncidenceEditor : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    explicit CombinedIncidenceEditor(QWidget *parent = Q_NULLPTR);
+    explicit CombinedIncidenceEditor(QWidget *parent = nullptr);
     /**
      * Deletes this editor as well as all editors which are combined into this
      * one.

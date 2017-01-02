@@ -51,7 +51,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     fb1->addPeriod(dt1, KCalCore::Duration(60 * 60));
     fb1->addPeriod(dt2, KCalCore::Duration(60 * 60));
 
-    CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, Q_NULLPTR));
+    CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, nullptr));
     item1->setFreeBusy(fb1);
 
     const KDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), KDateTime::UTC);
@@ -62,7 +62,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     fb2->addPeriod(dt3, KCalCore::Duration(60 * 60));
     fb2->addPeriod(dt4, KCalCore::Duration(60 * 60));
 
-    CalendarSupport::FreeBusyItem::Ptr item2(new CalendarSupport::FreeBusyItem(a2, Q_NULLPTR));
+    CalendarSupport::FreeBusyItem::Ptr item2(new CalendarSupport::FreeBusyItem(a2, nullptr));
     item2->setFreeBusy(fb2);
 
     fbModel->addItem(item1);

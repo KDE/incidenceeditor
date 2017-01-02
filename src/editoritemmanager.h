@@ -56,7 +56,7 @@ public:
      * Receives an option IncidenceChanger, so you can share the undo/redo stack with your
      * application.
      */
-    EditorItemManager(ItemEditorUi *ui, Akonadi::IncidenceChanger *changer = Q_NULLPTR);
+    EditorItemManager(ItemEditorUi *ui, Akonadi::IncidenceChanger *changer = nullptr);
 
     /**
      * Destructs the ItemEditor. Unsaved changes will get lost at this point.

@@ -37,7 +37,7 @@ class AttendeeLineEditDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit AttendeeLineEditDelegate(QObject *parent = Q_NULLPTR);
+    explicit AttendeeLineEditDelegate(QObject *parent = nullptr);
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
     void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;

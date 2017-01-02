@@ -45,7 +45,7 @@ class AttachmentIconView : public QListWidget
     Q_OBJECT
     friend class EditorAttachments;
 public:
-    explicit AttachmentIconView(QWidget *parent = Q_NULLPTR);
+    explicit AttachmentIconView(QWidget *parent = nullptr);
 
     QMimeData *mimeData() const;
     QUrl tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const;

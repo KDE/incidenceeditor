@@ -37,7 +37,7 @@ class FreeBusyUrlDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit FreeBusyUrlDialog(const AttendeeData::Ptr &, QWidget *parent = Q_NULLPTR);
+    explicit FreeBusyUrlDialog(const AttendeeData::Ptr &, QWidget *parent = nullptr);
 
 public Q_SLOTS:
     void slotOk();
@@ -50,7 +50,7 @@ class FreeBusyUrlWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FreeBusyUrlWidget(const AttendeeData::Ptr &, QWidget *parent = Q_NULLPTR);
+    explicit FreeBusyUrlWidget(const AttendeeData::Ptr &, QWidget *parent = nullptr);
     ~FreeBusyUrlWidget();
 
     void loadConfig();

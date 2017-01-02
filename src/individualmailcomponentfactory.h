@@ -98,7 +98,7 @@ class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::IT
 {
     Q_OBJECT
 public:
-    explicit IndividualMailComponentFactory(QObject *parent = Q_NULLPTR);
+    explicit IndividualMailComponentFactory(QObject *parent = nullptr);
     MailTransport::MessageQueueJob *createMessageQueueJob(const KCalCore::IncidenceBase::Ptr &incidence,
             const KIdentityManagement::Identity &identity, QObject *parent) Q_DECL_OVERRIDE;
 
