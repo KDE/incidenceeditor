@@ -183,7 +183,7 @@ void IncidenceAlarm::newAlarm()
     dialog->setAllowEndReminders(mDateTime->endDateTimeEnabled());
 
     if (dialog->exec() == QDialog::Accepted) {
-        KCalCore::Alarm::Ptr newAlarm(new KCalCore::Alarm(0));
+        KCalCore::Alarm::Ptr newAlarm(new KCalCore::Alarm(Q_NULLPTR));
         dialog->save(newAlarm);
         newAlarm->setEnabled(true);
         mAlarms.append(newAlarm);

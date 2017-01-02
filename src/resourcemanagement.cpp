@@ -203,7 +203,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
 {
     // Clean up formDetails
     QLayoutItem *child;
-    while ((child = mUi->formDetails->takeAt(0)) != 0) {
+    while ((child = mUi->formDetails->takeAt(0)) != Q_NULLPTR) {
         delete child->widget();
         delete child;
     }
@@ -254,7 +254,7 @@ void ResourceManagement::slotOwnerSearchFinished()
 {
     // Clean up formDetails
     QLayoutItem *child;
-    while ((child = mUi->formOwner->takeAt(0)) != 0) {
+    while ((child = mUi->formOwner->takeAt(0)) != Q_NULLPTR) {
         delete child->widget();
         delete child;
     }

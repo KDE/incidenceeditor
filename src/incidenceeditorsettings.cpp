@@ -23,7 +23,7 @@
 
 using namespace IncidenceEditorNG;
 
-IncidenceEditorSettings *IncidenceEditorSettings::mSelf = 0;
+IncidenceEditorSettings *IncidenceEditorSettings::mSelf = Q_NULLPTR;
 
 IncidenceEditorSettings *IncidenceEditorSettings::self()
 {

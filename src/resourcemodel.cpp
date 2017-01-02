@@ -83,7 +83,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
 Qt::ItemFlags ResourceModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return Q_NULLPTR;
     }
 
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable;

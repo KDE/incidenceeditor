@@ -159,7 +159,7 @@ void IncidenceRecurrence::load(const KCalCore::Incidence::Ptr &incidence)
     }
 
     int f = 0;
-    KCalCore::Recurrence *r = 0;
+    KCalCore::Recurrence *r = Q_NULLPTR;
     if (mLoadedIncidence->recurrenceType() != KCalCore::Recurrence::rNone) {
         r = mLoadedIncidence->recurrence();
         f = r->frequency();

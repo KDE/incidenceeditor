@@ -47,7 +47,7 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
         return dialog;
     }
     default:
-        return 0;
+        return Q_NULLPTR;
     }
 }
 
@@ -81,7 +81,7 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
 
     IncidenceDialog *dialog = create(true,  /* no need for, we're not editing an existing to-do */
                                      KCalCore::Incidence::TypeTodo,
-                                     0,
+                                     Q_NULLPTR,
                                      parent, flags);
     dialog->selectCollection(defaultCollection);
     dialog->load(item);
@@ -119,7 +119,7 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
     IncidenceDialog *dialog =
         create(false,  // not needed for saving, as we're not editing an existing incidence
                KCalCore::Incidence::TypeEvent,
-               0,
+               Q_NULLPTR,
                parent, flags);
 
     dialog->selectCollection(defaultCollection);

@@ -60,7 +60,7 @@ public:
 };
 
 IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(0)
+    : IncidenceEditor(Q_NULLPTR)
     , mUi(ui)
     , dataModel(ieAttendee->dataModel())
     , mDateTime(dateTime)

@@ -97,7 +97,7 @@ void initPresets(AlarmPresets::When when)
     case AlarmPresets::BeforeStart:
 
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(0));
+            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(Q_NULLPTR));
             alarm->setType(KCalCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setStartOffset(-minutes * 60);
@@ -124,7 +124,7 @@ void initPresets(AlarmPresets::When when)
 
     case AlarmPresets::BeforeEnd:
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(0));
+            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(Q_NULLPTR));
             alarm->setType(KCalCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setEndOffset(-minutes * 60);

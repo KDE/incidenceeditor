@@ -231,12 +231,12 @@ void CategoryWidget::handleColorChanged(const QColor &newColor)
 }
 
 CategoryDialog::CategoryDialog(CategoryConfig *cc, QWidget *parent)
-    : QDialog(parent), d(0)
+    : QDialog(parent), d(Q_NULLPTR)
 {
     setWindowTitle(i18n("Select Categories"));
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
-    QDialogButtonBox *buttonBox = 0;
+    QDialogButtonBox *buttonBox = Q_NULLPTR;
 
     buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply);
 

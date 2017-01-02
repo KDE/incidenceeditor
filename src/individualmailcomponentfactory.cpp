@@ -41,8 +41,8 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::
     , mUpdate(update)
     , mEdit(edit)
     , mIdentity(identity)
-    , mQueueJob(0)
-    , mComposerJob(0)
+    , mQueueJob(Q_NULLPTR)
+    , mComposerJob(Q_NULLPTR)
 {
 }
 
@@ -115,10 +115,10 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
     if (job->error()) {
         if (job == mQueueJob && mComposerJob) {
             mComposerJob->kill();
-            mComposerJob = 0;
+            mComposerJob = Q_NULLPTR;
         } else if (job == mComposerJob && mQueueJob) {
             mQueueJob->kill();
-            mQueueJob = 0;
+            mQueueJob = Q_NULLPTR;
         }
         setError(job->error());
         setErrorText(job->errorString());
@@ -129,12 +129,12 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
         if (!mComposerJob) {
             emitResult();
         }
-        mQueueJob = 0;
+        mQueueJob = Q_NULLPTR;
     } else {
         if (!mQueueJob) {
             emitResult();
         }
-        mComposerJob = 0;
+        mComposerJob = Q_NULLPTR;
     }
 
 }

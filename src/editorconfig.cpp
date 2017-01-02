@@ -34,13 +34,13 @@ public:
     static void cleanup_config()
     {
         delete config;
-        config = 0;
+        config = Q_NULLPTR;
     }
 
     QHash<KCalCore::IncidenceBase::IncidenceType, QStringList> mTemplates;
 };
 
-EditorConfig *EditorConfig::Private::config = 0;
+EditorConfig *EditorConfig::Private::config = Q_NULLPTR;
 
 EditorConfig::EditorConfig()
     : d(new Private)
