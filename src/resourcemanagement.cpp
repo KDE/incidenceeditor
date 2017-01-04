@@ -231,7 +231,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
         foreach (const QByteArray &value, values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QStringLiteral("\n"))));
+        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
     }
 
     QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
@@ -276,7 +276,7 @@ void ResourceManagement::slotOwnerSearchFinished()
         foreach (const QByteArray &value, values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QStringLiteral("\n"))));
+        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
     }
 }
 

@@ -236,7 +236,7 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
     }
 
     QMap<QString, QString> metadata;
-    metadata[QStringLiteral("labels")] = labels.join(QStringLiteral(":"));
+    metadata[QStringLiteral("labels")] = labels.join(QLatin1Char(':'));
 
     QMimeData *mimeData = new QMimeData;
     mimeData->setUrls(urls);
