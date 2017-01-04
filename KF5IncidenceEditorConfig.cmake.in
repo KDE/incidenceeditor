@@ -1,5 +1,5 @@
 @PACKAGE_INIT@
-
+include(CMakeFindDependencyMacro)
 find_dependency(KF5EventViews "@EVENTVIEW_LIB_VERSION@")
 find_dependency(KF5CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
 find_dependency(KF5CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
