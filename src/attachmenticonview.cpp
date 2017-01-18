@@ -186,8 +186,9 @@ AttachmentIconView::AttachmentIconView(QWidget *parent)
 
 QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const
 {
-    if (mTempFiles.contains(attachment)) {
-        return mTempFiles.value(attachment);
+    const QUrl url = mTempFiles.value(attachment);
+    if (url.isValid()) {
+        return url;
     }
     QTemporaryFile *file;
 
