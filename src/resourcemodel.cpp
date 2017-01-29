@@ -20,6 +20,7 @@
  */
 #include "resourcemodel.h"
 #include "ldaputils.h"
+#include "helper_p.h"
 
 #include <KEmailAddress>
 #include <QDebug>
@@ -198,7 +199,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 
     //qDebug() <<  "Found ldapCollections";
 
-    foreach (const KLDAP::LdapResultObject &result, results) {
+    for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
         ResourceItem::Ptr item(new ResourceItem(result.object.dn(), headers, *result.client, rootItem));
         item->setLdapObject(result.object);
 
@@ -218,14 +219,14 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 
 void ResourceModel::slotLDAPSearchData(const KLDAP::LdapResultObject::List &results)
 {
-    foreach (const KLDAP::LdapResultObject &result, results) {
+    for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
         //Add the found items to all collections, where it is member
         QList<ResourceItem::Ptr> parents = ldapCollectionsMap.values(result.object.dn().toString());
         if (parents.isEmpty()) {
             parents << rootItem;
         }
 
-        foreach (const ResourceItem::Ptr &parent, parents) {
+        for (const ResourceItem::Ptr &parent : qAsConst(parents)) {
             ResourceItem::Ptr item(new ResourceItem(result.object.dn(), headers, *result.client, parent));
             item->setLdapObject(result.object);
 

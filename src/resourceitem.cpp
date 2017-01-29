@@ -19,6 +19,7 @@
  *
  */
 #include "resourceitem.h"
+#include "helper_p.h"
 
 #include <kldap/ldapserver.h>
 
@@ -43,7 +44,7 @@ ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, co
         mLdapClient.setAttributes(attrs);
     } else {
         itemData.reserve(mAttrs.count());
-        foreach (const QString &header, mAttrs) {
+        for (const QString &header : qAsConst(mAttrs)) {
             itemData << header;
         }
     }
@@ -67,7 +68,7 @@ int ResourceItem::childNumber() const
 {
     if (parentItem) {
         int i = 0;
-        foreach (const ResourceItem::Ptr &child, parentItem->childItems) {
+        for (const ResourceItem::Ptr &child : qAsConst(parentItem->childItems)) {
             if (child == this) {
                 return i;
             }
@@ -154,7 +155,7 @@ void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &/*client*/,
                                   const KLDAP::LdapObject &obj)
 {
     mLdapObject = obj;
-    foreach (const QString &header, mAttrs) {
+    for (const QString &header : qAsConst(mAttrs)) {
         if (!obj.attributes()[header].isEmpty()) {
             itemData << QString::fromUtf8(obj.attributes()[header][0]);
         } else {

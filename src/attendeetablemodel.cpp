@@ -18,7 +18,7 @@
  */
 
 #include "attendeetablemodel.h"
-
+#include "helper_p.h"
 #include <klocalizedstring.h>
 
 #include <KCalCore/Attendee>
@@ -247,7 +247,7 @@ void AttendeeTableModel::addEmptyAttendee()
 {
     if (mKeepEmpty) {
         bool create = true;
-        foreach (const KCalCore::Attendee::Ptr &attendee, mAttendeeList) {
+        for (const KCalCore::Attendee::Ptr &attendee : qAsConst(mAttendeeList)) {
             if (attendee->fullName().isEmpty()) {
                 create = false;
                 break;

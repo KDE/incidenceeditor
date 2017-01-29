@@ -19,6 +19,7 @@
 */
 
 #include "incidencecategories.h"
+#include "helper_p.h"
 
 #include "editorconfig.h"
 
@@ -88,7 +89,7 @@ QStringList IncidenceCategories::categories() const
 {
     QStringList list;
     list.reserve(mSelectedTags.count() + mMissingCategories.count());
-    Q_FOREACH (const Akonadi::Tag &tag, mSelectedTags) {
+    for (const Akonadi::Tag &tag : qAsConst(mSelectedTags)) {
         list << tag.name();
     }
     list << mMissingCategories;
@@ -97,7 +98,7 @@ QStringList IncidenceCategories::categories() const
 
 void IncidenceCategories::createMissingCategories()
 {
-    Q_FOREACH (const QString &category, mMissingCategories) {
+    for (const QString &category : qAsConst(mMissingCategories)) {
         Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
         Akonadi::TagCreateJob *createJob = new Akonadi::TagCreateJob(missingTag, this);
         connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);

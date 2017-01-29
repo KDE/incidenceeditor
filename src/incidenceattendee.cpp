@@ -221,9 +221,9 @@ void IncidenceAttendee::load(const KCalCore::Incidence::Ptr &incidence)
 void IncidenceAttendee::save(const KCalCore::Incidence::Ptr &incidence)
 {
     incidence->clearAttendees();
-    KCalCore::Attendee::List attendees = mDataModel->attendees();
+    const KCalCore::Attendee::List attendees = mDataModel->attendees();
 
-    foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         Q_ASSERT(attendee);
 
         bool skip = false;
@@ -422,7 +422,7 @@ void IncidenceAttendee::expandResult(KJob *job)
 
     dataModel()->removeRow(row);
     const KContacts::Addressee::List groupMembers = expandJob->contacts();
-    foreach (const KContacts::Addressee &member, groupMembers) {
+    for (const KContacts::Addressee &member : groupMembers) {
         KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(member.realName(), member.preferredEmail(),
                                       attendee->RSVP(),
                                       attendee->status(),
@@ -443,7 +443,7 @@ void IncidenceAttendee::slotSelectAddresses()
         Akonadi::EmailAddressSelectionDialog *dialogPtr = dialog.data();
         if (dialogPtr) {
             const Akonadi::EmailAddressSelection::List list = dialogPtr->selectedAddresses();
-            foreach (const Akonadi::EmailAddressSelection &selection, list) {
+            for (const Akonadi::EmailAddressSelection &selection : list) {
                 if (selection.item().hasPayload<KContacts::ContactGroup>()) {
                     Akonadi::ContactGroupExpandJob *job =
                         new Akonadi::ContactGroupExpandJob(
@@ -542,9 +542,9 @@ void IncidenceAttendee::slotConflictResolverAttendeeRemoved(const QModelIndex &i
 
 void IncidenceAttendee::slotConflictResolverLayoutChanged()
 {
-    KCalCore::Attendee::List attendees = mDataModel->attendees();
+    const KCalCore::Attendee::List attendees = mDataModel->attendees();
     mConflictResolver->clearAttendees();
-    foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         if (!attendee->email().isEmpty()) {
             mConflictResolver->insertAttendee(attendee);
         }

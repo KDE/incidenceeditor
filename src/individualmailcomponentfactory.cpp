@@ -22,6 +22,7 @@
 
 #include "individualmailcomponentfactory.h"
 #include "individualmaildialog.h"
+#include "helper_p.h"
 
 #include <CalendarSupport/KCalPrefs>
 
@@ -52,7 +53,7 @@ void IndividualMessageQueueJob::start()
     QSet<QString> attendeesCc(QSet<QString>::fromList(addressAttribute().cc()));
 
     QStringList attendeesAutoTo,  attendeesAutoCc;
-    foreach (const KCalCore::Attendee::Ptr &attendee, mUpdate) {
+    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(mUpdate)) {
         if (attendeesTo.contains(attendee->email())) {
             attendeesAutoTo.append(attendee->fullName());
         }
@@ -65,7 +66,7 @@ void IndividualMessageQueueJob::start()
     }
 
     QStringList attendeesComposerTo,  attendeesComposerCc;
-    foreach (const KCalCore::Attendee::Ptr &attendee, mEdit) {
+    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(mEdit)) {
         if (attendeesTo.contains(attendee->email())) {
             attendeesComposerTo.append(attendee->fullName());
         }

@@ -36,7 +36,7 @@ AlarmDialog::AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidg
 {
     setWindowTitle(i18n("Create a new reminder"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -214,7 +214,7 @@ void AlarmDialog::save(const KCalCore::Alarm::Ptr &alarm) const
         QStringList addresses = KEmailAddress::splitAddressList(mUi->mEmailAddress->text());
         KCalCore::Person::List add;
         add.reserve(addresses.count());
-        for (QStringList::Iterator it = addresses.begin(); it != addresses.end(); ++it) {
+        for (QStringList::Iterator it = addresses.begin(), end = addresses.end(); it != end; ++it) {
             add << KCalCore::Person::fromFullName(*it);
         }
         // TODO: Add a subject line and possibilities for attachments

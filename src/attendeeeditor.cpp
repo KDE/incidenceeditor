@@ -49,7 +49,8 @@ void AttendeeEditor::slotCalculateTotal()
     int empty = 0;
     int count = 0;
 
-    foreach (KPIM::MultiplyingLine *line, lines()) {
+    const QList<KPIM::MultiplyingLine *> listLines = lines();
+    for (KPIM::MultiplyingLine *line : listLines) {
         AttendeeLine *att = qobject_cast<AttendeeLine *>(line);
         if (att) {
             if (att->isEmpty()) {
@@ -68,10 +69,10 @@ void AttendeeEditor::slotCalculateTotal()
 
 AttendeeData::List AttendeeEditor::attendees() const
 {
-    QList<KPIM::MultiplyingLineData::Ptr> dataList = allData();
+    const QList<KPIM::MultiplyingLineData::Ptr> dataList = allData();
     AttendeeData::List attList;
     //qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
-    foreach (const KPIM::MultiplyingLineData::Ptr &datum, dataList) {
+    for (const KPIM::MultiplyingLineData::Ptr &datum : dataList) {
         AttendeeData::Ptr att = qSharedPointerDynamicCast<AttendeeData>(datum);
         if (!att) {
             continue;
@@ -93,7 +94,8 @@ void AttendeeEditor::removeAttendee(const AttendeeData::Ptr &attendee)
 
 void AttendeeEditor::setActions(AttendeeLine::AttendeeActions actions)
 {
-    foreach (KPIM::MultiplyingLine *line, lines()) {
+    const QList<KPIM::MultiplyingLine *> listLines = lines();
+    for (KPIM::MultiplyingLine *line : listLines) {
         AttendeeLine *att = qobject_cast<AttendeeLine *>(line);
         att->setActions(actions);
     }

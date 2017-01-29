@@ -58,7 +58,7 @@ void AttendeeComboBox::addItem(const QIcon &icon, const QString &text)
 
 void AttendeeComboBox::addItems(const QStringList &texts)
 {
-    foreach (const QString &str, texts) {
+    for (const QString &str : texts) {
         addItem(QIcon(), str);
     }
     if (mCurrentIndex == -1) {

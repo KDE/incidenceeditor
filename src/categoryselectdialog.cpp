@@ -78,9 +78,8 @@ void CategorySelectWidget::setCategories(const QStringList &categoryList)
     mWidgets->mCategories->clear();
     mCategoryList.clear();
 
-    QStringList::ConstIterator it;
     QStringList cats = mCategoryConfig->customCategories();
-    for (it = categoryList.begin(); it != categoryList.end(); ++it) {
+    for (QStringList::ConstIterator it = categoryList.begin(), end = categoryList.end(); it != end; ++it) {
         if (!cats.contains(*it)) {
             cats.append(*it);
         }
@@ -167,10 +166,9 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
     : QDialog(parent), d(nullptr)
 {
     setWindowTitle(i18n("Select Categories"));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = nullptr;
-    buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply);
+    buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

@@ -74,8 +74,7 @@ void IncidenceAttachment::load(const KCalCore::Incidence::Ptr &incidence)
     mAttachmentView->clear();
 
     KCalCore::Attachment::List attachments = incidence->attachments();
-    KCalCore::Attachment::List::ConstIterator it;
-    for (it = attachments.constBegin(); it != attachments.constEnd(); ++it) {
+    for (KCalCore::Attachment::List::ConstIterator it = attachments.constBegin(), end = attachments.constEnd(); it != end; ++it) {
         new AttachmentIconItem((*it), mAttachmentView);
     }
 

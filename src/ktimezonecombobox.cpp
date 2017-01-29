@@ -18,7 +18,7 @@
 */
 
 #include "ktimezonecombobox.h"
-
+#include "helper_p.h"
 #include <KCalCore/ICalTimeZones>
 
 #include <KLocalizedString>
@@ -48,13 +48,14 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.clear();
 
     // Read all system time zones
-    foreach (const QByteArray &id, QTimeZone::availableTimeZoneIds()) {
+    const QList<QByteArray> lstTimeZoneIds = QTimeZone::availableTimeZoneIds();
+    for (const QByteArray &id : lstTimeZoneIds) {
         mZones.push_back(QString::fromLatin1(id));
     }
     mZones.sort();
 
     // Prepend the list of additional timezones
-    foreach (const QByteArray &id, mAdditionalZones)
+    for (const QByteArray &id : qAsConst(mAdditionalZones))
         mZones.prepend(QString::fromLatin1(id));
 
     // Prepend Local, UTC and Floating, for convenience
@@ -63,7 +64,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.prepend(QString::fromLatin1(QTimeZone::systemTimeZoneId()));    // index=0
 
     // Put translated zones into the combobox
-    foreach (const QString &z, mZones) {
+    for (const QString &z : qAsConst(mZones)) {
         mParent->addItem(i18n(z.toUtf8().constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
     }
 }
@@ -90,7 +91,7 @@ void KTimeZoneComboBox::selectTimeSpec(const KDateTime::Spec &spec)
     int nCurrentlySet = -1;
 
     int i = 0;
-    foreach (const QString &z, d->mZones) {
+    for (const QString &z : qAsConst(d->mZones)) {
         if (z == spec.timeZone().name()) {
             nCurrentlySet = i;
             break;

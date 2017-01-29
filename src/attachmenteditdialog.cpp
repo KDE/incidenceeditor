@@ -54,7 +54,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
     mMimeType = db.mimeTypeForName(item->mimeType());
     QWidget *page = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -68,7 +68,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
     mUi->mIcon->setPixmap(item->icon());
     mUi->mInlineCheck->setChecked(item->isBinary());
 
-    QString typecomment = item->mimeType().isEmpty() ?
+    const QString typecomment = item->mimeType().isEmpty() ?
                           i18nc("@label unknown mimetype", "Unknown") :
                           mMimeType.comment();
     mUi->mTypeLabel->setText(typecomment);

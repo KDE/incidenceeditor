@@ -43,7 +43,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     QWidget *widget = new QWidget();
     QGridLayout *layout = new QGridLayout(widget);
     int row = 0;
-    foreach (const KCalCore::Attendee::Ptr &attendee, attendees) {
+    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         QComboBox *options = new QComboBox();
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send update"), QVariant(Update));
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send no update"), QVariant(NoUpdate));

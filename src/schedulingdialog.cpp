@@ -40,7 +40,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QWidget *w = new QWidget(this);
     setupUi(w);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

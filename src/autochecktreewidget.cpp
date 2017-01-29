@@ -100,7 +100,8 @@ void AutoCheckTreeWidget::setAutoCheck(bool autoCheck)
 QTreeWidgetItem *AutoCheckTreeWidget::findItem(QTreeWidgetItem *parent, const QString &text) const
 {
     if (parent) {
-        for (int i = 0; i < parent->childCount(); ++i) {
+        const int nbChild{parent->childCount()};
+        for (int i = 0; i < nbChild; ++i) {
             if (parent->child(i)->text(0) == text) {
                 return parent->child(i);
             }

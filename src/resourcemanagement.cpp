@@ -109,7 +109,7 @@ public:
 ResourceManagement::ResourceManagement(QWidget *parent)
     : QDialog(parent)
 {
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -273,7 +273,7 @@ void ResourceManagement::slotOwnerSearchFinished()
         QStringList list;
         const QList<QByteArray> values = it.value();
         list.reserve(values.count());
-        foreach (const QByteArray &value, values) {
+        for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
         }
         mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));

@@ -91,8 +91,7 @@ TemplateManagementDialog::TemplateManagementDialog(
 
 void TemplateManagementDialog::slotHelp()
 {
-    QUrl url;
-    url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/entering-data.html")));
+    QUrl url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/entering-data.html")));
     QUrlQuery query(url);
     query.addQueryItem(QStringLiteral("anchor"), QStringLiteral("entering-data-events-template-buttons"));
     url.setQuery(query);

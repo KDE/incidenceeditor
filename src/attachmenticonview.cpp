@@ -217,7 +217,7 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
     // create a list of the URL:s that we want to drag
     QList<QUrl> urls;
     QStringList labels;
-    foreach (QListWidgetItem *it, items) {
+    for (QListWidgetItem *it : items) {
         if (it->isSelected()) {
             AttachmentIconItem *item = static_cast<AttachmentIconItem *>(it);
             if (item->isBinary()) {
