@@ -97,7 +97,6 @@ void OpenComposerJob::processMail()
     Q_ASSERT(mMessage);
     mSuccess = true;
 
-    bool hidden = false;
     unsigned int identity = mIdentity.uoid();
 
     QString subject = mMessage->subject()->asUnicodeString();
@@ -111,6 +110,7 @@ void OpenComposerJob::processMail()
         const QStringList customHeaders;
         const QString replyTo;
         const QString inReplyTo;
+        bool hidden = false;
 
         messages << mTo << mCc << mBcc << subject << body << hidden
                  << messageFile << attachmentPaths << customHeaders << replyTo << inReplyTo;

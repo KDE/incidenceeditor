@@ -141,10 +141,9 @@ QModelIndex ResourceModel::parent(const QModelIndex &index) const
 bool ResourceModel::removeRows(int position, int rows, const QModelIndex &parent)
 {
     ResourceItem *parentItem = getItem(parent);
-    bool success = true;
 
     beginRemoveRows(parent, position, position + rows - 1);
-    success = parentItem->removeChildren(position, rows);
+    bool success = parentItem->removeChildren(position, rows);
     endRemoveRows();
 
     return success;
