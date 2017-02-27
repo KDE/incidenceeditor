@@ -228,7 +228,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
         QStringList list;
         const QList<QByteArray> values = it.value();
         list.reserve(values.count());
-        foreach (const QByteArray &value, values) {
+        for (const QByteArray &value: values) {
             list << QString::fromUtf8(value);
         }
         mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));

@@ -402,7 +402,7 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
                                 QStringLiteral("korganizer/templates/") +
                                 typeToString(mEditor->type()) + QLatin1Char('/');
     QDir::root().mkpath(defaultPath);
-    Q_FOREACH (const QString &tmpl, origTemplates) {
+    for (const QString &tmpl : origTemplates) {
         if (!templateNames.contains(tmpl)) {
             const QString fileName = defaultPath + tmpl;
             QFile file(fileName);
