@@ -24,7 +24,7 @@
 #include "editorconfig.h"
 
 #include "ui_dialogdesktop.h"
-#include <Libkdepim/TagWidgets>
+#include <LibkdepimAkonadi/TagWidgets>
 #include "incidenceeditor_debug.h"
 
 #include <TagAttribute>

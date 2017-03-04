@@ -95,7 +95,6 @@ generate_export_header(KF5IncidenceEditor BASE_NAME incidenceeditor)
 
 add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
 
-set(grant_lib KGantt)
 
 
 target_link_libraries(KF5IncidenceEditor
@@ -108,8 +107,8 @@ PUBLIC
   KF5::CalendarSupport      # For KCalPrefs
   KF5::EventViews
 PRIVATE
-  ${grant_lib}              # For FreeBusy Editor
-  KF5::Libkdepim
+  KGantt              # For FreeBusy Editor
+  KF5::LibkdepimAkonadi
   KF5::KdepimDBusInterfaces # For UriHandler
   KF5::Codecs
   KF5::Ldap
