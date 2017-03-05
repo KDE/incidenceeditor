@@ -485,7 +485,7 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
   <customwidget>
    <class>KPIM::AddresseeLineEdit</class>
    <extends>KLineEdit</extends>
-   <header>Libkdepim/AddresseeLineEdit</header>
+   <header>LibkdepimAkonadi/AddresseeLineEdit</header>
   </customwidget>
   <customwidget>
    <class>KTextEdit</class>
@@ -509,7 +509,7 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global">Libkdepim/AddresseeLineEdit</include>
+  <include location="global">LibkdepimAkonadi/AddresseeLineEdit</include>
  </includes>
  <resources/>
  <connections>
