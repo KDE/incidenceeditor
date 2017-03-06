@@ -103,7 +103,7 @@ PUBLIC
   KF5::AkonadiMime
   KF5::CalendarCore
   KF5::CalendarUtils
-  KF5::MailTransport
+  KF5::MailTransportAkonadi
   KF5::CalendarSupport      # For KCalPrefs
   KF5::EventViews
 PRIVATE

@@ -27,7 +27,7 @@
 
 #include "opencomposerjob.h"
 
-#include <mailtransport/messagequeuejob.h>
+#include <mailtransportakonadi/messagequeuejob.h>
 #include <Akonadi/Calendar/IncidenceChanger>
 
 namespace IncidenceEditorNG
