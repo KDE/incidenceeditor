@@ -201,7 +201,7 @@ void CategoryEditDialog::slotApply()
         path = mWidgets->mCategories->pathByItem(*it++);
         path.replaceInStrings(
             CategoryConfig::categorySeparator,
-            QStringLiteral("\\") + CategoryConfig::categorySeparator);
+            QLatin1Char('\\') + CategoryConfig::categorySeparator);
         l.append(path.join(CategoryConfig::categorySeparator));
     }
     mCategoryConfig->setCustomCategories(l);
