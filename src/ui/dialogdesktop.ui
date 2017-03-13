@@ -840,7 +840,7 @@
                 <string comment="@info:tooltip">Set the organizer identity</string>
                </property>
                <property name="whatsThis">
-                <string comment="@info:whatsthis">Sets the identity corresponding to the organizer of this to-do or event. Identities can be set in the 'Personal' section of the KOrganizer configuration, or in the Personal'-&gt;'About Me'-&gt;'Password &amp; User Account' section of the System Settings. In addition, identities are gathered from your KMail settings and from your address book. If you choose to set it globally for KDE in the System Settings, be sure to check 'Use email settings from System Settings' in the 'Personal' section of the KOrganizer configuration.</string>
+                <string comment="@info:whatsthis">Sets the identity corresponding to the organizer of this to-do or event. Identities can be set in the 'Personal' section of the KOrganizer configuration, or in the Personal'-&gt;'About Me'-&gt;'Password &amp; User Account' section of the System Settings. In addition, identities are gathered from your KMail settings and from your address book. If you choose to set it globally in the KDE System Settings, be sure to check 'Use email settings from System Settings' in the 'Personal' section of the KOrganizer configuration.</string>
                </property>
               </widget>
              </item>
