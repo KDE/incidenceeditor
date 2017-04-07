@@ -46,7 +46,6 @@
 #include <QTreeView>
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <KGlobalSettings>
 
 using namespace IncidenceEditorNG;
 
@@ -106,7 +105,6 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mUi->mAttendeeTable->setModel(filterProxyModel);
 
     mAttendeeDelegate = new AttendeeLineEditDelegate(this);
-    mAttendeeDelegate->setCompletionMode((KCompletion::CompletionMode) KGlobalSettings::self()->completionMode());
 
     mUi->mAttendeeTable->setItemDelegateForColumn(AttendeeTableModel::Role, roleDelegate());
     mUi->mAttendeeTable->setItemDelegateForColumn(AttendeeTableModel::FullName, attendeeDelegate());

@@ -31,7 +31,6 @@
 
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
-#include <KGlobalSettings>
 
 #include <QCompleter>
 
@@ -89,7 +88,6 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     mUi->mNewResource->setCompleter(completer);
 
     AttendeeLineEditDelegate *attendeeDelegate = new AttendeeLineEditDelegate(this);
-    attendeeDelegate->setCompletionMode((KCompletion::CompletionMode)KGlobalSettings::self()->completionMode());
 
     ResourceFilterProxyModel *filterProxyModel = new ResourceFilterProxyModel(this);
     filterProxyModel->setDynamicSortFilter(true);
