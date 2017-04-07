@@ -224,7 +224,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipie
 
 void IndividualMailITIPHandlerDialogDelegate::onDialogClosed(int result)
 {
-    if (result == KDialog::Yes) {
+    if (result == QDialogButtonBox::Yes) {
         Q_EMIT setEdit(mIncidence, mDialog->editAttendees());
         Q_EMIT setUpdate(mIncidence, mDialog->updateAttendees());
         Q_EMIT dialogClosed(KMessageBox::Yes, mMethod, mIncidence);

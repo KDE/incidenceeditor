@@ -24,9 +24,12 @@
 #define INCIDENCEEDITOR_INDIVIDUALMAILDIALOG_H
 
 #include <KCalCore/Attendee>
-#include <KDialog>
+#include <QDialog>
 
 #include <QComboBox>
+#include <QDialogButtonBox>
+
+class KGuiItem;
 
 class TestIndividualMailDialog;
 
@@ -35,7 +38,7 @@ namespace IncidenceEditorNG
 
 // Shows a dialog with a question and the option to select which attendee should get the mail or to open a composer for him.
 // Used to get individual mails for attendees of an event.
-class IndividualMailDialog : public KDialog
+class IndividualMailDialog : public QDialog
 {
     Q_OBJECT
     friend class ::TestIndividualMailDialog;
@@ -53,7 +56,11 @@ public:
     KCalCore::Attendee::List updateAttendees() const;
 
 private:
+    void updateButtonState();
+
     QHash<KCalCore::Attendee::Ptr, QComboBox *> mAttendeeDecision;
+    QDialogButtonBox *m_buttons;
+    QWidget *m_detailsWidget;
 };
 
 }

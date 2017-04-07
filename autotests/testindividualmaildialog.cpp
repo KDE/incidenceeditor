@@ -19,6 +19,7 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 
 #include "../src/individualmaildialog.h"
 
+#include <KGuiItem>
 #include <QObject>
 #include <qtest.h>
 
