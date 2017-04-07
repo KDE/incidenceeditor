@@ -14,3 +14,8 @@ target_link_libraries(resourcemanagement_gui
   KF5::Libkdepim
   KF5::Ldap
 )
+
+add_executable(individualmaildialog_test individualmaildialog_test.cpp ../src/individualmaildialog.cpp)
+target_link_libraries(individualmaildialog_test
+    KF5::IncidenceEditor
+)
