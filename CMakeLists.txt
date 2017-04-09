@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 set(PIM_VERSION "5.5.40")
+
 project(incidenceeditor VERSION ${PIM_VERSION})
 
 set(KF5_VERSION "5.32.0")
