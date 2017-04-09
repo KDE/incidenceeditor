@@ -244,7 +244,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
                          att->label());
 
     if (saveAsFile.isEmpty() ||
-            (QFile(saveAsFile).exists() &&
+            (QFileInfo::exists(saveAsFile) &&
              (KMessageBox::warningYesNo(
                   nullptr,
                   i18nc("@info", "%1 already exists. Do you want to overwrite it?",
