@@ -385,7 +385,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
 
     QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
                        QStringLiteral("korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/');
-    QDir::root().mkpath(fileName);
+    QDir().mkpath(fileName);
     fileName += templateName;
 
     KCalCore::ICalFormat format;
@@ -401,7 +401,7 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
     const QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
                                 QStringLiteral("korganizer/templates/") +
                                 typeToString(mEditor->type()) + QLatin1Char('/');
-    QDir::root().mkpath(defaultPath);
+    QDir().mkpath(defaultPath);
     for (const QString &tmpl : origTemplates) {
         if (!templateNames.contains(tmpl)) {
             const QString fileName = defaultPath + tmpl;
