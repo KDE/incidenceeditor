@@ -18,7 +18,7 @@
  */
 
 #include "attendeetablemodel.h"
-#include "helper_p.h"
+
 #include <klocalizedstring.h>
 
 #include <KCalCore/Attendee>

@@ -22,7 +22,7 @@
 
 #include "individualmailcomponentfactory.h"
 #include "individualmaildialog.h"
-#include "helper_p.h"
+
 
 #include <CalendarSupport/KCalPrefs>
 

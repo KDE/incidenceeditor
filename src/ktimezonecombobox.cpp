@@ -18,7 +18,7 @@
 */
 
 #include "ktimezonecombobox.h"
-#include "helper_p.h"
+
 #include <KCalCore/ICalTimeZones>
 
 #include <KLocalizedString>

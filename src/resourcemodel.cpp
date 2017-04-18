@@ -20,7 +20,7 @@
  */
 #include "resourcemodel.h"
 #include "ldaputils.h"
-#include "helper_p.h"
+
 
 #include <KEmailAddress>
 #include <QDebug>

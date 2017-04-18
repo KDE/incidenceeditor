@@ -19,7 +19,7 @@
  *
  */
 #include "resourceitem.h"
-#include "helper_p.h"
+
 
 #include <kldap/ldapserver.h>
 

@@ -19,7 +19,7 @@
 */
 
 #include "incidencecategories.h"
-#include "helper_p.h"
+
 
 #include "editorconfig.h"
 
