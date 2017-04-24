@@ -71,9 +71,8 @@ void AttendeeComboBoxDelegate::setStandardIndex(int index)
 QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &/* option */, const QModelIndex &/* index */) const
 {
     AttendeeComboBox *editor = new AttendeeComboBox(parent);
-    QPair<QIcon, QString> pair;
 
-    foreach (pair, mEntries) {
+    for (const QPair<QIcon, QString> &pair : qAsConst(mEntries)) {
         editor->addItem(pair.first, pair.second);
     }
 

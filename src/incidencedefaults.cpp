@@ -94,7 +94,7 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
     if (!mGroupWareDomain.isEmpty()) {
         // Check if we have an identity with an email that ends with the groupware
         // domain.
-        foreach (const QString &fullEmail, mEmails) {
+        for (const QString &fullEmail : qAsConst(mEmails)) {
             QString name;
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
@@ -109,7 +109,7 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
     if (organizer->email() == invalidEmail) {
         // Either, no groupware was used, or we didn't find a groupware email address.
         // Now try to
-        foreach (const QString &fullEmail, mEmails) {
+        for (const QString &fullEmail : qAsConst(mEmails)) {
             QString name;
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
@@ -380,7 +380,7 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
 #ifdef KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif
-    foreach (const KCalCore::Attendee::Ptr &attendee, d->mAttendees) {
+    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(d->mAttendees)) {
         incidence->addAttendee(attendee);
     }
     // Ical standard: No attendees -> must not have an organizer!
@@ -388,7 +388,7 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
         incidence->setOrganizer(organizerAsPerson);
     }
 
-    foreach (const KCalCore::Attachment::Ptr &attachment, d->mAttachments) {
+    for (const KCalCore::Attachment::Ptr &attachment : qAsConst(d->mAttachments)) {
         incidence->addAttachment(attachment);
     }
 

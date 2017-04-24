@@ -238,7 +238,7 @@ void IncidenceAlarm::updateAlarmList()
 
     const QModelIndex currentIndex = mUi->mAlarmList->currentIndex();
     mUi->mAlarmList->clear();
-    foreach (const KCalCore::Alarm::Ptr &alarm, mAlarms) {
+    for (const KCalCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
         mUi->mAlarmList->addItem(stringForAlarm(alarm));
         if (alarm->enabled()) {
             ++mEnabledAlarmCount;
