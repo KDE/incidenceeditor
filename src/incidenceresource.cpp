@@ -167,11 +167,11 @@ void IncidenceResource::layoutChanged()
     headerView->setSectionHidden(AttendeeTableModel::CuType, true);
     headerView->setSectionHidden(AttendeeTableModel::Name, true);
     headerView->setSectionHidden(AttendeeTableModel::Email, true);
-    headerView->setResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
-    headerView->setResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
-    headerView->setResizeMode(AttendeeTableModel::Available,  QHeaderView::ResizeToContents);
-    headerView->setResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
-    headerView->setResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
+    headerView->setSectionResizeMode(AttendeeTableModel::Available,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
 }
 
 void IncidenceResource::updateCount()

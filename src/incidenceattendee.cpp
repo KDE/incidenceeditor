@@ -432,8 +432,9 @@ void IncidenceAttendee::expandResult(KJob *job)
 
 void IncidenceAttendee::slotSelectAddresses()
 {
-    QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(
-        new Akonadi::EmailAddressSelectionDialog(mParentWidget));
+    QSharedPointer<Akonadi::EmailAddressSelectionDialog> d(new Akonadi::EmailAddressSelectionDialog(mParentWidget));
+
+    QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(d);
     dialog.data()->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
     if (dialog.data()->exec() == QDialog::Accepted) {
@@ -866,10 +867,10 @@ AttendeeLineEditDelegate *IncidenceAttendee::attendeeDelegate() const
 void IncidenceAttendee::filterLayoutChanged()
 {
     QHeaderView *headerView = mUi->mAttendeeTable->horizontalHeader();
-    headerView->setResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
-    headerView->setResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
-    headerView->setResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
-    headerView->setResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
+    headerView->setSectionResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
     headerView->setSectionHidden(AttendeeTableModel::CuType, true);
     headerView->setSectionHidden(AttendeeTableModel::Name, true);
     headerView->setSectionHidden(AttendeeTableModel::Email, true);

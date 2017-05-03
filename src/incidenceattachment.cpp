@@ -141,7 +141,8 @@ void IncidenceAttachment::addAttachment()
 {
     AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
 
-    QWeakPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
+    QSharedPointer<AttachmentEditDialog> d(new AttachmentEditDialog(item, mAttachmentView));
+    QWeakPointer<AttachmentEditDialog> dialog(d);
     dialog.data()->setWindowTitle(i18nc("@title", "Add Attachment"));
     if (dialog.data()->exec() == QDialog::Rejected) {
         delete item;

@@ -670,7 +670,7 @@ void IncidenceDialogPrivate::reject(RejectReason reason, const QString &errorMes
 /// IncidenceDialog
 
 IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer,
-                                 QWidget *parent, Qt::WFlags flags)
+                                 QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags),
       d_ptr(new IncidenceDialogPrivate(changer, this))
 {
