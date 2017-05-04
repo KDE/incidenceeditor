@@ -179,8 +179,9 @@ void TemplateManagementDialog::slotRemoveTemplate()
 void TemplateManagementDialog::updateButtons()
 {
     m_base.m_buttonAdd->setEnabled(true);
-    m_base.m_buttonRemove->setEnabled(m_base.m_listBox->count() != 0);
-    m_base.m_buttonApply->setEnabled(m_base.m_listBox->count() != 0);
+    const bool isNotEmpty = m_base.m_listBox->count() != 0;
+    m_base.m_buttonRemove->setEnabled(isNotEmpty);
+    m_base.m_buttonApply->setEnabled(isNotEmpty);
 }
 
 void TemplateManagementDialog::slotApplyTemplate()

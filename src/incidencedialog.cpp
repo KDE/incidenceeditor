@@ -296,14 +296,14 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 
     const QString fileName = QStandardPaths::locate(
                                  QStandardPaths::GenericDataLocation,
-                                 QStringLiteral("korganizer/templates/") +
+                                 QStringLiteral("/korganizer/templates/") +
                                  typeToString(mEditor->type()) + QLatin1Char('/') +
                                  templateName);
 
     if (fileName.isEmpty()) {
         KMessageBox::error(
             q,
-            i18nc("@info", "Unable to find template '%1'.", fileName));
+            i18nc("@info", "Unable to find template '%1'.", templateName));
         return;
     }
 
@@ -384,7 +384,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
     }
 
     QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) +
-                       QStringLiteral("korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/');
+                       QStringLiteral("/korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/');
     QDir().mkpath(fileName);
     fileName += templateName;
 
