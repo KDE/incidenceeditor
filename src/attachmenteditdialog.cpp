@@ -50,6 +50,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
       mItem(item),
       mUi(new Ui::AttachmentEditDialog)
 {
+    setWindowTitle(i18n("Edit Attachment"));
     QMimeDatabase db;
     mMimeType = db.mimeTypeForName(item->mimeType());
     QWidget *page = new QWidget(this);
