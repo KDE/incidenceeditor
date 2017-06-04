@@ -93,7 +93,7 @@ Q_SIGNALS:
     void incidenceCreated(const Akonadi::Item &);
     void invalidCollection() const;
 protected:
-    void closeEvent(QCloseEvent *event) Q_DECL_OVERRIDE;
+    void closeEvent(QCloseEvent *event) override;
 
 protected Q_SLOTS:
     void slotButtonClicked(QAbstractButton *button);

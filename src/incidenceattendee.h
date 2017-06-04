@@ -56,10 +56,10 @@ public:
     IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceAttendee();
 
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    bool isDirty() const Q_DECL_OVERRIDE;
-    void printDebugInfo() const Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    bool isDirty() const override;
+    void printDebugInfo() const override;
 
     AttendeeTableModel *dataModel() const;
     AttendeeComboBoxDelegate *stateDelegate() const;

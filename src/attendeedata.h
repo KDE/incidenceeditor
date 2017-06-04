@@ -42,8 +42,8 @@ public:
 
     explicit AttendeeData(const KCalCore::Attendee::Ptr &attendee) : KCalCore::Attendee(*attendee) {}
 
-    void clear() Q_DECL_OVERRIDE;
-    bool isEmpty() const Q_DECL_OVERRIDE;
+    void clear() override;
+    bool isEmpty() const override;
 
     /**
      * Return a copy of the attendee data

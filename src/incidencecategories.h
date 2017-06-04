@@ -37,18 +37,18 @@ class IncidenceCategories : public IncidenceEditor
 public:
     explicit IncidenceCategories(Ui::EventOrTodoDesktop *ui);
 
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void load(const Akonadi::Item &item) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(Akonadi::Item &item) Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const Akonadi::Item &item) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(Akonadi::Item &item) override;
 
     /**
      * Returns the list of currently selected categories.
      */
     QStringList categories() const;
 
-    bool isDirty() const Q_DECL_OVERRIDE;
-    void printDebugInfo() const Q_DECL_OVERRIDE;
+    bool isDirty() const override;
+    void printDebugInfo() const override;
 
 private:
     void matchExistingCategories(const QStringList &categories, const Akonadi::Tag::List &existingTags);

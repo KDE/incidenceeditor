@@ -50,7 +50,7 @@ class AttachmentEditDialog : public QDialog
 public:
     AttachmentEditDialog(AttachmentIconItem *item, QWidget *parent, bool modal = true);
     virtual ~AttachmentEditDialog();
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 protected Q_SLOTS:
     void inlineChanged(int state);

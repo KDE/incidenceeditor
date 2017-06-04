@@ -51,18 +51,18 @@ public:
      * Returns whether or not the current values in the editor differ from the
      * initial values or if one of the combined editors is dirty.
      */
-    bool isDirty() const Q_DECL_OVERRIDE;
-    bool isValid() const Q_DECL_OVERRIDE;
+    bool isDirty() const override;
+    bool isValid() const override;
 
     /**
      * Loads all data from @param inicidence into the combined editors. Note, if
      * you reimplement the load method in a subclass, make sure to call this
      * implementation too.
      */
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void load(const Akonadi::Item &item) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(Akonadi::Item &item) Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const Akonadi::Item &item) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(Akonadi::Item &item) override;
 
 Q_SIGNALS:
     void showMessage(const QString &reason, KMessageWidget::MessageType) const;

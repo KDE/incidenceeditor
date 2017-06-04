@@ -32,23 +32,23 @@ public:
     KOrganizerEditorConfig();
     virtual ~KOrganizerEditorConfig();
 
-    KConfigSkeleton *config() const Q_DECL_OVERRIDE;
-    QString fullName() const Q_DECL_OVERRIDE;
-    QString email() const Q_DECL_OVERRIDE;
-    bool thatIsMe(const QString &email) const Q_DECL_OVERRIDE;
-    QStringList allEmails() const Q_DECL_OVERRIDE;
-    QStringList fullEmails() const Q_DECL_OVERRIDE;
-    bool showTimeZoneSelectorInIncidenceEditor() const Q_DECL_OVERRIDE;
-    QDateTime defaultDuration() const Q_DECL_OVERRIDE;
-    QDateTime startTime() const Q_DECL_OVERRIDE;
-    bool defaultAudioFileReminders() const Q_DECL_OVERRIDE;
-    QUrl audioFilePath() const Q_DECL_OVERRIDE;
-    int reminderTime() const Q_DECL_OVERRIDE;
-    int reminderTimeUnits() const Q_DECL_OVERRIDE;
-    bool defaultTodoReminders() const Q_DECL_OVERRIDE;
-    bool defaultEventReminders() const Q_DECL_OVERRIDE;
-    QStringList activeDesignerFields() const Q_DECL_OVERRIDE;
-    QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) Q_DECL_OVERRIDE;
+    KConfigSkeleton *config() const override;
+    QString fullName() const override;
+    QString email() const override;
+    bool thatIsMe(const QString &email) const override;
+    QStringList allEmails() const override;
+    QStringList fullEmails() const override;
+    bool showTimeZoneSelectorInIncidenceEditor() const override;
+    QDateTime defaultDuration() const override;
+    QDateTime startTime() const override;
+    bool defaultAudioFileReminders() const override;
+    QUrl audioFilePath() const override;
+    int reminderTime() const override;
+    int reminderTimeUnits() const override;
+    bool defaultTodoReminders() const override;
+    bool defaultEventReminders() const override;
+    QStringList activeDesignerFields() const override;
+    QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) override;
 };
 
 } // IncidenceEditors

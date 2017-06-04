@@ -48,14 +48,14 @@ public:
 
     ~IncidenceDescription();
 
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    bool isDirty() const Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    bool isDirty() const override;
 
     // For debugging pursposes
     bool richTextEnabled() const;
 
-    void printDebugInfo() const Q_DECL_OVERRIDE;
+    void printDebugInfo() const override;
 
 private:
     void toggleRichTextDescription();

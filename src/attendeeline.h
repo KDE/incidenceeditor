@@ -58,7 +58,7 @@ public Q_SLOTS:
     void setCurrentIndex(int index);
 
 protected:
-    void keyPressEvent(QKeyEvent *ev) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *ev) override;
 
 private:
     void slotActionTriggered();
@@ -81,7 +81,7 @@ Q_SIGNALS:
     void downPressed();
 
 protected:
-    void keyPressEvent(QKeyEvent *ev) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *ev) override;
 };
 
 class AttendeeLine : public KPIM::MultiplyingLine
@@ -96,27 +96,27 @@ public:
     explicit AttendeeLine(QWidget *parent);
     virtual ~AttendeeLine() {}
 
-    void activate() Q_DECL_OVERRIDE;
-    bool isActive() const Q_DECL_OVERRIDE;
+    void activate() override;
+    bool isActive() const override;
 
-    bool isEmpty() const Q_DECL_OVERRIDE;
-    void clear() Q_DECL_OVERRIDE;
+    bool isEmpty() const override;
+    void clear() override;
 
-    bool isModified() const Q_DECL_OVERRIDE;
-    void clearModified() Q_DECL_OVERRIDE;
+    bool isModified() const override;
+    void clearModified() override;
 
-    KPIM::MultiplyingLineData::Ptr data() const Q_DECL_OVERRIDE;
-    void setData(const KPIM::MultiplyingLineData::Ptr &data) Q_DECL_OVERRIDE;
+    KPIM::MultiplyingLineData::Ptr data() const override;
+    void setData(const KPIM::MultiplyingLineData::Ptr &data) override;
 
-    void fixTabOrder(QWidget *previous) Q_DECL_OVERRIDE;
-    QWidget *tabOut() const Q_DECL_OVERRIDE;
+    void fixTabOrder(QWidget *previous) override;
+    QWidget *tabOut() const override;
 
-    void setCompletionMode(KCompletion::CompletionMode) Q_DECL_OVERRIDE;
+    void setCompletionMode(KCompletion::CompletionMode) override;
 
-    int setColumnWidth(int w) Q_DECL_OVERRIDE;
+    int setColumnWidth(int w) override;
 
-    void aboutToBeDeleted() Q_DECL_OVERRIDE;
-    bool canDeleteLineEdit() const Q_DECL_OVERRIDE;
+    void aboutToBeDeleted() override;
+    bool canDeleteLineEdit() const override;
 
     void setActions(AttendeeActions actions);
 

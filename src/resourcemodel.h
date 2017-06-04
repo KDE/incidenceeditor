@@ -50,21 +50,21 @@ public:
                   QObject *parent = nullptr);
     ~ResourceModel();
 
-    QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
-                        int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+                        int role = Qt::DisplayRole) const override;
 
     QModelIndex index(int row, int column,
-                      const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    QModelIndex parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+                      const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex &index) const override;
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     bool removeRows(int position, int rows,
-                    const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE;
+                    const QModelIndex &parent = QModelIndex()) override;
 private:
     ResourceItem *getItem(const QModelIndex &index) const;
 

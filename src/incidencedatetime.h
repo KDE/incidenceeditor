@@ -51,9 +51,9 @@ public:
     explicit IncidenceDateTime(Ui::EventOrTodoDesktop *ui);
     ~IncidenceDateTime();
 
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    bool isDirty() const Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    bool isDirty() const override;
 
     /**
      * Sets the active date for the editing session. This defaults to the current
@@ -77,8 +77,8 @@ public:
     bool startDateTimeEnabled() const;
     bool endDateTimeEnabled() const;
 
-    bool isValid() const Q_DECL_OVERRIDE;
-    void printDebugInfo() const Q_DECL_OVERRIDE;
+    bool isValid() const override;
+    void printDebugInfo() const override;
 
 Q_SIGNALS:
     // used to indicate that the widgets were activated
@@ -115,7 +115,7 @@ private Q_SLOTS: /// Event specific
     bool isDirty(const KCalCore::Journal::Ptr &journal) const;
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     void load(const KCalCore::Event::Ptr &event, bool isTemplate = false, bool templateOverridesTimes = false);

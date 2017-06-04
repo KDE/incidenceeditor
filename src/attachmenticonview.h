@@ -51,9 +51,9 @@ public:
     QUrl tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const;
 
 protected:
-    QMimeData *mimeData(const QList<QListWidgetItem *> items) const Q_DECL_OVERRIDE;
-    void startDrag(Qt::DropActions supportedActions) Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
+    void startDrag(Qt::DropActions supportedActions) override;
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
     mutable QHash<KCalCore::Attachment::Ptr, QUrl> mTempFiles;

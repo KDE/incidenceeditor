@@ -50,9 +50,9 @@ public:
 
     ~IncidenceAttachment();
 
-    void load(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void save(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    bool isDirty() const Q_DECL_OVERRIDE;
+    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    bool isDirty() const override;
 
     int attachmentCount() const;
 
