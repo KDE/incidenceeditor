@@ -20,7 +20,7 @@
 #include "opencomposerjob.h"
 
 #include <QObject>
-#include <QtDBus/QtDBus>
+#include <QtDBus>
 #include <QProcess>
 
 #include <klocalizedstring.h>
