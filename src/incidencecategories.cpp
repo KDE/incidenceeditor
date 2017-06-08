@@ -20,7 +20,6 @@
 
 #include "incidencecategories.h"
 
-
 #include "editorconfig.h"
 
 #include "ui_dialogdesktop.h"
@@ -35,12 +34,13 @@
 using namespace IncidenceEditorNG;
 
 IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
-    : mUi(ui),
-      mDirty(false)
+    : mUi(ui)
+    , mDirty(false)
 {
     setObjectName(QStringLiteral("IncidenceCategories"));
 
-    connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this, &IncidenceCategories::onSelectionChanged);
+    connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this,
+            &IncidenceCategories::onSelectionChanged);
 }
 
 void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
@@ -101,7 +101,8 @@ void IncidenceCategories::createMissingCategories()
     for (const QString &category : qAsConst(mMissingCategories)) {
         Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
         Akonadi::TagCreateJob *createJob = new Akonadi::TagCreateJob(missingTag, this);
-        connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
+        connect(createJob, &Akonadi::TagCreateJob::result, this,
+                &IncidenceCategories::onMissingTagCreated);
     }
 }
 
@@ -113,7 +114,8 @@ bool IncidenceCategories::isDirty() const
 void IncidenceCategories::printDebugInfo() const
 {
     qCDebug(INCIDENCEEDITOR_LOG) << "mSelectedCategories = " << categories();
-    qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = " << mLoadedIncidence->categories();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = "
+                                 << mLoadedIncidence->categories();
 }
 
 void IncidenceCategories::matchExistingCategories(const QStringList &categories,
@@ -121,9 +123,9 @@ void IncidenceCategories::matchExistingCategories(const QStringList &categories,
 {
     for (const QString &category : categories) {
         auto matchedTagIter = std::find_if(existingTags.cbegin(), existingTags.cend(),
-            [&category](const Akonadi::Tag &tag) {
-                return tag.name() == category;
-            });
+                                           [&category](const Akonadi::Tag &tag) {
+            return tag.name() == category;
+        });
         Q_ASSERT(matchedTagIter != existingTags.cend());
         if (!mSelectedTags.contains(*matchedTagIter)) {
             mSelectedTags << *matchedTagIter;

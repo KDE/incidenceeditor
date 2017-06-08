@@ -23,14 +23,11 @@
 
 #include "incidenceeditor-ng.h"
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceCategories : public IncidenceEditor
 {
     Q_OBJECT
@@ -51,7 +48,8 @@ public:
     void printDebugInfo() const override;
 
 private:
-    void matchExistingCategories(const QStringList &categories, const Akonadi::Tag::List &existingTags);
+    void matchExistingCategories(const QStringList &categories,
+                                 const Akonadi::Tag::List &existingTags);
     void createMissingCategories();
 
 private Q_SLOTS:
@@ -74,7 +72,6 @@ private:
     QStringList mMissingCategories;
     bool mDirty;
 };
-
 }
 
 #endif

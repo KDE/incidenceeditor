@@ -31,13 +31,12 @@ static const int DEFAULT_RESOLUTION_SECONDS = 15 * 60; // 15 minutes, 1 slot = 1
 using namespace IncidenceEditorNG;
 
 ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
-    : QObject(parent),
-      mFBModel(new CalendarSupport::FreeBusyItemModel(this)),
-      mParentWidget(parentWidget),
-      mWeekdays(7),
-      mSlotResolutionSeconds(DEFAULT_RESOLUTION_SECONDS)
+    : QObject(parent)
+    , mFBModel(new CalendarSupport::FreeBusyItemModel(this))
+    , mParentWidget(parentWidget)
+    , mWeekdays(7)
+    , mSlotResolutionSeconds(DEFAULT_RESOLUTION_SECONDS)
 {
-
     const KDateTime currentLocalDateTime = KDateTime::currentLocalDateTime();
     mTimeframeConstraint = KCalCore::Period(currentLocalDateTime, currentLocalDateTime);
 
@@ -60,7 +59,8 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
                     << KCalCore::Attendee::NonParticipant
                     << KCalCore::Attendee::Chair;
 
-    connect(mFBModel, &CalendarSupport::FreeBusyItemModel::dataChanged, this, &ConflictResolver::freebusyDataChanged);
+    connect(mFBModel, &CalendarSupport::FreeBusyItemModel::dataChanged, this,
+            &ConflictResolver::freebusyDataChanged);
 
     connect(&mCalculateTimer, &QTimer::timeout, this, &ConflictResolver::findAllFreeSlots);
     mCalculateTimer.setSingleShot(true);
@@ -69,7 +69,8 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
 void ConflictResolver::insertAttendee(const KCalCore::Attendee::Ptr &attendee)
 {
     if (!mFBModel->containsAttendee(attendee)) {
-        mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(attendee, mParentWidget)));
+        mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(
+                                                                 attendee, mParentWidget)));
     }
 }
 
@@ -150,13 +151,17 @@ int ConflictResolver::tryDate(KDateTime &tryFrom, KDateTime &tryTo)
     int conflicts_count = 0;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalCore::Attendee::Ptr attendee =
-            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        KCalCore::Attendee::Ptr attendee
+            = mFBModel->data(index,
+                             CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::
+                                                                                     Attendee::Ptr>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalCore::FreeBusy::Ptr freebusy =
-            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        KCalCore::FreeBusy::Ptr freebusy
+            = mFBModel->data(index,
+                             CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::
+                                                                                     FreeBusy::Ptr>();
         if (!tryDate(freebusy, tryFrom, tryTo)) {
             ++conflicts_count;
         }
@@ -164,8 +169,8 @@ int ConflictResolver::tryDate(KDateTime &tryFrom, KDateTime &tryTo)
     return conflicts_count;
 }
 
-bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb,
-                               KDateTime &tryFrom, KDateTime &tryTo)
+bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &tryFrom,
+                               KDateTime &tryTo)
 {
     // If we don't have any free/busy information, assume the
     // participant is free. Otherwise a participant without available
@@ -176,9 +181,9 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb,
 
     KCalCore::Period::List busyPeriods = fb->busyPeriods();
     for (KCalCore::Period::List::Iterator it = busyPeriods.begin();
-            it != busyPeriods.end(); ++it) {
-        if ((*it).end() <= tryFrom ||  // busy period ends before try period
-                (*it).start() >= tryTo) {  // busy period starts after try period
+         it != busyPeriods.end(); ++it) {
+        if ((*it).end() <= tryFrom     // busy period ends before try period
+            || (*it).start() >= tryTo) {   // busy period starts after try period
             continue;
         } else {
             // the current busy period blocks the try period, try
@@ -194,6 +199,7 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb,
     }
     return true;
 }
+
 bool ConflictResolver::findFreeSlot(const KCalCore::Period &dateTimeRange)
 {
     KDateTime dtFrom = dateTimeRange.start();
@@ -244,7 +250,7 @@ void ConflictResolver::findAllFreeSlots()
 
     // define these locally for readability
     const KDateTime begin = mTimeframeConstraint.start();
-    const KDateTime end =  mTimeframeConstraint.end();
+    const KDateTime end = mTimeframeConstraint.end();
 
     // calculate the time resolution
     // each timeslot in the arrays represents a unit of time
@@ -260,8 +266,10 @@ void ConflictResolver::findAllFreeSlots()
     //          So, the array would have a length of 672
     const int range = begin.secsTo(end) / mSlotResolutionSeconds;
     if (range <= 0) {
-        qCWarning(INCIDENCEEDITOR_LOG) << "free slot calculation: invalid range. range( " << begin.secsTo(end)
-                                       << ") / mSlotResolutionSeconds(" << mSlotResolutionSeconds << ") = " << range;
+        qCWarning(INCIDENCEEDITOR_LOG) << "free slot calculation: invalid range. range( "
+                                       << begin.secsTo(end)
+                                       << ") / mSlotResolutionSeconds(" << mSlotResolutionSeconds
+                                       << ") = " << range;
         return;
     }
 
@@ -273,13 +281,17 @@ void ConflictResolver::findAllFreeSlots()
     QList<KCalCore::FreeBusy::Ptr> filteredFBItems;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalCore::Attendee::Ptr attendee =
-            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        KCalCore::Attendee::Ptr attendee
+            = mFBModel->data(index,
+                             CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::
+                                                                                     Attendee::Ptr>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalCore::FreeBusy::Ptr freebusy =
-            mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        KCalCore::FreeBusy::Ptr freebusy
+            = mFBModel->data(index,
+                             CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::
+                                                                                     FreeBusy::Ptr>();
         if (freebusy) {
             filteredFBItems << freebusy;
         }
@@ -331,7 +343,7 @@ void ConflictResolver::findAllFreeSlots()
                     start_index = begin.secsTo(period.start()) / mSlotResolutionSeconds;
                     duration = range - start_index - 1;
                     // case4: case2+case3: our timeframe is inside the period
-                } else if (period.start() <= begin  && period.end() >= end) {
+                } else if (period.start() <= begin && period.end() >= end) {
                     start_index = 0;
                     duration = range - 1;
                 } else {
@@ -407,8 +419,8 @@ void ConflictResolver::findAllFreeSlots()
                 // then calculate the date times of the free block based on
                 // our initial timeframe
                 const KDateTime freeBegin = begin.addSecs(free_start_i * mSlotResolutionSeconds);
-                const KDateTime freeEnd =
-                    freeBegin.addSecs((free_end_i - free_start_i) * mSlotResolutionSeconds);
+                const KDateTime freeEnd
+                    = freeBegin.addSecs((free_end_i - free_start_i) * mSlotResolutionSeconds);
                 // push the free block onto the list
                 mAvailableSlots << KCalCore::Period(freeBegin, freeEnd);
                 free_count = 0;

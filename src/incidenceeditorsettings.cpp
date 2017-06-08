@@ -42,4 +42,3 @@ IncidenceEditorSettings::IncidenceEditorSettings()
 IncidenceEditorSettings::~IncidenceEditorSettings()
 {
 }
-

@@ -33,8 +33,10 @@ class Q_DECL_HIDDEN KTimeZoneComboBox::Private
 {
 public:
     Private(KTimeZoneComboBox *parent)
-        : mParent(parent), mAdditionalZones(0)
-    {}
+        : mParent(parent)
+        , mAdditionalZones(0)
+    {
+    }
 
     void fillComboBox();
     KTimeZoneComboBox *const mParent;
@@ -55,8 +57,9 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.sort();
 
     // Prepend the list of additional timezones
-    for (const QByteArray &id : qAsConst(mAdditionalZones))
+    for (const QByteArray &id : qAsConst(mAdditionalZones)) {
         mZones.prepend(QString::fromLatin1(id));
+    }
 
     // Prepend Local, UTC and Floating, for convenience
     mZones.prepend(QStringLiteral("UTC"));        // do not use i18n here  index=2
@@ -70,7 +73,8 @@ void KTimeZoneComboBox::Private::fillComboBox()
 }
 
 KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
-    : KComboBox(parent), d(new KTimeZoneComboBox::Private(this))
+    : KComboBox(parent)
+    , d(new KTimeZoneComboBox::Private(this))
 {
     d->fillComboBox();
 }

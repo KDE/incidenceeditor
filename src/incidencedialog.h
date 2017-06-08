@@ -29,14 +29,11 @@
 
 class QAbstractButton;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class IncidenceChanger;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDialogPrivate;
 
 class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog
@@ -108,8 +105,11 @@ private:
     void readConfig();
 
     Q_PRIVATE_SLOT(d_ptr, void handleAlarmCountChange(int))
-    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFinish(IncidenceEditorNG::EditorItemManager::SaveAction))
-    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction, QString))
+    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFinish(
+                       IncidenceEditorNG::EditorItemManager::SaveAction))
+    Q_PRIVATE_SLOT(d_ptr,
+                   void handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction,
+                                           QString))
     Q_PRIVATE_SLOT(d_ptr, void handleRecurrenceChange(IncidenceEditorNG::RecurrenceType))
     Q_PRIVATE_SLOT(d_ptr, void loadTemplate(QString))
     Q_PRIVATE_SLOT(d_ptr, void saveTemplate(QString))
@@ -121,7 +121,6 @@ private:
     Q_PRIVATE_SLOT(d_ptr, void showMessage(QString, KMessageWidget::MessageType))
     Q_PRIVATE_SLOT(d_ptr, void slotInvalidCollection())
 };
-
 }
 
 #endif

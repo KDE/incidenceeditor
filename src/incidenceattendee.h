@@ -25,22 +25,18 @@
 
 #include <KCalCore/FreeBusy>
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 class ContactGroup;
 }
 
 class KJob;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttendeeComboBoxDelegate;
 class AttendeeLineEditDelegate;
 class AttendeeTableModel;
@@ -99,7 +95,8 @@ private Q_SLOTS:
 
     void slotConflictResolverAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first, int last);
-    void slotConflictResolverAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
+    void slotConflictResolverAttendeeChanged(const QModelIndex &topLeft,
+                                             const QModelIndex &bottomRight);
     void slotConflictResolverLayoutChanged();
     void slotFreeBusyAdded(const QModelIndex &index, int first, int last);
     void slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
@@ -108,7 +105,8 @@ private Q_SLOTS:
 
     void slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last);
-    void slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
+    void slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft,
+                                              const QModelIndex &bottomRight);
     void slotGroupSubstitutionLayoutChanged();
 
 private:
@@ -149,7 +147,6 @@ private:
     QMap<KJob *, KCalCore::Attendee::Ptr> mMightBeGroupJobs;
     QMap<KJob *, KCalCore::Attendee::Ptr> mExpandGroupJobs;
 };
-
 }
 
 #endif

@@ -33,9 +33,7 @@ class KGuiItem;
 
 class TestIndividualMailDialog;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 // Shows a dialog with a question and the option to select which attendee should get the mail or to open a composer for him.
 // Used to get individual mails for attendees of an event.
 class IndividualMailDialog : public QDialog
@@ -48,8 +46,10 @@ public:
         NoUpdate,       /**< do not send mail to attendee */
         Edit            /**< open composer for attendee */
     };
-    explicit IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees,
-                                  const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
+    explicit IndividualMailDialog(const QString &question,
+                                  const KCalCore::Attendee::List &attendees,
+                                  const KGuiItem &buttonYes, const KGuiItem &buttonNo,
+                                  QWidget *parent = nullptr);
     virtual ~IndividualMailDialog();
 
     KCalCore::Attendee::List editAttendees() const;
@@ -62,7 +62,6 @@ private:
     QDialogButtonBox *m_buttons;
     QWidget *m_detailsWidget;
 };
-
 }
 
 #endif

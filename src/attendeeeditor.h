@@ -26,9 +26,7 @@
 
 #include <Libkdepim/MultiplyingLineEditor>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttendeeLineFactory : public KPIM::MultiplyingLineFactory
 {
     Q_OBJECT
@@ -37,7 +35,8 @@ public:
     {
     }
 
-    KPIM::MultiplyingLine *newLine(QWidget *parent) override {
+    KPIM::MultiplyingLine *newLine(QWidget *parent) override
+    {
         return new AttendeeLine(parent);
     }
 };
@@ -65,7 +64,6 @@ protected Q_SLOTS:
     void slotLineAdded(KPIM::MultiplyingLine *);
     void slotCalculateTotal();
 };
-
 }
 
 #endif

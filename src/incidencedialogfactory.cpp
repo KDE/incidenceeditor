@@ -31,18 +31,19 @@ using namespace IncidenceEditorNG;
 using namespace KCalCore;
 
 IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
-        KCalCore::IncidenceBase::IncidenceType type,
-        Akonadi::IncidenceChanger *changer,
-        QWidget *parent, Qt::WindowFlags flags)
+                                                KCalCore::IncidenceBase::IncidenceType type,
+                                                Akonadi::IncidenceChanger *changer, QWidget *parent,
+                                                Qt::WindowFlags flags)
 {
     switch (type) {
     case KCalCore::IncidenceBase::TypeEvent: // Fall through
     case KCalCore::IncidenceBase::TypeTodo:
-    case KCalCore::IncidenceBase::TypeJournal: {
+    case KCalCore::IncidenceBase::TypeJournal:
+    {
         IncidenceDialog *dialog = new IncidenceDialog(changer, parent, flags);
 
         // needs to be save to akonadi?, apply button should be turned on if so.
-        dialog->setInitiallyDirty(needsSaving/* mInitiallyDirty */);
+        dialog->setInitiallyDirty(needsSaving /* mInitiallyDirty */);
 
         return dialog;
     }
@@ -52,18 +53,17 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
 }
 
 IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary,
-        const QString &description,
-        const QStringList &attachments,
-        const QStringList &attendees,
-        const QStringList &attachmentMimetypes,
-        const QStringList &attachmentLabels,
-        bool inlineAttachment,
-        const Akonadi::Collection &defaultCollection,
-        bool cleanupAttachmentTempFiles,
-        QWidget *parent, Qt::WindowFlags flags)
+                                                          const QString &description,
+                                                          const QStringList &attachments,
+                                                          const QStringList &attendees,
+                                                          const QStringList &attachmentMimetypes,
+                                                          const QStringList &attachmentLabels,
+                                                          bool inlineAttachment,
+                                                          const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent,
+                                                          Qt::WindowFlags flags)
 {
-    IncidenceDefaults defaults =
-        IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
+    IncidenceDefaults defaults
+        = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
 
     // if attach or attendee list is empty, these methods don't do anything, so
     // it's safe to call them in every case
@@ -89,18 +89,17 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
 }
 
 IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary,
-        const QString &description,
-        const QStringList &attachments,
-        const QStringList &attendees,
-        const QStringList &attachmentMimetypes,
-        const QStringList &attachmentLabels,
-        bool inlineAttachment,
-        const Akonadi::Collection &defaultCollection,
-        bool cleanupAttachmentTempFiles,
-        QWidget *parent, Qt::WindowFlags flags)
+                                                           const QString &description,
+                                                           const QStringList &attachments,
+                                                           const QStringList &attendees,
+                                                           const QStringList &attachmentMimetypes,
+                                                           const QStringList &attachmentLabels,
+                                                           bool inlineAttachment,
+                                                           const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent,
+                                                           Qt::WindowFlags flags)
 {
-    IncidenceDefaults defaults =
-        IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
+    IncidenceDefaults defaults
+        = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
 
     // if attach or attendee list is empty, these methods don't do anything, so
     // it's safe to call them in every case
@@ -116,11 +115,11 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
     Akonadi::Item item;
     item.setPayload(event);
 
-    IncidenceDialog *dialog =
-        create(false,  // not needed for saving, as we're not editing an existing incidence
-               KCalCore::Incidence::TypeEvent,
-               nullptr,
-               parent, flags);
+    IncidenceDialog *dialog
+        = create(false, // not needed for saving, as we're not editing an existing incidence
+                 KCalCore::Incidence::TypeEvent,
+                 nullptr,
+                 parent, flags);
 
     dialog->selectCollection(defaultCollection);
     dialog->load(item);

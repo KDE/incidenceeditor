@@ -46,7 +46,8 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QFrame *topFrame = new QFrame(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(topFrame);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -71,13 +72,14 @@ void FreeBusyUrlDialog::slotOk()
 }
 
 FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget *parent)
-    : QWidget(parent), mAttendee(attendee)
+    : QWidget(parent)
+    , mAttendee(attendee)
 {
     QBoxLayout *topLayout = new QVBoxLayout(this);
 
-    QLabel *label =
-        new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:",
-                         mAttendee->name(), mAttendee->email()), this);
+    QLabel *label
+        = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:",
+                           mAttendee->name(), mAttendee->email()), this);
     topLayout->addWidget(label);
 
     mUrlEdit = new KLineEdit(this);
@@ -91,7 +93,8 @@ FreeBusyUrlWidget::~FreeBusyUrlWidget()
 
 static QString freeBusyUrlStore()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+           + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
 }
 
 void FreeBusyUrlWidget::loadConfig()
@@ -110,4 +113,3 @@ void FreeBusyUrlWidget::saveConfig()
     KConfig config(freeBusyUrlStore());
     config.group(mAttendee->email()).writeEntry("url", url);
 }
-

@@ -34,9 +34,7 @@
 
 class KConfigSkeleton;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * Configuration details. An application can inherit from this class
  * to provide application specific configurations to the editor.
@@ -85,37 +83,43 @@ public:
     {
         return false;
     }
+
     virtual QUrl audioFilePath() const
     {
         return QUrl();
     }
+
     virtual int reminderTime() const
     {
         return 15;
     }
+
     virtual int reminderTimeUnits() const
     {
         return 0;
     }
+
     virtual bool defaultTodoReminders() const
     {
         return false;
     }
+
     virtual bool defaultEventReminders() const
     {
         return false;
     }
+
     virtual QStringList activeDesignerFields() const
     {
         return QStringList();
     }
+
     virtual QStringList &templates(KCalCore::IncidenceBase::IncidenceType type);
 
 private:
     class Private;
     Private *const d;
 };
-
 }
 
 #endif

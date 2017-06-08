@@ -25,8 +25,10 @@ class Q_DECL_HIDDEN AutoCheckTreeWidget::Private
 {
 public:
     Private()
-        : mAutoCheckChildren(false),
-          mAutoCheck(true) {}
+        : mAutoCheckChildren(false)
+        , mAutoCheck(true)
+    {
+    }
 
     bool mAutoCheckChildren;
     bool mAutoCheck;
@@ -34,7 +36,8 @@ public:
 //@endcond
 
 AutoCheckTreeWidget::AutoCheckTreeWidget(QWidget *parent)
-    : QTreeWidget(parent), d(new Private())
+    : QTreeWidget(parent)
+    , d(new Private())
 {
     connect(model(), &QAbstractItemModel::rowsInserted,
             this, &AutoCheckTreeWidget::slotRowsInserted);
@@ -100,7 +103,9 @@ void AutoCheckTreeWidget::setAutoCheck(bool autoCheck)
 QTreeWidgetItem *AutoCheckTreeWidget::findItem(QTreeWidgetItem *parent, const QString &text) const
 {
     if (parent) {
-        const int nbChild{parent->childCount()};
+        const int nbChild{
+            parent->childCount()
+        };
         for (int i = 0; i < nbChild; ++i) {
             if (parent->child(i)->text(0) == text) {
                 return parent->child(i);
@@ -117,8 +122,7 @@ QTreeWidgetItem *AutoCheckTreeWidget::findItem(QTreeWidgetItem *parent, const QS
     return nullptr;
 }
 
-void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent,
-        int start, int end)
+void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent, int start, int end)
 {
     if (d->mAutoCheck) {
         QTreeWidgetItem *item = itemFromIndex(parent);
@@ -142,7 +146,7 @@ void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent,
 }
 
 void AutoCheckTreeWidget::slotDataChanged(const QModelIndex &topLeft,
-        const QModelIndex &bottomRight)
+                                          const QModelIndex &bottomRight)
 {
     if (!d->mAutoCheckChildren) {
         return;
@@ -157,4 +161,3 @@ void AutoCheckTreeWidget::slotDataChanged(const QModelIndex &topLeft,
         }
     }
 }
-

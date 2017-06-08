@@ -25,23 +25,19 @@
 
 #include <QWidget>
 
-namespace KGantt
-{
+namespace KGantt {
 class DateTimeGrid;
 class GraphicsView;
 }
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class FreeBusyItemModel;
 }
 
 class KComboBox;
 class QTreeView;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class FreeBusyGanttProxyModel;
 class RowController;
 
@@ -49,7 +45,8 @@ class VisualFreeBusyWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing = 8, QWidget *parent = nullptr);
+    explicit VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing = 8,
+                                  QWidget *parent = nullptr);
     ~VisualFreeBusyWidget();
 
 public Q_SLOTS:
@@ -79,6 +76,5 @@ private:
 
     KDateTime mDtStart, mDtEnd;
 };
-
 }
 #endif

@@ -37,7 +37,8 @@ AttendeeComboBoxDelegate::AttendeeComboBoxDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
     , mStandardIndex(0)
 {
-    connect(this, &AttendeeComboBoxDelegate::closeEditor, this, &AttendeeComboBoxDelegate::doCloseEditor);
+    connect(this, &AttendeeComboBoxDelegate::closeEditor, this,
+            &AttendeeComboBoxDelegate::doCloseEditor);
 }
 
 void AttendeeComboBoxDelegate::addItem(const QIcon &icon, const QString &text)
@@ -68,7 +69,9 @@ void AttendeeComboBoxDelegate::setStandardIndex(int index)
     mStandardIndex = index;
 }
 
-QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &/* option */, const QModelIndex &/* index */) const
+QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent,
+                                                const QStyleOptionViewItem & /* option */,
+                                                const QModelIndex & /* index */) const
 {
     AttendeeComboBox *editor = new AttendeeComboBox(parent);
 
@@ -95,21 +98,25 @@ void AttendeeComboBoxDelegate::setEditorData(QWidget *editor, const QModelIndex 
     comboBox->setCurrentIndex(value);
 }
 
-void AttendeeComboBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+void AttendeeComboBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
+                                            const QModelIndex &index) const
 {
     AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
     model->setData(index, comboBox->currentIndex(), Qt::EditRole);
     comboBox->menu()->close();
 }
 
-void AttendeeComboBoxDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &/* index */) const
+void AttendeeComboBoxDelegate::updateEditorGeometry(QWidget *editor,
+                                                    const QStyleOptionViewItem &option,
+                                                    const QModelIndex & /* index */) const
 {
     editor->setGeometry(option.rect);
 }
 
-void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
+                                     const QModelIndex &index) const
 {
-    QStyleOptionButton myOption;;
+    QStyleOptionButton myOption;
 
     int value = index.model()->data(index).toUInt();
     if (value >= mEntries.count()) {
@@ -142,23 +149,27 @@ void AttendeeComboBoxDelegate::doCloseEditor(QWidget *editor)
 
 void AttendeeComboBoxDelegate::leftPressed()
 {
-    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
+    Q_EMIT closeEditor(
+        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
 }
 
 void AttendeeComboBoxDelegate::rightPressed()
 {
-    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
+    Q_EMIT closeEditor(
+        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
 }
 
 bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view,
-        const QStyleOptionViewItem &option, const QModelIndex &index)
+                                         const QStyleOptionViewItem &option,
+                                         const QModelIndex &index)
 {
     if (!event || !view) {
         return false;
     }
     switch (event->type()) {
 #ifndef QT_NO_TOOLTIP
-    case QEvent::ToolTip: {
+    case QEvent::ToolTip:
+    {
         QHelpEvent *he = static_cast<QHelpEvent *>(event);
         QToolTip::showText(he->globalPos(), mToolTip, view);
         return true;
@@ -167,7 +178,8 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
 #ifndef QT_NO_WHATSTHIS
     case QEvent::QueryWhatsThis:
         return true;
-    case QEvent::WhatsThis: {
+    case QEvent::WhatsThis:
+    {
         QHelpEvent *he = static_cast<QHelpEvent *>(event);
         QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
         return true;

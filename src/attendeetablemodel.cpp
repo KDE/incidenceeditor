@@ -32,15 +32,14 @@ AttendeeTableModel::AttendeeTableModel(const KCalCore::Attendee::List &attendees
     , mKeepEmpty(false)
     , mRemoveEmptyLines(false)
 {
-
 }
 
-int AttendeeTableModel::rowCount(const QModelIndex &/*parent*/) const
+int AttendeeTableModel::rowCount(const QModelIndex & /*parent*/) const
 {
     return mAttendeeList.count();
 }
 
-int AttendeeTableModel::columnCount(const QModelIndex &/*parent*/) const
+int AttendeeTableModel::columnCount(const QModelIndex & /*parent*/) const
 {
     return 8;
 }
@@ -74,7 +73,8 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
             return attendee->role();
         case FullName:
             return attendee->fullName();
-        case Available: {
+        case Available:
+        {
             AvailableStatus available = mAttendeeAvailable[attendee];
             if (role == Qt::DisplayRole) {
                 switch (available) {
@@ -104,7 +104,6 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
         case Email:
             return attendee->email();
         }
-
     }
     if (role == AttendeeRole) {
         return QVariant::fromValue(attendee);
@@ -156,8 +155,7 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
     return false;
 }
 
-QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation,
-                                        int role) const
+QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (role != Qt::DisplayRole) {
         return QVariant();
@@ -168,11 +166,12 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
         case Role:
             return i18nc("vCard attendee role", "Role");
         case FullName:
-            return i18nc("Attendees  (name+emailaddress)",  "Name");
+            return i18nc("Attendees  (name+emailaddress)", "Name");
         case Available:
             return i18nc("Is attendee available for incidence", "Available");
         case Status:
-            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, ...)", "Status");
+            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, ...)",
+                         "Status");
         case CuType:
             return i18nc("Type of calendar user (vCard attribute)", "User Type");
         case Response:
@@ -180,7 +179,7 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
         case Name:
             return i18nc("Attendee name", "Name");
         case Email:
-            return i18nc("Attendee email",  "Email");
+            return i18nc("Attendee email", "Email");
         }
     }
 
@@ -192,7 +191,8 @@ bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &p
     beginInsertRows(parent, position, position + rows - 1);
 
     for (int row = 0; row < rows; ++row) {
-        KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
+        KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String(
+                                                                    "")));
         mAttendeeList.insert(position, attendee);
     }
 
@@ -288,12 +288,15 @@ ResourceFilterProxyModel::ResourceFilterProxyModel(QObject *parent)
 {
 }
 
-bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow,
+                                                const QModelIndex &sourceParent) const
 {
-    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
-    KCalCore::Attendee::CuType cuType = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
+                                                   sourceParent);
+    KCalCore::Attendee::CuType cuType
+        = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
-    return (cuType == KCalCore::Attendee::Resource || cuType == KCalCore::Attendee::Room);
+    return cuType == KCalCore::Attendee::Resource || cuType == KCalCore::Attendee::Room;
 }
 
 AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
@@ -301,10 +304,13 @@ AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
 {
 }
 
-bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow,
+                                                const QModelIndex &sourceParent) const
 {
-    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
-    KCalCore::Attendee::CuType cuType = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
+                                                   sourceParent);
+    KCalCore::Attendee::CuType cuType
+        = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
     return !(cuType == KCalCore::Attendee::Resource || cuType == KCalCore::Attendee::Room);
 }

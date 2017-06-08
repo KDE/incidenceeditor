@@ -34,14 +34,11 @@
 
 class QPushButton;
 
-namespace Ui
-{
+namespace Ui {
 class AttachmentEditDialog;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttachmentIconItem;
 
 class AttachmentEditDialog : public QDialog
@@ -65,7 +62,6 @@ private:
     Ui::AttachmentEditDialog *mUi;
     QPushButton *mOkButton;
 };
-
 }
 
 #endif // INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H

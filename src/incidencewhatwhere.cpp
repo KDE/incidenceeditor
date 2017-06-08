@@ -27,11 +27,14 @@
 using namespace IncidenceEditorNG;
 
 IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(nullptr), mUi(ui)
+    : IncidenceEditor(nullptr)
+    , mUi(ui)
 {
     setObjectName(QStringLiteral("IncidenceWhatWhere"));
-    connect(mUi->mSummaryEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
-    connect(mUi->mLocationEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
+    connect(mUi->mSummaryEdit, &QLineEdit::textChanged, this,
+            &IncidenceWhatWhere::checkDirtyStatus);
+    connect(mUi->mLocationEdit, &QLineEdit::textChanged, this,
+            &IncidenceWhatWhere::checkDirtyStatus);
 }
 
 void IncidenceWhatWhere::load(const KCalCore::Incidence::Ptr &incidence)
@@ -63,12 +66,12 @@ bool IncidenceWhatWhere::isDirty() const
 {
     if (mLoadedIncidence) {
         return
-            (mUi->mSummaryEdit->text() != mLoadedIncidence->summary()) ||
-            (mUi->mLocationEdit->text() != mLoadedIncidence->location());
+            (mUi->mSummaryEdit->text() != mLoadedIncidence->summary())
+            || (mUi->mLocationEdit->text() != mLoadedIncidence->location());
     } else {
         return
-            mUi->mSummaryEdit->text().isEmpty() &&
-            mUi->mLocationEdit->text().isEmpty();
+            mUi->mSummaryEdit->text().isEmpty()
+            && mUi->mLocationEdit->text().isEmpty();
     }
 }
 
@@ -90,4 +93,3 @@ void IncidenceWhatWhere::validate()
         mUi->mSummaryEdit->setFocus();
     }
 }
-

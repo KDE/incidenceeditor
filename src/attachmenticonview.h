@@ -37,9 +37,7 @@
 
 #include <QListWidget>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttachmentIconView : public QListWidget
 {
     Q_OBJECT
@@ -91,7 +89,6 @@ private:
     KCalCore::Attachment::Ptr mAttachment;
     QString mSaveUri;
 };
-
 }
 
 #endif // INCIDENCEEDITOR_ATTACHMENTICONVIEW_H

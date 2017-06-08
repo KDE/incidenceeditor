@@ -30,9 +30,7 @@
 #include <QModelIndex>
 #include <QSet>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class ResourceModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -46,8 +44,7 @@ public:
         FullName
     };
 
-    ResourceModel(const QStringList &headers,
-                  QObject *parent = nullptr);
+    ResourceModel(const QStringList &headers, QObject *parent = nullptr);
     ~ResourceModel();
 
     QVariant data(const QModelIndex &index, int role) const override;
@@ -63,8 +60,7 @@ public:
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    bool removeRows(int position, int rows,
-                    const QModelIndex &parent = QModelIndex()) override;
+    bool removeRows(int position, int rows, const QModelIndex &parent = QModelIndex()) override;
 private:
     ResourceItem *getItem(const QModelIndex &index) const;
 
@@ -130,6 +126,5 @@ private:
      */
     void slotLDAPSearchData(const KLDAP::LdapResultObject::List &);
 };
-
 }
 #endif // RESOURCEMODEL_H

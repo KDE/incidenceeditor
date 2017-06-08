@@ -28,7 +28,6 @@ using namespace IncidenceEditorNG;
 
 void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
 {
-
 // TODO_KDE5:
 // The GroupwareUiDelegate interface should be a QObject. Right now we have no way of emitting a
 // finished signal, so we have to use dialog->exec();
@@ -40,7 +39,8 @@ void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
     }
 
     IncidenceDialog *dialog = IncidenceDialogFactory::create(/*needs initial saving=*/ false,
-                              incidence->type(), nullptr);
+                                                                                       incidence->type(),
+                                                                                       nullptr);
     dialog->setAttribute(Qt::WA_DeleteOnClose, false);
     dialog->setIsCounterProposal(true);
     dialog->load(item, QDate::currentDate());

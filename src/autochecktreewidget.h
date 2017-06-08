@@ -21,9 +21,7 @@
 
 #include <QTreeWidget>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
   A tree widget which supports auto selecting child items, when clicking
   an item of the tree.
@@ -99,8 +97,7 @@ protected:
 
 protected Q_SLOTS:
     void slotRowsInserted(const QModelIndex &parent, int start, int end);
-    void slotDataChanged(const QModelIndex &topLeft,
-                         const QModelIndex &bottomRight);
+    void slotDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
 
 private:
     //@cond PRIVATE
@@ -108,7 +105,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

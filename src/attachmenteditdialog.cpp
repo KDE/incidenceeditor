@@ -37,25 +37,27 @@
 
 using namespace IncidenceEditorNG;
 
-AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
-        QWidget *parent,
-        bool modal)
-    : QDialog(parent),
+AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *parent, bool modal)
+    : QDialog(parent)
+    ,
 #ifdef KDEPIM_ENTERPRISE_BUILD
-      mAttachment(new KCalCore::Attachment('\0')),     //use the non-uri constructor
-      // as we want inline by default
+    mAttachment(new KCalCore::Attachment('\0'))
+    ,                                                  //use the non-uri constructor
+    // as we want inline by default
 #else
-      mAttachment(new KCalCore::Attachment(QString())),
+    mAttachment(new KCalCore::Attachment(QString()))
+    ,
 #endif
-      mItem(item),
-      mUi(new Ui::AttachmentEditDialog)
+    mItem(item)
+    , mUi(new Ui::AttachmentEditDialog)
 {
     setWindowTitle(i18n("Edit Attachment"));
     QMimeDatabase db;
     mMimeType = db.mimeTypeForName(item->mimeType());
     QWidget *page = new QWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -69,9 +71,9 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
     mUi->mIcon->setPixmap(item->icon());
     mUi->mInlineCheck->setChecked(item->isBinary());
 
-    const QString typecomment = item->mimeType().isEmpty() ?
-                          i18nc("@label unknown mimetype", "Unknown") :
-                          mMimeType.comment();
+    const QString typecomment = item->mimeType().isEmpty()
+                                ? i18nc("@label unknown mimetype", "Unknown")
+                                : mMimeType.comment();
     mUi->mTypeLabel->setText(typecomment);
 
     setModal(modal);
@@ -90,11 +92,17 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item,
                                      QLocale().toString(item->attachment()->size())));
     }
 
-    connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this, &AttachmentEditDialog::inlineChanged);
-    connect(mUi->mURLRequester, static_cast<void (KUrlRequester::*)(const QUrl &)>(&KUrlRequester::urlSelected),
-            this, static_cast<void (AttachmentEditDialog::*)(const QUrl &)>(&AttachmentEditDialog::urlChanged));
+    connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this,
+            &AttachmentEditDialog::inlineChanged);
+    connect(mUi->mURLRequester,
+            static_cast<void (KUrlRequester::*)(const QUrl &)>(&KUrlRequester::urlSelected),
+            this,
+            static_cast<void (AttachmentEditDialog::*)(const QUrl &)>(&AttachmentEditDialog::
+                                                                      urlChanged));
     connect(mUi->mURLRequester, &KUrlRequester::textChanged,
-            this, static_cast<void (AttachmentEditDialog::*)(const QString &)>(&AttachmentEditDialog::urlChanged));
+            this,
+            static_cast<void (AttachmentEditDialog::*)(const QString &)>(&AttachmentEditDialog::
+                                                                         urlChanged));
 }
 
 AttachmentEditDialog::~AttachmentEditDialog()
@@ -148,7 +156,7 @@ void AttachmentEditDialog::slotApply()
             auto job = KIO::storedGet(url);
             KJobWidgets::setWindow(job, nullptr);
             if (job->exec()) {
-                QByteArray data  = job->data();
+                QByteArray data = job->data();
                 mItem->setData(data);
             }
         } else {
@@ -159,8 +167,8 @@ void AttachmentEditDialog::slotApply()
 
 void AttachmentEditDialog::inlineChanged(int state)
 {
-    mOkButton->setEnabled(!mUi->mURLRequester->url().toDisplayString().trimmed().isEmpty() ||
-                          mUi->mStackedWidget->currentIndex() == 1);
+    mOkButton->setEnabled(!mUi->mURLRequester->url().toDisplayString().trimmed().isEmpty()
+                          || mUi->mStackedWidget->currentIndex() == 1);
     if (state == Qt::Unchecked && mUi->mStackedWidget->currentIndex() == 1) {
         mUi->mStackedWidget->setCurrentIndex(0);
         if (!mItem->savedUri().isEmpty()) {
@@ -175,8 +183,8 @@ void AttachmentEditDialog::urlChanged(const QString &url)
 {
     const bool urlIsNotEmpty = !url.trimmed().isEmpty();
     mOkButton->setEnabled(urlIsNotEmpty);
-    mUi->mInlineCheck->setEnabled(urlIsNotEmpty ||
-                                  mUi->mStackedWidget->currentIndex() == 1);
+    mUi->mInlineCheck->setEnabled(urlIsNotEmpty
+                                  || mUi->mStackedWidget->currentIndex() == 1);
 }
 
 void AttachmentEditDialog::urlChanged(const QUrl &url)
@@ -186,4 +194,3 @@ void AttachmentEditDialog::urlChanged(const QUrl &url)
     mUi->mTypeLabel->setText(mMimeType.comment());
     mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()));
 }
-

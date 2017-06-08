@@ -31,12 +31,16 @@
 using namespace IncidenceEditorNG;
 
 AlarmDialog::AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidget *parent)
-    : QDialog(parent),  mUi(new Ui::AlarmDialog), mIncidenceType(incidenceType),
-      mAllowBeginReminders(true), mAllowEndReminders(true)
+    : QDialog(parent)
+    , mUi(new Ui::AlarmDialog)
+    , mIncidenceType(incidenceType)
+    , mAllowBeginReminders(true)
+    , mAllowEndReminders(true)
 {
     setWindowTitle(i18n("Create a new reminder"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -132,13 +136,14 @@ void AlarmDialog::load(const KCalCore::Alarm::Ptr &alarm)
         mUi->mAppArguments->setText(alarm->programArguments());
         id = 2;
         break;
-    case KCalCore::Alarm::Email: {
+    case KCalCore::Alarm::Email:
+    {
         mUi->mTypeCombo->setCurrentIndex(3);
         KCalCore::Person::List addresses = alarm->mailAddresses();
         QStringList add;
         add.reserve(addresses.count());
         for (KCalCore::Person::List::ConstIterator it = addresses.constBegin();
-                it != addresses.constEnd(); ++it) {
+             it != addresses.constEnd(); ++it) {
             add << (*it)->fullName();
         }
         mUi->mEmailAddress->setText(add.join(QStringLiteral(", ")));
@@ -155,8 +160,8 @@ void AlarmDialog::load(const KCalCore::Alarm::Ptr &alarm)
     }
 
     mUi->mTypeStack->setCurrentIndex(id);
-    if (alarm->audioFile().isEmpty() &&
-            IncidenceEditorNG::EditorConfig::instance()->defaultAudioFileReminders()) {
+    if (alarm->audioFile().isEmpty()
+        && IncidenceEditorNG::EditorConfig::instance()->defaultAudioFileReminders()) {
         mUi->mSoundFile->setUrl(IncidenceEditorNG::EditorConfig::instance()->audioFilePath());
     }
 }

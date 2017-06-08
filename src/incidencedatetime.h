@@ -29,19 +29,15 @@
 
 #include <QDate>
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace KCalCore
-{
+namespace KCalCore {
 class ICalTimeZones;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDateTime : public IncidenceEditor
 {
     Q_OBJECT
@@ -118,9 +114,12 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void load(const KCalCore::Event::Ptr &event, bool isTemplate = false, bool templateOverridesTimes = false);
-    void load(const KCalCore::Todo::Ptr &todo, bool isTemplate = false, bool templateOverridesTimes = false);
-    void load(const KCalCore::Journal::Ptr &journal, bool isTemplate = false, bool templateOverridesTimes = false);
+    void load(const KCalCore::Event::Ptr &event, bool isTemplate = false,
+              bool templateOverridesTimes = false);
+    void load(const KCalCore::Todo::Ptr &todo, bool isTemplate = false,
+              bool templateOverridesTimes = false);
+    void load(const KCalCore::Journal::Ptr &journal, bool isTemplate = false,
+              bool templateOverridesTimes = false);
     void save(const KCalCore::Event::Ptr &event);
     void save(const KCalCore::Todo::Ptr &todo);
     void save(const KCalCore::Journal::Ptr &journal);
@@ -151,7 +150,6 @@ private:
     /// Remembers state when switching between takes whole day and timed event/to-do.
     bool mTimezoneCombosWereVisibile;
 };
-
 }
 
 #endif

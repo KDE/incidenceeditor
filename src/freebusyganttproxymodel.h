@@ -27,14 +27,11 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalCore
-{
+namespace KCalCore {
 class FreeBusyPeriod;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * This is a private proxy model, that wraps the free busy data exposed
  * by the FreeBusyItemModel for use by KDGantt2.
@@ -54,7 +51,6 @@ public:
     QString tooltipify(const KCalCore::FreeBusyPeriod &period,
                        const KDateTime::Spec &timeSpec) const;
 };
-
 }
 
 #endif

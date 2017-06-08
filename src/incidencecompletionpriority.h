@@ -23,14 +23,11 @@
 
 #include "incidenceeditor-ng.h"
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceCompletionPriority : public IncidenceEditor
 {
     Q_OBJECT
@@ -51,7 +48,6 @@ private:
 
     Q_PRIVATE_SLOT(d, void sliderValueChanged(int))
 };
-
 }
 
 #endif

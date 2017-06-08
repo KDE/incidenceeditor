@@ -57,7 +57,7 @@ static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
         }
 
         const KDateTime start = incidence->dtStart();
-        const KDateTime end   = incidence->dateTime(KCalCore::Incidence::RoleEnd);
+        const KDateTime end = incidence->dateTime(KCalCore::Incidence::RoleEnd);
         if (!end.isValid() || !start.isValid()) {
             return false;
         }
@@ -70,14 +70,16 @@ static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
 }
 
 IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(nullptr), mUi(ui),
-      mTimezoneCombosWereVisibile(false)
+    : IncidenceEditor(nullptr)
+    , mUi(ui)
+    , mTimezoneCombosWereVisibile(false)
 {
     setTimeZonesVisibility(false);
     setObjectName(QStringLiteral("IncidenceDateTime"));
 
     mUi->mTimeZoneLabel->setVisible(!mUi->mWholeDayCheck->isChecked());
-    connect(mUi->mTimeZoneLabel, &QLabel::linkActivated, this, &IncidenceDateTime::toggleTimeZoneVisibility);
+    connect(mUi->mTimeZoneLabel, &QLabel::linkActivated, this,
+            &IncidenceDateTime::toggleTimeZoneVisibility);
     mUi->mTimeZoneLabel->setContextMenuPolicy(Qt::NoContextMenu);
 
     QList<QLineEdit *> lineEdits;
@@ -93,11 +95,14 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
     connect(mUi->mWholeDayCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableTimeEdits);
     connect(mUi->mWholeDayCheck, &QCheckBox::toggled, this, &IncidenceDateTime::checkDirtyStatus);
 
-    connect(this, &IncidenceDateTime::startDateChanged, this, &IncidenceDateTime::updateStartToolTips);
-    connect(this, &IncidenceDateTime::startTimeChanged, this, &IncidenceDateTime::updateStartToolTips);
+    connect(this, &IncidenceDateTime::startDateChanged, this,
+            &IncidenceDateTime::updateStartToolTips);
+    connect(this, &IncidenceDateTime::startTimeChanged, this,
+            &IncidenceDateTime::updateStartToolTips);
     connect(this, &IncidenceDateTime::endDateChanged, this, &IncidenceDateTime::updateEndToolTips);
     connect(this, &IncidenceDateTime::endTimeChanged, this, &IncidenceDateTime::updateEndToolTips);
-    connect(mUi->mWholeDayCheck, &QCheckBox::toggled, this, &IncidenceDateTime::updateStartToolTips);
+    connect(mUi->mWholeDayCheck, &QCheckBox::toggled, this,
+            &IncidenceDateTime::updateStartToolTips);
     connect(mUi->mWholeDayCheck, &QCheckBox::toggled, this, &IncidenceDateTime::updateEndToolTips);
     connect(mUi->mStartCheck, &QCheckBox::toggled, this, &IncidenceDateTime::updateStartToolTips);
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::updateEndToolTips);
@@ -137,7 +142,8 @@ void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
         return;
     }
 
-    const bool isTemplate             = incidence->customProperty("kdepim", "isTemplate") == QLatin1String("true");
+    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1String(
+        "true");
     const bool templateOverridesTimes = incidenceHasDefaultTimes(mLoadedIncidence);
 
     mLoadedIncidence = incidence;
@@ -175,14 +181,14 @@ void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
 
 void IncidenceDateTime::save(const KCalCore::Incidence::Ptr &incidence)
 {
-    if (KCalCore::Todo::Ptr todo =
-                IncidenceDateTime::incidence<KCalCore::Todo>(incidence)) {
+    if (KCalCore::Todo::Ptr todo
+            = IncidenceDateTime::incidence<KCalCore::Todo>(incidence)) {
         save(todo);
-    } else if (KCalCore::Event::Ptr event =
-                   IncidenceDateTime::incidence<KCalCore::Event>(incidence)) {
+    } else if (KCalCore::Event::Ptr event
+                   = IncidenceDateTime::incidence<KCalCore::Event>(incidence)) {
         save(event);
-    } else if (KCalCore::Journal::Ptr journal =
-                   IncidenceDateTime::incidence<KCalCore::Journal>(incidence)) {
+    } else if (KCalCore::Journal::Ptr journal
+                   = IncidenceDateTime::incidence<KCalCore::Journal>(incidence)) {
         save(journal);
     } else {
         Q_ASSERT_X(false, "IncidenceDateTimeEditor::save",
@@ -280,8 +286,8 @@ void IncidenceDateTime::updateStartDate(const QDate &newDate)
         return;
     }
 
-    const bool dateChanged = mCurrentStartDateTime.date().day() != newDate.day() ||
-                             mCurrentStartDateTime.date().month() != newDate.month();
+    const bool dateChanged = mCurrentStartDateTime.date().day() != newDate.day()
+                             || mCurrentStartDateTime.date().month() != newDate.month();
 
     KDateTime endDateTime = currentEndDateTime();
     int daysep = mCurrentStartDateTime.daysTo(endDateTime);
@@ -304,15 +310,15 @@ void IncidenceDateTime::updateStartSpec()
 {
     const QDate prevDate = mCurrentStartDateTime.date();
 
-    if (mUi->mEndCheck->isChecked() &&
-            currentEndDateTime().timeSpec() == mCurrentStartDateTime.timeSpec()) {
+    if (mUi->mEndCheck->isChecked()
+        && currentEndDateTime().timeSpec() == mCurrentStartDateTime.timeSpec()) {
         mUi->mTimeZoneComboEnd->selectTimeSpec(mUi->mTimeZoneComboStart->selectedTimeSpec());
     }
 
     mCurrentStartDateTime.setTimeSpec(mUi->mTimeZoneComboStart->selectedTimeSpec());
 
-    const bool dateChanged = mCurrentStartDateTime.date().day() != prevDate.day() ||
-                             mCurrentStartDateTime.date().month() != prevDate.month();
+    const bool dateChanged = mCurrentStartDateTime.date().day() != prevDate.day()
+                             || mCurrentStartDateTime.date().month() != prevDate.month();
 
     if (dateChanged) {
         Q_EMIT startDateChanged(mCurrentStartDateTime.date());
@@ -379,8 +385,8 @@ bool IncidenceDateTime::timeZonesAreLocal(const KDateTime &start, const KDateTim
 {
     // Returns false if the incidence start or end timezone is not the local zone.
 
-    if ((start.isValid() && !start.timeSpec().isLocalZone()) ||
-            (end.isValid() && !end.timeSpec().isLocalZone())) {
+    if ((start.isValid() && !start.timeSpec().isLocalZone())
+        || (end.isValid() && !end.timeSpec().isLocalZone())) {
         return false;
     } else {
         return true;
@@ -409,9 +415,9 @@ void IncidenceDateTime::enableTimeEdits()
        When editing a whole-day event, unchecking mWholeDayCheck shouldn't set both
        times to 00:00. DTSTART must always be smaller than DTEND
      */
-    if (sender() == mUi->mWholeDayCheck && !wholeDayChecked &&  // Somebody unchecked it, the incidence will now have time.
-            mUi->mStartCheck->isChecked() && mUi->mEndCheck->isChecked() && // The incidence has both start and end/due dates
-            currentStartDateTime() == currentEndDateTime()) {  // DTSTART == DTEND. This is illegal, lets correct it.
+    if (sender() == mUi->mWholeDayCheck && !wholeDayChecked     // Somebody unchecked it, the incidence will now have time.
+        && mUi->mStartCheck->isChecked() && mUi->mEndCheck->isChecked()     // The incidence has both start and end/due dates
+        && currentStartDateTime() == currentEndDateTime()) {   // DTSTART == DTEND. This is illegal, lets correct it.
         // Not sure about the best time here... doesn't really matter, when someone unchecks mWholeDayCheck, she will
         // always want to set a time.
         mUi->mStartTimeEdit->setTime(QTime(0, 0));
@@ -431,8 +437,8 @@ bool IncidenceDateTime::isDirty(const KCalCore::Todo::Ptr &todo) const
 {
     Q_ASSERT(todo);
 
-    const bool hasDateTimes = mUi->mStartCheck->isChecked() ||
-                              mUi->mEndCheck->isChecked();
+    const bool hasDateTimes = mUi->mStartCheck->isChecked()
+                              || mUi->mEndCheck->isChecked();
 
     // First check the start time/date of the todo
     if (todo->hasStartDate() != mUi->mStartCheck->isChecked()) {
@@ -471,26 +477,26 @@ bool IncidenceDateTime::isDirty(const KCalCore::Event::Ptr &event) const
         return true;
     }
 
-    if (mUi->mFreeBusyCheck->isChecked() &&
-            event->transparency() != KCalCore::Event::Opaque) {
+    if (mUi->mFreeBusyCheck->isChecked()
+        && event->transparency() != KCalCore::Event::Opaque) {
         return true;
     }
 
-    if (!mUi->mFreeBusyCheck->isChecked() &&
-            event->transparency() != KCalCore::Event::Transparent) {
+    if (!mUi->mFreeBusyCheck->isChecked()
+        && event->transparency() != KCalCore::Event::Transparent) {
         return true;
     }
 
     if (event->allDay()) {
-        if (mUi->mStartDateEdit->date() != mInitialStartDT.date() ||
-                mUi->mEndDateEdit->date() != mInitialEndDT.date()) {
+        if (mUi->mStartDateEdit->date() != mInitialStartDT.date()
+            || mUi->mEndDateEdit->date() != mInitialEndDT.date()) {
             return true;
         }
     } else {
-        if (currentStartDateTime() != mInitialStartDT ||
-                currentEndDateTime() != mInitialEndDT ||
-                currentStartDateTime().timeSpec() != mInitialStartDT.timeSpec() ||
-                currentEndDateTime().timeSpec() != mInitialEndDT.timeSpec()) {
+        if (currentStartDateTime() != mInitialStartDT
+            || currentEndDateTime() != mInitialEndDT
+            || currentStartDateTime().timeSpec() != mInitialStartDT.timeSpec()
+            || currentEndDateTime().timeSpec() != mInitialEndDT.timeSpec()) {
             return true;
         }
     }
@@ -522,20 +528,21 @@ bool IncidenceDateTime::isDirty(const KCalCore::Journal::Ptr &journal) const
 KDateTime IncidenceDateTime::currentStartDateTime() const
 {
     return KDateTime(
-               mUi->mStartDateEdit->date(),
-               mUi->mStartTimeEdit->time(),
-               mUi->mTimeZoneComboStart->selectedTimeSpec());
+        mUi->mStartDateEdit->date(),
+        mUi->mStartTimeEdit->time(),
+        mUi->mTimeZoneComboStart->selectedTimeSpec());
 }
 
 KDateTime IncidenceDateTime::currentEndDateTime() const
 {
     return KDateTime(
-               mUi->mEndDateEdit->date(),
-               mUi->mEndTimeEdit->time(),
-               mUi->mTimeZoneComboEnd->selectedTimeSpec());
+        mUi->mEndDateEdit->date(),
+        mUi->mEndTimeEdit->time(),
+        mUi->mTimeZoneComboEnd->selectedTimeSpec());
 }
 
-void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
+                             bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -544,18 +551,37 @@ void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
     mUi->mEndCheck->setChecked(true);   // Set to checked so we can reuse enableTimeEdits.
 
     // Start time
-    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::updateStartTime);  // when editing with mouse, or up/down arrows
-    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeEdited, this, &IncidenceDateTime::updateStartTime);  // When editing with any key except up/down
-    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::updateStartDate);
-    connect(mUi->mTimeZoneComboStart, static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged), this, &IncidenceDateTime::updateStartSpec);
+    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::updateStartTime);                                                          // when editing with mouse, or up/down arrows
+    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeEdited, this,
+            &IncidenceDateTime::updateStartTime);                                                         // When editing with any key except up/down
+    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::updateStartDate);
+    connect(mUi->mTimeZoneComboStart,
+            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
+                                                                             KTimeZoneComboBox::
+                                                                             currentIndexChanged),
+            this,
+            &IncidenceDateTime::updateStartSpec);
     // End time
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::endTimeChanged);
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this, &IncidenceDateTime::endTimeChanged);
-    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::endDateChanged);
-    connect(mUi->mTimeZoneComboEnd, static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged), this, &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::endTimeChanged);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this,
+            &IncidenceDateTime::endTimeChanged);
+    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::endDateChanged);
+    connect(mUi->mTimeZoneComboEnd,
+            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
+                                                                             KTimeZoneComboBox::
+                                                                             currentIndexChanged),
+            this,
+            &IncidenceDateTime::checkDirtyStatus);
 
     mUi->mWholeDayCheck->setChecked(event->allDay());
     enableTimeEdits();
@@ -581,7 +607,8 @@ void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTemplate,
+                             bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -595,9 +622,16 @@ void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTempl
     mUi->mFreeBusyCheck->setVisible(false);
 
     // Start time
-    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::updateStartTime);
-    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::updateStartDate);
-    connect(mUi->mTimeZoneComboStart, static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged), this, &IncidenceDateTime::updateStartSpec);
+    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::updateStartTime);
+    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::updateStartDate);
+    connect(mUi->mTimeZoneComboStart,
+            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
+                                                                             KTimeZoneComboBox::
+                                                                             currentIndexChanged),
+            this,
+            &IncidenceDateTime::updateStartSpec);
 
     mUi->mWholeDayCheck->setChecked(journal->allDay());
     enableTimeEdits();
@@ -618,7 +652,8 @@ void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTempl
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate,
+                             bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(true);
@@ -644,17 +679,33 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
     // Connect to the right logic
     connect(mUi->mStartCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableStartEdit);
     connect(mUi->mStartCheck, &QCheckBox::toggled, this, &IncidenceDateTime::startDateTimeToggled);
-    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::updateStartTime);
-    connect(mUi->mTimeZoneComboStart, static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged), this, &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::updateStartTime);
+    connect(mUi->mTimeZoneComboStart,
+            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
+                                                                             KTimeZoneComboBox::
+                                                                             currentIndexChanged),
+            this,
+            &IncidenceDateTime::checkDirtyStatus);
 
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableEndEdit);
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::endDateTimeToggled);
-    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::checkDirtyStatus);
-    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this, &IncidenceDateTime::endDateChanged);
-    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this, &IncidenceDateTime::endTimeChanged);
-    connect(mUi->mTimeZoneComboEnd, static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged), this, &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
+            &IncidenceDateTime::endDateChanged);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::endTimeChanged);
+    connect(mUi->mTimeZoneComboEnd,
+            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
+                                                                             KTimeZoneComboBox::
+                                                                             currentIndexChanged),
+            this,
+            &IncidenceDateTime::checkDirtyStatus);
 
     const KDateTime rightNow = KDateTime(QDate::currentDate(), QTime::currentTime()).toLocalZone();
 
@@ -664,8 +715,9 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
             setTimes(todo->dtStart(), todo->dateTime(KCalCore::Incidence::RoleEnd));
         }
     } else {
-        const KDateTime endDT   = todo->hasDueDate() ? todo->dtDue(true/** first */) : rightNow;
-        const KDateTime startDT = todo->hasStartDate() ? todo->dtStart(true/** first */) : rightNow;
+        const KDateTime endDT = todo->hasDueDate() ? todo->dtDue(true /** first */) : rightNow;
+        const KDateTime startDT
+            = todo->hasStartDate() ? todo->dtStart(true /** first */) : rightNow;
         setDateTimes(startDT, endDT);
     }
 }
@@ -694,9 +746,9 @@ void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
 
     // Free == Event::Transparent
     // Busy == Event::Opaque
-    event->setTransparency(mUi->mFreeBusyCheck->isChecked() ?
-                           KCalCore::Event::Opaque :
-                           KCalCore::Event::Transparent);
+    event->setTransparency(mUi->mFreeBusyCheck->isChecked()
+                           ? KCalCore::Event::Opaque
+                           : KCalCore::Event::Transparent);
 }
 
 void IncidenceDateTime::save(const KCalCore::Todo::Ptr &todo)
@@ -715,7 +767,7 @@ void IncidenceDateTime::save(const KCalCore::Todo::Ptr &todo)
     }
 
     if (mUi->mEndCheck->isChecked()) {
-        todo->setDtDue(currentEndDateTime(), true/** first */);
+        todo->setDtDue(currentEndDateTime(), true /** first */);
         // Set allday must be executed after setDtDue
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
     } else {
@@ -795,12 +847,12 @@ void IncidenceDateTime::setDateTimes(const KDateTime &start, const KDateTime &en
 void IncidenceDateTime::updateStartToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString datetimeStr =
-            KCalUtils::IncidenceFormatter::dateTimeToString(
-                currentStartDateTime(),
-                mUi->mWholeDayCheck->isChecked(),
-                false,
-                KSystemTimeZones::local());
+        QString datetimeStr
+            = KCalUtils::IncidenceFormatter::dateTimeToString(
+            currentStartDateTime(),
+            mUi->mWholeDayCheck->isChecked(),
+            false,
+            KSystemTimeZones::local());
         mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
         mUi->mStartTimeEdit->setToolTip(i18n("Starts: %1", datetimeStr));
     } else {
@@ -812,12 +864,12 @@ void IncidenceDateTime::updateStartToolTips()
 void IncidenceDateTime::updateEndToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString datetimeStr =
-            KCalUtils::IncidenceFormatter::dateTimeToString(
-                currentEndDateTime(),
-                mUi->mWholeDayCheck->isChecked(),
-                false,
-                KSystemTimeZones::local());
+        QString datetimeStr
+            = KCalUtils::IncidenceFormatter::dateTimeToString(
+            currentEndDateTime(),
+            mUi->mWholeDayCheck->isChecked(),
+            false,
+            KSystemTimeZones::local());
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18n("Due on: %1", datetimeStr));
             mUi->mEndTimeEdit->setToolTip(i18n("Due on: %1", datetimeStr));
@@ -888,18 +940,16 @@ bool IncidenceDateTime::isValid() const
         return false;
     }
 
-    if (startDateTimeEnabled() && endDateTimeEnabled() &&
-            currentStartDateTime() > currentEndDateTime()) {
+    if (startDateTimeEnabled() && endDateTimeEnabled()
+        && currentStartDateTime() > currentEndDateTime()) {
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeEvent) {
             mLastErrorString = i18nc("@info",
                                      "The event ends before it starts.\n"
                                      "Please correct dates and times.");
-
         } else if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
             mLastErrorString = i18nc("@info",
                                      "The to-do is due before it starts.\n"
                                      "Please correct dates and times.");
-
         } else if (mLoadedIncidence->type() == KCalCore::Incidence::TypeJournal) {
             return true;
         }
@@ -914,7 +964,8 @@ bool IncidenceDateTime::isValid() const
 
 static QString timespecToString(const KDateTime::Spec &spec)
 {
-    QString str = QLatin1String("type=") + QString::number(spec.type()) + QLatin1String("; timezone=") + spec.timeZone().name();
+    QString str = QLatin1String("type=") + QString::number(spec.type()) + QLatin1String(
+        "; timezone=") + spec.timeZone().name();
     return str;
 }
 
@@ -922,34 +973,60 @@ void IncidenceDateTime::printDebugInfo() const
 {
     qCDebug(INCIDENCEEDITOR_LOG) << "startDateTimeEnabled()          : " << startDateTimeEnabled();
     qCDebug(INCIDENCEEDITOR_LOG) << "endDateTimeEnabled()            : " << endDateTimeEnabled();
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().isValid(): " << currentStartDateTime().isValid();
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().isValid()  : " << currentEndDateTime().isValid();
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime()          : " << currentStartDateTime().toString();
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime()            : " << currentEndDateTime().toString();
-    qCDebug(INCIDENCEEDITOR_LOG) << "Incidence type                  : " << mLoadedIncidence->type();
-    qCDebug(INCIDENCEEDITOR_LOG) << "allday                          : " << mLoadedIncidence->allDay();
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT                 : " << mInitialStartDT.toString();
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT                   : " << mInitialEndDT.toString();
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().isValid(): "
+                                 << currentStartDateTime().isValid();
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().isValid()  : "
+                                 << currentEndDateTime().isValid();
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime()          : "
+                                 << currentStartDateTime().toString();
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime()            : "
+                                 << currentEndDateTime().toString();
+    qCDebug(INCIDENCEEDITOR_LOG) << "Incidence type                  : "
+                                 << mLoadedIncidence->type();
+    qCDebug(INCIDENCEEDITOR_LOG) << "allday                          : "
+                                 << mLoadedIncidence->allDay();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT                 : "
+                                 << mInitialStartDT.toString();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT                   : "
+                                 << mInitialEndDT.toString();
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().timeSpec(): " << timespecToString(currentStartDateTime().timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().timeSpec()  : " << timespecToString(currentStartDateTime().timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT.timeSpec()       : " << timespecToString(mInitialStartDT.timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT.timeSpec()         : " << timespecToString(mInitialEndDT.timeSpec());
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().timeSpec(): " << timespecToString(
+        currentStartDateTime().timeSpec());
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().timeSpec()  : " << timespecToString(
+        currentStartDateTime().timeSpec());
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT.timeSpec()       : " << timespecToString(
+        mInitialStartDT.timeSpec());
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT.timeSpec()         : " << timespecToString(
+        mInitialEndDT.timeSpec());
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "dirty test1: " << (mLoadedIncidence->allDay() != mUi->mWholeDayCheck->isChecked());
+    qCDebug(INCIDENCEEDITOR_LOG) << "dirty test1: "
+                                 << (mLoadedIncidence->allDay()
+        != mUi->mWholeDayCheck->isChecked());
     if (mLoadedIncidence->type() == KCalCore::Incidence::TypeEvent) {
         KCalCore::Event::Ptr event = mLoadedIncidence.staticCast<KCalCore::Event>();
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test2: " << (mUi->mFreeBusyCheck->isChecked() && event->transparency() != KCalCore::Event::Opaque);
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test3: " << (!mUi->mFreeBusyCheck->isChecked() && event->transparency() != KCalCore::Event::Transparent);
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test2: "
+                                     << (mUi->mFreeBusyCheck->isChecked()
+            && event->transparency() != KCalCore::Event::Opaque);
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test3: "
+                                     << (!mUi->mFreeBusyCheck->isChecked()
+            && event->transparency() != KCalCore::Event::Transparent);
     }
 
     if (mLoadedIncidence->allDay()) {
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4: " << (mUi->mStartDateEdit->date() != mInitialStartDT.date() || mUi->mEndDateEdit->date() != mInitialEndDT.date());
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4: "
+                                     << (mUi->mStartDateEdit->date() != mInitialStartDT.date()
+            || mUi->mEndDateEdit->date() != mInitialEndDT.date());
     } else {
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.1: " << (currentStartDateTime() != mInitialStartDT);
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.2: " << (currentEndDateTime() != mInitialEndDT);
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.3: " << (currentStartDateTime().timeSpec() != mInitialStartDT.timeSpec());
-        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.4: " << (currentEndDateTime().timeSpec() != mInitialEndDT.timeSpec());
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.1: "
+                                     << (currentStartDateTime() != mInitialStartDT);
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.2: "
+                                     << (currentEndDateTime() != mInitialEndDT);
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.3: "
+                                     << (currentStartDateTime().timeSpec()
+            != mInitialStartDT.timeSpec());
+        qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.4: "
+                                     << (currentEndDateTime().timeSpec()
+            != mInitialEndDT.timeSpec());
     }
 }
 
@@ -957,4 +1034,3 @@ void IncidenceDateTime::setTimeZoneLabelEnabled(bool enable)
 {
     mUi->mTimeZoneLabel->setVisible(enable);
 }
-

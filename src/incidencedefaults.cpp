@@ -46,9 +46,7 @@ using namespace CalendarSupport;
 using namespace IncidenceEditorNG;
 using namespace KCalCore;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 enum {
     UNSPECIFED_PRIORITY = 0
 };
@@ -57,14 +55,14 @@ class IncidenceDefaultsPrivate
 {
 public:
     /// Members
-    KCalCore::Attachment::List       mAttachments;
+    KCalCore::Attachment::List mAttachments;
     QVector<KCalCore::Attendee::Ptr> mAttendees;
-    QStringList                      mEmails;
-    QString                          mGroupWareDomain;
-    KCalCore::Incidence::Ptr         mRelatedIncidence;
-    KDateTime                        mStartDt;
-    KDateTime                        mEndDt;
-    bool                             mCleanupTemporaryFiles;
+    QStringList mEmails;
+    QString mGroupWareDomain;
+    KCalCore::Incidence::Ptr mRelatedIncidence;
+    KDateTime mStartDt;
+    KDateTime mEndDt;
+    bool mCleanupTemporaryFiles;
 
     /// Methods
     KCalCore::Person::Ptr organizerAsPerson() const;
@@ -74,7 +72,6 @@ public:
     void eventDefaults(const KCalCore::Event::Ptr &event) const;
     void journalDefaults(const KCalCore::Journal::Ptr &journal) const;
 };
-
 }
 
 KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
@@ -127,7 +124,8 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
 KCalCore::Attendee::Ptr IncidenceDefaultsPrivate::organizerAsAttendee(
     const KCalCore::Person::Ptr &organizer) const
 {
-    KCalCore::Attendee::Ptr organizerAsAttendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
+    KCalCore::Attendee::Ptr organizerAsAttendee(new KCalCore::Attendee(QLatin1String(
+                                                                           ""), QLatin1String("")));
     // Really, the appropriate values (even the fall back values) should come from
     // organizer. (See organizerAsPerson for more details).
     organizerAsAttendee->setName(organizer->name());
@@ -153,8 +151,8 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
     }
 
     const QTime defaultDurationTime = KCalPrefs::instance()->defaultDuration().time();
-    const int defaultDuration = defaultDurationTime.hour() * 3600 +
-                                defaultDurationTime.minute() * 60;
+    const int defaultDuration = defaultDurationTime.hour() * 3600
+                                +defaultDurationTime.minute() * 60;
 
     const KDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
@@ -182,22 +180,22 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) con
     }
 
     if (mEndDt.isValid()) {
-        todo->setDtDue(mEndDt, true/** first */);
+        todo->setDtDue(mEndDt, true /** first */);
     } else if (relatedTodo && relatedTodo->hasDueDate()) {
-        todo->setDtDue(relatedTodo->dtDue(true), true/** first */);
+        todo->setDtDue(relatedTodo->dtDue(true), true /** first */);
         todo->setAllDay(relatedTodo->allDay());
     } else if (relatedTodo) {
         todo->setDtDue(KDateTime());
     } else {
-        todo->setDtDue(KDateTime::currentLocalDateTime().addDays(1), true/** first */);
+        todo->setDtDue(KDateTime::currentLocalDateTime().addDays(1), true /** first */);
     }
 
     if (mStartDt.isValid()) {
         todo->setDtStart(mStartDt);
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(KDateTime());
-    } else if (relatedTodo && relatedTodo->hasStartDate() &&
-               relatedTodo->dtStart() <= todo->dtDue()) {
+    } else if (relatedTodo && relatedTodo->hasStartDate()
+               && relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
     } else if (!mEndDt.isValid() || (KDateTime::currentLocalDateTime() < mEndDt)) {
@@ -249,8 +247,7 @@ IncidenceDefaults &IncidenceDefaults::operator=(const IncidenceDefaults &other)
 
 void IncidenceDefaults::setAttachments(const QStringList &attachments,
                                        const QStringList &attachmentMimetypes,
-                                       const QStringList &attachmentLabels,
-                                       bool inlineAttachment)
+                                       const QStringList &attachmentLabels, bool inlineAttachment)
 {
     Q_D(IncidenceDefaults);
     d->mAttachments.clear();
@@ -269,7 +266,9 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments,
                 auto job = KIO::storedGet(QUrl(*it));
                 if (job->exec()) {
                     const QByteArray data = job->data();
-                    attachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(data.toBase64(), mimeType));
+                    attachment
+                        = KCalCore::Attachment::Ptr(new KCalCore::Attachment(data.toBase64(),
+                                                                             mimeType));
 
                     if (i < attachmentLabels.count()) {
                         attachment->setLabel(attachmentLabels[ i ]);
@@ -315,7 +314,7 @@ void IncidenceDefaults::setAttendees(const QStringList &attendees)
         QString name, email;
         KContacts::Addressee::parseEmailAddress(*it, name, email);
         d->mAttendees << KCalCore::Attendee::Ptr(
-                          new KCalCore::Attendee(name, email, true, KCalCore::Attendee::NeedsAction));
+            new KCalCore::Attendee(name, email, true, KCalCore::Attendee::NeedsAction));
     }
 }
 

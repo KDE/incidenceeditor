@@ -51,16 +51,17 @@
 using namespace IncidenceEditorNG;
 
 IncidenceAttachment::IncidenceAttachment(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(nullptr),
-      mUi(ui),
-      mPopupMenu(new QMenu)
+    : IncidenceEditor(nullptr)
+    , mUi(ui)
+    , mPopupMenu(new QMenu)
 {
     setupActions();
     setupAttachmentIconView();
     setObjectName(QStringLiteral("IncidenceAttachment"));
 
     connect(mUi->mAddButton, &QPushButton::clicked, this, &IncidenceAttachment::addAttachment);
-    connect(mUi->mRemoveButton, &QPushButton::clicked, this, &IncidenceAttachment::removeSelectedAttachments);
+    connect(mUi->mRemoveButton, &QPushButton::clicked, this,
+            &IncidenceAttachment::removeSelectedAttachments);
 }
 
 IncidenceAttachment::~IncidenceAttachment()
@@ -74,7 +75,9 @@ void IncidenceAttachment::load(const KCalCore::Incidence::Ptr &incidence)
     mAttachmentView->clear();
 
     KCalCore::Attachment::List attachments = incidence->attachments();
-    for (KCalCore::Attachment::List::ConstIterator it = attachments.constBegin(), end = attachments.constEnd(); it != end; ++it) {
+    for (KCalCore::Attachment::List::ConstIterator it = attachments.constBegin(),
+         end = attachments.constEnd();
+         it != end; ++it) {
         new AttachmentIconItem((*it), mAttachmentView);
     }
 
@@ -106,8 +109,8 @@ bool IncidenceAttachment::isDirty() const
             QListWidgetItem *item = mAttachmentView->item(itemIndex);
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-            const KCalCore::Attachment::Ptr listAttachment =
-                static_cast<AttachmentIconItem *>(item)->attachment();
+            const KCalCore::Attachment::Ptr listAttachment
+                = static_cast<AttachmentIconItem *>(item)->attachment();
 
             for (int i = 0; i < origAttachments.count(); ++i) {
                 const KCalCore::Attachment::Ptr attachment = origAttachments.at(i);
@@ -121,7 +124,6 @@ bool IncidenceAttachment::isDirty() const
         // All attachments are removed from the list, meaning, the items in mAttachmentView
         // are equal to the attachments set on mLoadedIncidence.
         return !origAttachments.isEmpty();
-
     } else {
         // No incidence loaded, so if the user added attachments we're dirty.
         return mAttachmentView->count() != 0;
@@ -201,17 +203,17 @@ void IncidenceAttachment::removeSelectedAttachments()
     QString labelsStr = labels.join(QStringLiteral("<nl/>"));
 
     if (KMessageBox::questionYesNo(
-                nullptr,
-                xi18nc("@info",
-                       "Do you really want to remove these attachments?<nl/>%1", labelsStr),
-                i18nc("@title:window", "Remove Attachments?"),
-                KStandardGuiItem::yes(), KStandardGuiItem::no(),
-                QStringLiteral("calendarRemoveAttachments")) != KMessageBox::Yes) {
+            nullptr,
+            xi18nc("@info",
+                   "Do you really want to remove these attachments?<nl/>%1", labelsStr),
+            i18nc("@title:window", "Remove Attachments?"),
+            KStandardGuiItem::yes(), KStandardGuiItem::no(),
+            QStringLiteral("calendarRemoveAttachments")) != KMessageBox::Yes) {
         return;
     }
 
     for (QList<QListWidgetItem *>::iterator it(selected.begin()), end(selected.end());
-            it != end; ++it) {
+         it != end; ++it) {
         int row = mAttachmentView->row(*it);
         QListWidgetItem *next = mAttachmentView->item(++row);
         QListWidgetItem *prev = mAttachmentView->item(--row);
@@ -242,14 +244,14 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
 
     // get the saveas file name
     QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
-                         att->label());
+                                                      att->label());
 
-    if (saveAsFile.isEmpty() ||
-            (QFileInfo::exists(saveAsFile) &&
-             (KMessageBox::warningYesNo(
-                  nullptr,
-                  i18nc("@info", "%1 already exists. Do you want to overwrite it?",
-                        saveAsFile)) == KMessageBox::No))) {
+    if (saveAsFile.isEmpty()
+        || (QFileInfo::exists(saveAsFile)
+            && (KMessageBox::warningYesNo(
+                    nullptr,
+                    i18nc("@info", "%1 already exists. Do you want to overwrite it?",
+                          saveAsFile)) == KMessageBox::No))) {
         return;
     }
 
@@ -392,7 +394,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         urls.reserve(addressees.count());
         labels.reserve(addressees.count());
         for (KContacts::Addressee::List::ConstIterator it = addressees.constBegin();
-                it != addressees.constEnd(); ++it) {
+             it != addressees.constEnd(); ++it) {
             urls.append(QUrl(QStringLiteral("uid:") + (*it).uid()));
             // there is some weirdness about realName(), hence fromUtf8
             labels.append(QString::fromUtf8((*it).realName().toLatin1()));
@@ -404,7 +406,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         //QT5
         //urls = QList<QUrl>::fromMimeData( mimeData, &metadata );
         probablyWeHaveUris = true;
-        labels = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), QString::SkipEmptyParts);
+        labels
+            = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), QString::SkipEmptyParts);
         for (QStringList::Iterator it = labels.begin(); it != labels.end(); ++it) {
             *it = QUrl::fromPercentEncoding((*it).toLatin1());
         }
@@ -420,7 +423,9 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     QMenu menu;
     QAction *linkAction = nullptr, *cancelAction;
     if (probablyWeHaveUris) {
-        linkAction = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")), i18nc("@action:inmenu", "&Link here"));
+        linkAction
+            = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")),
+                             i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
         bool weCanCopy = true;
         for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != urls.constEnd(); ++it) {
@@ -429,14 +434,18 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
             }
         }
         if (weCanCopy) {
-            menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:inmenu", "&Copy here"));
+            menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")),
+                           i18nc("@action:inmenu", "&Copy here"));
         }
     } else {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:inmenu", "&Copy here"));
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")),
+                       i18nc("@action:inmenu", "&Copy here"));
     }
 
     menu.addSeparator();
-    cancelAction = menu.addAction(QIcon::fromTheme(QStringLiteral("process-stop")), i18nc("@action:inmenu", "C&ancel"));
+    cancelAction
+        = menu.addAction(QIcon::fromTheme(QStringLiteral("process-stop")),
+                         i18nc("@action:inmenu", "C&ancel"));
 
     QByteArray data;
     QString mimeType;
@@ -456,14 +465,14 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     if (linkAction == ret) {
         QStringList::ConstIterator jt = labels.constBegin();
         for (QList<QUrl>::ConstIterator it = urls.constBegin();
-                it != urls.constEnd(); ++it) {
-            addUriAttachment((*it).url(), QString(), (jt == labels.constEnd() ?
-                             QString() : * (jt++)), true);
+             it != urls.constEnd(); ++it) {
+            addUriAttachment((*it).url(), QString(), (jt == labels.constEnd()
+                                                      ? QString() : *(jt++)), true);
         }
     } else if (cancelAction != ret) {
         if (probablyWeHaveUris) {
             for (QList<QUrl>::ConstIterator it = urls.constBegin();
-                    it != urls.constEnd(); ++it) {
+                 it != urls.constEnd(); ++it) {
                 KIO::Job *job = KIO::storedGet(*it);
                 //TODO verify if slot exist !
                 connect(job, &KIO::Job::result, this, &IncidenceAttachment::downloadComplete);
@@ -492,7 +501,8 @@ void IncidenceAttachment::setupActions()
 
     mSaveAsAction = new QAction(i18nc("@action:inmenu save the attachment to a file",
                                       "Save As..."), this);
-    connect(mSaveAsAction, &QAction::triggered, this, &IncidenceAttachment::saveSelectedAttachments);
+    connect(mSaveAsAction, &QAction::triggered, this,
+            &IncidenceAttachment::saveSelectedAttachments);
     mPopupMenu->addAction(mSaveAsAction);
     mPopupMenu->addSeparator();
 
@@ -510,7 +520,8 @@ void IncidenceAttachment::setupActions()
 
     mDeleteAction = new QAction(i18nc("@action:inmenu remove the attachment",
                                       "&Remove"), this);
-    connect(mDeleteAction, &QAction::triggered, this, &IncidenceAttachment::removeSelectedAttachments);
+    connect(mDeleteAction, &QAction::triggered, this,
+            &IncidenceAttachment::removeSelectedAttachments);
     ac->addAction(QStringLiteral("remove"), mDeleteAction);
     mDeleteAction->setShortcut(Qt::Key_Delete);
     mPopupMenu->addAction(mDeleteAction);
@@ -530,10 +541,14 @@ void IncidenceAttachment::setupAttachmentIconView()
                                         "Displays items (files, mail, etc.) that "
                                         "have been associated with this event or to-do."));
 
-    connect(mAttachmentView, &AttachmentIconView::itemDoubleClicked, this, &IncidenceAttachment::showAttachment);
-    connect(mAttachmentView, &AttachmentIconView::itemChanged, this, &IncidenceAttachment::slotItemRenamed);
-    connect(mAttachmentView, &AttachmentIconView::itemSelectionChanged, this, &IncidenceAttachment::slotSelectionChanged);
-    connect(mAttachmentView, &AttachmentIconView::customContextMenuRequested, this, &IncidenceAttachment::showContextMenu);
+    connect(mAttachmentView, &AttachmentIconView::itemDoubleClicked, this,
+            &IncidenceAttachment::showAttachment);
+    connect(mAttachmentView, &AttachmentIconView::itemChanged, this,
+            &IncidenceAttachment::slotItemRenamed);
+    connect(mAttachmentView, &AttachmentIconView::itemSelectionChanged, this,
+            &IncidenceAttachment::slotSelectionChanged);
+    connect(mAttachmentView, &AttachmentIconView::customContextMenuRequested, this,
+            &IncidenceAttachment::showContextMenu);
 
     QGridLayout *layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
     layout->setMargin(0);
@@ -545,9 +560,8 @@ void IncidenceAttachment::setupAttachmentIconView()
 //   new AttachmentIconItem( attachment, mAttachmentView );
 // }
 
-void IncidenceAttachment::addDataAttachment(const QByteArray &data,
-        const QString &mimeType,
-        const QString &label)
+void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType,
+                                            const QString &label)
 {
     AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
 
@@ -572,14 +586,12 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data,
     checkDirtyStatus();
 }
 
-void IncidenceAttachment::addUriAttachment(const QString &uri,
-        const QString &mimeType,
-        const QString &label,
-        bool inLine)
+void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mimeType,
+                                           const QString &label, bool inLine)
 {
     if (!inLine) {
-        AttachmentIconItem *item =
-            new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
+        AttachmentIconItem *item
+            = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {
@@ -605,4 +617,3 @@ void IncidenceAttachment::addUriAttachment(const QString &uri,
         }
     }
 }
-

@@ -41,4 +41,3 @@ KCalCore::Attendee::Ptr AttendeeData::attendee() const
 {
     return KCalCore::Attendee::Ptr(new KCalCore::Attendee(*this));
 }
-

@@ -26,9 +26,7 @@
 #include <QSortFilterProxyModel>
 #include <QModelIndex>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttendeeTableModel : public QAbstractTableModel
 {
     Q_OBJECT
@@ -57,7 +55,8 @@ public:
         Tentative
     };
 
-    explicit AttendeeTableModel(const KCalCore::Attendee::List &resources, QObject *parent = nullptr);
+    explicit AttendeeTableModel(const KCalCore::Attendee::List &resources,
+                                QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -66,8 +65,7 @@ public:
                         int role = Qt::DisplayRole) const override;
 
     Qt::ItemFlags flags(const QModelIndex &index) const override;
-    bool setData(const QModelIndex &index, const QVariant &value,
-                 int role = Qt::EditRole) override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
     bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
     bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
@@ -106,7 +104,6 @@ public:
     explicit AttendeeFilterProxyModel(QObject *parent = nullptr);
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
-
 }
 
 #endif

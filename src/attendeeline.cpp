@@ -38,7 +38,9 @@ using namespace IncidenceEditorNG;
 typedef QPair<QString, QIcon> TextIconPair;
 
 AttendeeComboBox::AttendeeComboBox(QWidget *parent)
-    : QToolButton(parent), mMenu(new QMenu(this)), mCurrentIndex(-1)
+    : QToolButton(parent)
+    , mMenu(new QMenu(this))
+    , mCurrentIndex(-1)
 {
     setPopupMode(QToolButton::InstantPopup);
     setToolButtonStyle(Qt::ToolButtonIconOnly);
@@ -92,7 +94,7 @@ void AttendeeComboBox::setCurrentIndex(int index)
 
 void AttendeeComboBox::slotActionTriggered()
 {
-    int index = qobject_cast<QAction *> (sender())->data().toInt();
+    int index = qobject_cast<QAction *>(sender())->data().toInt();
     setCurrentIndex(index);
 }
 
@@ -103,8 +105,8 @@ void AttendeeComboBox::keyPressEvent(QKeyEvent *ev)
     } else if (ev->key() == Qt::Key_Right) {
         Q_EMIT rightPressed();
     } else if (!mMenu->isVisible() && (
-                   ev->key() == Qt::Key_Down ||
-                   ev->key() == Qt::Key_Space))  {
+                   ev->key() == Qt::Key_Down
+                   || ev->key() == Qt::Key_Space)) {
         showMenu();
     } else {
         QToolButton::keyPressEvent(ev);
@@ -118,19 +120,19 @@ AttendeeLineEdit::AttendeeLineEdit(QWidget *parent)
 
 void AttendeeLineEdit::keyPressEvent(QKeyEvent *ev)
 {
-    if ((ev->key() == Qt::Key_Enter || ev->key() == Qt::Key_Return) &&
-            !completionBox()->isVisible()) {
+    if ((ev->key() == Qt::Key_Enter || ev->key() == Qt::Key_Return)
+        && !completionBox()->isVisible()) {
         Q_EMIT downPressed();
         KPIM::AddresseeLineEdit::keyPressEvent(ev);
-    } else if (ev->key() == Qt::Key_Backspace  &&  text().isEmpty()) {
+    } else if (ev->key() == Qt::Key_Backspace && text().isEmpty()) {
         ev->accept();
         Q_EMIT deleteMe();
-    } else if (ev->key() == Qt::Key_Left && cursorPosition() == 0 &&
-               !ev->modifiers().testFlag(Qt::ShiftModifier)) {
+    } else if (ev->key() == Qt::Key_Left && cursorPosition() == 0
+               && !ev->modifiers().testFlag(Qt::ShiftModifier)) {
         // Shift would be pressed during selection
         Q_EMIT leftPressed();
-    } else if (ev->key() == Qt::Key_Right && cursorPosition() == (int)text().length() &&
-               !ev->modifiers().testFlag(Qt::ShiftModifier)) {
+    } else if (ev->key() == Qt::Key_Right && cursorPosition() == (int)text().length()
+               && !ev->modifiers().testFlag(Qt::ShiftModifier)) {
         // Shift would be pressed during selection
         Q_EMIT rightPressed();
     } else if (ev->key() == Qt::Key_Down) {
@@ -143,13 +145,13 @@ void AttendeeLineEdit::keyPressEvent(QKeyEvent *ev)
 }
 
 AttendeeLine::AttendeeLine(QWidget *parent)
-    : MultiplyingLine(parent),
-      mRoleCombo(new AttendeeComboBox(this)),
-      mStateCombo(new AttendeeComboBox(this)),
-      mResponseCombo(new AttendeeComboBox(this)),
-      mEdit(new AttendeeLineEdit(this)),
-      mData(new AttendeeData(QString(), QString())),
-      mModified(false)
+    : MultiplyingLine(parent)
+    , mRoleCombo(new AttendeeComboBox(this))
+    , mStateCombo(new AttendeeComboBox(this))
+    , mResponseCombo(new AttendeeComboBox(this))
+    , mEdit(new AttendeeLineEdit(this))
+    , mData(new AttendeeData(QString(), QString()))
+    , mModified(false)
 {
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
@@ -164,7 +166,8 @@ AttendeeLine::AttendeeLine(QWidget *parent)
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")),
                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::Chair));
 
-    mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-request-response")),
+    mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral(
+                                                 "meeting-participant-request-response")),
                             i18nc("@item:inlistbox", "Request Response"));
     mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")),
                             i18nc("@item:inlistbox", "Request No Response"));
@@ -198,30 +201,40 @@ AttendeeLine::AttendeeLine(QWidget *parent)
     topLayout->addWidget(mResponseCombo);
 
     connect(mEdit, &AttendeeLineEdit::returnPressed, this, &AttendeeLine::slotReturnPressed);
-    connect(mEdit, &AttendeeLineEdit::deleteMe, this, &AttendeeLine::slotPropagateDeletion, Qt::QueuedConnection);
-    connect(mEdit, &AttendeeLineEdit::textChanged, this, &AttendeeLine::slotTextChanged, Qt::QueuedConnection);
+    connect(mEdit, &AttendeeLineEdit::deleteMe, this, &AttendeeLine::slotPropagateDeletion,
+            Qt::QueuedConnection);
+    connect(mEdit, &AttendeeLineEdit::textChanged, this, &AttendeeLine::slotTextChanged,
+            Qt::QueuedConnection);
     connect(mEdit, &AttendeeLineEdit::upPressed, this, &AttendeeLine::slotFocusUp);
     connect(mEdit, &AttendeeLineEdit::downPressed, this, &AttendeeLine::slotFocusDown);
 
-    connect(mRoleCombo, &AttendeeComboBox::rightPressed, mEdit, static_cast<void (AttendeeLineEdit::*)()>(&AttendeeLineEdit::setFocus));
-    connect(mEdit, &AttendeeLineEdit::leftPressed, mRoleCombo, static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
+    connect(mRoleCombo, &AttendeeComboBox::rightPressed, mEdit,
+            static_cast<void (AttendeeLineEdit::*)()>(&AttendeeLineEdit::setFocus));
+    connect(mEdit, &AttendeeLineEdit::leftPressed, mRoleCombo,
+            static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
 
-    connect(mEdit, &AttendeeLineEdit::rightPressed, mStateCombo, static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
-    connect(mStateCombo, &AttendeeComboBox::leftPressed, mEdit,  static_cast<void (AttendeeLineEdit::*)()>(&AttendeeLineEdit::setFocus));
+    connect(mEdit, &AttendeeLineEdit::rightPressed, mStateCombo,
+            static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
+    connect(mStateCombo, &AttendeeComboBox::leftPressed, mEdit,
+            static_cast<void (AttendeeLineEdit::*)()>(&AttendeeLineEdit::setFocus));
 
-    connect(mStateCombo, &AttendeeComboBox::rightPressed, mResponseCombo, static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
+    connect(mStateCombo, &AttendeeComboBox::rightPressed, mResponseCombo,
+            static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
 
-    connect(mResponseCombo, &AttendeeComboBox::leftPressed, mStateCombo, static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
+    connect(mResponseCombo, &AttendeeComboBox::leftPressed, mStateCombo,
+            static_cast<void (AttendeeComboBox::*)()>(&AttendeeComboBox::setFocus));
     connect(mResponseCombo, &AttendeeComboBox::rightPressed, this, &AttendeeLine::rightPressed);
 
-    connect(mEdit, &AttendeeLineEdit::editingFinished, this, &AttendeeLine::slotHandleChange, Qt::QueuedConnection);
-    connect(mEdit, &AttendeeLineEdit::textCompleted, this, &AttendeeLine::slotHandleChange, Qt::QueuedConnection);
-    connect(mEdit, &AttendeeLineEdit::clearButtonClicked, this, &AttendeeLine::slotPropagateDeletion, Qt::QueuedConnection);
+    connect(mEdit, &AttendeeLineEdit::editingFinished, this, &AttendeeLine::slotHandleChange,
+            Qt::QueuedConnection);
+    connect(mEdit, &AttendeeLineEdit::textCompleted, this, &AttendeeLine::slotHandleChange,
+            Qt::QueuedConnection);
+    connect(mEdit, &AttendeeLineEdit::clearButtonClicked, this,
+            &AttendeeLine::slotPropagateDeletion, Qt::QueuedConnection);
 
     connect(mRoleCombo, &AttendeeComboBox::itemChanged, this, &AttendeeLine::slotComboChanged);
     connect(mStateCombo, &AttendeeComboBox::itemChanged, this, &AttendeeLine::slotComboChanged);
     connect(mResponseCombo, &AttendeeComboBox::itemChanged, this, &AttendeeLine::slotComboChanged);
-
 }
 
 void AttendeeLine::activate()
@@ -417,11 +430,12 @@ void AttendeeLine::aboutToBeDeleted()
         return;
     }
 
-    Q_EMIT changed(mData->attendee(), KCalCore::Attendee::Ptr(new KCalCore::Attendee(QLatin1String(""), QLatin1String(""))));
+    Q_EMIT changed(mData->attendee(),
+                   KCalCore::Attendee::Ptr(new KCalCore::Attendee(QLatin1String(""),
+                                                                  QLatin1String(""))));
 }
 
 bool AttendeeLine::canDeleteLineEdit() const
 {
     return mEdit->canDeleteLineEdit();
 }
-

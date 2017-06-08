@@ -30,15 +30,12 @@
 #include <KDateTime>
 #include <QVector>
 
-namespace KCalCore
-{
+namespace KCalCore {
 class ICalTimeZones;
 }
 class QByteArray;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * A combobox that shows the system timezones available in KSystemTimeZones::zones()
  * and provides methods to easily select the item corresponding to a given
@@ -96,7 +93,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

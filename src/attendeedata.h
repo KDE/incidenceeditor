@@ -25,22 +25,23 @@
 
 #include <KCalCore/Attendee>
 
-namespace IncidenceEditorNG
-{
-
-class AttendeeData
-    : public KPIM::MultiplyingLineData, public KCalCore::Attendee
+namespace IncidenceEditorNG {
+class AttendeeData : public KPIM::MultiplyingLineData, public KCalCore::Attendee
 {
 public:
     typedef QSharedPointer<AttendeeData> Ptr;
     typedef QList<AttendeeData::Ptr> List;
 
-    AttendeeData(const QString &name, const QString &email,
-                 bool rsvp = false, Attendee::PartStat status = Attendee::None,
+    AttendeeData(const QString &name, const QString &email, bool rsvp = false,
+                 Attendee::PartStat status = Attendee::None,
                  Attendee::Role role = Attendee::ReqParticipant, const QString &uid = QString())
-        : KCalCore::Attendee(name, email, rsvp, status, role, uid) {}
+        : KCalCore::Attendee(name, email, rsvp, status, role, uid)
+    {
+    }
 
-    explicit AttendeeData(const KCalCore::Attendee::Ptr &attendee) : KCalCore::Attendee(*attendee) {}
+    explicit AttendeeData(const KCalCore::Attendee::Ptr &attendee) : KCalCore::Attendee(*attendee)
+    {
+    }
 
     void clear() override;
     bool isEmpty() const override;
@@ -49,9 +50,7 @@ public:
      * Return a copy of the attendee data
      */
     KCalCore::Attendee::Ptr attendee() const;
-
 };
-
 }
 
 #endif // INCIDENCEEDITOR_ATTENDEEDATA_H

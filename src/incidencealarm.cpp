@@ -30,10 +30,10 @@ using namespace IncidenceEditorNG;
 using namespace CalendarSupport;
 
 IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
-    : mUi(ui),
-      mDateTime(dateTime),
-      mEnabledAlarmCount(0),
-      mIsTodo(false)
+    : mUi(ui)
+    , mDateTime(dateTime)
+    , mEnabledAlarmCount(0)
+    , mIsTodo(false)
 {
     setObjectName(QStringLiteral("IncidenceAlarm"));
 
@@ -41,14 +41,21 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
     mUi->mAlarmPresetCombo->setCurrentIndex(AlarmPresets::defaultPresetIndex());
     updateButtons();
 
-    connect(mDateTime, &IncidenceDateTime::startDateTimeToggled, this, &IncidenceAlarm::handleDateTimeToggle);
-    connect(mDateTime, &IncidenceDateTime::endDateTimeToggled, this, &IncidenceAlarm::handleDateTimeToggle);
-    connect(mUi->mAlarmAddPresetButton, &QPushButton::clicked, this, &IncidenceAlarm::newAlarmFromPreset);
-    connect(mUi->mAlarmList, &QListWidget::itemSelectionChanged, this, &IncidenceAlarm::updateButtons);
+    connect(mDateTime, &IncidenceDateTime::startDateTimeToggled, this,
+            &IncidenceAlarm::handleDateTimeToggle);
+    connect(mDateTime, &IncidenceDateTime::endDateTimeToggled, this,
+            &IncidenceAlarm::handleDateTimeToggle);
+    connect(mUi->mAlarmAddPresetButton, &QPushButton::clicked, this,
+            &IncidenceAlarm::newAlarmFromPreset);
+    connect(mUi->mAlarmList, &QListWidget::itemSelectionChanged, this,
+            &IncidenceAlarm::updateButtons);
     connect(mUi->mAlarmNewButton, &QPushButton::clicked, this, &IncidenceAlarm::newAlarm);
-    connect(mUi->mAlarmConfigureButton, &QPushButton::clicked, this, &IncidenceAlarm::editCurrentAlarm);
-    connect(mUi->mAlarmToggleButton, &QPushButton::clicked, this, &IncidenceAlarm::toggleCurrentAlarm);
-    connect(mUi->mAlarmRemoveButton, &QPushButton::clicked, this, &IncidenceAlarm::removeCurrentAlarm);
+    connect(mUi->mAlarmConfigureButton, &QPushButton::clicked, this,
+            &IncidenceAlarm::editCurrentAlarm);
+    connect(mUi->mAlarmToggleButton, &QPushButton::clicked, this,
+            &IncidenceAlarm::toggleCurrentAlarm);
+    connect(mUi->mAlarmRemoveButton, &QPushButton::clicked, this,
+            &IncidenceAlarm::removeCurrentAlarm);
 }
 
 void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
@@ -115,7 +122,7 @@ bool IncidenceAlarm::isDirty() const
             bool found = false;
             foreach (const KCalCore::Alarm::Ptr &initialAlarm, initialAlarms) {
                 if (*alarm == *initialAlarm) {
-                    found  = true;
+                    found = true;
                     break;
                 }
             }
@@ -262,7 +269,8 @@ void IncidenceAlarm::updateButtons()
             selAlarm = mAlarms.at(mUi->mAlarmList->currentIndex().row());
         }
         if (selAlarm && selAlarm->enabled()) {
-            mUi->mAlarmToggleButton->setText(i18nc("Disable currently selected reminder", "Disable"));
+            mUi->mAlarmToggleButton->setText(i18nc("Disable currently selected reminder",
+                                                   "Disable"));
         } else {
             mUi->mAlarmToggleButton->setText(i18nc("Enable currently selected reminder", "Enable"));
         }
@@ -296,15 +304,15 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
         return action;
     }
 
-    QString offsetUnit =
-        i18nc("The reminder is set to X minutes before/after the event", "minutes");
+    QString offsetUnit
+        = i18nc("The reminder is set to X minutes before/after the event", "minutes");
 
-    const int offset = alarm->hasStartOffset() ? alarm->startOffset().asSeconds() / 60 :
-                       alarm->endOffset().asSeconds() / 60; // make minutes
+    const int offset = alarm->hasStartOffset() ? alarm->startOffset().asSeconds() / 60
+                       : alarm->endOffset().asSeconds() / 60; // make minutes
 
     int useoffset = offset;
     if (offset % (24 * 60) == 0 && offset != 0) {     // divides evenly into days?
-        useoffset =  offset / 60 / 24;
+        useoffset = offset / 60 / 24;
         offsetUnit = i18nc("The reminder is set to X days before/after the event", "days");
     } else if (offset % 60 == 0 && offset != 0) {   // divides evenly into hours?
         offsetUnit = i18nc("The reminder is set to X hours before/after the event", "hours");
@@ -359,7 +367,6 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
                 return i18n("%1 %2 %3 after the event started %4 (Disabled)",
                             action, useoffset, offsetUnit, repeatStr);
             }
-
         } else if (useoffset < 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
                 return i18n("%1 %2 %3 before the to-do starts %4 (Disabled)",

@@ -23,14 +23,11 @@
 
 #include "incidenceeditor-ng.h"
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDateTime;
 
 class IncidenceAlarm : public IncidenceEditor
@@ -67,7 +64,6 @@ private:
     int mEnabledAlarmCount;
     bool mIsTodo;
 };
-
 }
 
 #endif

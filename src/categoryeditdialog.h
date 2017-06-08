@@ -25,19 +25,15 @@
 
 class QTreeWidgetItem;
 
-namespace Ui
-{
+namespace Ui {
 class CategoryEditDialog_base;
 }
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class CategoryConfig;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class CategoryEditDialog : public QDialog
 {
     Q_OBJECT
@@ -74,7 +70,6 @@ private:
     CalendarSupport::CategoryConfig *mCategoryConfig;
     Ui::CategoryEditDialog_base *mWidgets;
 };
-
 }
 
 #endif

@@ -26,10 +26,9 @@
 
 #include "globalsettings_incidenceeditor.h"
 
-namespace IncidenceEditorNG
-{
-
-class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase
+namespace IncidenceEditorNG {
+class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::
+    IncidenceEditorSettingsBase
 {
     Q_OBJECT
 
@@ -41,7 +40,6 @@ private:
     virtual ~IncidenceEditorSettings();
     static IncidenceEditorSettings *mSelf;
 };
-
 }
 
 #endif

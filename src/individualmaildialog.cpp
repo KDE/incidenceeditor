@@ -33,8 +33,10 @@
 
 using namespace IncidenceEditorNG;
 
-IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCore::Attendee::List  &attendees,
-        const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent)
+IndividualMailDialog::IndividualMailDialog(const QString &question,
+                                           const KCalCore::Attendee::List &attendees,
+                                           const KGuiItem &buttonYes, const KGuiItem &buttonNo,
+                                           QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));
@@ -43,9 +45,12 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     int row = 0;
     for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         QComboBox *options = new QComboBox();
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send update"), QVariant(Update));
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send no update"), QVariant(NoUpdate));
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Edit mail"), QVariant(Edit));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
+                               "Send update"), QVariant(Update));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
+                               "Send no update"), QVariant(NoUpdate));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
+                               "Edit mail"), QVariant(Edit));
         mAttendeeDecision[attendee] = options;
 
         layout->addWidget(new QLabel(attendee->fullName()), row, 0);
@@ -64,13 +69,18 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     topLayout->addWidget(m_detailsWidget);
 
     m_buttons = new QDialogButtonBox;
-    m_buttons->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Help);
+    m_buttons->setStandardButtons(
+        QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Help);
     auto yesButton = m_buttons->button(QDialogButtonBox::Yes);
     yesButton->setText(buttonYes.text());
-    connect(yesButton, &QPushButton::clicked, this, [this]() { done(QDialogButtonBox::Yes); });
+    connect(yesButton, &QPushButton::clicked, this, [this]() {
+        done(QDialogButtonBox::Yes);
+    });
     auto noButton = m_buttons->button(QDialogButtonBox::No);
     noButton->setText(buttonNo.text());
-    connect(noButton, &QPushButton::clicked, this, [this]() { done(QDialogButtonBox::No); });
+    connect(noButton, &QPushButton::clicked, this, [this]() {
+        done(QDialogButtonBox::No);
+    });
     auto detailsButton = m_buttons->button(QDialogButtonBox::Help);
     detailsButton->setIcon(QIcon::fromTheme(QLatin1String("help-about")));
     connect(detailsButton, &QPushButton::clicked, this, [this]() {
@@ -87,7 +97,6 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
 
 IndividualMailDialog::~IndividualMailDialog()
 {
-
 }
 
 KCalCore::Attendee::List IndividualMailDialog::editAttendees() const
@@ -117,8 +126,11 @@ KCalCore::Attendee::List IndividualMailDialog::updateAttendees() const
 void IndividualMailDialog::updateButtonState()
 {
     auto detailsButton = m_buttons->button(QDialogButtonBox::Help);
-    if (m_detailsWidget->isVisible())
-        detailsButton->setText(i18nc("@action:button show list of attendees", "Individual mailsettings <<"));
-    else
-        detailsButton->setText(i18nc("@action:button show list of attendees", "Individual mailsettings >>"));
+    if (m_detailsWidget->isVisible()) {
+        detailsButton->setText(i18nc("@action:button show list of attendees",
+                                     "Individual mailsettings <<"));
+    } else {
+        detailsButton->setText(i18nc("@action:button show list of attendees",
+                                     "Individual mailsettings >>"));
+    }
 }

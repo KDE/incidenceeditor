@@ -36,14 +36,12 @@
 
 using namespace IncidenceEditorNG;
 
-class SwitchRoleProxy: public QSortFilterProxyModel
+class SwitchRoleProxy : public QSortFilterProxyModel
 {
-
 public:
     explicit SwitchRoleProxy(QObject *parent = nullptr)
         : QSortFilterProxyModel(parent)
     {
-
     }
 
     QVariant data(const QModelIndex &index, int role) const override
@@ -58,7 +56,8 @@ public:
     }
 };
 
-IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
+IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime,
+                                     Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(nullptr)
     , mUi(ui)
     , dataModel(ieAttendee->dataModel())
@@ -66,10 +65,13 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     , resourceDialog(new ResourceManagement())
 {
     setObjectName(QStringLiteral("IncidenceResource"));
-    connect(resourceDialog, &ResourceManagement::accepted, this, &IncidenceResource::dialogOkPressed);
+    connect(resourceDialog, &ResourceManagement::accepted, this,
+            &IncidenceResource::dialogOkPressed);
 
-    connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceResource::slotDateChanged);
-    connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceResource::slotDateChanged);
+    connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
+            &IncidenceResource::slotDateChanged);
+    connect(mDateTime, &IncidenceDateTime::endDateChanged, this,
+            &IncidenceResource::slotDateChanged);
 
     QStringList attrs;
     attrs << QStringLiteral("cn") <<  QStringLiteral("mail");
@@ -94,19 +96,29 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     filterProxyModel->setSourceModel(dataModel);
 
     mUi->mResourcesTable->setModel(filterProxyModel);
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Role, ieAttendee->roleDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Role,
+                                                   ieAttendee->roleDelegate());
     mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::FullName, attendeeDelegate);
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Status, ieAttendee->stateDelegate());
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Response, ieAttendee->responseDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Status,
+                                                   ieAttendee->stateDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Response,
+                                                   ieAttendee->responseDelegate());
 
-    connect(mUi->mFindResourcesButton, &QPushButton::clicked, this, &IncidenceResource::findResources);
-    connect(mUi->mBookResourceButton, &QPushButton::clicked, this, &IncidenceResource::bookResource);
-    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::layoutChanged);
-    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::updateCount);
-    connect(filterProxyModel, &ResourceFilterProxyModel::rowsInserted, this, &IncidenceResource::updateCount);
-    connect(filterProxyModel, &ResourceFilterProxyModel::rowsRemoved, this, &IncidenceResource::updateCount);
+    connect(mUi->mFindResourcesButton, &QPushButton::clicked, this,
+            &IncidenceResource::findResources);
+    connect(mUi->mBookResourceButton, &QPushButton::clicked, this,
+            &IncidenceResource::bookResource);
+    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this,
+            &IncidenceResource::layoutChanged);
+    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this,
+            &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::rowsInserted, this,
+            &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::rowsRemoved, this,
+            &IncidenceResource::updateCount);
     // only update when FullName is changed
-    connect(filterProxyModel, &ResourceFilterProxyModel::dataChanged, this, &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::dataChanged, this,
+            &IncidenceResource::updateCount);
 }
 
 void IncidenceResource::load(const KCalCore::Incidence::Ptr &incidence)
@@ -167,11 +179,11 @@ void IncidenceResource::layoutChanged()
     headerView->setSectionHidden(AttendeeTableModel::CuType, true);
     headerView->setSectionHidden(AttendeeTableModel::Name, true);
     headerView->setSectionHidden(AttendeeTableModel::Email, true);
-    headerView->setSectionResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Role, QHeaderView::ResizeToContents);
     headerView->setSectionResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
-    headerView->setSectionResizeMode(AttendeeTableModel::Available,  QHeaderView::ResizeToContents);
-    headerView->setSectionResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
-    headerView->setSectionResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Available, QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Status, QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Response, QHeaderView::ResizeToContents);
 }
 
 void IncidenceResource::updateCount()
@@ -195,5 +207,4 @@ int IncidenceResource::resourceCount() const
         }
     }
     return c;
-
 }

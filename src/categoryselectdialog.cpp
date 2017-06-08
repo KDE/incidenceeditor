@@ -46,7 +46,8 @@ public:
 };
 
 CategorySelectWidget::CategorySelectWidget(CategoryConfig *cc, QWidget *parent)
-    : QWidget(parent), mCategoryConfig(cc)
+    : QWidget(parent)
+    , mCategoryConfig(cc)
 {
     QHBoxLayout *topL = new QHBoxLayout(this);
     topL->setMargin(0);
@@ -79,7 +80,8 @@ void CategorySelectWidget::setCategories(const QStringList &categoryList)
     mCategoryList.clear();
 
     QStringList cats = mCategoryConfig->customCategories();
-    for (QStringList::ConstIterator it = categoryList.begin(), end = categoryList.end(); it != end; ++it) {
+    for (QStringList::ConstIterator it = categoryList.begin(), end = categoryList.end(); it != end;
+         ++it) {
         if (!cats.contains(*it)) {
             cats.append(*it);
         }
@@ -113,8 +115,8 @@ static QStringList getSelectedCategoriesFromCategoriesView(AutoCheckTreeWidget *
     while (*it) {
         QStringList path = categoriesView->pathByItem(*it++);
         if (path.count()) {
-            path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\') +
-                                  CategoryConfig::categorySeparator);
+            path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\')
+                                  +CategoryConfig::categorySeparator);
             categories.append(path.join(CategoryConfig::categorySeparator));
         }
     }
@@ -163,12 +165,15 @@ void CategorySelectWidget::setCategoryList(const QStringList &categories)
 }
 
 CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
-    : QDialog(parent), d(nullptr)
+    : QDialog(parent)
+    , d(nullptr)
 {
     setWindowTitle(i18n("Select Categories"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = nullptr;
-    buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply, this);
+    buttonBox = new QDialogButtonBox(
+        QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply,
+        this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -188,10 +193,13 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
     mWidgets->setCategories();
     mWidgets->listView()->setFocus();
 
-    connect(mWidgets, &CategorySelectWidget::editCategories, this, &CategorySelectDialog::editCategories);
+    connect(mWidgets, &CategorySelectWidget::editCategories, this,
+            &CategorySelectDialog::editCategories);
 
     connect(okButton, &QPushButton::clicked, this, &CategorySelectDialog::slotOk);
-    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &CategorySelectDialog::slotApply);
+    connect(buttonBox->button(
+                QDialogButtonBox::Apply), &QPushButton::clicked, this,
+            &CategorySelectDialog::slotApply);
 }
 
 CategorySelectDialog::~CategorySelectDialog()
@@ -240,4 +248,3 @@ void CategorySelectDialog::setSelected(const QStringList &selList)
 {
     mWidgets->setSelected(selList);
 }
-

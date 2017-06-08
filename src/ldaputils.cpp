@@ -40,9 +40,9 @@ QString IncidenceEditorNG::translateLDAPAttributeForDisplay(const QString &attri
     } else if (attribute == QLatin1String("description")) {
         ret = i18nc("ldap attribute description", "Description");
     } else if (attribute == QLatin1String("telephoneNumber")) {
-        ret = i18nc("ldap attribute telephoneNumber",  "Telephone");
+        ret = i18nc("ldap attribute telephoneNumber", "Telephone");
     } else if (attribute == QLatin1String("mobile")) {
-        ret = i18nc("ldap attribute mobile",  "Mobile");
+        ret = i18nc("ldap attribute mobile", "Mobile");
     }
     return ret;
 }

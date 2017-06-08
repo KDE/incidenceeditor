@@ -28,14 +28,11 @@
 
 class CategoryWidgetBase;
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class CategoryConfig;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AutoCheckTreeWidget;
 
 class CategoryWidget : public QWidget
@@ -101,7 +98,6 @@ private:
     class CategorySelectDialogPrivate;
     CategorySelectDialogPrivate *d;
 };
-
 }
 
 #endif

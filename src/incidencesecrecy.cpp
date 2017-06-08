@@ -30,14 +30,18 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
 {
     setObjectName(QStringLiteral("IncidenceSecrecy"));
     mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
-    connect(mUi->mSecrecyCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &IncidenceSecrecy::checkDirtyStatus);
+    connect(mUi->mSecrecyCombo,
+            static_cast<void (KComboBox::*)(
+                            int)>(&KComboBox::currentIndexChanged), this,
+            &IncidenceSecrecy::checkDirtyStatus);
 }
 
 void IncidenceSecrecy::load(const KCalCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     if (mLoadedIncidence) {
-        Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
+        Q_ASSERT(mUi->mSecrecyCombo->count()
+                 == KCalUtils::Stringify::incidenceSecrecyList().count());
         mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
 
         if (incidence->type() == KCalCore::Incidence::TypeJournal) {
@@ -80,4 +84,3 @@ bool IncidenceSecrecy::isDirty() const
 
     return false;
 }
-

@@ -24,8 +24,7 @@
 #include "incidenceeditor-ng.h"
 class QUrl;
 class KJob;
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
@@ -34,9 +33,7 @@ class QMenu;
 class QListWidgetItem;
 class QMimeData;
 class QAction;
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttachmentIconView;
 
 class IncidenceAttachment : public IncidenceEditor
@@ -79,12 +76,10 @@ private Q_SLOTS:
 private:
     //     void addAttachment( KCalCore::Attachment *attachment );
     void addDataAttachment(const QByteArray &data,
-                           const QString &mimeType = QString(),
-                           const QString &label = QString());
+                           const QString &mimeType = QString(), const QString &label = QString());
     void addUriAttachment(const QString &uri,
                           const QString &mimeType = QString(),
-                          const QString &label = QString(),
-                          bool inLine = false);
+                          const QString &label = QString(), bool inLine = false);
     void handlePasteOrDrop(const QMimeData *mimeData);
     void setupActions();
     void setupAttachmentIconView();
@@ -103,7 +98,6 @@ private:
     QAction *mDeleteAction;
     QAction *mEditAction;
 };
-
 }
 
 #endif

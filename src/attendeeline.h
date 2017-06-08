@@ -31,9 +31,7 @@
 
 class QKeyEvent;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AttendeeData;
 
 class AttendeeComboBox : public QToolButton
@@ -94,7 +92,9 @@ public:
     };
 
     explicit AttendeeLine(QWidget *parent);
-    virtual ~AttendeeLine() {}
+    virtual ~AttendeeLine()
+    {
+    }
 
     void activate() override;
     bool isActive() const override;
@@ -141,7 +141,6 @@ private:
     QString mUid;
     bool mModified;
 };
-
 }
 
 #endif

@@ -26,14 +26,11 @@
 #include <QDialog>
 #include <KDateTime>
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class FreePeriodModel;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class ConflictResolver;
 class VisualFreeBusyWidget;
 
@@ -49,8 +46,7 @@ public:
     QTime selectedStartTime() const;
 
 public Q_SLOTS:
-    void slotUpdateIncidenceStartEnd(const KDateTime &startDateTime,
-                                     const KDateTime &endDateTime);
+    void slotUpdateIncidenceStartEnd(const KDateTime &startDateTime, const KDateTime &endDateTime);
 
 Q_SIGNALS:
     void startDateChanged(const QDate &newDate);
@@ -77,7 +73,6 @@ private:
     CalendarSupport::FreePeriodModel *mPeriodModel;
     VisualFreeBusyWidget *mVisualWidget;
 };
-
 }
 
 #endif

@@ -29,9 +29,7 @@
 
 using namespace IncidenceEditorNG;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDescriptionPrivate
 {
 public:
@@ -42,17 +40,21 @@ public:
     QString mRealOriginalDescriptionEditContents;
     bool mRichTextEnabled;
 };
-
 }
 
 IncidenceDescription::IncidenceDescription(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(nullptr), mUi(ui), d(new IncidenceDescriptionPrivate())
+    : IncidenceEditor(nullptr)
+    , mUi(ui)
+    , d(new IncidenceDescriptionPrivate())
 {
     setObjectName(QStringLiteral("IncidenceDescription"));
     mUi->mRichTextLabel->setContextMenuPolicy(Qt::NoContextMenu);
     setupToolBar();
-    connect(mUi->mRichTextLabel, &QLabel::linkActivated, this, &IncidenceDescription::toggleRichTextDescription);
-    connect(mUi->mDescriptionEdit->richTextComposer(), &KPIMTextEdit::RichTextComposer::textChanged, this, &IncidenceDescription::checkDirtyStatus);
+    connect(mUi->mRichTextLabel, &QLabel::linkActivated, this,
+            &IncidenceDescription::toggleRichTextDescription);
+    connect(
+        mUi->mDescriptionEdit->richTextComposer(), &KPIMTextEdit::RichTextComposer::textChanged, this,
+        &IncidenceDescription::checkDirtyStatus);
 }
 
 IncidenceDescription::~IncidenceDescription()
@@ -70,10 +72,12 @@ void IncidenceDescription::load(const KCalCore::Incidence::Ptr &incidence)
         enableRichTextDescription(incidence->descriptionIsRich());
         if (incidence->descriptionIsRich()) {
             mUi->mDescriptionEdit->richTextComposer()->setHtml(incidence->richDescription());
-            d->mRealOriginalDescriptionEditContents = mUi->mDescriptionEdit->richTextComposer()->toHtml();
+            d->mRealOriginalDescriptionEditContents
+                = mUi->mDescriptionEdit->richTextComposer()->toHtml();
         } else {
             mUi->mDescriptionEdit->richTextComposer()->setPlainText(incidence->description());
-            d->mRealOriginalDescriptionEditContents = mUi->mDescriptionEdit->richTextComposer()->toPlainText();
+            d->mRealOriginalDescriptionEditContents
+                = mUi->mDescriptionEdit->richTextComposer()->toPlainText();
         }
     } else {
         enableRichTextDescription(false);
@@ -94,7 +98,6 @@ void IncidenceDescription::save(const KCalCore::Incidence::Ptr &incidence)
 
 bool IncidenceDescription::isDirty() const
 {
-
     /* Sometimes, what you put in a KRichTextWidget isn't the same as what you get out.
        Line terminators (cr,lf) for example can be converted.
 
@@ -105,11 +108,13 @@ bool IncidenceDescription::isDirty() const
        any tranformation regarding non-printable chars will be irrelevant.
     */
     if (d->mRichTextEnabled) {
-        return !mLoadedIncidence->descriptionIsRich() ||
-               d->mRealOriginalDescriptionEditContents != mUi->mDescriptionEdit->richTextComposer()->toHtml();
+        return !mLoadedIncidence->descriptionIsRich()
+               || d->mRealOriginalDescriptionEditContents
+               != mUi->mDescriptionEdit->richTextComposer()->toHtml();
     } else {
-        return mLoadedIncidence->descriptionIsRich() ||
-               d->mRealOriginalDescriptionEditContents != mUi->mDescriptionEdit->richTextComposer()->toPlainText();
+        return mLoadedIncidence->descriptionIsRich()
+               || d->mRealOriginalDescriptionEditContents
+               != mUi->mDescriptionEdit->richTextComposer()->toPlainText();
     }
 }
 
@@ -124,10 +129,12 @@ void IncidenceDescription::enableRichTextDescription(bool enable)
         rt = i18nc("@action Enable or disable rich text editting", "Disable rich text");
         placeholder = QStringLiteral("<a href=\"show\"><font color='blue'>&lt;&lt; %1</font></a>");
         mUi->mDescriptionEdit->richTextComposer()->activateRichText();
-        d->mRealOriginalDescriptionEditContents = mUi->mDescriptionEdit->richTextComposer()->toHtml();
+        d->mRealOriginalDescriptionEditContents
+            = mUi->mDescriptionEdit->richTextComposer()->toHtml();
     } else {
         mUi->mDescriptionEdit->richTextComposer()->switchToPlainText();
-        d->mRealOriginalDescriptionEditContents = mUi->mDescriptionEdit->richTextComposer()->toPlainText();
+        d->mRealOriginalDescriptionEditContents
+            = mUi->mDescriptionEdit->richTextComposer()->toPlainText();
     }
 
     placeholder = placeholder.arg(rt);
@@ -191,26 +198,33 @@ void IncidenceDescription::printDebugInfo() const
     qCDebug(INCIDENCEEDITOR_LOG) << "RichText enabled " << d->mRichTextEnabled;
 
     if (mLoadedIncidence) {
-        qCDebug(INCIDENCEEDITOR_LOG) << "Incidence description is rich " << mLoadedIncidence->descriptionIsRich();
+        qCDebug(INCIDENCEEDITOR_LOG) << "Incidence description is rich "
+                                     << mLoadedIncidence->descriptionIsRich();
 
         if (mLoadedIncidence->descriptionIsRich()) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "desc is rich, and it is <desc>" <<  mLoadedIncidence->richDescription()
+            qCDebug(INCIDENCEEDITOR_LOG) << "desc is rich, and it is <desc>"
+                                         <<  mLoadedIncidence->richDescription()
                                          << "</desc>; "
-                                         << "widget has <desc>" << mUi->mDescriptionEdit->richTextComposer()->toHtml()
+                                         << "widget has <desc>"
+                                         << mUi->mDescriptionEdit->richTextComposer()->toHtml()
                                          << "</desc>; "
-                                         << "expr mLoadedIncidence->richDescription() != mUi->mDescriptionEdit->toHtml() is "
-                                         << (mLoadedIncidence->richDescription() != mUi->mDescriptionEdit->richTextComposer()->toHtml());
+                                         <<
+            "expr mLoadedIncidence->richDescription() != mUi->mDescriptionEdit->toHtml() is "
+                                         << (mLoadedIncidence->richDescription()
+                != mUi->mDescriptionEdit->richTextComposer()->toHtml());
         } else {
-            qCDebug(INCIDENCEEDITOR_LOG) << "desc is not rich, and it is <desc>" << mLoadedIncidence->description()
+            qCDebug(INCIDENCEEDITOR_LOG) << "desc is not rich, and it is <desc>"
+                                         << mLoadedIncidence->description()
                                          << "</desc>; "
-                                         << "widget has <desc>" << mUi->mDescriptionEdit->richTextComposer()->toPlainText()
+                                         << "widget has <desc>"
+                                         << mUi->mDescriptionEdit->richTextComposer()->toPlainText()
                                          << "</desc>; "
-                                         << "expr mLoadedIncidence->description() != mUi->mDescriptionEdit->toPlainText() is "
-                                         << (mLoadedIncidence->description() != mUi->mDescriptionEdit->richTextComposer()->toPlainText());
+                                         <<
+            "expr mLoadedIncidence->description() != mUi->mDescriptionEdit->toPlainText() is "
+                                         << (mLoadedIncidence->description()
+                != mUi->mDescriptionEdit->richTextComposer()->toPlainText());
         }
-
     } else {
         qCDebug(INCIDENCEEDITOR_LOG) << "Incidence is invalid";
     }
 }
-

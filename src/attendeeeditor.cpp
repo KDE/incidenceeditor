@@ -39,8 +39,14 @@ void AttendeeEditor::slotLineAdded(KPIM::MultiplyingLine *line)
         return;
     }
 
-    connect(att, static_cast<void (AttendeeLine::*)()>(&AttendeeLine::changed), this, &AttendeeEditor::slotCalculateTotal);
-    connect(att, static_cast<void (AttendeeLine::*)(const KCalCore::Attendee::Ptr &, const KCalCore::Attendee::Ptr &)>(&AttendeeLine::changed), this, &AttendeeEditor::changed);
+    connect(att,
+            static_cast<void (AttendeeLine::*)()>(&AttendeeLine::changed), this,
+            &AttendeeEditor::slotCalculateTotal);
+    connect(att,
+            static_cast<void (AttendeeLine::*)(const KCalCore::Attendee::Ptr &,
+                                               const KCalCore::Attendee::Ptr &)>(&AttendeeLine::
+                                                                                 changed), this,
+            &AttendeeEditor::changed);
     connect(att, &AttendeeLine::editingFinished, this, &AttendeeEditor::editingFinished);
 }
 

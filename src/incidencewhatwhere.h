@@ -23,14 +23,11 @@
 
 #include "incidenceeditor-ng.h"
 
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * The IncidenceGeneralEditor keeps track of the following Incidence parts:
  * - Summary
@@ -55,7 +52,6 @@ public:
 private:
     Ui::EventOrTodoDesktop *mUi;
 };
-
 } // IncidenceEditorNG
 
 #endif

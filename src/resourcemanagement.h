@@ -36,18 +36,15 @@
 #include <QDialog>
 #include <QStringList>
 
-class  Ui_resourceManagement;
+class Ui_resourceManagement;
 
 class QItemSelectionModel;
 
-namespace EventViews
-{
+namespace EventViews {
 class AgendaView;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT
@@ -98,6 +95,5 @@ private:
     QMap<QModelIndex, KCalCore::Event::Ptr> mFbEvent;
     EventViews::AgendaView *mAgendaView;
 };
-
 }
 #endif // RESOURCEMANAGEMENT_H

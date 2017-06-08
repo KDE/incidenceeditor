@@ -43,7 +43,8 @@ AttendeeLineEditDelegate::AttendeeLineEditDelegate(QObject *parent)
                        "can be sent to the user if an email address is provided.");
 }
 
-QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                                                const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -64,13 +65,16 @@ void AttendeeLineEditDelegate::setEditorData(QWidget *editor, const QModelIndex 
     lineedit->setText(index.model()->data(index, Qt::EditRole).toString());
 }
 
-void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
+                                            const QModelIndex &index) const
 {
     AttendeeLineEdit *lineedit = static_cast<AttendeeLineEdit *>(editor);
     model->setData(index, lineedit->text(), Qt::EditRole);
 }
 
-void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor,
+                                                    const QStyleOptionViewItem &option,
+                                                    const QModelIndex &index) const
 {
     Q_UNUSED(index);
     editor->setGeometry(option.rect);
@@ -78,12 +82,14 @@ void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor, const QStyl
 
 void AttendeeLineEditDelegate::leftPressed()
 {
-    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
+    Q_EMIT closeEditor(
+        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
 }
 
 void AttendeeLineEditDelegate::rightPressed()
 {
-    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
+    Q_EMIT closeEditor(
+        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
 }
 
 void AttendeeLineEditDelegate::setCompletionMode(KCompletion::CompletionMode mode)
@@ -92,14 +98,16 @@ void AttendeeLineEditDelegate::setCompletionMode(KCompletion::CompletionMode mod
 }
 
 bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view,
-        const QStyleOptionViewItem &option, const QModelIndex &index)
+                                         const QStyleOptionViewItem &option,
+                                         const QModelIndex &index)
 {
     if (!event || !view) {
         return false;
     }
     switch (event->type()) {
 #ifndef QT_NO_TOOLTIP
-    case QEvent::ToolTip: {
+    case QEvent::ToolTip:
+    {
         QHelpEvent *he = static_cast<QHelpEvent *>(event);
         QToolTip::showText(he->globalPos(), mToolTip, view);
         return true;
@@ -108,7 +116,8 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
 #ifndef QT_NO_WHATSTHIS
     case QEvent::QueryWhatsThis:
         return true;
-    case QEvent::WhatsThis: {
+    case QEvent::WhatsThis:
+    {
         QHelpEvent *he = static_cast<QHelpEvent *>(event);
         QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
         return true;

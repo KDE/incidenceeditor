@@ -23,9 +23,7 @@
 
 #include <KCalCore/IncidenceBase>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
 {
 public:
@@ -50,7 +48,6 @@ public:
     QStringList activeDesignerFields() const override;
     QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) override;
 };
-
 } // IncidenceEditors
 
 #endif

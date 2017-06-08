@@ -25,9 +25,7 @@
 
 #include <KCalCore/Incidence>
 #include <AkonadiCore/Item>
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * KCal Incidences are complicated objects. The user interfaces to create/modify
  * are therefore complex too. The IncedenceEditor class is a divide and conquer
@@ -84,7 +82,7 @@ public:
     KCalCore::IncidenceBase::IncidenceType type() const;
 
     /** Convenience method to get a pointer for a specific const Incidence Type. */
-    template <typename IncidenceT>
+    template<typename IncidenceT>
     QSharedPointer<IncidenceT> incidence() const
     {
         return mLoadedIncidence.dynamicCast<IncidenceT>();
@@ -118,7 +116,7 @@ protected:
     /** Only subclasses can instantiate IncidenceEditors */
     IncidenceEditor(QObject *parent = nullptr);
 
-    template <typename IncidenceT>
+    template<typename IncidenceT>
     QSharedPointer<IncidenceT> incidence(const KCalCore::Incidence::Ptr &inc)
     {
         return inc.dynamicCast<IncidenceT>();
@@ -130,7 +128,6 @@ protected:
     bool mWasDirty;
     bool mLoadingIncidence;
 };
-
 } // IncidenceEditorNG
 
 #endif // INCIDENCEEDITOR_H

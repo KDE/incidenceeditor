@@ -42,8 +42,7 @@
 
 using namespace IncidenceEditorNG;
 
-namespace IncidenceEditorNG
-{
+namespace IncidenceEditorNG {
 class RowController : public KGantt::AbstractRowController
 {
 private:
@@ -75,6 +74,7 @@ public:
     {
         return false;
     }
+
     KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
         return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
@@ -118,7 +118,6 @@ public:
 
 private:
     int mRowHeight;
-
 };
 
 class GanttHeaderView : public QHeaderView
@@ -135,11 +134,13 @@ public:
         return s;
     }
 };
-
 }
 
-VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)
-    : QWidget(parent), mGanttGrid(nullptr), mScaleCombo(nullptr)
+VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing,
+                                           QWidget *parent)
+    : QWidget(parent)
+    , mGanttGrid(nullptr)
+    , mScaleCombo(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setSpacing(spacing);
@@ -175,7 +176,9 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
     mScaleCombo->setCurrentIndex(0);   // start with "hour"
-    connect(mScaleCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
+    connect(mScaleCombo, static_cast<void (KComboBox::*)(
+                                         int)>(&KComboBox::activated), this,
+            &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
 
     QPushButton *button = new QPushButton(i18nc("@action:button", "Center on Start"), this);
@@ -263,8 +266,8 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
 
     // Initially, show 15 days back and forth
     // set start to even hours, i.e. to 12:AM 0 Min 0 Sec
-    QDateTime horizonStart =
-        QDateTime(QDateTime::currentDateTime().addDays(-15).date());
+    QDateTime horizonStart
+        = QDateTime(QDateTime::currentDateTime().addDays(-15).date());
     //QDateTime horizonEnd = QDateTime::currentDateTime().addDays(15);
     mGanttGrid->setStartDateTime(horizonStart);
 
@@ -275,7 +278,8 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
 //connect(mGanttGraphicsView,SIGNAL(intervalColorRectangleMoved(KDateTime,KDateTime)),
 //        this, SLOT(slotIntervalColorRectangleMoved(KDateTime,KDateTime)) );
 
-    connect(mLeftView, &QTreeView::customContextMenuRequested, this, &VisualFreeBusyWidget::showAttendeeStatusMenu);
+    connect(mLeftView, &QTreeView::customContextMenuRequested, this,
+            &VisualFreeBusyWidget::showAttendeeStatusMenu);
 
 //   foreach ( FreeBusyItem::Ptr item, mResolver->freeBusyItems() ) {
 //     newFreeBusy( item );
@@ -298,7 +302,7 @@ void VisualFreeBusyWidget::slotCenterOnStart()
 }
 
 void VisualFreeBusyWidget::slotIntervalColorRectangleMoved(const KDateTime &start,
-        const KDateTime &end)
+                                                           const KDateTime &end)
 {
     mDtStart = start;
     mDtEnd = end;
@@ -322,7 +326,7 @@ void VisualFreeBusyWidget::slotScaleChanged(int newScale)
 }
 
 void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const KDateTime &dtFrom,
-        const KDateTime &dtTo)
+                                                       const KDateTime &dtTo)
 {
     mDtStart = dtFrom;
     mDtEnd = dtTo;
@@ -345,4 +349,3 @@ void VisualFreeBusyWidget::slotZoomToTime()
 void VisualFreeBusyWidget::splitterMoved()
 {
 }
-

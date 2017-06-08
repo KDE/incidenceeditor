@@ -25,8 +25,7 @@
 #include <Collection>
 #include <QObject>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Collection;
 class Item;
 class ItemFetchScope;
@@ -34,9 +33,7 @@ class ItemFetchScope;
 
 class KJob;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class ItemEditorUi;
 class ItemEditorPrivate;
 
@@ -146,12 +143,12 @@ private:
     Q_PRIVATE_SLOT(d_ptr, void itemFetchResult(KJob *))
     Q_PRIVATE_SLOT(d_ptr, void itemMoveResult(KJob *))
     Q_PRIVATE_SLOT(d_ptr, void onModifyFinished(int changeId, const Akonadi::Item &item,
-                   Akonadi::IncidenceChanger::ResultCode resultCode,
-                   const QString &errorString))
+                                                Akonadi::IncidenceChanger::ResultCode resultCode,
+                                                const QString &errorString))
     Q_PRIVATE_SLOT(d_ptr, void onCreateFinished(int changeId,
-                   const Akonadi::Item &item,
-                   Akonadi::IncidenceChanger::ResultCode resultCode,
-                   const QString &errorString))
+                                                const Akonadi::Item &item,
+                                                Akonadi::IncidenceChanger::ResultCode resultCode,
+                                                const QString &errorString))
     Q_PRIVATE_SLOT(d_ptr, void moveJobFinished(KJob *job))
 };
 
@@ -219,7 +216,6 @@ public:
      */
     virtual void reject(RejectReason reason, const QString &errorMessage = QString()) = 0;
 };
-
 }
 
 #endif

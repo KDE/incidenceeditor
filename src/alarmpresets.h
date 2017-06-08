@@ -25,17 +25,13 @@
 
 class QStringList;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 enum {
     // Fallback in case config is invalid
     DEFAULT_REMINDER_OFFSET = 15 // minutes
 };
 
-namespace AlarmPresets
-{
-
+namespace AlarmPresets {
 enum When {
     BeforeStart,
     BeforeEnd
@@ -71,9 +67,7 @@ int presetIndex(When when, const KCalCore::Alarm::Ptr &alarm);
    Returns the index of the default preset. ( Comes from KCalPrefs ).
  */
 int defaultPresetIndex();
-
 }
-
 }
 
 #endif // INCIDENCEEDITOR_ALARMPRESETS_H

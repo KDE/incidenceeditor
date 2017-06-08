@@ -43,10 +43,8 @@
 #include <KCalCore/IncidenceBase>
 
 #include <QDialog>
-namespace IncidenceEditorNG
-{
-
-class TemplateManagementDialog: public QDialog
+namespace IncidenceEditorNG {
+class TemplateManagementDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -87,7 +85,6 @@ private:
     QString m_newTemplate;
     bool m_changed;
 };
-
 }
 
 #endif

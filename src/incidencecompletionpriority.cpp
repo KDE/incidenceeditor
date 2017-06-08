@@ -30,7 +30,9 @@ class IncidenceCompletionPriority::Private
     IncidenceCompletionPriority *const q;
 public:
     explicit Private(IncidenceCompletionPriority *parent)
-        : q(parent), mUi(nullptr), mOrigPercentCompleted(-1)
+        : q(parent)
+        , mUi(nullptr)
+        , mOrigPercentCompleted(-1)
     {
     }
 
@@ -53,7 +55,8 @@ void IncidenceCompletionPriority::Private::sliderValueChanged(int value)
 }
 
 IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor(), d(new Private(this))
+    : IncidenceEditor()
+    , d(new Private(this))
 {
     Q_ASSERT(ui != nullptr);
     setObjectName(QStringLiteral("IncidenceCompletionPriority"));
@@ -68,7 +71,10 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     d->mUi->mTaskSeparator->hide();
 
     connect(d->mUi->mCompletionSlider, SIGNAL(valueChanged(int)), SLOT(sliderValueChanged(int)));
-    connect(d->mUi->mPriorityCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
+    connect(d->mUi->mPriorityCombo,
+            static_cast<void (KComboBox::*)(
+                            int)>(&KComboBox::currentIndexChanged), this,
+            &IncidenceCompletionPriority::checkDirtyStatus);
 }
 
 IncidenceCompletionPriority::~IncidenceCompletionPriority()

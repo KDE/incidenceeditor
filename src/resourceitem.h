@@ -33,9 +33,7 @@
 #include <Libkdepim/LdapClient>
 #include <kldap/ldapobject.h>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class ResourceItem : public QObject
 {
     Q_OBJECT
@@ -49,7 +47,8 @@ public:
     */
     typedef QSharedPointer<ResourceItem> Ptr;
 
-    ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient,
+    ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs,
+                 const KLDAP::LdapClient &ldapClient,
                  const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem();
 
@@ -125,7 +124,6 @@ private Q_SLOTS:
      *
      */
     void slotLDAPResult(const KLDAP::LdapClient &, const KLDAP::LdapObject &);
-
 };
 }
 

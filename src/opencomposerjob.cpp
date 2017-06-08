@@ -28,9 +28,9 @@
 
 using namespace IncidenceEditorNG;
 
-OpenComposerJob::OpenComposerJob(QObject *parent,
-                                 const QString &to, const QString &cc, const QString &bcc,
-                                 const KMime::Message::Ptr &message, const KIdentityManagement::Identity &identity)
+OpenComposerJob::OpenComposerJob(QObject *parent, const QString &to, const QString &cc,
+                                 const QString &bcc, const KMime::Message::Ptr &message,
+                                 const KIdentityManagement::Identity &identity)
     : KJob(parent)
     , mTo(to)
     , mCc(cc)
@@ -39,33 +39,37 @@ OpenComposerJob::OpenComposerJob(QObject *parent,
     , mIdentity(identity)
     , mSuccess(false)
 {
-    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged,
-            this, &OpenComposerJob::slotServiceOwnerChanged);
+    connect(
+        QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged,
+        this, &OpenComposerJob::slotServiceOwnerChanged);
 }
 
 OpenComposerJob::~OpenComposerJob()
 {
-
 }
 
 void OpenComposerJob::start()
 {
     mSuccess = false;
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kmail"))) {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral(
+                                                                           "org.kde.kmail"))) {
         QMetaObject::invokeMethod(this, "processMail", Qt::QueuedConnection);
     }
     //Check if Kontact is already running and if not ...
-    int result = KDBusServiceStarter::self()->findServiceFor(QStringLiteral("DBUS/Mailer"), QString(),
-                 &mError, &mDBusService);
+    int result = KDBusServiceStarter::self()->findServiceFor(QStringLiteral("DBUS/Mailer"),
+                                                             QString(),
+                                                             &mError, &mDBusService);
     if (result != 0) {
         // ... start Kontact
-        result = KDBusServiceStarter::self()->startServiceFor(QStringLiteral("DBUS/Mailer"), QString(),
-                 &mError, &mDBusService);
+        result = KDBusServiceStarter::self()->startServiceFor(QStringLiteral(
+                                                                  "DBUS/Mailer"), QString(),
+                                                              &mError, &mDBusService);
         if (result != 0) {
             const bool ok = QProcess::startDetached(QStringLiteral("kontact"));
             if (!ok) {
                 setError(KJob::UserDefinedError);
-                setErrorText(i18nc("errormessage: can't create a kontact process", "Can't create composer: Failed to start kontact."));
+                setErrorText(i18nc("errormessage: can't create a kontact process",
+                                   "Can't create composer: Failed to start kontact."));
                 emitResult();
                 return;
             }
@@ -79,12 +83,15 @@ void OpenComposerJob::timeout()
 {
     if (!mSuccess) {
         setError(KJob::UserDefinedError);
-        setErrorText(i18nc("errormessage: No connection via dbus nor starting kontact process worked.", "Can't create composer: Neither dbus nor kontact responded in time."));
+        setErrorText(i18nc(
+                         "errormessage: No connection via dbus nor starting kontact process worked.",
+                         "Can't create composer: Neither dbus nor kontact responded in time."));
         emitResult();
     }
 }
 
-void OpenComposerJob::slotServiceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
+void OpenComposerJob::slotServiceOwnerChanged(const QString &name, const QString &oldOwner,
+                                              const QString &newOwner)
 {
     Q_UNUSED(oldOwner);
     if (name == QLatin1String("org.kde.kmail") && !newOwner.isEmpty()) {
@@ -132,14 +139,16 @@ void OpenComposerJob::processMail()
                  << attachParamAttr << attachParamValue << attachContDisp << attachCharset
                  << identity;
     }
-    QDBusInterface kmailObj(QStringLiteral("org.kde.kmail"), QStringLiteral("/KMail"), QStringLiteral("org.kde.kmail.kmail"));
+    QDBusInterface kmailObj(QStringLiteral("org.kde.kmail"), QStringLiteral(
+                                "/KMail"), QStringLiteral("org.kde.kmail.kmail"));
 
-    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, QStringLiteral("openComposer"), messages);
+    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, QStringLiteral(
+                                                                         "openComposer"), messages);
 
     if (!composerDbusPath.isValid()) {
         setError(KJob::UserDefinedError);
-        setErrorText(i18nc("errormessage: dbus is running but still no connection kmail", "Cannot connect to email service"));
+        setErrorText(i18nc("errormessage: dbus is running but still no connection kmail",
+                           "Cannot connect to email service"));
     }
     emitResult();
-
 }

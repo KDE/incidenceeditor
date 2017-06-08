@@ -58,7 +58,6 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     , mStateDelegate(new AttendeeComboBoxDelegate(this))
     , mRoleDelegate(new AttendeeComboBoxDelegate(this))
     , mResponseDelegate(new AttendeeComboBoxDelegate(this))
-
 {
     KCalCore::Attendee::List attendees;
     KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
@@ -77,7 +76,8 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::Chair));
 
-    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-request-response")),
+    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral(
+                                                    "meeting-participant-request-response")),
                                i18nc("@item:inlistbox", "Request Response"));
     mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")),
                                i18nc("@item:inlistbox", "Request No Response"));
@@ -100,7 +100,8 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(mDataModel);
 
-    connect(mUi->mGroupSubstitution, &QPushButton::clicked, this, &IncidenceAttendee::slotGroupSubstitutionPressed);
+    connect(mUi->mGroupSubstitution, &QPushButton::clicked, this,
+            &IncidenceAttendee::slotGroupSubstitutionPressed);
 
     mUi->mAttendeeTable->setModel(filterProxyModel);
 
@@ -123,21 +124,30 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mConflictResolver->setLatestDate(mDateTime->endDate());
     mConflictResolver->setLatestTime(mDateTime->endTime());
 
-    connect(mUi->mSelectButton, &QPushButton::clicked, this, &IncidenceAttendee::slotSelectAddresses);
-    connect(mUi->mSolveButton, &QPushButton::clicked, this, &IncidenceAttendee::slotSolveConflictPressed);
+    connect(mUi->mSelectButton, &QPushButton::clicked, this,
+            &IncidenceAttendee::slotSelectAddresses);
+    connect(mUi->mSolveButton, &QPushButton::clicked, this,
+            &IncidenceAttendee::slotSolveConflictPressed);
     /* Added as part of kolab/issue2297, which is currently under review
     connect(mUi->mOrganizerCombo, static_cast<void (KComboBox::*)(const QString &)>(&KComboBox::activated), this, &IncidenceAttendee::slotOrganizerChanged);
     */
-    connect(mUi->mOrganizerCombo, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &IncidenceAttendee::checkDirtyStatus);
+    connect(mUi->mOrganizerCombo,
+            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
+            &IncidenceAttendee::checkDirtyStatus);
 
-    connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::startTimeChanged, this, &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::endTimeChanged, this, &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
+            &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::endDateChanged, this,
+            &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::startTimeChanged, this,
+            &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::endTimeChanged, this,
+            &IncidenceAttendee::slotEventDurationChanged);
 
-    connect(mConflictResolver, &ConflictResolver::conflictsDetected, this, &IncidenceAttendee::slotUpdateConflictLabel);
+    connect(mConflictResolver, &ConflictResolver::conflictsDetected, this,
+            &IncidenceAttendee::slotUpdateConflictLabel);
 
-    connect(mConflictResolver->model(),  SIGNAL(rowsInserted(QModelIndex,int,int)),
+    connect(mConflictResolver->model(), SIGNAL(rowsInserted(QModelIndex,int,int)),
             SLOT(slotFreeBusyAdded(QModelIndex,int,int)));
     connect(mConflictResolver->model(), SIGNAL(layoutChanged()), SLOT(updateFBStatus()));
     connect(mConflictResolver->model(), SIGNAL(dataChanged(QModelIndex,QModelIndex)),
@@ -146,23 +156,36 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     slotUpdateConflictLabel(0);   //initialize label
 
     // confict resolver (should show also resources)
-    connect(mDataModel, &AttendeeTableModel::layoutChanged, this, &IncidenceAttendee::slotConflictResolverLayoutChanged);
-    connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotConflictResolverAttendeeRemoved);
-    connect(mDataModel, &AttendeeTableModel::rowsInserted, this, &IncidenceAttendee::slotConflictResolverAttendeeAdded);
-    connect(mDataModel, &AttendeeTableModel::dataChanged, this, &IncidenceAttendee::slotConflictResolverAttendeeChanged);
+    connect(mDataModel, &AttendeeTableModel::layoutChanged, this,
+            &IncidenceAttendee::slotConflictResolverLayoutChanged);
+    connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this,
+            &IncidenceAttendee::slotConflictResolverAttendeeRemoved);
+    connect(mDataModel, &AttendeeTableModel::rowsInserted, this,
+            &IncidenceAttendee::slotConflictResolverAttendeeAdded);
+    connect(mDataModel, &AttendeeTableModel::dataChanged, this,
+            &IncidenceAttendee::slotConflictResolverAttendeeChanged);
 
     //Group substitution
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeAdded);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
+            &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsAboutToBeRemoved, this,
+            &IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this,
+            &IncidenceAttendee::slotGroupSubstitutionAttendeeAdded);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this,
+            &IncidenceAttendee::slotGroupSubstitutionAttendeeChanged);
 
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this, &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsRemoved, this, &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this,
+            &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsRemoved, this,
+            &IncidenceAttendee::updateCount);
     // only update when FullName is changed
-    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::filterLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this,
+            &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
+            &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
+            &IncidenceAttendee::filterLayoutChanged);
 }
 
 IncidenceAttendee::~IncidenceAttendee()
@@ -181,8 +204,8 @@ void IncidenceAttendee::load(const KCalCore::Incidence::Ptr &incidence)
         const QString fullOrganizer = incidence->organizer()->fullName();
         const QString organizerEmail = incidence->organizer()->email();
         for (int i = 0; i < mUi->mOrganizerCombo->count(); ++i) {
-            KCalCore::Person::Ptr organizerCandidate =
-                KCalCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
+            KCalCore::Person::Ptr organizerCandidate
+                = KCalCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
             if (organizerCandidate->email() == organizerEmail) {
                 found = i;
                 mUi->mOrganizerCombo->setCurrentIndex(i);
@@ -230,12 +253,12 @@ void IncidenceAttendee::save(const KCalCore::Incidence::Ptr &incidence)
         }
         if (KEmailAddress::isValidAddress(attendee->email())) {
             if (KMessageBox::warningYesNo(
-                        nullptr,
-                        i18nc("@info",
-                              "%1 does not look like a valid email address. "
-                              "Are you sure you want to invite this participant?",
-                              attendee->email()),
-                        i18nc("@title:window", "Invalid Email Address")) != KMessageBox::Yes) {
+                    nullptr,
+                    i18nc("@info",
+                          "%1 does not look like a valid email address. "
+                          "Are you sure you want to invite this participant?",
+                          attendee->email()),
+                    i18nc("@title:window", "Invalid Email Address")) != KMessageBox::Yes) {
                 skip = true;
             }
         }
@@ -263,8 +286,10 @@ bool IncidenceAttendee::isDirty() const
         tmp.setOrganizer(mUi->mOrganizerCombo->currentText());
 
         if (mLoadedIncidence->organizer()->email() != tmp.organizer()->email()) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was " << mLoadedIncidence->organizer()->name()
-                                         << mLoadedIncidence->organizer()->email() << "; new is " << tmp.organizer()->name()
+            qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was "
+                                         << mLoadedIncidence->organizer()->name()
+                                         << mLoadedIncidence->organizer()->email() << "; new is "
+                                         << tmp.organizer()->name()
                                          << tmp.organizer()->email();
             return true;
         }
@@ -352,7 +377,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &
 
     // stop old job
     KJob *oldJob = mMightBeGroupJobs.key(attendee);
-    if (oldJob !=  nullptr) {
+    if (oldJob != nullptr) {
         disconnect(oldJob);
         oldJob->deleteLater();
         mMightBeGroupJobs.remove(oldJob);
@@ -363,7 +388,8 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &
     if (!fullname.isEmpty()) {
         Akonadi::ContactGroupSearchJob *job = new Akonadi::ContactGroupSearchJob();
         job->setQuery(Akonadi::ContactGroupSearchJob::Name, fullname);
-        connect(job, &Akonadi::ContactGroupSearchJob::result, this, &IncidenceAttendee::groupSearchResult);
+        connect(job, &Akonadi::ContactGroupSearchJob::result, this,
+                &IncidenceAttendee::groupSearchResult);
 
         mMightBeGroupJobs.insert(job, attendee);
     }
@@ -388,9 +414,9 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
 
     int row = dataModel()->attendees().indexOf(attendee);
     QModelIndex index = dataModel()->index(row, AttendeeTableModel::CuType);
-    dataModel()->setData(index,  KCalCore::Attendee::Group);
+    dataModel()->setData(index, KCalCore::Attendee::Group);
 
-    mGroupList.insert(attendee,  group);
+    mGroupList.insert(attendee, group);
     updateGroupExpand();
 }
 
@@ -403,8 +429,11 @@ void IncidenceAttendee::slotGroupSubstitutionPressed()
 {
     for (auto it = mGroupList.cbegin(), end = mGroupList.cend(); it != end; ++it) {
         const KCalCore::Attendee::Ptr attendee = it.key();
-        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(mGroupList.value(attendee), this);
-        connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
+        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(mGroupList.value(
+                                                                                           attendee),
+                                                                                       this);
+        connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this,
+                &IncidenceAttendee::expandResult);
         mExpandGroupJobs.insert(expandJob, attendee);
         expandJob->start();
     }
@@ -421,42 +450,46 @@ void IncidenceAttendee::expandResult(KJob *job)
     dataModel()->removeRow(row);
     const KContacts::Addressee::List groupMembers = expandJob->contacts();
     for (const KContacts::Addressee &member : groupMembers) {
-        KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(member.realName(), member.preferredEmail(),
-                                      attendee->RSVP(),
-                                      attendee->status(),
-                                      attendee->role(),
-                                      member.uid()));
+        KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
+                                          member.realName(), member.preferredEmail(),
+                                          attendee->RSVP(),
+                                          attendee->status(),
+                                          attendee->role(),
+                                          member.uid()));
         dataModel()->insertAttendee(row, newAt);
     }
 }
 
 void IncidenceAttendee::slotSelectAddresses()
 {
-    QSharedPointer<Akonadi::EmailAddressSelectionDialog> d(new Akonadi::EmailAddressSelectionDialog(mParentWidget));
+    QSharedPointer<Akonadi::EmailAddressSelectionDialog> d(new Akonadi::EmailAddressSelectionDialog(
+                                                               mParentWidget));
 
     QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(d);
     dialog.data()->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
     if (dialog.data()->exec() == QDialog::Accepted) {
-
         Akonadi::EmailAddressSelectionDialog *dialogPtr = dialog.data();
         if (dialogPtr) {
             const Akonadi::EmailAddressSelection::List list = dialogPtr->selectedAddresses();
             for (const Akonadi::EmailAddressSelection &selection : list) {
                 if (selection.item().hasPayload<KContacts::ContactGroup>()) {
-                    Akonadi::ContactGroupExpandJob *job =
-                        new Akonadi::ContactGroupExpandJob(
+                    Akonadi::ContactGroupExpandJob *job
+                        = new Akonadi::ContactGroupExpandJob(
                         selection.item().payload<KContacts::ContactGroup>(), this);
-                    connect(job, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
+                    connect(job, &Akonadi::ContactGroupExpandJob::result, this,
+                            &IncidenceAttendee::expandResult);
                     KCalCore::Attendee::PartStat partStat = KCalCore::Attendee::NeedsAction;
                     bool rsvp = true;
 
                     int pos = 0;
-                    KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(selection.name(), selection.email(),
-                                                  rsvp,
-                                                  partStat,
-                                                  KCalCore::Attendee::ReqParticipant
-                                                                        ));
+                    KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
+                                                      selection.name(),
+                                                      selection.email(),
+                                                      rsvp,
+                                                      partStat,
+                                                      KCalCore::Attendee::ReqParticipant
+                                                      ));
                     dataModel()->insertAttendee(pos, newAt);
 
                     mExpandGroupJobs.insert(job, newAt);
@@ -486,9 +519,9 @@ void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
 {
     const int duration = mDateTime->startTime().secsTo(mDateTime->endTime());
     QScopedPointer<SchedulingDialog> dialog(new SchedulingDialog(mDateTime->startDate(),
-                                            mDateTime->startTime(),
-                                            duration, mConflictResolver,
-                                            mParentWidget));
+                                                                 mDateTime->startTime(),
+                                                                 duration, mConflictResolver,
+                                                                 mParentWidget));
     dialog->slotUpdateIncidenceStartEnd(mDateTime->currentStartDateTime(),
                                         mDateTime->currentEndDateTime());
     if (dialog->exec() == QDialog::Accepted) {
@@ -500,12 +533,16 @@ void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
     }
 }
 
-void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &topLeft,
+                                                            const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column()
+        && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,  AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,
+                                                                 AttendeeTableModel::AttendeeRole).
+                                               value<KCalCore::Attendee::Ptr>();
             if (mConflictResolver->containsAttendee(attendee)) {
                 mConflictResolver->removeAttendee(attendee);
             }
@@ -517,23 +554,29 @@ void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &t
     checkDirtyStatus();
 }
 
-void IncidenceAttendee::slotConflictResolverAttendeeAdded(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotConflictResolverAttendeeAdded(const QModelIndex &index, int first,
+                                                          int last)
 {
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
-            mConflictResolver->insertAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>());
+            mConflictResolver->insertAttendee(dataModel()->data(email,
+                                                                AttendeeTableModel::AttendeeRole).value<
+                                                  KCalCore::Attendee::Ptr>());
         }
     }
     checkDirtyStatus();
 }
 
-void IncidenceAttendee::slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first,
+                                                            int last)
 {
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
-            mConflictResolver->removeAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>());
+            mConflictResolver->removeAttendee(dataModel()->data(email,
+                                                                AttendeeTableModel::AttendeeRole).value<
+                                                  KCalCore::Attendee::Ptr>());
         }
     }
     checkDirtyStatus();
@@ -560,15 +603,20 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
         QModelIndex index = model->index(i, 0, parent);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index,
+                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
+                                                  .value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
+                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
+                                            .value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
     }
 }
 
-void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft,
+                                            const QModelIndex &bottomRight)
 {
     // We are only interested in toplevel changes
     if (topLeft.parent().isValid()) {
@@ -577,8 +625,12 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index,
+                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
+                                                  .value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
+                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
+                                            .value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -590,15 +642,20 @@ void IncidenceAttendee::updateFBStatus()
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee = model->data(index,
+                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
+                                                  .value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
+                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
+                                            .value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
     }
 }
 
-void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee, const KCalCore::FreeBusy::Ptr &fb)
+void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee,
+                                       const KCalCore::FreeBusy::Ptr &fb)
 {
     KCalCore::Attendee::List attendees = mDataModel->attendees();
     KDateTime startTime = mDateTime->currentStartDateTime();
@@ -608,11 +665,12 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee, 
         QModelIndex attendeeIndex = dataModel()->index(row, AttendeeTableModel::Available);
         if (fb) {
             KCalCore::Period::List busyPeriods = fb->busyPeriods();
-            for (KCalCore::Period::List::Iterator it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
+            for (KCalCore::Period::List::Iterator it = busyPeriods.begin(); it != busyPeriods.end();
+                 ++it) {
                 // periods started before and laping into the incidence (s < startTime && e >= startTime)
                 // periods starting in the time of incidende (s >= startTime && s <= endTime)
-                if (((*it).start() < startTime && (*it).end() > startTime) ||
-                        ((*it).start() >= startTime && (*it).start() <= endTime)) {
+                if (((*it).start() < startTime && (*it).end() > startTime)
+                    || ((*it).start() >= startTime && (*it).start() <= endTime)) {
                     switch (attendee->status()) {
                     case KCalCore::Attendee::Accepted:
                         dataModel()->setData(attendeeIndex, AttendeeTableModel::Accepted);
@@ -632,7 +690,6 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee, 
 
 void IncidenceAttendee::slotUpdateConflictLabel(int count)
 {
-
     if (attendeeCount() > 0) {
         mUi->mSolveButton->setEnabled(true);
         if (count > 0) {
@@ -650,35 +707,45 @@ void IncidenceAttendee::slotUpdateConflictLabel(int count)
     }
 }
 
-void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft,
+                                                             const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column()
+        && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,  AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,
+                                                                 AttendeeTableModel::AttendeeRole).
+                                               value<KCalCore::Attendee::Ptr>();
             checkIfExpansionIsNeeded(attendee);
         }
     }
     updateGroupExpand();
 }
 
-void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first,
+                                                           int last)
 {
     Q_UNUSED(index);
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalCore::Attendee::Ptr attendee = dataModel()->data(email,  AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        KCalCore::Attendee::Ptr attendee
+            = dataModel()->data(email,
+                                AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
         checkIfExpansionIsNeeded(attendee);
     }
     updateGroupExpand();
 }
 
-void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first,
+                                                             int last)
 {
     Q_UNUSED(index);
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalCore::Attendee::Ptr attendee = dataModel()->data(email,  AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        KCalCore::Attendee::Ptr attendee
+            = dataModel()->data(email,
+                                AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
         KJob *job = mMightBeGroupJobs.key(attendee);
         if (job) {
             disconnect(job);
@@ -721,7 +788,9 @@ void IncidenceAttendee::slotGroupSubstitutionLayoutChanged()
         QModelIndex index = model->index(i, AttendeeTableModel::FullName);
         if (!model->data(index).toString().isEmpty()) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,  AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+            KCalCore::Attendee::Ptr attendee = dataModel()->data(email,
+                                                                 AttendeeTableModel::AttendeeRole).
+                                               value<KCalCore::Attendee::Ptr>();
             checkIfExpansionIsNeeded(attendee);
         }
     }
@@ -739,12 +808,12 @@ bool IncidenceAttendee::iAmOrganizer() const
     return true;
 }
 
-void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &a,  int pos/*=-1*/)
+void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &a, int pos /*=-1*/)
 {
-    const bool sameAsOrganizer = mUi->mOrganizerCombo &&
-                                 KEmailAddress::compareEmail(a.preferredEmail(),
-                                         mUi->mOrganizerCombo->currentText(),
-                                         false);
+    const bool sameAsOrganizer = mUi->mOrganizerCombo
+                                 && KEmailAddress::compareEmail(a.preferredEmail(),
+                                                                mUi->mOrganizerCombo->currentText(),
+                                                                false);
     KCalCore::Attendee::PartStat partStat = KCalCore::Attendee::NeedsAction;
     bool rsvp = true;
 
@@ -753,10 +822,10 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
         rsvp = false;
     }
     KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(a.realName(), a.preferredEmail(),
-                                  rsvp,
-                                  partStat,
-                                  KCalCore::Attendee::ReqParticipant,
-                                  a.uid()));
+                                                         rsvp,
+                                                         partStat,
+                                                         KCalCore::Attendee::ReqParticipant,
+                                                         a.uid()));
     if (pos < 0) {
         pos = dataModel()->rowCount() - 1;
     }
@@ -811,11 +880,11 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
     int answer = KMessageBox::No;
     if (currentOrganizerAttendee > -1) {
         answer = KMessageBox::questionYesNo(
-                     mParentWidget,
-                     i18nc("@option",
-                           "You are changing the organizer of this event. "
-                           "Since the organizer is also attending this event, would you "
-                           "like to change the corresponding attendee as well?"));
+            mParentWidget,
+            i18nc("@option",
+                  "You are changing the organizer of this event. "
+                  "Since the organizer is also attending this event, would you "
+                  "like to change the corresponding attendee as well?"));
     } else {
         answer = KMessageBox::Yes;
     }
@@ -831,7 +900,8 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
                                                   : KCalCore::Attendee::NeedsAction;
 
             KCalCore::Attendee::Ptr newAt(
-                new KCalCore::Attendee(name, email, rsvp, status, KCalCore::Attendee::ReqParticipant));
+                new KCalCore::Attendee(name, email, rsvp, status,
+                                       KCalCore::Attendee::ReqParticipant));
 
             mDataModel->insertAttendee(mDataModel->rowCount(), newAt);
         }
@@ -867,10 +937,10 @@ AttendeeLineEditDelegate *IncidenceAttendee::attendeeDelegate() const
 void IncidenceAttendee::filterLayoutChanged()
 {
     QHeaderView *headerView = mUi->mAttendeeTable->horizontalHeader();
-    headerView->setSectionResizeMode(AttendeeTableModel::Role,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Role, QHeaderView::ResizeToContents);
     headerView->setSectionResizeMode(AttendeeTableModel::FullName, QHeaderView::Stretch);
-    headerView->setSectionResizeMode(AttendeeTableModel::Status,  QHeaderView::ResizeToContents);
-    headerView->setSectionResizeMode(AttendeeTableModel::Response,  QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Status, QHeaderView::ResizeToContents);
+    headerView->setSectionResizeMode(AttendeeTableModel::Response, QHeaderView::ResizeToContents);
     headerView->setSectionHidden(AttendeeTableModel::CuType, true);
     headerView->setSectionHidden(AttendeeTableModel::Name, true);
     headerView->setSectionHidden(AttendeeTableModel::Email, true);
@@ -904,7 +974,7 @@ int IncidenceAttendee::attendeeCount() const
 void IncidenceAttendee::setActions(KCalCore::Incidence::IncidenceType actions)
 {
     mStateDelegate->clear();
-    if (actions ==  KCalCore::Incidence::TypeEvent) {
+    if (actions == KCalCore::Incidence::TypeEvent) {
         mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-attention")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
         mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-accepted")),

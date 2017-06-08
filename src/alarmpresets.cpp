@@ -31,12 +31,8 @@
 using namespace CalendarSupport;
 using namespace KCalCore;
 
-namespace IncidenceEditorNG
-{
-
-namespace AlarmPresets
-{
-
+namespace IncidenceEditorNG {
+namespace AlarmPresets {
 // Don't use a map, because order matters
 Q_GLOBAL_STATIC(QStringList, sBeforeStartPresetNames)
 Q_GLOBAL_STATIC(QStringList, sBeforeEndPresetNames)
@@ -55,9 +51,9 @@ int configuredReminderTimeInMinutes()
     const int unitsToUse = configuredUnits >= 0 && configuredUnits <= 2 ? configuredUnits : 0;
 
     const int configuredReminderTime = KCalPrefs::instance()->reminderTime();
-    const int reminderTimeToUse =  configuredReminderTime >= 0 ?
-                                   configuredReminderTime :
-                                   DEFAULT_REMINDER_OFFSET;
+    const int reminderTimeToUse = configuredReminderTime >= 0
+                                  ? configuredReminderTime
+                                  : DEFAULT_REMINDER_OFFSET;
 
     return reminderTimeToUse * units[unitsToUse];
 }
@@ -116,7 +112,8 @@ void initPresets(AlarmPresets::When when)
             } else {
                 sBeforeStartPresetNames->append(i18ncp("@item:inlistbox",
                                                        "%1 day before start",
-                                                       "%1 days before start", minutes / (24 * 60)));
+                                                       "%1 days before start",
+                                                       minutes / (24 * 60)));
             }
             sBeforeStartPresets->append(alarm);
         }
@@ -194,28 +191,28 @@ KCalCore::Alarm::Ptr preset(When when, const QString &name)
     checkInitNeeded(when);
 
     switch (when) {
-    case AlarmPresets::BeforeStart: {
+    case AlarmPresets::BeforeStart:
         // The name should exists and only once
         if (sBeforeStartPresetNames->count(name) != 1) {
             // print some debug info before crashing
             qCDebug(INCIDENCEEDITOR_LOG) << " name = " << name << "; when = " << when
-                                         << "; count for name = " << sBeforeStartPresetNames->count(name)
-                                         <<  "; global count = " << sBeforeStartPresetNames->count();
+                                         << "; count for name = " << sBeforeStartPresetNames->count(
+                name)
+                                         <<  "; global count = "
+                                         << sBeforeStartPresetNames->count();
             Q_ASSERT_X(false, "preset", "Number of presets should be one");
         }
 
         return KCalCore::Alarm::Ptr(
-                   new KCalCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
-    }
-    case AlarmPresets::BeforeEnd: {
+            new KCalCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
+    case AlarmPresets::BeforeEnd:
         Q_ASSERT(sBeforeEndPresetNames->count(name) == 1);     // The name should exists and only once
 
         return KCalCore::Alarm::Ptr(
-                   new KCalCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
-    }
+            new KCalCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
     default:
         return KCalCore::Alarm::Ptr();
-    };
+    }
 }
 
 KCalCore::Alarm::Ptr defaultAlarm(When when)
@@ -229,7 +226,7 @@ KCalCore::Alarm::Ptr defaultAlarm(When when)
         return Alarm::Ptr(new Alarm(*sBeforeEndPresets->at(sDefaultPresetIndex)));
     default:
         return Alarm::Ptr();
-    };
+    }
 }
 
 int presetIndex(When when, const KCalCore::Alarm::Ptr &alarm)
@@ -253,7 +250,5 @@ int defaultPresetIndex()
     checkInitNeeded(AlarmPresets::BeforeStart);
     return sDefaultPresetIndex;
 }
-
 } // AlarmPresets
-
 } // IncidenceEditorNG

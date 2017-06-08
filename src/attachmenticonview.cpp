@@ -54,9 +54,9 @@ AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment::Ptr &att, QLi
     } else {
         // for the enteprise, inline attachments are the default
 #ifdef KDEPIM_ENTERPRISE_BUILD
-        mAttachment =
-            KCalCore::Attachment::Ptr(
-                new KCalCore::Attachment(QByteArray()));    // use the non-uri constructor
+        mAttachment
+            = KCalCore::Attachment::Ptr(
+            new KCalCore::Attachment(QByteArray()));        // use the non-uri constructor
         // as we want inline by default
 #else
         mAttachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(QString()));
@@ -135,16 +135,15 @@ QPixmap AttachmentIconItem::icon() const
                 mAttachment->uri(), mAttachment->isBinary());
 }
 
-QPixmap AttachmentIconItem::icon(const QMimeType &mimeType,
-                                 const QString &uri,
-                                 bool binary)
+QPixmap AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
 {
     QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
         overlays << QStringLiteral("emblem-link");
     }
-    return QIcon(new KIconEngine(iconStr, KIconLoader::global(), overlays)).pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
+    return QIcon(new KIconEngine(iconStr, KIconLoader::global(), overlays)).pixmap(
+        KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
 }
 
 void AttachmentIconItem::readAttachment()
@@ -153,7 +152,8 @@ void AttachmentIconItem::readAttachment()
     setFlags(flags() | Qt::ItemIsEditable);
 
     QMimeDatabase db;
-    if (mAttachment->mimeType().isEmpty() || !(db.mimeTypeForName(mAttachment->mimeType()).isDefault())) {
+    if (mAttachment->mimeType().isEmpty()
+        || !(db.mimeTypeForName(mAttachment->mimeType()).isDefault())) {
         QMimeType mimeType;
         if (mAttachment->isUri()) {
             mimeType = db.mimeTypeForUrl(QUrl(mAttachment->uri()));
@@ -196,7 +196,9 @@ QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &
     QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
 
     if (!patterns.empty()) {
-        file = new QTemporaryFile(QDir::tempPath() + QLatin1String("/attachementview_XXXXX") + patterns.first().remove(QLatin1Char('*')));
+        file = new QTemporaryFile(QDir::tempPath() + QLatin1String(
+                                      "/attachementview_XXXXX")
+                                  + patterns.first().remove(QLatin1Char('*')));
     } else {
         file = new QTemporaryFile();
     }
@@ -256,7 +258,8 @@ void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 #ifndef QT_NO_DRAGANDDROP
     QPixmap pixmap;
     if (selectedItems().size() > 1) {
-        pixmap = KIconLoader::global()->loadIcon(QStringLiteral("mail-attachment"), KIconLoader::Desktop);
+        pixmap = KIconLoader::global()->loadIcon(QStringLiteral(
+                                                     "mail-attachment"), KIconLoader::Desktop);
     }
     if (pixmap.isNull()) {
         pixmap = static_cast<AttachmentIconItem *>(currentItem())->icon();
@@ -275,11 +278,10 @@ void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 
 void AttachmentIconView::keyPressEvent(QKeyEvent *event)
 {
-    if ((event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter) &&
-            currentItem() && state() != EditingState) {
+    if ((event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter)
+        && currentItem() && state() != EditingState) {
         Q_EMIT itemDoubleClicked(currentItem());   // ugly, but itemActivated() also includes single click
         return;
     }
     QListWidget::keyPressEvent(event);
 }
-

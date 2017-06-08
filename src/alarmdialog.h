@@ -25,15 +25,12 @@
 
 #include <QDialog>
 
-namespace Ui
-{
+namespace Ui {
 class AlarmDialog;
 }
 
-namespace IncidenceEditorNG
-{
-
-class  AlarmDialog : public QDialog
+namespace IncidenceEditorNG {
+class AlarmDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -55,7 +52,8 @@ public:
       Constructs a new alarm dialog.
       @p incidenceType will influence i18n strings, that will be different for to-dos.
      */
-    explicit AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidget *parent = nullptr);
+    explicit AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType,
+                         QWidget *parent = nullptr);
     ~AlarmDialog();
     void load(const KCalCore::Alarm::Ptr &alarm);
     void save(const KCalCore::Alarm::Ptr &alarm) const;
@@ -74,7 +72,6 @@ private:
     bool mAllowBeginReminders;
     bool mAllowEndReminders;
 };
-
 }
 
 #endif // INCIDENCEEDITOR_ALARMDIALOG_H

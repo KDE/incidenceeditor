@@ -28,9 +28,7 @@
 #include <QIcon>
 #include <QString>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 /**
  * class to show a Icon and Text for an Attendee
  * you have to set the Items via addItem to have a list to choose from.
@@ -42,11 +40,15 @@ class AttendeeComboBoxDelegate : public QStyledItemDelegate
 public:
     explicit AttendeeComboBoxDelegate(QObject *parent = nullptr);
 
-    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
+                          const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
-    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
-    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    void setModelData(QWidget *editor, QAbstractItemModel *model,
+                      const QModelIndex &index) const override;
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
+                              const QModelIndex &index) const override;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override;
 
     bool eventFilter(QObject *editor, QEvent *event) override;
 
@@ -61,7 +63,8 @@ public:
     void setStandardIndex(int);
 
 public Q_SLOTS:
-    bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index) override;
+    bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option,
+                   const QModelIndex &index) override;
 
 private Q_SLOTS:
     void doCloseEditor(QWidget *editor);
@@ -76,7 +79,6 @@ private:
     /**fallback index */
     int mStandardIndex;
 };
-
 }
 
 #endif

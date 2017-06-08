@@ -25,14 +25,11 @@
 
 #include <KLocalizedString>
 #include <QDate>
-namespace Ui
-{
+namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDateTime;
 
 /// Keep this in sync with the values in mUi->mRecurrenceTypeCombo
@@ -130,7 +127,6 @@ private:
     int mMonthlyInitialType;
     int mYearlyInitialType;
 };
-
 }
 
 #endif

@@ -25,9 +25,7 @@
 
 #include <KCalCore/Incidence>
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class IncidenceDefaultsPrivate;
 
 class INCIDENCEEDITOR_EXPORT IncidenceDefaults
@@ -117,7 +115,6 @@ private:
     IncidenceDefaultsPrivate *const d_ptr;
     Q_DECLARE_PRIVATE(IncidenceDefaults)
 };
-
 }
 
 #endif

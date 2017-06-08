@@ -25,21 +25,19 @@
 
 class CategorySelectWidgetBase;
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class CategoryConfig;
 }
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class AutoCheckTreeWidget;
 
 class CategorySelectWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CategorySelectWidget(CalendarSupport::CategoryConfig *config, QWidget *parent = nullptr);
+    explicit CategorySelectWidget(CalendarSupport::CategoryConfig *config,
+                                  QWidget *parent = nullptr);
     ~CategorySelectWidget();
 
     void setCategories(const QStringList &categoryList = QStringList());
@@ -97,7 +95,6 @@ private:
     class CategorySelectDialogPrivate;
     CategorySelectDialogPrivate *d;
 };
-
 }
 
 #endif

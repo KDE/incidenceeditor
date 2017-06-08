@@ -28,9 +28,7 @@
 
 class KLineEdit;
 
-namespace IncidenceEditorNG
-{
-
+namespace IncidenceEditorNG {
 class FreeBusyUrlWidget;
 
 class FreeBusyUrlDialog : public QDialog
@@ -60,7 +58,6 @@ private:
     KLineEdit *mUrlEdit;
     AttendeeData::Ptr mAttendee;
 };
-
 }
 
 #endif
