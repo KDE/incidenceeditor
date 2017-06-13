@@ -44,6 +44,7 @@ target_link_libraries(
 
 add_executable(testindividualmaildialog testindividualmaildialog.cpp ../src/individualmaildialog.cpp)
 ecm_mark_nongui_executable(testindividualmaildialog)
+add_test(testindividualmaildialog testindividualmaildialog)
 ecm_mark_as_test(testindividualmaildialog)
 target_link_libraries(testindividualmaildialog
   KF5::CalendarCore
