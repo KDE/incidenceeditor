@@ -280,7 +280,9 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments,
 
                 if (d_ptr->mCleanupTemporaryFiles) {
                     QFile file(*it);
-                    file.remove();
+                    if (!file.remove()) {
+                        qCCritical(INCIDENCEEDITOR_LOG) << "Uname to remove file " << *it;
+                    }
                 }
             } else {
                 attachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(*it, mimeType));

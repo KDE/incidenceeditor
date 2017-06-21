@@ -51,6 +51,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
 
     // Read all system time zones
     const QList<QByteArray> lstTimeZoneIds = QTimeZone::availableTimeZoneIds();
+    mZones.reserve(lstTimeZoneIds.count());
     for (const QByteArray &id : lstTimeZoneIds) {
         mZones.push_back(QString::fromLatin1(id));
     }

@@ -84,9 +84,8 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
     handleEndAfterOccurrencesChange(1);
     toggleRecurrenceWidgets(RecurrenceTypeNone);
     fillCombos();
-    QList<QLineEdit *> lineEdits;
-    lineEdits << mUi->mExceptionDateEdit->lineEdit() << mUi->mRecurrenceEndDate->lineEdit();
-    foreach (QLineEdit *lineEdit, lineEdits) {
+    const QList<QLineEdit *> lineEdits { mUi->mExceptionDateEdit->lineEdit(), mUi->mRecurrenceEndDate->lineEdit()};
+    for (QLineEdit *lineEdit : lineEdits) {
         if (lineEdit) {
             lineEdit->setClearButtonEnabled(false);
         }
@@ -152,9 +151,8 @@ KLocalizedString IncidenceRecurrence::subsOrdinal(const KLocalizedString &text, 
                       "translate this as \"1\" if just the number itself "
                       "should be substituted (1, 22, 123).",
                       "0");
-    if (q == QLatin1String("0")) {
-        QString ordinal;
-        ordinal = numberToString(number);
+    if (q == QLatin1Char('0')) {
+        const QString ordinal = numberToString(number);
         return text.subs(ordinal);
     } else {
         return text.subs(number);
@@ -630,8 +628,7 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
         freqKey = QLatin1Char('d');
     }
 
-    QString labelEvery;
-    labelEvery = ki18ncp("repeat >every< N years/months/...; "
+    const QString labelEvery = ki18ncp("repeat >every< N years/months/...; "
                          "dynamic context 'type': 'd' days, 'w' weeks, "
                          "'m' months, 'y' years",
                          "every", "every").

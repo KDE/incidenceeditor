@@ -196,7 +196,7 @@ ResourceItem::Ptr ResourceManagement::selectedItem() const
 
 void ResourceManagement::slotStartSearch(const QString &text)
 {
-    ((ResourceModel *)mUi->treeResults->model())->startSearch(text);
+    (static_cast<ResourceModel *>(mUi->treeResults->model()))->startSearch(text);
 }
 
 void ResourceManagement::slotShowDetails(const QModelIndex &current)

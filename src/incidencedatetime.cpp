@@ -82,10 +82,10 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
             &IncidenceDateTime::toggleTimeZoneVisibility);
     mUi->mTimeZoneLabel->setContextMenuPolicy(Qt::NoContextMenu);
 
-    QList<QLineEdit *> lineEdits;
-    lineEdits << mUi->mStartDateEdit->lineEdit() << mUi->mEndDateEdit->lineEdit()
-              << mUi->mStartTimeEdit->lineEdit() << mUi->mEndTimeEdit->lineEdit();
-    foreach (QLineEdit *lineEdit, lineEdits) {
+    const QList<QLineEdit *> lineEdits {
+        mUi->mStartDateEdit->lineEdit(), mUi->mEndDateEdit->lineEdit()
+                ,mUi->mStartTimeEdit->lineEdit(), mUi->mEndTimeEdit->lineEdit()};
+    for (QLineEdit *lineEdit : lineEdits) {
         if (lineEdit) {
             lineEdit->setClearButtonEnabled(false);
         }

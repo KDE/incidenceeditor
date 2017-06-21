@@ -90,8 +90,8 @@ void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
 void IncidenceAlarm::save(const KCalCore::Incidence::Ptr &incidence)
 {
     incidence->clearAlarms();
-    KCalCore::Alarm::List::ConstIterator it;
-    for (it = mAlarms.constBegin(); it != mAlarms.constEnd(); ++it) {
+    const KCalCore::Alarm::List::ConstIterator end(mAlarms.constEnd());
+    for (KCalCore::Alarm::List::ConstIterator it = mAlarms.constBegin(); it != end; ++it) {
         KCalCore::Alarm::Ptr al(new KCalCore::Alarm(*(*it)));
         al->setParent(incidence.data());
         // We need to make sure that both lists are the same in the end for isDirty.
