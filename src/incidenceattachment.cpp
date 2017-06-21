@@ -393,8 +393,9 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         KContacts::VCardDrag::fromMimeData(mimeData, addressees);
         urls.reserve(addressees.count());
         labels.reserve(addressees.count());
+        const KContacts::Addressee::List::ConstIterator end(addressees.constEnd());
         for (KContacts::Addressee::List::ConstIterator it = addressees.constBegin();
-             it != addressees.constEnd(); ++it) {
+             it != end; ++it) {
             urls.append(QUrl(QStringLiteral("uid:") + (*it).uid()));
             // there is some weirdness about realName(), hence fromUtf8
             labels.append(QString::fromUtf8((*it).realName().toLatin1()));
@@ -408,14 +409,16 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
         labels
             = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), QString::SkipEmptyParts);
-        for (QStringList::Iterator it = labels.begin(); it != labels.end(); ++it) {
+        const QStringList::Iterator end(labels.end());
+        for (QStringList::Iterator it = labels.begin(); it != end; ++it) {
             *it = QUrl::fromPercentEncoding((*it).toLatin1());
         }
     } else if (mimeData->hasText()) {
-        QString text = mimeData->text();
+        const QString text = mimeData->text();
         QStringList lst = text.split(QLatin1Char('\n'), QString::SkipEmptyParts);
         urls.reserve(lst.count());
-        for (QStringList::ConstIterator it = lst.constBegin(); it != lst.constEnd(); ++it) {
+        QStringList::ConstIterator end(lst.constEnd());
+        for (QStringList::ConstIterator it = lst.constBegin(); it != end; ++it) {
             urls.append(QUrl(*it));
         }
         probablyWeHaveUris = true;
@@ -428,7 +431,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
                              i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
         bool weCanCopy = true;
-        for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != urls.constEnd(); ++it) {
+        QList<QUrl>::ConstIterator end(urls.constEnd());
+        for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
             if (!(weCanCopy = KProtocolManager::supportsReading(*it))) {
                 break; // either we can copy them all, or no copying at all
             }
@@ -464,15 +468,17 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     QAction *ret = menu.exec(QCursor::pos());
     if (linkAction == ret) {
         QStringList::ConstIterator jt = labels.constBegin();
+        const QList<QUrl>::ConstIterator jtEnd = urls.constEnd();
         for (QList<QUrl>::ConstIterator it = urls.constBegin();
-             it != urls.constEnd(); ++it) {
+             it != jtEnd; ++it) {
             addUriAttachment((*it).url(), QString(), (jt == labels.constEnd()
                                                       ? QString() : *(jt++)), true);
         }
     } else if (cancelAction != ret) {
         if (probablyWeHaveUris) {
+            QList<QUrl>::ConstIterator end = urls.constEnd();
             for (QList<QUrl>::ConstIterator it = urls.constBegin();
-                 it != urls.constEnd(); ++it) {
+                 it != end; ++it) {
                 KIO::Job *job = KIO::storedGet(*it);
                 //TODO verify if slot exist !
                 connect(job, &KIO::Job::result, this, &IncidenceAttachment::downloadComplete);
