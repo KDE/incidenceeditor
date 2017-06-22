@@ -151,7 +151,7 @@ KLocalizedString IncidenceRecurrence::subsOrdinal(const KLocalizedString &text, 
                       "translate this as \"1\" if just the number itself "
                       "should be substituted (1, 22, 123).",
                       "0");
-    if (q == QLatin1Char('0')) {
+    if (q == QLatin1String("0")) {
         const QString ordinal = numberToString(number);
         return text.subs(ordinal);
     } else {
