@@ -7,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>661</width>
-    <height>571</height>
+    <height>660</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="mainVerticalLayout">
-  <item>
-   <widget class="CalendarSupport::MessageWidget" name="mMessageWidget" native="true">
-    <property name="visible">
-     <bool>false</bool>
-    </property>
-   </widget>
-  </item>
+   <item>
+    <widget class="CalendarSupport::MessageWidget" name="mMessageWidget" native="true">
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
    <item>
     <layout class="QGridLayout" name="gridLayout">
      <property name="leftMargin">
@@ -44,10 +44,16 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string comment="@label:listbox The calendar to which the todo or event must be added">Calendar:</string>
+        <string comment="@label:listbox The calendar to which the todo or event must be added">Calen&amp;dar:</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
        </property>
       </widget>
      </item>
@@ -136,7 +142,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string comment="@label">T&amp;itle:</string>
+        <string comment="@label">&amp;Title:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -405,7 +411,7 @@
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string comment="@label Start date/time of the event or todo">&amp;Start:</string>
+        <string comment="@label Start date/time of the event or todo">S&amp;tart:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1690,10 +1696,14 @@
    <header>Libkdepim/KCheckComboBox</header>
   </customwidget>
   <customwidget>
-   <class>KSeparator</class>
-   <extends>QFrame</extends>
-   <header>kseparator.h</header>
-   <container>1</container>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTimeComboBox</class>
+   <extends>QComboBox</extends>
+   <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KDateComboBox</class>
@@ -1701,19 +1711,15 @@
    <header>kdatecombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
+   <class>KSeparator</class>
+   <extends>QFrame</extends>
+   <header>kseparator.h</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>KComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KTimeComboBox</class>
-   <extends>QComboBox</extends>
-   <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KPIMTextEdit::RichTextComposerWidget</class>

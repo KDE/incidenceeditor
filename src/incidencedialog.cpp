@@ -141,7 +141,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     layout->setMargin(0);
     layout->addWidget(mCalSelector);
     mCalSelector->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
-
+    mUi->label->setBuddy(mCalSelector);
     q->connect(mCalSelector, &Akonadi::CollectionComboBox::currentChanged, q,
                &IncidenceDialog::handleSelectedCollectionChange);
 
