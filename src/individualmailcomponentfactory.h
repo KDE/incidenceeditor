@@ -44,7 +44,7 @@ public:
     void start() override;
 
 private:
-    void startQueueJob(const QStringList &to, const QStringList &cc);
+    void startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc);
     void startComposerJob(const QStringList &to, const QStringList &cc);
     void handleJobFinished(KJob *job);
     KCalCore::Attendee::List mUpdate;
