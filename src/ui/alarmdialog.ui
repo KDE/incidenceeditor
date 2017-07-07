@@ -318,9 +318,6 @@
          <property name="whatsThis">
           <string>Use the adjacent file browser to help you find the file you want to use when playing a sound when the reminder triggers.</string>
          </property>
-         <property name="filter">
-          <string>audio/x-wav audio/x-mp3 application/ogg</string>
-         </property>
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
@@ -488,16 +485,6 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <header>LibkdepimAkonadi/AddresseeLineEdit</header>
   </customwidget>
   <customwidget>
-   <class>KTextEdit</class>
-   <extends>QTextEdit</extends>
-   <header>ktextedit.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
    <class>KLineEdit</class>
    <extends>QLineEdit</extends>
    <header>klineedit.h</header>
@@ -506,6 +493,17 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <class>KUrlRequester</class>
    <extends>QWidget</extends>
    <header>kurlrequester.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>ktextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
   </customwidget>
  </customwidgets>
  <includes>

@@ -61,6 +61,7 @@ AlarmDialog::AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidg
     }
 
     mUi->mOffsetUnit->setCurrentIndex(defaultReminderUnits);
+    mUi->mSoundFile->setMimeTypeFilters({QStringLiteral("audio/x-wav"), QStringLiteral("audio/x-mp3"), QStringLiteral("application/ogg")});
 
     if (IncidenceEditorNG::EditorConfig::instance()->defaultAudioFileReminders()) {
         mUi->mSoundFile->setUrl(IncidenceEditorNG::EditorConfig::instance()->audioFilePath());
