@@ -42,13 +42,12 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     ,
 #ifdef KDEPIM_ENTERPRISE_BUILD
     mAttachment(new KCalCore::Attachment('\0'))
-    ,                                                  //use the non-uri constructor
+    //use the non-uri constructor
     // as we want inline by default
 #else
     mAttachment(new KCalCore::Attachment(QString()))
-    ,
 #endif
-    mItem(item)
+    , mItem(item)
     , mUi(new Ui::AttachmentEditDialog)
 {
     setWindowTitle(i18n("Edit Attachment"));

@@ -93,11 +93,9 @@ void CategorySelectWidget::setCategories(const QStringList &categoryList)
 void CategorySelectWidget::setSelected(const QStringList &selList)
 {
     clear();
-    QStringList::ConstIterator it;
-
     bool remAutoCheckChildren = mWidgets->mCategories->autoCheckChildren();
     mWidgets->mCategories->setAutoCheckChildren(false);
-    for (it = selList.begin(); it != selList.end(); ++it) {
+    for (QStringList::ConstIterator it = selList.begin(), end = selList.end(); it != end; ++it) {
         QStringList path = CategoryHierarchyReader::path(*it);
         QTreeWidgetItem *item = mWidgets->mCategories->itemByPath(path);
         if (item) {

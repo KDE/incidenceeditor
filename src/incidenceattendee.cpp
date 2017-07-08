@@ -363,7 +363,7 @@ void IncidenceAttendee::fillOrganizerCombo()
     mUi->mOrganizerCombo->clear();
     const QStringList lst = IncidenceEditorNG::EditorConfig::instance()->fullEmails();
     QStringList uniqueList;
-    for (QStringList::ConstIterator it = lst.begin(); it != lst.end(); ++it) {
+    for (QStringList::ConstIterator it = lst.begin(), end = lst.end(); it != end; ++it) {
         if (!uniqueList.contains(*it)) {
             uniqueList << *it;
         }

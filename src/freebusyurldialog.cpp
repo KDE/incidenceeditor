@@ -99,16 +99,12 @@ static QString freeBusyUrlStore()
 
 void FreeBusyUrlWidget::loadConfig()
 {
-    qCDebug(INCIDENCEEDITOR_LOG);
-
     KConfig config(freeBusyUrlStore());
     mUrlEdit->setText(config.group(mAttendee->email()).readEntry("url"));
 }
 
 void FreeBusyUrlWidget::saveConfig()
 {
-    qCDebug(INCIDENCEEDITOR_LOG);
-
     const QString url = mUrlEdit->text();
     KConfig config(freeBusyUrlStore());
     config.group(mAttendee->email()).writeEntry("url", url);

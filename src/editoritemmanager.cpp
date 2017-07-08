@@ -351,8 +351,6 @@ void EditorItemManager::save()
 
     if (d->mItem.isValid()) {   // A valid item. Means we're modifying.
         Q_ASSERT(d->mItem.parentCollection().isValid());
-        KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(d->mItem);
-
         KCalCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection()
             || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
