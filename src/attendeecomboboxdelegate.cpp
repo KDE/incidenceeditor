@@ -126,6 +126,7 @@ void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     myOption.rect = option.rect;
     myOption.state = option.state;
     myOption.icon = mEntries[value].first;
+    myOption.iconSize = myOption.icon.actualSize(option.rect.size());
 
     QApplication::style()->drawControl(QStyle::CE_PushButton, &myOption, painter);
 }
