@@ -71,10 +71,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     d->mUi->mTaskSeparator->hide();
 
     connect(d->mUi->mCompletionSlider, SIGNAL(valueChanged(int)), SLOT(sliderValueChanged(int)));
-    connect(d->mUi->mPriorityCombo,
-            static_cast<void (KComboBox::*)(
-                            int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceCompletionPriority::checkDirtyStatus);
+    connect(d->mUi->mPriorityCombo, QOverload< int>::of(&KComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
 }
 
 IncidenceCompletionPriority::~IncidenceCompletionPriority()

@@ -93,14 +93,8 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
 
     connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this,
             &AttachmentEditDialog::inlineChanged);
-    connect(mUi->mURLRequester,
-            static_cast<void (KUrlRequester::*)(const QUrl &)>(&KUrlRequester::urlSelected),
-            this,
-            static_cast<void (AttachmentEditDialog::*)(const QUrl &)>(&AttachmentEditDialog::
-                                                                      urlChanged));
-    connect(mUi->mURLRequester, &KUrlRequester::textChanged,
-            this,
-            static_cast<void (AttachmentEditDialog::*)(const QString &)>(&AttachmentEditDialog::
+    connect(mUi->mURLRequester, QOverload<const QUrl &>::of(&KUrlRequester::urlSelected), this, static_cast<void (AttachmentEditDialog::*)(const QUrl &)>(&AttachmentEditDialog:: urlChanged));
+    connect(mUi->mURLRequester, &KUrlRequester::textChanged, this, static_cast<void (AttachmentEditDialog::*)(const QString &)>(&AttachmentEditDialog::
                                                                          urlChanged));
 }
 

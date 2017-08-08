@@ -176,9 +176,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
     mScaleCombo->setCurrentIndex(0);   // start with "hour"
-    connect(mScaleCombo, static_cast<void (KComboBox::*)(
-                                         int)>(&KComboBox::activated), this,
-            &VisualFreeBusyWidget::slotScaleChanged);
+    connect(mScaleCombo, QOverload< int>::of(&KComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
 
     QPushButton *button = new QPushButton(i18nc("@action:button", "Center on Start"), this);

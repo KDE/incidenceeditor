@@ -105,35 +105,20 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
             &IncidenceRecurrence::handleExceptionDateChange);
     connect(mUi->mExceptionList, &QListWidget::itemSelectionChanged, this,
             &IncidenceRecurrence::updateRemoveExceptionButton);
-    connect(mUi->mRecurrenceTypeCombo,
-            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceRecurrence::handleRecurrenceTypeChange);
-    connect(mUi->mEndDurationEdit, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
-            this, &IncidenceRecurrence::handleEndAfterOccurrencesChange);
-    connect(mUi->mFrequencyEdit, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
-            this, &IncidenceRecurrence::handleFrequencyChange);
+    connect(mUi->mRecurrenceTypeCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceRecurrence::handleRecurrenceTypeChange);
+    connect(mUi->mEndDurationEdit, QOverload<int>::of(&QSpinBox::valueChanged), this, &IncidenceRecurrence::handleEndAfterOccurrencesChange);
+    connect(mUi->mFrequencyEdit, QOverload<int>::of(&QSpinBox::valueChanged), this, &IncidenceRecurrence::handleFrequencyChange);
 
     // Check the dirty status when the user changes values.
-    connect(mUi->mRecurrenceTypeCombo,
-            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mFrequencyEdit, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
-            this, &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mFrequencyEdit, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
-            this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mRecurrenceTypeCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mFrequencyEdit, QOverload<int>::of(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mFrequencyEdit, QOverload<int>::of(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mWeekDayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this,
             &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mMonthlyCombo,
-            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mYearlyCombo,
-            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mRecurrenceEndCombo,
-            static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this,
-            &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mEndDurationEdit, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
-            this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mMonthlyCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mYearlyCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mRecurrenceEndCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
+    connect(mUi->mEndDurationEdit, QOverload<int>::of(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mRecurrenceEndDate, &KDateComboBox::dateChanged, this,
             &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mThisAndFutureCheck, &QCheckBox::stateChanged, this,
