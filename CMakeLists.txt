@@ -42,7 +42,7 @@ set(KDIAGRAM_LIB_VERSION "1.4.0")
 find_package(KGantt ${KDIAGRAM_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
@@ -104,6 +104,8 @@ install( FILES incidenceeditor.categories incidenceeditor.renamecategories DESTI
 
 add_subdirectory(src)
 if (BUILD_TESTING)
+   find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
+
    add_subdirectory(autotests)
    add_subdirectory(tests)
 endif()
