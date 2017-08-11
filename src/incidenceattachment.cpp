@@ -243,15 +243,10 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     KCalCore::Attachment::Ptr att = attitem->attachment();
 
     // get the saveas file name
-    QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
+    const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
                                                       att->label());
 
-    if (saveAsFile.isEmpty()
-        || (QFileInfo::exists(saveAsFile)
-            && (KMessageBox::warningYesNo(
-                    nullptr,
-                    i18nc("@info", "%1 already exists. Do you want to overwrite it?",
-                          saveAsFile)) == KMessageBox::No))) {
+    if (saveAsFile.isEmpty()) {
         return;
     }
 
