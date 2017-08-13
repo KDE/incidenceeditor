@@ -286,7 +286,10 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     if (att->isUri()) {
         Q_EMIT openURL(QUrl(att->uri()));
     } else {
-        KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), nullptr, true);
+        KRun::RunFlags flags;
+        flags |= KRun::DeleteTemporaryFiles;
+        flags |= KRun::RunExecutables;
+        KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), nullptr, flags);
     }
 }
 
