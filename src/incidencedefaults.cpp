@@ -263,7 +263,7 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments,
 
             KCalCore::Attachment::Ptr attachment;
             if (inlineAttachment) {
-                auto job = KIO::storedGet(QUrl(*it));
+                auto job = KIO::storedGet(QUrl::fromUserInput(*it));
                 if (job->exec()) {
                     const QByteArray data = job->data();
                     attachment
