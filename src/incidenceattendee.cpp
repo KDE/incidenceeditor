@@ -420,7 +420,7 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
 
 void IncidenceAttendee::updateGroupExpand()
 {
-    mUi->mGroupSubstitution->setEnabled(mGroupList.count() > 0);
+    mUi->mGroupSubstitution->setEnabled(!mGroupList.isEmpty());
 }
 
 void IncidenceAttendee::slotGroupSubstitutionPressed()

@@ -129,7 +129,7 @@ void CategoryEditDialog::slotTextChanged(const QString &text)
 
 void CategoryEditDialog::slotSelectionChanged()
 {
-    bool enable = (mWidgets->mCategories->selectedItems().count() > 0);
+    bool enable = (!mWidgets->mCategories->selectedItems().isEmpty());
     mWidgets->mButtonAddSubcategory->setEnabled(enable);
     mWidgets->mButtonRemove->setEnabled(enable);
 }

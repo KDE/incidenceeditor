@@ -260,7 +260,7 @@ void IncidenceAlarm::updateAlarmList()
 
 void IncidenceAlarm::updateButtons()
 {
-    if (mUi->mAlarmList->count() > 0 && mUi->mAlarmList->selectedItems().count() > 0) {
+    if (mUi->mAlarmList->count() > 0 && !mUi->mAlarmList->selectedItems().isEmpty()) {
         mUi->mAlarmConfigureButton->setEnabled(true);
         mUi->mAlarmRemoveButton->setEnabled(true);
         mUi->mAlarmToggleButton->setEnabled(true);

@@ -639,7 +639,7 @@ void IncidenceRecurrence::removeExceptions()
 
 void IncidenceRecurrence::updateRemoveExceptionButton()
 {
-    mUi->mExceptionRemoveButton->setEnabled(mUi->mExceptionList->selectedItems().count() > 0);
+    mUi->mExceptionRemoveButton->setEnabled(!mUi->mExceptionList->selectedItems().isEmpty());
 }
 
 void IncidenceRecurrence::updateWeekDays(const QDate &newStartDate)
@@ -934,7 +934,7 @@ void IncidenceRecurrence::toggleRecurrenceWidgets(int recurrenceType)
     mUi->mExceptionAddButton->setVisible(enable);
     mUi->mExceptionAddButton->setEnabled(mUi->mExceptionDateEdit->date() >= currentDate());
     mUi->mExceptionRemoveButton->setVisible(enable);
-    mUi->mExceptionRemoveButton->setEnabled(mUi->mExceptionList->selectedItems().count() > 0);
+    mUi->mExceptionRemoveButton->setEnabled(!mUi->mExceptionList->selectedItems().isEmpty());
     mUi->mExceptionList->setVisible(enable);
     mUi->mThisAndFutureCheck->setVisible(recurrenceType == RecurrenceTypeException);
 }
