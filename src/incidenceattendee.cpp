@@ -465,7 +465,7 @@ void IncidenceAttendee::slotSelectAddresses()
 
     QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(d);
     dialog.data()->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
-
+    dialog.data()->setWindowTitle(i18n("Select Attendees"));
     if (dialog.data()->exec() == QDialog::Accepted) {
         Akonadi::EmailAddressSelectionDialog *dialogPtr = dialog.data();
         if (dialogPtr) {
