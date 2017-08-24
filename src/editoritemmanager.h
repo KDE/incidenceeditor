@@ -72,8 +72,8 @@ public:
     Akonadi::Item item(ItemState state = AfterSave) const;
 
     /**
-     * Loads the @param item into the editor. The item passed <em>must</em> be
-     * a valid item. When the payload is not set it will be fetched.
+     * Loads the @param item into the editor. The item passed must be
+     * a valid item.
      */
     void load(const Akonadi::Item &item);
 
