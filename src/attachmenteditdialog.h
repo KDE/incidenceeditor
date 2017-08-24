@@ -57,10 +57,10 @@ protected Q_SLOTS:
 
 private:
     KCalCore::Attachment::Ptr mAttachment;
-    AttachmentIconItem *mItem;
+    AttachmentIconItem *mItem = nullptr;
     QMimeType mMimeType;
-    Ui::AttachmentEditDialog *mUi;
-    QPushButton *mOkButton;
+    Ui::AttachmentEditDialog *mUi = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 }
 

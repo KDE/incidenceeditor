@@ -67,7 +67,7 @@ private:
     void fillCombo();
 
 private:
-    Ui::AlarmDialog *mUi;
+    Ui::AlarmDialog *mUi = nullptr;
     KCalCore::Incidence::IncidenceType mIncidenceType;
     bool mAllowBeginReminders;
     bool mAllowEndReminders;

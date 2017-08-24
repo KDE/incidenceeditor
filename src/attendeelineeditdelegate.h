@@ -56,7 +56,7 @@ private:
     void leftPressed();
     QString mToolTip;
     QString mWhatsThis;
-    KCompletion::CompletionMode mCompletionMode;
+    KCompletion::CompletionMode mCompletionMode = KCompletion::CompletionPopup;
 };
 }
 

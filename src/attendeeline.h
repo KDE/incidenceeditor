@@ -60,7 +60,7 @@ protected:
 
 private:
     void slotActionTriggered();
-    QMenu *mMenu;
+    QMenu *mMenu = nullptr;
     QVector<QPair<QString, QIcon> > mList;
     int mCurrentIndex;
 };
@@ -133,10 +133,10 @@ private:
     void dataFromFields();
     void fieldsFromData();
 
-    AttendeeComboBox *mRoleCombo;
-    AttendeeComboBox *mStateCombo;
-    AttendeeComboBox *mResponseCombo;
-    AttendeeLineEdit *mEdit;
+    AttendeeComboBox *mRoleCombo = nullptr;
+    AttendeeComboBox *mStateCombo = nullptr;
+    AttendeeComboBox *mResponseCombo = nullptr;
+    AttendeeLineEdit *mEdit = nullptr;
     QSharedPointer<AttendeeData> mData;
     QString mUid;
     bool mModified;

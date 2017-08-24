@@ -35,7 +35,6 @@ using namespace IncidenceEditorNG;
 
 AttendeeLineEditDelegate::AttendeeLineEditDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
-    , mCompletionMode(KCompletion::CompletionPopup)
 {
     mToolTip = i18nc("@info:tooltip",
                      "Enter the name or email address of the attendee.");
