@@ -83,12 +83,6 @@ public:
      */
     void save();
 
-    /**
-     * Returns the collection where the last item was created.
-     * Or an invalid collection if none was created.
-     */
-    Akonadi::Collection collection() const;
-
     enum SaveAction {
         Create, /**< A new item was created */
         Modify, /**< An existing item was modified */
