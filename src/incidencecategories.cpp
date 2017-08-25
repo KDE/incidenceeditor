@@ -64,11 +64,6 @@ void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
     }
 }
 
-void IncidenceCategories::load(const Akonadi::Item &item)
-{
-    Q_UNUSED(item);
-}
-
 void IncidenceCategories::save(const KCalCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
