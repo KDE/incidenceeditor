@@ -386,28 +386,10 @@ void EditorItemManager::save()
     }
 }
 
-void EditorItemManager::setFetchScope(const Akonadi::ItemFetchScope &fetchScope)
-{
-    Q_D(ItemEditor);
-    d->mFetchScope = fetchScope;
-}
-
-Akonadi::ItemFetchScope &EditorItemManager::fetchScope()
-{
-    Q_D(ItemEditor);
-    return d->mFetchScope;
-}
-
 void EditorItemManager::setIsCounterProposal(bool isCounterProposal)
 {
     Q_D(ItemEditor);
     d->mIsCounterProposal = isCounterProposal;
-}
-
-Akonadi::Collection EditorItemManager::collection() const
-{
-    Q_D(const ItemEditor);
-    return d->mChanger->lastCollectionUsed();
 }
 
 ItemEditorUi::~ItemEditorUi()

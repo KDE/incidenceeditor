@@ -48,8 +48,6 @@ public:
     void printDebugInfo() const override;
 
 private:
-    void matchExistingCategories(const QStringList &categories,
-                                 const Akonadi::Tag::List &existingTags);
     void createMissingCategories();
 
 private Q_SLOTS:
@@ -59,7 +57,6 @@ private Q_SLOTS:
 
 private:
     Ui::EventOrTodoDesktop *mUi;
-    Akonadi::Tag::List mSelectedTags;
 
     /**
      * List of categories for which no tag might exist.

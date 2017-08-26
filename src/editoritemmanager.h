@@ -72,8 +72,8 @@ public:
     Akonadi::Item item(ItemState state = AfterSave) const;
 
     /**
-     * Loads the @param item into the editor. The item passed <em>must</em> be
-     * a valid item. When the payload is not set it will be fetched.
+     * Loads the @param item into the editor. The item passed must be
+     * a valid item.
      */
     void load(const Akonadi::Item &item);
 
@@ -82,38 +82,6 @@ public:
      * ui is not dirty.
      */
     void save();
-
-    /**
-     * Sets the item fetch scope.
-     *
-     * Controls how much of an item's data is fetched from the server, e.g.
-     * whether to fetch the full item payload or only meta data.
-     *
-     * @param fetchScope The new scope for item fetch operations.
-     *
-     * @see fetchScope()
-     */
-    void setFetchScope(const Akonadi::ItemFetchScope &fetchScope);
-
-    /**
-     * Returns the item fetch scope.
-     *
-     * Since this returns a reference it can be used to conveniently modify the
-     * current scope in-place, i.e. by calling a method on the returned reference
-     * without storing it in a local variable. See the ItemFetchScope documentation
-     * for an example.
-     *
-     * @return a reference to the current item fetch scope
-     *
-     * @see setFetchScope() for replacing the current item fetch scope
-     */
-    Akonadi::ItemFetchScope &fetchScope();
-
-    /**
-     * Returns the collection where the last item was created.
-     * Or an invalid collection if none was created.
-     */
-    Akonadi::Collection collection() const;
 
     enum SaveAction {
         Create, /**< A new item was created */

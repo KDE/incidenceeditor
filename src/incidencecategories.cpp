@@ -45,7 +45,7 @@ IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
 
 void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
 {
-    mSelectedTags = list;
+    Q_UNUSED(list);
     mDirty = true;
     checkDirtyStatus();
 }
@@ -55,8 +55,7 @@ void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
     mLoadedIncidence = incidence;
     mDirty = false;
     mWasDirty = false;
-    mSelectedTags.clear();
-    mMissingCategories = incidence->categories();
+    mMissingCategories.clear();
 
     if (mLoadedIncidence) {
         Akonadi::TagFetchJob *fetchJob = new Akonadi::TagFetchJob(this);
@@ -67,29 +66,31 @@ void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
 
 void IncidenceCategories::load(const Akonadi::Item &item)
 {
-    mSelectedTags = item.tags();
-
-    mUi->mTagWidget->setSelection(item.tags());
+    Q_UNUSED(item);
 }
 
 void IncidenceCategories::save(const KCalCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
-    incidence->setCategories(categories());
+    if (mDirty) {
+        incidence->setCategories(categories());
+    }
 }
 
 void IncidenceCategories::save(Akonadi::Item &item)
 {
-    if (item.tags() != mSelectedTags) {
-        item.setTags(mSelectedTags);
+    const auto &selectedTags = mUi->mTagWidget->selection();
+    if (mDirty) {
+        item.setTags(selectedTags);
     }
 }
 
 QStringList IncidenceCategories::categories() const
 {
     QStringList list;
-    list.reserve(mSelectedTags.count() + mMissingCategories.count());
-    for (const Akonadi::Tag &tag : qAsConst(mSelectedTags)) {
+    const auto &selectedTags = mUi->mTagWidget->selection();
+    list.reserve(selectedTags.count() + mMissingCategories.count());
+    for (const Akonadi::Tag &tag : selectedTags) {
         list << tag.name();
     }
     list << mMissingCategories;
@@ -113,24 +114,10 @@ bool IncidenceCategories::isDirty() const
 
 void IncidenceCategories::printDebugInfo() const
 {
-    qCDebug(INCIDENCEEDITOR_LOG) << "mSelectedCategories = " << categories();
+    qCDebug(INCIDENCEEDITOR_LOG) << "selected categories = " << categories();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mMissingCategories = " << mMissingCategories;
     qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = "
                                  << mLoadedIncidence->categories();
-}
-
-void IncidenceCategories::matchExistingCategories(const QStringList &categories,
-                                                  const Akonadi::Tag::List &existingTags)
-{
-    for (const QString &category : categories) {
-        auto matchedTagIter = std::find_if(existingTags.cbegin(), existingTags.cend(),
-                                           [&category](const Akonadi::Tag &tag) {
-            return tag.name() == category;
-        });
-        Q_ASSERT(matchedTagIter != existingTags.cend());
-        if (!mSelectedTags.contains(*matchedTagIter)) {
-            mSelectedTags << *matchedTagIter;
-        }
-    }
 }
 
 void IncidenceCategories::onTagsFetched(KJob *job)
@@ -141,15 +128,20 @@ void IncidenceCategories::onTagsFetched(KJob *job)
     }
     Akonadi::TagFetchJob *fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
     const Akonadi::Tag::List jobTags = fetchJob->tags();
-    QStringList matchedCategories;
-    for (const Akonadi::Tag &tag : jobTags) {
+
+    Q_ASSERT(mLoadedIncidence);
+    mMissingCategories = mLoadedIncidence->categories();
+
+    Akonadi::Tag::List selectedTags;
+    selectedTags.reserve(mMissingCategories.count());
+    for (const auto &tag : jobTags) {
         if (mMissingCategories.removeAll(tag.name()) > 0) {
-            matchedCategories << tag.name();
+            selectedTags << tag;
         }
     }
-    matchExistingCategories(matchedCategories, jobTags);
+
     createMissingCategories();
-    mUi->mTagWidget->setSelection(mSelectedTags);
+    mUi->mTagWidget->setSelection(selectedTags);
 }
 
 void IncidenceCategories::onMissingTagCreated(KJob *job)
@@ -159,7 +151,11 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
         return;
     }
     Akonadi::TagCreateJob *createJob = static_cast<Akonadi::TagCreateJob *>(job);
-    mMissingCategories.removeAll(createJob->tag().name());
-    mSelectedTags << createJob->tag();
-    mUi->mTagWidget->setSelection(mSelectedTags);
+    int count = mMissingCategories.removeAll(createJob->tag().name());
+    Q_ASSERT(count > 0);
+
+    QVector<Akonadi::Tag> selectedTags;
+    selectedTags.reserve(mUi->mTagWidget->selection().count() + 1);
+    selectedTags << mUi->mTagWidget->selection() << createJob->tag();
+    mUi->mTagWidget->setSelection(selectedTags);
 }
