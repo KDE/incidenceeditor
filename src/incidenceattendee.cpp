@@ -444,17 +444,27 @@ void IncidenceAttendee::expandResult(KJob *job)
     Q_ASSERT(mExpandGroupJobs.contains(job));
     KCalCore::Attendee::Ptr attendee = mExpandGroupJobs.take(job);
     int row = dataModel()->attendees().indexOf(attendee);
-
-    dataModel()->removeRow(row);
+    const QString currentEmail = attendee->email();
     const KContacts::Addressee::List groupMembers = expandJob->contacts();
+    bool wasACorrectEmail = false;
     for (const KContacts::Addressee &member : groupMembers) {
-        KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
-                                          member.realName(), member.preferredEmail(),
-                                          attendee->RSVP(),
-                                          attendee->status(),
-                                          attendee->role(),
-                                          member.uid()));
-        dataModel()->insertAttendee(row, newAt);
+        if (member.preferredEmail() == currentEmail) {
+            wasACorrectEmail = true;
+            break;
+        }
+    }
+
+    if (!wasACorrectEmail) {
+        dataModel()->removeRow(row);
+        for (const KContacts::Addressee &member : groupMembers) {
+            KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
+                                              member.realName(), member.preferredEmail(),
+                                              attendee->RSVP(),
+                                              attendee->status(),
+                                              attendee->role(),
+                                              member.uid()));
+            dataModel()->insertAttendee(row, newAt);
+        }
     }
 }
 
