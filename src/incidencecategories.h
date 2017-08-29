@@ -35,7 +35,6 @@ public:
     explicit IncidenceCategories(Ui::EventOrTodoDesktop *ui);
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void load(const Akonadi::Item &item) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
     void save(Akonadi::Item &item) override;
 
