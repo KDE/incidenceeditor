@@ -117,15 +117,15 @@ private:
     QDate currentDate() const;
 
 private:
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
     QDate mCurrentDate;
-    IncidenceDateTime *mDateTime;
+    IncidenceDateTime *mDateTime = nullptr;
     KCalCore::DateList mExceptionDates;
 
     // So we can easily detect if the user changed the type,
     // without going through complicated recurrence logic:
-    int mMonthlyInitialType;
-    int mYearlyInitialType;
+    int mMonthlyInitialType = -1;
+    int mYearlyInitialType = -1;
 };
 }
 

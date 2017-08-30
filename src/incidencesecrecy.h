@@ -42,7 +42,7 @@ public:
     bool isDirty() const override;
 
 private:
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 };
 }
 

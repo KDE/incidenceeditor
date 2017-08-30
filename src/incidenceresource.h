@@ -67,16 +67,16 @@ private:
     void slotDateChanged();
 
     void dialogOkPressed();
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 
     /** completer for findResources */
-    QCompleter *completer;
+    QCompleter *completer = nullptr;
 
     /** used dataModel to rely on*/
-    AttendeeTableModel *dataModel;
-    IncidenceDateTime *mDateTime;
+    AttendeeTableModel *dataModel = nullptr;
+    IncidenceDateTime *mDateTime = nullptr;
 
-    ResourceManagement *resourceDialog;
+    ResourceManagement *resourceDialog = nullptr;
 };
 }
 

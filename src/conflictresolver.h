@@ -189,8 +189,8 @@ private:
     // to prevent the process from being repeated many times
     // after a series of quick parameter changes.
 
-    CalendarSupport::FreeBusyItemModel *mFBModel;
-    QWidget *mParentWidget;
+    CalendarSupport::FreeBusyItemModel *mFBModel = nullptr;
+    QWidget *mParentWidget = nullptr;
 
     QSet<KCalCore::Attendee::Role> mMandatoryRoles;
     QBitArray mWeekdays; //!< a 7 bit array indicating the allowed days

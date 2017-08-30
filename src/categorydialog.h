@@ -66,8 +66,8 @@ private:
     void addCategory();
     void removeCategory();
     QStringList mCategoryList;
-    CategoryWidgetBase *mWidgets;
-    CalendarSupport::CategoryConfig *mCategoryConfig;
+    CategoryWidgetBase *mWidgets = nullptr;
+    CalendarSupport::CategoryConfig *mCategoryConfig = nullptr;
 };
 
 class CategoryDialog : public QDialog
@@ -93,8 +93,8 @@ Q_SIGNALS:
     void categoriesSelected(const QStringList &);
 
 private:
-    CategoryWidget *mWidgets;
-    CalendarSupport::CategoryConfig *mCategoryConfig;
+    CategoryWidget *mWidgets = nullptr;
+    CalendarSupport::CategoryConfig *mCategoryConfig = nullptr;
     class CategorySelectDialogPrivate;
     CategorySelectDialogPrivate *d;
 };

@@ -130,7 +130,7 @@ private:
 
 private:
     QVector<QByteArray> mTimeZones;
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 
     QDate mActiveDate;
     /**

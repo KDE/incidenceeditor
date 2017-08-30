@@ -190,7 +190,7 @@ QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &
     if (url.isValid()) {
         return url;
     }
-    QTemporaryFile *file;
+    QTemporaryFile *file = nullptr;
 
     QMimeDatabase db;
     QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();

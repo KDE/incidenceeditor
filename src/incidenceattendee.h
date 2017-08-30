@@ -128,20 +128,20 @@ private:
     void fillOrganizerCombo();
     void setActions(KCalCore::Incidence::IncidenceType actions);
 
-    Ui::EventOrTodoDesktop *mUi;
-    QWidget *mParentWidget;
-    ConflictResolver *mConflictResolver;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
+    QWidget *mParentWidget = nullptr;
+    ConflictResolver *mConflictResolver = nullptr;
 
-    IncidenceDateTime *mDateTime;
+    IncidenceDateTime *mDateTime = nullptr;
     QString mOrganizer;
     QString mOldIconName;
 
     /** used dataModel to rely on*/
-    AttendeeTableModel *mDataModel;
-    AttendeeLineEditDelegate *mAttendeeDelegate;
-    AttendeeComboBoxDelegate *mStateDelegate;
-    AttendeeComboBoxDelegate *mRoleDelegate;
-    AttendeeComboBoxDelegate *mResponseDelegate;
+    AttendeeTableModel *mDataModel = nullptr;
+    AttendeeLineEditDelegate *mAttendeeDelegate = nullptr;
+    AttendeeComboBoxDelegate *mStateDelegate = nullptr;
+    AttendeeComboBoxDelegate *mRoleDelegate = nullptr;
+    AttendeeComboBoxDelegate *mResponseDelegate = nullptr;
 
     QMap<KCalCore::Attendee::Ptr, KContacts::ContactGroup> mGroupList;
     QMap<KJob *, KCalCore::Attendee::Ptr> mMightBeGroupJobs;

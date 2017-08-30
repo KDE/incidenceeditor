@@ -52,11 +52,11 @@ public:
     Akonadi::Item mItem;
     Akonadi::Item mPrevItem;
     Akonadi::ItemFetchScope mFetchScope;
-    Akonadi::Monitor *mItemMonitor;
-    ItemEditorUi *mItemUi;
-    bool mIsCounterProposal;
+    Akonadi::Monitor *mItemMonitor = nullptr;
+    ItemEditorUi *mItemUi = nullptr;
+    bool mIsCounterProposal = false;
     EditorItemManager::SaveAction currentAction;
-    Akonadi::IncidenceChanger *mChanger;
+    Akonadi::IncidenceChanger *mChanger = nullptr;
 
 public:
     ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq);

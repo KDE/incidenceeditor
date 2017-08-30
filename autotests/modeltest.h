@@ -61,7 +61,7 @@ protected Q_SLOTS:
 private:
     void checkChildren(const QModelIndex &parent, int currentDepth = 0);
 
-    QAbstractItemModel *model;
+    QAbstractItemModel *model = nullptr;
 
     struct Changing {
         QModelIndex parent;
@@ -72,7 +72,7 @@ private:
     QStack<Changing> insert;
     QStack<Changing> remove;
 
-    bool fetchingMore;
+    bool fetchingMore = false;
 
     QList<QPersistentModelIndex> changing;
 };

@@ -85,18 +85,18 @@ private:
     void setupAttachmentIconView();
 
 private:
-    AttachmentIconView *mAttachmentView;
-    Ui::EventOrTodoDesktop *mUi;
+    AttachmentIconView *mAttachmentView = nullptr;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 
-    QMenu *mPopupMenu;
-    QAction *mOpenAction;
-    QAction *mSaveAsAction;
+    QMenu *mPopupMenu = nullptr;
+    QAction *mOpenAction = nullptr;
+    QAction *mSaveAsAction = nullptr;
 #ifndef QT_NO_CLIPBOARD
-    QAction *mCopyAction;
-    QAction *mCutAction;
+    QAction *mCopyAction = nullptr;
+    QAction *mCutAction = nullptr;
 #endif
-    QAction *mDeleteAction;
-    QAction *mEditAction;
+    QAction *mDeleteAction = nullptr;
+    QAction *mEditAction = nullptr;
 };
 }
 

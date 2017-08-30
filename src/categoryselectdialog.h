@@ -62,8 +62,8 @@ Q_SIGNALS:
 
 private:
     QStringList mCategoryList;
-    CategorySelectWidgetBase *mWidgets;
-    CalendarSupport::CategoryConfig *mCategoryConfig;
+    CategorySelectWidgetBase *mWidgets = nullptr;
+    CalendarSupport::CategoryConfig *mCategoryConfig = nullptr;
 };
 
 class CategorySelectDialog : public QDialog
@@ -90,7 +90,7 @@ Q_SIGNALS:
     void editCategories();
 
 private:
-    CategorySelectWidget *mWidgets;
+    CategorySelectWidget *mWidgets = nullptr;
 
     class CategorySelectDialogPrivate;
     CategorySelectDialogPrivate *d;

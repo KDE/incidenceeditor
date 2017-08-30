@@ -67,8 +67,8 @@ protected:
 
 private:
     void deleteItem(QTreeWidgetItem *item, QList<QTreeWidgetItem *> &to_remove);
-    CalendarSupport::CategoryConfig *mCategoryConfig;
-    Ui::CategoryEditDialog_base *mWidgets;
+    CalendarSupport::CategoryConfig *mCategoryConfig = nullptr;
+    Ui::CategoryEditDialog_base *mWidgets = nullptr;
 };
 }
 

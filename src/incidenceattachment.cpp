@@ -422,7 +422,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
     }
     QMenu menu;
-    QAction *linkAction = nullptr, *cancelAction;
+    QAction *linkAction = nullptr, *cancelAction = nullptr;
     if (probablyWeHaveUris) {
         linkAction
             = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")),

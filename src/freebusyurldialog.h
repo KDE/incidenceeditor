@@ -41,7 +41,7 @@ public Q_SLOTS:
     void slotOk();
 
 private:
-    FreeBusyUrlWidget *mWidget;
+    FreeBusyUrlWidget *mWidget = nullptr;
 };
 
 class FreeBusyUrlWidget : public QWidget
@@ -55,7 +55,7 @@ public:
     void saveConfig();
 
 private:
-    KLineEdit *mUrlEdit;
+    KLineEdit *mUrlEdit = nullptr;
     AttendeeData::Ptr mAttendee;
 };
 }

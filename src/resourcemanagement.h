@@ -63,7 +63,7 @@ private:
      */
     void showDetails(const KLDAP::LdapObject &, const KLDAP::LdapClient &client);
 
-    QItemSelectionModel *selectionModel;
+    QItemSelectionModel *selectionModel = nullptr;
 
 private Q_SLOTS:
     /* A new searchString is entered
@@ -86,14 +86,14 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    CalendarSupport::FreeBusyItemModel *mModel;
+    CalendarSupport::FreeBusyItemModel *mModel = nullptr;
     CalendarSupport::FreeBusyCalendar mFreebusyCalendar;
     ResourceItem::Ptr mOwnerItem;
     ResourceItem::Ptr mSelectedItem;
     EventViews::ViewCalendar::Ptr mFbCalendar;
-    Ui_resourceManagement *mUi;
+    Ui_resourceManagement *mUi = nullptr;
     QMap<QModelIndex, KCalCore::Event::Ptr> mFbEvent;
-    EventViews::AgendaView *mAgendaView;
+    EventViews::AgendaView *mAgendaView = nullptr;
 };
 }
 #endif // RESOURCEMANAGEMENT_H

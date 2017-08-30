@@ -126,7 +126,7 @@ void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent, int start,
 {
     if (d->mAutoCheck) {
         QTreeWidgetItem *item = itemFromIndex(parent);
-        QTreeWidgetItem *child;
+        QTreeWidgetItem *child = nullptr;
         if (item) {
             QBrush b(Qt::yellow);
             item->setBackground(0, b);

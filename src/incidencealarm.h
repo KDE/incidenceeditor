@@ -57,12 +57,12 @@ private:
     QString stringForAlarm(const KCalCore::Alarm::Ptr &alarm);
 
 private:
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 
     KCalCore::Alarm::List mAlarms;
-    IncidenceDateTime *mDateTime;
-    int mEnabledAlarmCount;
-    bool mIsTodo;
+    IncidenceDateTime *mDateTime = nullptr;
+    int mEnabledAlarmCount = 0;
+    bool mIsTodo = false;
 };
 }
 

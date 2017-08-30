@@ -50,7 +50,7 @@ public:
     virtual void validate();
 
 private:
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 };
 } // IncidenceEditorNG
 

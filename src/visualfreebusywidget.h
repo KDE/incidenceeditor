@@ -66,13 +66,13 @@ protected Q_SLOTS:
 
 private:
     void splitterMoved();
-    KGantt::GraphicsView *mGanttGraphicsView;
-    QTreeView *mLeftView;
-    RowController *mRowController;
-    KGantt::DateTimeGrid *mGanttGrid;
+    KGantt::GraphicsView *mGanttGraphicsView = nullptr;
+    QTreeView *mLeftView = nullptr;
+    RowController *mRowController = nullptr;
+    KGantt::DateTimeGrid *mGanttGrid = nullptr;
 
-    KComboBox *mScaleCombo;
-    FreeBusyGanttProxyModel *mModel;
+    KComboBox *mScaleCombo = nullptr;
+    FreeBusyGanttProxyModel *mModel = nullptr;
 
     KDateTime mDtStart, mDtEnd;
 };

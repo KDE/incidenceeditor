@@ -77,17 +77,17 @@ class IncidenceDialogPrivate : public ItemEditorUi
     Q_DECLARE_PUBLIC(IncidenceDialog)
 
 public:
-    Ui::EventOrTodoDesktop *mUi;
-    Akonadi::CollectionComboBox *mCalSelector;
-    bool mCloseOnSave;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Akonadi::CollectionComboBox *mCalSelector = nullptr;
+    bool mCloseOnSave = false;
 
-    EditorItemManager *mItemManager;
-    CombinedIncidenceEditor *mEditor;
-    IncidenceDateTime *mIeDateTime;
-    IncidenceAttendee *mIeAttendee;
-    IncidenceRecurrence *mIeRecurrence;
-    IncidenceResource *mIeResource;
-    bool mInitiallyDirty;
+    EditorItemManager *mItemManager = nullptr;
+    CombinedIncidenceEditor *mEditor = nullptr;
+    IncidenceDateTime *mIeDateTime = nullptr;
+    IncidenceAttendee *mIeAttendee = nullptr;
+    IncidenceRecurrence *mIeRecurrence = nullptr;
+    IncidenceResource *mIeResource = nullptr;
+    bool mInitiallyDirty = false;
     Akonadi::Item mItem;
     QString typeToString(const int type) const;
 

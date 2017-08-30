@@ -55,7 +55,7 @@ private Q_SLOTS:
     void onMissingTagCreated(KJob *);
 
 private:
-    Ui::EventOrTodoDesktop *mUi;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
 
     /**
      * List of categories for which no tag might exist.
@@ -66,7 +66,7 @@ private:
      * categories, this list still holds these categories so they don't get lost
      */
     QStringList mMissingCategories;
-    bool mDirty;
+    bool mDirty = false;
 };
 }
 

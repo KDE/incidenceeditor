@@ -37,8 +37,8 @@ public:
     }
 
 public:
-    Ui::EventOrTodoDesktop *mUi;
-    int mOrigPercentCompleted;
+    Ui::EventOrTodoDesktop *mUi = nullptr;
+    int mOrigPercentCompleted = -1;
 
 public: // slots
     void sliderValueChanged(int);

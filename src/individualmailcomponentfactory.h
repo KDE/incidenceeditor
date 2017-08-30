@@ -50,8 +50,8 @@ private:
     KCalCore::Attendee::List mUpdate;
     KCalCore::Attendee::List mEdit;
     KIdentityManagement::Identity mIdentity;
-    MailTransport::MessageQueueJob *mQueueJob;
-    OpenComposerJob *mComposerJob;
+    MailTransport::MessageQueueJob *mQueueJob = nullptr;
+    OpenComposerJob *mComposerJob = nullptr;
 };
 
 class IndividualMailITIPHandlerDialogDelegate : public Akonadi::ITIPHandlerDialogDelegate
@@ -96,7 +96,7 @@ protected:
 
 private:
     void onDialogClosed(int result);
-    IndividualMailDialog *mDialog;
+    IndividualMailDialog *mDialog = nullptr;
 };
 
 class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::
