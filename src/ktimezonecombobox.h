@@ -30,9 +30,6 @@
 #include <KDateTime>
 #include <QVector>
 
-namespace KCalCore {
-class ICalTimeZones;
-}
 class QByteArray;
 
 namespace IncidenceEditorNG {

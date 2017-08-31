@@ -33,10 +33,6 @@ namespace Ui {
 class EventOrTodoDesktop;
 }
 
-namespace KCalCore {
-class ICalTimeZones;
-}
-
 namespace IncidenceEditorNG {
 class IncidenceDateTime : public IncidenceEditor
 {

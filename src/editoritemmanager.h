@@ -28,7 +28,6 @@
 namespace Akonadi {
 class Collection;
 class Item;
-class ItemFetchScope;
 }
 
 class KJob;
