@@ -100,7 +100,7 @@ private:
      */
     QSet <ResourceItem::Ptr> ldapCollections;
 
-    /* Cached searchString (setted by startSearch(QString))
+    /* Cached searchString (set by startSearch(QString))
      *
      */
     QString searchString;
