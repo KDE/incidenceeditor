@@ -129,9 +129,11 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(mUi->mSolveButton, &QPushButton::clicked, this,
             &IncidenceAttendee::slotSolveConflictPressed);
     /* Added as part of kolab/issue2297, which is currently under review
-    connect(mUi->mOrganizerCombo, QOverload<const QString &>::of(&KComboBox::activated), this, &IncidenceAttendee::slotOrganizerChanged);
+    connect(mUi->mOrganizerCombo, QOverload<const QString &>::of(&KComboBox::activated),
+            this, &IncidenceAttendee::slotOrganizerChanged);
     */
-    connect(mUi->mOrganizerCombo, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidenceAttendee::checkDirtyStatus);
+    connect(mUi->mOrganizerCombo, QOverload<int>::of(&KComboBox::currentIndexChanged),
+            this, &IncidenceAttendee::checkDirtyStatus);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
             &IncidenceAttendee::slotEventDurationChanged);
@@ -544,8 +546,8 @@ void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
 void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &topLeft,
                                                             const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column()
-        && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column() &&
+        AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
             KCalCore::Attendee::Ptr attendee = dataModel()->data(email,
@@ -611,12 +613,10 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
         QModelIndex index = model->index(i, 0, parent);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index,
-                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
-                                                  .value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
-                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
-                                            .value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee =
+            model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb =
+            model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -633,12 +633,10 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft,
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index,
-                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
-                                                  .value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
-                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
-                                            .value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee =
+            model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb =
+            model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -650,12 +648,10 @@ void IncidenceAttendee::updateFBStatus()
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalCore::Attendee::Ptr &attendee = model->data(index,
-                                                              CalendarSupport::FreeBusyItemModel::AttendeeRole)
-                                                  .value<KCalCore::Attendee::Ptr>();
-        const KCalCore::FreeBusy::Ptr &fb = model->data(index,
-                                                        CalendarSupport::FreeBusyItemModel::FreeBusyRole)
-                                            .value<KCalCore::FreeBusy::Ptr>();
+        const KCalCore::Attendee::Ptr &attendee =
+            model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
+        const KCalCore::FreeBusy::Ptr &fb =
+            model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalCore::FreeBusy::Ptr>();
         if (attendee) {
             updateFBStatus(attendee, fb);
         }
@@ -677,8 +673,8 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee,
                  ++it) {
                 // periods started before and laping into the incidence (s < startTime && e >= startTime)
                 // periods starting in the time of incidende (s >= startTime && s <= endTime)
-                if (((*it).start() < startTime && (*it).end() > startTime)
-                    || ((*it).start() >= startTime && (*it).start() <= endTime)) {
+                if (((*it).start() < startTime && (*it).end() > startTime) ||
+                    ((*it).start() >= startTime && (*it).start() <= endTime)) {
                     switch (attendee->status()) {
                     case KCalCore::Attendee::Accepted:
                         dataModel()->setData(attendeeIndex, AttendeeTableModel::Accepted);
@@ -691,7 +687,7 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee,
             }
             dataModel()->setData(attendeeIndex, AttendeeTableModel::Free);
         } else {
-            dataModel()->setData(attendeeIndex, AttendeeTableModel::Unkown);
+            dataModel()->setData(attendeeIndex, AttendeeTableModel::Unknown);
         }
     }
 }
@@ -718,8 +714,8 @@ void IncidenceAttendee::slotUpdateConflictLabel(int count)
 void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft,
                                                              const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column()
-        && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column() &&
+        AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
             KCalCore::Attendee::Ptr attendee = dataModel()->data(email,
@@ -818,10 +814,10 @@ bool IncidenceAttendee::iAmOrganizer() const
 
 void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &a, int pos /*=-1*/)
 {
-    const bool sameAsOrganizer = mUi->mOrganizerCombo
-                                 && KEmailAddress::compareEmail(a.preferredEmail(),
-                                                                mUi->mOrganizerCombo->currentText(),
-                                                                false);
+    const bool sameAsOrganizer =
+        mUi->mOrganizerCombo && KEmailAddress::compareEmail(a.preferredEmail(),
+                                                            mUi->mOrganizerCombo->currentText(),
+                                                            false);
     KCalCore::Attendee::PartStat partStat = KCalCore::Attendee::NeedsAction;
     bool rsvp = true;
 

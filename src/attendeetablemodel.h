@@ -48,7 +48,7 @@ public:
     };
 
     enum AvailableStatus {
-        Unkown,
+        Unknown,
         Free,
         Accepted,
         Busy,

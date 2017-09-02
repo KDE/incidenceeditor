@@ -49,7 +49,7 @@ Qt::ItemFlags AttendeeTableModel::flags(const QModelIndex &index) const
     if (!index.isValid()) {
         return Qt::ItemIsEnabled;
     }
-    if (index.column() == Available || index.column() == Name || index.column() == Email) {          //Available is read only
+    if (index.column() == Available || index.column() == Name || index.column() == Email) { //Available is read only
         return QAbstractTableModel::flags(index);
     } else {
         return QAbstractTableModel::flags(index) | Qt::ItemIsEditable;
@@ -84,7 +84,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
                     return i18n("Busy");
                 case Accepted:
                     return i18n("Accepted");
-                case Unkown:
+                case Unknown:
                     return i18n("Unknown");
                 default:
                     return i18n("Unknown");
@@ -122,7 +122,8 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
             break;
         case FullName:
             if (mRemoveEmptyLines && value.toString().trimmed().isEmpty()) {
-                // Do not remove last empty line if mKeepEmpty==true (only works if initaly there is only one empty line)
+                // Do not remove last empty line if mKeepEmpty==true
+                // (only works if initaly there is only one empty line)
                 if (!mKeepEmpty || !(attendee->name().isEmpty() && attendee->email().isEmpty())) {
                     removeRows(index.row(), 1);
                     return true;
