@@ -16,6 +16,9 @@
   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
+#ifndef INCIDENCEEDITOR_GROUPWAREUIDELEGATE_H
+#define INCIDENCEEDITOR_GROUPWAREUIDELEGATE_H
+
 #include "incidenceeditor_export.h"
 
 #include <Akonadi/Calendar/ITIPHandler>
@@ -31,3 +34,5 @@ public:
     void createCalendar() override;
 };
 }
+
+#endif
