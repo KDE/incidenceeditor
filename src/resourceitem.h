@@ -22,16 +22,14 @@
 #ifndef RESOURCEITEM_H
 #define RESOURCEITEM_H
 
-#include <QList>
-#include <QMetaType>
+#include <Libkdepim/LdapClient>
+
+#include <KLDAP/LdapObject>
+
 #include <QSharedPointer>
-#include <QObject>
 #include <QStringList>
 #include <QVariant>
 #include <QVector>
-
-#include <Libkdepim/LdapClient>
-#include <kldap/ldapobject.h>
 
 namespace IncidenceEditorNG {
 class ResourceItem : public QObject

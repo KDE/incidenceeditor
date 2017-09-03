@@ -1,29 +1,35 @@
-set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 
-include_directories(
- ../
-)
+include_directories(${CMAKE_SOURCE_DIR}/src)
 
 set(grant_lib KGantt)
 
-
-MACRO(IE_UNIT_TESTS)
-  FOREACH(_testname ${ARGN})
-    add_executable( ${_testname} ${_testname}.cpp modeltest.cpp )
-    add_test(NAME ${_testname} COMMAND ${_testname} )
+macro(IE_UNIT_TESTS)
+  foreach(_testname ${ARGN})
+    add_executable(${_testname} ${_testname}.cpp modeltest.cpp)
+    add_test(NAME ${_testname} COMMAND ${_testname})
     ecm_mark_as_test(${_testname})
-    target_link_libraries(${_testname} Qt5::Test   KF5::AkonadiCore  ${grant_lib} KF5::CalendarUtils KF5::CalendarCore KF5::IncidenceEditor KF5::KdepimDBusInterfaces KF5::Libkdepim)
-  ENDFOREACH(_testname)
-ENDMACRO(IE_UNIT_TESTS)
+    target_link_libraries(${_testname}
+      Qt5::Test
+      KF5::AkonadiCore
+      ${grant_lib}
+      KF5::CalendarUtils
+      KF5::CalendarCore
+      KF5::IncidenceEditor
+      KF5::KdepimDBusInterfaces
+      KF5::Libkdepim
+    )
+  endforeach()
+endmacro()
 
-MACRO(IE_EXECUTABLE_TESTS)
-  FOREACH(_testname ${ARGN})
+macro(IE_EXECUTABLE_TESTS)
+  foreach(_testname ${ARGN})
     add_executable(${_testname} NOGUI TEST ${_testname}.cpp modeltest.cpp)
-    target_link_libraries(${_testname} KF5::CalendarCore Qt5::Test   KF5::IncidenceEditor)
-  ENDFOREACH(_testname)
-ENDMACRO(IE_EXECUTABLE_TESTS)
+    target_link_libraries(${_testname} KF5::CalendarCore Qt5::Test KF5::IncidenceEditor)
+  endforeach()
+endmacro()
 
-IE_UNIT_TESTS(
+ie_unit_tests(
   conflictresolvertest
   testfreebusyganttproxymodel
 )
@@ -35,8 +41,7 @@ add_executable(ktimezonecomboboxtest ${ktimezonecomboboxtest_SRCS})
 add_test(NAME ktimezonecomboboxtest COMMAND ktimezonecomboboxtest)
 ecm_mark_as_test(ktimezonecomboboxtest)
 
-target_link_libraries(
-  ktimezonecomboboxtest
+target_link_libraries(ktimezonecomboboxtest
   KF5::CalendarCore
   Qt5::Test
   KF5::IncidenceEditor

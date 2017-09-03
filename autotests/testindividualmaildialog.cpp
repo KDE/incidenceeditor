@@ -17,11 +17,12 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 02110-1301, USA.
  */
 
-#include "../src/individualmaildialog.h"
+#include "individualmaildialog.h"
 
 #include <KGuiItem>
+
 #include <QObject>
-#include <qtest.h>
+#include <QTest>
 
 using namespace IncidenceEditorNG;
 
@@ -35,9 +36,12 @@ private Q_SLOTS:
         KGuiItem buttonYes = KGuiItem(QStringLiteral("Send Email"));
         KGuiItem buttonNo = KGuiItem(QStringLiteral("Do not send"));
 
-        KCalCore::Attendee::Ptr attendee1(new KCalCore::Attendee(QStringLiteral("test1"), QStringLiteral("test1@example.com")));
-        KCalCore::Attendee::Ptr attendee2(new KCalCore::Attendee(QStringLiteral("test2"), QStringLiteral("test2@example.com")));
-        KCalCore::Attendee::Ptr attendee3(new KCalCore::Attendee(QStringLiteral("test3"), QStringLiteral("test3@example.com")));
+        KCalCore::Attendee::Ptr attendee1(new KCalCore::Attendee(QStringLiteral("test1"),
+                                                                 QStringLiteral("test1@example.com")));
+        KCalCore::Attendee::Ptr attendee2(new KCalCore::Attendee(QStringLiteral("test2"),
+                                                                 QStringLiteral("test2@example.com")));
+        KCalCore::Attendee::Ptr attendee3(new KCalCore::Attendee(QStringLiteral("test3"),
+                                                                 QStringLiteral("test3@example.com")));
 
         attendees << attendee1 << attendee2 << attendee3;
 
@@ -48,9 +52,12 @@ private Q_SLOTS:
 
         // Just make sure, that the QCombobox is sorted like we think
         QComboBox *first = dialog.mAttendeeDecision[attendees[0]];
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(0, Qt::UserRole).toInt(), IndividualMailDialog::Update);
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(1, Qt::UserRole).toInt(), IndividualMailDialog::NoUpdate);
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(2, Qt::UserRole).toInt(), IndividualMailDialog::Edit);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(0, Qt::UserRole).toInt(),
+                 IndividualMailDialog::Update);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(1, Qt::UserRole).toInt(),
+                 IndividualMailDialog::NoUpdate);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(2, Qt::UserRole).toInt(),
+                 IndividualMailDialog::Edit);
 
         // No update for first attendee, other default
         first->setCurrentIndex(1);

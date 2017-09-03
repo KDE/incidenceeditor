@@ -20,7 +20,7 @@
  */
 #include "resourceitem.h"
 
-#include <kldap/ldapserver.h>
+#include <KLDAP/LdapServer>
 
 using namespace IncidenceEditorNG;
 
@@ -151,9 +151,10 @@ const KLDAP::LdapClient &ResourceItem::ldapClient() const
     return mLdapClient;
 }
 
-void ResourceItem::slotLDAPResult(const KLDAP::LdapClient & /*client*/,
+void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client,
                                   const KLDAP::LdapObject &obj)
 {
+    Q_UNUSED(client);
     mLdapObject = obj;
     for (const QString &header : qAsConst(mAttrs)) {
         if (!obj.attributes()[header].isEmpty()) {

@@ -29,14 +29,17 @@
 
 #include "freebusyganttproxymodel.h"
 
+#include <Akonadi/Calendar/FreeBusyManager>
+
 #include <EventViews/AgendaView>
 #include <EventViews/ViewCalendar>
 
 #include <KCalCore/Event>
 #include <KCalCore/MemoryCalendar>
+
 #include <KGantt/KGanttGraphicsView>
-#include <akonadi/calendar/freebusymanager.h>
-#include <kldap/ldapobject.h>
+
+#include <KLDAP/LdapObject>
 
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -276,10 +279,10 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAP::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QStringLiteral("objectClass")
-            || key == QStringLiteral("owner")
-            || key == QStringLiteral("givenname")
-            || key == QStringLiteral("sn")) {
+        if (key == QStringLiteral("objectClass") ||
+            key == QStringLiteral("owner") ||
+            key == QStringLiteral("givenname") ||
+            key == QStringLiteral("sn")) {
             continue;
         }
         QStringList list;

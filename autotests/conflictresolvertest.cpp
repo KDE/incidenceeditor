@@ -19,15 +19,14 @@
 */
 
 #include "conflictresolvertest.h"
-#include "../src/conflictresolver.h"
+#include "conflictresolver.h"
 
 #include <KCalCore/Event>
 #include <KCalCore/Period>
 #include <KCalCore/Duration>
 
 #include <QWidget>
-
-#include <qtest.h>
+#include <QTest>
 
 using namespace IncidenceEditorNG;
 
@@ -97,7 +96,6 @@ void ConflictResolverTest::simpleTest()
     //free block doesn't start until
     //the next timeslot
     QCOMPARE(second.end(), end);
-
 }
 
 void ConflictResolverTest::stillPrettySimpleTest()
@@ -336,4 +334,3 @@ void ConflictResolverTest::testPeriodEndsAtSametimeAsTimeframe()
 }
 
 QTEST_MAIN(ConflictResolverTest)
-

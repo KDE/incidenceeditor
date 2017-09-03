@@ -19,17 +19,18 @@
 */
 
 #include "testfreebusyganttproxymodel.h"
+#include "freebusyganttproxymodel.h"
 #include "modeltest.h"
-#include "CalendarSupport/FreeBusyItem"
-#include "CalendarSupport/FreeBusyItemModel"
-#include "../src/freebusyganttproxymodel.h"
+
+#include <CalendarSupport/FreeBusyItem>
+#include <CalendarSupport/FreeBusyItemModel>
 
 #include <KGantt/KGanttGraphicsView>
 #include <KCalCore/Attendee>
 
-#include <qtest.h>
-
+#include <QTest>
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
+
 using namespace IncidenceEditorNG;
 
 void FreeBusyGanttProxyModelTest::testModelValidity()
@@ -85,7 +86,6 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QCOMPARE(parent1.data(), source_parent1.data());
     QCOMPARE(parent1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeMulti);
 
-
     QModelIndex child0_0 = ganttModel->index(0, 0, parent0);
     QModelIndex child0_1 = ganttModel->index(1, 0, parent0);
     QVERIFY(child0_0.isValid());
@@ -105,6 +105,4 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QCOMPARE(child1_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt3.dateTime());
     QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
     QCOMPARE(child1_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt4.dateTime());
-
 }
-

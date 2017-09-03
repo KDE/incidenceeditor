@@ -19,10 +19,10 @@
 
 #include "attendeetablemodel.h"
 
-#include <klocalizedstring.h>
-
 #include <KCalCore/Attendee>
 #include <KEmailAddress>
+
+#include <KLocalizedString>
 
 using namespace IncidenceEditorNG;
 

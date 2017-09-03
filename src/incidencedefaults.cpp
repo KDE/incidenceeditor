@@ -22,9 +22,10 @@
 
 #include "incidencedefaults.h"
 #include "alarmpresets.h"
+#include "incidenceeditor_debug.h"
 
 #include <CalendarSupport/KCalPrefs>
-#include <akonadi/calendar/calendarsettings.h>
+#include <akonadi/calendar/calendarsettings.h> //krazy:exclude=camelcase this is a generated file
 
 #include <KContacts/Addressee>
 
@@ -34,9 +35,9 @@
 #include <KCalCore/Alarm>
 
 #include <KEmailAddress>
+
 #include <KIO/Job>
 #include <KIO/StoredTransferJob>
-#include "incidenceeditor_debug.h"
 #include <KLocalizedString>
 
 #include <QUrl>
@@ -151,8 +152,8 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
     }
 
     const QTime defaultDurationTime = KCalPrefs::instance()->defaultDuration().time();
-    const int defaultDuration = defaultDurationTime.hour() * 3600
-                                +defaultDurationTime.minute() * 60;
+    const int defaultDuration = (defaultDurationTime.hour() * 3600) +
+                                (defaultDurationTime.minute() * 60);
 
     const KDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
@@ -194,8 +195,8 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) con
         todo->setDtStart(mStartDt);
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(KDateTime());
-    } else if (relatedTodo && relatedTodo->hasStartDate()
-               && relatedTodo->dtStart() <= todo->dtDue()) {
+    } else if (relatedTodo && relatedTodo->hasStartDate() &&
+               relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
     } else if (!mEndDt.isValid() || (KDateTime::currentLocalDateTime() < mEndDt)) {

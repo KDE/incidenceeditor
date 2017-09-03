@@ -20,10 +20,11 @@
 #ifndef INCIDENCEEDITOR_OPENCOMPOSERJOB_H
 #define INCIDENCEEDITOR_OPENCOMPOSERJOB_H
 
-#include <KIdentityManagement/Identity>
-#include <kmime/kmime_message.h>
+#include <KMime/Message>
 
+#include <KIdentityManagement/Identity>
 #include <KJob>
+
 namespace IncidenceEditorNG {
 // Opens a Composer with a mail with one attachment (costructed my ITIPHandler)
 class OpenComposerJob : public KJob

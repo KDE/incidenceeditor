@@ -19,12 +19,13 @@
 
 #include "opencomposerjob.h"
 
-#include <QObject>
-#include <QtDBus>
-#include <QProcess>
+#include <KDBusServiceStarter>
+#include <KLocalizedString>
 
-#include <klocalizedstring.h>
-#include <kdbusservicestarter.h>
+#include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QProcess>
+#include <QTimer>
 
 using namespace IncidenceEditorNG;
 
