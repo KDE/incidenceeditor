@@ -92,7 +92,6 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
     updateButtonState();
 
     topLayout->addWidget(m_buttons);
-    setLayout(topLayout);
 }
 
 IndividualMailDialog::~IndividualMailDialog()
