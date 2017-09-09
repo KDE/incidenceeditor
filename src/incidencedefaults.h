@@ -81,7 +81,7 @@ public:
       defaults for new incidences that where created with a given time slot.
       @param startDT The start date time to set on the incidence.
     */
-    void setStartDateTime(const KDateTime &startDT);
+    void setStartDateTime(const QDateTime &startDT);
 
     /**
       Set the end date/time to use for passed incidences. This defaults to the
@@ -89,7 +89,7 @@ public:
       defaults for new incidences that where created with a given time slot.
       @param endDT The start date time to set on the incidence.
     */
-    void setEndDateTime(const KDateTime &endDT);
+    void setEndDateTime(const QDateTime &endDT);
 
     /**
       Sets the default values for @param incidence. This method is merely meant for

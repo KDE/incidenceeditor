@@ -61,8 +61,8 @@ public:
     QStringList mEmails;
     QString mGroupWareDomain;
     KCalCore::Incidence::Ptr mRelatedIncidence;
-    KDateTime mStartDt;
-    KDateTime mEndDt;
+    QDateTime mStartDt;
+    QDateTime mEndDt;
     bool mCleanupTemporaryFiles;
 
     /// Methods
@@ -140,11 +140,11 @@ KCalCore::Attendee::Ptr IncidenceDefaultsPrivate::organizerAsAttendee(
 
 void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) const
 {
-    KDateTime startDT;
+    QDateTime startDT;
     if (mStartDt.isValid()) {
         startDT = mStartDt;
     } else {
-        startDT = KDateTime::currentLocalDateTime();
+        startDT = QDateTime::currentDateTime();
 
         if (KCalPrefs::instance()->startTime().isValid()) {
             startDT.setTime(KCalPrefs::instance()->startTime().time());
@@ -155,10 +155,10 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
     const int defaultDuration = (defaultDurationTime.hour() * 3600) +
                                 (defaultDurationTime.minute() * 60);
 
-    const KDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
+    const QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
-    event->setDtStart(startDT);
-    event->setDtEnd(endDT);
+    event->setDtStart(KDateTime(startDT));
+    event->setDtEnd(KDateTime(endDT));
     event->setTransparency(KCalCore::Event::Opaque);
 
     if (KCalPrefs::instance()->defaultEventReminders()) {
@@ -168,8 +168,8 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
 
 void IncidenceDefaultsPrivate::journalDefaults(const KCalCore::Journal::Ptr &journal) const
 {
-    const KDateTime startDT = mStartDt.isValid() ? mStartDt : KDateTime::currentLocalDateTime();
-    journal->setDtStart(startDT);
+    const QDateTime startDT = mStartDt.isValid() ? mStartDt : QDateTime::currentDateTime();
+    journal->setDtStart(KDateTime(startDT));
     journal->setAllDay(true);
 }
 
@@ -181,28 +181,28 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) con
     }
 
     if (mEndDt.isValid()) {
-        todo->setDtDue(mEndDt, true /** first */);
+        todo->setDtDue(KDateTime(mEndDt), true /** first */);
     } else if (relatedTodo && relatedTodo->hasDueDate()) {
         todo->setDtDue(relatedTodo->dtDue(true), true /** first */);
         todo->setAllDay(relatedTodo->allDay());
     } else if (relatedTodo) {
         todo->setDtDue(KDateTime());
     } else {
-        todo->setDtDue(KDateTime::currentLocalDateTime().addDays(1), true /** first */);
+        todo->setDtDue(KDateTime(QDateTime::currentDateTime().addDays(1)), true /** first */);
     }
 
     if (mStartDt.isValid()) {
-        todo->setDtStart(mStartDt);
+        todo->setDtStart(KDateTime(mStartDt));
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(KDateTime());
     } else if (relatedTodo && relatedTodo->hasStartDate() &&
                relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
-    } else if (!mEndDt.isValid() || (KDateTime::currentLocalDateTime() < mEndDt)) {
-        todo->setDtStart(KDateTime::currentLocalDateTime());
+    } else if (!mEndDt.isValid() || (QDateTime::currentDateTime() < mEndDt)) {
+        todo->setDtStart(KDateTime(QDateTime::currentDateTime()));
     } else {
-        todo->setDtStart(mEndDt.addDays(-1));
+        todo->setDtStart(KDateTime(mEndDt.addDays(-1)));
     }
 
     todo->setCompleted(false);
@@ -339,13 +339,13 @@ void IncidenceDefaults::setRelatedIncidence(const KCalCore::Incidence::Ptr &inci
     d->mRelatedIncidence = incidence;
 }
 
-void IncidenceDefaults::setStartDateTime(const KDateTime &startDT)
+void IncidenceDefaults::setStartDateTime(const QDateTime &startDT)
 {
     Q_D(IncidenceDefaults);
     d->mStartDt = startDT;
 }
 
-void IncidenceDefaults::setEndDateTime(const KDateTime &endDT)
+void IncidenceDefaults::setEndDateTime(const QDateTime &endDT)
 {
     Q_D(IncidenceDefaults);
     d->mEndDt = endDT;
