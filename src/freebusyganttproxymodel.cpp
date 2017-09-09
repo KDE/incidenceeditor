@@ -25,7 +25,6 @@
 #include <KCalCore/FreeBusyPeriod>
 
 #include <KLocalizedString>
-#include <KSystemTimeZones>
 
 #include <QLocale>
 
@@ -56,7 +55,6 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 
     // if the index is valid, then it corrsponds to a free busy period
-    KDateTime::Spec timeSpec = KSystemTimeZones::local();
     KCalCore::FreeBusyPeriod period
         = sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).
           value<KCalCore::FreeBusyPeriod>();
@@ -65,13 +63,13 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     case KGantt::ItemTypeRole:
         return KGantt::TypeTask;
     case KGantt::StartTimeRole:
-        return period.start().toTimeSpec(timeSpec).dateTime();
+        return period.start().toLocalZone().dateTime();
     case KGantt::EndTimeRole:
-        return period.end().toTimeSpec(timeSpec).dateTime();
+        return period.end().toLocalZone().dateTime();
     case Qt::BackgroundRole:
         return QColor(Qt::red);
     case Qt::ToolTipRole:
-        return tooltipify(period, timeSpec);
+        return tooltipify(period);
     case Qt::DisplayRole:
         return sourceModel()->data(source_index.parent(), Qt::DisplayRole);
     default:
@@ -79,8 +77,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 }
 
-QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &period,
-                                            const KDateTime::Spec &timeSpec) const
+QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &period) const
 {
     QString toolTip = QStringLiteral("<qt>");
     toolTip += QStringLiteral("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QStringLiteral(
@@ -102,15 +99,13 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &peri
                + i18nc("@info:tooltip period start time",
                        "Start:") + QStringLiteral("</i>") + QStringLiteral(
         "&nbsp;");
-    toolTip += QLocale::system().toString(period.start().toTimeSpec(
-                                              timeSpec).dateTime(), QLocale::ShortFormat);
+    toolTip += QLocale().toString(period.start().toLocalZone().dateTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
     toolTip += QStringLiteral("<i>")
                + i18nc("@info:tooltip period end time",
                        "End:") + QStringLiteral("</i>") + QStringLiteral(
         "&nbsp;");
-    toolTip += QLocale::system().toString(period.end().toTimeSpec(
-                                              timeSpec).dateTime(), QLocale::ShortFormat);
+    toolTip += QLocale().toString(period.end().toLocalZone().dateTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
     toolTip += QStringLiteral("</qt>");
     return toolTip;

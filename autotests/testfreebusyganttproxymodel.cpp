@@ -44,24 +44,24 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     QVERIFY(ganttModel->rowCount() == 0);
 
-    const KDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), KDateTime::UTC);
-    const KDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), KDateTime::UTC);
+    const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), Qt::UTC);
+    const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), Qt::UTC);
     KCalCore::Attendee::Ptr a1(new KCalCore::Attendee(QStringLiteral("fred"), QStringLiteral("fred@example.com")));
     KCalCore::FreeBusy::Ptr fb1(new KCalCore::FreeBusy());
 
-    fb1->addPeriod(dt1, KCalCore::Duration(60 * 60));
-    fb1->addPeriod(dt2, KCalCore::Duration(60 * 60));
+    fb1->addPeriod(KDateTime(dt1), KCalCore::Duration(60 * 60));
+    fb1->addPeriod(KDateTime(dt2), KCalCore::Duration(60 * 60));
 
     CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, nullptr));
     item1->setFreeBusy(fb1);
 
-    const KDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), KDateTime::UTC);
-    const KDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), KDateTime::UTC);
+    const QDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), Qt::UTC);
+    const QDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), Qt::UTC);
     KCalCore::Attendee::Ptr a2(new KCalCore::Attendee(QStringLiteral("joe"), QStringLiteral("joe@example.com")));
     KCalCore::FreeBusy::Ptr fb2(new KCalCore::FreeBusy());
 
-    fb2->addPeriod(dt3, KCalCore::Duration(60 * 60));
-    fb2->addPeriod(dt4, KCalCore::Duration(60 * 60));
+    fb2->addPeriod(KDateTime(dt3), KCalCore::Duration(60 * 60));
+    fb2->addPeriod(KDateTime(dt4), KCalCore::Duration(60 * 60));
 
     CalendarSupport::FreeBusyItem::Ptr item2(new CalendarSupport::FreeBusyItem(a2, nullptr));
     item2->setFreeBusy(fb2);
@@ -92,9 +92,9 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QVERIFY(child0_1.isValid());
 
     QCOMPARE(child0_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
-    QCOMPARE(child0_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt1.dateTime());
+    QCOMPARE(child0_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt1);
     QCOMPARE(child0_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
-    QCOMPARE(child0_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt2.dateTime());
+    QCOMPARE(child0_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt2);
 
     QModelIndex child1_0 = ganttModel->index(0, 0, parent1);
     QModelIndex child1_1 = ganttModel->index(1, 0, parent1);
@@ -102,7 +102,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QVERIFY(child1_1.isValid());
 
     QCOMPARE(child1_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
-    QCOMPARE(child1_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt3.dateTime());
+    QCOMPARE(child1_0.data(KGantt::StartTimeRole).value<QDateTime>(), dt3);
     QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
-    QCOMPARE(child1_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt4.dateTime());
+    QCOMPARE(child1_1.data(KGantt::StartTimeRole).value<QDateTime>(), dt4);
 }

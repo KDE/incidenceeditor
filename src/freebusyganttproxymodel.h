@@ -23,8 +23,6 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KDateTime>
-
 #include <QSortFilterProxyModel>
 
 namespace KCalCore {
@@ -48,8 +46,7 @@ class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyMo
 public:
     explicit FreeBusyGanttProxyModel(QObject *parent = nullptr);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    QString tooltipify(const KCalCore::FreeBusyPeriod &period,
-                       const KDateTime::Spec &timeSpec) const;
+    QString tooltipify(const KCalCore::FreeBusyPeriod &period) const;
 };
 }
 
