@@ -102,8 +102,8 @@ SchedulingDialog::~SchedulingDialog()
 {
 }
 
-void SchedulingDialog::slotUpdateIncidenceStartEnd(const KDateTime &startDateTime,
-                                                   const KDateTime &endDateTime)
+void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTime,
+                                                   const QDateTime &endDateTime)
 {
     mVisualWidget->slotUpdateIncidenceStartEnd(startDateTime, endDateTime);
 }

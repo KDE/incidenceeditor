@@ -21,8 +21,7 @@
 #ifndef INCIDENCEEDITOR_VISUALFREEBUSYWIDGET_H
 #define INCIDENCEEDITOR_VISUALFREEBUSYWIDGET_H
 
-#include <KDateTime>
-
+#include <QDateTime>
 #include <QWidget>
 
 namespace KGantt {
@@ -50,10 +49,10 @@ public:
     ~VisualFreeBusyWidget();
 
 public Q_SLOTS:
-    void slotUpdateIncidenceStartEnd(const KDateTime &, const KDateTime &);
+    void slotUpdateIncidenceStartEnd(const QDateTime &, const QDateTime &);
 
 Q_SIGNALS:
-    void dateTimesChanged(const KDateTime &, const KDateTime &);
+    void dateTimesChanged(const QDateTime &, const QDateTime &);
     void manualReload();
 
 protected Q_SLOTS:
@@ -62,7 +61,7 @@ protected Q_SLOTS:
     void slotZoomToTime();
     void slotPickDate();
     void showAttendeeStatusMenu();
-    void slotIntervalColorRectangleMoved(const KDateTime &start, const KDateTime &end);
+    void slotIntervalColorRectangleMoved(const QDateTime &start, const QDateTime &end);
 
 private:
     void splitterMoved();
@@ -74,7 +73,7 @@ private:
     KComboBox *mScaleCombo = nullptr;
     FreeBusyGanttProxyModel *mModel = nullptr;
 
-    KDateTime mDtStart, mDtEnd;
+    QDateTime mDtStart, mDtEnd;
 };
 }
 #endif

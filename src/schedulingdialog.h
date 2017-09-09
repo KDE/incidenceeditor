@@ -24,7 +24,7 @@
 #include "ui_schedulingdialog.h"
 
 #include <QDialog>
-#include <KDateTime>
+#include <QDateTime>
 
 namespace CalendarSupport {
 class FreePeriodModel;
@@ -46,7 +46,7 @@ public:
     QTime selectedStartTime() const;
 
 public Q_SLOTS:
-    void slotUpdateIncidenceStartEnd(const KDateTime &startDateTime, const KDateTime &endDateTime);
+    void slotUpdateIncidenceStartEnd(const QDateTime &startDateTime, const QDateTime &endDateTime);
 
 Q_SIGNALS:
     void startDateChanged(const QDate &newDate);

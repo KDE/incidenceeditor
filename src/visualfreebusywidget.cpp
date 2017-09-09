@@ -295,12 +295,12 @@ void VisualFreeBusyWidget::showAttendeeStatusMenu()
 void VisualFreeBusyWidget::slotCenterOnStart()
 {
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-    int daysTo = grid->startDateTime().daysTo(mDtStart.dateTime());
+    int daysTo = grid->startDateTime().daysTo(mDtStart);
     mGanttGraphicsView->horizontalScrollBar()->setValue(daysTo * 800);
 }
 
-void VisualFreeBusyWidget::slotIntervalColorRectangleMoved(const KDateTime &start,
-                                                           const KDateTime &end)
+void VisualFreeBusyWidget::slotIntervalColorRectangleMoved(const QDateTime &start,
+                                                           const QDateTime &end)
 {
     mDtStart = start;
     mDtEnd = end;
@@ -323,8 +323,8 @@ void VisualFreeBusyWidget::slotScaleChanged(int newScale)
     mGanttGrid->setScale((KGantt::DateTimeGrid::Scale)value);
 }
 
-void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const KDateTime &dtFrom,
-                                                       const KDateTime &dtTo)
+void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom,
+                                                       const QDateTime &dtTo)
 {
     mDtStart = dtFrom;
     mDtEnd = dtTo;
