@@ -20,14 +20,13 @@
 
 #include "incidencedatetime.h"
 #include "ui_dialogdesktop.h"
+#include "incidenceeditor_debug.h"
 
 #include <CalendarSupport/KCalPrefs>
 
 #include <KCalCore/ICalTimeZones>
 #include <KCalUtils/IncidenceFormatter>
 
-#include "incidenceeditor_debug.h"
-#include <KSystemTimeZone>
 #include <QTimeZone>
 
 using namespace IncidenceEditorNG;
@@ -851,8 +850,7 @@ void IncidenceDateTime::updateStartToolTips()
             = KCalUtils::IncidenceFormatter::dateTimeToString(
             currentStartDateTime(),
             mUi->mWholeDayCheck->isChecked(),
-            false,
-            KSystemTimeZones::local());
+            false);
         mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
         mUi->mStartTimeEdit->setToolTip(i18n("Starts: %1", datetimeStr));
     } else {
@@ -868,8 +866,7 @@ void IncidenceDateTime::updateEndToolTips()
             = KCalUtils::IncidenceFormatter::dateTimeToString(
             currentEndDateTime(),
             mUi->mWholeDayCheck->isChecked(),
-            false,
-            KSystemTimeZones::local());
+            false);
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18n("Due on: %1", datetimeStr));
             mUi->mEndTimeEdit->setToolTip(i18n("Due on: %1", datetimeStr));
