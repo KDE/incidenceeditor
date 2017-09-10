@@ -51,7 +51,6 @@
 #include <KCalUtils/Stringify>
 
 #include <KMessageBox>
-#include <KSystemTimeZones>
 #include <KSharedConfig>
 
 #include <QCloseEvent>
@@ -293,7 +292,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 {
     Q_Q(IncidenceDialog);
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KSystemTimeZones::local()));
+    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KDateTime::LocalZone));
 
     const QString fileName = QStandardPaths::locate(
         QStandardPaths::GenericDataLocation,
@@ -359,7 +358,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
 {
     Q_ASSERT(!templateName.isEmpty());
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KSystemTimeZones::local()));
+    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KDateTime::LocalZone));
 
     switch (mEditor->type()) {
     case KCalCore::Incidence::TypeEvent:
