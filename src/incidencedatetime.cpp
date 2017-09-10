@@ -848,7 +848,7 @@ void IncidenceDateTime::updateStartToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            currentStartDateTime(),
+            currentStartDateTime().dateTime(),
             mUi->mWholeDayCheck->isChecked(),
             false);
         mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
@@ -864,7 +864,7 @@ void IncidenceDateTime::updateEndToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            currentEndDateTime(),
+            currentEndDateTime().dateTime(),
             mUi->mWholeDayCheck->isChecked(),
             false);
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
