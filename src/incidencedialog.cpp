@@ -57,6 +57,7 @@
 #include <QDir>
 #include <QIcon>
 #include <QStandardPaths>
+#include <QTimeZone>^
 
 using namespace IncidenceEditorNG;
 
@@ -292,7 +293,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 {
     Q_Q(IncidenceDialog);
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KDateTime::LocalZone));
+    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     const QString fileName = QStandardPaths::locate(
         QStandardPaths::GenericDataLocation,
@@ -358,7 +359,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
 {
     Q_ASSERT(!templateName.isEmpty());
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(KDateTime::LocalZone));
+    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     switch (mEditor->type()) {
     case KCalCore::Incidence::TypeEvent:
