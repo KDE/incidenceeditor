@@ -25,6 +25,7 @@
 #include <CalendarSupport/KCalPrefs>
 
 #include <KCalCore/ICalTimeZones>
+#include <KCalCore/Utils>
 #include <KCalUtils/IncidenceFormatter>
 
 #include <QTimeZone>
@@ -848,7 +849,7 @@ void IncidenceDateTime::updateStartToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            currentStartDateTime().dateTime(),
+            KCalCore::k2q(currentStartDateTime()),
             mUi->mWholeDayCheck->isChecked(),
             false);
         mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
@@ -864,7 +865,7 @@ void IncidenceDateTime::updateEndToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            currentEndDateTime().dateTime(),
+            KCalCore::k2q(currentEndDateTime()),
             mUi->mWholeDayCheck->isChecked(),
             false);
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
