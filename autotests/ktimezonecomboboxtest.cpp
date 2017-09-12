@@ -29,18 +29,15 @@ QTEST_MAIN(KTimeZoneComboBoxTest)
 void KTimeZoneComboBoxTest::test_timeSpec()
 {
     IncidenceEditorNG::KTimeZoneComboBox combo;
-    KDateTime::Spec spec;
-    spec.setType(KDateTime::LocalZone);
-    combo.selectTimeSpec(spec);
-    if (spec.timeZone().name() != QString::fromLatin1("UTC"))
-        QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::TimeZone);   // KDateTime::Spec stores it as TimeZone, not LocalTime
+    combo.selectLocalTimeZone();
+    if (combo.selectedTimeZone().id() != "UTC")
+        QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
     else
-        QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::UTC);
+        QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
 
-    spec = KDateTime::Spec(KDateTime::ClockTime);
-    combo.selectTimeSpec(spec);
-    QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::ClockTime);
+    combo.selectTimeZone(QTimeZone());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone());
 
     combo.setFloating(true);
-    QCOMPARE(combo.selectedTimeSpec().type(), KDateTime::ClockTime);
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone());
 }

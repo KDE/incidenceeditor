@@ -168,11 +168,11 @@ void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
     enableTimeEdits();
 
     if (mUi->mTimeZoneComboStart->currentIndex() == 0) {   // Floating
-        mInitialStartDT.setTimeSpec(mInitialStartDT.toLocalZone().timeSpec());
+        mInitialStartDT.setTimeZone(QTimeZone::systemTimeZone());
     }
 
     if (mUi->mTimeZoneComboEnd->currentIndex() == 0) {   // Floating
-        mInitialEndDT.setTimeSpec(mInitialEndDT.toLocalZone().timeSpec());
+        mInitialEndDT.setTimeZone(QTimeZone::systemTimeZone());
     }
 
     mWasDirty = false;
@@ -265,7 +265,7 @@ void IncidenceDateTime::updateStartTime(const QTime &newTime)
         return;
     }
 
-    KDateTime endDateTime = currentEndDateTime();
+    KDateTime endDateTime = KCalCore::q2k(currentEndDateTime());
     const int secsep = mCurrentStartDateTime.secsTo(endDateTime);
     mCurrentStartDateTime.setTime(newTime);
     if (mUi->mEndCheck->isChecked()) {
@@ -289,7 +289,7 @@ void IncidenceDateTime::updateStartDate(const QDate &newDate)
     const bool dateChanged = mCurrentStartDateTime.date().day() != newDate.day()
                              || mCurrentStartDateTime.date().month() != newDate.month();
 
-    KDateTime endDateTime = currentEndDateTime();
+    KDateTime endDateTime = KCalCore::q2k(currentEndDateTime());
     int daysep = mCurrentStartDateTime.daysTo(endDateTime);
     mCurrentStartDateTime.setDate(newDate);
     if (mUi->mEndCheck->isChecked()) {
@@ -311,11 +311,11 @@ void IncidenceDateTime::updateStartSpec()
     const QDate prevDate = mCurrentStartDateTime.date();
 
     if (mUi->mEndCheck->isChecked()
-        && currentEndDateTime().timeSpec() == mCurrentStartDateTime.timeSpec()) {
-        mUi->mTimeZoneComboEnd->selectTimeSpec(mUi->mTimeZoneComboStart->selectedTimeSpec());
+        && currentEndDateTime().timeZone() == KCalCore::specToZone(mCurrentStartDateTime.timeSpec())) {
+        mUi->mTimeZoneComboEnd->selectTimeZone(mUi->mTimeZoneComboStart->selectedTimeZone());
     }
 
-    mCurrentStartDateTime.setTimeSpec(mUi->mTimeZoneComboStart->selectedTimeSpec());
+    mCurrentStartDateTime.setTimeSpec(KCalCore::zoneToSpec(mUi->mTimeZoneComboStart->selectedTimeZone()));
 
     const bool dateChanged = mCurrentStartDateTime.date().day() != prevDate.day()
                              || mCurrentStartDateTime.date().month() != prevDate.month();
@@ -381,12 +381,12 @@ void IncidenceDateTime::enableEndEdit(bool enable)
     checkDirtyStatus();
 }
 
-bool IncidenceDateTime::timeZonesAreLocal(const KDateTime &start, const KDateTime &end)
+bool IncidenceDateTime::timeZonesAreLocal(const QDateTime &start, const QDateTime &end)
 {
     // Returns false if the incidence start or end timezone is not the local zone.
 
-    if ((start.isValid() && !start.timeSpec().isLocalZone())
-        || (end.isValid() && !end.timeSpec().isLocalZone())) {
+    if ((start.isValid() && start.timeZone() != QTimeZone::systemTimeZone())
+        || (end.isValid() && end.timeZone() != QTimeZone::systemTimeZone())) {
         return false;
     } else {
         return true;
@@ -403,12 +403,12 @@ void IncidenceDateTime::enableTimeEdits()
     if (mUi->mStartCheck->isChecked()) {
         mUi->mStartTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboStart->setEnabled(!wholeDayChecked);
-        mUi->mTimeZoneComboStart->setFloating(wholeDayChecked, mInitialStartDT.timeSpec());
+        mUi->mTimeZoneComboStart->setFloating(wholeDayChecked, mInitialStartDT.timeZone());
     }
     if (mUi->mEndCheck->isChecked()) {
         mUi->mEndTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboEnd->setEnabled(!wholeDayChecked);
-        mUi->mTimeZoneComboEnd->setFloating(wholeDayChecked, mInitialEndDT.timeSpec());
+        mUi->mTimeZoneComboEnd->setFloating(wholeDayChecked, mInitialEndDT.timeZone());
     }
 
     /**
@@ -495,8 +495,8 @@ bool IncidenceDateTime::isDirty(const KCalCore::Event::Ptr &event) const
     } else {
         if (currentStartDateTime() != mInitialStartDT
             || currentEndDateTime() != mInitialEndDT
-            || currentStartDateTime().timeSpec() != mInitialStartDT.timeSpec()
-            || currentEndDateTime().timeSpec() != mInitialEndDT.timeSpec()) {
+            || currentStartDateTime().timeZone() != mInitialStartDT.timeZone()
+            || currentEndDateTime().timeZone() != mInitialEndDT.timeZone()) {
             return true;
         }
     }
@@ -525,20 +525,20 @@ bool IncidenceDateTime::isDirty(const KCalCore::Journal::Ptr &journal) const
 
 /// Private methods
 
-KDateTime IncidenceDateTime::currentStartDateTime() const
+QDateTime IncidenceDateTime::currentStartDateTime() const
 {
-    return KDateTime(
+    return QDateTime(
         mUi->mStartDateEdit->date(),
         mUi->mStartTimeEdit->time(),
-        mUi->mTimeZoneComboStart->selectedTimeSpec());
+        mUi->mTimeZoneComboStart->selectedTimeZone());
 }
 
-KDateTime IncidenceDateTime::currentEndDateTime() const
+QDateTime IncidenceDateTime::currentEndDateTime() const
 {
-    return KDateTime(
+    return QDateTime(
         mUi->mEndDateEdit->date(),
         mUi->mEndTimeEdit->time(),
-        mUi->mTimeZoneComboEnd->selectedTimeSpec());
+        mUi->mTimeZoneComboEnd->selectedTimeZone());
 }
 
 void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
@@ -728,11 +728,11 @@ void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
         event->setAllDay(true);
 
         // TODO: need to change this.
-        KDateTime eventDTStart = currentStartDateTime();
+        KDateTime eventDTStart = KCalCore::q2k(currentStartDateTime());
         eventDTStart.setDateOnly(true);
         event->setDtStart(eventDTStart);
 
-        KDateTime eventDTEnd = currentEndDateTime();
+        KDateTime eventDTEnd = KCalCore::q2k(currentEndDateTime());
         eventDTEnd.setDateOnly(true);
 
         event->setDtEnd(eventDTEnd);
@@ -740,8 +740,8 @@ void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
         event->setAllDay(false);
 
         // set date/time end
-        event->setDtStart(currentStartDateTime());
-        event->setDtEnd(currentEndDateTime());
+        event->setDtStart(KCalCore::q2k(currentStartDateTime()));
+        event->setDtEnd(KCalCore::q2k(currentEndDateTime()));
     }
 
     // Free == Event::Transparent
@@ -754,20 +754,20 @@ void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
 void IncidenceDateTime::save(const KCalCore::Todo::Ptr &todo)
 {
     if (mUi->mStartCheck->isChecked()) {
-        todo->setDtStart(currentStartDateTime());
+        todo->setDtStart(KCalCore::q2k(currentStartDateTime()));
         // Set allday must be executed after setDtStart
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
         if (currentStartDateTime() != mInitialStartDT) {
             // We don't offer any way to edit the current completed occurrence.
             // So, if the start date changes, reset the dtRecurrence
-            todo->setDtRecurrence(currentStartDateTime());
+            todo->setDtRecurrence(KCalCore::q2k(currentStartDateTime()));
         }
     } else {
         todo->setDtStart(KDateTime());
     }
 
     if (mUi->mEndCheck->isChecked()) {
-        todo->setDtDue(currentEndDateTime(), true /** first */);
+        todo->setDtDue(KCalCore::q2k(currentEndDateTime()), true /** first */);
         // Set allday must be executed after setDtDue
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
     } else {
@@ -780,61 +780,40 @@ void IncidenceDateTime::save(const KCalCore::Journal::Ptr &journal)
     journal->setAllDay(mUi->mWholeDayCheck->isChecked());
 
     if (mUi->mWholeDayCheck->isChecked()) {   // All day journal
-        KDateTime journalDTStart = currentStartDateTime();
+        KDateTime journalDTStart = KCalCore::q2k(currentStartDateTime());
         journalDTStart.setDateOnly(true);
         journal->setDtStart(journalDTStart);
     } else { // Timed Journal
         // set date/time end
-        journal->setDtStart(currentStartDateTime());
+        journal->setDtStart(KCalCore::q2k(currentStartDateTime()));
     }
 }
 
 void IncidenceDateTime::setDateTimes(const KDateTime &start, const KDateTime &end)
 {
-    const KDateTime::Spec startSpec = start.timeSpec();
-    const KDateTime::Spec endSpec = end.timeSpec();
-
-    // Combo boxes only have system time zones
-    if (startSpec.type() == KDateTime::TimeZone) {
-        const auto systemTz = QTimeZone(startSpec.timeZone().name().toUtf8());
-        if (!systemTz.isValid()) {
-            mTimeZones.push_back(startSpec.timeZone().name().toUtf8());
-        }
-    }
-
-    if (endSpec.type() == KDateTime::TimeZone) {
-        const auto systemTz = QTimeZone(endSpec.timeZone().name().toUtf8());
-        if (!systemTz.isValid()) {
-            mTimeZones.push_back(endSpec.timeZone().name().toUtf8());
-        }
-    }
-
-    mUi->mTimeZoneComboStart->setAdditionalTimeZones(mTimeZones);
-    mUi->mTimeZoneComboEnd->setAdditionalTimeZones(mTimeZones);
-
     if (start.isValid()) {
         mUi->mStartDateEdit->setDate(start.date());
         mUi->mStartTimeEdit->setTime(start.time());
-        mUi->mTimeZoneComboStart->selectTimeSpec(start.timeSpec());
+        mUi->mTimeZoneComboStart->selectTimeZone(KCalCore::specToZone(start.timeSpec()));
     } else {
         KDateTime dt(QDate::currentDate(), QTime::currentTime());
         mUi->mStartDateEdit->setDate(dt.date());
         mUi->mStartTimeEdit->setTime(dt.time());
-        mUi->mTimeZoneComboStart->selectTimeSpec(dt.timeSpec());
+        mUi->mTimeZoneComboStart->selectTimeZone(KCalCore::specToZone(dt.timeSpec()));
     }
 
     if (end.isValid()) {
         mUi->mEndDateEdit->setDate(end.date());
         mUi->mEndTimeEdit->setTime(end.time());
-        mUi->mTimeZoneComboEnd->selectTimeSpec(end.timeSpec());
+        mUi->mTimeZoneComboEnd->selectTimeZone(KCalCore::specToZone(end.timeSpec()));
     } else {
         KDateTime dt(QDate::currentDate(), QTime::currentTime().addSecs(60 * 60));
         mUi->mEndDateEdit->setDate(dt.date());
         mUi->mEndTimeEdit->setTime(dt.time());
-        mUi->mTimeZoneComboEnd->selectTimeSpec(dt.timeSpec());
+        mUi->mTimeZoneComboEnd->selectTimeZone(KCalCore::specToZone(dt.timeSpec()));
     }
 
-    mCurrentStartDateTime = currentStartDateTime();
+    mCurrentStartDateTime = KCalCore::q2k(currentStartDateTime());
     Q_EMIT startDateChanged(start.date());
     Q_EMIT startTimeChanged(start.time());
     Q_EMIT endDateChanged(end.date());
@@ -849,7 +828,7 @@ void IncidenceDateTime::updateStartToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            KCalCore::k2q(currentStartDateTime()),
+            currentStartDateTime(),
             mUi->mWholeDayCheck->isChecked(),
             false);
         mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
@@ -865,7 +844,7 @@ void IncidenceDateTime::updateEndToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr
             = KCalUtils::IncidenceFormatter::dateTimeToString(
-            KCalCore::k2q(currentEndDateTime()),
+            currentEndDateTime(),
             mUi->mWholeDayCheck->isChecked(),
             false);
         if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
@@ -896,8 +875,8 @@ void IncidenceDateTime::setTimes(const KDateTime &start, const KDateTime &end)
 
     mUi->mEndTimeEdit->setTime(end.time());
 
-    mUi->mTimeZoneComboStart->selectTimeSpec(start.timeSpec());
-    mUi->mTimeZoneComboEnd->selectTimeSpec(end.timeSpec());
+    mUi->mTimeZoneComboStart->selectTimeZone(KCalCore::specToZone(start.timeSpec()));
+    mUi->mTimeZoneComboEnd->selectTimeZone(KCalCore::specToZone(end.timeSpec()));
 
 //   emitDateTimeStr();
 }
@@ -960,13 +939,6 @@ bool IncidenceDateTime::isValid() const
     }
 }
 
-static QString timespecToString(const KDateTime::Spec &spec)
-{
-    QString str = QLatin1String("type=") + QString::number(spec.type()) + QLatin1String(
-        "; timezone=") + spec.timeZone().name();
-    return str;
-}
-
 void IncidenceDateTime::printDebugInfo() const
 {
     qCDebug(INCIDENCEEDITOR_LOG) << "startDateTimeEnabled()          : " << startDateTimeEnabled();
@@ -988,14 +960,10 @@ void IncidenceDateTime::printDebugInfo() const
     qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT                   : "
                                  << mInitialEndDT.toString();
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().timeSpec(): " << timespecToString(
-        currentStartDateTime().timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().timeSpec()  : " << timespecToString(
-        currentStartDateTime().timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT.timeSpec()       : " << timespecToString(
-        mInitialStartDT.timeSpec());
-    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT.timeSpec()         : " << timespecToString(
-        mInitialEndDT.timeSpec());
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentStartDateTime().timeZone(): " << currentStartDateTime().timeZone().id();
+    qCDebug(INCIDENCEEDITOR_LOG) << "currentEndDateTime().timeZone()  : " << currentEndDateTime().timeZone().id();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialStartDT.timeZone()       : " << mInitialStartDT.timeZone().id();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mInitialEndDT.timeZone()         : " << mInitialEndDT.timeZone().id();
 
     qCDebug(INCIDENCEEDITOR_LOG) << "dirty test1: "
                                  << (mLoadedIncidence->allDay()
@@ -1020,11 +988,9 @@ void IncidenceDateTime::printDebugInfo() const
         qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.2: "
                                      << (currentEndDateTime() != mInitialEndDT);
         qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.3: "
-                                     << (currentStartDateTime().timeSpec()
-            != mInitialStartDT.timeSpec());
+                                     << (currentStartDateTime().timeZone() != mInitialStartDT.timeZone());
         qCDebug(INCIDENCEEDITOR_LOG) << "dirty test4.4: "
-                                     << (currentEndDateTime().timeSpec()
-            != mInitialEndDT.timeSpec());
+                                     << (currentEndDateTime().timeZone() != mInitialEndDT.timeZone());
     }
 }
 

@@ -60,8 +60,8 @@ public:
     QTime endTime() const; /// Returns the current endtime.
 
     /// Created from the values in the widgets
-    KDateTime currentStartDateTime() const;
-    KDateTime currentEndDateTime() const;
+    QDateTime currentStartDateTime() const;
+    QDateTime currentEndDateTime() const;
 
     void setStartTime(const QTime &newTime);
     void setStartDate(const QDate &newDate);
@@ -122,10 +122,9 @@ private:
     void setDateTimes(const KDateTime &start, const KDateTime &end);
     void setTimes(const KDateTime &start, const KDateTime &end);
     void setTimeZoneLabelEnabled(bool enable);
-    bool timeZonesAreLocal(const KDateTime &start, const KDateTime &end);
+    bool timeZonesAreLocal(const QDateTime &start, const QDateTime &end);
 
 private:
-    QVector<QByteArray> mTimeZones;
     Ui::EventOrTodoDesktop *mUi = nullptr;
 
     QDate mActiveDate;
@@ -134,8 +133,8 @@ private:
      * in account recurrence if needed. The values are calculated once on load().
      * and don't change afterwards.
      */
-    KDateTime mInitialStartDT;
-    KDateTime mInitialEndDT;
+    QDateTime mInitialStartDT;
+    QDateTime mInitialEndDT;
 
     /**
      * We need to store the current start date/time to be able to update the end

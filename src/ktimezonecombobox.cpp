@@ -19,13 +19,10 @@
 
 #include "ktimezonecombobox.h"
 
-#include <KCalCore/ICalTimeZones>
-
 #include <KLocalizedString>
-#include <KTimeZone>
-#include <KSystemTimeZones>
 
 #include <QTimeZone>
+#include <QVector>
 
 using namespace IncidenceEditorNG;
 
@@ -34,14 +31,12 @@ class Q_DECL_HIDDEN KTimeZoneComboBox::Private
 public:
     Private(KTimeZoneComboBox *parent)
         : mParent(parent)
-        , mAdditionalZones(0)
     {
     }
 
     void fillComboBox();
     KTimeZoneComboBox *const mParent;
-    QStringList mZones;
-    QVector<QByteArray> mAdditionalZones;
+    QVector<QByteArray> mZones;
 };
 
 void KTimeZoneComboBox::Private::fillComboBox()
@@ -52,24 +47,17 @@ void KTimeZoneComboBox::Private::fillComboBox()
     // Read all system time zones
     const QList<QByteArray> lstTimeZoneIds = QTimeZone::availableTimeZoneIds();
     mZones.reserve(lstTimeZoneIds.count());
-    for (const QByteArray &id : lstTimeZoneIds) {
-        mZones.push_back(QString::fromLatin1(id));
-    }
-    mZones.sort();
-
-    // Prepend the list of additional timezones
-    for (const QByteArray &id : qAsConst(mAdditionalZones)) {
-        mZones.prepend(QString::fromLatin1(id));
-    }
+    std::copy(lstTimeZoneIds.begin(), lstTimeZoneIds.end(), std::back_inserter(mZones));
+    std::sort(mZones.begin(), mZones.end());
 
     // Prepend Local, UTC and Floating, for convenience
-    mZones.prepend(QStringLiteral("UTC"));        // do not use i18n here  index=2
-    mZones.prepend(QStringLiteral("Floating"));   // do not use i18n here  index=1
-    mZones.prepend(QString::fromLatin1(QTimeZone::systemTimeZoneId()));    // index=0
+    mZones.prepend("UTC");        // do not use i18n here  index=2
+    mZones.prepend("Floating");   // do not use i18n here  index=1
+    mZones.prepend(QTimeZone::systemTimeZoneId());    // index=0
 
     // Put translated zones into the combobox
-    for (const QString &z : qAsConst(mZones)) {
-        mParent->addItem(i18n(z.toUtf8().constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
+    for (const auto &z : qAsConst(mZones)) {
+        mParent->addItem(i18n(z.constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
     }
 }
 
@@ -80,24 +68,18 @@ KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
     d->fillComboBox();
 }
 
-void KTimeZoneComboBox::setAdditionalTimeZones(const QVector<QByteArray> &zones)
-{
-    d->mAdditionalZones = zones;
-    d->fillComboBox();
-}
-
 KTimeZoneComboBox::~KTimeZoneComboBox()
 {
     delete d;
 }
 
-void KTimeZoneComboBox::selectTimeSpec(const KDateTime::Spec &spec)
+void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
 {
     int nCurrentlySet = -1;
 
     int i = 0;
-    for (const QString &z : qAsConst(d->mZones)) {
-        if (z == spec.timeZone().name()) {
+    for (const auto &z : qAsConst(d->mZones)) {
+        if (z == zone.id()) {
             nCurrentlySet = i;
             break;
         }
@@ -105,9 +87,9 @@ void KTimeZoneComboBox::selectTimeSpec(const KDateTime::Spec &spec)
     }
 
     if (nCurrentlySet == -1) {
-        if (spec.isUtc()) {
+        if (zone == QTimeZone::utc()) {
             setCurrentIndex(2);   // UTC
-        } else if (spec.isLocalZone()) {
+        } else if (zone == QTimeZone::systemTimeZone()) {
             setCurrentIndex(0);   // Local
         } else {
             setCurrentIndex(1);   // Floating event
@@ -117,46 +99,38 @@ void KTimeZoneComboBox::selectTimeSpec(const KDateTime::Spec &spec)
     }
 }
 
-KDateTime::Spec KTimeZoneComboBox::selectedTimeSpec() const
+QTimeZone KTimeZoneComboBox::selectedTimeZone() const
 {
-    KDateTime::Spec spec;
+    QTimeZone zone;
     if (currentIndex() >= 0) {
         if (currentIndex() == 0) {   // Local
-            spec = KDateTime::Spec(KDateTime::LocalZone);
+            zone = QTimeZone::systemTimeZone();
         } else if (currentIndex() == 1) {   // Floating event
-            spec = KDateTime::Spec(KDateTime::ClockTime);
+            zone = QTimeZone();
         } else if (currentIndex() == 2) {   // UTC
-            spec.setType(KDateTime::UTC);
+            zone = QTimeZone::utc();
         } else {
-            const KTimeZone systemTz = KSystemTimeZones::zone(d->mZones[currentIndex()]);
-            // If it's not valid, then it's an additional Tz
-            if (systemTz.isValid()) {
-                spec.setType(systemTz);
-            } else {
-                KCalCore::ICalTimeZones zones;
-                const KCalCore::ICalTimeZone additionalTz = zones.zone(d->mZones[currentIndex()]);
-                spec.setType(additionalTz);
-            }
+            zone = QTimeZone(d->mZones[currentIndex()]);
         }
     }
 
-    return spec;
+    return zone;
 }
 
-void KTimeZoneComboBox::selectLocalTimeSpec()
+void KTimeZoneComboBox::selectLocalTimeZone()
 {
-    selectTimeSpec(KDateTime::Spec(KSystemTimeZones::local()));
+    selectTimeZone(QTimeZone::systemTimeZone());
 }
 
-void KTimeZoneComboBox::setFloating(bool floating, const KDateTime::Spec &spec)
+void KTimeZoneComboBox::setFloating(bool floating, const QTimeZone &zone)
 {
     if (floating) {
-        selectTimeSpec(KDateTime::Spec(KDateTime::ClockTime));
+        selectTimeZone(QTimeZone());
     } else {
-        if (spec.isValid()) {
-            selectTimeSpec(spec);
+        if (zone.isValid()) {
+            selectTimeZone(zone);
         } else {
-            selectLocalTimeSpec();
+            selectLocalTimeZone();
         }
     }
 }

@@ -41,6 +41,7 @@
 
 #include <KEmailAddress>
 #include <KCalUtils/Stringify>
+#include <KCalCore/Utils>
 
 #include "incidenceeditor_debug.h"
 #include <QTreeView>
@@ -532,8 +533,7 @@ void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
                                                                  mDateTime->startTime(),
                                                                  duration, mConflictResolver,
                                                                  mParentWidget));
-    dialog->slotUpdateIncidenceStartEnd(mDateTime->currentStartDateTime().dateTime(),
-                                        mDateTime->currentEndDateTime().dateTime());
+    dialog->slotUpdateIncidenceStartEnd(mDateTime->currentStartDateTime(), mDateTime->currentEndDateTime());
     if (dialog->exec() == QDialog::Accepted) {
         qCDebug(INCIDENCEEDITOR_LOG) << dialog->selectedStartDate() << dialog->selectedStartTime();
         if (dialog->selectedStartDate().isValid() && dialog->selectedStartTime().isValid()) {
@@ -662,8 +662,8 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee,
                                        const KCalCore::FreeBusy::Ptr &fb)
 {
     KCalCore::Attendee::List attendees = mDataModel->attendees();
-    KDateTime startTime = mDateTime->currentStartDateTime();
-    KDateTime endTime = mDateTime->currentEndDateTime();
+    KDateTime startTime = KCalCore::q2k(mDateTime->currentStartDateTime());
+    KDateTime endTime = KCalCore::q2k(mDateTime->currentEndDateTime());
     if (attendees.contains(attendee)) {
         int row = dataModel()->attendees().indexOf(attendee);
         QModelIndex attendeeIndex = dataModel()->index(row, AttendeeTableModel::Available);
@@ -839,15 +839,15 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
 
 void IncidenceAttendee::slotEventDurationChanged()
 {
-    const KDateTime start = mDateTime->currentStartDateTime();
-    const KDateTime end = mDateTime->currentEndDateTime();
+    const QDateTime start = mDateTime->currentStartDateTime();
+    const QDateTime end = mDateTime->currentEndDateTime();
 
     if (start >= end) {   // This can happen, especially for todos.
         return;
     }
 
-    mConflictResolver->setEarliestDateTime(start);
-    mConflictResolver->setLatestDateTime(end);
+    mConflictResolver->setEarliestDateTime(KCalCore::q2k(start));
+    mConflictResolver->setLatestDateTime(KCalCore::q2k(end));
     updateFBStatus();
 }
 

@@ -27,16 +27,16 @@
 #include "incidenceeditor_export.h"
 
 #include <KComboBox>
-#include <KDateTime>
+#include <QTimeZone>
 #include <QVector>
 
 class QByteArray;
 
 namespace IncidenceEditorNG {
 /**
- * A combobox that shows the system timezones available in KSystemTimeZones::zones()
+ * A combobox that shows the system timezones available in QTimeZone
  * and provides methods to easily select the item corresponding to a given
- * KDateTime::Spec or to retrieve the KDateTime::Spec associated with the
+ * QTimeZone or to retrieve the QTimeZone associated with the
  * selected item.
  */
 class INCIDENCEEDITOR_EXPORT KTimeZoneComboBox : public KComboBox
@@ -56,33 +56,27 @@ public:
     ~KTimeZoneComboBox();
 
     /**
-      Sets additional time @p zones (usually from a calendar) which should be displayed
-      additionally to the system time zones.
-    */
-    void setAdditionalTimeZones(const QVector<QByteArray> &zones);
-
-    /**
-     * Selects the item in the combobox corresponding to the given @p spec.
+     * Selects the item in the combobox corresponding to the given @p zone.
      */
-    void selectTimeSpec(const KDateTime::Spec &spec);
+    void selectTimeZone(const QTimeZone &zone);
 
     /**
-     * Convenience version of selectTimeSpec(const KDateTime::Spec &).
+     * Convenience version of selectTimeZone(const QTimeZone &).
      * Selects the local time zone specified in the user settings.
      */
-    void selectLocalTimeSpec();
+    void selectLocalTimeZone();
 
     /**
      * If @p floating is true, selects floating time zone, otherwise
-     * if @spec is valid, selects @p spec time zone, if not selects
+     * if @zone is valid, selects @pzone time zone, if not selects
      * local time zone.
      */
-    void setFloating(bool floating, const KDateTime::Spec &spec = KDateTime::Spec());
+    void setFloating(bool floating, const QTimeZone &zone = {});
 
     /**
-     * Return the timespec associated with the currently selected item.
+     * Return the time zone associated with the currently selected item.
      */
-    KDateTime::Spec selectedTimeSpec() const;
+    QTimeZone selectedTimeZone() const;
 
 private:
     //@cond PRIVATE
