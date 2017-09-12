@@ -24,6 +24,8 @@
 #include "CalendarSupport/FreeBusyItemModel"
 #include "incidenceeditor_debug.h"
 
+#include <KCalCore/Utils>
+
 #include <QDate>
 
 static const int DEFAULT_RESOLUTION_SECONDS = 15 * 60; // 15 minutes, 1 slot = 15 minutes
@@ -37,7 +39,7 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
     , mWeekdays(7)
     , mSlotResolutionSeconds(DEFAULT_RESOLUTION_SECONDS)
 {
-    const KDateTime currentLocalDateTime = KDateTime::currentLocalDateTime();
+    const QDateTime currentLocalDateTime = QDateTime::currentDateTime();
     mTimeframeConstraint = KCalCore::Period(currentLocalDateTime, currentLocalDateTime);
 
     // trigger a reload in case any attendees were inserted before
@@ -99,7 +101,7 @@ bool ConflictResolver::containsAttendee(const KCalCore::Attendee::Ptr &attendee)
 
 void ConflictResolver::setEarliestDate(const QDate &newDate)
 {
-    KDateTime newStart = mTimeframeConstraint.start();
+    QDateTime newStart = mTimeframeConstraint.start();
     newStart.setDate(newDate);
     mTimeframeConstraint = KCalCore::Period(newStart, mTimeframeConstraint.end());
     calculateConflicts();
@@ -107,7 +109,7 @@ void ConflictResolver::setEarliestDate(const QDate &newDate)
 
 void ConflictResolver::setEarliestTime(const QTime &newTime)
 {
-    KDateTime newStart = mTimeframeConstraint.start();
+    QDateTime newStart = mTimeframeConstraint.start();
     newStart.setTime(newTime);
     mTimeframeConstraint = KCalCore::Period(newStart, mTimeframeConstraint.end());
     calculateConflicts();
@@ -115,7 +117,7 @@ void ConflictResolver::setEarliestTime(const QTime &newTime)
 
 void ConflictResolver::setLatestDate(const QDate &newDate)
 {
-    KDateTime newEnd = mTimeframeConstraint.end();
+    QDateTime newEnd = mTimeframeConstraint.end();
     newEnd.setDate(newDate);
     mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), newEnd);
     calculateConflicts();
@@ -123,7 +125,7 @@ void ConflictResolver::setLatestDate(const QDate &newDate)
 
 void ConflictResolver::setLatestTime(const QTime &newTime)
 {
-    KDateTime newEnd = mTimeframeConstraint.end();
+    QDateTime newEnd = mTimeframeConstraint.end();
     newEnd.setTime(newTime);
     mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), newEnd);
     calculateConflicts();
@@ -131,13 +133,13 @@ void ConflictResolver::setLatestTime(const QTime &newTime)
 
 void ConflictResolver::setEarliestDateTime(const KDateTime &newDateTime)
 {
-    mTimeframeConstraint = KCalCore::Period(newDateTime, mTimeframeConstraint.end());
+    mTimeframeConstraint = KCalCore::Period(KCalCore::k2q(newDateTime), mTimeframeConstraint.end());
     calculateConflicts();
 }
 
 void ConflictResolver::setLatestDateTime(const KDateTime &newDateTime)
 {
-    mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), newDateTime);
+    mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), KCalCore::k2q(newDateTime));
     calculateConflicts();
 }
 
@@ -180,16 +182,15 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &try
     }
 
     KCalCore::Period::List busyPeriods = fb->busyPeriods();
-    for (KCalCore::Period::List::Iterator it = busyPeriods.begin();
-         it != busyPeriods.end(); ++it) {
-        if ((*it).end() <= tryFrom     // busy period ends before try period
-            || (*it).start() >= tryTo) {   // busy period starts after try period
+    for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
+        if ((*it).end() <= KCalCore::k2q(tryFrom)     // busy period ends before try period
+            || (*it).start() >= KCalCore::k2q(tryTo)) {   // busy period starts after try period
             continue;
         } else {
             // the current busy period blocks the try period, try
             // after the end of the current busy period
             const int secsDuration = tryFrom.secsTo(tryTo);
-            tryFrom = (*it).end();
+            tryFrom = KCalCore::q2k((*it).end());
             tryTo = tryFrom.addSecs(secsDuration);
             // try again with the new try period
             tryDate(fb, tryFrom, tryTo);
@@ -202,8 +203,8 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &try
 
 bool ConflictResolver::findFreeSlot(const KCalCore::Period &dateTimeRange)
 {
-    KDateTime dtFrom = dateTimeRange.start();
-    KDateTime dtTo = dateTimeRange.end();
+    KDateTime dtFrom = KCalCore::q2k(dateTimeRange.start());
+    KDateTime dtTo = KCalCore::q2k(dateTimeRange.end());
     if (tryDate(dtFrom, dtTo)) {
         // Current time is acceptable
         return true;
@@ -249,8 +250,8 @@ void ConflictResolver::findAllFreeSlots()
     // 4. locate contiguous timeslots with a values of 0. these are the free time blocks.
 
     // define these locally for readability
-    const KDateTime begin = mTimeframeConstraint.start();
-    const KDateTime end = mTimeframeConstraint.end();
+    const QDateTime begin = mTimeframeConstraint.start();
+    const QDateTime end = mTimeframeConstraint.end();
 
     // calculate the time resolution
     // each timeslot in the arrays represents a unit of time
@@ -273,7 +274,7 @@ void ConflictResolver::findAllFreeSlots()
         return;
     }
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin.dateTime() << " to " << end.dateTime()
+    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin << " to " << end
                                  << "; mSlotResolutionSeconds = " << mSlotResolutionSeconds
                                  << "; range = " << range;
     // filter out attendees for which we don't have FB data
@@ -369,7 +370,7 @@ void ConflictResolver::findAllFreeSlots()
     QVector<int> fbArray(range);
     fbArray.fill(0);   // initialize to zero
     for (int slot = 0; slot < fbArray.size(); ++slot) {
-        const KDateTime dateTime = begin.addSecs(slot * mSlotResolutionSeconds);
+        const QDateTime dateTime = begin.addSecs(slot * mSlotResolutionSeconds);
         const int dayOfWeek = dateTime.date().dayOfWeek() - 1;   // bitarray is 0 indexed
         if (!mWeekdays[dayOfWeek]) {
             fbArray[slot] = 1;
@@ -418,8 +419,8 @@ void ConflictResolver::findAllFreeSlots()
                 // convert from our timeslot interval back into to normal seconds
                 // then calculate the date times of the free block based on
                 // our initial timeframe
-                const KDateTime freeBegin = begin.addSecs(free_start_i * mSlotResolutionSeconds);
-                const KDateTime freeEnd
+                const QDateTime freeBegin = begin.addSecs(free_start_i * mSlotResolutionSeconds);
+                const QDateTime freeEnd
                     = freeBegin.addSecs((free_end_i - free_start_i) * mSlotResolutionSeconds);
                 // push the free block onto the list
                 mAvailableSlots << KCalCore::Period(freeBegin, freeEnd);
@@ -464,8 +465,8 @@ void ConflictResolver::findAllFreeSlots()
 
 void ConflictResolver::calculateConflicts()
 {
-    KDateTime start = mTimeframeConstraint.start();
-    KDateTime end = mTimeframeConstraint.end();
+    KDateTime start = KCalCore::q2k(mTimeframeConstraint.start());
+    KDateTime end = KCalCore::q2k(mTimeframeConstraint.end());
     const int count = tryDate(start, end);
     Q_EMIT conflictsDetected(count);
 

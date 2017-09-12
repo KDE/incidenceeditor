@@ -63,9 +63,9 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     case KGantt::ItemTypeRole:
         return KGantt::TypeTask;
     case KGantt::StartTimeRole:
-        return period.start().toLocalZone().dateTime();
+        return period.start().toLocalTime();
     case KGantt::EndTimeRole:
-        return period.end().toLocalZone().dateTime();
+        return period.end().toLocalTime();
     case Qt::BackgroundRole:
         return QColor(Qt::red);
     case Qt::ToolTipRole:
@@ -99,13 +99,13 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &peri
                + i18nc("@info:tooltip period start time",
                        "Start:") + QStringLiteral("</i>") + QStringLiteral(
         "&nbsp;");
-    toolTip += QLocale().toString(period.start().toLocalZone().dateTime(), QLocale::ShortFormat);
+    toolTip += QLocale().toString(period.start().toLocalTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
     toolTip += QStringLiteral("<i>")
                + i18nc("@info:tooltip period end time",
                        "End:") + QStringLiteral("</i>") + QStringLiteral(
         "&nbsp;");
-    toolTip += QLocale().toString(period.end().toLocalZone().dateTime(), QLocale::ShortFormat);
+    toolTip += QLocale().toString(period.end().toLocalTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
     toolTip += QStringLiteral("</qt>");
     return toolTip;

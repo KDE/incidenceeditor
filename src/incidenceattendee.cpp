@@ -662,15 +662,14 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee,
                                        const KCalCore::FreeBusy::Ptr &fb)
 {
     KCalCore::Attendee::List attendees = mDataModel->attendees();
-    KDateTime startTime = KCalCore::q2k(mDateTime->currentStartDateTime());
-    KDateTime endTime = KCalCore::q2k(mDateTime->currentEndDateTime());
+    QDateTime startTime = mDateTime->currentStartDateTime();
+    QDateTime endTime = mDateTime->currentEndDateTime();
     if (attendees.contains(attendee)) {
         int row = dataModel()->attendees().indexOf(attendee);
         QModelIndex attendeeIndex = dataModel()->index(row, AttendeeTableModel::Available);
         if (fb) {
             KCalCore::Period::List busyPeriods = fb->busyPeriods();
-            for (KCalCore::Period::List::Iterator it = busyPeriods.begin(); it != busyPeriods.end();
-                 ++it) {
+            for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
                 // periods started before and laping into the incidence (s < startTime && e >= startTime)
                 // periods starting in the time of incidende (s >= startTime && s <= endTime)
                 if (((*it).start() < startTime && (*it).end() > startTime) ||
