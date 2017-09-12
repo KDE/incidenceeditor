@@ -57,7 +57,7 @@
 #include <QDir>
 #include <QIcon>
 #include <QStandardPaths>
-#include <QTimeZone>^
+#include <QTimeZone>
 
 using namespace IncidenceEditorNG;
 
