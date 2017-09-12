@@ -29,9 +29,16 @@
 #include <KCalCore/Attendee>
 
 #include <QTest>
+#include <QStandardPaths>
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
 
 using namespace IncidenceEditorNG;
+
+void FreeBusyGanttProxyModelTest::initTestCase()
+{
+    qputenv("TZ", "UTC");
+    QStandardPaths::setTestModeEnabled(true);
+}
 
 void FreeBusyGanttProxyModelTest::testModelValidity()
 {
