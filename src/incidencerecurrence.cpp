@@ -26,6 +26,8 @@
 #include <KLocalizedString>
 #include <QLocale>
 
+#include <KCalCore/Utils>
+
 using namespace IncidenceEditorNG;
 
 enum {
@@ -434,8 +436,8 @@ bool IncidenceRecurrence::isValid() const
             = incidence->dateTime(KCalCore::Incidence::RoleRecurrenceStart);
 
         if (referenceDate.isValid()) {
-            if (!(incidence->recurrence()->recursOn(referenceDate.date(), referenceDate.timeSpec())
-                  || incidence->recurrence()->getNextDateTime(referenceDate).isValid())) {
+            if (!(incidence->recurrence()->recursOn(referenceDate.date(), KCalCore::specToZone(referenceDate.timeSpec()))
+                  || incidence->recurrence()->getNextDateTime(KCalCore::k2q(referenceDate)).isValid())) {
                 mLastErrorString = i18n("A recurring event or to-do must occur at least once. "
                                         "Adjust the recurring parameters.");
                 qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
