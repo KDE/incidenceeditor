@@ -24,8 +24,6 @@
 #include "CalendarSupport/FreeBusyItemModel"
 #include "incidenceeditor_debug.h"
 
-#include <KCalCore/Utils>
-
 #include <QDate>
 
 static const int DEFAULT_RESOLUTION_SECONDS = 15 * 60; // 15 minutes, 1 slot = 15 minutes
@@ -131,15 +129,15 @@ void ConflictResolver::setLatestTime(const QTime &newTime)
     calculateConflicts();
 }
 
-void ConflictResolver::setEarliestDateTime(const KDateTime &newDateTime)
+void ConflictResolver::setEarliestDateTime(const QDateTime &newDateTime)
 {
-    mTimeframeConstraint = KCalCore::Period(KCalCore::k2q(newDateTime), mTimeframeConstraint.end());
+    mTimeframeConstraint = KCalCore::Period(newDateTime, mTimeframeConstraint.end());
     calculateConflicts();
 }
 
-void ConflictResolver::setLatestDateTime(const KDateTime &newDateTime)
+void ConflictResolver::setLatestDateTime(const QDateTime &newDateTime)
 {
-    mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), KCalCore::k2q(newDateTime));
+    mTimeframeConstraint = KCalCore::Period(mTimeframeConstraint.start(), newDateTime);
     calculateConflicts();
 }
 
@@ -148,7 +146,7 @@ void ConflictResolver::freebusyDataChanged()
     calculateConflicts();
 }
 
-int ConflictResolver::tryDate(KDateTime &tryFrom, KDateTime &tryTo)
+int ConflictResolver::tryDate(QDateTime &tryFrom, QDateTime &tryTo)
 {
     int conflicts_count = 0;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
@@ -171,8 +169,8 @@ int ConflictResolver::tryDate(KDateTime &tryFrom, KDateTime &tryTo)
     return conflicts_count;
 }
 
-bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &tryFrom,
-                               KDateTime &tryTo)
+bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &tryFrom,
+                               QDateTime &tryTo)
 {
     // If we don't have any free/busy information, assume the
     // participant is free. Otherwise a participant without available
@@ -183,14 +181,14 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &try
 
     KCalCore::Period::List busyPeriods = fb->busyPeriods();
     for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
-        if ((*it).end() <= KCalCore::k2q(tryFrom)     // busy period ends before try period
-            || (*it).start() >= KCalCore::k2q(tryTo)) {   // busy period starts after try period
+        if ((*it).end() <= tryFrom     // busy period ends before try period
+            || (*it).start() >= tryTo) {   // busy period starts after try period
             continue;
         } else {
             // the current busy period blocks the try period, try
             // after the end of the current busy period
             const int secsDuration = tryFrom.secsTo(tryTo);
-            tryFrom = KCalCore::q2k((*it).end());
+            tryFrom = (*it).end();
             tryTo = tryFrom.addSecs(secsDuration);
             // try again with the new try period
             tryDate(fb, tryFrom, tryTo);
@@ -203,19 +201,19 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &try
 
 bool ConflictResolver::findFreeSlot(const KCalCore::Period &dateTimeRange)
 {
-    KDateTime dtFrom = KCalCore::q2k(dateTimeRange.start());
-    KDateTime dtTo = KCalCore::q2k(dateTimeRange.end());
+    QDateTime dtFrom = dateTimeRange.start();
+    QDateTime dtTo = dateTimeRange.end();
     if (tryDate(dtFrom, dtTo)) {
         // Current time is acceptable
         return true;
     }
 
-    KDateTime tryFrom = dtFrom;
-    KDateTime tryTo = dtTo;
+    QDateTime tryFrom = dtFrom;
+    QDateTime tryTo = dtTo;
 
     // Make sure that we never suggest a date in the past, even if the
     // user originally scheduled the meeting to be in the past.
-    KDateTime now = KDateTime::currentUtcDateTime();
+    QDateTime now = QDateTime::currentDateTimeUtc();
     if (tryFrom < now) {
         // The slot to look for is at least partially in the past.
         const int secs = tryFrom.secsTo(tryTo);
@@ -465,8 +463,8 @@ void ConflictResolver::findAllFreeSlots()
 
 void ConflictResolver::calculateConflicts()
 {
-    KDateTime start = KCalCore::q2k(mTimeframeConstraint.start());
-    KDateTime end = KCalCore::q2k(mTimeframeConstraint.end());
+    QDateTime start = mTimeframeConstraint.start();
+    QDateTime end = mTimeframeConstraint.end();
     const int count = tryDate(start, end);
     Q_EMIT conflictsDetected(count);
 

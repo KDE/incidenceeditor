@@ -41,7 +41,6 @@
 
 #include <KEmailAddress>
 #include <KCalUtils/Stringify>
-#include <KCalCore/Utils>
 
 #include "incidenceeditor_debug.h"
 #include <QTreeView>
@@ -845,8 +844,8 @@ void IncidenceAttendee::slotEventDurationChanged()
         return;
     }
 
-    mConflictResolver->setEarliestDateTime(KCalCore::q2k(start));
-    mConflictResolver->setLatestDateTime(KCalCore::q2k(end));
+    mConflictResolver->setEarliestDateTime(start);
+    mConflictResolver->setLatestDateTime(end);
     updateFBStatus();
 }
 

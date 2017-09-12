@@ -55,7 +55,7 @@ private:
     QList<CalendarSupport::FreeBusyItem::Ptr> attendees;
     QWidget *parent;
     IncidenceEditorNG::ConflictResolver *resolver;
-    KDateTime base, end;
+    QDateTime base, end;
 };
 
 #endif

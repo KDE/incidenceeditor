@@ -24,7 +24,6 @@
 #include <KCalCore/Event>
 #include <KCalCore/Period>
 #include <KCalCore/Duration>
-#include <KCalCore/Utils>
 
 #include <QWidget>
 #include <QTest>
@@ -58,7 +57,7 @@ void ConflictResolverTest::initTestCase()
 
 void ConflictResolverTest::init()
 {
-    base = KDateTime::currentLocalDateTime().addDays(1);
+    base = QDateTime::currentDateTime().addDays(1);
     end = base.addSecs(10 * 60 * 60);
     resolver = new ConflictResolver(parent, parent);
 }
@@ -72,7 +71,7 @@ void ConflictResolverTest::cleanup()
 
 void ConflictResolverTest::simpleTest()
 {
-    KCalCore::Period meeting(KCalCore::k2q(end).addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
+    KCalCore::Period meeting(end.addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
     addAttendee(QStringLiteral("albert@einstein.net"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting)));
@@ -88,7 +87,7 @@ void ConflictResolverTest::simpleTest()
     QVERIFY(resolver->availableSlots().size() == 2);
 
     KCalCore::Period first = resolver->availableSlots().at(0);
-    QCOMPARE(first.start(), KCalCore::k2q(base));
+    QCOMPARE(first.start(), base);
     QCOMPARE(first.end(), meeting.start());
 
     KCalCore::Period second = resolver->availableSlots().at(1);
@@ -96,14 +95,14 @@ void ConflictResolverTest::simpleTest()
     QCOMPARE(second.start(), meeting.end().addSecs(resolution));     //add 15 minutes because the
     //free block doesn't start until
     //the next timeslot
-    QCOMPARE(second.end(), KCalCore::k2q(end));
+    QCOMPARE(second.end(), end);
 }
 
 void ConflictResolverTest::stillPrettySimpleTest()
 {
-    KCalCore::Period meeting1(KCalCore::k2q(base), KCalCore::Duration(2 * 60 * 60));
-    KCalCore::Period meeting2(KCalCore::k2q(base).addSecs(60 * 60), KCalCore::Duration(2 * 60 * 60));
-    KCalCore::Period meeting3(KCalCore::k2q(end).addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
+    KCalCore::Period meeting1(base, KCalCore::Duration(2 * 60 * 60));
+    KCalCore::Period meeting2(base.addSecs(60 * 60), KCalCore::Duration(2 * 60 * 60));
+    KCalCore::Period meeting3(end.addSecs(-3 * 60 * 60), KCalCore::Duration(2 * 60 * 60));
     addAttendee(QStringLiteral("john.f@kennedy.com"),
                 KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(KCalCore::Period::List()
                                         << meeting1 << meeting3)));
@@ -134,7 +133,7 @@ void ConflictResolverTest::stillPrettySimpleTest()
     QCOMPARE(second.start(), meeting3.end().addSecs(resolution));     //add 15 minutes because the
     //free block doesn't start until
     //the next timeslot
-    QCOMPARE(second.end(), KCalCore::k2q(end));
+    QCOMPARE(second.end(), end);
 }
 
 #define _time( h, m ) QDateTime( base.date(), QTime( h, m ) )
@@ -279,7 +278,7 @@ void ConflictResolverTest::testPeriodBeginsBeforeTimeframeBegins()
     QCOMPARE(resolver->availableSlots().size(), 1);
     KCalCore::Period freeslot = resolver->availableSlots().at(0);
     QCOMPARE(freeslot.start(), _time(8, 45));
-    QCOMPARE(freeslot.end(), KCalCore::k2q(end));
+    QCOMPARE(freeslot.end(), end);
 }
 
 void ConflictResolverTest::testPeriodEndsAfterTimeframeEnds()
@@ -306,7 +305,7 @@ void ConflictResolverTest::testPeriodEndsAfterTimeframeEnds()
     QCOMPARE(resolver->availableSlots().size(), 1);
     KCalCore::Period freeslot = resolver->availableSlots().at(0);
     QCOMPARE(freeslot.duration(), KCalCore::Duration(30 * 60));
-    QCOMPARE(freeslot.start(), KCalCore::k2q(base));
+    QCOMPARE(freeslot.start(), base);
     QCOMPARE(freeslot.end(), _time(8, 00));
 }
 

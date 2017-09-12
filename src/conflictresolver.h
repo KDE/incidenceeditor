@@ -120,7 +120,7 @@ Q_SIGNALS:
      * Emitted when the user changes the start and end dateTimes
      * for the incidence.
      */
-    void dateTimesChanged(const KDateTime &newStart, const KDateTime &newEnd);
+    void dateTimesChanged(const QDateTime &newStart, const QDateTime &newEnd);
 
     /**
      * Emitted when there are conflicts
@@ -144,8 +144,8 @@ public Q_SLOTS:
     void setLatestDate(const QDate &newDate);
     void setLatestTime(const QTime &newTime);
 
-    void setEarliestDateTime(const KDateTime &newDateTime);
-    void setLatestDateTime(const KDateTime &newDateTime);
+    void setEarliestDateTime(const QDateTime &newDateTime);
+    void setLatestDateTime(const QDateTime &newDateTime);
 
     void freebusyDataChanged();
 
@@ -161,7 +161,7 @@ private:
       that participant. In other words, the returned slot does not have to
       be free for everybody else.
     */
-    int tryDate(KDateTime &tryFrom, KDateTime &tryTo);
+    int tryDate(QDateTime &tryFrom, QDateTime &tryTo);
 
     /**
       Checks whether the slot specified by (tryFrom, tryTo) is available
@@ -170,7 +170,7 @@ private:
       possible slot for this participant (not necessarily a slot that is
       available for all participants).
     */
-    bool tryDate(const KCalCore::FreeBusy::Ptr &fb, KDateTime &tryFrom, KDateTime &tryTo);
+    bool tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
 
     /**
      * Checks whether the supplied attendee passes the
