@@ -19,8 +19,6 @@
 
 #include "resourcemanagement.h"
 
-#include <KAboutData>
-#include <KLocalizedString>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -31,15 +29,10 @@ using namespace IncidenceEditorNG;
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KAboutData aboutData(QStringLiteral("resourcemanagement_gui"), i18n("resourcemanagement_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for resourceManagement"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     ResourceManagement *dialog = new ResourceManagement();
 
