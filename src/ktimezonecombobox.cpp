@@ -106,7 +106,7 @@ QTimeZone KTimeZoneComboBox::selectedTimeZone() const
         if (currentIndex() == 0) {   // Local
             zone = QTimeZone::systemTimeZone();
         } else if (currentIndex() == 1) {   // Floating event
-            zone = QTimeZone();
+            zone = QTimeZone::systemTimeZone();
         } else if (currentIndex() == 2) {   // UTC
             zone = QTimeZone::utc();
         } else {
@@ -125,7 +125,7 @@ void KTimeZoneComboBox::selectLocalTimeZone()
 void KTimeZoneComboBox::setFloating(bool floating, const QTimeZone &zone)
 {
     if (floating) {
-        selectTimeZone(QTimeZone());
+        setCurrentIndex(1);
     } else {
         if (zone.isValid()) {
             selectTimeZone(zone);
