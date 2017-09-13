@@ -39,7 +39,6 @@
 
 #include <KGantt/KGanttGraphicsView>
 
-#include <KLDAP/LdapObject>
 
 #include <KLocalizedString>
 #include <KSharedConfig>

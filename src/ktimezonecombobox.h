@@ -28,7 +28,6 @@
 
 #include <KComboBox>
 #include <QTimeZone>
-#include <QVector>
 
 
 namespace IncidenceEditorNG {

@@ -34,7 +34,6 @@
 #include <EventViews/ViewCalendar>
 
 #include <QDialog>
-#include <QStringList>
 
 class Ui_resourceManagement;
 

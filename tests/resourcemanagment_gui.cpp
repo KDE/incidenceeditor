@@ -22,7 +22,6 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QFile>
 
 using namespace IncidenceEditorNG;
 
