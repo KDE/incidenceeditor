@@ -56,8 +56,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     KCalCore::Attendee::Ptr a1(new KCalCore::Attendee(QStringLiteral("fred"), QStringLiteral("fred@example.com")));
     KCalCore::FreeBusy::Ptr fb1(new KCalCore::FreeBusy());
 
-    fb1->addPeriod(KDateTime(dt1), KCalCore::Duration(60 * 60));
-    fb1->addPeriod(KDateTime(dt2), KCalCore::Duration(60 * 60));
+    fb1->addPeriod(dt1, KCalCore::Duration(60 * 60));
+    fb1->addPeriod(dt2, KCalCore::Duration(60 * 60));
 
     CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, nullptr));
     item1->setFreeBusy(fb1);
@@ -67,8 +67,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     KCalCore::Attendee::Ptr a2(new KCalCore::Attendee(QStringLiteral("joe"), QStringLiteral("joe@example.com")));
     KCalCore::FreeBusy::Ptr fb2(new KCalCore::FreeBusy());
 
-    fb2->addPeriod(KDateTime(dt3), KCalCore::Duration(60 * 60));
-    fb2->addPeriod(KDateTime(dt4), KCalCore::Duration(60 * 60));
+    fb2->addPeriod(dt3, KCalCore::Duration(60 * 60));
+    fb2->addPeriod(dt4, KCalCore::Duration(60 * 60));
 
     CalendarSupport::FreeBusyItem::Ptr item2(new CalendarSupport::FreeBusyItem(a2, nullptr));
     item2->setFreeBusy(fb2);

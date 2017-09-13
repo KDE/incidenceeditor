@@ -157,8 +157,8 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
 
     const QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
-    event->setDtStart(KDateTime(startDT));
-    event->setDtEnd(KDateTime(endDT));
+    event->setDtStart(startDT);
+    event->setDtEnd(endDT);
     event->setTransparency(KCalCore::Event::Opaque);
 
     if (KCalPrefs::instance()->defaultEventReminders()) {
@@ -169,7 +169,7 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
 void IncidenceDefaultsPrivate::journalDefaults(const KCalCore::Journal::Ptr &journal) const
 {
     const QDateTime startDT = mStartDt.isValid() ? mStartDt : QDateTime::currentDateTime();
-    journal->setDtStart(KDateTime(startDT));
+    journal->setDtStart(startDT);
     journal->setAllDay(true);
 }
 
@@ -181,28 +181,28 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) con
     }
 
     if (mEndDt.isValid()) {
-        todo->setDtDue(KDateTime(mEndDt), true /** first */);
+        todo->setDtDue(mEndDt, true /** first */);
     } else if (relatedTodo && relatedTodo->hasDueDate()) {
         todo->setDtDue(relatedTodo->dtDue(true), true /** first */);
         todo->setAllDay(relatedTodo->allDay());
     } else if (relatedTodo) {
-        todo->setDtDue(KDateTime());
+        todo->setDtDue(QDateTime());
     } else {
-        todo->setDtDue(KDateTime(QDateTime::currentDateTime().addDays(1)), true /** first */);
+        todo->setDtDue(QDateTime::currentDateTime().addDays(1), true /** first */);
     }
 
     if (mStartDt.isValid()) {
-        todo->setDtStart(KDateTime(mStartDt));
+        todo->setDtStart(mStartDt);
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
-        todo->setDtStart(KDateTime());
+        todo->setDtStart(QDateTime());
     } else if (relatedTodo && relatedTodo->hasStartDate() &&
                relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
     } else if (!mEndDt.isValid() || (QDateTime::currentDateTime() < mEndDt)) {
-        todo->setDtStart(KDateTime(QDateTime::currentDateTime()));
+        todo->setDtStart(QDateTime::currentDateTime());
     } else {
-        todo->setDtStart(KDateTime(mEndDt.addDays(-1)));
+        todo->setDtStart(mEndDt.addDays(-1));
     }
 
     todo->setCompleted(false);

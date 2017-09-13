@@ -119,8 +119,8 @@ private:
     void save(const KCalCore::Event::Ptr &event);
     void save(const KCalCore::Todo::Ptr &todo);
     void save(const KCalCore::Journal::Ptr &journal);
-    void setDateTimes(const KDateTime &start, const KDateTime &end);
-    void setTimes(const KDateTime &start, const KDateTime &end);
+    void setDateTimes(const QDateTime &start, const QDateTime &end);
+    void setTimes(const QDateTime &start, const QDateTime &end);
     void setTimeZoneLabelEnabled(bool enable);
     bool timeZonesAreLocal(const QDateTime &start, const QDateTime &end);
 
@@ -140,7 +140,7 @@ private:
      * We need to store the current start date/time to be able to update the end
      * time appropriate when the start time changes.
      */
-    KDateTime mCurrentStartDateTime;
+    QDateTime mCurrentStartDateTime;
 
     /// Remembers state when switching between takes whole day and timed event/to-do.
     bool mTimezoneCombosWereVisibile;

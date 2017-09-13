@@ -113,6 +113,12 @@ PRIVATE
   KF5::Codecs
   KF5::Ldap
   KF5::AkonadiWidgets
+  KF5::IconThemes
+  KF5::Completion
+  KF5::KIOWidgets
+  KF5::TextWidgets
+  KF5::WidgetsAddons
+  KF5::XmlGui
 )
 target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/IncidenceEditor/;${KDE_INSTALL_INCLUDEDIR_KF5}/incidenceeditor>")
 target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
