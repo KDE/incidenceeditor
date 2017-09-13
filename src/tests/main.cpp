@@ -46,12 +46,12 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addOption(QCommandLineOption(QStringLiteral("new-event"), i18n("Creates a new event")));
-    parser.addOption(QCommandLineOption(QStringLiteral("new-todo"), i18n("Creates a new todo")));
-    parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), i18n(
+    parser.addOption(QCommandLineOption(QStringLiteral("new-event"), QStringLiteral("Creates a new event")));
+    parser.addOption(QCommandLineOption(QStringLiteral("new-todo"), QStringLiteral("Creates a new todo")));
+    parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), QStringLiteral(
                                             "Creates a new journal")));
     parser.addOption(QCommandLineOption(QStringLiteral("item"),
-                                        i18n(
+                                        QStringLiteral(
                                             "Loads an existing item, or returns without doing anything "
                                             "when the item is not an event or todo."),
                                         QStringLiteral("id")));
