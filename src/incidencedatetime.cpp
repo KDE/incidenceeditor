@@ -24,7 +24,6 @@
 
 #include <CalendarSupport/KCalPrefs>
 
-#include <KCalCore/ICalTimeZones>
 #include <KCalCore/Utils>
 #include <KCalUtils/IncidenceFormatter>
 
