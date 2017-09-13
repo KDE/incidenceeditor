@@ -30,7 +30,6 @@
 #include <QTimeZone>
 #include <QVector>
 
-class QByteArray;
 
 namespace IncidenceEditorNG {
 /**
