@@ -34,8 +34,8 @@ void KTimeZoneComboBoxTest::test_timeSpec()
         QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
 
     combo.selectTimeZone(QTimeZone());
-    QCOMPARE(combo.selectedTimeZone(), QTimeZone());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
 
     combo.setFloating(true);
-    QCOMPARE(combo.selectedTimeZone(), QTimeZone());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
 }
