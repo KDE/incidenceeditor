@@ -92,14 +92,28 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
     msg->cc()->fromUnicodeString(messageCc.join(QStringLiteral(", ")), "utf-8");
     msg->assemble();
 
+
     mQueueJob = new MailTransport::MessageQueueJob(this);
     mQueueJob->setMessage(msg);
-    mQueueJob->transportAttribute().setTransportId(transportAttribute().transportId());
-    mQueueJob->sentBehaviourAttribute().setSentBehaviour(sentBehaviourAttribute().sentBehaviour());
+    mQueueJob->transportAttribute().setTransportId(mIdentity.isNull() ? transportAttribute().transportId() : mIdentity.transport().toInt());
     mQueueJob->addressAttribute().setFrom(addressAttribute().from());
     mQueueJob->addressAttribute().setTo(to);
     mQueueJob->addressAttribute().setCc(cc);
     mQueueJob->addressAttribute().setBcc(addressAttribute().bcc());
+
+    if (mIdentity.disabledFcc()) {
+        mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+    } else {
+        const Akonadi::Collection sentCollection(mIdentity.fcc().toLongLong());
+        if (sentCollection.isValid()) {
+            mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToCollection);
+            mQueueJob->sentBehaviourAttribute().setMoveToCollection(sentCollection);
+        } else {
+            mQueueJob->sentBehaviourAttribute().setSentBehaviour(
+                MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
+        }
+    }
+
 
     connect(mQueueJob, &MailTransport::MessageQueueJob::finished, this,
             &IndividualMessageQueueJob::handleJobFinished);
