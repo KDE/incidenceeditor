@@ -199,7 +199,7 @@ void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item,
         } else { // There's a collection move too.
             Akonadi::ItemMoveJob *moveJob = new Akonadi::ItemMoveJob(mItem,
                                                                      mItemUi->selectedCollection());
-            q->connect(moveJob, SIGNAL(result(KJob *)), SLOT(moveJobFinished(KJob *)));
+            q->connect(moveJob, SIGNAL(result(KJob*)), SLOT(moveJobFinished(KJob*)));
         }
     } else if (resultCode == Akonadi::IncidenceChanger::ResultCodeUserCanceled) {
         Q_EMIT q->itemSaveFailed(EditorItemManager::Modify, QString());
@@ -324,7 +324,7 @@ void EditorItemManager::load(const Akonadi::Item &item)
     //We fetch anyways to make sure we have everything required including tags
     Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(item, this);
     job->setFetchScope(d->mFetchScope);
-    connect(job, SIGNAL(result(KJob *)), SLOT(itemFetchResult(KJob *)));
+    connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchResult(KJob*)));
 }
 
 void EditorItemManager::save()
@@ -372,7 +372,7 @@ void EditorItemManager::save()
             } else {
                 Akonadi::ItemMoveJob *itemMoveJob
                     = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
-                connect(itemMoveJob, SIGNAL(result(KJob *)), SLOT(itemMoveResult(KJob *)));
+                connect(itemMoveJob, SIGNAL(result(KJob*)), SLOT(itemMoveResult(KJob*)));
             }
         }
     } else { // An invalid item. Means we're creating.
