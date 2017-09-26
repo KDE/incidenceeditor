@@ -497,13 +497,13 @@ void IncidenceAttachment::setupActions()
     KActionCollection *ac = new KActionCollection(this);
 //  ac->addAssociatedWidget( this );
 
-    mOpenAction = new QAction(i18nc("@action:inmenu open the attachment in a viewer",
+    mOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")),i18nc("@action:inmenu open the attachment in a viewer",
                                     "&Open"), this);
     connect(mOpenAction, &QAction::triggered, this, &IncidenceAttachment::showSelectedAttachments);
     ac->addAction(QStringLiteral("view"), mOpenAction);
     mPopupMenu->addAction(mOpenAction);
 
-    mSaveAsAction = new QAction(i18nc("@action:inmenu save the attachment to a file",
+    mSaveAsAction = new QAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18nc("@action:inmenu save the attachment to a file",
                                       "Save As..."), this);
     connect(mSaveAsAction, &QAction::triggered, this,
             &IncidenceAttachment::saveSelectedAttachments);
@@ -522,7 +522,7 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addSeparator();
 #endif
 
-    mDeleteAction = new QAction(i18nc("@action:inmenu remove the attachment",
+    mDeleteAction = new QAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu remove the attachment",
                                       "&Remove"), this);
     connect(mDeleteAction, &QAction::triggered, this,
             &IncidenceAttachment::removeSelectedAttachments);
@@ -531,7 +531,7 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addAction(mDeleteAction);
     mPopupMenu->addSeparator();
 
-    mEditAction = new QAction(i18nc("@action:inmenu show a dialog used to edit the attachment",
+    mEditAction = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18nc("@action:inmenu show a dialog used to edit the attachment",
                                     "&Properties..."), this);
     connect(mEditAction, &QAction::triggered, this, &IncidenceAttachment::editSelectedAttachments);
     ac->addAction(QStringLiteral("edit"), mEditAction);
