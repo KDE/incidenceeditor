@@ -64,7 +64,7 @@ private:
 
     QItemSelectionModel *selectionModel = nullptr;
 
-private Q_SLOTS:
+private:
     /* A new searchString is entered
      *
      */

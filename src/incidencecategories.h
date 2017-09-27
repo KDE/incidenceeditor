@@ -49,12 +49,10 @@ public:
 private:
     void createMissingCategories();
 
-private Q_SLOTS:
     void onSelectionChanged(const Akonadi::Tag::List &);
     void onTagsFetched(KJob *);
     void onMissingTagCreated(KJob *);
 
-private:
     Ui::EventOrTodoDesktop *mUi = nullptr;
 
     /**

@@ -117,7 +117,7 @@ private:
      */
     KLDAP::LdapClient mLdapClient;
 
-private Q_SLOTS:
+private:
     /* Answer of the LdapServer for the given dn
      *
      */

@@ -56,7 +56,7 @@ public:
 Q_SIGNALS:
     void attachmentCountChanged(int newCount);
 
-private Q_SLOTS:
+private:
     void addAttachment();
     void copyToClipboard(); /// Copies selected items to clip board
     void cutToClipboard();  /// Copies selected items to clipboard and removes them from the list
