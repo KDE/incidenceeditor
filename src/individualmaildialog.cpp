@@ -68,7 +68,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
     topLayout->addWidget(mW);
     topLayout->addWidget(m_detailsWidget);
 
-    m_buttons = new QDialogButtonBox;
+    m_buttons = new QDialogButtonBox(this);
     m_buttons->setStandardButtons(
         QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Help);
     auto yesButton = m_buttons->button(QDialogButtonBox::Yes);
