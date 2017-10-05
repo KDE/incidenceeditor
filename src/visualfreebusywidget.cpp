@@ -266,22 +266,11 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     // set start to even hours, i.e. to 12:AM 0 Min 0 Sec
     QDateTime horizonStart
         = QDateTime(QDateTime::currentDateTime().addDays(-15).date());
-    //QDateTime horizonEnd = QDateTime::currentDateTime().addDays(15);
     mGanttGrid->setStartDateTime(horizonStart);
-
-//connect( mGanttGraphicsView, SIGNAL(timeIntervalSelected(KDateTime,KDateTime)),
-//         mGanttGraphicsView, SLOT(zoomToSelection(KDateTime,KDateTime)) );
-//connect( mGanttGraphicsView, SIGNAL(doubleClicked(QModelIndex)),
-//         SLOT(editFreeBusyUrl(QModelIndex)) );
-//connect(mGanttGraphicsView,SIGNAL(intervalColorRectangleMoved(KDateTime,KDateTime)),
-//        this, SLOT(slotIntervalColorRectangleMoved(KDateTime,KDateTime)) );
 
     connect(mLeftView, &QTreeView::customContextMenuRequested, this,
             &VisualFreeBusyWidget::showAttendeeStatusMenu);
 
-//   foreach ( FreeBusyItem::Ptr item, mResolver->freeBusyItems() ) {
-//     newFreeBusy( item );
-//   }
 }
 
 VisualFreeBusyWidget::~VisualFreeBusyWidget()
