@@ -168,8 +168,7 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
 {
     setWindowTitle(i18n("Select Categories"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = nullptr;
-    buttonBox = new QDialogButtonBox(
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply,
         this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
