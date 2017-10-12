@@ -284,7 +284,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
 
     KCalCore::Attachment::Ptr att = attitem->attachment();
     if (att->isUri()) {
-        Q_EMIT openURL(QUrl(att->uri()));
+        openURL(QUrl(att->uri()));
     } else {
         KRun::RunFlags flags;
         flags |= KRun::DeleteTemporaryFiles;

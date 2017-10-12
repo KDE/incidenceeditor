@@ -207,7 +207,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 
         // Resources in a collection add this link into ldapCollectionsMap
         foreach (const QByteArray &member,
-                 result.object.attributes()[QString::fromLatin1("uniqueMember")]) {
+                 result.object.attributes()[QStringLiteral("uniqueMember")]) {
             ldapCollectionsMap.insert(QString::fromLatin1(member), item);
         }
     }

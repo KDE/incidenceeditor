@@ -100,9 +100,9 @@ private Q_SLOTS: /// Todo specific
     void enableStartEdit(bool enable);
     void enableEndEdit(bool enable);
     void enableTimeEdits();
-    bool isDirty(const KCalCore::Todo::Ptr &todo) const;
 
-private Q_SLOTS: /// Event specific
+private:
+    bool isDirty(const KCalCore::Todo::Ptr &todo) const;
     bool isDirty(const KCalCore::Event::Ptr &event) const;
     bool isDirty(const KCalCore::Journal::Ptr &journal) const;
 

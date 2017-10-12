@@ -469,7 +469,6 @@ void IncidenceDialogPrivate::updateResourceCount(int newCount)
 
 void IncidenceDialogPrivate::updateButtonStatus(bool isDirty)
 {
-    Q_Q(IncidenceDialog);
     mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(isDirty || mInitiallyDirty);
 }
 
