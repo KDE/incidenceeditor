@@ -3,7 +3,7 @@ set(PIM_VERSION "5.6.41")
 
 project(incidenceeditor VERSION ${PIM_VERSION})
 
-set(ECM_VERSION "5.38.0")
+set(ECM_VERSION "5.39.0")
 
 find_package(ECM ${ECM_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
