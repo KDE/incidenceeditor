@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.6.41")
+set(PIM_VERSION "5.6.80")
 
 project(incidenceeditor VERSION ${PIM_VERSION})
 
