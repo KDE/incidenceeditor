@@ -94,7 +94,7 @@ FreeBusyUrlWidget::~FreeBusyUrlWidget()
 static QString freeBusyUrlStore()
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-           + QLatin1Char('/') + QStringLiteral("korganizer/freebusyurls");
+           + QStringLiteral("/korganizer/freebusyurls");
 }
 
 void FreeBusyUrlWidget::loadConfig()
