@@ -1028,14 +1028,14 @@
          <item row="1" column="4">
           <widget class="QPushButton" name="mAlarmNewButton">
            <property name="text">
-            <string comment="@action:button Create a new reminder">New</string>
+            <string comment="@action:button create a new reminder">New</string>
            </property>
           </widget>
          </item>
          <item row="2" column="4">
           <widget class="QPushButton" name="mAlarmConfigureButton">
            <property name="text">
-            <string comment="@action:button Configures selected reminder">Configure</string>
+            <string comment="@action:button modify the selected reminder">Modify</string>
            </property>
           </widget>
          </item>
