@@ -183,7 +183,7 @@ void ResourceModel::startSearch()
     if (searchString.isEmpty()) {
         ldapSearch.startSearch(QStringLiteral("*"));
     } else {
-        ldapSearch.startSearch(QStringLiteral("*") + searchString + QStringLiteral("*"));
+        ldapSearch.startSearch(QLatin1Char('*') + searchString + QLatin1Char('*'));
     }
 }
 
