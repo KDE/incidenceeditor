@@ -288,35 +288,38 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
     QString action;
     switch (alarm->type()) {
     case KCalCore::Alarm::Display:
-        action = i18n("Display a dialog");
+        action = i18nc("Alarm action", "Display a dialog");
         break;
     case KCalCore::Alarm::Procedure:
-        action = i18n("Execute a script");
+        action = i18nc("Alarm action", "Execute a script");
         break;
     case KCalCore::Alarm::Email:
-        action = i18n("Send an email");
+        action = i18nc("Alarm action", "Send an email");
         break;
     case KCalCore::Alarm::Audio:
-        action = i18n("Play an audio file");
+        action = i18nc("Alarm action", "Play an audio file");
         break;
     default:
-        action = i18n("Invalid Reminder.");
+        action = i18nc("Alarm action", "Invalid Reminder.");
         return action;
     }
-
-    QString offsetUnit
-        = i18nc("The reminder is set to X minutes before/after the event", "minutes");
 
     const int offset = alarm->hasStartOffset() ? alarm->startOffset().asSeconds() / 60
                        : alarm->endOffset().asSeconds() / 60; // make minutes
 
+    QString offsetUnitTranslated
+        = i18ncp("The reminder is set to X minutes before/after the event",
+                 "1 minute", "%1 minutes", qAbs(offset));
+
     int useoffset = offset;
     if (offset % (24 * 60) == 0 && offset != 0) {     // divides evenly into days?
         useoffset = offset / 60 / 24;
-        offsetUnit = i18nc("The reminder is set to X days before/after the event", "days");
+        offsetUnitTranslated = i18ncp("The reminder is set to X days before/after the event",
+                             "1 day", "%1 days", qAbs(useoffset));
     } else if (offset % 60 == 0 && offset != 0) {   // divides evenly into hours?
-        offsetUnit = i18nc("The reminder is set to X hours before/after the event", "hours");
         useoffset = offset / 60;
+        offsetUnitTranslated = i18ncp("The reminder is set to X hours before/after the event",
+                             "1 hour", "%1 hours", qAbs(useoffset));
     }
 
     QString repeatStr;
@@ -327,69 +330,73 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
     if (alarm->enabled()) {
         if (useoffset > 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 after the to-do started %4",
-                            action, useoffset, offsetUnit, repeatStr);
+                // i18n: These series of strings are used to show the user a describtion of
+                // the alarm. %1 is replaced by one of the actions above, %2 is replaced by
+                // one of the time units above, %3 is the (Repeats) part that will be used
+                // in case of repetition of the alarm.
+                return i18n("%1 %2 after the to-do started %3",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 after the event started %4",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the event started %3",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 before the to-do starts %4",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the to-do starts %3",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 before the event starts %4",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the event starts %3",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset > 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 after the to-do is due %4",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the to-do is due %3",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 after the event ends %4",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the event ends %3",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 before the to-do is due %4",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the to-do is due %3",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 before the event ends %4",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the event ends %3",
+                            action, offsetUnitTranslated, repeatStr);
             }
         }
     } else {
         if (useoffset > 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 after the to-do started %4 (Disabled)",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the to-do started %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 after the event started %4 (Disabled)",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the event started %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 before the to-do starts %4 (Disabled)",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the to-do starts %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 before the event starts %4 (Disabled)",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the event starts %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset > 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 after the to-do is due %4 (Disabled)",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the to-do is due %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 after the event ends %4 (Disabled)",
-                            action, useoffset, offsetUnit, repeatStr);
+                return i18n("%1 %2 after the event ends %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 %3 before the to-do is due %4 (Disabled)",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the to-do is due %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 %3 before the event ends %4 (Disabled)",
-                            action, qAbs(useoffset), offsetUnit, repeatStr);
+                return i18n("%1 %2 before the event ends %3 (Disabled)",
+                            action, offsetUnitTranslated, repeatStr);
             }
         }
     }
