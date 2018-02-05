@@ -141,20 +141,22 @@ int IncidenceAttachment::attachmentCount() const
 
 void IncidenceAttachment::addAttachment()
 {
+    QPointer<QObject> that(this);
     AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
 
-    QSharedPointer<AttachmentEditDialog> d(new AttachmentEditDialog(item, mAttachmentView));
-    QWeakPointer<AttachmentEditDialog> dialog(d);
-    dialog.data()->setWindowTitle(i18nc("@title", "Add Attachment"));
-    if (dialog.data()->exec() == QDialog::Rejected) {
+    QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
+    dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
+    auto dialogResult = dialog->exec();
+    if (!that) {
+        return;
+    }
+
+    if (dialogResult == QDialog::Rejected) {
         delete item;
     } else {
         Q_EMIT attachmentCountChanged(mAttachmentView->count());
     }
-
-    if (dialog.data()) {
-        dialog.data()->deleteLater();
-    }
+    delete dialog;
 
     checkDirtyStatus();
 }
