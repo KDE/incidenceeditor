@@ -128,8 +128,6 @@ bool IncidenceAttachment::isDirty() const
         // No incidence loaded, so if the user added attachments we're dirty.
         return mAttachmentView->count() != 0;
     }
-
-    return false;
 }
 
 int IncidenceAttachment::attachmentCount() const

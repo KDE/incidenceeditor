@@ -310,10 +310,9 @@ Akonadi::Item EditorItemManager::item(ItemState state) const
                                          << "; and haPayload is " << d->mPrevItem.hasPayload();
         }
         break;
-    default:
-        qCDebug(INCIDENCEEDITOR_LOG) << "state = " << state;
-        Q_ASSERT_X(false, "EditorItemManager::item", "Unknown enum value");
     }
+    qCDebug(INCIDENCEEDITOR_LOG) << "state = " << state;
+    Q_ASSERT_X(false, "EditorItemManager::item", "Unknown enum value");
     return Akonadi::Item();
 }
 

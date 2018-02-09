@@ -131,7 +131,7 @@ void AttendeeLineEdit::keyPressEvent(QKeyEvent *ev)
                && !ev->modifiers().testFlag(Qt::ShiftModifier)) {
         // Shift would be pressed during selection
         Q_EMIT leftPressed();
-    } else if (ev->key() == Qt::Key_Right && cursorPosition() == (int)text().length()
+    } else if (ev->key() == Qt::Key_Right && cursorPosition() == text().length()
                && !ev->modifiers().testFlag(Qt::ShiftModifier)) {
         // Shift would be pressed during selection
         Q_EMIT rightPressed();

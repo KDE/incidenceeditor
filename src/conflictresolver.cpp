@@ -187,7 +187,7 @@ bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &try
         } else {
             // the current busy period blocks the try period, try
             // after the end of the current busy period
-            const int secsDuration = tryFrom.secsTo(tryTo);
+            const qint64 secsDuration = tryFrom.secsTo(tryTo);
             tryFrom = (*it).end();
             tryTo = tryFrom.addSecs(secsDuration);
             // try again with the new try period
@@ -216,7 +216,7 @@ bool ConflictResolver::findFreeSlot(const KCalCore::Period &dateTimeRange)
     QDateTime now = QDateTime::currentDateTimeUtc();
     if (tryFrom < now) {
         // The slot to look for is at least partially in the past.
-        const int secs = tryFrom.secsTo(tryTo);
+        const qint64 secs = tryFrom.secsTo(tryTo);
         tryFrom = now;
         tryTo = tryFrom.addSecs(secs);
     }
