@@ -36,7 +36,7 @@ class INCIDENCEEDITOR_EXPORT IncidenceEditor : public QObject
 {
     Q_OBJECT
 public:
-    virtual ~IncidenceEditor();
+    ~IncidenceEditor() override;
 
     /**
      * Load the values of @param incidence into the editor widgets. The passed

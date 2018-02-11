@@ -35,7 +35,7 @@ public:
     explicit OpenComposerJob(QObject *parent, const QString &to, const QString &cc,
                              const QString &bcc, const KMime::Message::Ptr &message,
                              const KIdentityManagement::Identity &identity);
-    virtual ~OpenComposerJob();
+    ~OpenComposerJob() override;
 
     void start() override;
 

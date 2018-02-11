@@ -37,7 +37,7 @@ public:
 
 private:
     IncidenceEditorSettings();
-    virtual ~IncidenceEditorSettings();
+    ~IncidenceEditorSettings() override;
     static IncidenceEditorSettings *mSelf;
 };
 }

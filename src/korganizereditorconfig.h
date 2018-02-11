@@ -28,7 +28,7 @@ class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::
 {
 public:
     KOrganizerEditorConfig();
-    virtual ~KOrganizerEditorConfig();
+    ~KOrganizerEditorConfig() override;
 
     KConfigSkeleton *config() const override;
     QString fullName() const override;

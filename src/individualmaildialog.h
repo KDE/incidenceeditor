@@ -50,7 +50,7 @@ public:
                                   const KCalCore::Attendee::List &attendees,
                                   const KGuiItem &buttonYes, const KGuiItem &buttonNo,
                                   QWidget *parent = nullptr);
-    virtual ~IndividualMailDialog();
+    ~IndividualMailDialog() override;
 
     KCalCore::Attendee::List editAttendees() const;
     KCalCore::Attendee::List updateAttendees() const;
