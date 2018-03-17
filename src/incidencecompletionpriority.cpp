@@ -67,7 +67,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     d->mUi->mCompletionPriorityWidget->hide();
     d->mUi->mTaskLabel->hide();
     const QFontMetrics metrics(d->mUi->mCompletedLabel->font());
-    d->mUi->mCompletedLabel->setMinimumWidth(metrics.width(QStringLiteral("100%")));
+    d->mUi->mCompletedLabel->setMinimumWidth(metrics.boundingRect(QStringLiteral("100%")).width());
     d->mUi->mTaskSeparator->hide();
 
     connect(d->mUi->mCompletionSlider, QOverload<int>::of(&QSlider::valueChanged), this, [this](int val) { d->sliderValueChanged(val);});
