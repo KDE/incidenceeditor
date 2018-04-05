@@ -22,7 +22,7 @@
 
 #include <QObject>
 
-class FreeBusyGanttProxyModelTest: public QObject
+class FreeBusyGanttProxyModelTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:

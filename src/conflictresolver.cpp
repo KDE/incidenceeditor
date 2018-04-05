@@ -169,8 +169,7 @@ int ConflictResolver::tryDate(QDateTime &tryFrom, QDateTime &tryTo)
     return conflicts_count;
 }
 
-bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &tryFrom,
-                               QDateTime &tryTo)
+bool ConflictResolver::tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo)
 {
     // If we don't have any free/busy information, assume the
     // participant is free. Otherwise a participant without available

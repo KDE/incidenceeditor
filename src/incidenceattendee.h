@@ -95,8 +95,7 @@ private Q_SLOTS:
 
     void slotConflictResolverAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first, int last);
-    void slotConflictResolverAttendeeChanged(const QModelIndex &topLeft,
-                                             const QModelIndex &bottomRight);
+    void slotConflictResolverAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void slotConflictResolverLayoutChanged();
     void slotFreeBusyAdded(const QModelIndex &index, int first, int last);
     void slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
@@ -105,8 +104,7 @@ private Q_SLOTS:
 
     void slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last);
-    void slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft,
-                                              const QModelIndex &bottomRight);
+    void slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void slotGroupSubstitutionLayoutChanged();
 
 private:

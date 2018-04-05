@@ -124,8 +124,7 @@ public:
 };
 }
 
-IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer,
-                                               IncidenceDialog *qq)
+IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq)
     : q_ptr(qq)
     , mUi(new Ui::EventOrTodoDesktop)
     , mCalSelector(new Akonadi::CollectionComboBox)
@@ -478,8 +477,7 @@ bool IncidenceDialogPrivate::containsPayloadIdentifiers(
     return partIdentifiers.contains(QByteArray("PLD:RFC822"));
 }
 
-void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction,
-                                                const QString &errorMessage)
+void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction, const QString &errorMessage)
 {
     Q_Q(IncidenceDialog);
 
@@ -677,8 +675,7 @@ void IncidenceDialogPrivate::reject(RejectReason reason, const QString &errorMes
 
 /// IncidenceDialog
 
-IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *parent,
-                                 Qt::WindowFlags flags)
+IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags)
     , d_ptr(new IncidenceDialogPrivate(changer, this))
 {

@@ -87,20 +87,20 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     QModelIndex source_parent0 = fbModel->index(0, 0);
     QCOMPARE(parent0.data(), source_parent0.data());
-    QCOMPARE(parent0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeMulti);
+    QCOMPARE(parent0.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeMulti);
 
     QModelIndex source_parent1 = fbModel->index(1, 0);
     QCOMPARE(parent1.data(), source_parent1.data());
-    QCOMPARE(parent1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeMulti);
+    QCOMPARE(parent1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeMulti);
 
     QModelIndex child0_0 = ganttModel->index(0, 0, parent0);
     QModelIndex child0_1 = ganttModel->index(1, 0, parent0);
     QVERIFY(child0_0.isValid());
     QVERIFY(child0_1.isValid());
 
-    QCOMPARE(child0_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
+    QCOMPARE(child0_0.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child0_0.data(KGantt::StartTimeRole).toDateTime(), dt1);
-    QCOMPARE(child0_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
+    QCOMPARE(child0_1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child0_1.data(KGantt::StartTimeRole).toDateTime(), dt2);
 
     QModelIndex child1_0 = ganttModel->index(0, 0, parent1);
@@ -108,8 +108,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QVERIFY(child1_0.isValid());
     QVERIFY(child1_1.isValid());
 
-    QCOMPARE(child1_0.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
+    QCOMPARE(child1_0.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child1_0.data(KGantt::StartTimeRole).toDateTime(), dt3);
-    QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int) KGantt::TypeTask);
+    QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child1_1.data(KGantt::StartTimeRole).toDateTime(), dt4);
 }

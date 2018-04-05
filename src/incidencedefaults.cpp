@@ -152,8 +152,8 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
     }
 
     const QTime defaultDurationTime = KCalPrefs::instance()->defaultDuration().time();
-    const int defaultDuration = (defaultDurationTime.hour() * 3600) +
-                                (defaultDurationTime.minute() * 60);
+    const int defaultDuration = (defaultDurationTime.hour() * 3600)
+                                +(defaultDurationTime.minute() * 60);
 
     const QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
@@ -195,8 +195,8 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) con
         todo->setDtStart(mStartDt);
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(QDateTime());
-    } else if (relatedTodo && relatedTodo->hasStartDate() &&
-               relatedTodo->dtStart() <= todo->dtDue()) {
+    } else if (relatedTodo && relatedTodo->hasStartDate()
+               && relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
     } else if (!mEndDt.isValid() || (QDateTime::currentDateTime() < mEndDt)) {
@@ -246,9 +246,7 @@ IncidenceDefaults &IncidenceDefaults::operator=(const IncidenceDefaults &other)
     return *this;
 }
 
-void IncidenceDefaults::setAttachments(const QStringList &attachments,
-                                       const QStringList &attachmentMimetypes,
-                                       const QStringList &attachmentLabels, bool inlineAttachment)
+void IncidenceDefaults::setAttachments(const QStringList &attachments, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment)
 {
     Q_D(IncidenceDefaults);
     d->mAttachments.clear();

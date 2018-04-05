@@ -209,7 +209,7 @@ void IncidenceDescription::printDebugInfo() const
                                          << mUi->mDescriptionEdit->richTextComposer()->toHtml()
                                          << "</desc>; "
                                          <<
-            "expr mLoadedIncidence->richDescription() != mUi->mDescriptionEdit->toHtml() is "
+                "expr mLoadedIncidence->richDescription() != mUi->mDescriptionEdit->toHtml() is "
                                          << (mLoadedIncidence->richDescription()
                 != mUi->mDescriptionEdit->richTextComposer()->toHtml());
         } else {
@@ -220,7 +220,7 @@ void IncidenceDescription::printDebugInfo() const
                                          << mUi->mDescriptionEdit->richTextComposer()->toPlainText()
                                          << "</desc>; "
                                          <<
-            "expr mLoadedIncidence->description() != mUi->mDescriptionEdit->toPlainText() is "
+                "expr mLoadedIncidence->description() != mUi->mDescriptionEdit->toPlainText() is "
                                          << (mLoadedIncidence->description()
                 != mUi->mDescriptionEdit->richTextComposer()->toPlainText());
         }

@@ -45,9 +45,7 @@ public:
     */
     typedef QSharedPointer<ResourceItem> Ptr;
 
-    ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs,
-                 const KLDAP::LdapClient &ldapClient,
-                 const ResourceItem::Ptr &parent = ResourceItem::Ptr());
+    ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem();
 
     ResourceItem::Ptr child(int number);

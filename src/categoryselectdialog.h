@@ -36,8 +36,7 @@ class CategorySelectWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CategorySelectWidget(CalendarSupport::CategoryConfig *config,
-                                  QWidget *parent = nullptr);
+    explicit CategorySelectWidget(CalendarSupport::CategoryConfig *config, QWidget *parent = nullptr);
     ~CategorySelectWidget();
 
     void setCategories(const QStringList &categoryList = QStringList());

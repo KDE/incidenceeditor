@@ -45,8 +45,8 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     ldapSearchCollections.setAttributes(attrs);
     ldapSearch.setAttributes(headers);
 
-    connect(&ldapSearchCollections, QOverload<const KLDAP::LdapResultObject::List &>::of(& KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
-    connect(&ldapSearch, QOverload<const KLDAP::LdapResultObject::List &>::of(& KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
+    connect(&ldapSearchCollections, QOverload<const KLDAP::LdapResultObject::List &>::of(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
+    connect(&ldapSearch, QOverload<const KLDAP::LdapResultObject::List &>::of(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
 
     ldapSearchCollections.startSearch(QStringLiteral("*"));
 }

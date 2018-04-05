@@ -48,8 +48,7 @@ class TemplateManagementDialog : public QDialog
 {
     Q_OBJECT
 public:
-    TemplateManagementDialog(QWidget *parent, const QStringList &templates,
-                             const QString &incidenceType);
+    TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType);
 
 Q_SIGNALS:
     /* Emitted whenever the user hits apply, indicating that the currently

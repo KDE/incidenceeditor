@@ -49,22 +49,15 @@ namespace IncidenceDialogFactory {
  * NOTE: There is no editor for Incidence::TypeFreeBusy
  */
 INCIDENCEEDITOR_EXPORT IncidenceDialog *create(
-    bool needsSaving, KCalCore::IncidenceBase::IncidenceType type,
-    Akonadi::IncidenceChanger *changer, QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
+    bool needsSaving, KCalCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
 
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(
-    const QString &summary, const QString &description, const QStringList &attachments,
-    const QStringList &attendees, const QStringList &attachmentMimetypes,
-    const QStringList &attachmentLabels, bool inlineAttachment,
-    const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTemp,
-    QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
+    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels,
+    bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTemp, QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
 
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(
-    const QString &summary, const QString &description, const QStringList &attachments,
-    const QStringList &attendees, const QStringList &attachmentMimetypes,
-    const QStringList &attachmentLabels, bool inlineAttachment,
-    const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles,
-    QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
+    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels,
+    bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent = nullptr, Qt::WindowFlags flags = 0);
 } // namespace IncidenceDialogFactory
 } // namespace IncidenceEditorNG
 

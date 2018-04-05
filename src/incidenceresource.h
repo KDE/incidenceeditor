@@ -43,8 +43,7 @@ public:
     using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
 
-    explicit IncidenceResource(IncidenceAttendee *mIeAttendee, IncidenceDateTime *dateTime,
-                               Ui::EventOrTodoDesktop *ui);
+    explicit IncidenceResource(IncidenceAttendee *mIeAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;

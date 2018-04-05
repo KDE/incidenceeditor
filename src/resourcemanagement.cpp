@@ -39,7 +39,6 @@
 
 #include <KGantt/KGanttGraphicsView>
 
-
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KConfigGroup>
@@ -279,10 +278,10 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAP::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QStringLiteral("objectClass") ||
-            key == QStringLiteral("owner") ||
-            key == QStringLiteral("givenname") ||
-            key == QStringLiteral("sn")) {
+        if (key == QStringLiteral("objectClass")
+            || key == QStringLiteral("owner")
+            || key == QStringLiteral("givenname")
+            || key == QStringLiteral("sn")) {
             continue;
         }
         QStringList list;

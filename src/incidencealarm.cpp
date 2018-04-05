@@ -315,11 +315,11 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
     if (offset % (24 * 60) == 0 && offset != 0) {     // divides evenly into days?
         useoffset = offset / 60 / 24;
         offsetUnitTranslated = i18ncp("The reminder is set to X days before/after the event",
-                             "1 day", "%1 days", qAbs(useoffset));
+                                      "1 day", "%1 days", qAbs(useoffset));
     } else if (offset % 60 == 0 && offset != 0) {   // divides evenly into hours?
         useoffset = offset / 60;
         offsetUnitTranslated = i18ncp("The reminder is set to X hours before/after the event",
-                             "1 hour", "%1 hours", qAbs(useoffset));
+                                      "1 hour", "%1 hours", qAbs(useoffset));
     }
 
     QString repeatStr;

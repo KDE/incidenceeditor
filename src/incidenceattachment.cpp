@@ -244,7 +244,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
 
     // get the saveas file name
     const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
-                                                      att->label());
+                                                            att->label());
 
     if (saveAsFile.isEmpty()) {
         return;
@@ -497,14 +497,14 @@ void IncidenceAttachment::setupActions()
     KActionCollection *ac = new KActionCollection(this);
 //  ac->addAssociatedWidget( this );
 
-    mOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")),i18nc("@action:inmenu open the attachment in a viewer",
-                                    "&Open"), this);
+    mOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), i18nc("@action:inmenu open the attachment in a viewer",
+                                                                                       "&Open"), this);
     connect(mOpenAction, &QAction::triggered, this, &IncidenceAttachment::showSelectedAttachments);
     ac->addAction(QStringLiteral("view"), mOpenAction);
     mPopupMenu->addAction(mOpenAction);
 
     mSaveAsAction = new QAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18nc("@action:inmenu save the attachment to a file",
-                                      "Save As..."), this);
+                                                                                            "Save As..."), this);
     connect(mSaveAsAction, &QAction::triggered, this,
             &IncidenceAttachment::saveSelectedAttachments);
     mPopupMenu->addAction(mSaveAsAction);
@@ -523,7 +523,7 @@ void IncidenceAttachment::setupActions()
 #endif
 
     mDeleteAction = new QAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu remove the attachment",
-                                      "&Remove"), this);
+                                                                                       "&Remove"), this);
     connect(mDeleteAction, &QAction::triggered, this,
             &IncidenceAttachment::removeSelectedAttachments);
     ac->addAction(QStringLiteral("remove"), mDeleteAction);
@@ -532,7 +532,7 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addSeparator();
 
     mEditAction = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18nc("@action:inmenu show a dialog used to edit the attachment",
-                                    "&Properties..."), this);
+                                                                                             "&Properties..."), this);
     connect(mEditAction, &QAction::triggered, this, &IncidenceAttachment::editSelectedAttachments);
     ac->addAction(QStringLiteral("edit"), mEditAction);
     mPopupMenu->addAction(mEditAction);
@@ -564,8 +564,7 @@ void IncidenceAttachment::setupAttachmentIconView()
 //   new AttachmentIconItem( attachment, mAttachmentView );
 // }
 
-void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType,
-                                            const QString &label)
+void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType, const QString &label)
 {
     AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
 
@@ -590,8 +589,7 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QStrin
     checkDirtyStatus();
 }
 
-void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mimeType,
-                                           const QString &label, bool inLine)
+void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mimeType, const QString &label, bool inLine)
 {
     if (!inLine) {
         AttachmentIconItem *item

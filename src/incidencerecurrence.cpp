@@ -614,10 +614,10 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
     }
 
     const QString labelEvery = ki18ncp("repeat >every< N years/months/...; "
-                         "dynamic context 'type': 'd' days, 'w' weeks, "
-                         "'m' months, 'y' years",
-                         "every", "every").
-                 subs(frequency).inContext(QStringLiteral("type"), freqKey).toString();
+                                       "dynamic context 'type': 'd' days, 'w' weeks, "
+                                       "'m' months, 'y' years",
+                                       "every", "every").
+                               subs(frequency).inContext(QStringLiteral("type"), freqKey).toString();
     mUi->mFrequencyLabel->setText(labelEvery);
     mUi->mRecurrenceRuleLabel->setText(labelFreq);
 

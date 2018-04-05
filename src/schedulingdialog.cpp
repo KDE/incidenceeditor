@@ -33,8 +33,7 @@
 
 using namespace IncidenceEditorNG;
 
-SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTime, int duration,
-                                   ConflictResolver *resolver, QWidget *parent)
+SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTime, int duration, ConflictResolver *resolver, QWidget *parent)
     : QDialog(parent)
     , mResolver(resolver)
     , mPeriodModel(new CalendarSupport::FreePeriodModel(this))
@@ -103,8 +102,7 @@ SchedulingDialog::~SchedulingDialog()
 {
 }
 
-void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTime,
-                                                   const QDateTime &endDateTime)
+void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTime, const QDateTime &endDateTime)
 {
     mVisualWidget->slotUpdateIncidenceStartEnd(startDateTime, endDateTime);
 }
@@ -177,8 +175,7 @@ void SchedulingDialog::slotMandatoryRolesChanged()
     mResolver->setMandatoryRoles(roles);
 }
 
-void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current,
-                                               const QModelIndex &previous)
+void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current, const QModelIndex &previous)
 {
     Q_UNUSED(previous);
     if (!current.isValid()) {

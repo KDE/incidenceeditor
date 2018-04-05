@@ -30,10 +30,7 @@
 using namespace IncidenceEditorNG;
 using namespace KCalCore;
 
-IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
-                                                KCalCore::IncidenceBase::IncidenceType type,
-                                                Akonadi::IncidenceChanger *changer, QWidget *parent,
-                                                Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent, Qt::WindowFlags flags)
 {
     switch (type) {
     case KCalCore::IncidenceBase::TypeEvent: // Fall through
@@ -52,15 +49,9 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
     }
 }
 
-IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary,
-                                                          const QString &description,
-                                                          const QStringList &attachments,
-                                                          const QStringList &attendees,
-                                                          const QStringList &attachmentMimetypes,
-                                                          const QStringList &attachmentLabels,
-                                                          bool inlineAttachment,
-                                                          const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent,
-                                                          Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees,
+                                                          const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
+                                                          const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
 {
     IncidenceDefaults defaults
         = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
@@ -88,15 +79,9 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
     return dialog;
 }
 
-IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary,
-                                                           const QString &description,
-                                                           const QStringList &attachments,
-                                                           const QStringList &attendees,
-                                                           const QStringList &attachmentMimetypes,
-                                                           const QStringList &attachmentLabels,
-                                                           bool inlineAttachment,
-                                                           const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent,
-                                                           Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees,
+                                                           const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
+                                                           const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
 {
     IncidenceDefaults defaults
         = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);

@@ -24,8 +24,7 @@
 
 using namespace IncidenceEditorNG;
 
-ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs,
-                           const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
+ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
     : parentItem(parent)
     , dn(dn)
     , mAttrs(attrs)
@@ -151,8 +150,7 @@ const KLDAP::LdapClient &ResourceItem::ldapClient() const
     return mLdapClient;
 }
 
-void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client,
-                                  const KLDAP::LdapObject &obj)
+void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
 {
     Q_UNUSED(client);
     mLdapObject = obj;

@@ -37,15 +37,12 @@ class IndividualMessageQueueJob : public MailTransport::MessageQueueJob
 {
     Q_OBJECT
 public:
-    explicit IndividualMessageQueueJob(const KIdentityManagement::Identity &identity,
-                                       const KCalCore::Attendee::List &update,
-                                       const KCalCore::Attendee::List &edit, QObject *parent);
+    explicit IndividualMessageQueueJob(const KIdentityManagement::Identity &identity, const KCalCore::Attendee::List &update, const KCalCore::Attendee::List &edit, QObject *parent);
 
     void start() override;
 
 private:
-    void startQueueJob(const QStringList &messageTo, const QStringList &to,
-                       const QStringList &messageCc, const QStringList &cc);
+    void startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc);
     void startComposerJob(const QStringList &to, const QStringList &cc);
     void handleJobFinished(KJob *job);
     KCalCore::Attendee::List mUpdate;
@@ -60,39 +57,35 @@ class IndividualMailITIPHandlerDialogDelegate : public Akonadi::ITIPHandlerDialo
     Q_OBJECT
 public:
 
-    explicit IndividualMailITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence,
-                                                     KCalCore::iTIPMethod method, QWidget *parent);
+    explicit IndividualMailITIPHandlerDialogDelegate(const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent);
 
     void openDialogIncidenceCreated(
-        Recipient recipient,
-        const QString &question,
-        Action action = ActionAsk,
-        const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-        const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
+        Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer",
+                                                                                                                            "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc(
+                                                                                                                                                                                    "@action:button dialog negative answer",
+                                                                                                                                                                                    "Do Not Send")))
+    override;
 
     void openDialogIncidenceModified(
-        bool attendeeStatusChanged,
-        Recipient recipient,
-        const QString &question,
-        Action action = ActionAsk,
-        const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-        const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
+        bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer",
+                                                                                                                                                        "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc(
+                                                                                                                                                                                                                "@action:button dialog negative answer",
+                                                                                                                                                                                                                "Do Not Send")))
+    override;
 
     void openDialogIncidenceDeleted(
-        Recipient recipient,
-        const QString &question,
-        Action action = ActionAsk,
-        const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
-        const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
+        Recipient recipient, const QString &question, Action action = ActionAsk, const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer",
+                                                                                                                            "Send Email")), const KGuiItem &buttonNo = KGuiItem(i18nc(
+                                                                                                                                                                                    "@action:button dialog negative answer",
+                                                                                                                                                                                    "Do Not Send")))
+    override;
 
 Q_SIGNALS:
     void setEdit(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &edit);
-    void setUpdate(const KCalCore::Incidence::Ptr &incidence,
-                   const KCalCore::Attendee::List &update);
+    void setUpdate(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &update);
 
 protected:
-    void openDialog(const QString &question, const KCalCore::Attendee::List &attendees,
-                    Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo);
+    void openDialog(const QString &question, const KCalCore::Attendee::List &attendees, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo);
 
 private:
     void onDialogClosed(int result);
@@ -106,17 +99,14 @@ class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::
 public:
     explicit IndividualMailComponentFactory(QObject *parent = nullptr);
     MailTransport::MessageQueueJob *createMessageQueueJob(
-        const KCalCore::IncidenceBase::Ptr &incidence,
-        const KIdentityManagement::Identity &identity, QObject *parent) override;
+        const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent) override;
 
     Akonadi::ITIPHandlerDialogDelegate *createITIPHanderDialogDelegate(
-        const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method,
-        QWidget *parent) override;
+        const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent) override;
 
 public Q_SLOTS:
     void onSetEdit(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &edit);
-    void onSetUpdate(const KCalCore::Incidence::Ptr &incidence,
-                     const KCalCore::Attendee::List &update);
+    void onSetUpdate(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &update);
 
 private:
     QHash<QString, KCalCore::Attendee::List> mEdit;

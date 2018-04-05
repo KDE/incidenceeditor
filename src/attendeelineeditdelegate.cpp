@@ -43,8 +43,7 @@ AttendeeLineEditDelegate::AttendeeLineEditDelegate(QObject *parent)
                        "can be sent to the user if an email address is provided.");
 }
 
-QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-                                                const QModelIndex &index) const
+QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
@@ -65,16 +64,13 @@ void AttendeeLineEditDelegate::setEditorData(QWidget *editor, const QModelIndex 
     lineedit->setText(index.model()->data(index, Qt::EditRole).toString());
 }
 
-void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
-                                            const QModelIndex &index) const
+void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
     AttendeeLineEdit *lineedit = static_cast<AttendeeLineEdit *>(editor);
     model->setData(index, lineedit->text(), Qt::EditRole);
 }
 
-void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor,
-                                                    const QStyleOptionViewItem &option,
-                                                    const QModelIndex &index) const
+void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     Q_UNUSED(index);
     editor->setGeometry(option.rect);
@@ -97,9 +93,7 @@ void AttendeeLineEditDelegate::setCompletionMode(KCompletion::CompletionMode mod
     mCompletionMode = mode;
 }
 
-bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view,
-                                         const QStyleOptionViewItem &option,
-                                         const QModelIndex &index)
+bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index)
 {
     if (!event || !view) {
         return false;

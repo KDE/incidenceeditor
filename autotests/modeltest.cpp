@@ -30,7 +30,9 @@ Q_DECLARE_METATYPE(QModelIndex)
 /*!
     Connect to all of the models signals.  Whenever anything happens recheck everything.
 */
-ModelTest::ModelTest(QAbstractItemModel *_model, QObject *parent) : QObject(parent), model(_model), fetchingMore(false)
+ModelTest::ModelTest(QAbstractItemModel *_model, QObject *parent) : QObject(parent)
+    , model(_model)
+    , fetchingMore(false)
 {
     Q_ASSERT(model);
 
@@ -67,7 +69,6 @@ ModelTest::ModelTest(QAbstractItemModel *_model, QObject *parent) : QObject(pare
 
 void ModelTest::runAllTests()
 {
-
 //     qDebug() << "rats";
     if (fetchingMore) {
         return;
@@ -305,7 +306,6 @@ void ModelTest::checkChildren(const QModelIndex &parent, int currentDepth)
     int columns = model->columnCount(parent);
 
     if (rows > 0) {
-
         Q_ASSERT(parent.column() <= 0);
         Q_ASSERT(model->hasChildren(parent));
     }
@@ -449,9 +449,9 @@ void ModelTest::data()
     QVariant checkStateVariant = model->data(model->index(0, 0), Qt::CheckStateRole);
     if (checkStateVariant.isValid()) {
         int state = checkStateVariant.toInt();
-        Q_ASSERT(state == Qt::Unchecked ||
-                 state == Qt::PartiallyChecked ||
-                 state == Qt::Checked);
+        Q_ASSERT(state == Qt::Unchecked
+                 || state == Qt::PartiallyChecked
+                 || state == Qt::Checked);
         Q_UNUSED(state);
     }
 }
@@ -559,7 +559,6 @@ void ModelTest::rowsMoved(const QModelIndex &srcParent, int start, int end, cons
         // TODO: Find out what I can assert here about last and next.
 //     Q_ASSERT ( cd.last == model->data ( model->index ( destinationRow - 1, 0, cd.parent ) ) );
 //     Q_ASSERT ( cd.next == model->data ( model->index ( destinationRow + (end - start + 1), 0, cd.parent ) ) );
-
     } else {
         Q_ASSERT(cd.oldSize + (end - start + 1) == model->rowCount(destParent));
 
@@ -578,7 +577,6 @@ void ModelTest::rowsMoved(const QModelIndex &srcParent, int start, int end, cons
         qDebug() << cs.next << model->data(model->index(start, 0, srcParent));
         Q_ASSERT(cs.next == model->data(model->index(start, 0, srcParent)));
     }
-
 }
 
 /*!
@@ -615,4 +613,3 @@ void ModelTest::rowsRemoved(const QModelIndex &parent, int start, int end)
     Q_ASSERT(c.last == model->data(model->index(start - 1, 0, c.parent)));
     Q_ASSERT(c.next == model->data(model->index(start, 0, c.parent)));
 }
-

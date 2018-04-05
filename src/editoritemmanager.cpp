@@ -63,13 +63,9 @@ public:
     void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &);
     void itemFetchResult(KJob *job);
     void itemMoveResult(KJob *job);
-    void onModifyFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void onCreateFinished(int changeId, const Akonadi::Item &item,
-                          Akonadi::IncidenceChanger::ResultCode resultCode,
-                          const QString &errorString);
+    void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void setupMonitor();
     void moveJobFinished(KJob *job);
@@ -185,9 +181,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     }
 }
 
-void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item,
-                                         Akonadi::IncidenceChanger::ResultCode resultCode,
-                                         const QString &errorString)
+void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_Q(EditorItemManager);
     if (resultCode == Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -210,9 +204,7 @@ void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item,
     }
 }
 
-void ItemEditorPrivate::onCreateFinished(int, const Akonadi::Item &item,
-                                         Akonadi::IncidenceChanger::ResultCode resultCode,
-                                         const QString &errorString)
+void ItemEditorPrivate::onCreateFinished(int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_Q(EditorItemManager);
     if (resultCode == Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -241,8 +233,7 @@ void ItemEditorPrivate::setupMonitor()
 //               SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
 }
 
-void ItemEditorPrivate::itemChanged(const Akonadi::Item &item,
-                                    const QSet<QByteArray> &partIdentifiers)
+void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &partIdentifiers)
 {
     Q_Q(EditorItemManager);
     if (mItemUi->containsPayloadIdentifiers(partIdentifiers)) {

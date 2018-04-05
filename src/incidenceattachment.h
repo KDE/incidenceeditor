@@ -75,11 +75,8 @@ private:
 
 private:
     //     void addAttachment( KCalCore::Attachment *attachment );
-    void addDataAttachment(const QByteArray &data,
-                           const QString &mimeType = QString(), const QString &label = QString());
-    void addUriAttachment(const QString &uri,
-                          const QString &mimeType = QString(),
-                          const QString &label = QString(), bool inLine = false);
+    void addDataAttachment(const QByteArray &data, const QString &mimeType = QString(), const QString &label = QString());
+    void addUriAttachment(const QString &uri, const QString &mimeType = QString(), const QString &label = QString(), bool inLine = false);
     void handlePasteOrDrop(const QMimeData *mimeData);
     void setupActions();
     void setupAttachmentIconView();

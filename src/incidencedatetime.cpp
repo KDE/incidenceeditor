@@ -81,8 +81,8 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
     mUi->mTimeZoneLabel->setContextMenuPolicy(Qt::NoContextMenu);
 
     const QList<QLineEdit *> lineEdits {
-        mUi->mStartDateEdit->lineEdit(), mUi->mEndDateEdit->lineEdit()
-                ,mUi->mStartTimeEdit->lineEdit(), mUi->mEndTimeEdit->lineEdit()};
+        mUi->mStartDateEdit->lineEdit(), mUi->mEndDateEdit->lineEdit(),
+                             mUi->mStartTimeEdit->lineEdit(), mUi->mEndTimeEdit->lineEdit()};
     for (QLineEdit *lineEdit : lineEdits) {
         if (lineEdit) {
             lineEdit->setClearButtonEnabled(false);
@@ -539,8 +539,7 @@ QDateTime IncidenceDateTime::currentEndDateTime() const
         mUi->mTimeZoneComboEnd->selectedTimeZone());
 }
 
-void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
-                             bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -605,8 +604,7 @@ void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTemplate,
-                             bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -650,8 +648,7 @@ void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTempl
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate,
-                             bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(true);

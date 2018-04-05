@@ -70,7 +70,9 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     d->mUi->mCompletedLabel->setMinimumWidth(metrics.boundingRect(QStringLiteral("100%")).width());
     d->mUi->mTaskSeparator->hide();
 
-    connect(d->mUi->mCompletionSlider, QOverload<int>::of(&QSlider::valueChanged), this, [this](int val) { d->sliderValueChanged(val);});
+    connect(d->mUi->mCompletionSlider, QOverload<int>::of(&QSlider::valueChanged), this, [this](int val) {
+        d->sliderValueChanged(val);
+    });
     connect(d->mUi->mPriorityCombo, QOverload< int>::of(&KComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
 }
 

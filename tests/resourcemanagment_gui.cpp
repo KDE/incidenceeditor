@@ -19,7 +19,6 @@
 
 #include "resourcemanagement.h"
 
-
 #include <QApplication>
 #include <QCommandLineParser>
 

@@ -136,8 +136,7 @@ public:
 };
 }
 
-VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing,
-                                           QWidget *parent)
+VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)
     : QWidget(parent)
     , mGanttGrid(nullptr)
     , mScaleCombo(nullptr)
@@ -270,7 +269,6 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
 
     connect(mLeftView, &QTreeView::customContextMenuRequested, this,
             &VisualFreeBusyWidget::showAttendeeStatusMenu);
-
 }
 
 VisualFreeBusyWidget::~VisualFreeBusyWidget()
@@ -288,8 +286,7 @@ void VisualFreeBusyWidget::slotCenterOnStart()
     mGanttGraphicsView->horizontalScrollBar()->setValue(daysTo * 800);
 }
 
-void VisualFreeBusyWidget::slotIntervalColorRectangleMoved(const QDateTime &start,
-                                                           const QDateTime &end)
+void VisualFreeBusyWidget::slotIntervalColorRectangleMoved(const QDateTime &start, const QDateTime &end)
 {
     mDtStart = start;
     mDtEnd = end;
@@ -312,8 +309,7 @@ void VisualFreeBusyWidget::slotScaleChanged(int newScale)
     mGanttGrid->setScale((KGantt::DateTimeGrid::Scale)value);
 }
 
-void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom,
-                                                       const QDateTime &dtTo)
+void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, const QDateTime &dtTo)
 {
     mDtStart = dtFrom;
     mDtEnd = dtTo;

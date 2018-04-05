@@ -29,7 +29,6 @@
 #include <KComboBox>
 #include <QTimeZone>
 
-
 namespace IncidenceEditorNG {
 /**
  * A combobox that shows the system timezones available in QTimeZone

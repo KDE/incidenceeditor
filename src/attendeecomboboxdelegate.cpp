@@ -69,9 +69,7 @@ void AttendeeComboBoxDelegate::setStandardIndex(int index)
     mStandardIndex = index;
 }
 
-QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent,
-                                                const QStyleOptionViewItem & /* option */,
-                                                const QModelIndex & /* index */) const
+QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem & /* option */, const QModelIndex & /* index */) const
 {
     AttendeeComboBox *editor = new AttendeeComboBox(parent);
 
@@ -98,23 +96,19 @@ void AttendeeComboBoxDelegate::setEditorData(QWidget *editor, const QModelIndex 
     comboBox->setCurrentIndex(value);
 }
 
-void AttendeeComboBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
-                                            const QModelIndex &index) const
+void AttendeeComboBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
     AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
     model->setData(index, comboBox->currentIndex(), Qt::EditRole);
     comboBox->menu()->close();
 }
 
-void AttendeeComboBoxDelegate::updateEditorGeometry(QWidget *editor,
-                                                    const QStyleOptionViewItem &option,
-                                                    const QModelIndex & /* index */) const
+void AttendeeComboBoxDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /* index */) const
 {
     editor->setGeometry(option.rect);
 }
 
-void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
-                                     const QModelIndex &index) const
+void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QStyleOptionButton myOption;
 
@@ -160,9 +154,7 @@ void AttendeeComboBoxDelegate::rightPressed()
         static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
 }
 
-bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view,
-                                         const QStyleOptionViewItem &option,
-                                         const QModelIndex &index)
+bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index)
 {
     if (!event || !view) {
         return false;

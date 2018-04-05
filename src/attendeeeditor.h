@@ -56,8 +56,7 @@ public:
 
 Q_SIGNALS:
     void countChanged(int);
-    void changed(const KCalCore::Attendee::Ptr &oldAttendee,
-                 const KCalCore::Attendee::Ptr &newAttendee);
+    void changed(const KCalCore::Attendee::Ptr &oldAttendee, const KCalCore::Attendee::Ptr &newAttendee);
     void editingFinished(KPIM::MultiplyingLine *);
 
 protected Q_SLOTS:

@@ -33,10 +33,7 @@
 
 using namespace IncidenceEditorNG;
 
-IndividualMailDialog::IndividualMailDialog(const QString &question,
-                                           const KCalCore::Attendee::List &attendees,
-                                           const KGuiItem &buttonYes, const KGuiItem &buttonNo,
-                                           QWidget *parent)
+IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));

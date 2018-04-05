@@ -46,10 +46,7 @@ public:
         NoUpdate,       /**< do not send mail to attendee */
         Edit            /**< open composer for attendee */
     };
-    explicit IndividualMailDialog(const QString &question,
-                                  const KCalCore::Attendee::List &attendees,
-                                  const KGuiItem &buttonYes, const KGuiItem &buttonNo,
-                                  QWidget *parent = nullptr);
+    explicit IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
     ~IndividualMailDialog() override;
 
     KCalCore::Attendee::List editAttendees() const;

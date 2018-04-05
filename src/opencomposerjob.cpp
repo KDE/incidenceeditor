@@ -29,9 +29,7 @@
 
 using namespace IncidenceEditorNG;
 
-OpenComposerJob::OpenComposerJob(QObject *parent, const QString &to, const QString &cc,
-                                 const QString &bcc, const KMime::Message::Ptr &message,
-                                 const KIdentityManagement::Identity &identity)
+OpenComposerJob::OpenComposerJob(QObject *parent, const QString &to, const QString &cc, const QString &bcc, const KMime::Message::Ptr &message, const KIdentityManagement::Identity &identity)
     : KJob(parent)
     , mTo(to)
     , mCc(cc)
@@ -95,8 +93,7 @@ void OpenComposerJob::timeout()
     }
 }
 
-void OpenComposerJob::slotServiceOwnerChanged(const QString &name, const QString &oldOwner,
-                                              const QString &newOwner)
+void OpenComposerJob::slotServiceOwnerChanged(const QString &name, const QString &oldOwner, const QString &newOwner)
 {
     Q_UNUSED(oldOwner);
     if (name == QLatin1String("org.kde.kmail") && !newOwner.isEmpty()) {

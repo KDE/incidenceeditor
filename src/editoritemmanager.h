@@ -95,8 +95,7 @@ public:
 Q_SIGNALS:
     void itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction action);
 
-    void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction action,
-                        const QString &message);
+    void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction action, const QString &message);
 
     void revertFinished();
     void revertFailed(const QString &message);

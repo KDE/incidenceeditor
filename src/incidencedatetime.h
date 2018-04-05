@@ -110,12 +110,9 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void load(const KCalCore::Event::Ptr &event, bool isTemplate = false,
-              bool templateOverridesTimes = false);
-    void load(const KCalCore::Todo::Ptr &todo, bool isTemplate = false,
-              bool templateOverridesTimes = false);
-    void load(const KCalCore::Journal::Ptr &journal, bool isTemplate = false,
-              bool templateOverridesTimes = false);
+    void load(const KCalCore::Event::Ptr &event, bool isTemplate = false, bool templateOverridesTimes = false);
+    void load(const KCalCore::Todo::Ptr &todo, bool isTemplate = false, bool templateOverridesTimes = false);
+    void load(const KCalCore::Journal::Ptr &journal, bool isTemplate = false, bool templateOverridesTimes = false);
     void save(const KCalCore::Event::Ptr &event);
     void save(const KCalCore::Todo::Ptr &todo);
     void save(const KCalCore::Journal::Ptr &journal);

@@ -288,8 +288,7 @@ ResourceFilterProxyModel::ResourceFilterProxyModel(QObject *parent)
 {
 }
 
-bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow,
-                                                const QModelIndex &sourceParent) const
+bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);
@@ -304,8 +303,7 @@ AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
 {
 }
 
-bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow,
-                                                const QModelIndex &sourceParent) const
+bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);

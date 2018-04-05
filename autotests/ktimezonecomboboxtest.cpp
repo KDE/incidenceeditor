@@ -28,10 +28,11 @@ void KTimeZoneComboBoxTest::test_timeSpec()
 {
     IncidenceEditorNG::KTimeZoneComboBox combo;
     combo.selectLocalTimeZone();
-    if (combo.selectedTimeZone().id() != "UTC")
+    if (combo.selectedTimeZone().id() != "UTC") {
         QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
-    else
+    } else {
         QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
+    }
 
     combo.selectTimeZone(QTimeZone());
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());

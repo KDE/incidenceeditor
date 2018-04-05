@@ -32,9 +32,7 @@ class OpenComposerJob : public KJob
     Q_OBJECT
 
 public:
-    explicit OpenComposerJob(QObject *parent, const QString &to, const QString &cc,
-                             const QString &bcc, const KMime::Message::Ptr &message,
-                             const KIdentityManagement::Identity &identity);
+    explicit OpenComposerJob(QObject *parent, const QString &to, const QString &cc, const QString &bcc, const KMime::Message::Ptr &message, const KIdentityManagement::Identity &identity);
     ~OpenComposerJob() override;
 
     void start() override;

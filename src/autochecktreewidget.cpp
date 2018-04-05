@@ -145,8 +145,7 @@ void AutoCheckTreeWidget::slotRowsInserted(const QModelIndex &parent, int start,
     }
 }
 
-void AutoCheckTreeWidget::slotDataChanged(const QModelIndex &topLeft,
-                                          const QModelIndex &bottomRight)
+void AutoCheckTreeWidget::slotDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
     if (!d->mAutoCheckChildren) {
         return;
