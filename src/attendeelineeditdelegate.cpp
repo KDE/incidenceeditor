@@ -53,7 +53,7 @@ QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOpt
     editor->setToolTip(mToolTip);
     editor->setWhatsThis(mWhatsThis);
     editor->setCompletionMode(mCompletionMode);
-    editor->setClearButtonShown(true);
+    editor->setClearButtonEnabled(true);
 
     return editor;
 }

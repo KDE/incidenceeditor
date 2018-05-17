@@ -174,7 +174,7 @@ AttendeeLine::AttendeeLine(QWidget *parent)
 
     mEdit->setToolTip(i18nc("@info:tooltip",
                             "Enter the name or email address of the attendee."));
-    mEdit->setClearButtonShown(true);
+    mEdit->setClearButtonEnabled(true);
 
     mStateCombo->setWhatsThis(i18nc("@info:whatsthis",
                                     "Edits the current attendance status of the attendee."));
