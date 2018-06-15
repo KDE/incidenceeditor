@@ -900,13 +900,15 @@ bool IncidenceDateTime::endDateTimeEnabled() const
 bool IncidenceDateTime::isValid() const
 {
     if (startDateTimeEnabled() && !currentStartDateTime().isValid()) {
-        //TODO: Add strings
+        mLastErrorString = i18nc("@info",
+                                 "Invalid start date and time.");
         qCWarning(INCIDENCEEDITOR_LOG) << "Start date is invalid";
         return false;
     }
 
     if (endDateTimeEnabled() && !currentEndDateTime().isValid()) {
-        //TODO: Add strings
+        mLastErrorString = i18nc("@info",
+                                 "Invalid end date and time.");
         qCWarning(INCIDENCEEDITOR_LOG) << "End date is invalid";
         return false;
     }
