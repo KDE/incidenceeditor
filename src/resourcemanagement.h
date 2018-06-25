@@ -51,7 +51,7 @@ public:
     explicit ResourceManagement(QWidget *parent = nullptr);
     ~ResourceManagement();
 
-    ResourceItem::Ptr selectedItem() const;
+    Q_REQUIRED_RESULT ResourceItem::Ptr selectedItem() const;
 
 public Q_SLOTS:
     void slotDateChanged(const QDate &start, const QDate &end);

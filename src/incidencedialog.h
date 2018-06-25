@@ -79,7 +79,7 @@ public:
     */
     void setInitiallyDirty(bool initiallyDirty);
 
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
 
 Q_SIGNALS:
     /**

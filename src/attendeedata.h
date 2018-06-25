@@ -43,12 +43,12 @@ public:
     }
 
     void clear() override;
-    bool isEmpty() const override;
+    Q_REQUIRED_RESULT bool isEmpty() const override;
 
     /**
      * Return a copy of the attendee data
      */
-    KCalCore::Attendee::Ptr attendee() const;
+    Q_REQUIRED_RESULT KCalCore::Attendee::Ptr attendee() const;
 };
 }
 

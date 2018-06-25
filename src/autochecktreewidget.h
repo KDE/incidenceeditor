@@ -62,13 +62,13 @@ public:
       @param item The item
       @returns a string list which is the represented path of the item.
     */
-    QStringList pathByItem(QTreeWidgetItem *item) const;
+    Q_REQUIRED_RESULT QStringList pathByItem(QTreeWidgetItem *item) const;
 
     /**
       @returns whether autoCheckChildren is enabled or not.
                Default value is false.
     */
-    bool autoCheckChildren() const;
+    Q_REQUIRED_RESULT bool autoCheckChildren() const;
 
     /**
       enables or disables autoCheckChildren behavior.
@@ -82,7 +82,7 @@ public:
       @returns whether newly added items have checkboxes by default.
                Default value is true.
     */
-    bool autoCheck() const;
+    Q_REQUIRED_RESULT bool autoCheck() const;
 
     /**
       Sets whether newly added items have checkboxes by default.

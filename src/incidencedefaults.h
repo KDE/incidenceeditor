@@ -102,11 +102,11 @@ public:
      * TODO: See if this is always called when using IncidenceDefaults.
      * If yes, this should be done inside ctor.
      */
-    static IncidenceDefaults minimalIncidenceDefaults(bool cleanupAttachmentTempFiles = false);
+    Q_REQUIRED_RESULT static IncidenceDefaults minimalIncidenceDefaults(bool cleanupAttachmentTempFiles = false);
 
     // Returns the e-mail address used for the organizer when we can't find anything useful
     // This is something like "invalid@invalid"
-    static QString invalidEmailAddress();
+    Q_REQUIRED_RESULT static QString invalidEmailAddress();
 
 private:
     IncidenceDefaultsPrivate *const d_ptr;

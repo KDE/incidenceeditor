@@ -73,7 +73,7 @@ public:
     /**
      * Return the time zone associated with the currently selected item.
      */
-    QTimeZone selectedTimeZone() const;
+    Q_REQUIRED_RESULT QTimeZone selectedTimeZone() const;
 
 private:
     //@cond PRIVATE

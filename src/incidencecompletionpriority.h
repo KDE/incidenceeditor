@@ -36,7 +36,7 @@ public:
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
 
     explicit IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui);
-    ~IncidenceCompletionPriority();
+    ~IncidenceCompletionPriority() override;
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;

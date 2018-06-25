@@ -43,14 +43,14 @@ public:
 
     explicit IncidenceDescription(Ui::EventOrTodoDesktop *ui);
 
-    ~IncidenceDescription();
+    ~IncidenceDescription() override;
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
 
     // For debugging pursposes
-    bool richTextEnabled() const;
+    Q_REQUIRED_RESULT bool richTextEnabled() const;
 
     void printDebugInfo() const override;
 

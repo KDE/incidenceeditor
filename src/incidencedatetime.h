@@ -41,11 +41,11 @@ public:
     using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
     explicit IncidenceDateTime(Ui::EventOrTodoDesktop *ui);
-    ~IncidenceDateTime();
+    ~IncidenceDateTime() override;
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
 
     /**
      * Sets the active date for the editing session. This defaults to the current
@@ -54,22 +54,22 @@ public:
      */
     void setActiveDate(const QDate &activeDate);
 
-    QDate startDate() const; /// Returns the current start date.
-    QTime startTime() const; /// Returns the current start time.
-    QDate endDate() const; /// Returns the current end date.
-    QTime endTime() const; /// Returns the current endtime.
+    Q_REQUIRED_RESULT QDate startDate() const; /// Returns the current start date.
+    Q_REQUIRED_RESULT QTime startTime() const; /// Returns the current start time.
+    Q_REQUIRED_RESULT QDate endDate() const; /// Returns the current end date.
+    Q_REQUIRED_RESULT QTime endTime() const; /// Returns the current endtime.
 
     /// Created from the values in the widgets
-    QDateTime currentStartDateTime() const;
-    QDateTime currentEndDateTime() const;
+    Q_REQUIRED_RESULT QDateTime currentStartDateTime() const;
+    Q_REQUIRED_RESULT QDateTime currentEndDateTime() const;
 
     void setStartTime(const QTime &newTime);
     void setStartDate(const QDate &newDate);
 
-    bool startDateTimeEnabled() const;
-    bool endDateTimeEnabled() const;
+    Q_REQUIRED_RESULT bool startDateTimeEnabled() const;
+    Q_REQUIRED_RESULT bool endDateTimeEnabled() const;
 
-    bool isValid() const override;
+    Q_REQUIRED_RESULT bool isValid() const override;
     void printDebugInfo() const override;
 
 Q_SIGNALS:

@@ -45,13 +45,13 @@ public:
 
     explicit IncidenceAttachment(Ui::EventOrTodoDesktop *ui);
 
-    ~IncidenceAttachment();
+    ~IncidenceAttachment() override;
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
 
-    int attachmentCount() const;
+    Q_REQUIRED_RESULT int attachmentCount() const;
 
 Q_SIGNALS:
     void attachmentCountChanged(int newCount);

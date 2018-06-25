@@ -49,8 +49,8 @@ public:
     explicit IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
     ~IndividualMailDialog() override;
 
-    KCalCore::Attendee::List editAttendees() const;
-    KCalCore::Attendee::List updateAttendees() const;
+    Q_REQUIRED_RESULT KCalCore::Attendee::List editAttendees() const;
+    Q_REQUIRED_RESULT KCalCore::Attendee::List updateAttendees() const;
 
 private:
     void updateButtonState();

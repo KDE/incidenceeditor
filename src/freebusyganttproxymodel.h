@@ -45,8 +45,8 @@ class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyMo
     Q_OBJECT
 public:
     explicit FreeBusyGanttProxyModel(QObject *parent = nullptr);
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    QString tooltipify(const KCalCore::FreeBusyPeriod &period) const;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    Q_REQUIRED_RESULT QString tooltipify(const KCalCore::FreeBusyPeriod &period) const;
 };
 }
 

@@ -50,7 +50,7 @@ public:
     bool isDirty() const override;
 
     /** resturn the count of resources */
-    int resourceCount() const;
+    Q_REQUIRED_RESULT int resourceCount() const;
 
 Q_SIGNALS:
     /** is emitted it the count of the resources is changed.

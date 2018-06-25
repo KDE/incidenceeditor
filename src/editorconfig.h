@@ -52,69 +52,69 @@ public:
     virtual KConfigSkeleton *config() const = 0;
 
     /// Return the own full name.
-    virtual QString fullName() const;
+    Q_REQUIRED_RESULT virtual QString fullName() const;
 
     /// Return the own mail address.
-    virtual QString email() const;
+    Q_REQUIRED_RESULT virtual QString email() const;
 
     /// Return true if the given email belongs to the user.
     virtual bool thatIsMe(const QString &email) const;
 
     /// Returns all email addresses for the user.
-    virtual QStringList allEmails() const;
+    Q_REQUIRED_RESULT virtual QStringList allEmails() const;
 
     /// Returns all email addresses together with the full username for the user.
-    virtual QStringList fullEmails() const;
+    Q_REQUIRED_RESULT virtual QStringList fullEmails() const;
 
     /// Show timezone selectors in the event and todo editor dialog.
-    virtual bool showTimeZoneSelectorInIncidenceEditor() const;
+    Q_REQUIRED_RESULT virtual bool showTimeZoneSelectorInIncidenceEditor() const;
 
-    virtual QDateTime defaultDuration() const
+    Q_REQUIRED_RESULT virtual QDateTime defaultDuration() const
     {
         return QDateTime(QDate(1752, 1, 1), QTime(2, 0));
     }
 
-    virtual QDateTime startTime() const
+    Q_REQUIRED_RESULT virtual QDateTime startTime() const
     {
         return QDateTime(QDate(1752, 1, 1), QTime(10, 0));
     }
 
-    virtual bool defaultAudioFileReminders() const
+    Q_REQUIRED_RESULT virtual bool defaultAudioFileReminders() const
     {
         return false;
     }
 
-    virtual QUrl audioFilePath() const
+    Q_REQUIRED_RESULT virtual QUrl audioFilePath() const
     {
         return QUrl();
     }
 
-    virtual int reminderTime() const
+    Q_REQUIRED_RESULT virtual int reminderTime() const
     {
         return 15;
     }
 
-    virtual int reminderTimeUnits() const
+    Q_REQUIRED_RESULT virtual int reminderTimeUnits() const
     {
         return 0;
     }
 
-    virtual bool defaultTodoReminders() const
+    Q_REQUIRED_RESULT virtual bool defaultTodoReminders() const
     {
         return false;
     }
 
-    virtual bool defaultEventReminders() const
+    Q_REQUIRED_RESULT virtual bool defaultEventReminders() const
     {
         return false;
     }
 
-    virtual QStringList activeDesignerFields() const
+    Q_REQUIRED_RESULT virtual QStringList activeDesignerFields() const
     {
         return QStringList();
     }
 
-    virtual QStringList &templates(KCalCore::IncidenceBase::IncidenceType type);
+    Q_REQUIRED_RESULT virtual QStringList &templates(KCalCore::IncidenceBase::IncidenceType type);
 
 private:
     class Private;

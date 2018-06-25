@@ -41,9 +41,9 @@ public:
     /**
      * Returns the list of currently selected categories.
      */
-    QStringList categories() const;
+    Q_REQUIRED_RESULT QStringList categories() const;
 
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
     void printDebugInfo() const override;
 
 private:

@@ -39,7 +39,7 @@ public:
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
 
 private:
     Ui::EventOrTodoDesktop *mUi = nullptr;

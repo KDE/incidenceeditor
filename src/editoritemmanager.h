@@ -68,7 +68,7 @@ public:
      * Returns the last saved item with payload or an invalid item when save is
      * not called yet.
      */
-    Akonadi::Item item(ItemState state = AfterSave) const;
+    Q_REQUIRED_RESULT Akonadi::Item item(ItemState state = AfterSave) const;
 
     /**
      * Loads the @param item into the editor. The item passed must be

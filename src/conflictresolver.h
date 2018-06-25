@@ -76,7 +76,7 @@ public:
     /**
      * Returns whether the resolver contains the attendee
      */
-    bool containsAttendee(const KCalCore::Attendee::Ptr &attendee);
+    Q_REQUIRED_RESULT bool containsAttendee(const KCalCore::Attendee::Ptr &attendee);
 
     /**
      * Constrain the free time slot search to the weekdays
@@ -109,9 +109,9 @@ public:
       Finds a free slot in the future which has at least the same size as
       the initial slot.
     */
-    bool findFreeSlot(const KCalCore::Period &dateTimeRange);
+    Q_REQUIRED_RESULT bool findFreeSlot(const KCalCore::Period &dateTimeRange);
 
-    QList<CalendarSupport::FreeBusyItem::Ptr> freeBusyItems() const;
+    Q_REQUIRED_RESULT QList<CalendarSupport::FreeBusyItem::Ptr> freeBusyItems() const;
 
     CalendarSupport::FreeBusyItemModel *model() const;
 

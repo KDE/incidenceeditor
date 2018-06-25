@@ -31,22 +31,22 @@ public:
     ~KOrganizerEditorConfig() override;
 
     KConfigSkeleton *config() const override;
-    QString fullName() const override;
-    QString email() const override;
-    bool thatIsMe(const QString &email) const override;
-    QStringList allEmails() const override;
-    QStringList fullEmails() const override;
-    bool showTimeZoneSelectorInIncidenceEditor() const override;
-    QDateTime defaultDuration() const override;
-    QDateTime startTime() const override;
-    bool defaultAudioFileReminders() const override;
-    QUrl audioFilePath() const override;
-    int reminderTime() const override;
-    int reminderTimeUnits() const override;
-    bool defaultTodoReminders() const override;
-    bool defaultEventReminders() const override;
-    QStringList activeDesignerFields() const override;
-    QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) override;
+    Q_REQUIRED_RESULT QString fullName() const override;
+    Q_REQUIRED_RESULT QString email() const override;
+    Q_REQUIRED_RESULT bool thatIsMe(const QString &email) const override;
+    Q_REQUIRED_RESULT QStringList allEmails() const override;
+    Q_REQUIRED_RESULT QStringList fullEmails() const override;
+    Q_REQUIRED_RESULT bool showTimeZoneSelectorInIncidenceEditor() const override;
+    Q_REQUIRED_RESULT QDateTime defaultDuration() const override;
+    Q_REQUIRED_RESULT QDateTime startTime() const override;
+    Q_REQUIRED_RESULT bool defaultAudioFileReminders() const override;
+    Q_REQUIRED_RESULT QUrl audioFilePath() const override;
+    Q_REQUIRED_RESULT int reminderTime() const override;
+    Q_REQUIRED_RESULT int reminderTimeUnits() const override;
+    Q_REQUIRED_RESULT bool defaultTodoReminders() const override;
+    Q_REQUIRED_RESULT bool defaultEventReminders() const override;
+    Q_REQUIRED_RESULT QStringList activeDesignerFields() const override;
+    Q_REQUIRED_RESULT QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) override;
 };
 } // IncidenceEditors
 

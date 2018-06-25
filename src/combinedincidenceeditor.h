@@ -41,7 +41,7 @@ public:
      * Deletes this editor as well as all editors which are combined into this
      * one.
      */
-    ~CombinedIncidenceEditor();
+    ~CombinedIncidenceEditor() override;
 
     void combine(IncidenceEditor *other);
 
@@ -49,8 +49,8 @@ public:
      * Returns whether or not the current values in the editor differ from the
      * initial values or if one of the combined editors is dirty.
      */
-    bool isDirty() const override;
-    bool isValid() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isValid() const override;
 
     /**
      * Loads all data from @param inicidence into the combined editors. Note, if

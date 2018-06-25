@@ -54,10 +54,10 @@ public:
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
-    bool isValid() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isValid() const override;
 
-    RecurrenceType currentRecurrenceType() const;
+    Q_REQUIRED_RESULT RecurrenceType currentRecurrenceType() const;
 
 Q_SIGNALS:
     void recurrenceChanged(IncidenceEditorNG::RecurrenceType type);

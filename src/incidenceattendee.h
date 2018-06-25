@@ -50,11 +50,11 @@ public:
     using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
     IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
-    ~IncidenceAttendee();
+    ~IncidenceAttendee() override;
 
     void load(const KCalCore::Incidence::Ptr &incidence) override;
     void save(const KCalCore::Incidence::Ptr &incidence) override;
-    bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
     void printDebugInfo() const override;
 
     AttendeeTableModel *dataModel() const;
@@ -63,7 +63,7 @@ public:
     AttendeeComboBoxDelegate *responseDelegate() const;
     AttendeeLineEditDelegate *attendeeDelegate() const;
 
-    int attendeeCount() const;
+    Q_REQUIRED_RESULT int attendeeCount() const;
 
 Q_SIGNALS:
     void attendeeCountChanged(int);

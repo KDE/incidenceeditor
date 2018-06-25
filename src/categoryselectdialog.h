@@ -43,8 +43,8 @@ public:
     void setCategoryList(const QStringList &categories);
 
     void setSelected(const QStringList &selList);
-    QStringList selectedCategories() const;
-    QStringList selectedCategories(QString &categoriesStr);
+    Q_REQUIRED_RESULT QStringList selectedCategories() const;
+    Q_REQUIRED_RESULT QStringList selectedCategories(QString &categoriesStr);
 
     void setAutoselectChildren(bool autoselectChildren);
 

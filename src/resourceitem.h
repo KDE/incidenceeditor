@@ -48,15 +48,15 @@ public:
     ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem();
 
-    ResourceItem::Ptr child(int number);
-    int childCount() const;
-    int columnCount() const;
-    QVariant data(int column) const;
-    QVariant data(const QString &column) const;
-    bool insertChild(int position, const ResourceItem::Ptr &item);
-    ResourceItem::Ptr parent();
-    bool removeChildren(int position, int count);
-    int childNumber() const;
+    Q_REQUIRED_RESULT ResourceItem::Ptr child(int number);
+    Q_REQUIRED_RESULT int childCount() const;
+    Q_REQUIRED_RESULT int columnCount() const;
+    Q_REQUIRED_RESULT QVariant data(int column) const;
+    Q_REQUIRED_RESULT QVariant data(const QString &column) const;
+    Q_REQUIRED_RESULT bool insertChild(int position, const ResourceItem::Ptr &item);
+    Q_REQUIRED_RESULT ResourceItem::Ptr parent();
+    Q_REQUIRED_RESULT bool removeChildren(int position, int count);
+    Q_REQUIRED_RESULT int childNumber() const;
 
 private:
     QList<ResourceItem::Ptr> childItems;

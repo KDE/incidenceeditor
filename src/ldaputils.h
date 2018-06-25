@@ -25,7 +25,7 @@
 #include <QString>
 
 namespace IncidenceEditorNG {
-QString translateLDAPAttributeForDisplay(const QString &attribute);
+Q_REQUIRED_RESULT QString translateLDAPAttributeForDisplay(const QString &attribute);
 } // namespace IncidenceEditorNG
 
 #endif //LDAPUTLS_H

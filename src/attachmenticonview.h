@@ -45,8 +45,8 @@ class AttachmentIconView : public QListWidget
 public:
     explicit AttachmentIconView(QWidget *parent = nullptr);
 
-    QMimeData *mimeData() const;
-    QUrl tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const;
+    Q_REQUIRED_RESULT QMimeData *mimeData() const;
+    Q_REQUIRED_RESULT QUrl tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const;
 
 protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
@@ -64,24 +64,24 @@ public:
     ~AttachmentIconItem();
 
     KCalCore::Attachment::Ptr attachment() const;
-    const QString uri() const;
-    const QString savedUri() const;
+    Q_REQUIRED_RESULT const QString uri() const;
+    Q_REQUIRED_RESULT const QString savedUri() const;
     void setUri(const QString &uri);
 
     using QListWidgetItem::setData;
 
     void setData(const QByteArray &data);
 
-    const QString mimeType() const;
+    Q_REQUIRED_RESULT const QString mimeType() const;
     void setMimeType(const QString &mime);
 
-    const QString label() const;
+    Q_REQUIRED_RESULT const QString label() const;
     void setLabel(const QString &description);
 
-    bool isBinary() const;
+    Q_REQUIRED_RESULT bool isBinary() const;
 
     static QPixmap icon(const QMimeType &mimeType, const QString &uri, bool binary = false);
-    QPixmap icon() const;
+    Q_REQUIRED_RESULT QPixmap icon() const;
 
     void readAttachment();
 
