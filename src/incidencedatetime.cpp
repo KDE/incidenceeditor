@@ -239,11 +239,11 @@ QTime IncidenceDateTime::endTime() const
 void IncidenceDateTime::setTimeZonesVisibility(bool visible)
 {
     static const QString tz(i18nc("@action show or hide the time zone widgets", "Time zones"));
-    QString placeholder(QStringLiteral("<a href=\"hide\"><font color='blue'>&lt;&lt; %1</font></a>"));
+    QString placeholder(QStringLiteral("<a href=\"hide\">&lt;&lt; %1</a>"));
     if (visible) {
         placeholder = placeholder.arg(tz);
     } else {
-        placeholder = QStringLiteral("<a href=\"show\"><font color='blue'>%1 &gt;&gt;</font></a>");
+        placeholder = QStringLiteral("<a href=\"show\">%1 &gt;&gt;</a>");
         placeholder = placeholder.arg(tz);
     }
     mUi->mTimeZoneLabel->setText(placeholder);

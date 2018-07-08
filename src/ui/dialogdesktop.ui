@@ -492,7 +492,7 @@
           </font>
          </property>
          <property name="text">
-          <string comment="@action">&lt;a href=&quot;hide&quot;&gt;&lt;font color='blue'&gt;&amp;lt;&amp;lt; Time zones&lt;/font&gt;&lt;/a&gt;</string>
+          <string comment="@action">&lt;a href=&quot;hide&quot;&gt;&lt;&lt; Time zones&lt;/a&gt;</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
@@ -664,7 +664,7 @@
               </sizepolicy>
              </property>
              <property name="text">
-              <string comment="@label">&lt;a href=\&quot;hide\&quot;&gt;&lt;font color='blue'&gt;Rich text &amp;gt;&amp;gt;&lt;/font&gt;&lt;/a&gt;</string>
+              <string comment="@label">&lt;a href=\&quot;hide\&quot;&gt;Rich text &amp;gt;&amp;gt;&lt;/a&gt;</string>
              </property>
              <property name="textFormat">
               <enum>Qt::RichText</enum>

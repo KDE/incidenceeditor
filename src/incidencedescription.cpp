@@ -123,11 +123,11 @@ void IncidenceDescription::enableRichTextDescription(bool enable)
     d->mRichTextEnabled = enable;
 
     QString rt(i18nc("@action Enable or disable rich text editting", "Enable rich text"));
-    QString placeholder(QStringLiteral("<a href=\"show\"><font color='blue'>%1 &gt;&gt;</font></a>"));
+    QString placeholder(QStringLiteral("<a href=\"show\">%1 &gt;&gt;</a>"));
 
     if (enable) {
         rt = i18nc("@action Enable or disable rich text editting", "Disable rich text");
-        placeholder = QStringLiteral("<a href=\"show\"><font color='blue'>&lt;&lt; %1</font></a>");
+        placeholder = QStringLiteral("<a href=\"show\">&lt;&lt; %1</a>");
         mUi->mDescriptionEdit->richTextComposer()->activateRichText();
         d->mRealOriginalDescriptionEditContents
             = mUi->mDescriptionEdit->richTextComposer()->toHtml();
