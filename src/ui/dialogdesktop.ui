@@ -492,7 +492,7 @@
           </font>
          </property>
          <property name="text">
-          <string comment="@action">&lt;a href=&quot;hide&quot;&gt;&lt;&lt; Time zones&lt;/a&gt;</string>
+          <string comment="@action">&lt;a href=&quot;hide&quot;&gt;&amp;lt;&amp;lt; Time zones&lt;/a&gt;</string>
          </property>
          <property name="textFormat">
           <enum>Qt::RichText</enum>
