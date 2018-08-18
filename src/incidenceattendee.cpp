@@ -44,6 +44,7 @@
 
 #include "incidenceeditor_debug.h"
 #include <QTreeView>
+#include <QPointer>
 #include <KMessageBox>
 #include <KLocalizedString>
 
@@ -471,57 +472,46 @@ void IncidenceAttendee::expandResult(KJob *job)
 
 void IncidenceAttendee::slotSelectAddresses()
 {
-    QSharedPointer<Akonadi::EmailAddressSelectionDialog> d(new Akonadi::EmailAddressSelectionDialog(
-                                                               mParentWidget));
-
-    QWeakPointer<Akonadi::EmailAddressSelectionDialog> dialog(d);
-    dialog.data()->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    dialog.data()->setWindowTitle(i18n("Select Attendees"));
-    if (dialog.data()->exec() == QDialog::Accepted) {
-        Akonadi::EmailAddressSelectionDialog *dialogPtr = dialog.data();
-        if (dialogPtr) {
-            const Akonadi::EmailAddressSelection::List list = dialogPtr->selectedAddresses();
-            for (const Akonadi::EmailAddressSelection &selection : list) {
-                if (selection.item().hasPayload<KContacts::ContactGroup>()) {
-                    Akonadi::ContactGroupExpandJob *job
+    QPointer<Akonadi::EmailAddressSelectionDialog> dialog = new Akonadi::EmailAddressSelectionDialog(mParentWidget);
+    dialog->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    dialog->setWindowTitle(i18n("Select Attendees"));
+    if (dialog->exec() == QDialog::Accepted) {
+        const Akonadi::EmailAddressSelection::List list = dialog->selectedAddresses();
+        for (const Akonadi::EmailAddressSelection &selection : list) {
+            if (selection.item().hasPayload<KContacts::ContactGroup>()) {
+                Akonadi::ContactGroupExpandJob *job
                         = new Akonadi::ContactGroupExpandJob(
-                        selection.item().payload<KContacts::ContactGroup>(), this);
-                    connect(job, &Akonadi::ContactGroupExpandJob::result, this,
-                            &IncidenceAttendee::expandResult);
-                    KCalCore::Attendee::PartStat partStat = KCalCore::Attendee::NeedsAction;
-                    bool rsvp = true;
+                            selection.item().payload<KContacts::ContactGroup>(), this);
+                connect(job, &Akonadi::ContactGroupExpandJob::result, this,
+                        &IncidenceAttendee::expandResult);
+                KCalCore::Attendee::PartStat partStat = KCalCore::Attendee::NeedsAction;
+                bool rsvp = true;
 
-                    int pos = 0;
-                    KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
-                                                      selection.name(),
-                                                      selection.email(),
-                                                      rsvp,
-                                                      partStat,
-                                                      KCalCore::Attendee::ReqParticipant
-                                                      ));
-                    dataModel()->insertAttendee(pos, newAt);
+                int pos = 0;
+                KCalCore::Attendee::Ptr newAt(new KCalCore::Attendee(
+                                                  selection.name(),
+                                                  selection.email(),
+                                                  rsvp,
+                                                  partStat,
+                                                  KCalCore::Attendee::ReqParticipant
+                                                  ));
+                dataModel()->insertAttendee(pos, newAt);
 
-                    mExpandGroupJobs.insert(job, newAt);
-                    job->start();
-                } else {
-                    KContacts::Addressee contact;
-                    contact.setName(selection.name());
-                    contact.insertEmail(selection.email());
+                mExpandGroupJobs.insert(job, newAt);
+                job->start();
+            } else {
+                KContacts::Addressee contact;
+                contact.setName(selection.name());
+                contact.insertEmail(selection.email());
 
-                    if (selection.item().hasPayload<KContacts::Addressee>()) {
-                        contact.setUid(selection.item().payload<KContacts::Addressee>().uid());
-                    }
-                    insertAttendeeFromAddressee(contact);
+                if (selection.item().hasPayload<KContacts::Addressee>()) {
+                    contact.setUid(selection.item().payload<KContacts::Addressee>().uid());
                 }
+                insertAttendeeFromAddressee(contact);
             }
-        } else {
-            qCDebug(INCIDENCEEDITOR_LOG) << "dialog was already deleted";
         }
     }
-
-    if (dialog.data()) {
-        dialog.data()->deleteLater();
-    }
+    delete dialog;
 }
 
 void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
