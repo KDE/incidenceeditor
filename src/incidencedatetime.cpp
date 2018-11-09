@@ -678,6 +678,8 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
             &IncidenceDateTime::checkDirtyStatus);
     connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this,
             &IncidenceDateTime::updateStartTime);
+    connect(mUi->mStartTimeEdit, &KTimeComboBox::timeEdited, this,
+            &IncidenceDateTime::checkDirtyStatus);
     connect(mUi->mTimeZoneComboStart,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
@@ -690,6 +692,8 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
     connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::checkDirtyStatus);
     connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::checkDirtyStatus);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this,
             &IncidenceDateTime::checkDirtyStatus);
     connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::endDateChanged);
