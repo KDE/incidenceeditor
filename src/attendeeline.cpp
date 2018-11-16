@@ -350,34 +350,6 @@ int AttendeeLine::setColumnWidth(int w)
 void AttendeeLine::setActions(AttendeeActions actions)
 {
     mStateCombo->clear();
-    return;
-    if (actions == EventActions) {
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-attention")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-accepted")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-reject")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-attempt")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-delegate")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
-    } else {
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-attention")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-accepted")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-reject")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-attempt")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-delegate")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-complete")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
-        mStateCombo->addItem(QIcon::fromTheme(QStringLiteral("task-ongoing")),
-                             KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
-    }
 }
 
 void AttendeeLine::setCompletionMode(KCompletion::CompletionMode mode)
