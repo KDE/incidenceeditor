@@ -132,7 +132,6 @@ private:
 
     IncidenceDateTime *mDateTime = nullptr;
     QString mOrganizer;
-    QString mOldIconName;
 
     /** used dataModel to rely on*/
     AttendeeTableModel *mDataModel = nullptr;
