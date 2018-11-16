@@ -64,6 +64,7 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   resourceitem.cpp
   resourcemodel.cpp
 )
+qt5_add_resources(incidenceeditors_ng_shared_LIB_SRCS incidenceeditor.qrc)
 ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor)
 
 kconfig_add_kcfg_files(incidenceeditors_ng_shared_LIB_SRCS globalsettings_incidenceeditor.kcfgc)

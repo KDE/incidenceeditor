@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="task-delegate.png">pixmap/task-delegate.png</file>
+        <file alias="task-complete.png">pixmap/task-complete.png</file>
+        <file alias="task-attention.png">pixmap/task-attention.png</file>
+        <file alias="task-attempt.png">pixmap/task-attempt.png</file>
+        <file alias="task-accepted.png">pixmap/task-accepted.png</file>
+        <file alias="meeting-participant.png">pixmap/meeting-participant.png</file>
+        <file alias="meeting-participant-optional.png">pixmap/meeting-participant-optional.png</file>
+        <file alias="meeting-observer.png">pixmap/meeting-observer.png</file>
+        <file alias="meeting-chair.png">pixmap/meeting-chair.png</file>
+        <file alias="task-reject.png">pixmap/task-reject.png</file>
+        <file alias="task-ongoing.png">pixmap/task-ongoing.png</file>
+    </qresource>
+</RCC>
