@@ -65,13 +65,13 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mDataModel = new AttendeeTableModel(attendees, this);
     mDataModel->setKeepEmpty(true);
     mDataModel->setRemoveEmptyLines(true);
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
+    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-participant.png")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
+    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-participant-optional.png")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::OptParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-observer")),
+    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-observer.png")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::NonParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")),
+    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-chair.png")),
                            KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::Chair));
 
     mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral(
@@ -955,30 +955,30 @@ void IncidenceAttendee::setActions(KCalCore::Incidence::IncidenceType actions)
 {
     mStateDelegate->clear();
     if (actions == KCalCore::Incidence::TypeEvent) {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-attention")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-accepted")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-reject")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-attempt")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-delegate")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
     } else {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-attention")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-accepted")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-reject")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-attempt")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-delegate")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-complete")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-complete.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral("task-ongoing")),
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-ongoing.png")),
                                 KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
     }
 }
