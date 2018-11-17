@@ -47,7 +47,7 @@ public:
     virtual void load(const Akonadi::Item &item);
 
     /**
-     * Store the current values of the editor into @param incidince.
+     * Store the current values of the editor into @param incidence .
      */
     virtual void save(const KCalCore::Incidence::Ptr &incidence) = 0;
     /// This was introduced to replace categories with Akonadi::Tags

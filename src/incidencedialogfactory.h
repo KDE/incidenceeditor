@@ -37,7 +37,7 @@ namespace IncidenceDialogFactory {
 /**
  * Creates a new IncidenceDialog for given type. Returns 0 for unsupported types.
  *
- * @param needsSaving If true, the editor will be initialy dirty, and needs saving.
+ * @param needsSaving If true, the editor will be initially dirty, and needs saving.
  *                    Apply button will be turned on. This is used for example when
  *                    we fill the editor with data that's not yet in akonadi, like
  *                    the "Create To-do/Reminder" in KMail.

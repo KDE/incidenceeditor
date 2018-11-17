@@ -77,7 +77,7 @@ public:
      */
     const KLDAP::LdapObject &ldapObject() const;
 
-    /* Set the ldapObject, either directy via this function
+    /* Set the ldapObject, either directly via this function
      * or use startSearch to request the ldapServer for the ldapObject
      * with the dn specified via the constructor.
      *

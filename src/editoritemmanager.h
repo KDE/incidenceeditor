@@ -38,8 +38,8 @@ class ItemEditorPrivate;
 
 /**
  * Helper class for creating dialogs that let the user create and edit the payload
- * of Akonadi items (e.g. events, contacts, etc). This class supports editting of
- * one item at a time and hanldes all Akonadi specific logic like Item creation,
+ * of Akonadi items (e.g. events, contacts, etc). This class supports editing of
+ * one item at a time and handles all Akonadi specific logic like Item creation,
  * Item modifying and monitoring of changes to the item during editing.
  */
 // template <typename PayloadT>
@@ -171,13 +171,13 @@ public:
     virtual Akonadi::Item save(const Akonadi::Item &item) = 0;
 
     /**
-     * Returns the currently sellected collection in which the item will be stored.
+     * Returns the currently selected collection in which the item will be stored.
      */
     virtual Akonadi::Collection selectedCollection() const = 0;
 
     /**
-     * This function is called if for some reason the creation or editting of the
-     * item cannot be continued. The implementing class must abort editting at
+     * This function is called if for some reason the creation or editing of the
+     * item cannot be continued. The implementing class must abort editing at
      * this point.
      */
     virtual void reject(RejectReason reason, const QString &errorMessage = QString()) = 0;

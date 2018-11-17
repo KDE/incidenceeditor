@@ -760,7 +760,7 @@ void IncidenceRecurrence::selectMonthlyItem(KCalCore::Recurrence *recurrence, us
 
         if (rmp.first().pos() > 0) {   // nth day
             // TODO if ( rmp.first().pos() != mDateTime->startDate().day() ) { warn user }
-            // NOTE: This silencly changes the recurrence when:
+            // NOTE: This silently changes the recurrence when:
             //       rmp.first().pos() != mDateTime->startDate().day()
             mUi->mMonthlyCombo->setCurrentIndex(ComboIndexMonthlyPos);
         } else { // (month.last() - n)th day

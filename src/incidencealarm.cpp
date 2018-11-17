@@ -330,7 +330,7 @@ QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
     if (alarm->enabled()) {
         if (useoffset > 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                // i18n: These series of strings are used to show the user a describtion of
+                // i18n: These series of strings are used to show the user a description of
                 // the alarm. %1 is replaced by one of the actions above, %2 is replaced by
                 // one of the time units above, %3 is the (Repeats) part that will be used
                 // in case of repetition of the alarm.

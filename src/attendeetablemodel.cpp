@@ -123,7 +123,7 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
         case FullName:
             if (mRemoveEmptyLines && value.toString().trimmed().isEmpty()) {
                 // Do not remove last empty line if mKeepEmpty==true
-                // (only works if initaly there is only one empty line)
+                // (only works if initially there is only one empty line)
                 if (!mKeepEmpty || !(attendee->name().isEmpty() && attendee->email().isEmpty())) {
                     removeRows(index.row(), 1);
                     return true;

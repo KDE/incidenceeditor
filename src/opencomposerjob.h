@@ -26,7 +26,7 @@
 #include <KJob>
 
 namespace IncidenceEditorNG {
-// Opens a Composer with a mail with one attachment (costructed my ITIPHandler)
+// Opens a Composer with a mail with one attachment (constructed my ITIPHandler)
 class OpenComposerJob : public KJob
 {
     Q_OBJECT

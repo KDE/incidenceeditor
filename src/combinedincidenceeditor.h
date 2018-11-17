@@ -53,7 +53,7 @@ public:
     Q_REQUIRED_RESULT bool isValid() const override;
 
     /**
-     * Loads all data from @param inicidence into the combined editors. Note, if
+     * Loads all data from @param incidence into the combined editors. Note, if
      * you reimplement the load method in a subclass, make sure to call this
      * implementation too.
      */

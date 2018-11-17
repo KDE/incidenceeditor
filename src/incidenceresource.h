@@ -49,7 +49,7 @@ public:
     void save(const KCalCore::Incidence::Ptr &incidence) override;
     bool isDirty() const override;
 
-    /** resturn the count of resources */
+    /** return the count of resources */
     Q_REQUIRED_RESULT int resourceCount() const;
 
 Q_SIGNALS:

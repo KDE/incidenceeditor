@@ -52,7 +52,7 @@ AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment::Ptr &att, QLi
         mAttachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(*att.data()));
         mAttachment->setLabel(att->label());
     } else {
-        // for the enteprise, inline attachments are the default
+        // for the enterprise, inline attachments are the default
 #ifdef KDEPIM_ENTERPRISE_BUILD
         mAttachment
             = KCalCore::Attachment::Ptr(

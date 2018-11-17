@@ -48,6 +48,10 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
                                "Send no update"), QVariant(NoUpdate));
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
                                "Edit mail"), QVariant(Edit));
+        options->setWhatsThis(i18nc("@info:whatsthis",
+                                    "Options for this particular attendee."));
+        options->setToolTip(i18nc("@info:tooltip",
+                                  "Choose an option for this attendee."));
         mAttendeeDecision[attendee] = options;
 
         layout->addWidget(new QLabel(attendee->fullName()), row, 0);

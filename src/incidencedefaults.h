@@ -90,7 +90,7 @@ public:
 
     /**
       Sets the default values for @param incidence. This method is merely meant for
-      <em>new</em> icidences. However, it will clear out all fields and set them
+      <em>new</em> incidences. However, it will clear out all fields and set them
       to default values.
       @param incidence The incidence that will get default values for all of its field.
     */

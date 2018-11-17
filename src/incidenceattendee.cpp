@@ -153,7 +153,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
 
     slotUpdateConflictLabel(0);   //initialize label
 
-    // confict resolver (should show also resources)
+    // conflict resolver (should show also resources)
     connect(mDataModel, &AttendeeTableModel::layoutChanged, this,
             &IncidenceAttendee::slotConflictResolverLayoutChanged);
     connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this,
@@ -650,8 +650,8 @@ void IncidenceAttendee::updateFBStatus(const KCalCore::Attendee::Ptr &attendee, 
         if (fb) {
             KCalCore::Period::List busyPeriods = fb->busyPeriods();
             for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
-                // periods started before and laping into the incidence (s < startTime && e >= startTime)
-                // periods starting in the time of incidende (s >= startTime && s <= endTime)
+                // periods started before and lapping into the incidence (s < startTime && e >= startTime)
+                // periods starting in the time of incidence (s >= startTime && s <= endTime)
                 if (((*it).start() < startTime && (*it).end() > startTime)
                     || ((*it).start() >= startTime && (*it).start() <= endTime)) {
                     switch (attendee->status()) {

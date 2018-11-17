@@ -114,16 +114,16 @@ bool IncidenceDateTime::eventFilter(QObject *obj, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn) {
         if (obj == mUi->mStartDateEdit) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "emiting startDateTime: " << mUi->mStartDateEdit;
+            qCDebug(INCIDENCEEDITOR_LOG) << "emitting startDateTime: " << mUi->mStartDateEdit;
             Q_EMIT startDateFocus(obj);
         } else if (obj == mUi->mEndDateEdit) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "emiting endDateTime: " << mUi->mEndDateEdit;
+            qCDebug(INCIDENCEEDITOR_LOG) << "emitting endDateTime: " << mUi->mEndDateEdit;
             Q_EMIT endDateFocus(obj);
         } else if (obj == mUi->mStartTimeEdit) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "emiting startTimeTime: " << mUi->mStartTimeEdit;
+            qCDebug(INCIDENCEEDITOR_LOG) << "emitting startTimeTime: " << mUi->mStartTimeEdit;
             Q_EMIT startTimeFocus(obj);
         } else if (obj == mUi->mEndTimeEdit) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "emiting endTimeTime: " << mUi->mEndTimeEdit;
+            qCDebug(INCIDENCEEDITOR_LOG) << "emitting endTimeTime: " << mUi->mEndTimeEdit;
             Q_EMIT endTimeFocus(obj);
         }
 

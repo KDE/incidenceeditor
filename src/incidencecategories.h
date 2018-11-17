@@ -58,7 +58,7 @@ private:
     /**
      * List of categories for which no tag might exist.
      *
-     * For each category of the editted incidence, we want to  make sure that there exists a
+     * For each category of the edited incidence, we want to  make sure that there exists a
      * corresponding tag in Akonadi. For missing categories, a \a TagCreateJob is issued.
      * Eventually, there should be no missing categories left. In case tag creation fails for some
      * categories, this list still holds these categories so they don't get lost

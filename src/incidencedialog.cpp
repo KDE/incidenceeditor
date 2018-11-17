@@ -511,7 +511,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
         Q_ASSERT(item.isValid());
         Q_ASSERT(item.hasPayload());
         Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
-        // Now the item is succesfull saved, reload it in the editor in order to
+        // Now the item is successfully saved, reload it in the editor in order to
         // reset the dirty status of the editor.
         mEditor->load(item.payload<KCalCore::Incidence::Ptr>());
         mEditor->load(item);
@@ -823,7 +823,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
             QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
             QDialog::reject(); // No pending changes, just close the dialog.
-        } // else { // the user wasn't finished editting after all }
+        } // else { // the user wasn't finished editing after all }
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
         d->manageTemplates();
     } else {

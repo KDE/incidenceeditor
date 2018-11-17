@@ -66,7 +66,7 @@ private Q_SLOTS:
         QVERIFY(dialog.updateAttendees().contains(attendee2));
         QVERIFY(dialog.updateAttendees().contains(attendee3));
 
-        // edit for frist attende, other default
+        // edit for first attendee, other default
         first->setCurrentIndex(2);
         QCOMPARE(dialog.editAttendees().count(), 1);
         QCOMPARE(dialog.updateAttendees().count(), 2);

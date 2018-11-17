@@ -84,6 +84,10 @@ FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget 
 
     mUrlEdit = new KLineEdit(this);
     mUrlEdit->setFocus();
+    mUrlEdit->setWhatsThis(i18nc("@info:whatsthis",
+                                 "Enter the location of the Free/Busy information for the attendee."));
+    mUrlEdit->setToolTip(i18nc("@info:tooltip",
+                               "Enter the location of the information."));
     topLayout->addWidget(mUrlEdit);
 }
 

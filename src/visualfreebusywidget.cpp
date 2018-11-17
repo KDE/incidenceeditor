@@ -224,6 +224,10 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mLeftView->setModel(model);
     mLeftView->setHeader(new GanttHeaderView);
     mLeftView->header()->setStretchLastSection(true);
+    mLeftView->setToolTip(i18nc("@info:tooltip",
+              "Shows the tree list of all data"));
+    mLeftView->setWhatsThis(i18nc("@info:whatsthis",
+              "Shows the tree list of all data"));
     mLeftView->setRootIsDecorated(false);
     mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mLeftView->setContextMenuPolicy(Qt::CustomContextMenu);

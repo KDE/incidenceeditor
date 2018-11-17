@@ -243,7 +243,7 @@ void ConflictResolver::findAllFreeSlots()
     // 1. convert each attendees schedule for the timeframe into a bitarray according to
     //    the time resolution, where each time slot has a value of 1 = busy, 0 = free.
     // 2. align the arrays vertically, and sum the columns
-    // 3. the resulting summation indcates # of conflicts at each timeslot
+    // 3. the resulting summation indicates # of conflicts at each timeslot
     // 4. locate contiguous timeslots with a values of 0. these are the free time blocks.
 
     // define these locally for readability
@@ -275,7 +275,7 @@ void ConflictResolver::findAllFreeSlots()
                                  << "; mSlotResolutionSeconds = " << mSlotResolutionSeconds
                                  << "; range = " << range;
     // filter out attendees for which we don't have FB data
-    // and which don't match the mandatory role contrstaint
+    // and which don't match the mandatory role constraint
     QList<KCalCore::FreeBusy::Ptr> filteredFBItems;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
@@ -303,7 +303,7 @@ void ConflictResolver::findAllFreeSlots()
     }
     qCDebug(INCIDENCEEDITOR_LOG) << "num attendees: " << number_attendees;
     // this is a 2 dimensional array where the rows are attendees
-    // and the columns are 0 or 1 denoting freee or busy respectively.
+    // and the columns are 0 or 1 denoting free or busy respectively.
     QVector< QVector<int> > fbTable;
 
     // Explanation of the following loop:
@@ -411,7 +411,7 @@ void ConflictResolver::findAllFreeSlots()
                 } else {
                     free_start_i = i - free_count;
                     free_end_i = i - 1 + 1; // add one to compensate for the fact that the array is 0 indexed
-                    // compiler will optmize out the -1+1, but I leave it here to make the reasoning apparent.
+                    // compiler will optimize out the -1+1, but I leave it here to make the reasoning apparent.
                 }
                 // convert from our timeslot interval back into to normal seconds
                 // then calculate the date times of the free block based on

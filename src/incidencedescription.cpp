@@ -105,7 +105,7 @@ bool IncidenceDescription::isDirty() const
        with the new editor content.
 
        Instead we compare the new editor content, with the original editor content, this way
-       any tranformation regarding non-printable chars will be irrelevant.
+       any transformation regarding non-printable chars will be irrelevant.
     */
     if (d->mRichTextEnabled) {
         return !mLoadedIncidence->descriptionIsRich()
@@ -122,11 +122,11 @@ void IncidenceDescription::enableRichTextDescription(bool enable)
 {
     d->mRichTextEnabled = enable;
 
-    QString rt(i18nc("@action Enable or disable rich text editting", "Enable rich text"));
+    QString rt(i18nc("@action Enable or disable rich text editing", "Enable rich text"));
     QString placeholder(QStringLiteral("<a href=\"show\">%1 &gt;&gt;</a>"));
 
     if (enable) {
-        rt = i18nc("@action Enable or disable rich text editting", "Disable rich text");
+        rt = i18nc("@action Enable or disable rich text editing", "Disable rich text");
         placeholder = QStringLiteral("<a href=\"show\">&lt;&lt; %1</a>");
         mUi->mDescriptionEdit->richTextComposer()->activateRichText();
         d->mRealOriginalDescriptionEditContents
