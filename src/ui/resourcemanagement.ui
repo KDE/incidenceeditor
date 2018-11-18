@@ -35,6 +35,12 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="KLineEdit" name="resourceSearch">
+         <property name="toolTip">
+          <string>Enter the search term</string>
+         </property>
+         <property name="whatsThis">
+          <string>Use this text box to enter some keyword for the resource you want to find.</string>
+         </property>
          <property name="showClearButton" stdset="0">
           <bool>true</bool>
          </property>

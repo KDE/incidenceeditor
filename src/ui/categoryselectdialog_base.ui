@@ -21,6 +21,12 @@
    </property>
    <item>
     <widget class="IncidenceEditorNG::AutoCheckTreeWidget" name="mCategories" >
+     <property name="toolTip">
+      <string>Select incidence categories</string>
+     </property>
+     <property name="whatsThis">
+      <string>Use this list to choose incidence categories.</string>
+     </property>
      <property name="columnCount" >
       <number>1</number>
      </property>

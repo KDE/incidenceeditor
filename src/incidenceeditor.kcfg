@@ -10,6 +10,7 @@
   <group name="AttachmentHandling">
     <entry type="Enum" name="DefaultEmailAttachMethod">
       <label>Default Email Attachment Method</label>
+      <tooltip>Choose the default way of attaching dropped emails to an event</tooltip>
       <whatsthis>The default way of attaching dropped emails to an event</whatsthis>
       <choices>
         <choice name="Ask">
@@ -30,6 +31,7 @@
   </group>
   <group name="Collection">
       <entry name="LastSelectedFolder" type="LongLong">
+        <whatsthis>The last selected folder.</whatsthis>
         <default>-1</default>
       </entry>
   </group>

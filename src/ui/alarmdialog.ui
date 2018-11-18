@@ -221,6 +221,12 @@
    </item>
    <item row="2" column="1">
     <widget class="KComboBox" name="mTypeCombo">
+     <property name="toolTip">
+      <string>Select the alarm type</string>
+     </property>
+     <property name="whatsThis">
+      <string>Use this selector to choose the alarm type for the reminders.</string>
+     </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>

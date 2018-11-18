@@ -150,6 +150,12 @@
    </item>
    <item row="1" column="0">
     <widget class="QTabWidget" name="mTabWidget">
+     <property name="toolTip">
+      <string>Select the search option</string>
+     </property>
+     <property name="whatsThis">
+      <string>Use these tabs to choose the search option.</string>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>

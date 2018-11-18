@@ -44,7 +44,7 @@ public:
         FullName
     };
 
-    ResourceModel(const QStringList &headers, QObject *parent = nullptr);
+    explicit ResourceModel(const QStringList &headers, QObject *parent = nullptr);
     ~ResourceModel() override;
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;

@@ -16,6 +16,12 @@
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="IncidenceEditorNG::AutoCheckTreeWidget" name="mCategories">
+     <property name="toolTip">
+      <string>Select categories</string>
+     </property>
+     <property name="whatsThis">
+      <string>Use this list to choose categories.</string>
+     </property>
      <property name="columnCount">
       <number>1</number>
      </property>

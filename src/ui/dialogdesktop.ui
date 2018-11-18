@@ -13,6 +13,12 @@
   <layout class="QVBoxLayout" name="mainVerticalLayout">
    <item>
     <widget class="CalendarSupport::MessageWidget" name="mMessageWidget" native="true">
+    <property name="toolTip">
+      <string>A message on this incidence item</string>
+     </property>
+     <property name="whatsThis">
+      <string>Use this message to correct the item parameters.</string>
+     </property>
      <property name="visible">
       <bool>false</bool>
      </property>
