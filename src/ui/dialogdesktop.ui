@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
-    <height>660</height>
+    <width>693</width>
+    <height>718</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="mainVerticalLayout">
    <item>
     <widget class="CalendarSupport::MessageWidget" name="mMessageWidget" native="true">
-    <property name="toolTip">
+     <property name="visible">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
       <string>A message on this incidence item</string>
      </property>
      <property name="whatsThis">
       <string>Use this message to correct the item parameters.</string>
-     </property>
-     <property name="visible">
-      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -99,12 +99,20 @@
           <property name="text">
            <string comment="@action:button Accept an invitation">Accept</string>
           </property>
+          <property name="icon">
+           <iconset theme="dialog-ok">
+            <normaloff>.</normaloff>.</iconset>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="mDeclineInvitationButton">
           <property name="text">
            <string comment="@action:button decline an invitation">Decline</string>
+          </property>
+          <property name="icon">
+           <iconset theme="dialog-cancel">
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -621,6 +629,9 @@
        </property>
       </widget>
      </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="KSeparator" name="mTaskSeparator"/>
+     </item>
      <item row="12" column="0" colspan="2">
       <widget class="QTabWidget" name="mTabWidget">
        <property name="currentIndex">
@@ -724,98 +735,8 @@
         <attribute name="title">
          <string comment="@title:tab attendees of this event or to-do">Attendees</string>
         </attribute>
-        <layout class="QGridLayout" name="gridLayout_15">
-         <item row="3" column="0" colspan="3">
-          <widget class="QTableView" name="mAttendeeTable">
-           <property name="editTriggers">
-            <set>QAbstractItemView::AllEditTriggers</set>
-           </property>
-           <attribute name="verticalHeaderVisible">
-            <bool>false</bool>
-           </attribute>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string comment="@label:listbox">Meeting organizer:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string comment="@label participants of this event or to-do">Participants:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1" colspan="2">
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <item>
-            <widget class="QLabel" name="mConflictsLabel">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="mSolveButton">
-             <property name="toolTip">
-              <string comment="@info:tooltip">Schedule the meeting with your attendees.</string>
-             </property>
-             <property name="whatsThis">
-              <string comment="@info:whatsthis">Opens the scheduling dialog, which will assist in picking a time slot that works for all attendees.</string>
-             </property>
-             <property name="text">
-              <string comment="@action:button">Schedule...</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>258</width>
-               <height>24</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="mGroupSubstitution">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Substitute with group members</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="mSelectButton">
-             <property name="toolTip">
-              <string comment="@info:tooltip">Select attendees from your address book.</string>
-             </property>
-             <property name="whatsThis">
-              <string comment="@info:whatsthis">Opens your address book, allowing you to select new attendees from it.</string>
-             </property>
-             <property name="text">
-              <string comment="@action:button">Select Attendees...</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="2">
+        <layout class="QFormLayout" name="formLayout">
+         <item row="1" column="1">
           <widget class="QStackedWidget" name="mOrganizerStack">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -824,7 +745,7 @@
             </sizepolicy>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="page">
             <layout class="QGridLayout" name="gridLayout_2">
@@ -859,34 +780,120 @@
             </layout>
            </widget>
            <widget class="QWidget" name="page_2">
-            <layout class="QGridLayout" name="gridLayout_3">
-             <property name="leftMargin">
-              <number>0</number>
+            <widget class="QLabel" name="mOrganizerLabel">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>7</y>
+               <width>69</width>
+               <height>22</height>
+              </rect>
              </property>
-             <property name="topMargin">
-              <number>0</number>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
-             <property name="rightMargin">
-              <number>0</number>
+             <property name="text">
+              <string comment="KDE::DoNotExtract">TextLabel</string>
              </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item row="0" column="0">
-              <widget class="QLabel" name="mOrganizerLabel">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string comment="KDE::DoNotExtract">TextLabel</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            </widget>
            </widget>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string comment="@label participants of this event or to-do">Participants:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="mConflictsLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mSolveButton">
+             <property name="toolTip">
+              <string comment="@info:tooltip">Schedule the meeting with your attendees.</string>
+             </property>
+             <property name="whatsThis">
+              <string comment="@info:whatsthis">Opens the scheduling dialog, which will assist in picking a time slot that works for all attendees.</string>
+             </property>
+             <property name="text">
+              <string comment="@action:button">Schedule...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>13</width>
+               <height>35</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mGroupSubstitution">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Substitute with group members</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mSelectButton">
+             <property name="toolTip">
+              <string comment="@info:tooltip">Select attendees from your address book.</string>
+             </property>
+             <property name="whatsThis">
+              <string comment="@info:whatsthis">Opens your address book, allowing you to select new attendees from it.</string>
+             </property>
+             <property name="text">
+              <string comment="@action:button">Select Attendees...</string>
+             </property>
+             <property name="icon">
+              <iconset theme="select">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QTableView" name="mAttendeeTable">
+           <property name="editTriggers">
+            <set>QAbstractItemView::AllEditTriggers</set>
+           </property>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string comment="@label:listbox">Meeting organizer:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
           </widget>
          </item>
         </layout>
@@ -964,6 +971,10 @@
              <property name="text">
               <string>Find Resources...</string>
              </property>
+             <property name="icon">
+              <iconset theme="search">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
             </widget>
            </item>
           </layout>
@@ -1009,6 +1020,10 @@
            <property name="text">
             <string comment="@action:button Adds an reminder">Add</string>
            </property>
+           <property name="icon">
+            <iconset theme="list-add">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
           </widget>
          </item>
          <item row="0" column="3">
@@ -1036,12 +1051,20 @@
            <property name="text">
             <string comment="@action:button create a new reminder">New</string>
            </property>
+           <property name="icon">
+            <iconset theme="entry-new">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
           </widget>
          </item>
          <item row="2" column="4">
           <widget class="QPushButton" name="mAlarmConfigureButton">
            <property name="text">
             <string comment="@action:button modify the selected reminder">Modify</string>
+           </property>
+           <property name="icon">
+            <iconset theme="entry-edit">
+             <normaloff>.</normaloff>.</iconset>
            </property>
           </widget>
          </item>
@@ -1056,6 +1079,10 @@
           <widget class="QPushButton" name="mAlarmRemoveButton">
            <property name="text">
             <string comment="@action:button removes selected reminders">Remove</string>
+           </property>
+           <property name="icon">
+            <iconset theme="list-remove">
+             <normaloff>.</normaloff>.</iconset>
            </property>
           </widget>
          </item>
@@ -1539,6 +1566,9 @@
              <property name="text">
               <string comment="@action:button adds an exception on the recurrence">Add</string>
              </property>
+             <property name="icon">
+              <iconset theme="list-add"/>
+             </property>
             </widget>
            </item>
            <item>
@@ -1588,6 +1618,10 @@
              </property>
              <property name="text">
               <string comment="@action:button removes an exception">Remove</string>
+             </property>
+             <property name="icon">
+              <iconset theme="list-remove">
+               <normaloff>.</normaloff>.</iconset>
              </property>
             </widget>
            </item>
@@ -1640,6 +1674,9 @@
            <property name="text">
             <string comment="@action:button adds an attachment">Add</string>
            </property>
+           <property name="icon">
+            <iconset theme="list-add"/>
+           </property>
           </widget>
          </item>
          <item row="1" column="1">
@@ -1662,6 +1699,9 @@
            <property name="text">
             <string comment="@action:button remove an attachment">Remove</string>
            </property>
+           <property name="icon">
+            <iconset theme="list-remove"/>
+           </property>
           </widget>
          </item>
          <item row="2" column="1">
@@ -1681,9 +1721,6 @@
        </widget>
       </widget>
      </item>
-     <item row="6" column="0" colspan="2">
-      <widget class="KSeparator" name="mTaskSeparator"/>
-     </item>
     </layout>
    </item>
    <item>
@@ -1700,6 +1737,11 @@
    <class>KPIM::KCheckComboBox</class>
    <extends>KComboBox</extends>
    <header>Libkdepim/KCheckComboBox</header>
+  </customwidget>
+  <customwidget>
+   <class>KPIMTextEdit::RichTextComposerWidget</class>
+   <extends>QWidget</extends>
+   <header>kpimtextedit/richtextcomposerwidget.h</header>
   </customwidget>
   <customwidget>
    <class>KLineEdit</class>
@@ -1726,11 +1768,6 @@
    <class>KComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KPIMTextEdit::RichTextComposerWidget</class>
-   <extends>QWidget</extends>
-   <header>kpimtextedit/richtextcomposerwidget.h</header>
   </customwidget>
   <customwidget>
    <class>KPIM::KWeekdayCheckCombo</class>
