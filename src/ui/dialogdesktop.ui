@@ -940,7 +940,7 @@
            <item>
             <widget class="QPushButton" name="mBookResourceButton">
              <property name="text">
-              <string>Book resource</string>
+              <string>Book Resource</string>
              </property>
              <property name="autoDefault">
               <bool>false</bool>
