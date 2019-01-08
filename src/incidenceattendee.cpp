@@ -145,11 +145,11 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(mConflictResolver, &ConflictResolver::conflictsDetected, this,
             &IncidenceAttendee::slotUpdateConflictLabel);
 
-    connect(mConflictResolver->model(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-            SLOT(slotFreeBusyAdded(QModelIndex,int,int)));
+    connect(mConflictResolver->model(), &QAbstractItemModel::rowsInserted,
+            this, &IncidenceAttendee::slotFreeBusyAdded);
     connect(mConflictResolver->model(), SIGNAL(layoutChanged()), SLOT(updateFBStatus()));
-    connect(mConflictResolver->model(), SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-            SLOT(slotFreeBusyChanged(QModelIndex,QModelIndex)));
+    connect(mConflictResolver->model(), &QAbstractItemModel::dataChanged,
+            this, &IncidenceAttendee::slotFreeBusyChanged);
 
     slotUpdateConflictLabel(0);   //initialize label
 

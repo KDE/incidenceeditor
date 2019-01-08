@@ -83,7 +83,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
         done(QDialogButtonBox::No);
     });
     auto detailsButton = m_buttons->button(QDialogButtonBox::Help);
-    detailsButton->setIcon(QIcon::fromTheme(QLatin1String("help-about")));
+    detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
     connect(detailsButton, &QPushButton::clicked, this, [this]() {
         m_detailsWidget->setVisible(!m_detailsWidget->isVisible());
         updateButtonState();
