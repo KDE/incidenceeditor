@@ -50,7 +50,7 @@ CategoryWidget::CategoryWidget(CategoryConfig *cc, QWidget *parent)
     , mCategoryConfig(cc)
 {
     QHBoxLayout *topL = new QHBoxLayout(this);
-    topL->setMargin(0);
+    topL->setContentsMargins(0, 0, 0, 0);
     mWidgets = new CategoryWidgetBase(this);
     topL->addWidget(mWidgets);
 
@@ -247,7 +247,7 @@ CategoryDialog::CategoryDialog(CategoryConfig *cc, QWidget *parent)
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
     QVBoxLayout *lay = new QVBoxLayout(page);
-    lay->setMargin(0);
+    lay->setContentsMargins(0, 0, 0, 0);
 
     mWidgets = new CategoryWidget(cc, this);
     mCategoryConfig = cc;

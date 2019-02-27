@@ -555,7 +555,7 @@ void IncidenceAttachment::setupAttachmentIconView()
             &IncidenceAttachment::showContextMenu);
 
     QGridLayout *layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mAttachmentView);
 }
 

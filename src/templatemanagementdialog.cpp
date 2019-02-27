@@ -151,7 +151,7 @@ void TemplateManagementDialog::slotAddTemplate()
         m_templates.append(newTemplate);
         m_base.m_listBox->addItem(newTemplate);
         QListWidgetItem *item = m_base.m_listBox->item(count);
-        m_base.m_listBox->setItemSelected(item, true);
+        item->setSelected(true);
     }
     m_newTemplate = newTemplate;
     m_changed = true;
@@ -183,9 +183,7 @@ void TemplateManagementDialog::slotRemoveTemplate()
 
     m_templates.removeAll(item->text());
     m_base.m_listBox->takeItem(current);
-
-    m_base.m_listBox->setItemSelected(
-        m_base.m_listBox->item(qMax(current - 1, 0)), true);
+    m_base.m_listBox->item(qMax(current - 1, 0))->setSelected(true);
 
     updateButtons();
 

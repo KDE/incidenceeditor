@@ -56,7 +56,7 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     okButton->setDefault(true);
 
     QBoxLayout *topLayout = new QVBoxLayout(topFrame);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
 
     mWidget = new FreeBusyUrlWidget(attendee, topFrame);
     topLayout->addWidget(mWidget);

@@ -156,7 +156,7 @@ AttendeeLine::AttendeeLine(QWidget *parent)
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
     QBoxLayout *topLayout = new QHBoxLayout(this);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),

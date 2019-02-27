@@ -50,7 +50,7 @@ CategorySelectWidget::CategorySelectWidget(CategoryConfig *cc, QWidget *parent)
     , mCategoryConfig(cc)
 {
     QHBoxLayout *topL = new QHBoxLayout(this);
-    topL->setMargin(0);
+    topL->setContentsMargins(0, 0, 0, 0);
     mWidgets = new CategorySelectWidgetBase(this);
     topL->addWidget(mWidgets);
     connect(mWidgets->mButtonEdit, &QAbstractButton::clicked,
@@ -178,7 +178,7 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
 
     QWidget *page = new QWidget;
     QVBoxLayout *lay = new QVBoxLayout(page);
-    lay->setMargin(0);
+    lay->setContentsMargins(0, 0, 0, 0);
 
     mWidgets = new CategorySelectWidget(cc, this);
     mainLayout->addWidget(page);
