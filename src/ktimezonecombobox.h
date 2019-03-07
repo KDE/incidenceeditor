@@ -26,7 +26,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KComboBox>
+#include <QComboBox>
 #include <QTimeZone>
 
 namespace IncidenceEditorNG {
@@ -36,7 +36,7 @@ namespace IncidenceEditorNG {
  * QTimeZone or to retrieve the QTimeZone associated with the
  * selected item.
  */
-class INCIDENCEEDITOR_EXPORT KTimeZoneComboBox : public KComboBox
+class INCIDENCEEDITOR_EXPORT KTimeZoneComboBox : public QComboBox
 {
     Q_OBJECT
 public:

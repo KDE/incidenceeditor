@@ -61,7 +61,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KComboBox" name="mOffsetUnit">
+      <widget class="QComboBox" name="mOffsetUnit">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -73,9 +73,6 @@
        </property>
        <property name="whatsThis">
         <string>This combobox allows you to set the units for the reminder trigger time. The trigger time value is set in the spinbox immediately adjacent.</string>
-       </property>
-       <property name="autoCompletion">
-        <bool>false</bool>
        </property>
        <item>
         <property name="text">
@@ -95,7 +92,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KComboBox" name="mBeforeAfter">
+      <widget class="QComboBox" name="mBeforeAfter">
        <property name="toolTip">
         <string>Select the reminder trigger relative to the start or end time</string>
        </property>
@@ -220,7 +217,7 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="KComboBox" name="mTypeCombo">
+    <widget class="QComboBox" name="mTypeCombo">
      <property name="toolTip">
       <string>Select the alarm type</string>
      </property>
@@ -507,7 +504,7 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <header>ktextedit.h</header>
   </customwidget>
   <customwidget>
-   <class>KComboBox</class>
+   <class>QComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
   </customwidget>

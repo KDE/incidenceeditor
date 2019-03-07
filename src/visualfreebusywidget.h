@@ -33,7 +33,7 @@ namespace CalendarSupport {
 class FreeBusyItemModel;
 }
 
-class KComboBox;
+class QComboBox;
 class QTreeView;
 
 namespace IncidenceEditorNG {
@@ -69,7 +69,7 @@ private:
     RowController *mRowController = nullptr;
     KGantt::DateTimeGrid *mGanttGrid = nullptr;
 
-    KComboBox *mScaleCombo = nullptr;
+    QComboBox *mScaleCombo = nullptr;
     FreeBusyGanttProxyModel *mModel = nullptr;
 
     QDateTime mDtStart, mDtEnd;

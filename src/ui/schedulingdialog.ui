@@ -265,11 +265,11 @@
  <customwidgets>
   <customwidget>
    <class>KPIM::KCheckComboBox</class>
-   <extends>KComboBox</extends>
+   <extends>QComboBox</extends>
    <header>Libkdepim/KCheckComboBox</header>
   </customwidget>
   <customwidget>
-   <class>KComboBox</class>
+   <class>QComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
   </customwidget>

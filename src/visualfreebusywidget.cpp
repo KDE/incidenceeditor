@@ -27,7 +27,7 @@
 #include <KGantt/KGanttDateTimeGrid>
 #include <KGantt/KGanttAbstractRowController>
 
-#include <KComboBox>
+#include <QComboBox>
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
 
@@ -152,7 +152,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     QLabel *label = new QLabel(i18nc("@label", "Scale: "), this);
     controlLayout->addWidget(label);
 
-    mScaleCombo = new KComboBox(this);
+    mScaleCombo = new QComboBox(this);
     mScaleCombo->setToolTip(
         i18nc("@info:tooltip", "Set the Gantt chart zoom level"));
     mScaleCombo->setWhatsThis(
@@ -175,7 +175,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
                          QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
     mScaleCombo->setCurrentIndex(0);   // start with "hour"
-    connect(mScaleCombo, QOverload< int>::of(&KComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
+    connect(mScaleCombo, QOverload< int>::of(&QComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
 
     QPushButton *button = new QPushButton(i18nc("@action:button", "Center on Start"), this);

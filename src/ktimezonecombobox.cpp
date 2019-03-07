@@ -62,7 +62,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
 }
 
 KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
-    : KComboBox(parent)
+    : QComboBox(parent)
     , d(new KTimeZoneComboBox::Private(this))
 {
     d->fillComboBox();

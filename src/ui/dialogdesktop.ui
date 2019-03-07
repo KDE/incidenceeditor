@@ -295,7 +295,7 @@
          </widget>
         </item>
         <item>
-         <widget class="KComboBox" name="mPriorityCombo">
+         <widget class="QComboBox" name="mPriorityCombo">
           <property name="currentIndex">
            <number>5</number>
           </property>
@@ -717,7 +717,7 @@
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="KComboBox" name="mSecrecyCombo">
+          <widget class="QComboBox" name="mSecrecyCombo">
            <property name="toolTip">
             <string comment="@info:tooltip">Set the secrecy level</string>
            </property>
@@ -762,7 +762,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="KComboBox" name="mOrganizerCombo">
+              <widget class="QComboBox" name="mOrganizerCombo">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -1000,7 +1000,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="KComboBox" name="mAlarmPresetCombo">
+          <widget class="QComboBox" name="mAlarmPresetCombo">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -1125,7 +1125,7 @@
          <item row="0" column="1" colspan="2">
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
-            <widget class="KComboBox" name="mRecurrenceTypeCombo">
+            <widget class="QComboBox" name="mRecurrenceTypeCombo">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -1298,7 +1298,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="KComboBox" name="mMonthlyCombo">
+              <widget class="QComboBox" name="mMonthlyCombo">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -1340,7 +1340,7 @@
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <widget class="KComboBox" name="mYearlyCombo">
+              <widget class="QComboBox" name="mYearlyCombo">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -1391,7 +1391,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="KComboBox" name="mRecurrenceEndCombo">
+            <widget class="QComboBox" name="mRecurrenceEndCombo">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -1735,7 +1735,7 @@
  <customwidgets>
   <customwidget>
    <class>KPIM::KCheckComboBox</class>
-   <extends>KComboBox</extends>
+   <extends>QComboBox</extends>
    <header>Libkdepim/KCheckComboBox</header>
   </customwidget>
   <customwidget>
@@ -1765,7 +1765,7 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>KComboBox</class>
+   <class>QComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
   </customwidget>
@@ -1776,7 +1776,7 @@
   </customwidget>
   <customwidget>
    <class>IncidenceEditorNG::KTimeZoneComboBox</class>
-   <extends>KComboBox</extends>
+   <extends>QComboBox</extends>
    <header>ktimezonecombobox.h</header>
   </customwidget>
   <customwidget>
