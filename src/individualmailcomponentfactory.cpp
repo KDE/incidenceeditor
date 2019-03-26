@@ -22,6 +22,7 @@
 
 #include "individualmailcomponentfactory.h"
 #include "individualmaildialog.h"
+#include "opencomposerjob.h"
 
 #include <CalendarSupport/KCalPrefs>
 

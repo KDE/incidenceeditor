@@ -140,13 +140,10 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
   IncidenceDialog
   IncidenceDialogFactory
   IncidenceEditorSettings
-  CategoryEditDialog
-  IncidenceAttendee
   IncidenceDefaults
   IndividualMailComponentFactory
   GroupwareUiDelegate
   EditorItemManager
-  OpenComposerJob
   IncidenceEditor-Ng
   REQUIRED_HEADERS IncidenceEditor_HEADERS
   PREFIX IncidenceEditor
