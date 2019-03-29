@@ -67,7 +67,8 @@ void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
     mDateTime->load(incidence);
 
     mAlarms.clear();
-    foreach (const KCalCore::Alarm::Ptr &alarm, incidence->alarms()) {
+    const auto lstAlarms = incidence->alarms();
+    for (const KCalCore::Alarm::Ptr &alarm : lstAlarms) {
         mAlarms.append(KCalCore::Alarm::Ptr(new KCalCore::Alarm(*alarm.data())));
     }
 
@@ -118,9 +119,9 @@ bool IncidenceAlarm::isDirty() const
         //       if all currently enabled alarms are also in the incidence. The
         //       disabled alarms are not changed by our code at all, so we assume that
         //       they're still there.
-        foreach (const KCalCore::Alarm::Ptr &alarm, mAlarms) {
+        for (const KCalCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
             bool found = false;
-            foreach (const KCalCore::Alarm::Ptr &initialAlarm, initialAlarms) {
+            for (const KCalCore::Alarm::Ptr &initialAlarm : qAsConst(initialAlarms)) {
                 if (*alarm == *initialAlarm) {
                     found = true;
                     break;
