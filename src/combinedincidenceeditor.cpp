@@ -52,7 +52,7 @@ bool CombinedIncidenceEditor::isDirty() const
 
 bool CombinedIncidenceEditor::isValid() const
 {
-    foreach (IncidenceEditor *editor, mCombinedEditors) {
+    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         if (!editor->isValid()) {
             const QString reason = editor->lastErrorString();
             editor->focusInvalidField();
@@ -91,7 +91,7 @@ void CombinedIncidenceEditor::handleDirtyStatusChange(bool isDirty)
 void CombinedIncidenceEditor::load(const KCalCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
-    foreach (IncidenceEditor *editor, mCombinedEditors) {
+    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
         editor->blockSignals(true);
@@ -117,7 +117,7 @@ void CombinedIncidenceEditor::load(const KCalCore::Incidence::Ptr &incidence)
 
 void CombinedIncidenceEditor::load(const Akonadi::Item &item)
 {
-    foreach (IncidenceEditor *editor, mCombinedEditors) {
+    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
         editor->blockSignals(true);
@@ -142,14 +142,14 @@ void CombinedIncidenceEditor::load(const Akonadi::Item &item)
 
 void CombinedIncidenceEditor::save(const KCalCore::Incidence::Ptr &incidence)
 {
-    foreach (IncidenceEditor *editor, mCombinedEditors) {
+    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         editor->save(incidence);
     }
 }
 
 void CombinedIncidenceEditor::save(Akonadi::Item &item)
 {
-    foreach (IncidenceEditor *editor, mCombinedEditors) {
+    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         editor->save(item);
     }
 }

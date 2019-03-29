@@ -295,7 +295,8 @@ bool IncidenceAttendee::isDirty() const
     const KCalCore::Attendee::List originalList = mLoadedIncidence->attendees();
     KCalCore::Attendee::List newList;
 
-    foreach (KCalCore::Attendee::Ptr attendee, mDataModel->attendees()) {
+    const auto lstAttendees = mDataModel->attendees();
+    for (const KCalCore::Attendee::Ptr &attendee : lstAttendees) {
         if (!attendee->fullName().isEmpty()) {
             newList.append(attendee);
         }
@@ -309,7 +310,7 @@ bool IncidenceAttendee::isDirty() const
 
     // Okay, again not the most efficient algorithm, but I'm assuming that in the
     // bulk of the use cases, the number of attendees is not much higher than 10 or so.
-    foreach (const KCalCore::Attendee::Ptr &attendee, originalList) {
+    for (const KCalCore::Attendee::Ptr &attendee : originalList) {
         bool found = false;
         for (int i = 0; i < newList.count(); ++i) {
             if (*(newList[i]) == *attendee) {
@@ -998,7 +999,8 @@ void IncidenceAttendee::printDebugInfo() const
     KCalCore::Attendee::List newList;
     qCDebug(INCIDENCEEDITOR_LOG) << "List sizes: " << originalList.count() << newList.count();
 
-    foreach (KCalCore::Attendee::Ptr attendee, mDataModel->attendees()) {
+    const auto lstAttendees = mDataModel->attendees();
+    for (const KCalCore::Attendee::Ptr &attendee : lstAttendees) {
         if (!attendee->fullName().isEmpty()) {
             newList.append(attendee);
         }
@@ -1006,7 +1008,7 @@ void IncidenceAttendee::printDebugInfo() const
 
     // Okay, again not the most efficient algorithm, but I'm assuming that in the
     // bulk of the use cases, the number of attendees is not much higher than 10 or so.
-    foreach (const KCalCore::Attendee::Ptr &attendee, originalList) {
+    for (const KCalCore::Attendee::Ptr &attendee : originalList) {
         bool found = false;
         for (int i = 0; i < newList.count(); ++i) {
             if (newList[i] == attendee) {

@@ -32,7 +32,7 @@ using namespace IncidenceEditorNG;
 
 void ConflictResolverTest::insertAttendees()
 {
-    foreach (const CalendarSupport::FreeBusyItem::Ptr &item, qAsConst(attendees)) {
+    for (const CalendarSupport::FreeBusyItem::Ptr &item : qAsConst(attendees)) {
         resolver->insertAttendee(item);
     }
 }
