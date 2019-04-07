@@ -644,9 +644,6 @@ Akonadi::Item IncidenceDialogPrivate::save(const Akonadi::Item &item)
     mEditor->save(newIncidence);
     mEditor->save(result);
 
-    // TODO: Remove this once we support moving of events/todo's
-    mCalSelector->setEnabled(false);
-
     // Make sure that we don't loose uid for existing incidence
     newIncidence->setUid(mEditor->incidence<KCalCore::Incidence>()->uid());
 
@@ -760,8 +757,6 @@ void IncidenceDialog::load(const Akonadi::Item &item, const QDate &activeDate)
     d->mIeDateTime->setActiveDate(activeDate);
     if (item.isValid()) {   // We're editing
         d->mItemManager->load(item);
-        // TODO: Remove this once we support moving of events/todo's
-        d->mCalSelector->setEnabled(false);
     } else { // We're creating
         Q_ASSERT(d->hasSupportedPayload(item));
         d->load(item);
