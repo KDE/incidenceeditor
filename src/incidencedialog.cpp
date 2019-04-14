@@ -135,6 +135,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
 {
     Q_Q(IncidenceDialog);
     mUi->setupUi(q);
+    mUi->mMessageWidget->hide();
     QGridLayout *layout = new QGridLayout(mUi->mCalSelectorPlaceHolder);
     layout->setSpacing(0);
     layout->setContentsMargins(0, 0, 0, 0);
