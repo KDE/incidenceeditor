@@ -109,7 +109,7 @@ install(FILES
 
 install( FILES incidenceeditor.categories incidenceeditor.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
 add_definitions(-DQT_NO_FOREACH)
-
+set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(src)
 if (BUILD_TESTING)
    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)

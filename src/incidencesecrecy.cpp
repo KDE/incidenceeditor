@@ -30,7 +30,7 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
 {
     setObjectName(QStringLiteral("IncidenceSecrecy"));
     mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
-    connect(mUi->mSecrecyCombo, QOverload< int>::of(&QComboBox::currentIndexChanged), this, &IncidenceSecrecy::checkDirtyStatus);
+    connect(mUi->mSecrecyCombo, qOverload< int>(&QComboBox::currentIndexChanged), this, &IncidenceSecrecy::checkDirtyStatus);
 }
 
 void IncidenceSecrecy::load(const KCalCore::Incidence::Ptr &incidence)

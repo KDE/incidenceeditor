@@ -127,10 +127,10 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(mUi->mSolveButton, &QPushButton::clicked, this,
             &IncidenceAttendee::slotSolveConflictPressed);
     /* Added as part of kolab/issue2297, which is currently under review
-    connect(mUi->mOrganizerCombo, QOverload<const QString &>::of(&QComboBox::activated),
+    connect(mUi->mOrganizerCombo, qOverload<const QString &>(&QComboBox::activated),
             this, &IncidenceAttendee::slotOrganizerChanged);
     */
-    connect(mUi->mOrganizerCombo, QOverload<int>::of(&QComboBox::currentIndexChanged),
+    connect(mUi->mOrganizerCombo, qOverload<int>(&QComboBox::currentIndexChanged),
             this, &IncidenceAttendee::checkDirtyStatus);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
