@@ -11,4 +11,4 @@ libraries:
  - qmake: IncidenceEditor
    cmake: "KF5::IncidenceEditor"
 cmakename: KF5IncidenceEditor
-
+group: kdepim
