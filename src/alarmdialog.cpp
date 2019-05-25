@@ -146,7 +146,7 @@ void AlarmDialog::load(const KCalCore::Alarm::Ptr &alarm)
         const KCalCore::Person::List::ConstIterator end(addresses.constEnd());
         for (KCalCore::Person::List::ConstIterator it = addresses.constBegin();
              it != end; ++it) {
-            add << (*it)->fullName();
+            add << (*it).fullName();
         }
         mUi->mEmailAddress->setText(add.join(QStringLiteral(", ")));
         mUi->mEmailText->setPlainText(alarm->mailText());

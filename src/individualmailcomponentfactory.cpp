@@ -201,8 +201,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
         KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer()->name(),
-                                              mIncidence->organizer()->email()));
+                                              mIncidence->organizer().name(),
+                                              mIncidence->organizer().email()));
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -215,8 +215,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
         KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer()->name(),
-                                              mIncidence->organizer()->email()));
+                                              mIncidence->organizer().name(),
+                                              mIncidence->organizer().email()));
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -227,8 +227,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipie
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
         KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer()->name(),
-                                              mIncidence->organizer()->email()));
+                                              mIncidence->organizer().name(),
+                                              mIncidence->organizer().email()));
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }

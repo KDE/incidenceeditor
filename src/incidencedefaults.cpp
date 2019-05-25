@@ -66,8 +66,8 @@ public:
     bool mCleanupTemporaryFiles;
 
     /// Methods
-    KCalCore::Person::Ptr organizerAsPerson() const;
-    KCalCore::Attendee::Ptr organizerAsAttendee(const KCalCore::Person::Ptr &organizer) const;
+    KCalCore::Person organizerAsPerson() const;
+    KCalCore::Attendee::Ptr organizerAsAttendee(const KCalCore::Person &organizer) const;
 
     void todoDefaults(const KCalCore::Todo::Ptr &todo) const;
     void eventDefaults(const KCalCore::Event::Ptr &event) const;
@@ -75,13 +75,13 @@ public:
 };
 }
 
-KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
+KCalCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
 {
     const QString invalidEmail = IncidenceDefaults::invalidEmailAddress();
 
-    KCalCore::Person::Ptr organizer(new KCalCore::Person);
-    organizer->setName(i18nc("@label", "no (valid) identities found"));
-    organizer->setEmail(invalidEmail);
+    KCalCore::Person organizer;
+    organizer.setName(i18nc("@label", "no (valid) identities found"));
+    organizer.setEmail(invalidEmail);
 
     if (mEmails.isEmpty()) {
         // Don't bother any longer, either someone forget to call setFullEmails, or
@@ -97,14 +97,14 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
             if (success && email.endsWith(mGroupWareDomain)) {
-                organizer->setName(name);
-                organizer->setEmail(email);
+                organizer.setName(name);
+                organizer.setEmail(email);
                 break;
             }
         }
     }
 
-    if (organizer->email() == invalidEmail) {
+    if (organizer.email() == invalidEmail) {
         // Either, no groupware was used, or we didn't find a groupware email address.
         // Now try to
         for (const QString &fullEmail : qAsConst(mEmails)) {
@@ -112,8 +112,8 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
             if (success) {
-                organizer->setName(name);
-                organizer->setEmail(email);
+                organizer.setName(name);
+                organizer.setEmail(email);
                 break;
             }
         }
@@ -123,14 +123,14 @@ KCalCore::Person::Ptr IncidenceDefaultsPrivate::organizerAsPerson() const
 }
 
 KCalCore::Attendee::Ptr IncidenceDefaultsPrivate::organizerAsAttendee(
-    const KCalCore::Person::Ptr &organizer) const
+    const KCalCore::Person &organizer) const
 {
     KCalCore::Attendee::Ptr organizerAsAttendee(new KCalCore::Attendee(QLatin1String(
                                                                            ""), QLatin1String("")));
     // Really, the appropriate values (even the fall back values) should come from
     // organizer. (See organizerAsPerson for more details).
-    organizerAsAttendee->setName(organizer->name());
-    organizerAsAttendee->setEmail(organizer->email());
+    organizerAsAttendee->setName(organizer.name());
+    organizerAsAttendee->setEmail(organizer.email());
     // NOTE: Don't set the status to None, this value is not supported by the attendee
     //       editor atm.
     organizerAsAttendee->setStatus(KCalCore::Attendee::Accepted);
@@ -376,7 +376,7 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
     incidence->clearRecurrence();
     incidence->clearTempFiles();
 
-    const KCalCore::Person::Ptr organizerAsPerson = d->organizerAsPerson();
+    const KCalCore::Person organizerAsPerson = d->organizerAsPerson();
 #ifdef KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif

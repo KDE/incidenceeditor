@@ -194,16 +194,16 @@ void IncidenceAttendee::load(const KCalCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
 
-    if (iAmOrganizer() || incidence->organizer()->isEmpty()) {
+    if (iAmOrganizer() || incidence->organizer().isEmpty()) {
         mUi->mOrganizerStack->setCurrentIndex(0);
 
         int found = -1;
-        const QString fullOrganizer = incidence->organizer()->fullName();
-        const QString organizerEmail = incidence->organizer()->email();
+        const QString fullOrganizer = incidence->organizer().fullName();
+        const QString organizerEmail = incidence->organizer().email();
         for (int i = 0; i < mUi->mOrganizerCombo->count(); ++i) {
-            KCalCore::Person::Ptr organizerCandidate
+            KCalCore::Person organizerCandidate
                 = KCalCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
-            if (organizerCandidate->email() == organizerEmail) {
+            if (organizerCandidate.email() == organizerEmail) {
                 found = i;
                 mUi->mOrganizerCombo->setCurrentIndex(i);
                 break;
@@ -217,7 +217,7 @@ void IncidenceAttendee::load(const KCalCore::Incidence::Ptr &incidence)
         mUi->mOrganizerLabel->setVisible(false);
     } else { // someone else is the organizer
         mUi->mOrganizerStack->setCurrentIndex(1);
-        mUi->mOrganizerLabel->setText(incidence->organizer()->fullName());
+        mUi->mOrganizerLabel->setText(incidence->organizer().fullName());
         mUi->mOrganizerLabel->setVisible(true);
     }
 
@@ -282,12 +282,12 @@ bool IncidenceAttendee::isDirty() const
         KCalCore::Event tmp;
         tmp.setOrganizer(mUi->mOrganizerCombo->currentText());
 
-        if (mLoadedIncidence->organizer()->email() != tmp.organizer()->email()) {
+        if (mLoadedIncidence->organizer().email() != tmp.organizer().email()) {
             qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was "
-                                         << mLoadedIncidence->organizer()->name()
-                                         << mLoadedIncidence->organizer()->email() << "; new is "
-                                         << tmp.organizer()->name()
-                                         << tmp.organizer()->email();
+                                         << mLoadedIncidence->organizer().name()
+                                         << mLoadedIncidence->organizer().email() << "; new is "
+                                         << tmp.organizer().name()
+                                         << tmp.organizer().email();
             return true;
         }
     }
@@ -783,7 +783,7 @@ bool IncidenceAttendee::iAmOrganizer() const
 {
     if (mLoadedIncidence) {
         const IncidenceEditorNG::EditorConfig *config = IncidenceEditorNG::EditorConfig::instance();
-        return config->thatIsMe(mLoadedIncidence->organizer()->email());
+        return config->thatIsMe(mLoadedIncidence->organizer().email());
     }
 
     return true;
@@ -987,12 +987,12 @@ void IncidenceAttendee::setActions(KCalCore::Incidence::IncidenceType actions)
 void IncidenceAttendee::printDebugInfo() const
 {
     qCDebug(INCIDENCEEDITOR_LOG) << "I'm organizer   : " << iAmOrganizer();
-    qCDebug(INCIDENCEEDITOR_LOG) << "Loaded organizer: " << mLoadedIncidence->organizer()->email();
+    qCDebug(INCIDENCEEDITOR_LOG) << "Loaded organizer: " << mLoadedIncidence->organizer().email();
 
     if (iAmOrganizer()) {
         KCalCore::Event tmp;
         tmp.setOrganizer(mUi->mOrganizerCombo->currentText());
-        qCDebug(INCIDENCEEDITOR_LOG) << "Organizer combo: " << tmp.organizer()->email();
+        qCDebug(INCIDENCEEDITOR_LOG) << "Organizer combo: " << tmp.organizer().email();
     }
 
     const KCalCore::Attendee::List originalList = mLoadedIncidence->attendees();
