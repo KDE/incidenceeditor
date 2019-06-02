@@ -51,7 +51,7 @@ private Q_SLOTS:
         QCOMPARE(dialog.updateAttendees().count(), 3);
 
         // Just make sure, that the QCombobox is sorted like we think
-        QComboBox *first = dialog.mAttendeeDecision[attendees[0]];
+        QComboBox *first = dialog.mAttendeeDecision[0].second;
         QCOMPARE((IndividualMailDialog::Decisions)first->itemData(0, Qt::UserRole).toInt(),
                  IndividualMailDialog::Update);
         QCOMPARE((IndividualMailDialog::Decisions)first->itemData(1, Qt::UserRole).toInt(),

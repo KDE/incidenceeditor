@@ -39,6 +39,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));
     m_detailsWidget = new QWidget();
     QGridLayout *layout = new QGridLayout(m_detailsWidget);
+    mAttendeeDecision.reserve(attendees.size());
     int row = 0;
     for (const KCalCore::Attendee::Ptr &attendee : attendees) {
         QComboBox *options = new QComboBox();
@@ -52,7 +53,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
                                     "Options for this particular attendee."));
         options->setToolTip(i18nc("@info:tooltip",
                                   "Choose an option for this attendee."));
-        mAttendeeDecision[attendee] = options;
+        mAttendeeDecision.push_back(std::make_pair(attendee, options));
 
         layout->addWidget(new QLabel(attendee->fullName()), row, 0);
         layout->addWidget(options, row, 1);
@@ -103,9 +104,9 @@ KCalCore::Attendee::List IndividualMailDialog::editAttendees() const
 {
     KCalCore::Attendee::List edit;
     for (auto it = mAttendeeDecision.cbegin(), end = mAttendeeDecision.cend(); it != end; ++it) {
-        int index = it.value()->currentIndex();
-        if (it.value()->itemData(index, Qt::UserRole) == Edit) {
-            edit.append(it.key());
+        const int index = (*it).second->currentIndex();
+        if ((*it).second->itemData(index, Qt::UserRole) == Edit) {
+            edit.append((*it).first);
         }
     }
     return edit;
@@ -115,9 +116,9 @@ KCalCore::Attendee::List IndividualMailDialog::updateAttendees() const
 {
     KCalCore::Attendee::List update;
     for (auto it = mAttendeeDecision.cbegin(), end = mAttendeeDecision.cend(); it != end; ++it) {
-        int index = it.value()->currentIndex();
-        if (it.value()->itemData(index, Qt::UserRole) == Update) {
-            update.append(it.key());
+        const int index = (*it).second->currentIndex();
+        if ((*it).second->itemData(index, Qt::UserRole) == Update) {
+            update.append((*it).first);
         }
     }
     return update;

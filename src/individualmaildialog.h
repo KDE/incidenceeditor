@@ -55,7 +55,7 @@ public:
 private:
     void updateButtonState();
 
-    QHash<KCalCore::Attendee::Ptr, QComboBox *> mAttendeeDecision;
+    std::vector<std::pair<KCalCore::Attendee::Ptr, QComboBox*>> mAttendeeDecision;
     QDialogButtonBox *m_buttons = nullptr;
     QWidget *m_detailsWidget = nullptr;
 };
