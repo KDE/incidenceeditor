@@ -55,7 +55,7 @@ public:
         Tentative
     };
 
-    explicit AttendeeTableModel(const KCalCore::Attendee::List &resources, QObject *parent = nullptr);
+    explicit AttendeeTableModel(QObject *parent = nullptr);
 
     Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;

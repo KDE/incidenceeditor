@@ -26,9 +26,8 @@
 
 using namespace IncidenceEditorNG;
 
-AttendeeTableModel::AttendeeTableModel(const KCalCore::Attendee::List &attendees, QObject *parent)
+AttendeeTableModel::AttendeeTableModel(QObject *parent)
     : QAbstractTableModel(parent)
-    , mAttendeeList(attendees)
     , mKeepEmpty(false)
     , mRemoveEmptyLines(false)
 {

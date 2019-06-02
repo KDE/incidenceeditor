@@ -59,10 +59,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     , mRoleDelegate(new AttendeeComboBoxDelegate(this))
     , mResponseDelegate(new AttendeeComboBoxDelegate(this))
 {
-    KCalCore::Attendee::List attendees;
-    KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
-    attendees.append(attendee);
-    mDataModel = new AttendeeTableModel(attendees, this);
+    mDataModel = new AttendeeTableModel(this);
     mDataModel->setKeepEmpty(true);
     mDataModel->setRemoveEmptyLines(true);
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-participant.png")),
