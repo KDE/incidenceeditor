@@ -74,7 +74,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
             return attendee->fullName();
         case Available:
         {
-            AvailableStatus available = mAttendeeAvailable[attendee];
+            AvailableStatus available = mAttendeeAvailable[index.row()];
             if (role == Qt::DisplayRole) {
                 switch (available) {
                 case Free:
@@ -135,7 +135,7 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
             addEmptyAttendee();
             break;
         case Available:
-            mAttendeeAvailable[attendee] = static_cast<AvailableStatus>(value.toInt());
+            mAttendeeAvailable[index.row()] = static_cast<AvailableStatus>(value.toInt());
             break;
         case Status:
             attendee->setStatus(static_cast<KCalCore::Attendee::PartStat>(value.toInt()));
@@ -193,6 +193,7 @@ bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &p
     for (int row = 0; row < rows; ++row) {
         KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
         mAttendeeList.insert(position, attendee);
+        mAttendeeAvailable.insert(mAttendeeAvailable.begin() + position, AvailableStatus{});
     }
 
     endInsertRows();
@@ -204,7 +205,7 @@ bool AttendeeTableModel::removeRows(int position, int rows, const QModelIndex &p
     beginRemoveRows(parent, position, position + rows - 1);
 
     for (int row = 0; row < rows; ++row) {
-        mAttendeeAvailable.remove(mAttendeeList.at(position));
+        mAttendeeAvailable.erase(mAttendeeAvailable.begin() + position);
         mAttendeeList.remove(position);
     }
 
@@ -215,9 +216,8 @@ bool AttendeeTableModel::removeRows(int position, int rows, const QModelIndex &p
 bool AttendeeTableModel::insertAttendee(int position, const KCalCore::Attendee::Ptr &attendee)
 {
     beginInsertRows(QModelIndex(), position, position);
-
     mAttendeeList.insert(position, attendee);
-
+    mAttendeeAvailable.insert(mAttendeeAvailable.begin() + position, AvailableStatus{});
     endInsertRows();
 
     addEmptyAttendee();
@@ -230,7 +230,8 @@ void AttendeeTableModel::setAttendees(const KCalCore::Attendee::List &attendees)
     Q_EMIT layoutAboutToBeChanged();
 
     mAttendeeList = attendees;
-    mAttendeeAvailable = QMap<KCalCore::Attendee::Ptr, AvailableStatus>();
+    mAttendeeAvailable.clear();
+    mAttendeeAvailable.resize(attendees.size());
 
     addEmptyAttendee();
 

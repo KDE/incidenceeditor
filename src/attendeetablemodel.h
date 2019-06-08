@@ -82,7 +82,7 @@ private:
     void addEmptyAttendee();
 
     KCalCore::Attendee::List mAttendeeList;
-    QMap<KCalCore::Attendee::Ptr, AvailableStatus> mAttendeeAvailable;
+    std::vector<AvailableStatus> mAttendeeAvailable;
     bool mKeepEmpty;
     bool mRemoveEmptyLines;
 };
