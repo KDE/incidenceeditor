@@ -371,14 +371,14 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &
     QString fullname = attendee->fullName();
 
     // stop old job
-    KJob *oldJob = mMightBeGroupJobs.key(attendee);
+    KJob *oldJob = mMightBeGroupJobs.key(attendee->uid());
     if (oldJob != nullptr) {
         disconnect(oldJob);
         oldJob->deleteLater();
         mMightBeGroupJobs.remove(oldJob);
     }
 
-    mGroupList.remove(attendee);
+    mGroupList.remove(attendee->uid());
 
     if (!fullname.isEmpty()) {
         Akonadi::ContactGroupSearchJob *job = new Akonadi::ContactGroupSearchJob();
@@ -386,7 +386,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &
         connect(job, &Akonadi::ContactGroupSearchJob::result, this,
                 &IncidenceAttendee::groupSearchResult);
 
-        mMightBeGroupJobs.insert(job, attendee);
+        mMightBeGroupJobs.insert(job, attendee->uid());
     }
 }
 
@@ -396,7 +396,7 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
     Q_ASSERT(searchJob);
 
     Q_ASSERT(mMightBeGroupJobs.contains(job));
-    KCalCore::Attendee::Ptr attendee = mMightBeGroupJobs.take(job);
+    const auto uid = mMightBeGroupJobs.take(job);
 
     const KContacts::ContactGroup::List contactGroups = searchJob->contactGroups();
     if (contactGroups.isEmpty()) {
@@ -407,11 +407,11 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
     // TODO: Give the user the possibility to choose a group when there is more than one?!
     KContacts::ContactGroup group = contactGroups.first();
 
-    int row = dataModel()->attendees().indexOf(attendee);
+    const int row = rowOfAttendee(uid);
     QModelIndex index = dataModel()->index(row, AttendeeTableModel::CuType);
     dataModel()->setData(index, KCalCore::Attendee::Group);
 
-    mGroupList.insert(attendee, group);
+    mGroupList.insert(uid, group);
     updateGroupExpand();
 }
 
@@ -423,13 +423,10 @@ void IncidenceAttendee::updateGroupExpand()
 void IncidenceAttendee::slotGroupSubstitutionPressed()
 {
     for (auto it = mGroupList.cbegin(), end = mGroupList.cend(); it != end; ++it) {
-        const KCalCore::Attendee::Ptr attendee = it.key();
-        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(mGroupList.value(
-                                                                                           attendee),
-                                                                                       this);
+        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(it.value(), this);
         connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this,
                 &IncidenceAttendee::expandResult);
-        mExpandGroupJobs.insert(expandJob, attendee);
+        mExpandGroupJobs.insert(expandJob, it.key());
         expandJob->start();
     }
 }
@@ -439,8 +436,9 @@ void IncidenceAttendee::expandResult(KJob *job)
     Akonadi::ContactGroupExpandJob *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
     Q_ASSERT(expandJob);
     Q_ASSERT(mExpandGroupJobs.contains(job));
-    KCalCore::Attendee::Ptr attendee = mExpandGroupJobs.take(job);
-    int row = dataModel()->attendees().indexOf(attendee);
+    const auto uid = mExpandGroupJobs.take(job);
+    const int row = rowOfAttendee(uid);
+    const auto attendee = dataModel()->attendees().at(row);
     const QString currentEmail = attendee->email();
     const KContacts::Addressee::List groupMembers = expandJob->contacts();
     bool wasACorrectEmail = false;
@@ -492,7 +490,7 @@ void IncidenceAttendee::slotSelectAddresses()
                                                   ));
                 dataModel()->insertAttendee(pos, newAt);
 
-                mExpandGroupJobs.insert(job, newAt);
+                mExpandGroupJobs.insert(job, newAt->uid());
                 job->start();
             } else {
                 KContacts::Addressee contact;
@@ -724,19 +722,19 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &
         KCalCore::Attendee::Ptr attendee
             = dataModel()->data(email,
                                 AttendeeTableModel::AttendeeRole).value<KCalCore::Attendee::Ptr>();
-        KJob *job = mMightBeGroupJobs.key(attendee);
+        KJob *job = mMightBeGroupJobs.key(attendee->uid());
         if (job) {
             disconnect(job);
             job->deleteLater();
             mMightBeGroupJobs.remove(job);
         }
-        job = mExpandGroupJobs.key(attendee);
+        job = mExpandGroupJobs.key(attendee->uid());
         if (job) {
             disconnect(job);
             job->deleteLater();
             mExpandGroupJobs.remove(job);
         }
-        mGroupList.remove(attendee);
+        mGroupList.remove(attendee->uid());
     }
     updateGroupExpand();
 }
@@ -1042,4 +1040,13 @@ void IncidenceAttendee::printDebugInfo() const
             return;
         }
     }
+}
+
+int IncidenceAttendee::rowOfAttendee(const QString &uid) const
+{
+    const auto attendees = dataModel()->attendees();
+    const auto it = std::find_if(attendees.begin(), attendees.end(), [uid](const KCalCore::Attendee::Ptr &att) {
+        return att->uid() == uid;
+    });
+    return std::distance(attendees.begin(), it);
 }

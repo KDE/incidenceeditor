@@ -126,6 +126,8 @@ private:
     void fillOrganizerCombo();
     void setActions(KCalCore::Incidence::IncidenceType actions);
 
+    int rowOfAttendee(const QString &uid) const;
+
     Ui::EventOrTodoDesktop *mUi = nullptr;
     QWidget *mParentWidget = nullptr;
     ConflictResolver *mConflictResolver = nullptr;
@@ -140,9 +142,10 @@ private:
     AttendeeComboBoxDelegate *mRoleDelegate = nullptr;
     AttendeeComboBoxDelegate *mResponseDelegate = nullptr;
 
-    QMap<KCalCore::Attendee::Ptr, KContacts::ContactGroup> mGroupList;
-    QMap<KJob *, KCalCore::Attendee::Ptr> mMightBeGroupJobs;
-    QMap<KJob *, KCalCore::Attendee::Ptr> mExpandGroupJobs;
+    // the QString is Attendee::uid here
+    QMap<QString, KContacts::ContactGroup> mGroupList;
+    QMap<KJob *, QString> mMightBeGroupJobs;
+    QMap<KJob *, QString> mExpandGroupJobs;
 };
 }
 
