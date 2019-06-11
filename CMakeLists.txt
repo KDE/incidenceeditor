@@ -102,7 +102,11 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
 
-install( FILES incidenceeditor.categories incidenceeditor.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
+if (${ECM_VERSION} STRGREATER "5.58.0")
+    install(FILES incidenceeditor.categories incidenceeditor.renamecategories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+else()
+    install(FILES incidenceeditor.categories incidenceeditor.renamecategories  DESTINATION ${KDE_INSTALL_CONFDIR})
+endif()
 add_definitions(-DQT_NO_FOREACH)
 set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(src)
