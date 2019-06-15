@@ -51,12 +51,12 @@ void IndividualMessageQueueJob::start()
     QSet<QString> attendeesCc(QSet<QString>::fromList(addressAttribute().cc()));
 
     QStringList attendeesAutoTo, attendeesAutoCc;
-    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(mUpdate)) {
-        if (attendeesTo.contains(attendee->email())) {
-            attendeesAutoTo.append(attendee->fullName());
+    for (const KCalCore::Attendee &attendee : qAsConst(mUpdate)) {
+        if (attendeesTo.contains(attendee.email())) {
+            attendeesAutoTo.append(attendee.fullName());
         }
-        if (attendeesCc.contains(attendee->email())) {
-            attendeesAutoCc.append(attendee->fullName());
+        if (attendeesCc.contains(attendee.email())) {
+            attendeesAutoCc.append(attendee.fullName());
         }
     }
     if (!attendeesAutoTo.isEmpty() || !attendeesAutoCc.isEmpty()
@@ -65,12 +65,12 @@ void IndividualMessageQueueJob::start()
     }
 
     QStringList attendeesComposerTo, attendeesComposerCc;
-    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(mEdit)) {
-        if (attendeesTo.contains(attendee->email())) {
-            attendeesComposerTo.append(attendee->fullName());
+    for (const KCalCore::Attendee &attendee : qAsConst(mEdit)) {
+        if (attendeesTo.contains(attendee.email())) {
+            attendeesComposerTo.append(attendee.fullName());
         }
-        if (attendeesCc.contains(attendee->email())) {
-            attendeesComposerCc.append(attendee->fullName());
+        if (attendeesCc.contains(attendee.email())) {
+            attendeesComposerCc.append(attendee.fullName());
         }
     }
     if (!attendeesComposerTo.isEmpty() || !attendeesComposerCc.isEmpty()) {
@@ -200,9 +200,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer().name(),
-                                              mIncidence->organizer().email()));
+        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -214,9 +212,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer().name(),
-                                              mIncidence->organizer().email()));
+        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -226,9 +222,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee::Ptr organizer(new KCalCore::Attendee(
-                                              mIncidence->organizer().name(),
-                                              mIncidence->organizer().email()));
+        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }

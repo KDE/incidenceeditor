@@ -40,7 +40,7 @@ void AttendeeEditor::slotLineAdded(KPIM::MultiplyingLine *line)
     }
 
     connect(att, qOverload<>(&AttendeeLine::changed), this, &AttendeeEditor::slotCalculateTotal);
-    connect(att, qOverload<const KCalCore::Attendee::Ptr &, const KCalCore::Attendee::Ptr &>(&AttendeeLine:: changed), this, &AttendeeEditor::changed);
+    connect(att, qOverload<const KCalCore::Attendee&, const KCalCore::Attendee&>(&AttendeeLine:: changed), this, &AttendeeEditor::changed);
     connect(att, &AttendeeLine::editingFinished, this, &AttendeeEditor::editingFinished);
 }
 
@@ -82,7 +82,7 @@ AttendeeData::List AttendeeEditor::attendees() const
     return attList;
 }
 
-void AttendeeEditor::addAttendee(const KCalCore::Attendee::Ptr &attendee)
+void AttendeeEditor::addAttendee(const KCalCore::Attendee &attendee)
 {
     addData(AttendeeData::Ptr(new AttendeeData(attendee)));
 }

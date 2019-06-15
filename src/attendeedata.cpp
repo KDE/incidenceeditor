@@ -37,7 +37,7 @@ bool AttendeeData::isEmpty() const
     return name().isEmpty() && email().isEmpty();
 }
 
-KCalCore::Attendee::Ptr AttendeeData::attendee() const
+KCalCore::Attendee AttendeeData::attendee() const
 {
-    return KCalCore::Attendee::Ptr(new KCalCore::Attendee(*this));
+    return KCalCore::Attendee(*this);
 }

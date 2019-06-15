@@ -68,7 +68,7 @@ public:
     Q_REQUIRED_RESULT bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
     Q_REQUIRED_RESULT bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
 
-    Q_REQUIRED_RESULT bool insertAttendee(int position, const KCalCore::Attendee::Ptr &attendee);
+    Q_REQUIRED_RESULT bool insertAttendee(int position, const KCalCore::Attendee &attendee);
 
     void setAttendees(const KCalCore::Attendee::List &resources);
     Q_REQUIRED_RESULT KCalCore::Attendee::List attendees() const;

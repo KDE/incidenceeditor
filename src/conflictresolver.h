@@ -57,7 +57,7 @@ public:
      * The attendees free busy info will be fetched
      * and integrated into the resolver.
      */
-    void insertAttendee(const KCalCore::Attendee::Ptr &attendee);
+    void insertAttendee(const KCalCore::Attendee &attendee);
 
     void insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy);
     /**
@@ -66,7 +66,7 @@ public:
      * resolving conflicts
      */
 
-    void removeAttendee(const KCalCore::Attendee::Ptr &attendee);
+    void removeAttendee(const KCalCore::Attendee &attendee);
 
     /**
      * Clear all attendees
@@ -76,7 +76,7 @@ public:
     /**
      * Returns whether the resolver contains the attendee
      */
-    Q_REQUIRED_RESULT bool containsAttendee(const KCalCore::Attendee::Ptr &attendee);
+    Q_REQUIRED_RESULT bool containsAttendee(const KCalCore::Attendee &attendee);
 
     /**
      * Constrain the free time slot search to the weekdays
@@ -177,7 +177,7 @@ private:
      * current mandatory role constraint.
      * @return true if the attendee is of one of the mandatory roles, false if not
      */
-    bool matchesRoleConstraint(const KCalCore::Attendee::Ptr &attendee);
+    bool matchesRoleConstraint(const KCalCore::Attendee &attendee);
 
     void calculateConflicts();
 

@@ -41,7 +41,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     QGridLayout *layout = new QGridLayout(m_detailsWidget);
     mAttendeeDecision.reserve(attendees.size());
     int row = 0;
-    for (const KCalCore::Attendee::Ptr &attendee : attendees) {
+    for (const KCalCore::Attendee &attendee : attendees) {
         QComboBox *options = new QComboBox();
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
                                "Send update"), QVariant(Update));
@@ -55,7 +55,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
                                   "Choose an option for this attendee."));
         mAttendeeDecision.push_back(std::make_pair(attendee, options));
 
-        layout->addWidget(new QLabel(attendee->fullName()), row, 0);
+        layout->addWidget(new QLabel(attendee.fullName()), row, 0);
         layout->addWidget(options, row, 1);
         ++row;
     }

@@ -57,7 +57,7 @@ class IncidenceDefaultsPrivate
 public:
     /// Members
     KCalCore::Attachment::List mAttachments;
-    QVector<KCalCore::Attendee::Ptr> mAttendees;
+    QVector<KCalCore::Attendee> mAttendees;
     QStringList mEmails;
     QString mGroupWareDomain;
     KCalCore::Incidence::Ptr mRelatedIncidence;
@@ -67,7 +67,7 @@ public:
 
     /// Methods
     KCalCore::Person organizerAsPerson() const;
-    KCalCore::Attendee::Ptr organizerAsAttendee(const KCalCore::Person &organizer) const;
+    KCalCore::Attendee organizerAsAttendee(const KCalCore::Person &organizer) const;
 
     void todoDefaults(const KCalCore::Todo::Ptr &todo) const;
     void eventDefaults(const KCalCore::Event::Ptr &event) const;
@@ -122,19 +122,18 @@ KCalCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     return organizer;
 }
 
-KCalCore::Attendee::Ptr IncidenceDefaultsPrivate::organizerAsAttendee(
+KCalCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(
     const KCalCore::Person &organizer) const
 {
-    KCalCore::Attendee::Ptr organizerAsAttendee(new KCalCore::Attendee(QLatin1String(
-                                                                           ""), QLatin1String("")));
+    KCalCore::Attendee organizerAsAttendee;
     // Really, the appropriate values (even the fall back values) should come from
     // organizer. (See organizerAsPerson for more details).
-    organizerAsAttendee->setName(organizer.name());
-    organizerAsAttendee->setEmail(organizer.email());
+    organizerAsAttendee.setName(organizer.name());
+    organizerAsAttendee.setEmail(organizer.email());
     // NOTE: Don't set the status to None, this value is not supported by the attendee
     //       editor atm.
-    organizerAsAttendee->setStatus(KCalCore::Attendee::Accepted);
-    organizerAsAttendee->setRole(KCalCore::Attendee::ReqParticipant);
+    organizerAsAttendee.setStatus(KCalCore::Attendee::Accepted);
+    organizerAsAttendee.setRole(KCalCore::Attendee::ReqParticipant);
     return organizerAsAttendee;
 }
 
@@ -314,8 +313,7 @@ void IncidenceDefaults::setAttendees(const QStringList &attendees)
     for (it = attendees.begin(); it != attendees.end(); ++it) {
         QString name, email;
         KContacts::Addressee::parseEmailAddress(*it, name, email);
-        d->mAttendees << KCalCore::Attendee::Ptr(
-            new KCalCore::Attendee(name, email, true, KCalCore::Attendee::NeedsAction));
+        d->mAttendees << KCalCore::Attendee(name, email, true, KCalCore::Attendee::NeedsAction);
     }
 }
 
@@ -380,7 +378,7 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
 #ifdef KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif
-    for (const KCalCore::Attendee::Ptr &attendee : qAsConst(d->mAttendees)) {
+    for (const KCalCore::Attendee &attendee : qAsConst(d->mAttendees)) {
         incidence->addAttendee(attendee);
     }
     // Ical standard: No attendees -> must not have an organizer!

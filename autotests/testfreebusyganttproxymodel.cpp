@@ -53,7 +53,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), Qt::UTC);
     const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), Qt::UTC);
-    KCalCore::Attendee::Ptr a1(new KCalCore::Attendee(QStringLiteral("fred"), QStringLiteral("fred@example.com")));
+    KCalCore::Attendee a1(QStringLiteral("fred"), QStringLiteral("fred@example.com"));
     KCalCore::FreeBusy::Ptr fb1(new KCalCore::FreeBusy());
 
     fb1->addPeriod(dt1, KCalCore::Duration(60 * 60));
@@ -64,7 +64,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     const QDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), Qt::UTC);
     const QDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), Qt::UTC);
-    KCalCore::Attendee::Ptr a2(new KCalCore::Attendee(QStringLiteral("joe"), QStringLiteral("joe@example.com")));
+    KCalCore::Attendee a2(QStringLiteral("joe"), QStringLiteral("joe@example.com"));
     KCalCore::FreeBusy::Ptr fb2(new KCalCore::FreeBusy());
 
     fb2->addPeriod(dt3, KCalCore::Duration(60 * 60));

@@ -38,7 +38,7 @@ public:
     {
     }
 
-    explicit AttendeeData(const KCalCore::Attendee::Ptr &attendee) : KCalCore::Attendee(*attendee)
+    explicit AttendeeData(const KCalCore::Attendee &attendee) : KCalCore::Attendee(attendee)
     {
     }
 
@@ -48,7 +48,7 @@ public:
     /**
      * Return a copy of the attendee data
      */
-    Q_REQUIRED_RESULT KCalCore::Attendee::Ptr attendee() const;
+    Q_REQUIRED_RESULT KCalCore::Attendee attendee() const;
 };
 }
 

@@ -250,7 +250,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
 
     QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
     QString email = QString::fromUtf8(obj.attributes().value(QStringLiteral("mail"))[0]);
-    KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(name, email));
+    KCalCore::Attendee attendee(name, email);
     CalendarSupport::FreeBusyItem::Ptr freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
     mModel->addItem(freebusy);

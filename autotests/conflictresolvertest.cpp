@@ -40,10 +40,9 @@ void ConflictResolverTest::insertAttendees()
 void ConflictResolverTest::addAttendee(const QString &email, const KCalCore::FreeBusy::Ptr &fb, KCalCore::Attendee::Role role)
 {
     QString name = QStringLiteral("attendee %1").arg(attendees.count());
-    CalendarSupport::FreeBusyItem::Ptr item(new CalendarSupport::FreeBusyItem(KCalCore::Attendee::Ptr(
-                                                                                  new KCalCore::Attendee(name, email, false,
+    CalendarSupport::FreeBusyItem::Ptr item(new CalendarSupport::FreeBusyItem(KCalCore::Attendee(name, email, false,
                                                                                                          KCalCore::Attendee::Accepted,
-                                                                                                         role)), nullptr));
+                                                                                                         role), nullptr));
     item->setFreeBusy(KCalCore::FreeBusy::Ptr(new KCalCore::FreeBusy(*fb.data())));
     attendees << item;
 }

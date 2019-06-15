@@ -271,7 +271,7 @@ void AttendeeLine::dataFromFields()
         return;
     }
 
-    KCalCore::Attendee::Ptr oldAttendee(mData->attendee());
+    KCalCore::Attendee oldAttendee(mData->attendee());
 
     QString email, name;
     KEmailAddress::extractEmailAddressAndName(mEdit->text(), email, name);
@@ -287,7 +287,7 @@ void AttendeeLine::dataFromFields()
     clearModified();
     if (!(oldAttendee == mData->attendee()) && !email.isEmpty()) {
         // if email is empty, we don't want to update anything
-        qCDebug(INCIDENCEEDITOR_LOG) << oldAttendee->email() << mData->email();
+        qCDebug(INCIDENCEEDITOR_LOG) << oldAttendee.email() << mData->email();
         Q_EMIT changed(oldAttendee, mData->attendee());
     }
 }
@@ -402,9 +402,7 @@ void AttendeeLine::aboutToBeDeleted()
         return;
     }
 
-    Q_EMIT changed(mData->attendee(),
-                   KCalCore::Attendee::Ptr(new KCalCore::Attendee(QLatin1String(""),
-                                                                  QLatin1String(""))));
+    Q_EMIT changed(mData->attendee(), KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
 }
 
 bool AttendeeLine::canDeleteLineEdit() const

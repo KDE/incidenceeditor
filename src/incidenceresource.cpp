@@ -150,8 +150,8 @@ void IncidenceResource::bookResource()
     }
     QString name, email;
     KEmailAddress::extractEmailAddressAndName(mUi->mNewResource->text(), email, name);
-    KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(name, email));
-    attendee->setCuType(KCalCore::Attendee::Resource);
+    KCalCore::Attendee attendee(name, email);
+    attendee.setCuType(KCalCore::Attendee::Resource);
     dataModel->insertAttendee(dataModel->rowCount(), attendee);
 }
 
@@ -166,8 +166,8 @@ void IncidenceResource::dialogOkPressed()
     if (item) {
         const QString name = QString::fromLatin1(item->ldapObject().value(QStringLiteral("cn")));
         const QString email = QString::fromLatin1(item->ldapObject().value(QStringLiteral("mail")));
-        KCalCore::Attendee::Ptr attendee(new KCalCore::Attendee(name, email));
-        attendee->setCuType(KCalCore::Attendee::Resource);
+        KCalCore::Attendee attendee(name, email);
+        attendee.setCuType(KCalCore::Attendee::Resource);
         dataModel->insertAttendee(dataModel->rowCount(), attendee);
     }
 }

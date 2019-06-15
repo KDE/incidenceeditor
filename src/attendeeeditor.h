@@ -49,14 +49,14 @@ public:
 
     AttendeeData::List attendees() const;
 
-    void addAttendee(const KCalCore::Attendee::Ptr &attendee);
+    void addAttendee(const KCalCore::Attendee &attendee);
     void removeAttendee(const AttendeeData::Ptr &attendee);
 
     void setActions(AttendeeLine::AttendeeActions actions);
 
 Q_SIGNALS:
     void countChanged(int);
-    void changed(const KCalCore::Attendee::Ptr &oldAttendee, const KCalCore::Attendee::Ptr &newAttendee);
+    void changed(const KCalCore::Attendee &oldAttendee, const KCalCore::Attendee &newAttendee);
     void editingFinished(KPIM::MultiplyingLine *);
 
 protected Q_SLOTS:

@@ -76,7 +76,7 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     // cheks if row is a group,  that can/should be expanded
-    void checkIfExpansionIsNeeded(const KCalCore::Attendee::Ptr &attendee);
+    void checkIfExpansionIsNeeded(const KCalCore::Attendee &attendee);
 
     // results of the group search job
     void groupSearchResult(KJob *job);
@@ -100,7 +100,7 @@ private Q_SLOTS:
     void slotFreeBusyAdded(const QModelIndex &index, int first, int last);
     void slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void updateFBStatus();
-    void updateFBStatus(const KCalCore::Attendee::Ptr &attendee, const KCalCore::FreeBusy::Ptr &fb);
+    void updateFBStatus(const KCalCore::Attendee &attendee, const KCalCore::FreeBusy::Ptr &fb);
 
     void slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last);

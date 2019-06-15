@@ -580,12 +580,12 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
 
     const KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
     const QStringList allEmails = IncidenceEditorNG::EditorConfig::instance()->allEmails();
-    KCalCore::Attendee::Ptr me = incidence->attendeeByMails(allEmails);
+    const KCalCore::Attendee me = incidence->attendeeByMails(allEmails);
 
     if (incidence->attendeeCount() > 1     // >1 because you won't drink alone
-        && me && (me->status() == KCalCore::Attendee::NeedsAction
-                  || me->status() == KCalCore::Attendee::Tentative
-                  || me->status() == KCalCore::Attendee::InProcess)) {
+        && !me.isNull() && (me.status() == KCalCore::Attendee::NeedsAction
+                  || me.status() == KCalCore::Attendee::Tentative
+                  || me.status() == KCalCore::Attendee::InProcess)) {
         // Show the invitation bar: "You are invited [accept] [decline]"
         mUi->mInvitationBar->show();
     } else {
