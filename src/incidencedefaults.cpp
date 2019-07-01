@@ -372,7 +372,6 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
     incidence->clearComments();
     incidence->clearContacts();
     incidence->clearRecurrence();
-    incidence->clearTempFiles();
 
     const KCalCore::Person organizerAsPerson = d->organizerAsPerson();
 #ifdef KDEPIM_ENTERPRISE_BUILD
