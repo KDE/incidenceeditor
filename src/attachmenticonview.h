@@ -46,15 +46,11 @@ public:
     explicit AttachmentIconView(QWidget *parent = nullptr);
 
     Q_REQUIRED_RESULT QMimeData *mimeData() const;
-    Q_REQUIRED_RESULT QUrl tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const;
 
 protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
     void startDrag(Qt::DropActions supportedActions) override;
     void keyPressEvent(QKeyEvent *event) override;
-
-private:
-    mutable QHash<KCalCore::Attachment::Ptr, QUrl> mTempFiles;
 };
 
 class AttachmentIconItem : public QListWidgetItem
@@ -85,9 +81,12 @@ public:
 
     void readAttachment();
 
+    Q_REQUIRED_RESULT QUrl tempFileForAttachment();
+
 private:
     KCalCore::Attachment::Ptr mAttachment;
     QString mSaveUri;
+    QUrl mTempFile;
 };
 }
 

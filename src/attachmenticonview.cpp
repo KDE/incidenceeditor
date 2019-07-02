@@ -184,16 +184,15 @@ AttachmentIconView::AttachmentIconView(QWidget *parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
 }
 
-QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &attachment) const
+QUrl AttachmentIconItem::tempFileForAttachment()
 {
-    const QUrl url = mTempFiles.value(attachment);
-    if (url.isValid()) {
-        return url;
+    if (mTempFile.isValid()) {
+        return mTempFile;
     }
     QTemporaryFile *file = nullptr;
 
     QMimeDatabase db;
-    QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
+    QStringList patterns = db.mimeTypeForName(mAttachment->mimeType()).globPatterns();
 
     if (!patterns.empty()) {
         file = new QTemporaryFile(QDir::tempPath() + QLatin1String(
@@ -202,16 +201,16 @@ QUrl AttachmentIconView::tempFileForAttachment(const KCalCore::Attachment::Ptr &
     } else {
         file = new QTemporaryFile();
     }
-    file->setParent(const_cast<AttachmentIconView *>(this));
+    file->setParent(listWidget());
 
     file->setAutoRemove(true);
     file->open();
     // read-only not to give the idea that it could be written to
     file->setPermissions(QFile::ReadUser);
-    file->write(QByteArray::fromBase64(attachment->data()));
-    mTempFiles.insert(attachment, QUrl::fromLocalFile(file->fileName()));
+    file->write(QByteArray::fromBase64(mAttachment->data()));
+    mTempFile = QUrl::fromLocalFile(file->fileName());
     file->close();
-    return mTempFiles.value(attachment);
+    return mTempFile;
 }
 
 QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) const
@@ -223,7 +222,7 @@ QMimeData *AttachmentIconView::mimeData(const QList< QListWidgetItem *> items) c
         if (it->isSelected()) {
             AttachmentIconItem *item = static_cast<AttachmentIconItem *>(it);
             if (item->isBinary()) {
-                urls.append(tempFileForAttachment(item->attachment()));
+                urls.append(item->tempFileForAttachment());
             } else {
                 urls.append(QUrl(item->uri()));
             }

@@ -254,7 +254,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     if (att->isUri()) {
         sourceUrl = QUrl(att->uri());
     } else {
-        sourceUrl = mAttachmentView->tempFileForAttachment(att);
+        sourceUrl = attitem->tempFileForAttachment();
     }
     // save the attachment url
     auto job = KIO::file_copy(sourceUrl, QUrl::fromLocalFile(saveAsFile));
@@ -289,7 +289,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
         KRun::RunFlags flags;
         flags |= KRun::DeleteTemporaryFiles;
         flags |= KRun::RunExecutables;
-        KRun::runUrl(mAttachmentView->tempFileForAttachment(att), att->mimeType(), nullptr, flags);
+        KRun::runUrl(attitem->tempFileForAttachment(), att->mimeType(), nullptr, flags);
     }
 }
 
