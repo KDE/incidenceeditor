@@ -41,11 +41,11 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     : QDialog(parent)
     ,
 #ifdef KDEPIM_ENTERPRISE_BUILD
-    mAttachment(new KCalCore::Attachment('\0'))
+    mAttachment(KCalCore::Attachment('\0'))
     //use the non-uri constructor
     // as we want inline by default
 #else
-    mAttachment(new KCalCore::Attachment(QString()))
+    mAttachment(KCalCore::Attachment(QString()))
 #endif
     , mItem(item)
     , mUi(new Ui::AttachmentEditDialog)
@@ -79,7 +79,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     mOkButton->setEnabled(false);
 
     mUi->mInlineCheck->setEnabled(false);
-    if (item->attachment()->isUri() || item->attachment()->data().isEmpty()) {
+    if (item->attachment().isUri() || item->attachment().data().isEmpty()) {
         mUi->mStackedWidget->setCurrentIndex(0);
         mUi->mURLRequester->setUrl(QUrl(item->uri()));
         urlChanged(item->uri());
@@ -87,8 +87,8 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
         mUi->mInlineCheck->setEnabled(true);
         mUi->mStackedWidget->setCurrentIndex(1);
         mUi->mSizeLabel->setText(QStringLiteral("%1 (%2)").
-                                 arg(KIO::convertSize(item->attachment()->size()),
-                                     QLocale().toString(item->attachment()->size())));
+                                 arg(KIO::convertSize(item->attachment().size()),
+                                     QLocale().toString(item->attachment().size())));
     }
 
     connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this,

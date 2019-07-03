@@ -45,21 +45,18 @@
 
 using namespace IncidenceEditorNG;
 
-AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment::Ptr &att, QListWidget *parent)
+AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment &att, QListWidget *parent)
     : QListWidgetItem(parent)
 {
-    if (att) {
-        mAttachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(*att.data()));
-        mAttachment->setLabel(att->label());
+    if (!att.isEmpty()) {
+        mAttachment = att;
     } else {
         // for the enterprise, inline attachments are the default
 #ifdef KDEPIM_ENTERPRISE_BUILD
-        mAttachment
-            = KCalCore::Attachment::Ptr(
-            new KCalCore::Attachment(QByteArray()));        // use the non-uri constructor
+        mAttachment = KCalCore::Attachment(QByteArray()); // use the non-uri constructor
         // as we want inline by default
 #else
-        mAttachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(QString()));
+        mAttachment = KCalCore::Attachment(QString());
 #endif
     }
     readAttachment();
@@ -70,14 +67,14 @@ AttachmentIconItem::~AttachmentIconItem()
 {
 }
 
-KCalCore::Attachment::Ptr AttachmentIconItem::attachment() const
+KCalCore::Attachment AttachmentIconItem::attachment() const
 {
     return mAttachment;
 }
 
 const QString AttachmentIconItem::uri() const
 {
-    return mAttachment->uri();
+    return mAttachment.uri();
 }
 
 const QString AttachmentIconItem::savedUri() const
@@ -88,51 +85,51 @@ const QString AttachmentIconItem::savedUri() const
 void AttachmentIconItem::setUri(const QString &uri)
 {
     mSaveUri = uri;
-    mAttachment->setUri(mSaveUri);
+    mAttachment.setUri(mSaveUri);
     readAttachment();
 }
 
 void AttachmentIconItem::setData(const QByteArray &data)
 {
-    mAttachment->setDecodedData(data);
+    mAttachment.setDecodedData(data);
     readAttachment();
 }
 
 const QString AttachmentIconItem::mimeType() const
 {
-    return mAttachment->mimeType();
+    return mAttachment.mimeType();
 }
 
 void AttachmentIconItem::setMimeType(const QString &mime)
 {
-    mAttachment->setMimeType(mime);
+    mAttachment.setMimeType(mime);
     readAttachment();
 }
 
 const QString AttachmentIconItem::label() const
 {
-    return mAttachment->label();
+    return mAttachment.label();
 }
 
 void AttachmentIconItem::setLabel(const QString &description)
 {
-    if (mAttachment->label() == description) {
+    if (mAttachment.label() == description) {
         return;
     }
-    mAttachment->setLabel(description);
+    mAttachment.setLabel(description);
     readAttachment();
 }
 
 bool AttachmentIconItem::isBinary() const
 {
-    return mAttachment->isBinary();
+    return mAttachment.isBinary();
 }
 
 QPixmap AttachmentIconItem::icon() const
 {
     QMimeDatabase db;
-    return icon(db.mimeTypeForName(mAttachment->mimeType()),
-                mAttachment->uri(), mAttachment->isBinary());
+    return icon(db.mimeTypeForName(mAttachment.mimeType()),
+                mAttachment.uri(), mAttachment.isBinary());
 }
 
 QPixmap AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
@@ -148,19 +145,19 @@ QPixmap AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, 
 
 void AttachmentIconItem::readAttachment()
 {
-    setText(mAttachment->label());
+    setText(mAttachment.label());
     setFlags(flags() | Qt::ItemIsEditable);
 
     QMimeDatabase db;
-    if (mAttachment->mimeType().isEmpty()
-        || !(db.mimeTypeForName(mAttachment->mimeType()).isDefault())) {
+    if (mAttachment.mimeType().isEmpty()
+        || !(db.mimeTypeForName(mAttachment.mimeType()).isDefault())) {
         QMimeType mimeType;
-        if (mAttachment->isUri()) {
-            mimeType = db.mimeTypeForUrl(QUrl(mAttachment->uri()));
+        if (mAttachment.isUri()) {
+            mimeType = db.mimeTypeForUrl(QUrl(mAttachment.uri()));
         } else {
-            mimeType = db.mimeTypeForData(mAttachment->decodedData());
+            mimeType = db.mimeTypeForData(mAttachment.decodedData());
         }
-        mAttachment->setMimeType(mimeType.name());
+        mAttachment.setMimeType(mimeType.name());
     }
 
     setIcon(icon());
@@ -192,7 +189,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     QTemporaryFile *file = nullptr;
 
     QMimeDatabase db;
-    QStringList patterns = db.mimeTypeForName(mAttachment->mimeType()).globPatterns();
+    QStringList patterns = db.mimeTypeForName(mAttachment.mimeType()).globPatterns();
 
     if (!patterns.empty()) {
         file = new QTemporaryFile(QDir::tempPath() + QLatin1String(
@@ -207,7 +204,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     file->open();
     // read-only not to give the idea that it could be written to
     file->setPermissions(QFile::ReadUser);
-    file->write(QByteArray::fromBase64(mAttachment->data()));
+    file->write(QByteArray::fromBase64(mAttachment.data()));
     mTempFile = QUrl::fromLocalFile(file->fileName());
     file->close();
     return mTempFile;

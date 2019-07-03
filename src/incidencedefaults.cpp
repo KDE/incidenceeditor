@@ -259,17 +259,15 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                 mimeType = attachmentMimetypes[ i ];
             }
 
-            KCalCore::Attachment::Ptr attachment;
+            KCalCore::Attachment attachment;
             if (inlineAttachment) {
                 auto job = KIO::storedGet(QUrl::fromUserInput(*it));
                 if (job->exec()) {
                     const QByteArray data = job->data();
-                    attachment
-                        = KCalCore::Attachment::Ptr(new KCalCore::Attachment(data.toBase64(),
-                                                                             mimeType));
+                    attachment = KCalCore::Attachment(data.toBase64(), mimeType);
 
                     if (i < attachmentLabels.count()) {
-                        attachment->setLabel(attachmentLabels[ i ]);
+                        attachment.setLabel(attachmentLabels[ i ]);
                     }
                 } else {
                     qCCritical(INCIDENCEEDITOR_LOG) << "Error downloading uri " << *it
@@ -283,23 +281,23 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                     }
                 }
             } else {
-                attachment = KCalCore::Attachment::Ptr(new KCalCore::Attachment(*it, mimeType));
+                attachment = KCalCore::Attachment(*it, mimeType);
                 if (i < attachmentLabels.count()) {
-                    attachment->setLabel(attachmentLabels[ i ]);
+                    attachment.setLabel(attachmentLabels[ i ]);
                 }
             }
 
-            if (attachment) {
-                if (attachment->label().isEmpty()) {
-                    if (attachment->isUri()) {
-                        attachment->setLabel(attachment->uri());
+            if (!attachment.isEmpty()) {
+                if (attachment.label().isEmpty()) {
+                    if (attachment.isUri()) {
+                        attachment.setLabel(attachment.uri());
                     } else {
-                        attachment->setLabel(
+                        attachment.setLabel(
                             i18nc("@label attachment contains binary data", "[Binary data]"));
                     }
                 }
                 d->mAttachments << attachment;
-                attachment->setShowInline(inlineAttachment);
+                attachment.setShowInline(inlineAttachment);
             }
         }
     }
@@ -385,7 +383,7 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
         incidence->setOrganizer(organizerAsPerson);
     }
 
-    for (const KCalCore::Attachment::Ptr &attachment : qAsConst(d->mAttachments)) {
+    for (const KCalCore::Attachment &attachment : qAsConst(d->mAttachments)) {
         incidence->addAttachment(attachment);
     }
 

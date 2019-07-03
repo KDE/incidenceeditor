@@ -56,7 +56,7 @@ protected Q_SLOTS:
     virtual void slotApply();
 
 private:
-    KCalCore::Attachment::Ptr mAttachment;
+    KCalCore::Attachment mAttachment;
     AttachmentIconItem *mItem = nullptr;
     QMimeType mMimeType;
     Ui::AttachmentEditDialog *mUi = nullptr;

@@ -56,10 +56,10 @@ protected:
 class AttachmentIconItem : public QListWidgetItem
 {
 public:
-    AttachmentIconItem(const KCalCore::Attachment::Ptr &att, QListWidget *parent);
+    AttachmentIconItem(const KCalCore::Attachment &att, QListWidget *parent);
     ~AttachmentIconItem();
 
-    KCalCore::Attachment::Ptr attachment() const;
+    KCalCore::Attachment attachment() const;
     Q_REQUIRED_RESULT const QString uri() const;
     Q_REQUIRED_RESULT const QString savedUri() const;
     void setUri(const QString &uri);
@@ -84,7 +84,7 @@ public:
     Q_REQUIRED_RESULT QUrl tempFileForAttachment();
 
 private:
-    KCalCore::Attachment::Ptr mAttachment;
+    KCalCore::Attachment mAttachment;
     QString mSaveUri;
     QUrl mTempFile;
 };

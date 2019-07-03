@@ -92,8 +92,7 @@ void IncidenceAttachment::save(const KCalCore::Incidence::Ptr &incidence)
         QListWidgetItem *item = mAttachmentView->item(itemIndex);
         AttachmentIconItem *attitem = dynamic_cast<AttachmentIconItem *>(item);
         Q_ASSERT(item);
-        incidence->addAttachment(
-            KCalCore::Attachment::Ptr(new KCalCore::Attachment(*(attitem->attachment()))));
+        incidence->addAttachment(attitem->attachment());
     }
 }
 
@@ -109,13 +108,12 @@ bool IncidenceAttachment::isDirty() const
             QListWidgetItem *item = mAttachmentView->item(itemIndex);
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-            const KCalCore::Attachment::Ptr listAttachment
-                = static_cast<AttachmentIconItem *>(item)->attachment();
+            const KCalCore::Attachment listAttachment = static_cast<AttachmentIconItem *>(item)->attachment();
 
             for (int i = 0; i < origAttachments.count(); ++i) {
-                const KCalCore::Attachment::Ptr attachment = origAttachments.at(i);
+                const KCalCore::Attachment attachment = origAttachments.at(i);
 
-                if (*attachment == *listAttachment) {
+                if (attachment == listAttachment) {
                     origAttachments.remove(i);
                     break;
                 }
@@ -140,7 +138,7 @@ int IncidenceAttachment::attachmentCount() const
 void IncidenceAttachment::addAttachment()
 {
     QPointer<QObject> that(this);
-    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
+    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
 
     QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
     dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
@@ -189,8 +187,8 @@ void IncidenceAttachment::removeSelectedAttachments()
         if (it->isSelected()) {
             AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(it);
             if (attitem) {
-                KCalCore::Attachment::Ptr att = attitem->attachment();
-                labels << att->label();
+                const KCalCore::Attachment att = attitem->attachment();
+                labels << att.label();
                 selected << it;
             }
         }
@@ -236,23 +234,23 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
     AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
-    if (!attitem->attachment()) {
+    if (attitem->attachment().isEmpty()) {
         return;
     }
 
-    KCalCore::Attachment::Ptr att = attitem->attachment();
+    KCalCore::Attachment att = attitem->attachment();
 
     // get the saveas file name
     const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
-                                                            att->label());
+                                                            att.label());
 
     if (saveAsFile.isEmpty()) {
         return;
     }
 
     QUrl sourceUrl;
-    if (att->isUri()) {
-        sourceUrl = QUrl(att->uri());
+    if (att.isUri()) {
+        sourceUrl = QUrl(att.uri());
     } else {
         sourceUrl = attitem->tempFileForAttachment();
     }
@@ -278,18 +276,18 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     Q_ASSERT(item);
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
     AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
-    if (!attitem->attachment()) {
+    if (attitem->attachment().isEmpty()) {
         return;
     }
 
-    KCalCore::Attachment::Ptr att = attitem->attachment();
-    if (att->isUri()) {
-        openURL(QUrl(att->uri()));
+    const KCalCore::Attachment att = attitem->attachment();
+    if (att.isUri()) {
+        openURL(QUrl(att.uri()));
     } else {
         KRun::RunFlags flags;
         flags |= KRun::DeleteTemporaryFiles;
         flags |= KRun::RunExecutables;
-        KRun::runUrl(attitem->tempFileForAttachment(), att->mimeType(), nullptr, flags);
+        KRun::runUrl(attitem->tempFileForAttachment(), att.mimeType(), nullptr, flags);
     }
 }
 
@@ -344,7 +342,7 @@ void IncidenceAttachment::editSelectedAttachments()
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
             AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
-            if (!attitem->attachment()) {
+            if (attitem->attachment().isEmpty()) {
                 return;
             }
 
@@ -566,7 +564,7 @@ void IncidenceAttachment::setupAttachmentIconView()
 
 void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType, const QString &label)
 {
-    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
+    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
 
     QString nlabel = label;
     if (mimeType == QLatin1String("message/rfc822")) {
@@ -593,7 +591,7 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
 {
     if (!inLine) {
         AttachmentIconItem *item
-            = new AttachmentIconItem(KCalCore::Attachment::Ptr(), mAttachmentView);
+            = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {
