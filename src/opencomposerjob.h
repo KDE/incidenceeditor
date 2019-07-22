@@ -38,15 +38,11 @@ public:
     void start() override;
 
 private:
-    void slotServiceOwnerChanged(const QString &, const QString &, const QString &);
-    void timeout();
-    void processMail();
     QString mDBusService;
     QString mError;
     QString mTo, mCc, mBcc;
     KMime::Message::Ptr mMessage;
     KIdentityManagement::Identity mIdentity;
-    bool mSuccess;
 };
 }
 #endif
