@@ -32,13 +32,13 @@ class TestIndividualMailDialog : public QObject
 private Q_SLOTS:
     void testDialog()
     {
-        KCalCore::Attendee::List attendees;
+        KCalendarCore::Attendee::List attendees;
         KGuiItem buttonYes = KGuiItem(QStringLiteral("Send Email"));
         KGuiItem buttonNo = KGuiItem(QStringLiteral("Do not send"));
 
-        KCalCore::Attendee attendee1(QStringLiteral("test1"), QStringLiteral("test1@example.com"));
-        KCalCore::Attendee attendee2(QStringLiteral("test2"), QStringLiteral("test2@example.com"));
-        KCalCore::Attendee attendee3(QStringLiteral("test3"), QStringLiteral("test3@example.com"));
+        KCalendarCore::Attendee attendee1(QStringLiteral("test1"), QStringLiteral("test1@example.com"));
+        KCalendarCore::Attendee attendee2(QStringLiteral("test2"), QStringLiteral("test2@example.com"));
+        KCalendarCore::Attendee attendee3(QStringLiteral("test3"), QStringLiteral("test3@example.com"));
 
         attendees << attendee1 << attendee2 << attendee3;
 

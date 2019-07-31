@@ -21,7 +21,7 @@
 
 #include "editorconfig.h"
 
-#include <KCalCore/IncidenceBase>
+#include <KCalendarCore/IncidenceBase>
 
 namespace IncidenceEditorNG {
 class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
@@ -46,7 +46,7 @@ public:
     Q_REQUIRED_RESULT bool defaultTodoReminders() const override;
     Q_REQUIRED_RESULT bool defaultEventReminders() const override;
     Q_REQUIRED_RESULT QStringList activeDesignerFields() const override;
-    Q_REQUIRED_RESULT QStringList &templates(KCalCore::IncidenceBase::IncidenceType type) override;
+    Q_REQUIRED_RESULT QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type) override;
 };
 } // IncidenceEditors
 

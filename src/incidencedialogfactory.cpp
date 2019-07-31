@@ -22,20 +22,20 @@
 #include "incidencedialog.h"
 #include "incidencedefaults.h"
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
 #include <Item>
 #include <Akonadi/Calendar/IncidenceChanger>
 
 using namespace IncidenceEditorNG;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
-IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent, Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalendarCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent, Qt::WindowFlags flags)
 {
     switch (type) {
-    case KCalCore::IncidenceBase::TypeEvent: // Fall through
-    case KCalCore::IncidenceBase::TypeTodo:
-    case KCalCore::IncidenceBase::TypeJournal:
+    case KCalendarCore::IncidenceBase::TypeEvent: // Fall through
+    case KCalendarCore::IncidenceBase::TypeTodo:
+    case KCalendarCore::IncidenceBase::TypeJournal:
     {
         IncidenceDialog *dialog = new IncidenceDialog(changer, parent, flags);
 
@@ -71,7 +71,7 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
     item.setPayload(todo);
 
     IncidenceDialog *dialog = create(true,  /* no need for, we're not editing an existing to-do */
-                                     KCalCore::Incidence::TypeTodo,
+                                     KCalendarCore::Incidence::TypeTodo,
                                      nullptr,
                                      parent, flags);
     dialog->selectCollection(defaultCollection);
@@ -102,7 +102,7 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
 
     IncidenceDialog *dialog
         = create(false, // not needed for saving, as we're not editing an existing incidence
-                 KCalCore::Incidence::TypeEvent,
+                 KCalendarCore::Incidence::TypeEvent,
                  nullptr,
                  parent, flags);
 

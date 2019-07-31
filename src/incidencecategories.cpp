@@ -50,7 +50,7 @@ void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
     checkDirtyStatus();
 }
 
-void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     mDirty = false;
@@ -64,7 +64,7 @@ void IncidenceCategories::load(const KCalCore::Incidence::Ptr &incidence)
     }
 }
 
-void IncidenceCategories::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceCategories::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
     if (mDirty) {

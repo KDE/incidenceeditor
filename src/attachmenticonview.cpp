@@ -45,7 +45,7 @@
 
 using namespace IncidenceEditorNG;
 
-AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment &att, QListWidget *parent)
+AttachmentIconItem::AttachmentIconItem(const KCalendarCore::Attachment &att, QListWidget *parent)
     : QListWidgetItem(parent)
 {
     if (!att.isEmpty()) {
@@ -53,10 +53,10 @@ AttachmentIconItem::AttachmentIconItem(const KCalCore::Attachment &att, QListWid
     } else {
         // for the enterprise, inline attachments are the default
 #ifdef KDEPIM_ENTERPRISE_BUILD
-        mAttachment = KCalCore::Attachment(QByteArray()); // use the non-uri constructor
+        mAttachment = KCalendarCore::Attachment(QByteArray()); // use the non-uri constructor
         // as we want inline by default
 #else
-        mAttachment = KCalCore::Attachment(QString());
+        mAttachment = KCalendarCore::Attachment(QString());
 #endif
     }
     readAttachment();
@@ -67,7 +67,7 @@ AttachmentIconItem::~AttachmentIconItem()
 {
 }
 
-KCalCore::Attachment AttachmentIconItem::attachment() const
+KCalendarCore::Attachment AttachmentIconItem::attachment() const
 {
     return mAttachment;
 }

@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_ALARMDIALOG_H
 #define INCIDENCEEDITOR_ALARMDIALOG_H
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 #include <QDialog>
 
@@ -52,10 +52,10 @@ public:
       Constructs a new alarm dialog.
       @p incidenceType will influence i18n strings, that will be different for to-dos.
      */
-    explicit AlarmDialog(KCalCore::Incidence::IncidenceType incidenceType, QWidget *parent = nullptr);
+    explicit AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, QWidget *parent = nullptr);
     ~AlarmDialog();
-    void load(const KCalCore::Alarm::Ptr &alarm);
-    void save(const KCalCore::Alarm::Ptr &alarm) const;
+    void load(const KCalendarCore::Alarm::Ptr &alarm);
+    void save(const KCalendarCore::Alarm::Ptr &alarm) const;
     void setAllowBeginReminders(bool allow);
     void setAllowEndReminders(bool allow);
     void setOffset(int offset);
@@ -67,7 +67,7 @@ private:
 
 private:
     Ui::AlarmDialog *mUi = nullptr;
-    KCalCore::Incidence::IncidenceType mIncidenceType;
+    KCalendarCore::Incidence::IncidenceType mIncidenceType;
     bool mAllowBeginReminders;
     bool mAllowEndReminders;
 };

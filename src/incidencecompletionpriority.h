@@ -38,8 +38,8 @@ public:
     explicit IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui);
     ~IncidenceCompletionPriority() override;
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     bool isDirty() const override;
 
 private:

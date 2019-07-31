@@ -57,7 +57,7 @@ public:
      * The attendees free busy info will be fetched
      * and integrated into the resolver.
      */
-    void insertAttendee(const KCalCore::Attendee &attendee);
+    void insertAttendee(const KCalendarCore::Attendee &attendee);
 
     void insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy);
     /**
@@ -66,7 +66,7 @@ public:
      * resolving conflicts
      */
 
-    void removeAttendee(const KCalCore::Attendee &attendee);
+    void removeAttendee(const KCalendarCore::Attendee &attendee);
 
     /**
      * Clear all attendees
@@ -76,7 +76,7 @@ public:
     /**
      * Returns whether the resolver contains the attendee
      */
-    Q_REQUIRED_RESULT bool containsAttendee(const KCalCore::Attendee &attendee);
+    Q_REQUIRED_RESULT bool containsAttendee(const KCalendarCore::Attendee &attendee);
 
     /**
      * Constrain the free time slot search to the weekdays
@@ -95,7 +95,7 @@ public:
      * Default is all roles are mandatory.
      * @param roles the set of mandatory participant roles
      */
-    void setMandatoryRoles(const QSet<KCalCore::Attendee::Role> &roles);
+    void setMandatoryRoles(const QSet<KCalendarCore::Attendee::Role> &roles);
 
     /**
      * Returns a list of date time ranges that conform to the
@@ -103,13 +103,13 @@ public:
      * @see setMandatoryRoles
      * @see setAllowedWeekdays
      */
-    KCalCore::Period::List availableSlots() const;
+    KCalendarCore::Period::List availableSlots() const;
 
     /**
       Finds a free slot in the future which has at least the same size as
       the initial slot.
     */
-    Q_REQUIRED_RESULT bool findFreeSlot(const KCalCore::Period &dateTimeRange);
+    Q_REQUIRED_RESULT bool findFreeSlot(const KCalendarCore::Period &dateTimeRange);
 
     Q_REQUIRED_RESULT QList<CalendarSupport::FreeBusyItem::Ptr> freeBusyItems() const;
 
@@ -131,7 +131,7 @@ Q_SIGNALS:
     /**
      * Emitted when the resolver locates new free slots.
      */
-    void freeSlotsAvailable(const KCalCore::Period::List &);
+    void freeSlotsAvailable(const KCalendarCore::Period::List &);
 
 public Q_SLOTS:
     /**
@@ -170,20 +170,20 @@ private:
       possible slot for this participant (not necessarily a slot that is
       available for all participants).
     */
-    bool tryDate(const KCalCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
+    bool tryDate(const KCalendarCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
 
     /**
      * Checks whether the supplied attendee passes the
      * current mandatory role constraint.
      * @return true if the attendee is of one of the mandatory roles, false if not
      */
-    bool matchesRoleConstraint(const KCalCore::Attendee &attendee);
+    bool matchesRoleConstraint(const KCalendarCore::Attendee &attendee);
 
     void calculateConflicts();
 
-    KCalCore::Period mTimeframeConstraint; //!< the datetime range for outside of which
+    KCalendarCore::Period mTimeframeConstraint; //!< the datetime range for outside of which
     //free slots won't be searched.
-    KCalCore::Period::List mAvailableSlots;
+    KCalendarCore::Period::List mAvailableSlots;
 
     QTimer mCalculateTimer; //!< A timer is used control the calculation of conflicts
     // to prevent the process from being repeated many times
@@ -192,7 +192,7 @@ private:
     CalendarSupport::FreeBusyItemModel *mFBModel = nullptr;
     QWidget *mParentWidget = nullptr;
 
-    QSet<KCalCore::Attendee::Role> mMandatoryRoles;
+    QSet<KCalendarCore::Attendee::Role> mMandatoryRoles;
     QBitArray mWeekdays; //!< a 7 bit array indicating the allowed days
     //(bit 0 = Monday, value 1 = allowed).
 

@@ -34,8 +34,8 @@
 #include <EventViews/AgendaView>
 #include <EventViews/ViewCalendar>
 
-#include <KCalCore/Event>
-#include <KCalCore/MemoryCalendar>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/MemoryCalendar>
 
 #include <KGantt/KGanttGraphicsView>
 
@@ -58,7 +58,7 @@ public:
     {
     }
 
-    bool isValid(const KCalCore::Incidence::Ptr &incidence) const override
+    bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         return isValid(incidence->uid());
     }
@@ -68,13 +68,13 @@ public:
         return incidenceIdentifier.startsWith(QStringLiteral("fb-"));
     }
 
-    QString displayName(const KCalCore::Incidence::Ptr &incidence) const override
+    QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence);
         return QStringLiteral("Freebusy");
     }
 
-    QColor resourceColor(const KCalCore::Incidence::Ptr &incidence) const override
+    QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         bool ok = false;
         int status = incidence->customProperty(QStringLiteral(
@@ -86,30 +86,30 @@ public:
         }
 
         switch (status) {
-        case KCalCore::FreeBusyPeriod::Busy:
+        case KCalendarCore::FreeBusyPeriod::Busy:
             return QColor(255, 0, 0);
-        case KCalCore::FreeBusyPeriod::BusyTentative:
-        case KCalCore::FreeBusyPeriod::BusyUnavailable:
+        case KCalendarCore::FreeBusyPeriod::BusyTentative:
+        case KCalendarCore::FreeBusyPeriod::BusyUnavailable:
             return QColor(255, 119, 0);
-        case KCalCore::FreeBusyPeriod::Free:
+        case KCalendarCore::FreeBusyPeriod::Free:
             return QColor(0, 255, 0);
         default:
             return QColor(85, 85, 85);
         }
     }
 
-    QString iconForIncidence(const KCalCore::Incidence::Ptr &incidence) const override
+    QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence);
         return QString();
     }
 
-    KCalCore::Calendar::Ptr getCalendar() const override
+    KCalendarCore::Calendar::Ptr getCalendar() const override
     {
         return mCalendar;
     }
 
-    KCalCore::Calendar::Ptr mCalendar;
+    KCalendarCore::Calendar::Ptr mCalendar;
 };
 
 ResourceManagement::ResourceManagement(QWidget *parent)
@@ -250,7 +250,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
 
     QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
     QString email = QString::fromUtf8(obj.attributes().value(QStringLiteral("mail"))[0]);
-    KCalCore::Attendee attendee(name, email);
+    KCalendarCore::Attendee attendee(name, email);
     CalendarSupport::FreeBusyItem::Ptr freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
     mModel->addItem(freebusy);

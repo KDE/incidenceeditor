@@ -111,13 +111,13 @@ void SchedulingDialog::fillCombos()
 {
 // Note: we depend on the following order
     mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
-                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
+                         KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
-                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::OptParticipant));
+                         KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-observer")),
-                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::NonParticipant));
+                         KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")),
-                         KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::Chair));
+                         KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
     mRolesCombo->setWhatsThis(i18nc("@info:whatsthis",
                                     "Edits the role of the attendee."));
@@ -166,10 +166,10 @@ void SchedulingDialog::slotWeekdaysChanged()
 
 void SchedulingDialog::slotMandatoryRolesChanged()
 {
-    QSet<KCalCore::Attendee::Role> roles;
+    QSet<KCalendarCore::Attendee::Role> roles;
     for (int i = 0; i < mRolesCombo->count(); ++i) {
         if (mRolesCombo->itemCheckState(i) == Qt::Checked) {
-            roles << KCalCore::Attendee::Role(i);
+            roles << KCalendarCore::Attendee::Role(i);
         }
     }
     mResolver->setMandatoryRoles(roles);
@@ -182,8 +182,8 @@ void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current, const
         mMoveApptGroupBox->hide();
         return;
     }
-    KCalCore::Period period
-        = current.data(CalendarSupport::FreePeriodModel::PeriodRole).value<KCalCore::Period>();
+    KCalendarCore::Period period
+        = current.data(CalendarSupport::FreePeriodModel::PeriodRole).value<KCalendarCore::Period>();
     const QDate startDate = period.start().date();
 
     const int dayOfWeek = startDate.dayOfWeek();

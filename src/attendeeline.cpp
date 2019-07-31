@@ -158,13 +158,13 @@ AttendeeLine::AttendeeLine(QWidget *parent)
     QBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")),
-                        KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::ReqParticipant));
+                        KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
-                        KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::OptParticipant));
+                        KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-observer")),
-                        KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::NonParticipant));
+                        KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")),
-                        KCalUtils::Stringify::attendeeRole(KCalCore::Attendee::Chair));
+                        KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
     mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral(
                                                  "meeting-participant-request-response")),
@@ -271,7 +271,7 @@ void AttendeeLine::dataFromFields()
         return;
     }
 
-    KCalCore::Attendee oldAttendee(mData->attendee());
+    KCalendarCore::Attendee oldAttendee(mData->attendee());
 
     QString email, name;
     KEmailAddress::extractEmailAddressAndName(mEdit->text(), email, name);
@@ -402,7 +402,7 @@ void AttendeeLine::aboutToBeDeleted()
         return;
     }
 
-    Q_EMIT changed(mData->attendee(), KCalCore::Attendee(QLatin1String(""), QLatin1String("")));
+    Q_EMIT changed(mData->attendee(), KCalendarCore::Attendee(QLatin1String(""), QLatin1String("")));
 }
 
 bool AttendeeLine::canDeleteLineEdit() const

@@ -37,7 +37,7 @@ public:
         config = nullptr;
     }
 
-    QHash<KCalCore::IncidenceBase::IncidenceType, QStringList> mTemplates;
+    QHash<KCalendarCore::IncidenceBase::IncidenceType, QStringList> mTemplates;
 };
 
 EditorConfig *EditorConfig::Private::config = nullptr;
@@ -123,7 +123,7 @@ bool EditorConfig::showTimeZoneSelectorInIncidenceEditor() const
     return true;
 }
 
-QStringList &EditorConfig::templates(KCalCore::IncidenceBase::IncidenceType type)
+QStringList &EditorConfig::templates(KCalendarCore::IncidenceBase::IncidenceType type)
 {
     return d->mTemplates[type];
 }

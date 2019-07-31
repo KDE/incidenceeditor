@@ -22,7 +22,7 @@
 #include "CalendarSupport/FreeBusyItemModel"
 
 #include <KGantt/KGanttGraphicsView>
-#include <KCalCore/FreeBusyPeriod>
+#include <KCalendarCore/FreeBusyPeriod>
 
 #include <KLocalizedString>
 
@@ -55,9 +55,9 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 
     // if the index is valid, then it corresponds to a free busy period
-    KCalCore::FreeBusyPeriod period
+    KCalendarCore::FreeBusyPeriod period
         = sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).
-          value<KCalCore::FreeBusyPeriod>();
+          value<KCalendarCore::FreeBusyPeriod>();
 
     switch (role) {
     case KGantt::ItemTypeRole:
@@ -77,7 +77,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 }
 
-QString FreeBusyGanttProxyModel::tooltipify(const KCalCore::FreeBusyPeriod &period) const
+QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod &period) const
 {
     QString toolTip = QStringLiteral("<qt>");
     toolTip += QStringLiteral("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QStringLiteral(

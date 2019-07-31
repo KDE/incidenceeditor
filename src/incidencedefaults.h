@@ -23,7 +23,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 namespace IncidenceEditorNG {
 class IncidenceDefaultsPrivate;
@@ -70,7 +70,7 @@ public:
       Sets the incidence related to the incidence for which to set the defaults. For
       example the parent todo of a new sub todo.
     */
-    void setRelatedIncidence(const KCalCore::Incidence::Ptr &incidence);
+    void setRelatedIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
     /**
       Set the start date/time to use for passed incidences. This defaults to the
@@ -94,7 +94,7 @@ public:
       to default values.
       @param incidence The incidence that will get default values for all of its field.
     */
-    void setDefaults(const KCalCore::Incidence::Ptr &incidence) const;
+    void setDefaults(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     /**
      * Returns minimal incidence defaults: e-mails and groupware domain.

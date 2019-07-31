@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_ALARMPRESETS_H
 #define INCIDENCEEDITOR_ALARMPRESETS_H
 
-#include <KCalCore/Alarm>
+#include <KCalendarCore/Alarm>
 
 class QStringList;
 
@@ -48,20 +48,20 @@ Q_REQUIRED_RESULT QStringList availablePresets(When when = BeforeStart);
  *
  * Note: The caller takes ownership over the pointer.
  */
-Q_REQUIRED_RESULT KCalCore::Alarm::Ptr preset(When when, const QString &name);
+Q_REQUIRED_RESULT KCalendarCore::Alarm::Ptr preset(When when, const QString &name);
 
 /**
  * Returns an Alarm configured accordingly to the default preset.
  *
  * Note: The caller takes ownership over the pointer.
  */
-Q_REQUIRED_RESULT KCalCore::Alarm::Ptr defaultAlarm(When when);
+Q_REQUIRED_RESULT KCalendarCore::Alarm::Ptr defaultAlarm(When when);
 
 /**
  * Returns the index of the preset in availablePresets for the given recurrence,
  * or -1 if no preset is equal to the given recurrence.
  */
-Q_REQUIRED_RESULT int presetIndex(When when, const KCalCore::Alarm::Ptr &alarm);
+Q_REQUIRED_RESULT int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm);
 
 /**
    Returns the index of the default preset. ( Comes from KCalPrefs ).

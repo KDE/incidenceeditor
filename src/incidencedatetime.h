@@ -23,9 +23,9 @@
 
 #include "incidenceeditor-ng.h"
 
-#include <KCalCore/Event>
-#include <KCalCore/Journal>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
+#include <KCalendarCore/Todo>
 
 #include <QDate>
 
@@ -43,8 +43,8 @@ public:
     explicit IncidenceDateTime(Ui::EventOrTodoDesktop *ui);
     ~IncidenceDateTime() override;
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
 
     /**
@@ -102,20 +102,20 @@ private Q_SLOTS: /// Todo specific
     void enableTimeEdits();
 
 private:
-    bool isDirty(const KCalCore::Todo::Ptr &todo) const;
-    bool isDirty(const KCalCore::Event::Ptr &event) const;
-    bool isDirty(const KCalCore::Journal::Ptr &journal) const;
+    bool isDirty(const KCalendarCore::Todo::Ptr &todo) const;
+    bool isDirty(const KCalendarCore::Event::Ptr &event) const;
+    bool isDirty(const KCalendarCore::Journal::Ptr &journal) const;
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    void load(const KCalCore::Event::Ptr &event, bool isTemplate = false, bool templateOverridesTimes = false);
-    void load(const KCalCore::Todo::Ptr &todo, bool isTemplate = false, bool templateOverridesTimes = false);
-    void load(const KCalCore::Journal::Ptr &journal, bool isTemplate = false, bool templateOverridesTimes = false);
-    void save(const KCalCore::Event::Ptr &event);
-    void save(const KCalCore::Todo::Ptr &todo);
-    void save(const KCalCore::Journal::Ptr &journal);
+    void load(const KCalendarCore::Event::Ptr &event, bool isTemplate = false, bool templateOverridesTimes = false);
+    void load(const KCalendarCore::Todo::Ptr &todo, bool isTemplate = false, bool templateOverridesTimes = false);
+    void load(const KCalendarCore::Journal::Ptr &journal, bool isTemplate = false, bool templateOverridesTimes = false);
+    void save(const KCalendarCore::Event::Ptr &event);
+    void save(const KCalendarCore::Todo::Ptr &todo);
+    void save(const KCalendarCore::Journal::Ptr &journal);
     void setDateTimes(const QDateTime &start, const QDateTime &end);
     void setTimes(const QDateTime &start, const QDateTime &end);
     void setTimeZoneLabelEnabled(bool enable);

@@ -23,7 +23,7 @@
 
 #include "incidenceeditor-ng.h"
 
-#include <KCalCore/FreeBusy>
+#include <KCalendarCore/FreeBusy>
 
 namespace Ui {
 class EventOrTodoDesktop;
@@ -52,8 +52,8 @@ public:
     IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceAttendee() override;
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
     void printDebugInfo() const override;
 
@@ -76,7 +76,7 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     // cheks if row is a group,  that can/should be expanded
-    void checkIfExpansionIsNeeded(const KCalCore::Attendee &attendee);
+    void checkIfExpansionIsNeeded(const KCalendarCore::Attendee &attendee);
 
     // results of the group search job
     void groupSearchResult(KJob *job);
@@ -100,7 +100,7 @@ private Q_SLOTS:
     void slotFreeBusyAdded(const QModelIndex &index, int first, int last);
     void slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void updateFBStatus();
-    void updateFBStatus(const KCalCore::Attendee &attendee, const KCalCore::FreeBusy::Ptr &fb);
+    void updateFBStatus(const KCalendarCore::Attendee &attendee, const KCalendarCore::FreeBusy::Ptr &fb);
 
     void slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last);
     void slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last);
@@ -110,7 +110,7 @@ private Q_SLOTS:
 private:
     void updateGroupExpand();
 
-    void changeStatusForMe(KCalCore::Attendee::PartStat);
+    void changeStatusForMe(KCalendarCore::Attendee::PartStat);
 
     /** Returns if I was the organizer of the loaded event */
     bool iAmOrganizer() const;
@@ -124,7 +124,7 @@ private:
      */
     void insertAttendeeFromAddressee(const KContacts::Addressee &a, int pos = -1);
     void fillOrganizerCombo();
-    void setActions(KCalCore::Incidence::IncidenceType actions);
+    void setActions(KCalendarCore::Incidence::IncidenceType actions);
 
     int rowOfAttendee(const QString &uid) const;
 

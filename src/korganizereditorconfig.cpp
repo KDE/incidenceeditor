@@ -111,16 +111,16 @@ QStringList KOrganizerEditorConfig::activeDesignerFields() const
     return CalendarSupport::KCalPrefs::instance()->activeDesignerFields();
 }
 
-QStringList &KOrganizerEditorConfig::templates(KCalCore::IncidenceBase::IncidenceType type)
+QStringList &KOrganizerEditorConfig::templates(KCalendarCore::IncidenceBase::IncidenceType type)
 {
-    if (type == KCalCore::IncidenceBase::TypeEvent) {
+    if (type == KCalendarCore::IncidenceBase::TypeEvent) {
         //TODO remove mEventTemplates+etc from Prefs::instance()
         return CalendarSupport::KCalPrefs::instance()->mEventTemplates;
     }
-    if (type == KCalCore::IncidenceBase::TypeTodo) {
+    if (type == KCalendarCore::IncidenceBase::TypeTodo) {
         return CalendarSupport::KCalPrefs::instance()->mTodoTemplates;
     }
-    if (type == KCalCore::IncidenceBase::TypeJournal) {
+    if (type == KCalendarCore::IncidenceBase::TypeJournal) {
         return CalendarSupport::KCalPrefs::instance()->mJournalTemplates;
     }
     return EditorConfig::templates(type);

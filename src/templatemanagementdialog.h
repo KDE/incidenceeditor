@@ -40,7 +40,7 @@
 
 #include "ui_template_management_dialog_base.h"
 
-#include <KCalCore/IncidenceBase>
+#include <KCalendarCore/IncidenceBase>
 
 #include <QDialog>
 namespace IncidenceEditorNG {

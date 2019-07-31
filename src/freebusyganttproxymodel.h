@@ -25,7 +25,7 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalCore {
+namespace KCalendarCore {
 class FreeBusyPeriod;
 }
 
@@ -46,7 +46,7 @@ class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyMo
 public:
     explicit FreeBusyGanttProxyModel(QObject *parent = nullptr);
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    Q_REQUIRED_RESULT QString tooltipify(const KCalCore::FreeBusyPeriod &period) const;
+    Q_REQUIRED_RESULT QString tooltipify(const KCalendarCore::FreeBusyPeriod &period) const;
 };
 }
 

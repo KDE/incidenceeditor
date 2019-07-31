@@ -35,7 +35,7 @@ using namespace IncidenceEditorNG;
 
 // IndividualMessageQueueJob
 
-IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::Identity &identity, const KCalCore::Attendee::List &update, const KCalCore::Attendee::List &edit, QObject *parent)
+IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::Identity &identity, const KCalendarCore::Attendee::List &update, const KCalendarCore::Attendee::List &edit, QObject *parent)
     : MailTransport::MessageQueueJob(parent)
     , mUpdate(update)
     , mEdit(edit)
@@ -51,7 +51,7 @@ void IndividualMessageQueueJob::start()
     QSet<QString> attendeesCc(QSet<QString>::fromList(addressAttribute().cc()));
 
     QStringList attendeesAutoTo, attendeesAutoCc;
-    for (const KCalCore::Attendee &attendee : qAsConst(mUpdate)) {
+    for (const KCalendarCore::Attendee &attendee : qAsConst(mUpdate)) {
         if (attendeesTo.contains(attendee.email())) {
             attendeesAutoTo.append(attendee.fullName());
         }
@@ -65,7 +65,7 @@ void IndividualMessageQueueJob::start()
     }
 
     QStringList attendeesComposerTo, attendeesComposerCc;
-    for (const KCalCore::Attendee &attendee : qAsConst(mEdit)) {
+    for (const KCalendarCore::Attendee &attendee : qAsConst(mEdit)) {
         if (attendeesTo.contains(attendee.email())) {
             attendeesComposerTo.append(attendee.fullName());
         }
@@ -158,13 +158,13 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
 // IndividualMailAskDelegator
 
 IndividualMailITIPHandlerDialogDelegate::IndividualMailITIPHandlerDialogDelegate(
-    const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent)
+    const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
     : Akonadi::ITIPHandlerDialogDelegate(incidence, method, parent)
     , mDialog(nullptr)
 {
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question, const KCalCore::Attendee::List &attendees, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
+void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
     switch (action) {
     case ActionSendMessage:
@@ -200,8 +200,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
-        openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
+        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
 
@@ -212,8 +212,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
-        openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
+        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
 
@@ -222,8 +222,8 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
-        openDialog(question, KCalCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
+        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
 
@@ -245,14 +245,14 @@ IndividualMailComponentFactory::IndividualMailComponentFactory(QObject *parent)
 }
 
 MailTransport::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(
-    const KCalCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
+    const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
 {
     return new IndividualMessageQueueJob(identity, mUpdate.take(incidence->uid()),
                                          mEdit.take(incidence->uid()), parent);
 }
 
 Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHanderDialogDelegate(
-    const KCalCore::Incidence::Ptr &incidence, KCalCore::iTIPMethod method, QWidget *parent)
+    const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
 {
     IndividualMailITIPHandlerDialogDelegate *askDelegator
         = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
@@ -264,12 +264,12 @@ Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHa
     return askDelegator;
 }
 
-void IndividualMailComponentFactory::onSetEdit(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &edit)
+void IndividualMailComponentFactory::onSetEdit(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &edit)
 {
     mEdit[incidence->uid()] = edit;
 }
 
-void IndividualMailComponentFactory::onSetUpdate(const KCalCore::Incidence::Ptr &incidence, const KCalCore::Attendee::List &update)
+void IndividualMailComponentFactory::onSetUpdate(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &update)
 {
     mUpdate[incidence->uid()] = update;
 }

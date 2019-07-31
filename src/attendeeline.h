@@ -24,7 +24,7 @@
 #include <LibkdepimAkonadi/AddresseeLineEdit>
 #include <Libkdepim/MultiplyingLine>
 
-#include <KCalCore/Attendee>
+#include <KCalendarCore/Attendee>
 
 #include <QCheckBox>
 #include <QToolButton>
@@ -122,7 +122,7 @@ public:
 
 Q_SIGNALS:
     void changed();
-    void changed(const KCalCore::Attendee &oldAttendee, const KCalCore::Attendee &newAttendee);
+    void changed(const KCalendarCore::Attendee &oldAttendee, const KCalendarCore::Attendee &newAttendee);
     void editingFinished(KPIM::MultiplyingLine *);
 
 private:

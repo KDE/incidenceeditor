@@ -91,7 +91,7 @@ private:
     ResourceItem::Ptr mSelectedItem;
     EventViews::ViewCalendar::Ptr mFbCalendar;
     Ui_resourceManagement *mUi = nullptr;
-    QMap<QModelIndex, KCalCore::Event::Ptr> mFbEvent;
+    QMap<QModelIndex, KCalendarCore::Event::Ptr> mFbEvent;
     EventViews::AgendaView *mAgendaView = nullptr;
 };
 }

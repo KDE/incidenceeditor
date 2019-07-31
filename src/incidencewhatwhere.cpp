@@ -37,7 +37,7 @@ IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)
             &IncidenceWhatWhere::checkDirtyStatus);
 }
 
-void IncidenceWhatWhere::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceWhatWhere::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     qCDebug(INCIDENCEEDITOR_LOG);
     mLoadedIncidence = incidence;
@@ -49,13 +49,13 @@ void IncidenceWhatWhere::load(const KCalCore::Incidence::Ptr &incidence)
         mUi->mLocationEdit->clear();
     }
 
-    mUi->mLocationEdit->setVisible(type() != KCalCore::Incidence::TypeJournal);
-    mUi->mLocationLabel->setVisible(type() != KCalCore::Incidence::TypeJournal);
+    mUi->mLocationEdit->setVisible(type() != KCalendarCore::Incidence::TypeJournal);
+    mUi->mLocationLabel->setVisible(type() != KCalendarCore::Incidence::TypeJournal);
 
     mWasDirty = false;
 }
 
-void IncidenceWhatWhere::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceWhatWhere::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
     incidence->setSummary(mUi->mSummaryEdit->text());

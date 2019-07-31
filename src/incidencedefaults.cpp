@@ -29,10 +29,10 @@
 
 #include <KContacts/Addressee>
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
-#include <KCalCore/Journal>
-#include <KCalCore/Alarm>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
+#include <KCalendarCore/Journal>
+#include <KCalendarCore/Alarm>
 
 #include <KEmailAddress>
 
@@ -45,7 +45,7 @@
 
 using namespace CalendarSupport;
 using namespace IncidenceEditorNG;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 namespace IncidenceEditorNG {
 enum {
@@ -56,30 +56,30 @@ class IncidenceDefaultsPrivate
 {
 public:
     /// Members
-    KCalCore::Attachment::List mAttachments;
-    QVector<KCalCore::Attendee> mAttendees;
+    KCalendarCore::Attachment::List mAttachments;
+    QVector<KCalendarCore::Attendee> mAttendees;
     QStringList mEmails;
     QString mGroupWareDomain;
-    KCalCore::Incidence::Ptr mRelatedIncidence;
+    KCalendarCore::Incidence::Ptr mRelatedIncidence;
     QDateTime mStartDt;
     QDateTime mEndDt;
     bool mCleanupTemporaryFiles;
 
     /// Methods
-    KCalCore::Person organizerAsPerson() const;
-    KCalCore::Attendee organizerAsAttendee(const KCalCore::Person &organizer) const;
+    KCalendarCore::Person organizerAsPerson() const;
+    KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
 
-    void todoDefaults(const KCalCore::Todo::Ptr &todo) const;
-    void eventDefaults(const KCalCore::Event::Ptr &event) const;
-    void journalDefaults(const KCalCore::Journal::Ptr &journal) const;
+    void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;
+    void eventDefaults(const KCalendarCore::Event::Ptr &event) const;
+    void journalDefaults(const KCalendarCore::Journal::Ptr &journal) const;
 };
 }
 
-KCalCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
+KCalendarCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
 {
     const QString invalidEmail = IncidenceDefaults::invalidEmailAddress();
 
-    KCalCore::Person organizer;
+    KCalendarCore::Person organizer;
     organizer.setName(i18nc("@label", "no (valid) identities found"));
     organizer.setEmail(invalidEmail);
 
@@ -122,22 +122,22 @@ KCalCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     return organizer;
 }
 
-KCalCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(
-    const KCalCore::Person &organizer) const
+KCalendarCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(
+    const KCalendarCore::Person &organizer) const
 {
-    KCalCore::Attendee organizerAsAttendee;
+    KCalendarCore::Attendee organizerAsAttendee;
     // Really, the appropriate values (even the fall back values) should come from
     // organizer. (See organizerAsPerson for more details).
     organizerAsAttendee.setName(organizer.name());
     organizerAsAttendee.setEmail(organizer.email());
     // NOTE: Don't set the status to None, this value is not supported by the attendee
     //       editor atm.
-    organizerAsAttendee.setStatus(KCalCore::Attendee::Accepted);
-    organizerAsAttendee.setRole(KCalCore::Attendee::ReqParticipant);
+    organizerAsAttendee.setStatus(KCalendarCore::Attendee::Accepted);
+    organizerAsAttendee.setRole(KCalendarCore::Attendee::ReqParticipant);
     return organizerAsAttendee;
 }
 
-void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) const
+void IncidenceDefaultsPrivate::eventDefaults(const KCalendarCore::Event::Ptr &event) const
 {
     QDateTime startDT;
     if (mStartDt.isValid()) {
@@ -158,23 +158,23 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalCore::Event::Ptr &event) 
 
     event->setDtStart(startDT);
     event->setDtEnd(endDT);
-    event->setTransparency(KCalCore::Event::Opaque);
+    event->setTransparency(KCalendarCore::Event::Opaque);
 
     if (KCalPrefs::instance()->defaultEventReminders()) {
         event->addAlarm(AlarmPresets::defaultAlarm(AlarmPresets::BeforeStart));
     }
 }
 
-void IncidenceDefaultsPrivate::journalDefaults(const KCalCore::Journal::Ptr &journal) const
+void IncidenceDefaultsPrivate::journalDefaults(const KCalendarCore::Journal::Ptr &journal) const
 {
     const QDateTime startDT = mStartDt.isValid() ? mStartDt : QDateTime::currentDateTime();
     journal->setDtStart(startDT);
     journal->setAllDay(true);
 }
 
-void IncidenceDefaultsPrivate::todoDefaults(const KCalCore::Todo::Ptr &todo) const
+void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo) const
 {
-    KCalCore::Todo::Ptr relatedTodo = mRelatedIncidence.dynamicCast<KCalCore::Todo>();
+    KCalendarCore::Todo::Ptr relatedTodo = mRelatedIncidence.dynamicCast<KCalendarCore::Todo>();
     if (relatedTodo) {
         todo->setCategories(relatedTodo->categories());
     }
@@ -259,12 +259,12 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                 mimeType = attachmentMimetypes[ i ];
             }
 
-            KCalCore::Attachment attachment;
+            KCalendarCore::Attachment attachment;
             if (inlineAttachment) {
                 auto job = KIO::storedGet(QUrl::fromUserInput(*it));
                 if (job->exec()) {
                     const QByteArray data = job->data();
-                    attachment = KCalCore::Attachment(data.toBase64(), mimeType);
+                    attachment = KCalendarCore::Attachment(data.toBase64(), mimeType);
 
                     if (i < attachmentLabels.count()) {
                         attachment.setLabel(attachmentLabels[ i ]);
@@ -281,7 +281,7 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                     }
                 }
             } else {
-                attachment = KCalCore::Attachment(*it, mimeType);
+                attachment = KCalendarCore::Attachment(*it, mimeType);
                 if (i < attachmentLabels.count()) {
                     attachment.setLabel(attachmentLabels[ i ]);
                 }
@@ -311,7 +311,7 @@ void IncidenceDefaults::setAttendees(const QStringList &attendees)
     for (it = attendees.begin(); it != attendees.end(); ++it) {
         QString name, email;
         KContacts::Addressee::parseEmailAddress(*it, name, email);
-        d->mAttendees << KCalCore::Attendee(name, email, true, KCalCore::Attendee::NeedsAction);
+        d->mAttendees << KCalendarCore::Attendee(name, email, true, KCalendarCore::Attendee::NeedsAction);
     }
 }
 
@@ -327,7 +327,7 @@ void IncidenceDefaults::setGroupWareDomain(const QString &domain)
     d->mGroupWareDomain = domain;
 }
 
-void IncidenceDefaults::setRelatedIncidence(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceDefaults::setRelatedIncidence(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_D(IncidenceDefaults);
     d->mRelatedIncidence = incidence;
@@ -345,7 +345,7 @@ void IncidenceDefaults::setEndDateTime(const QDateTime &endDT)
     d->mEndDt = endDT;
 }
 
-void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) const
+void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     Q_D(const IncidenceDefaults);
 
@@ -353,8 +353,8 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
     incidence->setSummary(QString(), false);
     incidence->setLocation(QString(), false);
     incidence->setCategories(QStringList());
-    incidence->setSecrecy(KCalCore::Incidence::SecrecyPublic);
-    incidence->setStatus(KCalCore::Incidence::StatusNone);
+    incidence->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
+    incidence->setStatus(KCalendarCore::Incidence::StatusNone);
     incidence->setAllDay(false);
     incidence->setCustomStatus(QString());
     incidence->setResources(QStringList());
@@ -371,11 +371,11 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
     incidence->clearContacts();
     incidence->clearRecurrence();
 
-    const KCalCore::Person organizerAsPerson = d->organizerAsPerson();
+    const KCalendarCore::Person organizerAsPerson = d->organizerAsPerson();
 #ifdef KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif
-    for (const KCalCore::Attendee &attendee : qAsConst(d->mAttendees)) {
+    for (const KCalendarCore::Attendee &attendee : qAsConst(d->mAttendees)) {
         incidence->addAttendee(attendee);
     }
     // Ical standard: No attendees -> must not have an organizer!
@@ -383,19 +383,19 @@ void IncidenceDefaults::setDefaults(const KCalCore::Incidence::Ptr &incidence) c
         incidence->setOrganizer(organizerAsPerson);
     }
 
-    for (const KCalCore::Attachment &attachment : qAsConst(d->mAttachments)) {
+    for (const KCalendarCore::Attachment &attachment : qAsConst(d->mAttachments)) {
         incidence->addAttachment(attachment);
     }
 
     switch (incidence->type()) {
-    case KCalCore::Incidence::TypeEvent:
-        d->eventDefaults(incidence.dynamicCast<KCalCore::Event>());
+    case KCalendarCore::Incidence::TypeEvent:
+        d->eventDefaults(incidence.dynamicCast<KCalendarCore::Event>());
         break;
-    case KCalCore::Incidence::TypeTodo:
-        d->todoDefaults(incidence.dynamicCast<KCalCore::Todo>());
+    case KCalendarCore::Incidence::TypeTodo:
+        d->todoDefaults(incidence.dynamicCast<KCalendarCore::Todo>());
         break;
-    case KCalCore::Incidence::TypeJournal:
-        d->journalDefaults(incidence.dynamicCast<KCalCore::Journal>());
+    case KCalendarCore::Incidence::TypeJournal:
+        d->journalDefaults(incidence.dynamicCast<KCalendarCore::Journal>());
         break;
     default:
         qCDebug(INCIDENCEEDITOR_LOG) << "Unsupported incidence type, keeping current values. Type: "

@@ -41,11 +41,11 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     : QDialog(parent)
     ,
 #ifdef KDEPIM_ENTERPRISE_BUILD
-    mAttachment(KCalCore::Attachment('\0'))
+    mAttachment(KCalendarCore::Attachment('\0'))
     //use the non-uri constructor
     // as we want inline by default
 #else
-    mAttachment(KCalCore::Attachment(QString()))
+    mAttachment(KCalendarCore::Attachment(QString()))
 #endif
     , mItem(item)
     , mUi(new Ui::AttachmentEditDialog)
