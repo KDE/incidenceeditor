@@ -21,7 +21,7 @@
 #include "incidencecompletionpriority.h"
 #include "ui_dialogdesktop.h"
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 using namespace IncidenceEditorNG;
 
@@ -81,13 +81,13 @@ IncidenceCompletionPriority::~IncidenceCompletionPriority()
     delete d;
 }
 
-void IncidenceCompletionPriority::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceCompletionPriority::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
 
     // TODO priority might be valid for other incidence types as well
     // only for Todos
-    KCalCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalCore::Todo>();
+    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
     if (todo == nullptr) {
         mWasDirty = false;
         return;
@@ -110,11 +110,11 @@ void IncidenceCompletionPriority::load(const KCalCore::Incidence::Ptr &incidence
     mWasDirty = false;
 }
 
-void IncidenceCompletionPriority::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceCompletionPriority::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     // TODO priority might be valid for other incidence types as well
     // only for Todos
-    KCalCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalCore::Todo>(incidence);
+    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>(incidence);
     if (todo == nullptr) {
         return;
     }
@@ -131,7 +131,7 @@ void IncidenceCompletionPriority::save(const KCalCore::Incidence::Ptr &incidence
 
 bool IncidenceCompletionPriority::isDirty() const
 {
-    KCalCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalCore::Todo>();
+    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
 
     if (!todo) {
         return false;

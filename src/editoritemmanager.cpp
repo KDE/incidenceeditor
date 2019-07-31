@@ -342,7 +342,7 @@ void EditorItemManager::save()
 
     if (d->mItem.isValid()) {   // A valid item. Means we're modifying.
         Q_ASSERT(d->mItem.parentCollection().isValid());
-        KCalCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
+        KCalendarCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection()
             || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
             d->mChanger->modifyIncidence(d->mItem, oldPayload);
@@ -370,7 +370,7 @@ void EditorItemManager::save()
             Q_EMIT itemSaveFinished(EditorItemManager::Modify);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
-            KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(d->mItem);
+            KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(d->mItem);
             d->mChanger->createIncidence(incidence, d->mItemUi->selectedCollection());
         }
     }

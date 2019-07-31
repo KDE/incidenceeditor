@@ -88,7 +88,7 @@ void CombinedIncidenceEditor::handleDirtyStatusChange(bool isDirty)
     }
 }
 
-void CombinedIncidenceEditor::load(const KCalCore::Incidence::Ptr &incidence)
+void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
@@ -140,7 +140,7 @@ void CombinedIncidenceEditor::load(const Akonadi::Item &item)
     Q_EMIT dirtyStatusChanged(false);
 }
 
-void CombinedIncidenceEditor::save(const KCalCore::Incidence::Ptr &incidence)
+void CombinedIncidenceEditor::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
         editor->save(incidence);

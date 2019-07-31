@@ -38,8 +38,8 @@ public:
     using IncidenceEditorNG::IncidenceEditor::save;  // So we don't trigger -Woverloaded-virtual
     IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
 
 Q_SIGNALS:
@@ -54,12 +54,12 @@ private:
     void toggleCurrentAlarm();
     void updateAlarmList();
     void updateButtons();
-    QString stringForAlarm(const KCalCore::Alarm::Ptr &alarm);
+    QString stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm);
 
 private:
     Ui::EventOrTodoDesktop *mUi = nullptr;
 
-    KCalCore::Alarm::List mAlarms;
+    KCalendarCore::Alarm::List mAlarms;
     IncidenceDateTime *mDateTime = nullptr;
     int mEnabledAlarmCount = 0;
     bool mIsTodo = false;

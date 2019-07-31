@@ -62,7 +62,7 @@ IncidenceDescription::~IncidenceDescription()
     delete d;
 }
 
-void IncidenceDescription::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceDescription::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
 
@@ -87,7 +87,7 @@ void IncidenceDescription::load(const KCalCore::Incidence::Ptr &incidence)
     mWasDirty = false;
 }
 
-void IncidenceDescription::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceDescription::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (d->mRichTextEnabled) {
         incidence->setDescription(mUi->mDescriptionEdit->richTextComposer()->toHtml(), true);

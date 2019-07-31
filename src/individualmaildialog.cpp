@@ -33,7 +33,7 @@
 
 using namespace IncidenceEditorNG;
 
-IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent)
+IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));
@@ -41,7 +41,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalCo
     QGridLayout *layout = new QGridLayout(m_detailsWidget);
     mAttendeeDecision.reserve(attendees.size());
     int row = 0;
-    for (const KCalCore::Attendee &attendee : attendees) {
+    for (const KCalendarCore::Attendee &attendee : attendees) {
         QComboBox *options = new QComboBox();
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
                                "Send update"), QVariant(Update));
@@ -100,9 +100,9 @@ IndividualMailDialog::~IndividualMailDialog()
 {
 }
 
-KCalCore::Attendee::List IndividualMailDialog::editAttendees() const
+KCalendarCore::Attendee::List IndividualMailDialog::editAttendees() const
 {
-    KCalCore::Attendee::List edit;
+    KCalendarCore::Attendee::List edit;
     for (auto it = mAttendeeDecision.cbegin(), end = mAttendeeDecision.cend(); it != end; ++it) {
         const int index = (*it).second->currentIndex();
         if ((*it).second->itemData(index, Qt::UserRole) == Edit) {
@@ -112,9 +112,9 @@ KCalCore::Attendee::List IndividualMailDialog::editAttendees() const
     return edit;
 }
 
-KCalCore::Attendee::List IndividualMailDialog::updateAttendees() const
+KCalendarCore::Attendee::List IndividualMailDialog::updateAttendees() const
 {
-    KCalCore::Attendee::List update;
+    KCalendarCore::Attendee::List update;
     for (auto it = mAttendeeDecision.cbegin(), end = mAttendeeDecision.cend(); it != end; ++it) {
         const int index = (*it).second->currentIndex();
         if ((*it).second->itemData(index, Qt::UserRole) == Update) {

@@ -58,7 +58,7 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
             &IncidenceAlarm::removeCurrentAlarm);
 }
 
-void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceAlarm::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     // We must be sure that the date/time in mDateTime is the correct date time.
@@ -68,11 +68,11 @@ void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
 
     mAlarms.clear();
     const auto lstAlarms = incidence->alarms();
-    for (const KCalCore::Alarm::Ptr &alarm : lstAlarms) {
-        mAlarms.append(KCalCore::Alarm::Ptr(new KCalCore::Alarm(*alarm.data())));
+    for (const KCalendarCore::Alarm::Ptr &alarm : lstAlarms) {
+        mAlarms.append(KCalendarCore::Alarm::Ptr(new KCalendarCore::Alarm(*alarm.data())));
     }
 
-    mIsTodo = incidence->type() == KCalCore::Incidence::TypeTodo;
+    mIsTodo = incidence->type() == KCalendarCore::Incidence::TypeTodo;
     if (mIsTodo) {
         mUi->mAlarmPresetCombo->clear();
         mUi->mAlarmPresetCombo->addItems(AlarmPresets::availablePresets(AlarmPresets::BeforeEnd));
@@ -88,12 +88,12 @@ void IncidenceAlarm::load(const KCalCore::Incidence::Ptr &incidence)
     updateAlarmList();
 }
 
-void IncidenceAlarm::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceAlarm::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     incidence->clearAlarms();
-    const KCalCore::Alarm::List::ConstIterator end(mAlarms.constEnd());
-    for (KCalCore::Alarm::List::ConstIterator it = mAlarms.constBegin(); it != end; ++it) {
-        KCalCore::Alarm::Ptr al(new KCalCore::Alarm(*(*it)));
+    const KCalendarCore::Alarm::List::ConstIterator end(mAlarms.constEnd());
+    for (KCalendarCore::Alarm::List::ConstIterator it = mAlarms.constBegin(); it != end; ++it) {
+        KCalendarCore::Alarm::Ptr al(new KCalendarCore::Alarm(*(*it)));
         al->setParent(incidence.data());
         // We need to make sure that both lists are the same in the end for isDirty.
         Q_ASSERT(*al == *(*it));
@@ -108,7 +108,7 @@ bool IncidenceAlarm::isDirty() const
     }
 
     if (!mLoadedIncidence->alarms().isEmpty()) {
-        const KCalCore::Alarm::List initialAlarms = mLoadedIncidence->alarms();
+        const KCalendarCore::Alarm::List initialAlarms = mLoadedIncidence->alarms();
 
         if (initialAlarms.count() != mAlarms.count()) {
             return true; // The number of alarms has changed
@@ -119,9 +119,9 @@ bool IncidenceAlarm::isDirty() const
         //       if all currently enabled alarms are also in the incidence. The
         //       disabled alarms are not changed by our code at all, so we assume that
         //       they're still there.
-        for (const KCalCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
+        for (const KCalendarCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
             bool found = false;
-            for (const KCalCore::Alarm::Ptr &initialAlarm : qAsConst(initialAlarms)) {
+            for (const KCalendarCore::Alarm::Ptr &initialAlarm : qAsConst(initialAlarms)) {
                 if (*alarm == *initialAlarm) {
                     found = true;
                     break;
@@ -141,7 +141,7 @@ bool IncidenceAlarm::isDirty() const
 
 void IncidenceAlarm::editCurrentAlarm()
 {
-    KCalCore::Alarm::Ptr currentAlarm = mAlarms.at(mUi->mAlarmList->currentRow());
+    KCalendarCore::Alarm::Ptr currentAlarm = mAlarms.at(mUi->mAlarmList->currentRow());
 
     QPointer<AlarmDialog> dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
     dialog->load(currentAlarm);
@@ -191,7 +191,7 @@ void IncidenceAlarm::newAlarm()
     dialog->setAllowEndReminders(mDateTime->endDateTimeEnabled());
 
     if (dialog->exec() == QDialog::Accepted) {
-        KCalCore::Alarm::Ptr newAlarm(new KCalCore::Alarm(nullptr));
+        KCalendarCore::Alarm::Ptr newAlarm(new KCalendarCore::Alarm(nullptr));
         dialog->save(newAlarm);
         newAlarm->setEnabled(true);
         mAlarms.append(newAlarm);
@@ -231,7 +231,7 @@ void IncidenceAlarm::toggleCurrentAlarm()
 {
     Q_ASSERT(mUi->mAlarmList->selectedItems().size() == 1);
     const int curAlarmIndex = mUi->mAlarmList->currentRow();
-    KCalCore::Alarm::Ptr alarm = mAlarms.at(curAlarmIndex);
+    KCalendarCore::Alarm::Ptr alarm = mAlarms.at(curAlarmIndex);
     alarm->setEnabled(!alarm->enabled());
 
     updateButtons();
@@ -246,7 +246,7 @@ void IncidenceAlarm::updateAlarmList()
 
     const QModelIndex currentIndex = mUi->mAlarmList->currentIndex();
     mUi->mAlarmList->clear();
-    for (const KCalCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
+    for (const KCalendarCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
         mUi->mAlarmList->addItem(stringForAlarm(alarm));
         if (alarm->enabled()) {
             ++mEnabledAlarmCount;
@@ -265,7 +265,7 @@ void IncidenceAlarm::updateButtons()
         mUi->mAlarmConfigureButton->setEnabled(true);
         mUi->mAlarmRemoveButton->setEnabled(true);
         mUi->mAlarmToggleButton->setEnabled(true);
-        KCalCore::Alarm::Ptr selAlarm;
+        KCalendarCore::Alarm::Ptr selAlarm;
         if (mUi->mAlarmList->currentIndex().isValid()) {
             selAlarm = mAlarms.at(mUi->mAlarmList->currentIndex().row());
         }
@@ -282,22 +282,22 @@ void IncidenceAlarm::updateButtons()
     }
 }
 
-QString IncidenceAlarm::stringForAlarm(const KCalCore::Alarm::Ptr &alarm)
+QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
 {
     Q_ASSERT(alarm);
 
     QString action;
     switch (alarm->type()) {
-    case KCalCore::Alarm::Display:
+    case KCalendarCore::Alarm::Display:
         action = i18nc("Alarm action", "Display a dialog");
         break;
-    case KCalCore::Alarm::Procedure:
+    case KCalendarCore::Alarm::Procedure:
         action = i18nc("Alarm action", "Execute a script");
         break;
-    case KCalCore::Alarm::Email:
+    case KCalendarCore::Alarm::Email:
         action = i18nc("Alarm action", "Send an email");
         break;
-    case KCalCore::Alarm::Audio:
+    case KCalendarCore::Alarm::Audio:
         action = i18nc("Alarm action", "Play an audio file");
         break;
     default:

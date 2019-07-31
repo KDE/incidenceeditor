@@ -23,10 +23,10 @@
 
 #include <Libkdepim/MultiplyingLine>
 
-#include <KCalCore/Attendee>
+#include <KCalendarCore/Attendee>
 
 namespace IncidenceEditorNG {
-class AttendeeData : public KPIM::MultiplyingLineData, public KCalCore::Attendee
+class AttendeeData : public KPIM::MultiplyingLineData, public KCalendarCore::Attendee
 {
 public:
     typedef QSharedPointer<AttendeeData> Ptr;
@@ -34,11 +34,11 @@ public:
 
     AttendeeData(const QString &name, const QString &email, bool rsvp = false, Attendee::PartStat status = Attendee::None, Attendee::Role role = Attendee::ReqParticipant,
                  const QString &uid = QString())
-        : KCalCore::Attendee(name, email, rsvp, status, role, uid)
+        : KCalendarCore::Attendee(name, email, rsvp, status, role, uid)
     {
     }
 
-    explicit AttendeeData(const KCalCore::Attendee &attendee) : KCalCore::Attendee(attendee)
+    explicit AttendeeData(const KCalendarCore::Attendee &attendee) : KCalendarCore::Attendee(attendee)
     {
     }
 
@@ -48,7 +48,7 @@ public:
     /**
      * Return a copy of the attendee data
      */
-    Q_REQUIRED_RESULT KCalCore::Attendee attendee() const;
+    Q_REQUIRED_RESULT KCalendarCore::Attendee attendee() const;
 };
 }
 

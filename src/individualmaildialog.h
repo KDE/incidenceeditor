@@ -23,7 +23,7 @@
 #ifndef INCIDENCEEDITOR_INDIVIDUALMAILDIALOG_H
 #define INCIDENCEEDITOR_INDIVIDUALMAILDIALOG_H
 
-#include <KCalCore/Attendee>
+#include <KCalendarCore/Attendee>
 #include <QDialog>
 
 #include <QComboBox>
@@ -46,16 +46,16 @@ public:
         NoUpdate,       /**< do not send mail to attendee */
         Edit            /**< open composer for attendee */
     };
-    explicit IndividualMailDialog(const QString &question, const KCalCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
+    explicit IndividualMailDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent = nullptr);
     ~IndividualMailDialog() override;
 
-    Q_REQUIRED_RESULT KCalCore::Attendee::List editAttendees() const;
-    Q_REQUIRED_RESULT KCalCore::Attendee::List updateAttendees() const;
+    Q_REQUIRED_RESULT KCalendarCore::Attendee::List editAttendees() const;
+    Q_REQUIRED_RESULT KCalendarCore::Attendee::List updateAttendees() const;
 
 private:
     void updateButtonState();
 
-    std::vector<std::pair<KCalCore::Attendee, QComboBox*>> mAttendeeDecision;
+    std::vector<std::pair<KCalendarCore::Attendee, QComboBox*>> mAttendeeDecision;
     QDialogButtonBox *m_buttons = nullptr;
     QWidget *m_detailsWidget = nullptr;
 };

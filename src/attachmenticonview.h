@@ -30,7 +30,7 @@
 #ifndef INCIDENCEEDITOR_ATTACHMENTICONVIEW_H
 #define INCIDENCEEDITOR_ATTACHMENTICONVIEW_H
 
-#include <KCalCore/Attachment>
+#include <KCalendarCore/Attachment>
 
 #include <QMimeType>
 #include <QUrl>
@@ -56,10 +56,10 @@ protected:
 class AttachmentIconItem : public QListWidgetItem
 {
 public:
-    AttachmentIconItem(const KCalCore::Attachment &att, QListWidget *parent);
+    AttachmentIconItem(const KCalendarCore::Attachment &att, QListWidget *parent);
     ~AttachmentIconItem();
 
-    KCalCore::Attachment attachment() const;
+    KCalendarCore::Attachment attachment() const;
     Q_REQUIRED_RESULT const QString uri() const;
     Q_REQUIRED_RESULT const QString savedUri() const;
     void setUri(const QString &uri);
@@ -84,7 +84,7 @@ public:
     Q_REQUIRED_RESULT QUrl tempFileForAttachment();
 
 private:
-    KCalCore::Attachment mAttachment;
+    KCalendarCore::Attachment mAttachment;
     QString mSaveUri;
     QUrl mTempFile;
 };

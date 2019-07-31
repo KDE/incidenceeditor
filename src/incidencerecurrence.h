@@ -52,8 +52,8 @@ public:
 
     IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
     Q_REQUIRED_RESULT bool isValid() const override;
 
@@ -79,7 +79,7 @@ private:
        I needed save() to be const, so created this func.
        save() calls this now, and changes members outside.
     */
-    void writeToIncidence(const KCalCore::Incidence::Ptr &incidence) const;
+    void writeToIncidence(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     KLocalizedString subsOrdinal(const KLocalizedString &text, int number) const;
     /**
@@ -98,11 +98,11 @@ private:
     /** DO NOT USE THIS METHOD DIRECTLY
         use subsOrdinal() instead for i18n * */
     QString numberToString(int number) const;
-    void selectMonthlyItem(KCalCore::Recurrence *recurrence, ushort recurenceType);
-    void selectYearlyItem(KCalCore::Recurrence *recurrence, ushort recurenceType);
+    void selectMonthlyItem(KCalendarCore::Recurrence *recurrence, ushort recurenceType);
+    void selectYearlyItem(KCalendarCore::Recurrence *recurrence, ushort recurenceType);
     void setDefaults();
     void setDuration(int duration);
-    void setExceptionDates(const KCalCore::DateList &dates);
+    void setExceptionDates(const KCalendarCore::DateList &dates);
     void setFrequency(int freq);
     void toggleRecurrenceWidgets(int enable);
     /** Returns an array with the weekday on which the event occurs set to 1 */
@@ -120,7 +120,7 @@ private:
     Ui::EventOrTodoDesktop *mUi = nullptr;
     QDate mCurrentDate;
     IncidenceDateTime *mDateTime = nullptr;
-    KCalCore::DateList mExceptionDates;
+    KCalendarCore::DateList mExceptionDates;
 
     // So we can easily detect if the user changed the type,
     // without going through complicated recurrence logic:

@@ -23,8 +23,8 @@
 
 #include "CalendarSupport/FreeBusyItem"
 
-#include <KCalCore/FreeBusy>
-#include <KCalCore/Attendee>
+#include <KCalendarCore/FreeBusy>
+#include <KCalendarCore/Attendee>
 
 #include <QObject>
 
@@ -49,7 +49,7 @@ private Q_SLOTS:
 
 private:
     void insertAttendees();
-    void addAttendee(const QString &email, const KCalCore::FreeBusy::Ptr &fb, KCalCore::Attendee::Role role = KCalCore::Attendee::ReqParticipant);
+    void addAttendee(const QString &email, const KCalendarCore::FreeBusy::Ptr &fb, KCalendarCore::Attendee::Role role = KCalendarCore::Attendee::ReqParticipant);
     QList<CalendarSupport::FreeBusyItem::Ptr> attendees;
     QWidget *parent;
     IncidenceEditorNG::ConflictResolver *resolver;

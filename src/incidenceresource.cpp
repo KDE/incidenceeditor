@@ -120,7 +120,7 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
             &IncidenceResource::updateCount);
 }
 
-void IncidenceResource::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceResource::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_UNUSED(incidence);
     slotDateChanged();
@@ -131,7 +131,7 @@ void IncidenceResource::slotDateChanged()
     resourceDialog->slotDateChanged(mDateTime->startDate(), mDateTime->endDate());
 }
 
-void IncidenceResource::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceResource::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_UNUSED(incidence);
     //all logic inside IncidenceAtendee (using same model)
@@ -150,8 +150,8 @@ void IncidenceResource::bookResource()
     }
     QString name, email;
     KEmailAddress::extractEmailAddressAndName(mUi->mNewResource->text(), email, name);
-    KCalCore::Attendee attendee(name, email);
-    attendee.setCuType(KCalCore::Attendee::Resource);
+    KCalendarCore::Attendee attendee(name, email);
+    attendee.setCuType(KCalendarCore::Attendee::Resource);
     dataModel->insertAttendee(dataModel->rowCount(), attendee);
 }
 
@@ -166,8 +166,8 @@ void IncidenceResource::dialogOkPressed()
     if (item) {
         const QString name = QString::fromLatin1(item->ldapObject().value(QStringLiteral("cn")));
         const QString email = QString::fromLatin1(item->ldapObject().value(QStringLiteral("mail")));
-        KCalCore::Attendee attendee(name, email);
-        attendee.setCuType(KCalCore::Attendee::Resource);
+        KCalendarCore::Attendee attendee(name, email);
+        attendee.setCuType(KCalendarCore::Attendee::Resource);
         dataModel->insertAttendee(dataModel->rowCount(), attendee);
     }
 }

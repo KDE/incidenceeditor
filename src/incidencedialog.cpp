@@ -46,8 +46,8 @@
 #include <Item>
 #include <Akonadi/Calendar/ETMCalendar>
 
-#include <KCalCore/ICalFormat>
-#include <KCalCore/MemoryCalendar>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/MemoryCalendar>
 #include <KCalUtils/Stringify>
 
 #include <KMessageBox>
@@ -278,11 +278,11 @@ QString IncidenceDialogPrivate::typeToString(const int type) const
 {
     // Do not translate.
     switch (type) {
-    case KCalCore::Incidence::TypeEvent:
+    case KCalendarCore::Incidence::TypeEvent:
         return QStringLiteral("Event");
-    case KCalCore::Incidence::TypeTodo:
+    case KCalendarCore::Incidence::TypeTodo:
         return QStringLiteral("Todo");
-    case KCalCore::Incidence::TypeJournal:
+    case KCalendarCore::Incidence::TypeJournal:
         return QStringLiteral("Journal");
     default:
         return QStringLiteral("Unknown");
@@ -293,7 +293,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 {
     Q_Q(IncidenceDialog);
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     const QString fileName = QStandardPaths::locate(
         QStandardPaths::GenericDataLocation,
@@ -308,7 +308,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
         return;
     }
 
-    KCalCore::ICalFormat format;
+    KCalendarCore::ICalFormat format;
     if (!format.load(cal, fileName)) {
         KMessageBox::error(
             q,
@@ -316,7 +316,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
         return;
     }
 
-    KCalCore::Incidence::List incidences = cal->incidences();
+    KCalendarCore::Incidence::List incidences = cal->incidences();
     if (incidences.isEmpty()) {
         KMessageBox::error(
             q,
@@ -325,8 +325,8 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
     }
 
     mIeDateTime->setActiveDate(QDate());
-    KCalCore::Incidence::Ptr newInc = KCalCore::Incidence::Ptr(incidences.first()->clone());
-    newInc->setUid(KCalCore::CalFormat::createUniqueId());
+    KCalendarCore::Incidence::Ptr newInc = KCalendarCore::Incidence::Ptr(incidences.first()->clone());
+    newInc->setUid(KCalendarCore::CalFormat::createUniqueId());
 
     // We add a custom property so that some fields aren't loaded, dates for example
     newInc->setCustomProperty(QByteArray("kdepim"), "isTemplate", QStringLiteral("true"));
@@ -359,28 +359,28 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
 {
     Q_ASSERT(!templateName.isEmpty());
 
-    KCalCore::MemoryCalendar::Ptr cal(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     switch (mEditor->type()) {
-    case KCalCore::Incidence::TypeEvent:
+    case KCalendarCore::Incidence::TypeEvent:
     {
-        KCalCore::Event::Ptr event(new KCalCore::Event());
+        KCalendarCore::Event::Ptr event(new KCalendarCore::Event());
         mEditor->save(event);
-        cal->addEvent(KCalCore::Event::Ptr(event->clone()));
+        cal->addEvent(KCalendarCore::Event::Ptr(event->clone()));
         break;
     }
-    case KCalCore::Incidence::TypeTodo:
+    case KCalendarCore::Incidence::TypeTodo:
     {
-        KCalCore::Todo::Ptr todo(new KCalCore::Todo);
+        KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         mEditor->save(todo);
-        cal->addTodo(KCalCore::Todo::Ptr(todo->clone()));
+        cal->addTodo(KCalendarCore::Todo::Ptr(todo->clone()));
         break;
     }
-    case KCalCore::Incidence::TypeJournal:
+    case KCalendarCore::Incidence::TypeJournal:
     {
-        KCalCore::Journal::Ptr journal(new KCalCore::Journal);
+        KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
         mEditor->save(journal);
-        cal->addJournal(KCalCore::Journal::Ptr(journal->clone()));
+        cal->addJournal(KCalendarCore::Journal::Ptr(journal->clone()));
         break;
     }
     default:
@@ -393,7 +393,7 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
     QDir().mkpath(fileName);
     fileName += templateName;
 
-    KCalCore::ICalFormat format;
+    KCalendarCore::ICalFormat format;
     format.save(cal, fileName);
 }
 
@@ -511,10 +511,10 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
         const Akonadi::Item item = mItemManager->item();
         Q_ASSERT(item.isValid());
         Q_ASSERT(item.hasPayload());
-        Q_ASSERT(item.hasPayload<KCalCore::Incidence::Ptr>());
+        Q_ASSERT(item.hasPayload<KCalendarCore::Incidence::Ptr>());
         // Now the item is successfully saved, reload it in the editor in order to
         // reset the dirty status of the editor.
-        mEditor->load(item.payload<KCalCore::Incidence::Ptr>());
+        mEditor->load(item.payload<KCalendarCore::Incidence::Ptr>());
         mEditor->load(item);
 
         // Set the buttons to a reasonable state as well (ok and apply should be
@@ -578,14 +578,14 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
     mEditor->load(CalendarSupport::incidence(item));
     mEditor->load(item);
 
-    const KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
+    const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
     const QStringList allEmails = IncidenceEditorNG::EditorConfig::instance()->allEmails();
-    const KCalCore::Attendee me = incidence->attendeeByMails(allEmails);
+    const KCalendarCore::Attendee me = incidence->attendeeByMails(allEmails);
 
     if (incidence->attendeeCount() > 1     // >1 because you won't drink alone
-        && !me.isNull() && (me.status() == KCalCore::Attendee::NeedsAction
-                  || me.status() == KCalCore::Attendee::Tentative
-                  || me.status() == KCalCore::Attendee::InProcess)) {
+        && !me.isNull() && (me.status() == KCalendarCore::Attendee::NeedsAction
+                  || me.status() == KCalendarCore::Attendee::Tentative
+                  || me.status() == KCalendarCore::Attendee::InProcess)) {
         // Show the invitation bar: "You are invited [accept] [decline]"
         mUi->mInvitationBar->show();
     } else {
@@ -606,11 +606,11 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
                                                       << QStringLiteral("text/calendar"));
     }
 
-    if (mEditor->type() == KCalCore::Incidence::TypeTodo) {
+    if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
         q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-calendar-tasks")));
-    } else if (mEditor->type() == KCalCore::Incidence::TypeEvent) {
+    } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
         q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-calendar-day")));
-    } else if (mEditor->type() == KCalCore::Incidence::TypeJournal) {
+    } else if (mEditor->type() == KCalendarCore::Incidence::TypeJournal) {
         q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-pim-journal")));
     }
 
@@ -628,10 +628,10 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
 
 Akonadi::Item IncidenceDialogPrivate::save(const Akonadi::Item &item)
 {
-    Q_ASSERT(mEditor->incidence<KCalCore::Incidence>());
+    Q_ASSERT(mEditor->incidence<KCalendarCore::Incidence>());
 
-    KCalCore::Incidence::Ptr incidenceInEditor = mEditor->incidence<KCalCore::Incidence>();
-    KCalCore::Incidence::Ptr newIncidence(incidenceInEditor->clone());
+    KCalendarCore::Incidence::Ptr incidenceInEditor = mEditor->incidence<KCalendarCore::Incidence>();
+    KCalendarCore::Incidence::Ptr newIncidence(incidenceInEditor->clone());
 
     Akonadi::Item result = item;
     result.setMimeType(newIncidence->mimeType());
@@ -646,14 +646,14 @@ Akonadi::Item IncidenceDialogPrivate::save(const Akonadi::Item &item)
     mEditor->save(result);
 
     // Make sure that we don't loose uid for existing incidence
-    newIncidence->setUid(mEditor->incidence<KCalCore::Incidence>()->uid());
+    newIncidence->setUid(mEditor->incidence<KCalendarCore::Incidence>()->uid());
 
     // Mark the incidence as changed
     if (mItem.isValid()) {
         newIncidence->setRevision(newIncidence->revision() + 1);
     }
 
-    result.setPayload<KCalCore::Incidence::Ptr>(newIncidence);
+    result.setPayload<KCalendarCore::Incidence::Ptr>(newIncidence);
     return result;
 }
 

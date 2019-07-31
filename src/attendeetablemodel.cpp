@@ -19,7 +19,7 @@
 
 #include "attendeetablemodel.h"
 
-#include <KCalCore/Attendee>
+#include <KCalendarCore/Attendee>
 #include <KEmailAddress>
 
 #include <KLocalizedString>
@@ -65,7 +65,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const KCalCore::Attendee attendee = mAttendeeList[index.row()];
+    const KCalendarCore::Attendee attendee = mAttendeeList[index.row()];
     if (role == Qt::DisplayRole || role == Qt::EditRole) {
         switch (index.column()) {
         case Role:
@@ -114,10 +114,10 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
 {
     QString email, name;
     if (index.isValid() && role == Qt::EditRole) {
-        KCalCore::Attendee &attendee = mAttendeeList[index.row()];
+        KCalendarCore::Attendee &attendee = mAttendeeList[index.row()];
         switch (index.column()) {
         case Role:
-            attendee.setRole(static_cast<KCalCore::Attendee::Role>(value.toInt()));
+            attendee.setRole(static_cast<KCalendarCore::Attendee::Role>(value.toInt()));
             break;
         case FullName:
             if (mRemoveEmptyLines && value.toString().trimmed().isEmpty()) {
@@ -138,10 +138,10 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
             mAttendeeAvailable[index.row()] = static_cast<AvailableStatus>(value.toInt());
             break;
         case Status:
-            attendee.setStatus(static_cast<KCalCore::Attendee::PartStat>(value.toInt()));
+            attendee.setStatus(static_cast<KCalendarCore::Attendee::PartStat>(value.toInt()));
             break;
         case CuType:
-            attendee.setCuType(static_cast<KCalCore::Attendee::CuType>(value.toInt()));
+            attendee.setCuType(static_cast<KCalendarCore::Attendee::CuType>(value.toInt()));
             break;
         case Response:
             attendee.setRSVP(value.toBool());
@@ -191,7 +191,7 @@ bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &p
     beginInsertRows(parent, position, position + rows - 1);
 
     for (int row = 0; row < rows; ++row) {
-        KCalCore::Attendee attendee(QLatin1String(""), QLatin1String(""));
+        KCalendarCore::Attendee attendee(QLatin1String(""), QLatin1String(""));
         mAttendeeList.insert(position, attendee);
         mAttendeeAvailable.insert(mAttendeeAvailable.begin() + position, AvailableStatus{});
     }
@@ -213,7 +213,7 @@ bool AttendeeTableModel::removeRows(int position, int rows, const QModelIndex &p
     return true;
 }
 
-bool AttendeeTableModel::insertAttendee(int position, const KCalCore::Attendee &attendee)
+bool AttendeeTableModel::insertAttendee(int position, const KCalendarCore::Attendee &attendee)
 {
     beginInsertRows(QModelIndex(), position, position);
     mAttendeeList.insert(position, attendee);
@@ -225,7 +225,7 @@ bool AttendeeTableModel::insertAttendee(int position, const KCalCore::Attendee &
     return true;
 }
 
-void AttendeeTableModel::setAttendees(const KCalCore::Attendee::List &attendees)
+void AttendeeTableModel::setAttendees(const KCalendarCore::Attendee::List &attendees)
 {
     Q_EMIT layoutAboutToBeChanged();
 
@@ -238,7 +238,7 @@ void AttendeeTableModel::setAttendees(const KCalCore::Attendee::List &attendees)
     Q_EMIT layoutChanged();
 }
 
-KCalCore::Attendee::List AttendeeTableModel::attendees() const
+KCalendarCore::Attendee::List AttendeeTableModel::attendees() const
 {
     return mAttendeeList;
 }
@@ -247,7 +247,7 @@ void AttendeeTableModel::addEmptyAttendee()
 {
     if (mKeepEmpty) {
         bool create = true;
-        for (const KCalCore::Attendee &attendee : qAsConst(mAttendeeList)) {
+        for (const KCalendarCore::Attendee &attendee : qAsConst(mAttendeeList)) {
             if (attendee.fullName().isEmpty()) {
                 create = false;
                 break;
@@ -292,10 +292,10 @@ bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex
 {
     QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);
-    KCalCore::Attendee::CuType cuType
-        = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    KCalendarCore::Attendee::CuType cuType
+        = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
-    return cuType == KCalCore::Attendee::Resource || cuType == KCalCore::Attendee::Room;
+    return cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room;
 }
 
 AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
@@ -307,8 +307,8 @@ bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex
 {
     QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);
-    KCalCore::Attendee::CuType cuType
-        = static_cast<KCalCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    KCalendarCore::Attendee::CuType cuType
+        = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
-    return !(cuType == KCalCore::Attendee::Resource || cuType == KCalCore::Attendee::Room);
+    return !(cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room);
 }

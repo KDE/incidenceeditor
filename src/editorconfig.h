@@ -25,7 +25,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KCalCore/IncidenceBase>
+#include <KCalendarCore/IncidenceBase>
 
 #include <QUrl>
 
@@ -114,7 +114,7 @@ public:
         return QStringList();
     }
 
-    Q_REQUIRED_RESULT virtual QStringList &templates(KCalCore::IncidenceBase::IncidenceType type);
+    Q_REQUIRED_RESULT virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);
 
 private:
     class Private;

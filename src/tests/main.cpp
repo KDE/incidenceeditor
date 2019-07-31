@@ -25,9 +25,9 @@
 #include <akonadi/calendar/calendarsettings.h>
 #include <Item>
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
-#include <KCalCore/Journal>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
+#include <KCalendarCore/Journal>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -75,19 +75,19 @@ int main(int argc, char **argv)
 
     if (parser.isSet(QStringLiteral("new-event"))) {
         std::cout << "Creating new event..." << std::endl;
-        KCalCore::Event::Ptr event(new KCalCore::Event);
+        KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
         defaults.setDefaults(event);
-        item.setPayload<KCalCore::Event::Ptr>(event);
+        item.setPayload<KCalendarCore::Event::Ptr>(event);
     } else if (parser.isSet(QStringLiteral("new-todo"))) {
         std::cout << "Creating new todo..." << std::endl;
-        KCalCore::Todo::Ptr todo(new KCalCore::Todo);
+        KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         defaults.setDefaults(todo);
-        item.setPayload<KCalCore::Todo::Ptr>(todo);
+        item.setPayload<KCalendarCore::Todo::Ptr>(todo);
     } else if (parser.isSet(QStringLiteral("new-journal"))) {
         std::cout << "Creating new journal..." << std::endl;
-        KCalCore::Journal::Ptr journal(new KCalCore::Journal);
+        KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
         defaults.setDefaults(journal);
-        item.setPayload<KCalCore::Journal::Ptr>(journal);
+        item.setPayload<KCalendarCore::Journal::Ptr>(journal);
     } else if (parser.isSet(QStringLiteral("item"))) {
         bool ok = false;
         qint64 id = parser.value(QStringLiteral("item")).toLongLong(&ok);

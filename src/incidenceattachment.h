@@ -47,8 +47,8 @@ public:
 
     ~IncidenceAttachment() override;
 
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
 
     Q_REQUIRED_RESULT int attachmentCount() const;
@@ -74,7 +74,7 @@ private:
     void downloadComplete(KJob *);
 
 private:
-    //     void addAttachment( KCalCore::Attachment *attachment );
+    //     void addAttachment( KCalendarCore::Attachment *attachment );
     void addDataAttachment(const QByteArray &data, const QString &mimeType = QString(), const QString &label = QString());
     void addUriAttachment(const QString &uri, const QString &mimeType = QString(), const QString &label = QString(), bool inLine = false);
     void handlePasteOrDrop(const QMimeData *mimeData);

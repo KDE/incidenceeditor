@@ -33,7 +33,7 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
     connect(mUi->mSecrecyCombo, qOverload< int>(&QComboBox::currentIndexChanged), this, &IncidenceSecrecy::checkDirtyStatus);
 }
 
-void IncidenceSecrecy::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     if (mLoadedIncidence) {
@@ -41,7 +41,7 @@ void IncidenceSecrecy::load(const KCalCore::Incidence::Ptr &incidence)
                  == KCalUtils::Stringify::incidenceSecrecyList().count());
         mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
 
-        if (incidence->type() == KCalCore::Incidence::TypeJournal) {
+        if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
             mUi->mSecrecyCombo->setVisible(false);
             mUi->mSecrecyLabel->setVisible(false);
         }
@@ -52,18 +52,18 @@ void IncidenceSecrecy::load(const KCalCore::Incidence::Ptr &incidence)
     mWasDirty = false;
 }
 
-void IncidenceSecrecy::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceSecrecy::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
     switch (mUi->mSecrecyCombo->currentIndex()) {
     case 1:
-        incidence->setSecrecy(KCalCore::Incidence::SecrecyPrivate);
+        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyPrivate);
         break;
     case 2:
-        incidence->setSecrecy(KCalCore::Incidence::SecrecyConfidential);
+        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyConfidential);
         break;
     default:
-        incidence->setSecrecy(KCalCore::Incidence::SecrecyPublic);
+        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
     }
 }
 

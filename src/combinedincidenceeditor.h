@@ -57,9 +57,9 @@ public:
      * you reimplement the load method in a subclass, make sure to call this
      * implementation too.
      */
-    void load(const KCalCore::Incidence::Ptr &incidence) override;
+    void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void load(const Akonadi::Item &item) override;
-    void save(const KCalCore::Incidence::Ptr &incidence) override;
+    void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(Akonadi::Item &item) override;
 
 Q_SIGNALS:

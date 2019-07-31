@@ -27,7 +27,7 @@
 #ifndef INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H
 #define INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H
 
-#include <KCalCore/Attachment>
+#include <KCalendarCore/Attachment>
 #include <QUrl>
 #include <QDialog>
 #include <QMimeType>
@@ -56,7 +56,7 @@ protected Q_SLOTS:
     virtual void slotApply();
 
 private:
-    KCalCore::Attachment mAttachment;
+    KCalendarCore::Attachment mAttachment;
     AttachmentIconItem *mItem = nullptr;
     QMimeType mMimeType;
     Ui::AttachmentEditDialog *mUi = nullptr;

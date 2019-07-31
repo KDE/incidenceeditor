@@ -23,7 +23,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 #include <AkonadiCore/Item>
 namespace IncidenceEditorNG {
 /**
@@ -42,14 +42,14 @@ public:
      * Load the values of @param incidence into the editor widgets. The passed
      * incidence is kept for comparing with the current values of the editor.
      */
-    virtual void load(const KCalCore::Incidence::Ptr &incidence) = 0;
+    virtual void load(const KCalendarCore::Incidence::Ptr &incidence) = 0;
     /// This was introduced to replace categories with Akonadi::Tags
     virtual void load(const Akonadi::Item &item);
 
     /**
      * Store the current values of the editor into @param incidence .
      */
-    virtual void save(const KCalCore::Incidence::Ptr &incidence) = 0;
+    virtual void save(const KCalendarCore::Incidence::Ptr &incidence) = 0;
     /// This was introduced to replace categories with Akonadi::Tags
     virtual void save(Akonadi::Item &item);
 
@@ -79,7 +79,7 @@ public:
     /**
      * Returns the type of the Incidence that is currently loaded.
      */
-    Q_REQUIRED_RESULT KCalCore::IncidenceBase::IncidenceType type() const;
+    Q_REQUIRED_RESULT KCalendarCore::IncidenceBase::IncidenceType type() const;
 
     /** Convenience method to get a pointer for a specific const Incidence Type. */
     template<typename IncidenceT>
@@ -117,13 +117,13 @@ protected:
     IncidenceEditor(QObject *parent = nullptr);
 
     template<typename IncidenceT>
-    QSharedPointer<IncidenceT> incidence(const KCalCore::Incidence::Ptr &inc)
+    QSharedPointer<IncidenceT> incidence(const KCalendarCore::Incidence::Ptr &inc)
     {
         return inc.dynamicCast<IncidenceT>();
     }
 
 protected:
-    KCalCore::Incidence::Ptr mLoadedIncidence;
+    KCalendarCore::Incidence::Ptr mLoadedIncidence;
     mutable QString mLastErrorString;
     bool mWasDirty;
     bool mLoadingIncidence;

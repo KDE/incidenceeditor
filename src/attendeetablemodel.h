@@ -20,7 +20,7 @@
 #ifndef INCIDENCEEDITOR_ATTENDEETABLEMODEL_H
 #define INCIDENCEEDITOR_ATTENDEETABLEMODEL_H
 
-#include <KCalCore/Attendee>
+#include <KCalendarCore/Attendee>
 
 #include <QAbstractTableModel>
 #include <QSortFilterProxyModel>
@@ -68,10 +68,10 @@ public:
     Q_REQUIRED_RESULT bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
     Q_REQUIRED_RESULT bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
 
-    Q_REQUIRED_RESULT bool insertAttendee(int position, const KCalCore::Attendee &attendee);
+    Q_REQUIRED_RESULT bool insertAttendee(int position, const KCalendarCore::Attendee &attendee);
 
-    void setAttendees(const KCalCore::Attendee::List &resources);
-    Q_REQUIRED_RESULT KCalCore::Attendee::List attendees() const;
+    void setAttendees(const KCalendarCore::Attendee::List &resources);
+    Q_REQUIRED_RESULT KCalendarCore::Attendee::List attendees() const;
 
     void setKeepEmpty(bool keepEmpty);
     Q_REQUIRED_RESULT bool keepEmpty() const;
@@ -81,7 +81,7 @@ public:
 private:
     void addEmptyAttendee();
 
-    KCalCore::Attendee::List mAttendeeList;
+    KCalendarCore::Attendee::List mAttendeeList;
     std::vector<AvailableStatus> mAttendeeAvailable;
     bool mKeepEmpty;
     bool mRemoveEmptyLines;

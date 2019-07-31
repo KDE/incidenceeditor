@@ -22,22 +22,22 @@
 
 #include <CalendarSupport/KCalPrefs>
 
-#include <KCalCore/Alarm>
+#include <KCalendarCore/Alarm>
 
 #include <KLocalizedString>
 
 #include "incidenceeditor_debug.h"
 
 using namespace CalendarSupport;
-using namespace KCalCore;
+using namespace KCalendarCore;
 
 namespace IncidenceEditorNG {
 namespace AlarmPresets {
 // Don't use a map, because order matters
 Q_GLOBAL_STATIC(QStringList, sBeforeStartPresetNames)
 Q_GLOBAL_STATIC(QStringList, sBeforeEndPresetNames)
-Q_GLOBAL_STATIC(QList<KCalCore::Alarm::Ptr>, sBeforeStartPresets)
-Q_GLOBAL_STATIC(QList<KCalCore::Alarm::Ptr>, sBeforeEndPresets)
+Q_GLOBAL_STATIC(QList<KCalendarCore::Alarm::Ptr>, sBeforeStartPresets)
+Q_GLOBAL_STATIC(QList<KCalendarCore::Alarm::Ptr>, sBeforeEndPresets)
 
 static int sDefaultPresetIndex = 0;
 static int sDefaultAlarmOffset = 0; // We must save it, so we can detect that config changed.
@@ -93,8 +93,8 @@ void initPresets(AlarmPresets::When when)
     case AlarmPresets::BeforeStart:
 
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(nullptr));
-            alarm->setType(KCalCore::Alarm::Display);
+            KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+            alarm->setType(KCalendarCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setStartOffset(-minutes * 60);
             alarm->setEnabled(true);
@@ -121,8 +121,8 @@ void initPresets(AlarmPresets::When when)
 
     case AlarmPresets::BeforeEnd:
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalCore::Alarm::Ptr alarm(new KCalCore::Alarm(nullptr));
-            alarm->setType(KCalCore::Alarm::Display);
+            KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+            alarm->setType(KCalendarCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setEndOffset(-minutes * 60);
             alarm->setEnabled(true);
@@ -185,7 +185,7 @@ QStringList availablePresets(AlarmPresets::When when)
     return QStringList();
 }
 
-KCalCore::Alarm::Ptr preset(When when, const QString &name)
+KCalendarCore::Alarm::Ptr preset(When when, const QString &name)
 {
     checkInitNeeded(when);
 
@@ -202,18 +202,18 @@ KCalCore::Alarm::Ptr preset(When when, const QString &name)
             Q_ASSERT_X(false, "preset", "Number of presets should be one");
         }
 
-        return KCalCore::Alarm::Ptr(
-            new KCalCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
+        return KCalendarCore::Alarm::Ptr(
+            new KCalendarCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
     case AlarmPresets::BeforeEnd:
         Q_ASSERT(sBeforeEndPresetNames->count(name) == 1);     // The name should exists and only once
 
-        return KCalCore::Alarm::Ptr(
-            new KCalCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
+        return KCalendarCore::Alarm::Ptr(
+            new KCalendarCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
     }
-    return KCalCore::Alarm::Ptr();
+    return KCalendarCore::Alarm::Ptr();
 }
 
-KCalCore::Alarm::Ptr defaultAlarm(When when)
+KCalendarCore::Alarm::Ptr defaultAlarm(When when)
 {
     checkInitNeeded(when);
 
@@ -226,13 +226,13 @@ KCalCore::Alarm::Ptr defaultAlarm(When when)
     return Alarm::Ptr();
 }
 
-int presetIndex(When when, const KCalCore::Alarm::Ptr &alarm)
+int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm)
 {
     checkInitNeeded(when);
     const QStringList presets = availablePresets(when);
 
     for (int i = 0; i < presets.size(); ++i) {
-        KCalCore::Alarm::Ptr presetAlarm(preset(when, presets.at(i)));
+        KCalendarCore::Alarm::Ptr presetAlarm(preset(when, presets.at(i)));
         if (presetAlarm == alarm) {
             return i;
         }

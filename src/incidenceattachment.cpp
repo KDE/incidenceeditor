@@ -69,13 +69,13 @@ IncidenceAttachment::~IncidenceAttachment()
     delete mPopupMenu;
 }
 
-void IncidenceAttachment::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceAttachment::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
     mAttachmentView->clear();
 
-    KCalCore::Attachment::List attachments = incidence->attachments();
-    for (KCalCore::Attachment::List::ConstIterator it = attachments.constBegin(),
+    KCalendarCore::Attachment::List attachments = incidence->attachments();
+    for (KCalendarCore::Attachment::List::ConstIterator it = attachments.constBegin(),
          end = attachments.constEnd();
          it != end; ++it) {
         new AttachmentIconItem((*it), mAttachmentView);
@@ -84,7 +84,7 @@ void IncidenceAttachment::load(const KCalCore::Incidence::Ptr &incidence)
     mWasDirty = false;
 }
 
-void IncidenceAttachment::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceAttachment::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     incidence->clearAttachments();
 
@@ -103,15 +103,15 @@ bool IncidenceAttachment::isDirty() const
             return true;
         }
 
-        KCalCore::Attachment::List origAttachments = mLoadedIncidence->attachments();
+        KCalendarCore::Attachment::List origAttachments = mLoadedIncidence->attachments();
         for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
             QListWidgetItem *item = mAttachmentView->item(itemIndex);
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-            const KCalCore::Attachment listAttachment = static_cast<AttachmentIconItem *>(item)->attachment();
+            const KCalendarCore::Attachment listAttachment = static_cast<AttachmentIconItem *>(item)->attachment();
 
             for (int i = 0; i < origAttachments.count(); ++i) {
-                const KCalCore::Attachment attachment = origAttachments.at(i);
+                const KCalendarCore::Attachment attachment = origAttachments.at(i);
 
                 if (attachment == listAttachment) {
                     origAttachments.remove(i);
@@ -138,7 +138,7 @@ int IncidenceAttachment::attachmentCount() const
 void IncidenceAttachment::addAttachment()
 {
     QPointer<QObject> that(this);
-    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
+    AttachmentIconItem *item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
     dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
@@ -187,7 +187,7 @@ void IncidenceAttachment::removeSelectedAttachments()
         if (it->isSelected()) {
             AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(it);
             if (attitem) {
-                const KCalCore::Attachment att = attitem->attachment();
+                const KCalendarCore::Attachment att = attitem->attachment();
                 labels << att.label();
                 selected << it;
             }
@@ -238,7 +238,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
         return;
     }
 
-    KCalCore::Attachment att = attitem->attachment();
+    KCalendarCore::Attachment att = attitem->attachment();
 
     // get the saveas file name
     const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"),
@@ -280,7 +280,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
         return;
     }
 
-    const KCalCore::Attachment att = attitem->attachment();
+    const KCalendarCore::Attachment att = attitem->attachment();
     if (att.isUri()) {
         openURL(QUrl(att.uri()));
     } else {
@@ -557,14 +557,14 @@ void IncidenceAttachment::setupAttachmentIconView()
     layout->addWidget(mAttachmentView);
 }
 
-// void IncidenceAttachmentEditor::addAttachment( KCalCore::Attachment *attachment )
+// void IncidenceAttachmentEditor::addAttachment( KCalendarCore::Attachment *attachment )
 // {
 //   new AttachmentIconItem( attachment, mAttachmentView );
 // }
 
 void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType, const QString &label)
 {
-    AttachmentIconItem *item = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
+    AttachmentIconItem *item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QString nlabel = label;
     if (mimeType == QLatin1String("message/rfc822")) {
@@ -591,7 +591,7 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
 {
     if (!inLine) {
         AttachmentIconItem *item
-            = new AttachmentIconItem(KCalCore::Attachment(), mAttachmentView);
+            = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {

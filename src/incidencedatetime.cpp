@@ -33,7 +33,7 @@ using namespace IncidenceEditorNG;
 /**
  * Returns true if the incidence's dates are equal to the default ones specified in config.
  */
-static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
+static bool incidenceHasDefaultTimes(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!incidence || incidence->allDay()) {
         return false;
@@ -50,12 +50,12 @@ static bool incidenceHasDefaultTimes(const KCalCore::Incidence::Ptr &incidence)
     }
 
     if (incidence->dtStart().time() == defaultStart) {
-        if (incidence->type() == KCalCore::Incidence::TypeJournal) {
+        if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
             return true; // no duration to compare with
         }
 
         const QDateTime start = incidence->dtStart();
-        const QDateTime end = incidence->dateTime(KCalCore::Incidence::RoleEnd);
+        const QDateTime end = incidence->dateTime(KCalendarCore::Incidence::RoleEnd);
         if (!end.isValid() || !start.isValid()) {
             return false;
         }
@@ -134,7 +134,7 @@ bool IncidenceDateTime::eventFilter(QObject *obj, QEvent *event)
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (mLoadedIncidence && *mLoadedIncidence == *incidence) {
         return;
@@ -148,11 +148,11 @@ void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
     mLoadingIncidence = true;
 
     // We can only handle events or todos.
-    if (KCalCore::Todo::Ptr todo = IncidenceDateTime::incidence<KCalCore::Todo>()) {
+    if (KCalendarCore::Todo::Ptr todo = IncidenceDateTime::incidence<KCalendarCore::Todo>()) {
         load(todo, isTemplate, templateOverridesTimes);
-    } else if (KCalCore::Event::Ptr event = IncidenceDateTime::incidence<KCalCore::Event>()) {
+    } else if (KCalendarCore::Event::Ptr event = IncidenceDateTime::incidence<KCalendarCore::Event>()) {
         load(event, isTemplate, templateOverridesTimes);
-    } else if (KCalCore::Journal::Ptr journal = IncidenceDateTime::incidence<KCalCore::Journal>()) {
+    } else if (KCalendarCore::Journal::Ptr journal = IncidenceDateTime::incidence<KCalendarCore::Journal>()) {
         load(journal, isTemplate, templateOverridesTimes);
     } else {
         qCDebug(INCIDENCEEDITOR_LOG) << "Not an Incidence.";
@@ -177,16 +177,16 @@ void IncidenceDateTime::load(const KCalCore::Incidence::Ptr &incidence)
     mLoadingIncidence = false;
 }
 
-void IncidenceDateTime::save(const KCalCore::Incidence::Ptr &incidence)
+void IncidenceDateTime::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    if (KCalCore::Todo::Ptr todo
-            = IncidenceDateTime::incidence<KCalCore::Todo>(incidence)) {
+    if (KCalendarCore::Todo::Ptr todo
+            = IncidenceDateTime::incidence<KCalendarCore::Todo>(incidence)) {
         save(todo);
-    } else if (KCalCore::Event::Ptr event
-                   = IncidenceDateTime::incidence<KCalCore::Event>(incidence)) {
+    } else if (KCalendarCore::Event::Ptr event
+                   = IncidenceDateTime::incidence<KCalendarCore::Event>(incidence)) {
         save(event);
-    } else if (KCalCore::Journal::Ptr journal
-                   = IncidenceDateTime::incidence<KCalCore::Journal>(incidence)) {
+    } else if (KCalendarCore::Journal::Ptr journal
+                   = IncidenceDateTime::incidence<KCalendarCore::Journal>(incidence)) {
         save(journal);
     } else {
         Q_ASSERT_X(false, "IncidenceDateTimeEditor::save",
@@ -196,11 +196,11 @@ void IncidenceDateTime::save(const KCalCore::Incidence::Ptr &incidence)
 
 bool IncidenceDateTime::isDirty() const
 {
-    if (KCalCore::Todo::Ptr todo = IncidenceDateTime::incidence<KCalCore::Todo>()) {
+    if (KCalendarCore::Todo::Ptr todo = IncidenceDateTime::incidence<KCalendarCore::Todo>()) {
         return isDirty(todo);
-    } else if (KCalCore::Event::Ptr event = IncidenceDateTime::incidence<KCalCore::Event>()) {
+    } else if (KCalendarCore::Event::Ptr event = IncidenceDateTime::incidence<KCalendarCore::Event>()) {
         return isDirty(event);
-    } else if (KCalCore::Journal::Ptr journal = IncidenceDateTime::incidence<KCalCore::Journal>()) {
+    } else if (KCalendarCore::Journal::Ptr journal = IncidenceDateTime::incidence<KCalendarCore::Journal>()) {
         return isDirty(journal);
     } else {
         Q_ASSERT_X(false, "IncidenceDateTimeEditor::isDirty",
@@ -249,7 +249,7 @@ void IncidenceDateTime::setTimeZonesVisibility(bool visible)
     mUi->mTimeZoneLabel->setText(placeholder);
 
     mUi->mTimeZoneComboStart->setVisible(visible);
-    mUi->mTimeZoneComboEnd->setVisible(visible && type() != KCalCore::Incidence::TypeJournal);
+    mUi->mTimeZoneComboEnd->setVisible(visible && type() != KCalendarCore::Incidence::TypeJournal);
 }
 
 void IncidenceDateTime::toggleTimeZoneVisibility()
@@ -322,7 +322,7 @@ void IncidenceDateTime::updateStartSpec()
         Q_EMIT startDateChanged(mCurrentStartDateTime.date());
     }
 
-    if (type() == KCalCore::Incidence::TypeJournal) {
+    if (type() == KCalendarCore::Incidence::TypeJournal) {
         checkDirtyStatus();
     }
 }
@@ -431,7 +431,7 @@ void IncidenceDateTime::enableTimeEdits()
     }
 }
 
-bool IncidenceDateTime::isDirty(const KCalCore::Todo::Ptr &todo) const
+bool IncidenceDateTime::isDirty(const KCalendarCore::Todo::Ptr &todo) const
 {
     Q_ASSERT(todo);
 
@@ -469,19 +469,19 @@ bool IncidenceDateTime::isDirty(const KCalCore::Todo::Ptr &todo) const
 
 /// Event specific methods
 
-bool IncidenceDateTime::isDirty(const KCalCore::Event::Ptr &event) const
+bool IncidenceDateTime::isDirty(const KCalendarCore::Event::Ptr &event) const
 {
     if (event->allDay() != mUi->mWholeDayCheck->isChecked()) {
         return true;
     }
 
     if (mUi->mFreeBusyCheck->isChecked()
-        && event->transparency() != KCalCore::Event::Opaque) {
+        && event->transparency() != KCalendarCore::Event::Opaque) {
         return true;
     }
 
     if (!mUi->mFreeBusyCheck->isChecked()
-        && event->transparency() != KCalCore::Event::Transparent) {
+        && event->transparency() != KCalendarCore::Event::Transparent) {
         return true;
     }
 
@@ -502,7 +502,7 @@ bool IncidenceDateTime::isDirty(const KCalCore::Event::Ptr &event) const
     return false;
 }
 
-bool IncidenceDateTime::isDirty(const KCalCore::Journal::Ptr &journal) const
+bool IncidenceDateTime::isDirty(const KCalendarCore::Journal::Ptr &journal) const
 {
     if (journal->allDay() != mUi->mWholeDayCheck->isChecked()) {
         return true;
@@ -539,7 +539,7 @@ QDateTime IncidenceDateTime::currentEndDateTime() const
         mUi->mTimeZoneComboEnd->selectedTimeZone());
 }
 
-void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -595,16 +595,16 @@ void IncidenceDateTime::load(const KCalCore::Event::Ptr &event, bool isTemplate,
     }
 
     switch (event->transparency()) {
-    case KCalCore::Event::Transparent:
+    case KCalendarCore::Event::Transparent:
         mUi->mFreeBusyCheck->setChecked(false);
         break;
-    case KCalCore::Event::Opaque:
+    case KCalendarCore::Event::Opaque:
         mUi->mFreeBusyCheck->setChecked(true);
         break;
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalendarCore::Journal::Ptr &journal, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(false);
@@ -648,7 +648,7 @@ void IncidenceDateTime::load(const KCalCore::Journal::Ptr &journal, bool isTempl
     }
 }
 
-void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, bool templateOverridesTimes)
+void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTemplate, bool templateOverridesTimes)
 {
     // First en/disable the necessary ui bits and pieces
     mUi->mStartCheck->setVisible(true);
@@ -711,7 +711,7 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
     if (isTemplate) {
         if (templateOverridesTimes) {
             // We only use the template times if the user didn't override them.
-            setTimes(todo->dtStart(), todo->dateTime(KCalCore::Incidence::RoleEnd));
+            setTimes(todo->dtStart(), todo->dateTime(KCalendarCore::Incidence::RoleEnd));
         }
     } else {
         const QDateTime endDT = todo->hasDueDate() ? todo->dtDue(true /** first */) : rightNow;
@@ -721,7 +721,7 @@ void IncidenceDateTime::load(const KCalCore::Todo::Ptr &todo, bool isTemplate, b
     }
 }
 
-void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
+void IncidenceDateTime::save(const KCalendarCore::Event::Ptr &event)
 {
     if (mUi->mWholeDayCheck->isChecked()) {   // All day event
         event->setAllDay(true);
@@ -745,11 +745,11 @@ void IncidenceDateTime::save(const KCalCore::Event::Ptr &event)
     // Free == Event::Transparent
     // Busy == Event::Opaque
     event->setTransparency(mUi->mFreeBusyCheck->isChecked()
-                           ? KCalCore::Event::Opaque
-                           : KCalCore::Event::Transparent);
+                           ? KCalendarCore::Event::Opaque
+                           : KCalendarCore::Event::Transparent);
 }
 
-void IncidenceDateTime::save(const KCalCore::Todo::Ptr &todo)
+void IncidenceDateTime::save(const KCalendarCore::Todo::Ptr &todo)
 {
     if (mUi->mStartCheck->isChecked()) {
         todo->setDtStart(currentStartDateTime());
@@ -773,7 +773,7 @@ void IncidenceDateTime::save(const KCalCore::Todo::Ptr &todo)
     }
 }
 
-void IncidenceDateTime::save(const KCalCore::Journal::Ptr &journal)
+void IncidenceDateTime::save(const KCalendarCore::Journal::Ptr &journal)
 {
     journal->setAllDay(mUi->mWholeDayCheck->isChecked());
 
@@ -845,7 +845,7 @@ void IncidenceDateTime::updateEndToolTips()
             currentEndDateTime(),
             mUi->mWholeDayCheck->isChecked(),
             false);
-        if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
+        if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18n("Due on: %1", datetimeStr));
             mUi->mEndTimeEdit->setToolTip(i18n("Due on: %1", datetimeStr));
         } else {
@@ -853,7 +853,7 @@ void IncidenceDateTime::updateEndToolTips()
             mUi->mEndTimeEdit->setToolTip(i18n("Ends: %1", datetimeStr));
         }
     } else {
-        if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
+        if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18n("Due Date"));
             mUi->mEndTimeEdit->setToolTip(i18n("Due Time"));
         } else {
@@ -919,15 +919,15 @@ bool IncidenceDateTime::isValid() const
 
     if (startDateTimeEnabled() && endDateTimeEnabled()
         && currentStartDateTime() > currentEndDateTime()) {
-        if (mLoadedIncidence->type() == KCalCore::Incidence::TypeEvent) {
+        if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeEvent) {
             mLastErrorString = i18nc("@info",
                                      "The event ends before it starts.\n"
                                      "Please correct dates and times.");
-        } else if (mLoadedIncidence->type() == KCalCore::Incidence::TypeTodo) {
+        } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
             mLastErrorString = i18nc("@info",
                                      "The to-do is due before it starts.\n"
                                      "Please correct dates and times.");
-        } else if (mLoadedIncidence->type() == KCalCore::Incidence::TypeJournal) {
+        } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeJournal) {
             return true;
         }
 
@@ -968,14 +968,14 @@ void IncidenceDateTime::printDebugInfo() const
     qCDebug(INCIDENCEEDITOR_LOG) << "dirty test1: "
                                  << (mLoadedIncidence->allDay()
         != mUi->mWholeDayCheck->isChecked());
-    if (mLoadedIncidence->type() == KCalCore::Incidence::TypeEvent) {
-        KCalCore::Event::Ptr event = mLoadedIncidence.staticCast<KCalCore::Event>();
+    if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeEvent) {
+        KCalendarCore::Event::Ptr event = mLoadedIncidence.staticCast<KCalendarCore::Event>();
         qCDebug(INCIDENCEEDITOR_LOG) << "dirty test2: "
                                      << (mUi->mFreeBusyCheck->isChecked()
-            && event->transparency() != KCalCore::Event::Opaque);
+            && event->transparency() != KCalendarCore::Event::Opaque);
         qCDebug(INCIDENCEEDITOR_LOG) << "dirty test3: "
                                      << (!mUi->mFreeBusyCheck->isChecked()
-            && event->transparency() != KCalCore::Event::Transparent);
+            && event->transparency() != KCalendarCore::Event::Transparent);
     }
 
     if (mLoadedIncidence->allDay()) {

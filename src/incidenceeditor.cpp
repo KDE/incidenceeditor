@@ -68,12 +68,12 @@ void IncidenceEditor::focusInvalidField()
 {
 }
 
-KCalCore::IncidenceBase::IncidenceType IncidenceEditor::type() const
+KCalendarCore::IncidenceBase::IncidenceType IncidenceEditor::type() const
 {
     if (mLoadedIncidence) {
         return mLoadedIncidence->type();
     } else {
-        return KCalCore::IncidenceBase::TypeUnknown;
+        return KCalendarCore::IncidenceBase::TypeUnknown;
     }
 }
 
