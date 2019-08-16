@@ -181,6 +181,8 @@ void IncidenceDescription::setupToolBar()
     mEditToolBar->addSeparator();
 
     mEditToolBar->addAction(collection->action(QStringLiteral("format_painter")));
+    mEditToolBar->addSeparator();
+    mEditToolBar->addAction(collection->action(QStringLiteral("manage_link")));
     mUi->mDescriptionEdit->richTextComposer()->setEnableActions(false);
 
     QGridLayout *layout = new QGridLayout(mUi->mEditToolBarPlaceHolder);

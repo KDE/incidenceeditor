@@ -34,16 +34,16 @@
      <widget class="QWidget" name="layoutWidget">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="KLineEdit" name="resourceSearch">
+        <widget class="QLineEdit" name="resourceSearch">
          <property name="toolTip">
           <string>Enter the search term</string>
          </property>
          <property name="whatsThis">
           <string>Use this text box to enter some keyword for the resource you want to find.</string>
          </property>
-         <property name="showClearButton" stdset="0">
-          <bool>true</bool>
-         </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
         </widget>
        </item>
        <item>
@@ -114,13 +114,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

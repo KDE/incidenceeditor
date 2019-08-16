@@ -158,7 +158,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     mUi->treeResults->setSelectionMode(QAbstractItemView::SingleSelection);
     selectionModel = mUi->treeResults->selectionModel();
 
-    connect(mUi->resourceSearch, &KLineEdit::textChanged, this,
+    connect(mUi->resourceSearch, &QLineEdit::textChanged, this,
             &ResourceManagement::slotStartSearch);
 
     connect(mUi->treeResults, &QTreeView::clicked, this, &ResourceManagement::slotShowDetails);

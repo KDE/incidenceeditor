@@ -33,7 +33,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KLineEdit" name="mLabelEdit">
+      <widget class="QLineEdit" name="mLabelEdit">
        <property name="toolTip">
         <string comment="@info:tooltip">Give the attachment a name</string>
        </property>
@@ -42,6 +42,9 @@
        </property>
        <property name="placeholderText">
         <string comment="@label">Attachment name</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -187,11 +190,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
-  </customwidget>
   <customwidget>
    <class>KSeparator</class>
    <extends>QFrame</extends>
