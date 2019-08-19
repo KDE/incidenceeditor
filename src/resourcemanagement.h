@@ -44,6 +44,9 @@ class AgendaView;
 }
 
 namespace IncidenceEditorNG {
+/**
+ * @brief The ResourceManagement class
+ */
 class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT

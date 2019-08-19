@@ -27,7 +27,9 @@
 
 namespace IncidenceEditorNG {
 class IncidenceDefaultsPrivate;
-
+/**
+ * @brief The IncidenceDefaults class
+ */
 class INCIDENCEEDITOR_EXPORT IncidenceDefaults
 {
 public:

@@ -24,6 +24,9 @@
 #include <KCalendarCore/IncidenceBase>
 
 namespace IncidenceEditorNG {
+/**
+ * @brief The KOrganizerEditorConfig class
+ */
 class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
 {
 public:

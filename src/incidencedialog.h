@@ -35,7 +35,9 @@ class IncidenceChanger;
 
 namespace IncidenceEditorNG {
 class IncidenceDialogPrivate;
-
+/**
+ * @brief The IncidenceDialog class
+ */
 class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog
 {
     Q_OBJECT

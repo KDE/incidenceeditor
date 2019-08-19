@@ -27,6 +27,9 @@
 #include "globalsettings_incidenceeditor.h"
 
 namespace IncidenceEditorNG {
+/**
+ * @brief The IncidenceEditorSettings class
+ */
 class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::
     IncidenceEditorSettingsBase
 {
