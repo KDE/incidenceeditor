@@ -38,8 +38,11 @@
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 
 #include <KEmailAddress>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <KCalUtils/Stringify>
 
 #include "incidenceeditor_debug.h"
@@ -462,7 +465,14 @@ void IncidenceAttendee::expandResult(KJob *job)
 
 void IncidenceAttendee::slotSelectAddresses()
 {
-    QPointer<Akonadi::EmailAddressSelectionDialog> dialog = new Akonadi::EmailAddressSelectionDialog(mParentWidget);
+    QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
+    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
+    KPluginFactory *factory = loader.factory();
+    if (factory) {
+        dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(mParentWidget);
+    } else {
+        dialog = new Akonadi::EmailAddressSelectionDialog(mParentWidget);
+    }
     dialog->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     dialog->setWindowTitle(i18n("Select Attendees"));
     if (dialog->exec() == QDialog::Accepted) {
