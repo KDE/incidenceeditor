@@ -463,6 +463,13 @@ void IncidenceAttendee::expandResult(KJob *job)
     }
 }
 
+void IncidenceAttendee::insertAddresses(const KContacts::Addressee::List &list)
+{
+    for (const KContacts::Addressee &contact : list) {
+        insertAttendeeFromAddressee(contact);
+    }
+}
+
 void IncidenceAttendee::slotSelectAddresses()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
@@ -475,6 +482,7 @@ void IncidenceAttendee::slotSelectAddresses()
     }
     dialog->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     dialog->setWindowTitle(i18n("Select Attendees"));
+    connect(dialog.data(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &IncidenceEditorNG::IncidenceAttendee::insertAddresses);
     if (dialog->exec() == QDialog::Accepted) {
         const Akonadi::EmailAddressSelection::List list = dialog->selectedAddresses();
         for (const Akonadi::EmailAddressSelection &selection : list) {

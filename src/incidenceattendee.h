@@ -24,7 +24,7 @@
 #include "incidenceeditor-ng.h"
 
 #include <KCalendarCore/FreeBusy>
-
+#include <KContacts/Addressee>
 namespace Ui {
 class EventOrTodoDesktop;
 }
@@ -109,6 +109,8 @@ private Q_SLOTS:
 
 private:
     void updateGroupExpand();
+
+    void insertAddresses(const KContacts::Addressee::List &list);
 
     void changeStatusForMe(KCalendarCore::Attendee::PartStat);
 
