@@ -94,6 +94,7 @@ protected:
 protected Q_SLOTS:
     void slotButtonClicked(QAbstractButton *button);
     void handleSelectedCollectionChange(const Akonadi::Collection &collection);
+    void reject() override;
 
 private:
     IncidenceDialogPrivate *const d_ptr;
