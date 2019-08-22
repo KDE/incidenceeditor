@@ -93,7 +93,7 @@ public:
 
 public:
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
-    ~IncidenceDialogPrivate();
+    ~IncidenceDialogPrivate() override;
 
     /// General methods
     void handleAlarmCountChange(int newCount);
