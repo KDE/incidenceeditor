@@ -827,6 +827,20 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
     }
 }
 
+void IncidenceDialog::reject()
+{
+    Q_D(IncidenceDialog);
+    if (d->isDirty()
+        && KMessageBox::questionYesNo(
+            this,
+            i18nc("@info", "Do you really want to cancel?"),
+            i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
+        QDialog::reject(); // Discard current changes
+    } else if (!d->isDirty()) {
+        QDialog::reject(); // No pending changes, just close the dialog.
+    }
+}
+
 void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
     Q_D(IncidenceDialog);
