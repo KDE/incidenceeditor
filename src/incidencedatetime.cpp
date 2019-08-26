@@ -422,7 +422,7 @@ void IncidenceDateTime::enableTimeEdits()
         mUi->mEndTimeEdit->setTime(QTime(1, 0));
     }
 
-    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains(QStringLiteral("&lt;&lt;"));
+    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains(QLatin1String("&lt;&lt;"));
     setTimeZonesVisibility(!wholeDayChecked && mTimezoneCombosWereVisibile);
     mTimezoneCombosWereVisibile = currentlyVisible;
     if (!wholeDayChecked && !timeZonesAreLocal(currentStartDateTime(), currentEndDateTime())) {

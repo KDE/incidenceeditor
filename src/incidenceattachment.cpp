@@ -198,7 +198,7 @@ void IncidenceAttachment::removeSelectedAttachments()
         return;
     }
 
-    QString labelsStr = labels.join(QStringLiteral("<nl/>"));
+    QString labelsStr = labels.join(QLatin1String("<nl/>"));
 
     if (KMessageBox::questionYesNo(
             nullptr,
@@ -595,13 +595,13 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {
-            if (uri.startsWith(QStringLiteral("uid:"))) {
+            if (uri.startsWith(QLatin1String("uid:"))) {
                 item->setMimeType(QStringLiteral("text/directory"));
-            } else if (uri.startsWith(QStringLiteral("kmail:"))) {
+            } else if (uri.startsWith(QLatin1String("kmail:"))) {
                 item->setMimeType(QStringLiteral("message/rfc822"));
-            } else if (uri.startsWith(QStringLiteral("urn:x-ical"))) {
+            } else if (uri.startsWith(QLatin1String("urn:x-ical"))) {
                 item->setMimeType(QStringLiteral("text/calendar"));
-            } else if (uri.startsWith(QStringLiteral("news:"))) {
+            } else if (uri.startsWith(QLatin1String("news:"))) {
                 item->setMimeType(QStringLiteral("message/news"));
             } else {
                 QMimeDatabase db;

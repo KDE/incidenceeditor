@@ -148,7 +148,7 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
              it != end; ++it) {
             add << (*it).fullName();
         }
-        mUi->mEmailAddress->setText(add.join(QStringLiteral(", ")));
+        mUi->mEmailAddress->setText(add.join(QLatin1String(", ")));
         mUi->mEmailText->setPlainText(alarm->mailText());
         id = 3;
         break;

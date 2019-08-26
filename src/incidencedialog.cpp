@@ -600,7 +600,7 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
         mCalSelector->setDefaultCollection(Akonadi::Collection(item.storageCollectionId()));
     }
 
-    if (!mCalSelector->mimeTypeFilter().contains(QStringLiteral("text/calendar"))
+    if (!mCalSelector->mimeTypeFilter().contains(QLatin1String("text/calendar"))
         || !mCalSelector->mimeTypeFilter().contains(incidence->mimeType())) {
         mCalSelector->setMimeTypeFilter(QStringList() << incidence->mimeType()
                                                       << QStringLiteral("text/calendar"));

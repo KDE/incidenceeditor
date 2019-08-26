@@ -165,7 +165,7 @@ void CategoryWidget::hideHeader()
 QStringList CategoryWidget::selectedCategories(QString &categoriesStr)
 {
     mCategoryList = getSelectedCategories(listView());
-    categoriesStr = mCategoryList.join(QStringLiteral(", "));
+    categoriesStr = mCategoryList.join(QLatin1String(", "));
     return mCategoryList;
 }
 

@@ -65,7 +65,7 @@ public:
 
     bool isValid(const QString &incidenceIdentifier) const override
     {
-        return incidenceIdentifier.startsWith(QStringLiteral("fb-"));
+        return incidenceIdentifier.startsWith(QLatin1String("fb-"));
     }
 
     QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
