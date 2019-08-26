@@ -222,9 +222,9 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
     // Fill formDetails with data
     for (auto it = obj.attributes().cbegin(), end = obj.attributes().cbegin(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QStringLiteral("objectClass") || key == QLatin1String("email")) {
+        if (key == QLatin1String("objectClass") || key == QLatin1String("email")) {
             continue;
-        } else if (key == QStringLiteral("owner")) {
+        } else if (key == QLatin1String("owner")) {
             QStringList attrs;
             attrs << QStringLiteral("cn") << QStringLiteral("mail")
                   << QStringLiteral("mobile") <<  QStringLiteral("telephoneNumber")
@@ -278,10 +278,10 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAP::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QStringLiteral("objectClass")
-            || key == QStringLiteral("owner")
-            || key == QStringLiteral("givenname")
-            || key == QStringLiteral("sn")) {
+        if (key == QLatin1String("objectClass")
+            || key == QLatin1String("owner")
+            || key == QLatin1String("givenname")
+            || key == QLatin1String("sn")) {
             continue;
         }
         QStringList list;
