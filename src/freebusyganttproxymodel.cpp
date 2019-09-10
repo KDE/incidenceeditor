@@ -80,17 +80,17 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
 QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod &period) const
 {
     QString toolTip = QStringLiteral("<qt>");
-    toolTip += QStringLiteral("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QStringLiteral(
+    toolTip += QLatin1String("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QLatin1String(
         "</b>");
     toolTip += QStringLiteral("<hr>");
     if (!period.summary().isEmpty()) {
-        toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip", "Summary:") + QStringLiteral(
+        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1String(
             "</i>") + QStringLiteral("&nbsp;");
         toolTip += period.summary();
         toolTip += QStringLiteral("<br>");
     }
     if (!period.location().isEmpty()) {
-        toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip", "Location:") + QStringLiteral(
+        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1String(
             "</i>") + QStringLiteral("&nbsp;");
         toolTip += period.location();
         toolTip += QStringLiteral("<br>");
