@@ -380,6 +380,9 @@ void IncidenceAttachment::slotSelectionChanged()
 
 void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
 {
+    if (!mimeData) {
+        return;
+    }
     QList<QUrl> urls;
     bool probablyWeHaveUris = false;
     QStringList labels;
