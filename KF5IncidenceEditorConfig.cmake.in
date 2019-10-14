@@ -3,7 +3,7 @@ include(CMakeFindDependencyMacro)
 find_dependency(KF5EventViews "@EVENTVIEW_LIB_VERSION@")
 find_dependency(KF5CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
 find_dependency(KF5CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
-find_dependency(KF5CalendarCore "@KCALENDARCORE_LIB_VERSION@")
+find_dependency(KF5CalendarCore "@KF5_MIN_VERSION@")
 find_dependency(KF5MailTransport "@KMAILTRANSPORT_LIB_VERSION@")
 find_dependency(KF5Mime "@KMIME_LIB_VERSION@")
 
