@@ -49,6 +49,8 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
             &IncidenceAlarm::newAlarmFromPreset);
     connect(mUi->mAlarmList, &QListWidget::itemSelectionChanged, this,
             &IncidenceAlarm::updateButtons);
+    connect(mUi->mAlarmList, &QListWidget::itemDoubleClicked, this,
+            &IncidenceAlarm::editCurrentAlarm);
     connect(mUi->mAlarmNewButton, &QPushButton::clicked, this, &IncidenceAlarm::newAlarm);
     connect(mUi->mAlarmConfigureButton, &QPushButton::clicked, this,
             &IncidenceAlarm::editCurrentAlarm);
