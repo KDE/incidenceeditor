@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>693</width>
-    <height>718</height>
+    <width>1255</width>
+    <height>1206</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="mainVerticalLayout">
@@ -174,14 +174,14 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="clearButtonEnabled">
-        <bool>true</bool>
-       </property>
        <property name="toolTip">
         <string comment="@info:tooltip">Set the title</string>
        </property>
        <property name="whatsThis">
         <string comment="@info:whatsthis">Sets the Title of this event or to-do.</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -215,14 +215,14 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="clearButtonEnabled">
-        <bool>true</bool>
-       </property>
        <property name="toolTip">
         <string comment="@info:tooltip">Set the location</string>
        </property>
        <property name="whatsThis">
         <string comment="@info:whatsthis">Sets where the event or to-do will take place.</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -741,8 +741,18 @@
         <attribute name="title">
          <string comment="@title:tab attendees of this event or to-do">Attendees</string>
         </attribute>
-        <layout class="QFormLayout" name="formLayout">
-         <item row="1" column="1">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string comment="@label:listbox">Meeting organizer:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
           <widget class="QStackedWidget" name="mOrganizerStack">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -808,7 +818,7 @@
            </widget>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
             <string comment="@label participants of this event or to-do">Participants:</string>
@@ -818,7 +828,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <layout class="QHBoxLayout" name="horizontalLayout_7">
            <item>
             <widget class="QLabel" name="mConflictsLabel">
@@ -882,7 +892,7 @@
            </item>
           </layout>
          </item>
-         <item row="4" column="0" colspan="2">
+         <item row="2" column="0" colspan="2">
           <widget class="QTableView" name="mAttendeeTable">
            <property name="editTriggers">
             <set>QAbstractItemView::AllEditTriggers</set>
@@ -890,16 +900,6 @@
            <attribute name="verticalHeaderVisible">
             <bool>false</bool>
            </attribute>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string comment="@label:listbox">Meeting organizer:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
           </widget>
          </item>
         </layout>
@@ -1573,7 +1573,8 @@
               <string comment="@action:button adds an exception on the recurrence">Add</string>
              </property>
              <property name="icon">
-              <iconset theme="list-add"/>
+              <iconset theme="list-add">
+               <normaloff>.</normaloff>.</iconset>
              </property>
             </widget>
            </item>
@@ -1681,7 +1682,8 @@
             <string comment="@action:button adds an attachment">Add</string>
            </property>
            <property name="icon">
-            <iconset theme="list-add"/>
+            <iconset theme="list-add">
+             <normaloff>.</normaloff>.</iconset>
            </property>
           </widget>
          </item>
@@ -1706,7 +1708,8 @@
             <string comment="@action:button remove an attachment">Remove</string>
            </property>
            <property name="icon">
-            <iconset theme="list-remove"/>
+            <iconset theme="list-remove">
+             <normaloff>.</normaloff>.</iconset>
            </property>
           </widget>
          </item>
@@ -1740,19 +1743,24 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPIM::KCheckComboBox</class>
+   <class>KComboBox</class>
    <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPIM::KCheckComboBox</class>
+   <extends>KComboBox</extends>
    <header>Libkdepim/KCheckComboBox</header>
   </customwidget>
   <customwidget>
    <class>KPIMTextEdit::RichTextComposerWidget</class>
    <extends>QWidget</extends>
    <header>kpimtextedit/richtextcomposerwidget.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KTimeComboBox</class>
-   <extends>QComboBox</extends>
-   <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KDateComboBox</class>
@@ -1766,9 +1774,9 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>QComboBox</class>
+   <class>KTimeComboBox</class>
    <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
+   <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KPIM::KWeekdayCheckCombo</class>
