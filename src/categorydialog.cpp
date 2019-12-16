@@ -232,7 +232,7 @@ CategoryDialog::CategoryDialog(CategoryConfig *cc, QWidget *parent)
     : QDialog(parent)
     , d(nullptr)
 {
-    setWindowTitle(i18n("Select Categories"));
+    setWindowTitle(i18nc("@title:window", "Select Categories"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply,

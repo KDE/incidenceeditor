@@ -44,7 +44,7 @@ CategoryEditDialog::CategoryEditDialog(CategoryConfig *categoryConfig, QWidget *
     : QDialog(parent)
     , mCategoryConfig(categoryConfig)
 {
-    setWindowTitle(i18n("Edit Categories"));
+    setWindowTitle(i18nc("@title:window", "Edit Categories"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);

@@ -38,7 +38,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     , mResolver(resolver)
     , mPeriodModel(new CalendarSupport::FreePeriodModel(this))
 {
-    setWindowTitle(i18n("Scheduling"));
+    setWindowTitle(i18nc("@title:window", "Scheduling"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QWidget *w = new QWidget(this);
     setupUi(w);

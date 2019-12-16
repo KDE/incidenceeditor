@@ -61,7 +61,7 @@ TemplateManagementDialog::TemplateManagementDialog(
     , m_changed(false)
 {
     QString m_type_translated = i18n(qPrintable(m_type));
-    setWindowTitle(i18n("Manage %1 Templates", m_type_translated));
+    setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

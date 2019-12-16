@@ -37,7 +37,7 @@ AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, 
     , mAllowBeginReminders(true)
     , mAllowEndReminders(true)
 {
-    setWindowTitle(i18n("Create a new reminder"));
+    setWindowTitle(i18nc("@title:window", "Create a new reminder"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -81,7 +81,7 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
         return;
     }
 
-    setWindowTitle(i18n("Edit existing reminder"));
+    setWindowTitle(i18nc("@title:window", "Edit existing reminder"));
 
     // Offsets
     int offset;

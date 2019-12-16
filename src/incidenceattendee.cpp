@@ -481,7 +481,7 @@ void IncidenceAttendee::slotSelectAddresses()
         dialog = new Akonadi::EmailAddressSelectionDialog(mParentWidget);
     }
     dialog->view()->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    dialog->setWindowTitle(i18n("Select Attendees"));
+    dialog->setWindowTitle(i18nc("@title:window", "Select Attendees"));
     connect(dialog.data(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &IncidenceEditorNG::IncidenceAttendee::insertAddresses);
     if (dialog->exec() == QDialog::Accepted) {
         const Akonadi::EmailAddressSelection::List list = dialog->selectedAddresses();

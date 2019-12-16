@@ -115,7 +115,7 @@ public:
 ResourceManagement::ResourceManagement(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Resource Management"));
+    setWindowTitle(i18nc("@title:window", "Resource Management"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

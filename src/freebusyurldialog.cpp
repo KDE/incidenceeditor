@@ -42,7 +42,7 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     : QDialog(parent)
 {
     setModal(true);
-    setWindowTitle(i18n("Edit Free/Busy Location"));
+    setWindowTitle(i18nc("@title:window", "Edit Free/Busy Location"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QFrame *topFrame = new QFrame(this);
