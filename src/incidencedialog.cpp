@@ -584,8 +584,8 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
 
     if (incidence->attendeeCount() > 1     // >1 because you won't drink alone
         && !me.isNull() && (me.status() == KCalendarCore::Attendee::NeedsAction
-                  || me.status() == KCalendarCore::Attendee::Tentative
-                  || me.status() == KCalendarCore::Attendee::InProcess)) {
+                            || me.status() == KCalendarCore::Attendee::Tentative
+                            || me.status() == KCalendarCore::Attendee::InProcess)) {
         // Show the invitation bar: "You are invited [accept] [decline]"
         mUi->mInvitationBar->show();
     } else {

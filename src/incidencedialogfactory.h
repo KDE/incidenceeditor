@@ -52,12 +52,12 @@ INCIDENCEEDITOR_EXPORT IncidenceDialog *create(
     bool needsSaving, KCalendarCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
 
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(
-    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels,
-    bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTemp, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTemp,
+    QWidget *parent = nullptr, Qt::WindowFlags flags = {});
 
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(
-    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels,
-    bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles,
+    QWidget *parent = nullptr, Qt::WindowFlags flags = {});
 } // namespace IncidenceDialogFactory
 } // namespace IncidenceEditorNG
 

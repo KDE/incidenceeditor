@@ -454,10 +454,10 @@ void IncidenceAttendee::expandResult(KJob *job)
         dataModel()->removeRow(row);
         for (const KContacts::Addressee &member : groupMembers) {
             KCalendarCore::Attendee newAt(member.realName(), member.preferredEmail(),
-                                              attendee.RSVP(),
-                                              attendee.status(),
-                                              attendee.role(),
-                                              member.uid());
+                                          attendee.RSVP(),
+                                          attendee.status(),
+                                          attendee.role(),
+                                          member.uid());
             dataModel()->insertAttendee(row, newAt);
         }
     }
@@ -488,8 +488,8 @@ void IncidenceAttendee::slotSelectAddresses()
         for (const Akonadi::EmailAddressSelection &selection : list) {
             if (selection.item().hasPayload<KContacts::ContactGroup>()) {
                 Akonadi::ContactGroupExpandJob *job
-                        = new Akonadi::ContactGroupExpandJob(
-                            selection.item().payload<KContacts::ContactGroup>(), this);
+                    = new Akonadi::ContactGroupExpandJob(
+                          selection.item().payload<KContacts::ContactGroup>(), this);
                 connect(job, &Akonadi::ContactGroupExpandJob::result, this,
                         &IncidenceAttendee::expandResult);
                 KCalendarCore::Attendee::PartStat partStat = KCalendarCore::Attendee::NeedsAction;
@@ -497,10 +497,10 @@ void IncidenceAttendee::slotSelectAddresses()
 
                 int pos = 0;
                 KCalendarCore::Attendee newAt(selection.name(),
-                                                  selection.email(),
-                                                  rsvp,
-                                                  partStat,
-                                                  KCalendarCore::Attendee::ReqParticipant);
+                                              selection.email(),
+                                              rsvp,
+                                              partStat,
+                                              KCalendarCore::Attendee::ReqParticipant);
                 dataModel()->insertAttendee(pos, newAt);
 
                 mExpandGroupJobs.insert(job, newAt.uid());
@@ -811,10 +811,10 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
         rsvp = false;
     }
     KCalendarCore::Attendee newAt(a.realName(), a.preferredEmail(),
-                                                         rsvp,
-                                                         partStat,
-                                                         KCalendarCore::Attendee::ReqParticipant,
-                                                         a.uid());
+                                  rsvp,
+                                  partStat,
+                                  KCalendarCore::Attendee::ReqParticipant,
+                                  a.uid());
     if (pos < 0) {
         pos = dataModel()->rowCount() - 1;
     }
@@ -886,10 +886,10 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
         if (newOrganizerAttendee == -1) {
             bool rsvp = !iAmOrganizer(); // if it is the user, don't make him rsvp.
             KCalendarCore::Attendee::PartStat status = iAmOrganizer() ? KCalendarCore::Attendee::Accepted
-                                                  : KCalendarCore::Attendee::NeedsAction;
+                                                       : KCalendarCore::Attendee::NeedsAction;
 
             KCalendarCore::Attendee newAt(name, email, rsvp, status,
-                                       KCalendarCore::Attendee::ReqParticipant);
+                                          KCalendarCore::Attendee::ReqParticipant);
 
             mDataModel->insertAttendee(mDataModel->rowCount(), newAt);
         }

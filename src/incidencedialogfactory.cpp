@@ -49,8 +49,7 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalendarCore:
     }
 }
 
-IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees,
-                                                          const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
+IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
                                                           const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
 {
     IncidenceDefaults defaults
@@ -79,8 +78,7 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
     return dialog;
 }
 
-IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees,
-                                                           const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
+IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
                                                            const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
 {
     IncidenceDefaults defaults

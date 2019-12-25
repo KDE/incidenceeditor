@@ -66,7 +66,7 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
     mCalculateTimer.setSingleShot(true);
 }
 
-void ConflictResolver::insertAttendee(const KCalendarCore::Attendee&attendee)
+void ConflictResolver::insertAttendee(const KCalendarCore::Attendee &attendee)
 {
     if (!mFBModel->containsAttendee(attendee)) {
         mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(

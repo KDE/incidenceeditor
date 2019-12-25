@@ -32,8 +32,7 @@ public:
     typedef QSharedPointer<AttendeeData> Ptr;
     typedef QList<AttendeeData::Ptr> List;
 
-    AttendeeData(const QString &name, const QString &email, bool rsvp = false, Attendee::PartStat status = Attendee::None, Attendee::Role role = Attendee::ReqParticipant,
-                 const QString &uid = QString())
+    AttendeeData(const QString &name, const QString &email, bool rsvp = false, Attendee::PartStat status = Attendee::None, Attendee::Role role = Attendee::ReqParticipant, const QString &uid = QString())
         : KCalendarCore::Attendee(name, email, rsvp, status, role, uid)
     {
     }

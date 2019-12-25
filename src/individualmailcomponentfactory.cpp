@@ -120,7 +120,7 @@ void IndividualMessageQueueJob::startComposerJob(const QStringList &to, const QS
 {
     mComposerJob
         = new OpenComposerJob(this, to.join(QLatin1String(", ")), cc.join(QLatin1String(
-                                                                               ", ")),
+                                                                              ", ")),
                               QString(), message(), mIdentity);
     connect(mComposerJob, &OpenComposerJob::finished, this,
             &IndividualMessageQueueJob::handleJobFinished);

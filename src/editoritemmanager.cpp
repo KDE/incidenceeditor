@@ -353,8 +353,8 @@ void EditorItemManager::save()
             // ETM and the KSelectionProxyModel has a bug wrt collections moves, so this is disabled.
             // To test this, enable the collection combo-box and remove the following assert.
             qCDebug(INCIDENCEEDITOR_LOG) << "Moving from"
-                                            << d->mItem.parentCollection().id() << "to"
-                                            << d->mItemUi->selectedCollection().id();
+                                         << d->mItem.parentCollection().id() << "to"
+                                         << d->mItemUi->selectedCollection().id();
 
             if (d->mItemUi->isDirty()) {
                 d->mChanger->modifyIncidence(d->mItem, oldPayload);

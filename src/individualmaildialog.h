@@ -55,7 +55,7 @@ public:
 private:
     void updateButtonState();
 
-    std::vector<std::pair<KCalendarCore::Attendee, QComboBox*>> mAttendeeDecision;
+    std::vector<std::pair<KCalendarCore::Attendee, QComboBox *> > mAttendeeDecision;
     QDialogButtonBox *m_buttons = nullptr;
     QWidget *m_detailsWidget = nullptr;
 };
