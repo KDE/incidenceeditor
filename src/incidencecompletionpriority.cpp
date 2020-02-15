@@ -73,7 +73,11 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     connect(d->mUi->mCompletionSlider, qOverload<int>(&QSlider::valueChanged), this, [this](int val) {
         d->sliderValueChanged(val);
     });
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(d->mUi->mPriorityCombo, qOverload< int>(&QComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
+#else
+    connect(d->mUi->mPriorityCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
+#endif
 }
 
 IncidenceCompletionPriority::~IncidenceCompletionPriority()
