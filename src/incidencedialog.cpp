@@ -181,6 +181,12 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mIeResource = new IncidenceResource(mIeAttendee, mIeDateTime, mUi);
     mEditor->combine(mIeResource);
 
+    const qint64 colId = IncidenceEditorNG::IncidenceEditorSettings::self()->lastSelectedFolder();
+    const Akonadi::Collection col(colId);
+    if (col.isValid()) {
+        mCalSelector->setDefaultCollection(col);
+    }
+
     q->connect(mEditor, SIGNAL(showMessage(QString,KMessageWidget::MessageType)),
                SLOT(showMessage(QString,KMessageWidget::MessageType)));
     q->connect(mEditor, SIGNAL(dirtyStatusChanged(bool)),
