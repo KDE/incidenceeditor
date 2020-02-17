@@ -65,7 +65,14 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   resourcemodel.cpp
 )
 qt5_add_resources(incidenceeditors_ng_shared_LIB_SRCS incidenceeditor.qrc)
-ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor)
+
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor)
+else()
+    ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
+        OLD_CATEGORY_NAMES log_incidenceeditor
+        DESCRIPTION "incidenceeditor (incidenceeditor)" EXPORT INCIDENCEEDITOR)
+endif()
 
 kconfig_add_kcfg_files(incidenceeditors_ng_shared_LIB_SRCS globalsettings_incidenceeditor.kcfgc)
 
@@ -176,4 +183,8 @@ install(FILES
 ######
 if (BUILD_TESTING)
    add_subdirectory(tests)
+endif()
+
+if (NOT ECM_VERSION VERSION_LESS "5.68.0")
+   ecm_qt_install_logging_categories(EXPORT INCIDENCEEDITOR FILE incidenceeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 endif()
