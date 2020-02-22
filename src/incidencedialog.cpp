@@ -108,6 +108,7 @@ public:
     void updateButtonStatus(bool isDirty);
     void showMessage(const QString &text, KMessageWidget::MessageType type);
     void slotInvalidCollection();
+    void setCalendarCollection(const Akonadi::Collection &collection);
 
     /// ItemEditorUi methods
     bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const override;
@@ -181,11 +182,10 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mIeResource = new IncidenceResource(mIeAttendee, mIeDateTime, mUi);
     mEditor->combine(mIeResource);
 
+    // Select calendar to last collection used, if valid; else select the default collection
     const qint64 colId = IncidenceEditorNG::IncidenceEditorSettings::self()->lastSelectedFolder();
     const Akonadi::Collection col(colId);
-    if (col.isValid()) {
-        mCalSelector->setDefaultCollection(col);
-    }
+    setCalendarCollection(col);
 
     q->connect(mEditor, SIGNAL(showMessage(QString,KMessageWidget::MessageType)),
                SLOT(showMessage(QString,KMessageWidget::MessageType)));
@@ -219,6 +219,23 @@ IncidenceDialogPrivate::~IncidenceDialogPrivate()
 void IncidenceDialogPrivate::slotInvalidCollection()
 {
     showMessage(i18n("Select a valid collection first."), KMessageWidget::Warning);
+}
+
+void IncidenceDialogPrivate::setCalendarCollection(const Akonadi::Collection &collection)
+{
+    if (collection.isValid()) {
+        mCalSelector->setDefaultCollection(collection);
+    } else {
+        // fallback to default collection
+        const qint64 defColId = CalendarSupport::KCalPrefs::instance()->defaultCalendarId();
+        const Akonadi::Collection defCol(defColId);
+        if (defCol.isValid()) {
+            mCalSelector->setDefaultCollection(defCol);
+        } else {
+            // Give up and use the first item in the selector
+            mCalSelector->setCurrentIndex(0);
+        }
+    }
 }
 
 void IncidenceDialogPrivate::showMessage(const QString &text, KMessageWidget::MessageType type)
@@ -774,11 +791,7 @@ void IncidenceDialog::load(const Akonadi::Item &item, const QDate &activeDate)
 void IncidenceDialog::selectCollection(const Akonadi::Collection &collection)
 {
     Q_D(IncidenceDialog);
-    if (collection.isValid()) {
-        d->mCalSelector->setDefaultCollection(collection);
-    } else {
-        d->mCalSelector->setCurrentIndex(0);
-    }
+    d->setCalendarCollection(collection);
 }
 
 void IncidenceDialog::setIsCounterProposal(bool isCounterProposal)
