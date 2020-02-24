@@ -62,7 +62,7 @@ public:
 
     /**
       This is used to do a smarter guess about which identity to use for the organizer.
-      If the groupware server is not set, the first avaialble identity will be used.
+      If the groupware server is not set, the first available identity will be used.
       @param domain The gropuware server domain name without any protocol prefixes
       (e.g. demo.kolab.org).
     */

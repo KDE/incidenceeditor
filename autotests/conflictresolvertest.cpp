@@ -169,7 +169,7 @@ void ConflictResolverTest::akademy2010()
     KCalendarCore::Period plasma(_time(15, 15), _time(16, 00));
 
 //  for ( int i = 1; i < 80; ++i ) {
-    // adds 80 people (adds the same 8 peopl 10 times)
+    // adds 80 people (adds the same 8 people 10 times)
     addAttendee(QStringLiteral("akademyattendee1@email.com"),
                 KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List()
                                                                          << opening << keynote

@@ -36,8 +36,8 @@ class ResourceItem : public QObject
 {
     Q_OBJECT
 public:
-    /* Copied from http://qt-project.org/doc/qt-4.8/itemviews-editabletreemodel.html:
-     * QT 4.8: Editable Tree Model Example
+    /* Copied from https://doc.qt.io/qt-5/qtwidgets-itemviews-editabletreemodel-example.html:
+     * Editable Tree Model Example
      */
 
     /**
