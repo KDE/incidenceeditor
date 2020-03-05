@@ -182,8 +182,8 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mIeResource = new IncidenceResource(mIeAttendee, mIeDateTime, mUi);
     mEditor->combine(mIeResource);
 
-    // Select calendar to last collection used, if valid; else select the default collection
-    const qint64 colId = IncidenceEditorNG::IncidenceEditorSettings::self()->lastSelectedFolder();
+    // Set the default collection
+    const qint64 colId = CalendarSupport::KCalPrefs::instance()->defaultCalendarId();
     const Akonadi::Collection col(colId);
     setCalendarCollection(col);
 
@@ -226,15 +226,7 @@ void IncidenceDialogPrivate::setCalendarCollection(const Akonadi::Collection &co
     if (collection.isValid()) {
         mCalSelector->setDefaultCollection(collection);
     } else {
-        // fallback to default collection
-        const qint64 defColId = CalendarSupport::KCalPrefs::instance()->defaultCalendarId();
-        const Akonadi::Collection defCol(defColId);
-        if (defCol.isValid()) {
-            mCalSelector->setDefaultCollection(defCol);
-        } else {
-            // Give up and use the first item in the selector
-            mCalSelector->setCurrentIndex(0);
-        }
+        mCalSelector->setCurrentIndex(0);
     }
 }
 
