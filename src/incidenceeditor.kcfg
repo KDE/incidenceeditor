@@ -29,10 +29,4 @@
       <default>Ask</default>
     </entry>
   </group>
-  <group name="Collection">
-      <entry name="LastSelectedFolder" type="LongLong">
-        <whatsthis>The last selected folder.</whatsthis>
-        <default>-1</default>
-      </entry>
-  </group>
-</kcfg>
+ </kcfg>
