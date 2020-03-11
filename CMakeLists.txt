@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.13.41")
+set(PIM_VERSION "5.13.80")
 
 project(incidenceeditor VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.67.0")
+set(KF5_MIN_VERSION "5.68.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -108,9 +108,6 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
 )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    install(FILES incidenceeditor.categories incidenceeditor.renamecategories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-endif()
 add_definitions(-DQT_NO_FOREACH)
 set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(src)
