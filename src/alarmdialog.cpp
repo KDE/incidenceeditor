@@ -246,7 +246,7 @@ void AlarmDialog::fillCombo()
             items << i18n("Before the to-do is due") << i18n("After the to-do is due");
         }
     } else {
-        if (mAllowEndReminders) {
+        if (mAllowBeginReminders) {
             items << i18n("Before the event starts") << i18n("After the event starts");
         }
         if (mAllowEndReminders) {

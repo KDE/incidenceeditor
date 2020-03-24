@@ -293,8 +293,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
 
 void IncidenceAttachment::showContextMenu(const QPoint &pos)
 {
-    QListWidgetItem *item = mAttachmentView->itemAt(pos);
-    const bool enable = item != nullptr;
+    const bool enable = mAttachmentView->itemAt(pos) != nullptr;
 
     int numSelected = 0;
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
