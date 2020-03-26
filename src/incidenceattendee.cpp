@@ -130,11 +130,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(mUi->mOrganizerCombo, qOverload<const QString &>(&QComboBox::activated),
             this, &IncidenceAttendee::slotOrganizerChanged);
     */
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mOrganizerCombo, qOverload<int>(&QComboBox::currentIndexChanged),
-#else
-    connect(mUi->mOrganizerCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged),
-#endif
             this, &IncidenceAttendee::checkDirtyStatus);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
