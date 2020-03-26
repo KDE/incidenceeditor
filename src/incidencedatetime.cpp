@@ -554,21 +554,12 @@ void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemp
             &IncidenceDateTime::updateStartTime);                                                         // When editing with any key except up/down
     connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::updateStartDate);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mTimeZoneComboStart,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
             &IncidenceDateTime::updateStartSpec);
-#else
-    connect(mUi->mTimeZoneComboStart,
-            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int, const QString &)>(&IncidenceEditorNG::
-                                                                             KTimeZoneComboBox::
-                                                                             currentIndexChanged),
-            this,
-            &IncidenceDateTime::updateStartSpec);
-#endif
 
 
     // End time
@@ -584,21 +575,12 @@ void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemp
             &IncidenceDateTime::endTimeChanged);
     connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::endDateChanged);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mTimeZoneComboEnd,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
             &IncidenceDateTime::checkDirtyStatus);
-#else
-    connect(mUi->mTimeZoneComboEnd,
-            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int, const QString &)>(&IncidenceEditorNG::
-                                                                             KTimeZoneComboBox::
-                                                                             currentIndexChanged),
-            this,
-            &IncidenceDateTime::checkDirtyStatus);
-#endif
     mUi->mWholeDayCheck->setChecked(event->allDay());
     enableTimeEdits();
 
@@ -641,21 +623,12 @@ void IncidenceDateTime::load(const KCalendarCore::Journal::Ptr &journal, bool is
             &IncidenceDateTime::updateStartTime);
     connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::updateStartDate);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mTimeZoneComboStart,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
             &IncidenceDateTime::updateStartSpec);
-#else
-    connect(mUi->mTimeZoneComboStart,
-            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int, const QString &)>(&IncidenceEditorNG::
-                                                                             KTimeZoneComboBox::
-                                                                             currentIndexChanged),
-            this,
-            &IncidenceDateTime::updateStartSpec);
-#endif
     mUi->mWholeDayCheck->setChecked(journal->allDay());
     enableTimeEdits();
 
@@ -707,22 +680,12 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
             &IncidenceDateTime::updateStartTime);
     connect(mUi->mStartTimeEdit, &KTimeComboBox::timeEdited, this,
             &IncidenceDateTime::checkDirtyStatus);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mTimeZoneComboStart,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
             &IncidenceDateTime::checkDirtyStatus);
-#else
-    connect(mUi->mTimeZoneComboStart,
-            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int, const QString &)>(&IncidenceEditorNG::
-                                                                             KTimeZoneComboBox::
-                                                                             currentIndexChanged),
-            this,
-            &IncidenceDateTime::checkDirtyStatus);
-
-#endif
 
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableEndEdit);
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::endDateTimeToggled);
@@ -736,21 +699,12 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
             &IncidenceDateTime::endDateChanged);
     connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
             &IncidenceDateTime::endTimeChanged);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mTimeZoneComboEnd,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
             &IncidenceDateTime::checkDirtyStatus);
-#else
-    connect(mUi->mTimeZoneComboEnd,
-            static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int, const QString &)>(&IncidenceEditorNG::
-                                                                             KTimeZoneComboBox::
-                                                                             currentIndexChanged),
-            this,
-            &IncidenceDateTime::checkDirtyStatus);
-#endif
     const QDateTime rightNow = QDateTime::currentDateTime();
 
     if (isTemplate) {

@@ -105,39 +105,19 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
             &IncidenceRecurrence::handleExceptionDateChange);
     connect(mUi->mExceptionList, &QListWidget::itemSelectionChanged, this,
             &IncidenceRecurrence::updateRemoveExceptionButton);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mRecurrenceTypeCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::handleRecurrenceTypeChange);
-#else
-    connect(mUi->mRecurrenceTypeCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::handleRecurrenceTypeChange);
-#endif
     connect(mUi->mEndDurationEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::handleEndAfterOccurrencesChange);
     connect(mUi->mFrequencyEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::handleFrequencyChange);
 
     // Check the dirty status when the user changes values.
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mRecurrenceTypeCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#else
-    connect(mUi->mRecurrenceTypeCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#endif
     connect(mUi->mFrequencyEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mFrequencyEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mWeekDayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this,
             &IncidenceRecurrence::checkDirtyStatus);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mMonthlyCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#else
-    connect(mUi->mMonthlyCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#endif
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mYearlyCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#else
-    connect(mUi->mYearlyCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#endif
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mUi->mRecurrenceEndCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#else
-    connect(mUi->mRecurrenceEndCombo, qOverload<int, const QString &>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-#endif
     connect(mUi->mEndDurationEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mRecurrenceEndDate, &KDateComboBox::dateChanged, this,
             &IncidenceRecurrence::checkDirtyStatus);
