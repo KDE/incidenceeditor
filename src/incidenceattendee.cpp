@@ -1036,17 +1036,17 @@ void IncidenceAttendee::printDebugInfo() const
                                          << attendee.delegate()
                                          << attendee.delegator()
                                          << "; we have:";
-            for (int i = 0; i < newList.count(); ++i) {
-                KCalendarCore::Attendee attendee = newList[i];
-                qCDebug(INCIDENCEEDITOR_LOG) << "Attendee: " << attendee.email()
-                                             << attendee.name()
-                                             << attendee.status()
-                                             << attendee.RSVP()
-                                             << attendee.role()
-                                             << attendee.uid()
-                                             << attendee.cuType()
-                                             << attendee.delegate()
-                                             << attendee.delegator();
+            for (int i = 0, total = newList.count(); i < total; ++i) {
+                const KCalendarCore::Attendee newAttendee = newList[i];
+                qCDebug(INCIDENCEEDITOR_LOG) << "Attendee: " << newAttendee.email()
+                                             << newAttendee.name()
+                                             << newAttendee.status()
+                                             << newAttendee.RSVP()
+                                             << newAttendee.role()
+                                             << newAttendee.uid()
+                                             << newAttendee.cuType()
+                                             << newAttendee.delegate()
+                                             << newAttendee.delegator();
             }
 
             return;
