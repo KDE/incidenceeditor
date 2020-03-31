@@ -24,7 +24,7 @@
 #define INCIDENCEEDITOR_CONFLICTRESOLVER_H
 
 #include "incidenceeditor_export.h"
-#include "CalendarSupport/FreeBusyItem"
+#include <CalendarSupport/FreeBusyItem>
 
 #include <QBitArray>
 #include <QSet>

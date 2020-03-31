@@ -20,7 +20,7 @@
 
 #include "visualfreebusywidget.h"
 #include "freebusyganttproxymodel.h"
-#include "CalendarSupport/FreeBusyItemModel"
+#include <CalendarSupport/FreeBusyItemModel>
 
 #include <KGantt/KGanttGraphicsView>
 #include <KGantt/KGanttView>

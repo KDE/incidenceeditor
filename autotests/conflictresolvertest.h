@@ -21,7 +21,7 @@
 #ifndef CONFLICTRESOLVERTEST_H
 #define CONFLICTRESOLVERTEST_H
 
-#include "CalendarSupport/FreeBusyItem"
+#include <CalendarSupport/FreeBusyItem>
 
 #include <KCalendarCore/FreeBusy>
 #include <KCalendarCore/Attendee>

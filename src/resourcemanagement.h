@@ -28,7 +28,7 @@
 #include <Libkdepim/LdapClient>
 #include <Libkdepim/LdapClientSearch>
 
-#include "CalendarSupport/FreeBusyCalendar"
+#include <CalendarSupport/FreeBusyCalendar>
 #include "resourceitem.h"
 
 #include <EventViews/ViewCalendar>
