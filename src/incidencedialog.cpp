@@ -45,6 +45,7 @@
 #include <CollectionComboBox>
 #include <Item>
 #include <Akonadi/Calendar/ETMCalendar>
+#include <AkonadiCore/EntityTreeModel>
 
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/MemoryCalendar>
@@ -128,7 +129,7 @@ public:
 IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq)
     : q_ptr(qq)
     , mUi(new Ui::EventOrTodoDesktop)
-    , mCalSelector(new Akonadi::CollectionComboBox)
+    , mCalSelector(new Akonadi::CollectionComboBox(changer->entityTreeModel()))
     , mCloseOnSave(false)
     , mItemManager(new EditorItemManager(this, changer))
     , mEditor(new CombinedIncidenceEditor(qq))
