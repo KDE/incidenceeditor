@@ -82,6 +82,7 @@ ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorI
     mFetchScope.setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
     mFetchScope.setFetchTags(true);
     mFetchScope.tagFetchScope().setFetchIdOnly(false);
+    mFetchScope.setFetchRemoteIdentification(false);
 
     mChanger
         = changer ? changer : new Akonadi::IncidenceChanger(new IndividualMailComponentFactory(
