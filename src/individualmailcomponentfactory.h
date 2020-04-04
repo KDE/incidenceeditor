@@ -26,7 +26,7 @@
 #include "incidenceeditor_export.h"
 
 #include <KIdentityManagement/Identity>
-#include <mailtransportakonadi/messagequeuejob.h>
+#include <MailTransportAkonadi/MessageQueueJob>
 #include <Akonadi/Calendar/IncidenceChanger>
 namespace IncidenceEditorNG {
 class OpenComposerJob;
