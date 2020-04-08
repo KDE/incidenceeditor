@@ -129,7 +129,7 @@ static QStringList getSelectedCategories(AutoCheckTreeWidget *categoriesView)
     QTreeWidgetItemIterator it(categoriesView, QTreeWidgetItemIterator::Checked);
     while (*it) {
         QStringList path = categoriesView->pathByItem(*it++);
-        if (path.count()) {
+        if (!path.isEmpty()) {
             path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\')
                                   +CategoryConfig::categorySeparator);
             categories.append(path.join(CategoryConfig::categorySeparator));

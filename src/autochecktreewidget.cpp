@@ -57,7 +57,7 @@ QTreeWidgetItem *AutoCheckTreeWidget::itemByPath(const QStringList &path) const
     QStringList newPath = path;
     QTreeWidgetItem *item = nullptr;
 
-    while (newPath.count()) {
+    while (!newPath.isEmpty()) {
         item = findItem(item, newPath.takeFirst());
         if (!item) {
             return nullptr;

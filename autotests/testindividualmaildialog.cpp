@@ -67,7 +67,7 @@ private Q_SLOTS:
         first->setCurrentIndex(2);
         QCOMPARE(dialog.editAttendees().count(), 1);
         QCOMPARE(dialog.updateAttendees().count(), 2);
-        QCOMPARE(dialog.editAttendees()[0], attendee1);
+        QCOMPARE(dialog.editAttendees().constFirst(), attendee1);
     }
 };
 
