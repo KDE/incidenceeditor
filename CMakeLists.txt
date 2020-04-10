@@ -21,7 +21,6 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
 
-include(ECMSetupVersion)
 include(FeatureSummary)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
