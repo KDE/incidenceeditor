@@ -110,6 +110,7 @@ install(FILES
 )
 
 add_definitions(-DQT_NO_FOREACH)
+add_definitions(-DQT_NO_KEYWORDS)
 set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(src)
 if (BUILD_TESTING)
