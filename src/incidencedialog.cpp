@@ -129,7 +129,7 @@ public:
 IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq)
     : q_ptr(qq)
     , mUi(new Ui::EventOrTodoDesktop)
-    , mCalSelector(new Akonadi::CollectionComboBox(changer->entityTreeModel()))
+    , mCalSelector(new Akonadi::CollectionComboBox(changer ? changer->entityTreeModel() : nullptr))
     , mCloseOnSave(false)
     , mItemManager(new EditorItemManager(this, changer))
     , mEditor(new CombinedIncidenceEditor(qq))
