@@ -561,7 +561,6 @@ void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemp
             this,
             &IncidenceDateTime::updateStartSpec);
 
-
     // End time
     connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
             &IncidenceDateTime::checkDirtyStatus);

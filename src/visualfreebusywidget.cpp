@@ -328,7 +328,6 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, 
     QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date().startOfDay());
 #endif
 
-
     KGantt::DateTimeGrid *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
     grid->setStartDateTime(horizonStart);
     slotCenterOnStart();
