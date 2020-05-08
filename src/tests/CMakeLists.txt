@@ -10,7 +10,6 @@ target_link_libraries(kincidenceeditor
     KF5::CalendarUtils
     KF5::IncidenceEditor
     KF5::CalendarSupport
-    KF5::KdepimDBusInterfaces
     )
 
 install(TARGETS kincidenceeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

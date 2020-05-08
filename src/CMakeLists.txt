@@ -113,7 +113,6 @@ PUBLIC
 PRIVATE
   KGantt              # For FreeBusy Editor
   KF5::LibkdepimAkonadi
-  KF5::KdepimDBusInterfaces # For UriHandler
   KF5::Codecs
   KF5::Ldap
   KF5::AkonadiWidgets

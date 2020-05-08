@@ -23,7 +23,7 @@
 #include "attachmenticonview.h"
 #include "ui_dialogdesktop.h"
 
-#include <KdepimDBusInterfaces/UriHandler>
+#include <CalendarSupport/UriHandler>
 
 #include <KContacts/VCardDrag>
 
@@ -167,7 +167,7 @@ void IncidenceAttachment::copyToClipboard()
 void IncidenceAttachment::openURL(const QUrl &url)
 {
     QString uri = url.url();
-    UriHandler::process(uri);
+    CalendarSupport::UriHandler::process(uri);
 }
 
 void IncidenceAttachment::pasteFromClipboard()

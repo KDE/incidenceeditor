@@ -16,7 +16,6 @@ macro(IE_UNIT_TESTS)
       KF5::CalendarUtils
       KF5::CalendarCore
       KF5::IncidenceEditor
-      KF5::KdepimDBusInterfaces
       KF5::Libkdepim
     )
   endforeach()
