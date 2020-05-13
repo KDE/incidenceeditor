@@ -521,6 +521,28 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
+    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) &&
+        (mCalSelector->count() > 1) &&
+        (CalendarSupport::KCalPrefs::instance()->defaultCalendarId() == -1)) {
+            const QString collectionName = mCalSelector->currentText();
+            const QString message =
+                xi18nc("@info",
+                      "<para>You have not set a default calendar for your events yet.</para>"
+                      "<para>Setting a default calendar will make creating new events faster and "
+                      "easier with less chance of filing them into the wrong folder.</para>"
+                      "<para>Would you like to set your default events calendar to "
+                      "<resource>%1</resource>?</para>",
+                      collectionName);
+          if (KMessageBox::questionYesNo(q,
+              message,
+              i18nc("@title:window", "Set Default Calendar?"),
+              KStandardGuiItem::yes(), // Make collectionName My Default Calendar
+              KStandardGuiItem::no(),  // Do Not Set a Default Calendar at this Time"
+              QLatin1String("setDefaultCalendarCollection")) == KMessageBox::Yes) {
+              CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
+          }
+    }
+
     if (mCloseOnSave) {
         q->accept();
     } else {
