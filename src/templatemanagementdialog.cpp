@@ -183,7 +183,10 @@ void TemplateManagementDialog::slotRemoveTemplate()
 
     m_templates.removeAll(item->text());
     m_base.m_listBox->takeItem(current);
-    m_base.m_listBox->item(qMax(current - 1, 0))->setSelected(true);
+    QListWidgetItem *newItem = m_base.m_listBox->item(qMax(current - 1, 0));
+    if (newItem) {
+        newItem->setSelected(true);
+    }
 
     updateButtons();
 
