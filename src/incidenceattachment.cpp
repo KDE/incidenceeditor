@@ -35,6 +35,11 @@
 #include <QMenu>
 #include <KMessageBox>
 #include <KProtocolManager>
+#include <kio_version.h>
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
+#include <KIO/JobUiDelegate>
+#include <KIO/OpenUrlJob>
+#endif
 #include <KRun>
 #include <KIO/Job>
 #include <KIO/StoredTransferJob>
@@ -284,10 +289,18 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     if (att.isUri()) {
         openURL(QUrl(att.uri()));
     } else {
+#if KIO_VERSION < QT_VERSION_CHECK(5, 71, 0)
         KRun::RunFlags flags;
         flags |= KRun::DeleteTemporaryFiles;
         flags |= KRun::RunExecutables;
         KRun::runUrl(attitem->tempFileForAttachment(), att.mimeType(), nullptr, flags);
+#else
+        KIO::OpenUrlJob *job = new KIO::OpenUrlJob(attitem->tempFileForAttachment(), att.mimeType());
+        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, mAttachmentView));
+        job->setDeleteTemporaryFile(true);
+        job->setRunExecutables(true);
+        job->start();
+#endif
     }
 }
 
