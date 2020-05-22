@@ -538,7 +538,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
               i18nc("@title:window", "Set Default Calendar?"),
               KStandardGuiItem::yes(), // Make collectionName My Default Calendar
               KStandardGuiItem::no(),  // Do Not Set a Default Calendar at this Time"
-              QLatin1String("setDefaultCalendarCollection")) == KMessageBox::Yes) {
+              QStringLiteral("setDefaultCalendarCollection")) == KMessageBox::Yes) {
               CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
           }
     }
