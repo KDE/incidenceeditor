@@ -163,8 +163,7 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
 #ifndef QT_NO_TOOLTIP
     case QEvent::ToolTip:
     {
-        QHelpEvent *he = static_cast<QHelpEvent *>(event);
-        QToolTip::showText(he->globalPos(), mToolTip, view);
+        QToolTip::showText(event->globalPos(), mToolTip, view);
         return true;
     }
 #endif
@@ -173,8 +172,7 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
         return true;
     case QEvent::WhatsThis:
     {
-        QHelpEvent *he = static_cast<QHelpEvent *>(event);
-        QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
+        QWhatsThis::showText(event->globalPos(), mWhatsThis, view);
         return true;
     }
 #endif
