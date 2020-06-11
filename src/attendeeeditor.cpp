@@ -69,7 +69,7 @@ void AttendeeEditor::slotCalculateTotal()
 
 AttendeeData::List AttendeeEditor::attendees() const
 {
-    const QList<KPIM::MultiplyingLineData::Ptr> dataList = allData();
+    const QVector<KPIM::MultiplyingLineData::Ptr> dataList = allData();
     AttendeeData::List attList;
     //qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
     for (const KPIM::MultiplyingLineData::Ptr &datum : dataList) {
