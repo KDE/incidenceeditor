@@ -97,7 +97,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="KPIM::KWeekdayCheckCombo" name="mWeekdayCombo">
+        <widget class="IncidenceEditorNG::KWeekdayCheckCombo" name="mWeekdayCombo">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -284,9 +284,9 @@
    <header>ktimecombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>KPIM::KWeekdayCheckCombo</class>
+   <class>IncidenceEditorNG::KWeekdayCheckCombo</class>
    <extends>KPIM::KCheckComboBox</extends>
-   <header>Libkdepim/KWeekdayCheckCombo</header>
+   <header>kweekdaycheckcombo.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

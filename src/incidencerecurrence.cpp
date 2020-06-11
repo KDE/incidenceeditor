@@ -113,7 +113,7 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
     connect(mUi->mRecurrenceTypeCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mFrequencyEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mFrequencyEdit, qOverload<int>(&QSpinBox::valueChanged), this, &IncidenceRecurrence::checkDirtyStatus);
-    connect(mUi->mWeekDayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this,
+    connect(mUi->mWeekDayCombo, &IncidenceEditorNG::KWeekdayCheckCombo::checkedItemsChanged, this,
             &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mMonthlyCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mYearlyCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceRecurrence::checkDirtyStatus);

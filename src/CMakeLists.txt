@@ -63,6 +63,7 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   resourcemanagement.cpp
   resourceitem.cpp
   resourcemodel.cpp
+  kweekdaycheckcombo.cpp
 )
 qt5_add_resources(incidenceeditors_ng_shared_LIB_SRCS incidenceeditor.qrc)
 

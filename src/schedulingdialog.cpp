@@ -70,9 +70,9 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
 
     connect(mStartDate, &KDateComboBox::dateEdited, this, &SchedulingDialog::slotStartDateChanged);
 
-    connect(mWeekdayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this,
+    connect(mWeekdayCombo, &IncidenceEditorNG::KWeekdayCheckCombo::checkedItemsChanged, this,
             &SchedulingDialog::slotWeekdaysChanged);
-    connect(mWeekdayCombo, &KPIM::KWeekdayCheckCombo::checkedItemsChanged, this,
+    connect(mWeekdayCombo, &IncidenceEditorNG::KWeekdayCheckCombo::checkedItemsChanged, this,
             &SchedulingDialog::slotMandatoryRolesChanged);
 
     connect(mResolver, &ConflictResolver::freeSlotsAvailable, mPeriodModel,
