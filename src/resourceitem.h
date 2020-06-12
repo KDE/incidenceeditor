@@ -22,7 +22,7 @@
 #ifndef RESOURCEITEM_H
 #define RESOURCEITEM_H
 
-#include <Libkdepim/LdapClient>
+#include <KLDAP/LdapClient>
 
 #include <KLDAP/LdapObject>
 
