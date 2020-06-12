@@ -25,8 +25,8 @@
 
 #include "incidenceeditor_export.h"
 
-#include <Libkdepim/LdapClient>
-#include <Libkdepim/LdapClientSearch>
+#include <KLDAP/LdapClient>
+#include <KLDAP/LdapClientSearch>
 
 #include <CalendarSupport/FreeBusyCalendar>
 #include "resourceitem.h"

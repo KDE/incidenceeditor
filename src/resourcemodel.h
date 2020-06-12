@@ -24,7 +24,7 @@
 
 #include "resourceitem.h"
 
-#include <Libkdepim/LdapClientSearch>
+#include <KLDAP/LdapClientSearch>
 
 #include <QAbstractItemModel>
 #include <QModelIndex>
