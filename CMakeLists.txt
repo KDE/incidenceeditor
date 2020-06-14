@@ -80,10 +80,8 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 ########### Targets ###########
 
 
-if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054700)
-endif()
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054700)
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5IncidenceEditor")
