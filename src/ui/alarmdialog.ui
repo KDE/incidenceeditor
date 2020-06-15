@@ -441,7 +441,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="KPIM::AddresseeLineEdit" name="mEmailAddress">
+        <widget class="PimCommon::AddresseeLineEdit" name="mEmailAddress">
          <property name="toolTip">
           <string>Specify a list of addresses to send email when the reminder triggers.
 If the 'To:' field stays empty the email reminder will be sent to the
@@ -483,9 +483,9 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KPIM::AddresseeLineEdit</class>
+   <class>PimCommon::AddresseeLineEdit</class>
    <extends>KLineEdit</extends>
-   <header>LibkdepimAkonadi/AddresseeLineEdit</header>
+   <header>PimCommonAkonadi/AddresseeLineEdit</header>
   </customwidget>
   <customwidget>
    <class>KLineEdit</class>
@@ -510,7 +510,7 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global">LibkdepimAkonadi/AddresseeLineEdit</include>
+  <include location="global">PimCommonAkonadi/AddresseeLineEdit</include>
  </includes>
  <resources/>
  <connections>

@@ -21,7 +21,7 @@
 #ifndef INCIDENCEEDITOR_ATTENDEELINE_H
 #define INCIDENCEEDITOR_ATTENDEELINE_H
 
-#include <LibkdepimAkonadi/AddresseeLineEdit>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 #include <Libkdepim/MultiplyingLine>
 
 #include <KCalendarCore/Attendee>
@@ -65,7 +65,7 @@ private:
     int mCurrentIndex;
 };
 
-class AttendeeLineEdit : public KPIM::AddresseeLineEdit
+class AttendeeLineEdit : public PimCommon::AddresseeLineEdit
 {
     Q_OBJECT
 public:

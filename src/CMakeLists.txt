@@ -113,7 +113,6 @@ PUBLIC
   KF5::EventViews
 PRIVATE
   KGantt              # For FreeBusy Editor
-  KF5::LibkdepimAkonadi
   KF5::Codecs
   KF5::Ldap
   KF5::AkonadiWidgets
@@ -123,6 +122,9 @@ PRIVATE
   KF5::TextWidgets
   KF5::WidgetsAddons
   KF5::XmlGui
+  KF5::Contacts
+  KF5::Libkdepim
+  KF5::PimCommonAkonadi
 )
 target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/IncidenceEditor/;${KDE_INSTALL_INCLUDEDIR_KF5}/incidenceeditor>")
 target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")

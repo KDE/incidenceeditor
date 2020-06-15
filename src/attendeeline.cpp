@@ -123,7 +123,7 @@ void AttendeeLineEdit::keyPressEvent(QKeyEvent *ev)
     if ((ev->key() == Qt::Key_Enter || ev->key() == Qt::Key_Return)
         && !completionBox()->isVisible()) {
         Q_EMIT downPressed();
-        KPIM::AddresseeLineEdit::keyPressEvent(ev);
+        PimCommon::AddresseeLineEdit::keyPressEvent(ev);
     } else if (ev->key() == Qt::Key_Backspace && text().isEmpty()) {
         ev->accept();
         Q_EMIT deleteMe();
@@ -140,7 +140,7 @@ void AttendeeLineEdit::keyPressEvent(QKeyEvent *ev)
     } else if (ev->key() == Qt::Key_Up) {
         Q_EMIT upPressed();
     } else {
-        KPIM::AddresseeLineEdit::keyPressEvent(ev);
+        PimCommon::AddresseeLineEdit::keyPressEvent(ev);
     }
 }
 
