@@ -112,4 +112,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QCOMPARE(child1_0.data(KGantt::StartTimeRole).toDateTime(), dt3);
     QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child1_1.data(KGantt::StartTimeRole).toDateTime(), dt4);
+    delete fbModel;
+    delete ganttModel;
+    delete modelTest;
 }
