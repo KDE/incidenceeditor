@@ -151,7 +151,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     attrs << QStringLiteral("cn") << QStringLiteral("mail")
           << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn")
           << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
-    ResourceModel *resourcemodel = new ResourceModel(attrs);
+    ResourceModel *resourcemodel = new ResourceModel(attrs, this);
     mUi->treeResults->setModel(resourcemodel);
 
     // This doesn't work till now :(-> that's why i use the click signal

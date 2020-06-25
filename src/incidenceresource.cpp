@@ -120,6 +120,11 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
             &IncidenceResource::updateCount);
 }
 
+IncidenceResource::~IncidenceResource()
+{
+    delete resourceDialog;
+}
+
 void IncidenceResource::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_UNUSED(incidence);
