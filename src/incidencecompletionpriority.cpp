@@ -124,7 +124,11 @@ void IncidenceCompletionPriority::save(const KCalendarCore::Incidence::Ptr &inci
     if (d->mOrigPercentCompleted != -1) {
         todo->setPercentComplete(d->mOrigPercentCompleted);
     } else {
-        todo->setPercentComplete(d->mUi->mCompletionSlider->value());
+        const int pct = d->mUi->mCompletionSlider->value();
+        todo->setPercentComplete(pct);
+        if (pct >= 100) {
+            todo->setCompleted(QDateTime::currentDateTimeUtc());
+        }
     }
     todo->setPriority(d->mUi->mPriorityCombo->currentIndex());
 }
