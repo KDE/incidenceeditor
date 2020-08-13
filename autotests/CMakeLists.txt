@@ -6,7 +6,7 @@ set(grant_lib KGantt)
 
 macro(IE_UNIT_TESTS)
   foreach(_testname ${ARGN})
-    add_executable(${_testname} ${_testname}.cpp modeltest.cpp)
+    add_executable(${_testname} ${_testname}.cpp)
     add_test(NAME ${_testname} COMMAND ${_testname})
     ecm_mark_as_test(${_testname})
     target_link_libraries(${_testname}
@@ -23,7 +23,7 @@ endmacro()
 
 macro(IE_EXECUTABLE_TESTS)
   foreach(_testname ${ARGN})
-    add_executable(${_testname} NOGUI TEST ${_testname}.cpp modeltest.cpp)
+    add_executable(${_testname} NOGUI TEST ${_testname}.cpp)
     target_link_libraries(${_testname} KF5::CalendarCore Qt5::Test KF5::IncidenceEditor Qt5::Widgets)
   endforeach()
 endmacro()

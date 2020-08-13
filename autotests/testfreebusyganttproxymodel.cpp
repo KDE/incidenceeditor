@@ -7,7 +7,6 @@
 
 #include "testfreebusyganttproxymodel.h"
 #include "freebusyganttproxymodel.h"
-#include "modeltest.h"
 
 #include <CalendarSupport/FreeBusyItem>
 #include <CalendarSupport/FreeBusyItemModel>
@@ -15,6 +14,7 @@
 #include <KGantt/KGanttGraphicsView>
 #include <KCalendarCore/Attendee>
 
+#include <QAbstractItemModelTester>
 #include <QTest>
 #include <QStandardPaths>
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
@@ -32,7 +32,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     CalendarSupport::FreeBusyItemModel *fbModel = new CalendarSupport::FreeBusyItemModel();
     FreeBusyGanttProxyModel *ganttModel = new FreeBusyGanttProxyModel();
     ganttModel->setSourceModel(fbModel);
-    ModelTest *modelTest = new ModelTest(ganttModel);
+    auto *modelTest = new QAbstractItemModelTester(ganttModel);
 
     Q_UNUSED(modelTest);
 
