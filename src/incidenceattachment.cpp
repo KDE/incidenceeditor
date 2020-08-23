@@ -22,7 +22,6 @@
 #include <QMenu>
 #include <KMessageBox>
 #include <KProtocolManager>
-#include <kio_version.h>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
 #include <KIO/Job>
