@@ -77,7 +77,7 @@ public:
     IncidenceResource *mIeResource = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
-    QString typeToString(const int type) const;
+    Q_REQUIRED_RESULT QString typeToString(const int type) const;
 
 public:
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
@@ -117,10 +117,8 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     : q_ptr(qq)
     , mUi(new Ui::EventOrTodoDesktop)
     , mCalSelector(new Akonadi::CollectionComboBox(changer ? changer->entityTreeModel() : nullptr))
-    , mCloseOnSave(false)
     , mItemManager(new EditorItemManager(this, changer))
     , mEditor(new CombinedIncidenceEditor(qq))
-    , mInitiallyDirty(false)
 {
     Q_Q(IncidenceDialog);
     mUi->setupUi(q);
