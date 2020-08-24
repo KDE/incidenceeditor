@@ -11,14 +11,8 @@ using namespace IncidenceEditorNG;
 class Q_DECL_HIDDEN AutoCheckTreeWidget::Private
 {
 public:
-    Private()
-        : mAutoCheckChildren(false)
-        , mAutoCheck(true)
-    {
-    }
-
-    bool mAutoCheckChildren;
-    bool mAutoCheck;
+    bool mAutoCheckChildren = false;
+    bool mAutoCheck = true;
 };
 //@endcond
 

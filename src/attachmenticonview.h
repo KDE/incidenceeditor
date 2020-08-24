@@ -43,7 +43,7 @@ public:
     AttachmentIconItem(const KCalendarCore::Attachment &att, QListWidget *parent);
     ~AttachmentIconItem();
 
-    KCalendarCore::Attachment attachment() const;
+    Q_REQUIRED_RESULT KCalendarCore::Attachment attachment() const;
     Q_REQUIRED_RESULT const QString uri() const;
     Q_REQUIRED_RESULT const QString savedUri() const;
     void setUri(const QString &uri);

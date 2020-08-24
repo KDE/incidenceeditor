@@ -15,8 +15,6 @@ using namespace IncidenceEditorNG;
 
 AttendeeTableModel::AttendeeTableModel(QObject *parent)
     : QAbstractTableModel(parent)
-    , mKeepEmpty(false)
-    , mRemoveEmptyLines(false)
 {
 }
 
@@ -277,7 +275,7 @@ ResourceFilterProxyModel::ResourceFilterProxyModel(QObject *parent)
 
 bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
+    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);
     KCalendarCore::Attendee::CuType cuType
         = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
@@ -292,7 +290,7 @@ AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
 
 bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
+    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
                                                    sourceParent);
     KCalendarCore::Attendee::CuType cuType
         = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());

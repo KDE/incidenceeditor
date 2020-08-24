@@ -21,8 +21,6 @@ AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, 
     : QDialog(parent)
     , mUi(new Ui::AlarmDialog)
     , mIncidenceType(incidenceType)
-    , mAllowBeginReminders(true)
-    , mAllowEndReminders(true)
 {
     setWindowTitle(i18nc("@title:window", "Create a new reminder"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

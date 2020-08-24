@@ -55,8 +55,8 @@ private:
 private:
     Ui::AlarmDialog *mUi = nullptr;
     KCalendarCore::Incidence::IncidenceType mIncidenceType;
-    bool mAllowBeginReminders;
-    bool mAllowEndReminders;
+    bool mAllowBeginReminders = true;
+    bool mAllowEndReminders = true;
 };
 }
 

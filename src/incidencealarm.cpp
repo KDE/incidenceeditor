@@ -19,8 +19,6 @@ using namespace CalendarSupport;
 IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
     , mDateTime(dateTime)
-    , mEnabledAlarmCount(0)
-    , mIsTodo(false)
 {
     setObjectName(QStringLiteral("IncidenceAlarm"));
 

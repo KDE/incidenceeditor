@@ -21,7 +21,6 @@ using namespace IncidenceEditorNG;
 
 IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
-    , mDirty(false)
 {
     setObjectName(QStringLiteral("IncidenceCategories"));
 

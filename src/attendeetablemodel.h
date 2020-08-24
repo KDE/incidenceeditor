@@ -70,8 +70,8 @@ private:
 
     KCalendarCore::Attendee::List mAttendeeList;
     std::vector<AvailableStatus> mAttendeeAvailable;
-    bool mKeepEmpty;
-    bool mRemoveEmptyLines;
+    bool mKeepEmpty = false;
+    bool mRemoveEmptyLines = false;
 };
 
 class ResourceFilterProxyModel : public QSortFilterProxyModel

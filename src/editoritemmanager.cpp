@@ -61,8 +61,6 @@ public:
 
 ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq)
     : q_ptr(qq)
-    , mItemMonitor(nullptr)
-    , mIsCounterProposal(false)
     , currentAction(EditorItemManager::None)
 {
     mFetchScope.fetchFullPayload();

@@ -18,8 +18,6 @@ class IncidenceCompletionPriority::Private
 public:
     explicit Private(IncidenceCompletionPriority *parent)
         : q(parent)
-        , mUi(nullptr)
-        , mOrigPercentCompleted(-1)
     {
     }
 
