@@ -43,7 +43,6 @@ using namespace IncidenceEditorNG;
 IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
     , mParentWidget(parent)
-    , mConflictResolver(nullptr)
     , mDateTime(dateTime)
     , mStateDelegate(new AttendeeComboBoxDelegate(this))
     , mRoleDelegate(new AttendeeComboBoxDelegate(this))

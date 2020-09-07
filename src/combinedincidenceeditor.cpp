@@ -15,7 +15,6 @@ using namespace IncidenceEditorNG;
 
 CombinedIncidenceEditor::CombinedIncidenceEditor(QWidget *parent)
     : IncidenceEditor(parent)
-    , mDirtyEditorCount(0)
 {
 }
 

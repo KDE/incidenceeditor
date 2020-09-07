@@ -112,8 +112,8 @@ protected:
 protected:
     KCalendarCore::Incidence::Ptr mLoadedIncidence;
     mutable QString mLastErrorString;
-    bool mWasDirty;
-    bool mLoadingIncidence;
+    bool mWasDirty = false;
+    bool mLoadingIncidence = false;
 };
 } // IncidenceEditorNG
 

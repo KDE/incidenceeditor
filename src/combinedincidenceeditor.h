@@ -55,7 +55,7 @@ Q_SIGNALS:
 private:
     void handleDirtyStatusChange(bool isDirty);
     QVector<IncidenceEditor *> mCombinedEditors;
-    int mDirtyEditorCount;
+    int mDirtyEditorCount = 0;
 };
 }
 

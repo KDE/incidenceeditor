@@ -49,7 +49,7 @@ Q_SIGNALS:
 private:
     QStringList mCategoryList;
     CategorySelectWidgetBase *mWidgets = nullptr;
-    CalendarSupport::CategoryConfig *mCategoryConfig = nullptr;
+    CalendarSupport::CategoryConfig * const mCategoryConfig;
 };
 
 class CategorySelectDialog : public QDialog

@@ -19,7 +19,6 @@ using namespace IncidenceEditorNG;
 
 AttendeeComboBoxDelegate::AttendeeComboBoxDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
-    , mStandardIndex(0)
 {
     connect(this, &AttendeeComboBoxDelegate::closeEditor, this,
             &AttendeeComboBoxDelegate::doCloseEditor);

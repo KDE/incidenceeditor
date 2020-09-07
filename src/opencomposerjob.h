@@ -27,9 +27,9 @@ public:
 private:
     QString mDBusService;
     QString mError;
-    QString mTo, mCc, mBcc;
-    KMime::Message::Ptr mMessage;
-    KIdentityManagement::Identity mIdentity;
+    const QString mTo, mCc, mBcc;
+    const KMime::Message::Ptr mMessage;
+    const KIdentityManagement::Identity mIdentity;
 };
 }
 #endif

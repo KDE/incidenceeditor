@@ -14,7 +14,6 @@ using namespace IncidenceEditorNG;
 
 ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     : QAbstractItemModel(parent)
-    , foundCollection(false)
 {
     this->headers = headers;
     rootItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(), headers, KLDAP::LdapClient(0)));

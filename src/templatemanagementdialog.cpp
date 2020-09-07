@@ -26,7 +26,6 @@ TemplateManagementDialog::TemplateManagementDialog(
     : QDialog(parent)
     , m_templates(templates)
     , m_type(incidenceType)
-    , m_changed(false)
 {
     QString m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));

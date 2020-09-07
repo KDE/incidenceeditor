@@ -13,8 +13,6 @@ using namespace IncidenceEditorNG;
 
 IncidenceEditor::IncidenceEditor(QObject *parent)
     : QObject(parent)
-    , mWasDirty(false)
-    , mLoadingIncidence(false)
 {
 }
 

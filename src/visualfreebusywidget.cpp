@@ -125,8 +125,6 @@ public:
 
 VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)
     : QWidget(parent)
-    , mGanttGrid(nullptr)
-    , mScaleCombo(nullptr)
 {
     QVBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setSpacing(spacing);

@@ -44,7 +44,7 @@ private:
     QString stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm);
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 
     KCalendarCore::Alarm::List mAlarms;
     IncidenceDateTime *mDateTime = nullptr;

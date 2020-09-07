@@ -56,7 +56,7 @@ private:
     QString mToolTip;
     QString mWhatsThis;
     /**fallback index */
-    int mStandardIndex;
+    int mStandardIndex = 0;
 };
 }
 

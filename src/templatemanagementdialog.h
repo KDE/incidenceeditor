@@ -52,7 +52,7 @@ private:
     QStringList m_templates;
     QString m_type;
     QString m_newTemplate;
-    bool m_changed;
+    bool m_changed = false;
 };
 }
 

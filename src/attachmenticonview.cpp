@@ -118,7 +118,7 @@ QPixmap AttachmentIconItem::icon() const
 
 QPixmap AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
 {
-    QString iconStr = mimeType.iconName();
+    const QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
         overlays << QStringLiteral("emblem-link");

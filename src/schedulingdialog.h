@@ -56,7 +56,7 @@ private:
     int mDuration; //!< In seconds
 
     ConflictResolver *mResolver = nullptr;
-    CalendarSupport::FreePeriodModel *mPeriodModel = nullptr;
+    CalendarSupport::FreePeriodModel *const mPeriodModel;
     VisualFreeBusyWidget *mVisualWidget = nullptr;
 };
 }

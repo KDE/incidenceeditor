@@ -27,7 +27,6 @@ typedef QPair<QString, QIcon> TextIconPair;
 AttendeeComboBox::AttendeeComboBox(QWidget *parent)
     : QToolButton(parent)
     , mMenu(new QMenu(this))
-    , mCurrentIndex(-1)
 {
     setPopupMode(QToolButton::InstantPopup);
     setToolButtonStyle(Qt::ToolButtonIconOnly);

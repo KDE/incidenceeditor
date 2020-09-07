@@ -53,8 +53,8 @@ private:
     void fillCombo();
 
 private:
-    Ui::AlarmDialog *mUi = nullptr;
-    KCalendarCore::Incidence::IncidenceType mIncidenceType;
+    Ui::AlarmDialog *const mUi;
+    const KCalendarCore::Incidence::IncidenceType mIncidenceType;
     bool mAllowBeginReminders = true;
     bool mAllowEndReminders = true;
 };

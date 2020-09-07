@@ -24,8 +24,6 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::
     , mUpdate(update)
     , mEdit(edit)
     , mIdentity(identity)
-    , mQueueJob(nullptr)
-    , mComposerJob(nullptr)
 {
 }
 

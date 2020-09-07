@@ -70,7 +70,7 @@ private:
 
 private:
     AttachmentIconView *mAttachmentView = nullptr;
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 
     QMenu *mPopupMenu = nullptr;
     QAction *mOpenAction = nullptr;

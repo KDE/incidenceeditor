@@ -127,7 +127,7 @@ private:
     /** used dataModel to rely on*/
     AttendeeTableModel *mDataModel = nullptr;
     AttendeeLineEditDelegate *mAttendeeDelegate = nullptr;
-    AttendeeComboBoxDelegate *mStateDelegate = nullptr;
+    AttendeeComboBoxDelegate *const mStateDelegate;
     AttendeeComboBoxDelegate *mRoleDelegate = nullptr;
     AttendeeComboBoxDelegate *mResponseDelegate = nullptr;
 

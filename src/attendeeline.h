@@ -49,7 +49,7 @@ private:
     void slotActionTriggered();
     QMenu *mMenu = nullptr;
     QVector<QPair<QString, QIcon> > mList;
-    int mCurrentIndex;
+    int mCurrentIndex = -1;
 };
 
 class AttendeeLineEdit : public PimCommon::AddresseeLineEdit

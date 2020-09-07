@@ -92,7 +92,7 @@ private:
     /* Is the search of collections ended
      *
      */
-    bool foundCollection;
+    bool foundCollection = false;
 
     /* List of all attributes in LDAP an the headers of the model
      *

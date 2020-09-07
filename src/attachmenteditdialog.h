@@ -43,7 +43,7 @@ private:
     KCalendarCore::Attachment mAttachment;
     AttachmentIconItem *mItem = nullptr;
     QMimeType mMimeType;
-    Ui::AttachmentEditDialog *mUi = nullptr;
+    Ui::AttachmentEditDialog *const mUi;
     QPushButton *mOkButton = nullptr;
 };
 }
