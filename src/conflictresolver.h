@@ -98,8 +98,6 @@ public:
     */
     Q_REQUIRED_RESULT bool findFreeSlot(const KCalendarCore::Period &dateTimeRange);
 
-    Q_REQUIRED_RESULT QList<CalendarSupport::FreeBusyItem::Ptr> freeBusyItems() const;
-
     CalendarSupport::FreeBusyItemModel *model() const;
 
 Q_SIGNALS:
