@@ -9,7 +9,6 @@
 
 #include <KLocalizedString>
 
-#include <QTimeZone>
 #include <QVector>
 
 using namespace IncidenceEditorNG;

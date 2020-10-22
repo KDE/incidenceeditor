@@ -16,7 +16,6 @@
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
 
-#include <QCompleter>
 
 using namespace IncidenceEditorNG;
 

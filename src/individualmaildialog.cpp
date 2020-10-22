@@ -9,9 +9,7 @@
 #include <KGuiItem>
 #include <KLocalizedString>
 
-#include <QDialogButtonBox>
 #include <QGridLayout>
-#include <QComboBox>
 #include <QLabel>
 #include <QPushButton>
 

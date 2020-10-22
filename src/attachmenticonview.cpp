@@ -25,7 +25,6 @@
 #include <QKeyEvent>
 #include <QMimeData>
 #include <QMimeDatabase>
-#include <QMimeType>
 
 using namespace IncidenceEditorNG;
 

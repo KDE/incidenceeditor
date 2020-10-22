@@ -9,7 +9,6 @@
 
 #include <CalendarSupport/KCalPrefs>
 
-#include <KCalendarCore/Alarm>
 
 #include <KLocalizedString>
 

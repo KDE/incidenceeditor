@@ -8,7 +8,6 @@
 #include "ui_resourcemanagement.h"
 #include "resourcemodel.h"
 #include <CalendarSupport/FreeBusyItem>
-#include <CalendarSupport/FreeBusyCalendar>
 #include "ldaputils.h"
 
 #include "freebusyganttproxymodel.h"
@@ -16,7 +15,6 @@
 #include <Akonadi/Calendar/FreeBusyManager>
 
 #include <EventViews/AgendaView>
-#include <EventViews/ViewCalendar>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/MemoryCalendar>

@@ -10,7 +10,6 @@
 #include "ui_dialogdesktop.h"
 
 #include "incidenceeditor_debug.h"
-#include <KLocalizedString>
 #include <QLocale>
 
 using namespace IncidenceEditorNG;

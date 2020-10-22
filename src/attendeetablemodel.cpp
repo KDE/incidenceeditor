@@ -6,7 +6,6 @@
 
 #include "attendeetablemodel.h"
 
-#include <KCalendarCore/Attendee>
 #include <KEmailAddress>
 
 #include <KLocalizedString>
