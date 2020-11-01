@@ -56,6 +56,8 @@ public:
     Q_REQUIRED_RESULT bool startDateTimeEnabled() const;
     Q_REQUIRED_RESULT bool endDateTimeEnabled() const;
 
+    void focusInvalidField() override;
+
     Q_REQUIRED_RESULT bool isValid() const override;
     void printDebugInfo() const override;
 

@@ -58,3 +58,17 @@ target_link_libraries(testindividualmaildialog
   KF5::WidgetsAddons
   KF5::I18n
 )
+
+add_executable(incidencedatetimetest incidencedatetimetest.cpp
+  ../src/combinedincidenceeditor.cpp
+  ../src/incidencedatetime.cpp
+  ../src/incidenceeditor_debug.cpp)
+add_test(NAME incidencedatetimetest COMMAND incidencedatetimetest)
+ecm_mark_as_test(incidencedatetimetest)
+target_link_libraries(incidencedatetimetest
+  Qt5::Test
+  Qt5::Widgets
+  KF5::Completion
+  KF5::IncidenceEditor
+  KF5::WidgetsAddons
+)

@@ -886,20 +886,65 @@ bool IncidenceDateTime::endDateTimeEnabled() const
     return mUi->mEndCheck->isChecked();
 }
 
+
+void IncidenceDateTime::focusInvalidField()
+{
+    if (startDateTimeEnabled()) {
+        if (!mUi->mStartDateEdit->isValid()) {
+            mUi->mStartDateEdit->setFocus();
+            return;
+        }
+        if (!mUi->mWholeDayCheck->isChecked() && !mUi->mStartTimeEdit->isValid()) {
+            mUi->mStartTimeEdit->setFocus();
+            return;
+        }
+    }
+    if (endDateTimeEnabled()) {
+        if (!mUi->mEndDateEdit->isValid()) {
+            mUi->mEndDateEdit->setFocus();
+            return;
+        }
+        if (!mUi->mWholeDayCheck->isChecked() && !mUi->mEndTimeEdit->isValid()) {
+            mUi->mEndTimeEdit->setFocus();
+            return;
+        }
+    }
+    if (startDateTimeEnabled() && endDateTimeEnabled()
+        && currentStartDateTime() > currentEndDateTime()) {
+        if (mUi->mEndDateEdit->date() < mUi->mStartDateEdit->date()) {
+            mUi->mEndDateEdit->setFocus();
+        } else {
+            mUi->mEndTimeEdit->setFocus();
+        }
+    }
+}
+
 bool IncidenceDateTime::isValid() const
 {
-    if (startDateTimeEnabled() && !currentStartDateTime().isValid()) {
-        mLastErrorString = i18nc("@info",
-                                 "Invalid start date and time.");
-        qCWarning(INCIDENCEEDITOR_LOG) << "Start date is invalid";
-        return false;
+    if (startDateTimeEnabled()) {
+        if (!mUi->mStartDateEdit->isValid()) {
+            mLastErrorString = i18nc("@info", "Invalid start date.");
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
+            return false;
+        }
+        if (!mUi->mWholeDayCheck->isChecked() && !mUi->mStartTimeEdit->isValid()) {
+            mLastErrorString = i18nc("@info", "Invalid start time.");
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
+            return false;
+        }
     }
 
-    if (endDateTimeEnabled() && !currentEndDateTime().isValid()) {
-        mLastErrorString = i18nc("@info",
-                                 "Invalid end date and time.");
-        qCWarning(INCIDENCEEDITOR_LOG) << "End date is invalid";
-        return false;
+    if (endDateTimeEnabled()) {
+        if (!mUi->mEndDateEdit->isValid()) {
+            mLastErrorString = i18nc("@info", "Invalid end date.");
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
+            return false;
+        }
+        if (!mUi->mWholeDayCheck->isChecked() && !mUi->mEndTimeEdit->isValid()) {
+            mLastErrorString = i18nc("@info", "Invalid end time.");
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
+            return false;
+        }
     }
 
     if (startDateTimeEnabled() && endDateTimeEnabled()
