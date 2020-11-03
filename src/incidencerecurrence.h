@@ -44,6 +44,8 @@ public:
     Q_REQUIRED_RESULT bool isDirty() const override;
     Q_REQUIRED_RESULT bool isValid() const override;
 
+    void focusInvalidField() override;
+
     Q_REQUIRED_RESULT RecurrenceType currentRecurrenceType() const;
 
 Q_SIGNALS:

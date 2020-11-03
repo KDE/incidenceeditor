@@ -398,6 +398,18 @@ bool IncidenceRecurrence::isDirty() const
     return false;
 }
 
+void IncidenceRecurrence::focusInvalidField()
+{
+    KCalendarCore::Incidence::Ptr incidence(mLoadedIncidence->clone());
+    writeToIncidence(incidence);
+    if (incidence->recurs()) {
+        if (mUi->mRecurrenceEndCombo->currentIndex() == RecurrenceEndOn
+            && !mUi->mRecurrenceEndDate->date().isValid()) {
+            mUi->mRecurrenceEndDate->setFocus();
+        }
+    }
+}
+
 bool IncidenceRecurrence::isValid() const
 {
     mLastErrorString.clear();
@@ -435,7 +447,8 @@ bool IncidenceRecurrence::isValid() const
 
         if (mUi->mRecurrenceEndCombo->currentIndex() == RecurrenceEndOn
             && !mUi->mRecurrenceEndDate->date().isValid()) {
-            qCWarning(INCIDENCEEDITOR_LOG) << "Recurrence end date is invalid."; // TODO: strings after freeze
+            mLastErrorString = i18nc("@info", "The recurrence end date is invalid.");
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
             return false;
         }
     }
