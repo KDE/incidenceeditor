@@ -21,7 +21,7 @@ AttendeeEditor::AttendeeEditor(QWidget *parent)
 
 void AttendeeEditor::slotLineAdded(KPIM::MultiplyingLine *line)
 {
-    AttendeeLine *att = qobject_cast<AttendeeLine *>(line);
+    auto *att = qobject_cast<AttendeeLine *>(line);
     if (!att) {
         return;
     }
@@ -38,7 +38,7 @@ void AttendeeEditor::slotCalculateTotal()
 
     const QList<KPIM::MultiplyingLine *> listLines = lines();
     for (KPIM::MultiplyingLine *line : listLines) {
-        AttendeeLine *att = qobject_cast<AttendeeLine *>(line);
+        auto *att = qobject_cast<AttendeeLine *>(line);
         if (att) {
             if (att->isEmpty()) {
                 ++empty;
@@ -83,7 +83,7 @@ void AttendeeEditor::setActions(AttendeeLine::AttendeeActions actions)
 {
     const QList<KPIM::MultiplyingLine *> listLines = lines();
     for (KPIM::MultiplyingLine *line : listLines) {
-        AttendeeLine *att = qobject_cast<AttendeeLine *>(line);
+        auto *att = qobject_cast<AttendeeLine *>(line);
         att->setActions(actions);
     }
 }

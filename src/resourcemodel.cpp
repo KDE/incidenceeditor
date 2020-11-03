@@ -78,7 +78,7 @@ Qt::ItemFlags ResourceModel::flags(const QModelIndex &index) const
 ResourceItem *ResourceModel::getItem(const QModelIndex &index) const
 {
     if (index.isValid()) {
-        ResourceItem *item = static_cast<ResourceItem *>(index.internalPointer());
+        auto *item = static_cast<ResourceItem *>(index.internalPointer());
         if (item) {
             return item;
         }

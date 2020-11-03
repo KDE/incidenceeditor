@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    ResourceManagement *dialog = new ResourceManagement();
+    auto *dialog = new ResourceManagement();
 
     dialog->show();
 

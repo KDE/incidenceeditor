@@ -78,7 +78,7 @@ void IncidenceAttachment::save(const KCalendarCore::Incidence::Ptr &incidence)
 
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *item = mAttachmentView->item(itemIndex);
-        AttachmentIconItem *attitem = dynamic_cast<AttachmentIconItem *>(item);
+        auto *attitem = dynamic_cast<AttachmentIconItem *>(item);
         Q_ASSERT(item);
         incidence->addAttachment(attitem->attachment());
     }
@@ -173,7 +173,7 @@ void IncidenceAttachment::removeSelectedAttachments()
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *it = mAttachmentView->item(itemIndex);
         if (it->isSelected()) {
-            AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(it);
+            auto *attitem = static_cast<AttachmentIconItem *>(it);
             if (attitem) {
                 const KCalendarCore::Attachment att = attitem->attachment();
                 labels << att.label();
@@ -221,7 +221,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     Q_ASSERT(item);
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-    AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
+    auto *attitem = static_cast<AttachmentIconItem *>(item);
     if (attitem->attachment().isEmpty()) {
         return;
     }
@@ -263,7 +263,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
 {
     Q_ASSERT(item);
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
-    AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
+    auto *attitem = static_cast<AttachmentIconItem *>(item);
     if (attitem->attachment().isEmpty()) {
         return;
     }
@@ -329,7 +329,7 @@ void IncidenceAttachment::editSelectedAttachments()
         if (item->isSelected()) {
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-            AttachmentIconItem *attitem = static_cast<AttachmentIconItem *>(item);
+            auto *attitem = static_cast<AttachmentIconItem *>(item);
             if (attitem->attachment().isEmpty()) {
                 return;
             }
@@ -551,7 +551,7 @@ void IncidenceAttachment::setupAttachmentIconView()
     connect(mAttachmentView, &AttachmentIconView::customContextMenuRequested, this,
             &IncidenceAttachment::showContextMenu);
 
-    QGridLayout *layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
+    auto *layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mAttachmentView);
 }

@@ -175,9 +175,9 @@ void IncidenceRecurrence::load(const KCalendarCore::Incidence::Ptr &incidence)
     {
         mUi->mRecurrenceTypeCombo->setCurrentIndex(RecurrenceTypeWeekly);
         handleRecurrenceTypeChange(RecurrenceTypeWeekly);
-        QBitArray disableDays(7 /*size*/, 0 /*default value*/);
+        QBitArray disableDays(7 /*size*/, false /*default value*/);
         // dayOfWeek returns between 1 and 7
-        disableDays.setBit(currentDate().dayOfWeek() - 1, 1);
+        disableDays.setBit(currentDate().dayOfWeek() - 1, true);
         mUi->mWeekDayCombo->setDays(r->days(), disableDays);
         setFrequency(f);
         break;
@@ -845,10 +845,10 @@ void IncidenceRecurrence::setDefaults()
     // -1 because we want between 0 and 6
     const int day = currentDate().dayOfWeek() - 1;
 
-    QBitArray checkDays(7, 0);
+    QBitArray checkDays(7, false);
     checkDays.setBit(day);
 
-    QBitArray disableDays(7, 0);
+    QBitArray disableDays(7, false);
     disableDays.setBit(day);
 
     mUi->mWeekDayCombo->setDays(checkDays, disableDays);

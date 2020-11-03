@@ -54,7 +54,7 @@ void AttendeeComboBoxDelegate::setStandardIndex(int index)
 
 QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem & /* option */, const QModelIndex & /* index */) const
 {
-    AttendeeComboBox *editor = new AttendeeComboBox(parent);
+    auto *editor = new AttendeeComboBox(parent);
 
     for (const QPair<QIcon, QString> &pair : qAsConst(mEntries)) {
         editor->addItem(pair.first, pair.second);
@@ -71,7 +71,7 @@ QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOpt
 
 void AttendeeComboBoxDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
+    auto *comboBox = static_cast<AttendeeComboBox *>(editor);
     int value = index.model()->data(index, Qt::EditRole).toUInt();
     if (value >= mEntries.count()) {
         value = mStandardIndex;
@@ -81,7 +81,7 @@ void AttendeeComboBoxDelegate::setEditorData(QWidget *editor, const QModelIndex 
 
 void AttendeeComboBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
+    auto *comboBox = static_cast<AttendeeComboBox *>(editor);
     model->setData(index, comboBox->currentIndex(), Qt::EditRole);
     comboBox->menu()->close();
 }
@@ -111,7 +111,7 @@ void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewIt
 bool AttendeeComboBoxDelegate::eventFilter(QObject *editor, QEvent *event)
 {
     if (event->type() == QEvent::Enter) {
-        AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
+        auto *comboBox = static_cast<AttendeeComboBox *>(editor);
         comboBox->showMenu();
         return editor->eventFilter(editor, event);
     }
@@ -121,7 +121,7 @@ bool AttendeeComboBoxDelegate::eventFilter(QObject *editor, QEvent *event)
 
 void AttendeeComboBoxDelegate::doCloseEditor(QWidget *editor)
 {
-    AttendeeComboBox *comboBox = static_cast<AttendeeComboBox *>(editor);
+    auto *comboBox = static_cast<AttendeeComboBox *>(editor);
     comboBox->menu()->close();
 }
 

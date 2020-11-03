@@ -243,7 +243,7 @@ MailTransport::MessageQueueJob *IndividualMailComponentFactory::createMessageQue
 Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHanderDialogDelegate(
     const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
 {
-    IndividualMailITIPHandlerDialogDelegate *askDelegator
+    auto *askDelegator
         = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
     connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setEdit, this,
             &IndividualMailComponentFactory::onSetEdit);

@@ -111,7 +111,7 @@ void ItemEditorPrivate::itemFetchResult(KJob *job)
         return;
     }
 
-    Akonadi::ItemFetchJob *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
+    auto *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
     if (fetchJob->items().isEmpty()) {
         mItemUi->reject(ItemEditorUi::ItemFetchFailed);
         return;
@@ -144,7 +144,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     Q_Q(EditorItemManager);
 
     if (job->error()) {
-        Akonadi::ItemMoveJob *moveJob = qobject_cast<Akonadi::ItemMoveJob *>(job);
+        auto *moveJob = qobject_cast<Akonadi::ItemMoveJob *>(job);
         Q_ASSERT(moveJob);
         Q_UNUSED(moveJob);
         //Q_ASSERT(!moveJob->items().isEmpty());
@@ -227,7 +227,7 @@ void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteA
         dlg->addButton(i18n("Ignore and Overwrite changes"), QMessageBox::RejectRole);
 
         if (dlg->exec() == QMessageBox::AcceptRole) {
-            Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(mItem);
+            auto *job = new Akonadi::ItemFetchJob(mItem);
             job->setFetchScope(mFetchScope);
 
             mItem = item;
@@ -294,7 +294,7 @@ void EditorItemManager::load(const Akonadi::Item &item)
     Q_D(ItemEditor);
 
     //We fetch anyways to make sure we have everything required including tags
-    Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(item, this);
+    auto *job = new Akonadi::ItemFetchJob(item, this);
     job->setFetchScope(d->mFetchScope);
     connect(job, SIGNAL(result(KJob*)), SLOT(itemFetchResult(KJob*)));
 }

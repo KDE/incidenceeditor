@@ -142,7 +142,7 @@ void IncidenceDescription::setupToolBar()
     KActionCollection *collection = new KActionCollection(this);
     mUi->mDescriptionEdit->richTextComposer()->createActions(collection);
 
-    KToolBar *mEditToolBar = new KToolBar(mUi->mEditToolBarPlaceHolder);
+    auto *mEditToolBar = new KToolBar(mUi->mEditToolBarPlaceHolder);
     mEditToolBar->setToolButtonStyle(Qt::ToolButtonIconOnly);
     mEditToolBar->addAction(collection->action(QStringLiteral("format_text_bold")));
     mEditToolBar->addAction(collection->action(QStringLiteral("format_text_italic")));
@@ -172,7 +172,7 @@ void IncidenceDescription::setupToolBar()
     mEditToolBar->addAction(collection->action(QStringLiteral("manage_link")));
     mUi->mDescriptionEdit->richTextComposer()->setEnableActions(false);
 
-    QGridLayout *layout = new QGridLayout(mUi->mEditToolBarPlaceHolder);
+    auto *layout = new QGridLayout(mUi->mEditToolBarPlaceHolder);
     layout->addWidget(mEditToolBar);
 #endif
 

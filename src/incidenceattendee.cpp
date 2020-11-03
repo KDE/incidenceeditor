@@ -80,7 +80,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
 
     setObjectName(QStringLiteral("IncidenceAttendee"));
 
-    AttendeeFilterProxyModel *filterProxyModel = new AttendeeFilterProxyModel(this);
+    auto *filterProxyModel = new AttendeeFilterProxyModel(this);
     filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(mDataModel);
 
@@ -368,7 +368,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &
     mGroupList.remove(attendee.uid());
 
     if (!fullname.isEmpty()) {
-        Akonadi::ContactGroupSearchJob *job = new Akonadi::ContactGroupSearchJob();
+        auto *job = new Akonadi::ContactGroupSearchJob();
         job->setQuery(Akonadi::ContactGroupSearchJob::Name, fullname);
         connect(job, &Akonadi::ContactGroupSearchJob::result, this,
                 &IncidenceAttendee::groupSearchResult);
@@ -379,7 +379,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &
 
 void IncidenceAttendee::groupSearchResult(KJob *job)
 {
-    Akonadi::ContactGroupSearchJob *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
+    auto *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
     Q_ASSERT(searchJob);
 
     Q_ASSERT(mMightBeGroupJobs.contains(job));
@@ -410,7 +410,7 @@ void IncidenceAttendee::updateGroupExpand()
 void IncidenceAttendee::slotGroupSubstitutionPressed()
 {
     for (auto it = mGroupList.cbegin(), end = mGroupList.cend(); it != end; ++it) {
-        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(it.value(), this);
+        auto *expandJob = new Akonadi::ContactGroupExpandJob(it.value(), this);
         connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this,
                 &IncidenceAttendee::expandResult);
         mExpandGroupJobs.insert(expandJob, it.key());
@@ -420,7 +420,7 @@ void IncidenceAttendee::slotGroupSubstitutionPressed()
 
 void IncidenceAttendee::expandResult(KJob *job)
 {
-    Akonadi::ContactGroupExpandJob *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
+    auto *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
     Q_ASSERT(expandJob);
     Q_ASSERT(mExpandGroupJobs.contains(job));
     const auto uid = mExpandGroupJobs.take(job);

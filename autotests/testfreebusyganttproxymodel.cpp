@@ -29,8 +29,8 @@ void FreeBusyGanttProxyModelTest::initTestCase()
 
 void FreeBusyGanttProxyModelTest::testModelValidity()
 {
-    CalendarSupport::FreeBusyItemModel *fbModel = new CalendarSupport::FreeBusyItemModel();
-    FreeBusyGanttProxyModel *ganttModel = new FreeBusyGanttProxyModel();
+    auto *fbModel = new CalendarSupport::FreeBusyItemModel();
+    auto *ganttModel = new FreeBusyGanttProxyModel();
     ganttModel->setSourceModel(fbModel);
     auto *modelTest = new QAbstractItemModelTester(ganttModel);
 

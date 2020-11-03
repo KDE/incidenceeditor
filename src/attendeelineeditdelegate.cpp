@@ -31,7 +31,7 @@ QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOpt
 {
     Q_UNUSED(option);
     Q_UNUSED(index);
-    AttendeeLineEdit *editor = new AttendeeLineEdit(parent);
+    auto *editor = new AttendeeLineEdit(parent);
     connect(editor, &AttendeeLineEdit::leftPressed, this, &AttendeeLineEditDelegate::leftPressed);
     connect(editor, &AttendeeLineEdit::rightPressed, this, &AttendeeLineEditDelegate::rightPressed);
     editor->setToolTip(mToolTip);
@@ -44,13 +44,13 @@ QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOpt
 
 void AttendeeLineEditDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-    AttendeeLineEdit *lineedit = static_cast<AttendeeLineEdit *>(editor);
+    auto *lineedit = static_cast<AttendeeLineEdit *>(editor);
     lineedit->setText(index.model()->data(index, Qt::EditRole).toString());
 }
 
 void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
-    AttendeeLineEdit *lineedit = static_cast<AttendeeLineEdit *>(editor);
+    auto *lineedit = static_cast<AttendeeLineEdit *>(editor);
     model->setData(index, lineedit->text(), Qt::EditRole);
 }
 
@@ -86,7 +86,7 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
 #ifndef QT_NO_TOOLTIP
     case QEvent::ToolTip:
     {
-        QHelpEvent *he = static_cast<QHelpEvent *>(event);
+        auto *he = static_cast<QHelpEvent *>(event);
         QToolTip::showText(he->globalPos(), mToolTip, view);
         return true;
     }
@@ -96,7 +96,7 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
         return true;
     case QEvent::WhatsThis:
     {
-        QHelpEvent *he = static_cast<QHelpEvent *>(event);
+        auto *he = static_cast<QHelpEvent *>(event);
         QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
         return true;
     }
