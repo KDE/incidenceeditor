@@ -34,6 +34,7 @@ public:
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
     Q_REQUIRED_RESULT bool isValid() const override;
+    void focusInvalidField() override;
     virtual void validate();
 
 private:

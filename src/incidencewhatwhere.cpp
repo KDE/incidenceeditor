@@ -62,6 +62,13 @@ bool IncidenceWhatWhere::isDirty() const
     }
 }
 
+void IncidenceWhatWhere::focusInvalidField()
+{
+    if (mUi->mSummaryEdit->text().isEmpty()) {
+        mUi->mSummaryEdit->setFocus();
+    }
+}
+
 bool IncidenceWhatWhere::isValid() const
 {
     if (mUi->mSummaryEdit->text().isEmpty()) {
