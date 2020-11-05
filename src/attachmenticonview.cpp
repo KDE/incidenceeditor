@@ -133,7 +133,7 @@ void AttachmentIconItem::readAttachment()
 
     QMimeDatabase db;
     if (mAttachment.mimeType().isEmpty()
-        || !(db.mimeTypeForName(mAttachment.mimeType()).isDefault())) {
+        || !(db.mimeTypeForName(mAttachment.mimeType()).isValid())) {
         QMimeType mimeType;
         if (mAttachment.isUri()) {
             mimeType = db.mimeTypeForUrl(QUrl(mAttachment.uri()));
