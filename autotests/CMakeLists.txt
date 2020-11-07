@@ -63,6 +63,7 @@ add_executable(incidencedatetimetest incidencedatetimetest.cpp
   ../src/combinedincidenceeditor.cpp
   ../src/incidencedatetime.cpp
   ../src/incidenceeditor_debug.cpp)
+ecm_mark_nongui_executable(incidencedatetimetest)
 add_test(NAME incidencedatetimetest COMMAND incidencedatetimetest)
 ecm_mark_as_test(incidencedatetimetest)
 target_link_libraries(incidencedatetimetest

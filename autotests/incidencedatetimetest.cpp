@@ -76,9 +76,13 @@ private Q_SLOTS:
         endTime->setCurrentText(QStringLiteral("12:00:00"));
         QVERIFY(editor->isValid());
 
+        endDate->setDate(startDate->date().addDays(-1));
+        endTime->setTime(startTime->time());
+        QVERIFY2(!editor->isValid(), "Didn't detect end date < start date");
         endDate->setDate(startDate->date());
+        QVERIFY(editor->isValid());
         endTime->setTime(startTime->time().addSecs(-60));
-        QVERIFY2(!editor->isValid(), "Didn't detect end date & time < start date & time");
+        QVERIFY2(!editor->isValid(), "Didn't detect end time < start time");
         endTime->setTime(startTime->time());
         QVERIFY(editor->isValid());
 
