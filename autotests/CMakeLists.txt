@@ -59,17 +59,16 @@ target_link_libraries(testindividualmaildialog
   KF5::I18n
 )
 
-add_executable(incidencedatetimetest incidencedatetimetest.cpp
-  ../src/combinedincidenceeditor.cpp
-  ../src/incidencedatetime.cpp
-  ../src/incidenceeditor_debug.cpp)
-ecm_mark_nongui_executable(incidencedatetimetest)
-add_test(NAME incidencedatetimetest COMMAND incidencedatetimetest)
-ecm_mark_as_test(incidencedatetimetest)
-target_link_libraries(incidencedatetimetest
-  Qt5::Test
+# The IncidenceCategories subeditor of the dialog starts Akonadi running, so
+# set up an environment.
+set(AKONADI_RUN_MYSQL_ISOLATED_TESTS FALSE)
+add_akonadi_isolated_test(
+  SOURCE incidencedatetimetest.cpp
+  LINK_LIBRARIES Qt5::Test
   Qt5::Widgets
+  KF5::AkonadiWidgets
   KF5::Completion
   KF5::IncidenceEditor
+  KF5::Libkdepim
   KF5::WidgetsAddons
 )
