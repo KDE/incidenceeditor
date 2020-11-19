@@ -29,8 +29,8 @@ AttendeeLineEditDelegate::AttendeeLineEditDelegate(QObject *parent)
 
 QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
+    Q_UNUSED(option)
+    Q_UNUSED(index)
     auto *editor = new AttendeeLineEdit(parent);
     connect(editor, &AttendeeLineEdit::leftPressed, this, &AttendeeLineEditDelegate::leftPressed);
     connect(editor, &AttendeeLineEdit::rightPressed, this, &AttendeeLineEditDelegate::rightPressed);
@@ -56,7 +56,7 @@ void AttendeeLineEditDelegate::setModelData(QWidget *editor, QAbstractItemModel 
 
 void AttendeeLineEditDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
     editor->setGeometry(option.rect);
 }
 

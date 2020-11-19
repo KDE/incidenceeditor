@@ -52,7 +52,7 @@ public:
 
     QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
-        Q_UNUSED(incidence);
+        Q_UNUSED(incidence)
         return QStringLiteral("Freebusy");
     }
 
@@ -82,7 +82,7 @@ public:
 
     QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
-        Q_UNUSED(incidence);
+        Q_UNUSED(incidence)
         return QString();
     }
 

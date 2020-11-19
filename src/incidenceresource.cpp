@@ -110,7 +110,7 @@ IncidenceResource::~IncidenceResource()
 
 void IncidenceResource::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(incidence);
+    Q_UNUSED(incidence)
     slotDateChanged();
 }
 
@@ -121,7 +121,7 @@ void IncidenceResource::slotDateChanged()
 
 void IncidenceResource::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(incidence);
+    Q_UNUSED(incidence)
     //all logic inside IncidenceAtendee (using same model)
 }
 

@@ -702,7 +702,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &
 
 void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last)
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
         KCalendarCore::Attendee attendee
@@ -715,7 +715,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &in
 
 void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last)
 {
-    Q_UNUSED(index);
+    Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
         KCalendarCore::Attendee attendee

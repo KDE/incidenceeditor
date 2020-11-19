@@ -34,7 +34,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     ganttModel->setSourceModel(fbModel);
     auto *modelTest = new QAbstractItemModelTester(ganttModel);
 
-    Q_UNUSED(modelTest);
+    Q_UNUSED(modelTest)
 
     QVERIFY(ganttModel->rowCount() == 0);
 

@@ -138,7 +138,7 @@ const KLDAP::LdapClient &ResourceItem::ldapClient() const
 
 void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
 {
-    Q_UNUSED(client);
+    Q_UNUSED(client)
     mLdapObject = obj;
     for (const QString &header : qAsConst(mAttrs)) {
         if (!obj.attributes()[header].isEmpty()) {

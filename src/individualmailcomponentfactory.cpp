@@ -197,7 +197,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
 void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
     bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
 {
-    Q_UNUSED(attendeeStatusChanged);
+    Q_UNUSED(attendeeStatusChanged)
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {

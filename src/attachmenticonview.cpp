@@ -233,7 +233,7 @@ QMimeData *AttachmentIconView::mimeData() const
 
 void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 {
-    Q_UNUSED(supportedActions);
+    Q_UNUSED(supportedActions)
 #ifndef QT_NO_DRAGANDDROP
     QPixmap pixmap;
     if (selectedItems().size() > 1) {

@@ -69,12 +69,12 @@ void IncidenceEditor::printDebugInfo() const
 
 void IncidenceEditor::load(const Akonadi::Item &item)
 {
-    Q_UNUSED(item);
+    Q_UNUSED(item)
 }
 
 void IncidenceEditor::save(Akonadi::Item &item)
 {
-    Q_UNUSED(item);
+    Q_UNUSED(item)
 }
 
 #include "moc_incidenceeditor-ng.cpp"

@@ -685,7 +685,7 @@ Akonadi::Collection IncidenceDialogPrivate::selectedCollection() const
 
 void IncidenceDialogPrivate::reject(RejectReason reason, const QString &errorMessage)
 {
-    Q_UNUSED(reason);
+    Q_UNUSED(reason)
 
     Q_Q(IncidenceDialog);
     qCCritical(INCIDENCEEDITOR_LOG) << "Rejecting:" << errorMessage;

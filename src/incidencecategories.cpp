@@ -30,7 +30,7 @@ IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
 
 void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
 {
-    Q_UNUSED(list);
+    Q_UNUSED(list)
     mDirty = true;
     checkDirtyStatus();
 }

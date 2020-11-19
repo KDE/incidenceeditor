@@ -44,7 +44,7 @@ void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
 void GroupwareUiDelegate::setCalendar(const Akonadi::ETMCalendar::Ptr &calendar)
 {
     // We don't need a calendar.
-    Q_UNUSED(calendar);
+    Q_UNUSED(calendar)
 }
 
 void GroupwareUiDelegate::createCalendar()
