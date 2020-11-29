@@ -10,8 +10,6 @@
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
-#include <QProcess>
-#include <QTimer>
 
 using namespace IncidenceEditorNG;
 

@@ -8,12 +8,12 @@
 
 #include "attendeeline.h"
 
-#include <QMenu>
 #include <QAbstractItemView>
 #include <QApplication>
 #include <QHelpEvent>
 #include <QToolTip>
 #include <QWhatsThis>
+#include <QMenu>
 
 using namespace IncidenceEditorNG;
 
