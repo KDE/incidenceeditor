@@ -17,22 +17,22 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
 {
     this->mHeaders = headers;
     mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(), headers, KLDAP::LdapClient(0)));
+    const QStringList attrs = QStringList() << KLDAP::LdapClientSearch::defaultAttributes() << QStringLiteral("uniqueMember");
+    mLdapSearchCollections = new KLDAP::LdapClientSearch(attrs, this);
+    mLdapSearch = new KLDAP::LdapClientSearch(headers, this);
 
-    mLdapSearchCollections.setFilter(QStringLiteral(
+    mLdapSearchCollections->setFilter(QStringLiteral(
                                         "&(ou=Resources,*)(objectClass=kolabGroupOfUniqueNames)(objectclass=groupofurls)(!(objectclass=nstombstone))(mail=*)"
                                         "(cn=%1)"));
-    mLdapSearch.setFilter(QStringLiteral(
+    mLdapSearch->setFilter(QStringLiteral(
                              "&(objectClass=kolabSharedFolder)(kolabFolderType=event)(mail=*)"
                              "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
 
-    const QStringList attrs = QStringList() << mLdapSearchCollections.attributes() << QStringLiteral("uniqueMember");
-    mLdapSearchCollections.setAttributes(attrs);
-    mLdapSearch.setAttributes(headers);
 
-    connect(&mLdapSearchCollections, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
-    connect(&mLdapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
+    connect(mLdapSearchCollections, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
+    connect(mLdapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
 
-    mLdapSearchCollections.startSearch(QStringLiteral("*"));
+    mLdapSearchCollections->startSearch(QStringLiteral("*"));
 }
 
 ResourceModel::~ResourceModel()
@@ -165,9 +165,9 @@ void ResourceModel::startSearch()
     }
 
     if (mSearchString.isEmpty()) {
-        mLdapSearch.startSearch(QStringLiteral("*"));
+        mLdapSearch->startSearch(QStringLiteral("*"));
     } else {
-        mLdapSearch.startSearch(QLatin1Char('*') + mSearchString + QLatin1Char('*'));
+        mLdapSearch->startSearch(QLatin1Char('*') + mSearchString + QLatin1Char('*'));
     }
 }
 

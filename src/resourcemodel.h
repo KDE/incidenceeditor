@@ -66,12 +66,12 @@ private:
     /* Search for collections of resources
      *
      */
-    KLDAP::LdapClientSearch mLdapSearchCollections;
+    KLDAP::LdapClientSearch *mLdapSearchCollections = nullptr;
 
     /* Search for matching resources
      *
      */
-    KLDAP::LdapClientSearch mLdapSearch;
+    KLDAP::LdapClientSearch *mLdapSearch = nullptr;
 
     /* Map from dn of resource -> collectionItem
      * A Resource can be part of different collection, so a QMuliMap is needed
