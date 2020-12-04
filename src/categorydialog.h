@@ -27,7 +27,7 @@ class CategoryWidget : public QWidget
     Q_OBJECT
 public:
     explicit CategoryWidget(CalendarSupport::CategoryConfig *config, QWidget *parent = nullptr);
-    ~CategoryWidget();
+    ~CategoryWidget() override;
 
     void setCategories(const QStringList &categoryList = QStringList());
     void setCategoryList(const QStringList &categories);

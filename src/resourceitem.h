@@ -32,7 +32,7 @@ public:
     typedef QSharedPointer<ResourceItem> Ptr;
 
     ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent = ResourceItem::Ptr());
-    ~ResourceItem();
+    ~ResourceItem() override;
 
     Q_REQUIRED_RESULT ResourceItem::Ptr child(int number);
     Q_REQUIRED_RESULT int childCount() const;

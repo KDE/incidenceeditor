@@ -33,7 +33,7 @@ public:
     */
     explicit AutoCheckTreeWidget(QWidget *parent = nullptr);
 
-    ~AutoCheckTreeWidget();
+    ~AutoCheckTreeWidget() override;
 
     /**
       Returns QTreeWidgetItem which matches the path, if available.

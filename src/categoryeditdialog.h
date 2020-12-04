@@ -27,7 +27,7 @@ class CategoryEditDialog : public QDialog
 public:
     explicit CategoryEditDialog(CalendarSupport::CategoryConfig *categoryConfig, QWidget *parent = nullptr);
 
-    ~CategoryEditDialog();
+    ~CategoryEditDialog() override;
 
 public Q_SLOTS:
     void reload();

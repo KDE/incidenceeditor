@@ -40,7 +40,7 @@ public:
       @p incidenceType will influence i18n strings, that will be different for to-dos.
      */
     explicit AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, QWidget *parent = nullptr);
-    ~AlarmDialog();
+    ~AlarmDialog() override;
     void load(const KCalendarCore::Alarm::Ptr &alarm);
     void save(const KCalendarCore::Alarm::Ptr &alarm) const;
     void setAllowBeginReminders(bool allow);

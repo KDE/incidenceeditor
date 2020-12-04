@@ -36,7 +36,7 @@ class IncidenceAttendee : public IncidenceEditor
 public:
     using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
-    IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
+    explicit IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceAttendee() override;
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;

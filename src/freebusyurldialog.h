@@ -33,7 +33,7 @@ class FreeBusyUrlWidget : public QWidget
     Q_OBJECT
 public:
     explicit FreeBusyUrlWidget(const AttendeeData::Ptr &, QWidget *parent = nullptr);
-    ~FreeBusyUrlWidget();
+    ~FreeBusyUrlWidget() override;
 
     void loadConfig();
     void saveConfig();

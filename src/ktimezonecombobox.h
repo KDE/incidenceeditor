@@ -34,7 +34,7 @@ public:
     /**
      * Destroys the time zone combobox.
      */
-    ~KTimeZoneComboBox();
+    ~KTimeZoneComboBox() override;
 
     /**
      * Selects the item in the combobox corresponding to the given @p zone.
