@@ -48,7 +48,7 @@ public:
 private:
     ResourceItem *getItem(const QModelIndex &index) const;
 
-    ResourceItem::Ptr rootItem;
+    ResourceItem::Ptr mRootItem;
 
 public:
 
@@ -66,38 +66,38 @@ private:
     /* Search for collections of resources
      *
      */
-    KLDAP::LdapClientSearch ldapSearchCollections;
+    KLDAP::LdapClientSearch mLdapSearchCollections;
 
     /* Search for matching resources
      *
      */
-    KLDAP::LdapClientSearch ldapSearch;
+    KLDAP::LdapClientSearch mLdapSearch;
 
     /* Map from dn of resource -> collectionItem
      * A Resource can be part of different collection, so a QMuliMap is needed
      *
      */
-    QMultiMap<QString, ResourceItem::Ptr> ldapCollectionsMap;
+    QMultiMap<QString, ResourceItem::Ptr> mLdapCollectionsMap;
 
     /* A Set of all collection ResourceItems
      *
      */
-    QSet <ResourceItem::Ptr> ldapCollections;
+    QSet <ResourceItem::Ptr> mLdapCollections;
 
     /* Cached searchString (set by startSearch(QString))
      *
      */
-    QString searchString;
+    QString mSearchString;
 
     /* Is the search of collections ended
      *
      */
-    bool foundCollection = false;
+    bool mFoundCollection = false;
 
     /* List of all attributes in LDAP an the headers of the model
      *
      */
-    QStringList headers;
+    QStringList mHeaders;
 
 private:
     /* Slot for founded collections

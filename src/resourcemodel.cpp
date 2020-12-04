@@ -15,25 +15,24 @@ using namespace IncidenceEditorNG;
 ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     : QAbstractItemModel(parent)
 {
-    this->headers = headers;
-    rootItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(), headers, KLDAP::LdapClient(0)));
+    this->mHeaders = headers;
+    mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(), headers, KLDAP::LdapClient(0)));
 
-    ldapSearchCollections.setFilter(QStringLiteral(
+    mLdapSearchCollections.setFilter(QStringLiteral(
                                         "&(ou=Resources,*)(objectClass=kolabGroupOfUniqueNames)(objectclass=groupofurls)(!(objectclass=nstombstone))(mail=*)"
                                         "(cn=%1)"));
-    ldapSearch.setFilter(QStringLiteral(
+    mLdapSearch.setFilter(QStringLiteral(
                              "&(objectClass=kolabSharedFolder)(kolabFolderType=event)(mail=*)"
                              "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
 
-    QStringList attrs = ldapSearchCollections.attributes();
-    attrs << QStringLiteral("uniqueMember");
-    ldapSearchCollections.setAttributes(attrs);
-    ldapSearch.setAttributes(headers);
+    const QStringList attrs = QStringList() << mLdapSearchCollections.attributes() << QStringLiteral("uniqueMember");
+    mLdapSearchCollections.setAttributes(attrs);
+    mLdapSearch.setAttributes(headers);
 
-    connect(&ldapSearchCollections, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
-    connect(&ldapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
+    connect(&mLdapSearchCollections, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
+    connect(&mLdapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
 
-    ldapSearchCollections.startSearch(QStringLiteral("*"));
+    mLdapSearchCollections.startSearch(QStringLiteral("*"));
 }
 
 ResourceModel::~ResourceModel()
@@ -42,7 +41,7 @@ ResourceModel::~ResourceModel()
 
 int ResourceModel::columnCount(const QModelIndex & /* parent */) const
 {
-    return rootItem->columnCount();
+    return mRootItem->columnCount();
 }
 
 QVariant ResourceModel::data(const QModelIndex &index, int role) const
@@ -83,13 +82,13 @@ ResourceItem *ResourceModel::getItem(const QModelIndex &index) const
             return item;
         }
     }
-    return rootItem.data();
+    return mRootItem.data();
 }
 
 QVariant ResourceModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
-        return translateLDAPAttributeForDisplay(rootItem->data(section).toString());
+        return translateLDAPAttributeForDisplay(mRootItem->data(section).toString());
     }
 
     return QVariant();
@@ -115,7 +114,7 @@ QModelIndex ResourceModel::parent(const QModelIndex &index) const
     ResourceItem *childItem = getItem(index);
     ResourceItem::Ptr parentItem = childItem->parent();
 
-    if (parentItem == rootItem) {
+    if (parentItem == mRootItem) {
         return QModelIndex();
     }
 
@@ -142,9 +141,9 @@ int ResourceModel::rowCount(const QModelIndex &parent) const
 
 void ResourceModel::startSearch(const QString &query)
 {
-    searchString = query;
+    mSearchString = query;
 
-    if (foundCollection) {
+    if (mFoundCollection) {
         startSearch();
     }
 }
@@ -152,23 +151,23 @@ void ResourceModel::startSearch(const QString &query)
 void ResourceModel::startSearch()
 {
     // Delete all resources -> only collection elements are shown
-    for (int i = 0; i < rootItem->childCount(); ++i) {
-        if (ldapCollections.contains(rootItem->child(i))) {
+    for (int i = 0; i < mRootItem->childCount(); ++i) {
+        if (mLdapCollections.contains(mRootItem->child(i))) {
             QModelIndex parentIndex = index(i, 0, QModelIndex());
-            beginRemoveRows(parentIndex, 0, rootItem->child(i)->childCount() - 1);
-            rootItem->child(i)->removeChildren(0, rootItem->child(i)->childCount());
+            beginRemoveRows(parentIndex, 0, mRootItem->child(i)->childCount() - 1);
+            mRootItem->child(i)->removeChildren(0, mRootItem->child(i)->childCount());
             endRemoveRows();
         } else {
             beginRemoveRows(QModelIndex(), i, i);
-            rootItem->removeChildren(i, 1);
+            mRootItem->removeChildren(i, 1);
             endRemoveRows();
         }
     }
 
-    if (searchString.isEmpty()) {
-        ldapSearch.startSearch(QStringLiteral("*"));
+    if (mSearchString.isEmpty()) {
+        mLdapSearch.startSearch(QStringLiteral("*"));
     } else {
-        ldapSearch.startSearch(QLatin1Char('*') + searchString + QLatin1Char('*'));
+        mLdapSearch.startSearch(QLatin1Char('*') + mSearchString + QLatin1Char('*'));
     }
 }
 
@@ -176,24 +175,24 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 {
     Q_EMIT layoutAboutToBeChanged();
 
-    foundCollection = true;
-    ldapCollectionsMap.clear();
-    ldapCollections.clear();
+    mFoundCollection = true;
+    mLdapCollectionsMap.clear();
+    mLdapCollections.clear();
 
     //qDebug() <<  "Found ldapCollections";
 
     for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
         ResourceItem::Ptr item(new ResourceItem(
-                                   result.object.dn(), headers, *result.client, rootItem));
+                                   result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
-        rootItem->insertChild(rootItem->childCount(), item);
-        ldapCollections.insert(item);
+        mRootItem->insertChild(mRootItem->childCount(), item);
+        mLdapCollections.insert(item);
 
         // Resources in a collection add this link into ldapCollectionsMap
         const auto members = result.object.attributes()[QStringLiteral("uniqueMember")];
         for (const QByteArray &member : members) {
-            ldapCollectionsMap.insert(QString::fromLatin1(member), item);
+            mLdapCollectionsMap.insert(QString::fromLatin1(member), item);
         }
     }
 
@@ -206,18 +205,18 @@ void ResourceModel::slotLDAPSearchData(const KLDAP::LdapResultObject::List &resu
 {
     for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
         //Add the found items to all collections, where it is member
-        QList<ResourceItem::Ptr> parents = ldapCollectionsMap.values(result.object.dn().toString());
+        QList<ResourceItem::Ptr> parents = mLdapCollectionsMap.values(result.object.dn().toString());
         if (parents.isEmpty()) {
-            parents << rootItem;
+            parents << mRootItem;
         }
 
         for (const ResourceItem::Ptr &parent : qAsConst(parents)) {
             ResourceItem::Ptr item(new ResourceItem(
-                                       result.object.dn(), headers, *result.client, parent));
+                                       result.object.dn(), mHeaders, *result.client, parent));
             item->setLdapObject(result.object);
 
             QModelIndex parentIndex;
-            if (parent != rootItem) {
+            if (parent != mRootItem) {
                 parentIndex = index(parent->childNumber(), 0, parentIndex);
             }
             beginInsertRows(parentIndex, parent->childCount(), parent->childCount());
