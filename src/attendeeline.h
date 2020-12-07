@@ -79,7 +79,7 @@ public:
     };
 
     explicit AttendeeLine(QWidget *parent);
-    virtual ~AttendeeLine()
+    ~AttendeeLine() override
     {
     }
 
