@@ -10,7 +10,7 @@
 
 #include <KCalendarCore/Alarm>
 
-class QStringList;
+#include <QStringList>
 
 namespace IncidenceEditorNG {
 enum {
