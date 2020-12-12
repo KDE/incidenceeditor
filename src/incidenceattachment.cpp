@@ -275,7 +275,6 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
         KIO::OpenUrlJob *job = new KIO::OpenUrlJob(attitem->tempFileForAttachment(), att.mimeType());
         job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, mAttachmentView));
         job->setDeleteTemporaryFile(true);
-        job->setRunExecutables(true);
         job->start();
     }
 }
