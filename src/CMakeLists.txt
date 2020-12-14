@@ -96,6 +96,9 @@ ki18n_wrap_ui(incidenceeditors_ng_desktop_LIB_SRCS
 )
 
 add_library(KF5IncidenceEditor ${incidenceeditors_ng_desktop_LIB_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(KF5IncidenceEditor PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(KF5IncidenceEditor BASE_NAME incidenceeditor)
 
 add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
