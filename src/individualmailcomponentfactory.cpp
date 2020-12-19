@@ -29,15 +29,10 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::
 
 void IndividualMessageQueueJob::start()
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     const auto to = addressAttribute().to();
     QSet<QString> attendeesTo(to.begin(), to.end());
     const auto cc = addressAttribute().cc();
     QSet<QString> attendeesCc(cc.begin(), cc.end());
-#else
-    QSet<QString> attendeesTo(QSet<QString>::fromList(addressAttribute().to()));
-    QSet<QString> attendeesCc(QSet<QString>::fromList(addressAttribute().cc()));
-#endif
 
     QStringList attendeesAutoTo, attendeesAutoCc;
     for (const KCalendarCore::Attendee &attendee : qAsConst(mUpdate)) {
