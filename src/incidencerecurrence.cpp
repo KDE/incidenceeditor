@@ -530,7 +530,7 @@ void IncidenceRecurrence::fillCombos()
 
     item = subsOrdinal(
         ki18nc("example: the 3rd to last day of June", "the %1 to last day of %2"),
-        date.daysInMonth() - date.day()).subs(longMonthName).toString();
+        dayOfMonthFromEnd()).subs(longMonthName).toString();
     mUi->mYearlyCombo->addItem(item);
 
     item = subsOrdinal(
