@@ -271,8 +271,7 @@ void IncidenceDateTime::updateStartDate(const QDate &newDate)
         return;
     }
 
-    const bool dateChanged = mCurrentStartDateTime.date().day() != newDate.day()
-                             || mCurrentStartDateTime.date().month() != newDate.month();
+    const bool dateChanged = mCurrentStartDateTime.date() != newDate;
 
     QDateTime endDateTime = currentEndDateTime();
     int daysep = mCurrentStartDateTime.daysTo(endDateTime);
@@ -302,8 +301,7 @@ void IncidenceDateTime::updateStartSpec()
 
     mCurrentStartDateTime.setTimeZone(mUi->mTimeZoneComboStart->selectedTimeZone());
 
-    const bool dateChanged = mCurrentStartDateTime.date().day() != prevDate.day()
-                             || mCurrentStartDateTime.date().month() != prevDate.month();
+    const bool dateChanged = mCurrentStartDateTime.date() != prevDate;
 
     if (dateChanged) {
         Q_EMIT startDateChanged(mCurrentStartDateTime.date());
@@ -661,17 +659,17 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
     connect(mUi->mStartCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableStartEdit);
     connect(mUi->mStartCheck, &QCheckBox::toggled, this, &IncidenceDateTime::startDateTimeToggled);
     connect(mUi->mStartDateEdit, &KDateComboBox::dateChanged, this,
-            &IncidenceDateTime::checkDirtyStatus);
+            &IncidenceDateTime::updateStartDate);
     connect(mUi->mStartTimeEdit, &KTimeComboBox::timeChanged, this,
             &IncidenceDateTime::updateStartTime);
     connect(mUi->mStartTimeEdit, &KTimeComboBox::timeEdited, this,
-            &IncidenceDateTime::checkDirtyStatus);
+            &IncidenceDateTime::updateStartTime);
     connect(mUi->mTimeZoneComboStart,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
                                                                              KTimeZoneComboBox::
                                                                              currentIndexChanged),
             this,
-            &IncidenceDateTime::checkDirtyStatus);
+            &IncidenceDateTime::updateStartSpec);
 
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::enableEndEdit);
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::endDateTimeToggled);
@@ -684,6 +682,8 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
     connect(mUi->mEndDateEdit, &KDateComboBox::dateChanged, this,
             &IncidenceDateTime::endDateChanged);
     connect(mUi->mEndTimeEdit, &KTimeComboBox::timeChanged, this,
+            &IncidenceDateTime::endTimeChanged);
+    connect(mUi->mEndTimeEdit, &KTimeComboBox::timeEdited, this,
             &IncidenceDateTime::endTimeChanged);
     connect(mUi->mTimeZoneComboEnd,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::
