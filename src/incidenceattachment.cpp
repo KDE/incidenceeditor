@@ -394,22 +394,14 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         //urls = QList<QUrl>::fromMimeData( mimeData, &metadata );
         probablyWeHaveUris = true;
         labels
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-            = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), QString::SkipEmptyParts);
-#else
             = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), Qt::SkipEmptyParts);
-#endif
         const QStringList::Iterator end(labels.end());
         for (QStringList::Iterator it = labels.begin(); it != end; ++it) {
             *it = QUrl::fromPercentEncoding((*it).toLatin1());
         }
     } else if (mimeData->hasText()) {
         const QString text = mimeData->text();
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        QStringList lst = text.split(QLatin1Char('\n'), QString::SkipEmptyParts);
-#else
         QStringList lst = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
-#endif
         urls.reserve(lst.count());
         QStringList::ConstIterator end(lst.constEnd());
         for (QStringList::ConstIterator it = lst.constBegin(); it != end; ++it) {
