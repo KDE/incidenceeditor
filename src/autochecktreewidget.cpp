@@ -20,10 +20,8 @@ AutoCheckTreeWidget::AutoCheckTreeWidget(QWidget *parent)
     : QTreeWidget(parent)
     , d(new Private())
 {
-    connect(model(), &QAbstractItemModel::rowsInserted,
-            this, &AutoCheckTreeWidget::slotRowsInserted);
-    connect(model(), &QAbstractItemModel::dataChanged, this,
-            &AutoCheckTreeWidget::slotDataChanged);
+    connect(model(), &QAbstractItemModel::rowsInserted, this, &AutoCheckTreeWidget::slotRowsInserted);
+    connect(model(), &QAbstractItemModel::dataChanged, this, &AutoCheckTreeWidget::slotDataChanged);
 
     setColumnCount(2);
 }
@@ -84,9 +82,7 @@ void AutoCheckTreeWidget::setAutoCheck(bool autoCheck)
 QTreeWidgetItem *AutoCheckTreeWidget::findItem(QTreeWidgetItem *parent, const QString &text) const
 {
     if (parent) {
-        const int nbChild{
-            parent->childCount()
-        };
+        const int nbChild{parent->childCount()};
         for (int i = 0; i < nbChild; ++i) {
             if (parent->child(i)->text(0) == text) {
                 return parent->child(i);

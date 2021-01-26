@@ -16,17 +16,19 @@
 
 #include <QDate>
 
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceDateTime : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
+    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     explicit IncidenceDateTime(Ui::EventOrTodoDesktop *ui);
     ~IncidenceDateTime() override;
 

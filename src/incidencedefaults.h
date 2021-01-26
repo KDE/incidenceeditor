@@ -12,7 +12,8 @@
 
 #include <KCalendarCore/Incidence>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceDefaultsPrivate;
 /**
  * @brief The IncidenceDefaults class
@@ -29,7 +30,10 @@ public:
     /**
       Sets the attachments that are added by default to incidences.
     */
-    void setAttachments(const QStringList &attachments, const QStringList &attachmentMimetypes = QStringList(), const QStringList &attachmentLabels = QStringList(), bool inlineAttachment = false);
+    void setAttachments(const QStringList &attachments,
+                        const QStringList &attachmentMimetypes = QStringList(),
+                        const QStringList &attachmentLabels = QStringList(),
+                        bool inlineAttachment = false);
 
     /**
       Sets the attendees that are added by default to incidences.

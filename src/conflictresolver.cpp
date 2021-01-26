@@ -8,8 +8,8 @@
 */
 
 #include "conflictresolver.h"
-#include <CalendarSupport/FreeBusyItemModel>
 #include "incidenceeditor_debug.h"
+#include <CalendarSupport/FreeBusyItemModel>
 
 #include <QDate>
 
@@ -32,22 +32,19 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
     // triggerReload();
 
     // set default values, all the days
-    mWeekdays.setBit(0);   // Monday
+    mWeekdays.setBit(0); // Monday
     mWeekdays.setBit(1);
     mWeekdays.setBit(2);
     mWeekdays.setBit(3);
     mWeekdays.setBit(4);
     mWeekdays.setBit(5);
-    mWeekdays.setBit(6);   // Sunday
+    mWeekdays.setBit(6); // Sunday
 
     mMandatoryRoles.reserve(4);
-    mMandatoryRoles << KCalendarCore::Attendee::ReqParticipant
-                    << KCalendarCore::Attendee::OptParticipant
-                    << KCalendarCore::Attendee::NonParticipant
+    mMandatoryRoles << KCalendarCore::Attendee::ReqParticipant << KCalendarCore::Attendee::OptParticipant << KCalendarCore::Attendee::NonParticipant
                     << KCalendarCore::Attendee::Chair;
 
-    connect(mFBModel, &CalendarSupport::FreeBusyItemModel::dataChanged, this,
-            &ConflictResolver::freebusyDataChanged);
+    connect(mFBModel, &CalendarSupport::FreeBusyItemModel::dataChanged, this, &ConflictResolver::freebusyDataChanged);
 
     connect(&mCalculateTimer, &QTimer::timeout, this, &ConflictResolver::findAllFreeSlots);
     mCalculateTimer.setSingleShot(true);
@@ -56,8 +53,7 @@ ConflictResolver::ConflictResolver(QWidget *parentWidget, QObject *parent)
 void ConflictResolver::insertAttendee(const KCalendarCore::Attendee &attendee)
 {
     if (!mFBModel->containsAttendee(attendee)) {
-        mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(
-                                                                 attendee, mParentWidget)));
+        mFBModel->addItem(CalendarSupport::FreeBusyItem::Ptr(new CalendarSupport::FreeBusyItem(attendee, mParentWidget)));
     }
 }
 
@@ -138,16 +134,11 @@ int ConflictResolver::tryDate(QDateTime &tryFrom, QDateTime &tryTo)
     int conflicts_count = 0;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalendarCore::Attendee attendee
-            = mFBModel->data(index,
-                             CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        KCalendarCore::Attendee attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalendarCore::FreeBusy::Ptr freebusy
-            = mFBModel->data(index,
-                             CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::
-                                                                                     FreeBusy::Ptr>();
+        KCalendarCore::FreeBusy::Ptr freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!tryDate(freebusy, tryFrom, tryTo)) {
             ++conflicts_count;
         }
@@ -166,8 +157,8 @@ bool ConflictResolver::tryDate(const KCalendarCore::FreeBusy::Ptr &fb, QDateTime
 
     KCalendarCore::Period::List busyPeriods = fb->busyPeriods();
     for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
-        if ((*it).end() <= tryFrom     // busy period ends before try period
-            || (*it).start() >= tryTo) {   // busy period starts after try period
+        if ((*it).end() <= tryFrom // busy period ends before try period
+            || (*it).start() >= tryTo) { // busy period starts after try period
             continue;
         } else {
             // the current busy period blocks the try period, try
@@ -250,31 +241,22 @@ void ConflictResolver::findAllFreeSlots()
     //          So, the array would have a length of 672
     const int range = begin.secsTo(end) / mSlotResolutionSeconds;
     if (range <= 0) {
-        qCWarning(INCIDENCEEDITOR_LOG) << "free slot calculation: invalid range. range( "
-                                       << begin.secsTo(end)
-                                       << ") / mSlotResolutionSeconds(" << mSlotResolutionSeconds
-                                       << ") = " << range;
+        qCWarning(INCIDENCEEDITOR_LOG) << "free slot calculation: invalid range. range( " << begin.secsTo(end) << ") / mSlotResolutionSeconds("
+                                       << mSlotResolutionSeconds << ") = " << range;
         return;
     }
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin << " to " << end
-                                 << "; mSlotResolutionSeconds = " << mSlotResolutionSeconds
-                                 << "; range = " << range;
+    qCDebug(INCIDENCEEDITOR_LOG) << "from " << begin << " to " << end << "; mSlotResolutionSeconds = " << mSlotResolutionSeconds << "; range = " << range;
     // filter out attendees for which we don't have FB data
     // and which don't match the mandatory role constraint
     QList<KCalendarCore::FreeBusy::Ptr> filteredFBItems;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalendarCore::Attendee attendee
-            = mFBModel->data(index,
-                             CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        KCalendarCore::Attendee attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalendarCore::FreeBusy::Ptr freebusy
-            = mFBModel->data(index,
-                             CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::
-                                                                                     FreeBusy::Ptr>();
+        KCalendarCore::FreeBusy::Ptr freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (freebusy) {
             filteredFBItems << freebusy;
         }
@@ -289,7 +271,7 @@ void ConflictResolver::findAllFreeSlots()
     qCDebug(INCIDENCEEDITOR_LOG) << "num attendees: " << number_attendees;
     // this is a 2 dimensional array where the rows are attendees
     // and the columns are 0 or 1 denoting free or busy respectively.
-    QVector< QVector<int> > fbTable;
+    QVector<QVector<int>> fbTable;
 
     // Explanation of the following loop:
     // iterate: through each attendee
@@ -304,14 +286,14 @@ void ConflictResolver::findAllFreeSlots()
     // append the allocated array to <fbTable>
     // etareti
     for (const KCalendarCore::FreeBusy::Ptr &currentFB : qAsConst(filteredFBItems)) {
-        Q_ASSERT(currentFB);   // sanity check
+        Q_ASSERT(currentFB); // sanity check
         const KCalendarCore::Period::List busyPeriods = currentFB->busyPeriods();
         QVector<int> fbArray(range);
-        fbArray.fill(0);   // initialize to zero
+        fbArray.fill(0); // initialize to zero
         for (const auto &period : busyPeriods) {
             if (period.end() >= begin && period.start() <= end) {
                 int start_index = -1; // Initialize it to an invalid value.
-                int duration = -1;    // Initialize it to an invalid value.
+                int duration = -1; // Initialize it to an invalid value.
                 // case1: the period is completely in our timeframe
                 if (period.end() <= end && period.start() >= begin) {
                     start_index = begin.secsTo(period.start()) / mSlotResolutionSeconds;
@@ -330,18 +312,18 @@ void ConflictResolver::findAllFreeSlots()
                     start_index = 0;
                     duration = range - 1;
                 } else {
-                    //QT5
-                    //qCCritical(INCIDENCEEDITOR_LOG) << "impossible condition reached" << period.start() << period.end();
+                    // QT5
+                    // qCCritical(INCIDENCEEDITOR_LOG) << "impossible condition reached" << period.start() << period.end();
                 }
                 //      qCDebug(INCIDENCEEDITOR_LOG) << start_index << "+" << duration << "="
                 //               << start_index + duration << "<=" << range;
-                Q_ASSERT((start_index + duration) < range);     // sanity check
+                Q_ASSERT((start_index + duration) < range); // sanity check
                 for (int i = start_index; i <= start_index + duration; ++i) {
                     fbArray[i] = 1;
                 }
             }
         }
-        Q_ASSERT(fbArray.size() == range);   // sanity check
+        Q_ASSERT(fbArray.size() == range); // sanity check
         fbTable.append(fbArray);
     }
 
@@ -350,10 +332,10 @@ void ConflictResolver::findAllFreeSlots()
     // Now, create another array to represent the allowed weekdays constraints
     // All days which are not allowed, will be marked as busy
     QVector<int> fbArray(range);
-    fbArray.fill(0);   // initialize to zero
+    fbArray.fill(0); // initialize to zero
     for (int slot = 0; slot < fbArray.size(); ++slot) {
         const QDateTime dateTime = begin.addSecs(slot * mSlotResolutionSeconds);
-        const int dayOfWeek = dateTime.date().dayOfWeek() - 1;   // bitarray is 0 indexed
+        const int dayOfWeek = dateTime.date().dayOfWeek() - 1; // bitarray is 0 indexed
         if (!mWeekdays[dayOfWeek]) {
             fbArray[slot] = 1;
         }
@@ -363,7 +345,7 @@ void ConflictResolver::findAllFreeSlots()
     // Create the composite array that will hold the sums for
     // each 15 minute timeslot
     QVector<int> summed(range);
-    summed.fill(0);   // initialize to zero
+    summed.fill(0); // initialize to zero
 
     // Sum the columns of the table
     for (int i = 0; i < fbTable.size(); ++i) {
@@ -385,7 +367,7 @@ void ConflictResolver::findAllFreeSlots()
             // current slot is not free, so push the previous free blocks
             // OR we are in the last slot and it is free
             if (free_count > 0) {
-                int free_start_i;// start index of the free block
+                int free_start_i; // start index of the free block
                 int free_end_i; // end index of the free block
                 if (summed[i] == 0) {
                     // special case: we are on the last slot and it is free
@@ -402,8 +384,7 @@ void ConflictResolver::findAllFreeSlots()
                 // then calculate the date times of the free block based on
                 // our initial timeframe
                 const QDateTime freeBegin = begin.addSecs(free_start_i * mSlotResolutionSeconds);
-                const QDateTime freeEnd
-                    = freeBegin.addSecs((free_end_i - free_start_i) * mSlotResolutionSeconds);
+                const QDateTime freeEnd = freeBegin.addSecs((free_end_i - free_start_i) * mSlotResolutionSeconds);
                 // push the free block onto the list
                 mAvailableSlots << KCalendarCore::Period(freeBegin, freeEnd);
                 free_count = 0;
@@ -463,7 +444,7 @@ void ConflictResolver::setAllowedWeekdays(const QBitArray &weekdays)
     calculateConflicts();
 }
 
-void ConflictResolver::setMandatoryRoles(const QSet< KCalendarCore::Attendee::Role > &roles)
+void ConflictResolver::setMandatoryRoles(const QSet<KCalendarCore::Attendee::Role> &roles)
 {
     mMandatoryRoles = roles;
     calculateConflicts();

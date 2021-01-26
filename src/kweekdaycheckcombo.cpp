@@ -14,7 +14,8 @@
 
 using namespace IncidenceEditorNG;
 
-KWeekdayCheckCombo::KWeekdayCheckCombo(QWidget *parent, bool first5Checked) : KCheckComboBox(parent)
+KWeekdayCheckCombo::KWeekdayCheckCombo(QWidget *parent, bool first5Checked)
+    : KCheckComboBox(parent)
 {
     const int weekStart = QLocale().firstDayOfWeek();
     QStringList checkedItems;
@@ -59,7 +60,7 @@ int KWeekdayCheckCombo::weekdayIndex(const QDate &date) const
         return -1;
     }
     const int weekStart = QLocale().firstDayOfWeek();
-    const int dayOfWeek = date.dayOfWeek() - 1;   // Values 1 - 7, we need 0 - 6
+    const int dayOfWeek = date.dayOfWeek() - 1; // Values 1 - 7, we need 0 - 6
 
     // qCDebug(INCIDENCEEDITOR_LOG) << "dayOfWeek = " << dayOfWeek << " weekStart = " << weekStart
     // << "; result " << ( ( dayOfWeek + weekStart ) % 7 ) << "; date = " << date;
@@ -68,7 +69,7 @@ int KWeekdayCheckCombo::weekdayIndex(const QDate &date) const
 
 void KWeekdayCheckCombo::setDays(const QBitArray &days, const QBitArray &disableDays)
 {
-    Q_ASSERT(count() == 7);   // The combobox must be filled.
+    Q_ASSERT(count() == 7); // The combobox must be filled.
 
     QStringList checkedDays;
     const int weekStart = QLocale().firstDayOfWeek();

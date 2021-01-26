@@ -12,12 +12,12 @@
 
 #include "globalsettings_incidenceeditor.h"
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * @brief The IncidenceEditorSettings class
  */
-class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::
-    IncidenceEditorSettingsBase
+class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase
 {
     Q_OBJECT
 

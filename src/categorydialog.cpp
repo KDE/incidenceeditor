@@ -12,11 +12,11 @@
 #include "categoryhierarchyreader.h"
 #include "ui_categorydialog_base.h"
 
-#include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/CategoryConfig>
+#include <CalendarSupport/KCalPrefs>
 
-#include <QIcon>
 #include <QDialogButtonBox>
+#include <QIcon>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -26,7 +26,8 @@ using namespace CalendarSupport;
 class CategoryWidgetBase : public QWidget, public Ui::CategoryDialog_base
 {
 public:
-    CategoryWidgetBase(QWidget *parent) : QWidget(parent)
+    CategoryWidgetBase(QWidget *parent)
+        : QWidget(parent)
     {
         setupUi(this);
     }
@@ -45,24 +46,19 @@ CategoryWidget::CategoryWidget(CategoryConfig *cc, QWidget *parent)
     mWidgets->mButtonRemove->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mWidgets->mLineEdit->setPlaceholderText(i18n("Click to add a new category"));
 
-    connect(mWidgets->mLineEdit, &QLineEdit::textChanged,
-            this, &CategoryWidget::handleTextChanged);
+    connect(mWidgets->mLineEdit, &QLineEdit::textChanged, this, &CategoryWidget::handleTextChanged);
 
     mWidgets->mButtonAdd->setEnabled(false);
     mWidgets->mButtonRemove->setEnabled(false);
     mWidgets->mColorCombo->setEnabled(false);
 
-    connect(mWidgets->mCategories, &QTreeWidget::itemSelectionChanged,
-            this, &CategoryWidget::handleSelectionChanged);
+    connect(mWidgets->mCategories, &QTreeWidget::itemSelectionChanged, this, &CategoryWidget::handleSelectionChanged);
 
-    connect(mWidgets->mButtonAdd, &QAbstractButton::clicked,
-            this, &CategoryWidget::addCategory);
+    connect(mWidgets->mButtonAdd, &QAbstractButton::clicked, this, &CategoryWidget::addCategory);
 
-    connect(mWidgets->mButtonRemove, &QAbstractButton::clicked,
-            this, &CategoryWidget::removeCategory);
+    connect(mWidgets->mButtonRemove, &QAbstractButton::clicked, this, &CategoryWidget::removeCategory);
 
-    connect(mWidgets->mColorCombo, &KColorCombo::activated,
-            this, &CategoryWidget::handleColorChanged);
+    connect(mWidgets->mColorCombo, &KColorCombo::activated, this, &CategoryWidget::handleColorChanged);
 }
 
 CategoryWidget::~CategoryWidget()
@@ -84,8 +80,7 @@ void CategoryWidget::setCategories(const QStringList &categoryList)
     mCategoryList.clear();
 
     QStringList cats = mCategoryConfig->customCategories();
-    for (QStringList::ConstIterator it = categoryList.begin(), end = categoryList.end(); it != end;
-         ++it) {
+    for (QStringList::ConstIterator it = categoryList.begin(), end = categoryList.end(); it != end; ++it) {
         if (!cats.contains(*it)) {
             cats.append(*it);
         }
@@ -117,8 +112,7 @@ static QStringList getSelectedCategories(AutoCheckTreeWidget *categoriesView)
     while (*it) {
         QStringList path = categoriesView->pathByItem(*it++);
         if (!path.isEmpty()) {
-            path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\')
-                                  +CategoryConfig::categorySeparator);
+            path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\') + CategoryConfig::categorySeparator);
             categories.append(path.join(CategoryConfig::categorySeparator));
         }
     }
@@ -168,8 +162,7 @@ void CategoryWidget::setCategoryList(const QStringList &categories)
 
 void CategoryWidget::addCategory()
 {
-    QTreeWidgetItem *newItem = new QTreeWidgetItem(listView(),
-                                                   QStringList(mWidgets->mLineEdit->text()));
+    QTreeWidgetItem *newItem = new QTreeWidgetItem(listView(), QStringList(mWidgets->mLineEdit->text()));
     listView()->scrollToItem(newItem);
     listView()->clearSelection();
     newItem->setSelected(true);
@@ -221,9 +214,8 @@ CategoryDialog::CategoryDialog(CategoryConfig *cc, QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Select Categories"));
     auto *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply,
-        this);
+    QDialogButtonBox *buttonBox =
+        new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply, this);
 
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
@@ -246,8 +238,7 @@ CategoryDialog::CategoryDialog(CategoryConfig *cc, QWidget *parent)
     mWidgets->listView()->setFocus();
 
     connect(okButton, &QPushButton::clicked, this, &CategoryDialog::slotOk);
-    connect(buttonBox->button(
-                QDialogButtonBox::Apply), &QPushButton::clicked, this, &CategoryDialog::slotApply);
+    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &CategoryDialog::slotApply);
 }
 
 CategoryDialog::~CategoryDialog()
@@ -268,9 +259,7 @@ void CategoryDialog::slotApply()
     QTreeWidgetItemIterator it(mWidgets->listView());
     while (*it) {
         path = mWidgets->listView()->pathByItem(*it++);
-        path.replaceInStrings(
-            CategoryConfig::categorySeparator,
-            QLatin1Char('\\') + CategoryConfig::categorySeparator);
+        path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\') + CategoryConfig::categorySeparator);
         l.append(path.join(CategoryConfig::categorySeparator));
     }
     mCategoryConfig->setCustomCategories(l);

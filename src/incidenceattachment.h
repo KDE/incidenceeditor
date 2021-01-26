@@ -11,7 +11,8 @@
 #include "incidenceeditor-ng.h"
 class QUrl;
 class KJob;
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
@@ -20,15 +21,16 @@ class QMenu;
 class QListWidgetItem;
 class QMimeData;
 class QAction;
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttachmentIconView;
 
 class IncidenceAttachment : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
+    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
 
     explicit IncidenceAttachment(Ui::EventOrTodoDesktop *ui);
 
@@ -46,7 +48,7 @@ Q_SIGNALS:
 private:
     void addAttachment();
     void copyToClipboard(); /// Copies selected items to clip board
-    void cutToClipboard();  /// Copies selected items to clipboard and removes them from the list
+    void cutToClipboard(); /// Copies selected items to clipboard and removes them from the list
     void editSelectedAttachments();
     void openURL(const QUrl &url);
     void pasteFromClipboard();

@@ -7,12 +7,13 @@
 #ifndef INCIDENCEEDITOR_ATTENDEECOMBOBOXDELEGATE_H
 #define INCIDENCEEDITOR_ATTENDEECOMBOBOXDELEGATE_H
 
-#include <QStyledItemDelegate>
-#include <QModelIndex>
 #include <QIcon>
+#include <QModelIndex>
 #include <QString>
+#include <QStyledItemDelegate>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * class to show a Icon and Text for an Attendee
  * you have to set the Items via addItem to have a list to choose from.
@@ -52,7 +53,7 @@ private Q_SLOTS:
 
 private:
     /** all entries to choose from */
-    QVector<QPair<QIcon, QString> > mEntries;
+    QVector<QPair<QIcon, QString>> mEntries;
     QString mToolTip;
     QString mWhatsThis;
     /**fallback index */

@@ -12,19 +12,26 @@
 
 #include <KCalendarCore/Attendee>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttendeeData : public KPIM::MultiplyingLineData, public KCalendarCore::Attendee
 {
 public:
     typedef QSharedPointer<AttendeeData> Ptr;
     typedef QList<AttendeeData::Ptr> List;
 
-    AttendeeData(const QString &name, const QString &email, bool rsvp = false, Attendee::PartStat status = Attendee::None, Attendee::Role role = Attendee::ReqParticipant, const QString &uid = QString())
+    AttendeeData(const QString &name,
+                 const QString &email,
+                 bool rsvp = false,
+                 Attendee::PartStat status = Attendee::None,
+                 Attendee::Role role = Attendee::ReqParticipant,
+                 const QString &uid = QString())
         : KCalendarCore::Attendee(name, email, rsvp, status, role, uid)
     {
     }
 
-    explicit AttendeeData(const KCalendarCore::Attendee &attendee) : KCalendarCore::Attendee(attendee)
+    explicit AttendeeData(const KCalendarCore::Attendee &attendee)
+        : KCalendarCore::Attendee(attendee)
     {
     }
 

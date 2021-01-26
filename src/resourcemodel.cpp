@@ -21,16 +21,18 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     mLdapSearchCollections = new KLDAP::LdapClientSearch(attrs, this);
     mLdapSearch = new KLDAP::LdapClientSearch(headers, this);
 
-    mLdapSearchCollections->setFilter(QStringLiteral(
-                                        "&(ou=Resources,*)(objectClass=kolabGroupOfUniqueNames)(objectclass=groupofurls)(!(objectclass=nstombstone))(mail=*)"
-                                        "(cn=%1)"));
-    mLdapSearch->setFilter(QStringLiteral(
-                             "&(objectClass=kolabSharedFolder)(kolabFolderType=event)(mail=*)"
-                             "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
+    mLdapSearchCollections->setFilter(
+        QStringLiteral("&(ou=Resources,*)(objectClass=kolabGroupOfUniqueNames)(objectclass=groupofurls)(!(objectclass=nstombstone))(mail=*)"
+                       "(cn=%1)"));
+    mLdapSearch->setFilter(
+        QStringLiteral("&(objectClass=kolabSharedFolder)(kolabFolderType=event)(mail=*)"
+                       "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
 
-
-    connect(mLdapSearchCollections, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPCollectionData);
-    connect(mLdapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP :: LdapClientSearch :: searchData), this, &ResourceModel::slotLDAPSearchData);
+    connect(mLdapSearchCollections,
+            qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP ::LdapClientSearch ::searchData),
+            this,
+            &ResourceModel::slotLDAPCollectionData);
+    connect(mLdapSearch, qOverload<const KLDAP::LdapResultObject::List &>(&KLDAP ::LdapClientSearch ::searchData), this, &ResourceModel::slotLDAPSearchData);
 
     mLdapSearchCollections->startSearch(QStringLiteral("*"));
 }
@@ -57,9 +59,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(p->child(index.row()));
     } else if (role == FullName) {
         ResourceItem *item = getItem(index);
-        return KEmailAddress::normalizedAddress(item->data(QStringLiteral(
-                                                               "cn")).toString(),
-                                                item->data(QStringLiteral("mail")).toString());
+        return KEmailAddress::normalizedAddress(item->data(QStringLiteral("cn")).toString(), item->data(QStringLiteral("mail")).toString());
     }
 
     return QVariant();
@@ -179,11 +179,10 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
     mLdapCollectionsMap.clear();
     mLdapCollections.clear();
 
-    //qDebug() <<  "Found ldapCollections";
+    // qDebug() <<  "Found ldapCollections";
 
     for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
-        ResourceItem::Ptr item(new ResourceItem(
-                                   result.object.dn(), mHeaders, *result.client, mRootItem));
+        ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
         mRootItem->insertChild(mRootItem->childCount(), item);
@@ -204,15 +203,14 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 void ResourceModel::slotLDAPSearchData(const KLDAP::LdapResultObject::List &results)
 {
     for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
-        //Add the found items to all collections, where it is member
+        // Add the found items to all collections, where it is member
         QList<ResourceItem::Ptr> parents = mLdapCollectionsMap.values(result.object.dn().toString());
         if (parents.isEmpty()) {
             parents << mRootItem;
         }
 
         for (const ResourceItem::Ptr &parent : qAsConst(parents)) {
-            ResourceItem::Ptr item(new ResourceItem(
-                                       result.object.dn(), mHeaders, *result.client, parent));
+            ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, parent));
             item->setLdapObject(result.object);
 
             QModelIndex parentIndex;

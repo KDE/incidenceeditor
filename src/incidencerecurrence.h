@@ -12,11 +12,13 @@
 
 #include <KLocalizedString>
 #include <QDate>
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceDateTime;
 
 /// Keep this in sync with the values in mUi->mRecurrenceTypeCombo
@@ -34,8 +36,8 @@ class IncidenceRecurrence : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
+    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
 
     IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
 

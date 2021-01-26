@@ -6,24 +6,27 @@
 */
 
 #include "incidencedialogfactory.h"
-#include "incidencedialog.h"
 #include "incidencedefaults.h"
+#include "incidencedialog.h"
 
+#include <Akonadi/Calendar/IncidenceChanger>
+#include <Item>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>
-#include <Item>
-#include <Akonadi/Calendar/IncidenceChanger>
 
 using namespace IncidenceEditorNG;
 using namespace KCalendarCore;
 
-IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalendarCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent, Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
+                                                KCalendarCore::IncidenceBase::IncidenceType type,
+                                                Akonadi::IncidenceChanger *changer,
+                                                QWidget *parent,
+                                                Qt::WindowFlags flags)
 {
     switch (type) {
     case KCalendarCore::IncidenceBase::TypeEvent: // Fall through
     case KCalendarCore::IncidenceBase::TypeTodo:
-    case KCalendarCore::IncidenceBase::TypeJournal:
-    {
+    case KCalendarCore::IncidenceBase::TypeJournal: {
         auto *dialog = new IncidenceDialog(changer, parent, flags);
 
         // needs to be save to akonadi?, apply button should be turned on if so.
@@ -36,11 +39,19 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving, KCalendarCore:
     }
 }
 
-IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
-                                                          const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary,
+                                                          const QString &description,
+                                                          const QStringList &attachments,
+                                                          const QStringList &attendees,
+                                                          const QStringList &attachmentMimetypes,
+                                                          const QStringList &attachmentLabels,
+                                                          bool inlineAttachment,
+                                                          const Akonadi::Collection &defaultCollection,
+                                                          bool cleanupAttachmentTempFiles,
+                                                          QWidget *parent,
+                                                          Qt::WindowFlags flags)
 {
-    IncidenceDefaults defaults
-        = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
+    IncidenceDefaults defaults = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
 
     // if attach or attendee list is empty, these methods don't do anything, so
     // it's safe to call them in every case
@@ -56,20 +67,29 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
     Akonadi::Item item;
     item.setPayload(todo);
 
-    IncidenceDialog *dialog = create(true,  /* no need for, we're not editing an existing to-do */
+    IncidenceDialog *dialog = create(true, /* no need for, we're not editing an existing to-do */
                                      KCalendarCore::Incidence::TypeTodo,
                                      nullptr,
-                                     parent, flags);
+                                     parent,
+                                     flags);
     dialog->selectCollection(defaultCollection);
     dialog->load(item);
     return dialog;
 }
 
-IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment,
-                                                           const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles, QWidget *parent, Qt::WindowFlags flags)
+IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summary,
+                                                           const QString &description,
+                                                           const QStringList &attachments,
+                                                           const QStringList &attendees,
+                                                           const QStringList &attachmentMimetypes,
+                                                           const QStringList &attachmentLabels,
+                                                           bool inlineAttachment,
+                                                           const Akonadi::Collection &defaultCollection,
+                                                           bool cleanupAttachmentTempFiles,
+                                                           QWidget *parent,
+                                                           Qt::WindowFlags flags)
 {
-    IncidenceDefaults defaults
-        = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
+    IncidenceDefaults defaults = IncidenceDefaults::minimalIncidenceDefaults(cleanupAttachmentTempFiles);
 
     // if attach or attendee list is empty, these methods don't do anything, so
     // it's safe to call them in every case
@@ -85,11 +105,11 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
     Akonadi::Item item;
     item.setPayload(event);
 
-    IncidenceDialog *dialog
-        = create(false, // not needed for saving, as we're not editing an existing incidence
-                 KCalendarCore::Incidence::TypeEvent,
-                 nullptr,
-                 parent, flags);
+    IncidenceDialog *dialog = create(false, // not needed for saving, as we're not editing an existing incidence
+                                     KCalendarCore::Incidence::TypeEvent,
+                                     nullptr,
+                                     parent,
+                                     flags);
 
     dialog->selectCollection(defaultCollection);
     dialog->load(item);

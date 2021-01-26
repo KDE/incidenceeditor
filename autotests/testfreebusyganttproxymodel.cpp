@@ -11,12 +11,12 @@
 #include <CalendarSupport/FreeBusyItem>
 #include <CalendarSupport/FreeBusyItemModel>
 
-#include <KGantt/KGanttGraphicsView>
 #include <KCalendarCore/Attendee>
+#include <KGantt/KGanttGraphicsView>
 
 #include <QAbstractItemModelTester>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
 
 using namespace IncidenceEditorNG;

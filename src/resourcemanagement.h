@@ -12,8 +12,8 @@
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
 
-#include <CalendarSupport/FreeBusyCalendar>
 #include "resourceitem.h"
+#include <CalendarSupport/FreeBusyCalendar>
 
 #include <EventViews/ViewCalendar>
 
@@ -23,11 +23,13 @@ class Ui_resourceManagement;
 
 class QItemSelectionModel;
 
-namespace EventViews {
+namespace EventViews
+{
 class AgendaView;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * @brief The ResourceManagement class
  */

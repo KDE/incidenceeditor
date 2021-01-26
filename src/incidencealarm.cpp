@@ -26,23 +26,15 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
     mUi->mAlarmPresetCombo->setCurrentIndex(AlarmPresets::defaultPresetIndex());
     updateButtons();
 
-    connect(mDateTime, &IncidenceDateTime::startDateTimeToggled, this,
-            &IncidenceAlarm::handleDateTimeToggle);
-    connect(mDateTime, &IncidenceDateTime::endDateTimeToggled, this,
-            &IncidenceAlarm::handleDateTimeToggle);
-    connect(mUi->mAlarmAddPresetButton, &QPushButton::clicked, this,
-            &IncidenceAlarm::newAlarmFromPreset);
-    connect(mUi->mAlarmList, &QListWidget::itemSelectionChanged, this,
-            &IncidenceAlarm::updateButtons);
-    connect(mUi->mAlarmList, &QListWidget::itemDoubleClicked, this,
-            &IncidenceAlarm::editCurrentAlarm);
+    connect(mDateTime, &IncidenceDateTime::startDateTimeToggled, this, &IncidenceAlarm::handleDateTimeToggle);
+    connect(mDateTime, &IncidenceDateTime::endDateTimeToggled, this, &IncidenceAlarm::handleDateTimeToggle);
+    connect(mUi->mAlarmAddPresetButton, &QPushButton::clicked, this, &IncidenceAlarm::newAlarmFromPreset);
+    connect(mUi->mAlarmList, &QListWidget::itemSelectionChanged, this, &IncidenceAlarm::updateButtons);
+    connect(mUi->mAlarmList, &QListWidget::itemDoubleClicked, this, &IncidenceAlarm::editCurrentAlarm);
     connect(mUi->mAlarmNewButton, &QPushButton::clicked, this, &IncidenceAlarm::newAlarm);
-    connect(mUi->mAlarmConfigureButton, &QPushButton::clicked, this,
-            &IncidenceAlarm::editCurrentAlarm);
-    connect(mUi->mAlarmToggleButton, &QPushButton::clicked, this,
-            &IncidenceAlarm::toggleCurrentAlarm);
-    connect(mUi->mAlarmRemoveButton, &QPushButton::clicked, this,
-            &IncidenceAlarm::removeCurrentAlarm);
+    connect(mUi->mAlarmConfigureButton, &QPushButton::clicked, this, &IncidenceAlarm::editCurrentAlarm);
+    connect(mUi->mAlarmToggleButton, &QPushButton::clicked, this, &IncidenceAlarm::toggleCurrentAlarm);
+    connect(mUi->mAlarmRemoveButton, &QPushButton::clicked, this, &IncidenceAlarm::removeCurrentAlarm);
 }
 
 void IncidenceAlarm::load(const KCalendarCore::Incidence::Ptr &incidence)
@@ -146,7 +138,7 @@ void IncidenceAlarm::editCurrentAlarm()
 
 void IncidenceAlarm::handleDateTimeToggle()
 {
-    QWidget *parent = mUi->mAlarmPresetCombo->parentWidget();  // the parent of a toplevel widget
+    QWidget *parent = mUi->mAlarmPresetCombo->parentWidget(); // the parent of a toplevel widget
     if (parent) {
         parent->setEnabled(mDateTime->startDateTimeEnabled() || mDateTime->endDateTimeEnabled());
     }
@@ -191,11 +183,9 @@ void IncidenceAlarm::newAlarm()
 void IncidenceAlarm::newAlarmFromPreset()
 {
     if (mIsTodo) {
-        mAlarms.append(
-            AlarmPresets::preset(AlarmPresets::BeforeEnd, mUi->mAlarmPresetCombo->currentText()));
+        mAlarms.append(AlarmPresets::preset(AlarmPresets::BeforeEnd, mUi->mAlarmPresetCombo->currentText()));
     } else {
-        mAlarms.append(
-            AlarmPresets::preset(AlarmPresets::BeforeStart, mUi->mAlarmPresetCombo->currentText()));
+        mAlarms.append(AlarmPresets::preset(AlarmPresets::BeforeStart, mUi->mAlarmPresetCombo->currentText()));
     }
 
     updateAlarmList();
@@ -257,8 +247,7 @@ void IncidenceAlarm::updateButtons()
             selAlarm = mAlarms.at(mUi->mAlarmList->currentIndex().row());
         }
         if (selAlarm && selAlarm->enabled()) {
-            mUi->mAlarmToggleButton->setText(i18nc("Disable currently selected reminder",
-                                                   "Disable"));
+            mUi->mAlarmToggleButton->setText(i18nc("Disable currently selected reminder", "Disable"));
         } else {
             mUi->mAlarmToggleButton->setText(i18nc("Enable currently selected reminder", "Enable"));
         }
@@ -292,22 +281,17 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
         return action;
     }
 
-    const int offset = alarm->hasStartOffset() ? alarm->startOffset().asSeconds() / 60
-                       : alarm->endOffset().asSeconds() / 60; // make minutes
+    const int offset = alarm->hasStartOffset() ? alarm->startOffset().asSeconds() / 60 : alarm->endOffset().asSeconds() / 60; // make minutes
 
-    QString offsetUnitTranslated
-        = i18ncp("The reminder is set to X minutes before/after the event",
-                 "1 minute", "%1 minutes", qAbs(offset));
+    QString offsetUnitTranslated = i18ncp("The reminder is set to X minutes before/after the event", "1 minute", "%1 minutes", qAbs(offset));
 
     int useoffset = offset;
-    if (offset % (24 * 60) == 0 && offset != 0) {     // divides evenly into days?
+    if (offset % (24 * 60) == 0 && offset != 0) { // divides evenly into days?
         useoffset = offset / 60 / 24;
-        offsetUnitTranslated = i18ncp("The reminder is set to X days before/after the event",
-                                      "1 day", "%1 days", qAbs(useoffset));
-    } else if (offset % 60 == 0 && offset != 0) {   // divides evenly into hours?
+        offsetUnitTranslated = i18ncp("The reminder is set to X days before/after the event", "1 day", "%1 days", qAbs(useoffset));
+    } else if (offset % 60 == 0 && offset != 0) { // divides evenly into hours?
         useoffset = offset / 60;
-        offsetUnitTranslated = i18ncp("The reminder is set to X hours before/after the event",
-                                      "1 hour", "%1 hours", qAbs(useoffset));
+        offsetUnitTranslated = i18ncp("The reminder is set to X hours before/after the event", "1 hour", "%1 hours", qAbs(useoffset));
     }
 
     QString repeatStr;
@@ -322,69 +306,53 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
                 // the alarm. %1 is replaced by one of the actions above, %2 is replaced by
                 // one of the time units above, %3 is the (Repeats) part that will be used
                 // in case of repetition of the alarm.
-                return i18n("%1 %2 after the to-do started %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the to-do started %3", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 after the event started %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the event started %3", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 before the to-do starts %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the to-do starts %3", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 before the event starts %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the event starts %3", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset > 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 after the to-do is due %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the to-do is due %3", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 after the event ends %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the event ends %3", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 before the to-do is due %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the to-do is due %3", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 before the event ends %3",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the event ends %3", action, offsetUnitTranslated, repeatStr);
             }
         }
     } else {
         if (useoffset > 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 after the to-do started %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the to-do started %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 after the event started %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the event started %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasStartOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 before the to-do starts %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the to-do starts %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 before the event starts %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the event starts %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset > 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 after the to-do is due %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the to-do is due %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 after the event ends %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 after the event ends %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             }
         } else if (useoffset < 0 && alarm->hasEndOffset()) {
             if (mIsTodo) {
-                return i18n("%1 %2 before the to-do is due %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the to-do is due %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             } else {
-                return i18n("%1 %2 before the event ends %3 (Disabled)",
-                            action, offsetUnitTranslated, repeatStr);
+                return i18n("%1 %2 before the event ends %3 (Disabled)", action, offsetUnitTranslated, repeatStr);
             }
         }
     }

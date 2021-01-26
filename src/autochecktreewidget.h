@@ -8,7 +8,8 @@
 
 #include <QTreeWidget>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
   A tree widget which supports auto selecting child items, when clicking
   an item of the tree.

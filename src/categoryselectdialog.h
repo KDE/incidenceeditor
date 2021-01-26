@@ -12,11 +12,13 @@
 
 class CategorySelectWidgetBase;
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class CategoryConfig;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AutoCheckTreeWidget;
 
 class CategorySelectWidget : public QWidget
@@ -49,7 +51,7 @@ Q_SIGNALS:
 private:
     QStringList mCategoryList;
     CategorySelectWidgetBase *mWidgets = nullptr;
-    CalendarSupport::CategoryConfig * const mCategoryConfig;
+    CalendarSupport::CategoryConfig *const mCategoryConfig;
 };
 
 class CategorySelectDialog : public QDialog

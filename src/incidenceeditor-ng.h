@@ -10,9 +10,10 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KCalendarCore/Incidence>
 #include <AkonadiCore/Item>
-namespace IncidenceEditorNG {
+#include <KCalendarCore/Incidence>
+namespace IncidenceEditorNG
+{
 /**
  * KCal Incidences are complicated objects. The user interfaces to create/modify
  * are therefore complex too. The IncedenceEditor class is a divide and conquer
@@ -69,8 +70,7 @@ public:
     Q_REQUIRED_RESULT KCalendarCore::IncidenceBase::IncidenceType type() const;
 
     /** Convenience method to get a pointer for a specific const Incidence Type. */
-    template<typename IncidenceT>
-    QSharedPointer<IncidenceT> incidence() const
+    template<typename IncidenceT> QSharedPointer<IncidenceT> incidence() const
     {
         return mLoadedIncidence.dynamicCast<IncidenceT>();
     }
@@ -103,8 +103,7 @@ protected:
     /** Only subclasses can instantiate IncidenceEditors */
     IncidenceEditor(QObject *parent = nullptr);
 
-    template<typename IncidenceT>
-    QSharedPointer<IncidenceT> incidence(const KCalendarCore::Incidence::Ptr &inc)
+    template<typename IncidenceT> QSharedPointer<IncidenceT> incidence(const KCalendarCore::Incidence::Ptr &inc)
     {
         return inc.dynamicCast<IncidenceT>();
     }

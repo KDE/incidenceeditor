@@ -8,8 +8,8 @@
 #ifndef INCIDENCEEDITOR_ATTENDEELINE_H
 #define INCIDENCEEDITOR_ATTENDEELINE_H
 
-#include <PimCommonAkonadi/AddresseeLineEdit>
 #include <Libkdepim/MultiplyingLine>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 
 #include <KCalendarCore/Attendee>
 
@@ -18,7 +18,8 @@
 
 class QKeyEvent;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttendeeData;
 
 class AttendeeComboBox : public QToolButton
@@ -48,7 +49,7 @@ protected:
 private:
     void slotActionTriggered();
     QMenu *mMenu = nullptr;
-    QVector<QPair<QString, QIcon> > mList;
+    QVector<QPair<QString, QIcon>> mList;
     int mCurrentIndex = -1;
 };
 
@@ -73,10 +74,7 @@ class AttendeeLine : public KPIM::MultiplyingLine
 {
     Q_OBJECT
 public:
-    enum AttendeeActions {
-        EventActions,
-        TodoActions
-    };
+    enum AttendeeActions { EventActions, TodoActions };
 
     explicit AttendeeLine(QWidget *parent);
     ~AttendeeLine() override

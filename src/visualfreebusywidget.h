@@ -11,19 +11,22 @@
 #include <QDateTime>
 #include <QWidget>
 
-namespace KGantt {
+namespace KGantt
+{
 class DateTimeGrid;
 class GraphicsView;
 }
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class FreeBusyItemModel;
 }
 
 class QComboBox;
 class QTreeView;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class FreeBusyGanttProxyModel;
 class RowController;
 

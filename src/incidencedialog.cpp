@@ -7,7 +7,6 @@
 */
 
 #include "incidencedialog.h"
-#include "incidenceeditor_debug.h"
 #include "combinedincidenceeditor.h"
 #include "editorconfig.h"
 #include "incidencealarm.h"
@@ -17,6 +16,7 @@
 #include "incidencecompletionpriority.h"
 #include "incidencedatetime.h"
 #include "incidencedescription.h"
+#include "incidenceeditor_debug.h"
 #include "incidencerecurrence.h"
 #include "incidenceresource.h"
 #include "incidencesecrecy.h"
@@ -29,14 +29,14 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <CollectionComboBox>
-#include <Item>
 #include <Akonadi/Calendar/ETMCalendar>
 #include <AkonadiCore/EntityTreeModel>
+#include <CollectionComboBox>
+#include <Item>
 
+#include <KCalUtils/Stringify>
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/MemoryCalendar>
-#include <KCalUtils/Stringify>
 
 #include <KMessageBox>
 #include <KSharedConfig>
@@ -49,15 +49,9 @@
 
 using namespace IncidenceEditorNG;
 
-namespace IncidenceEditorNG {
-enum Tabs {
-    GeneralTab = 0,
-    AttendeesTab,
-    ResourcesTab,
-    AlarmsTab,
-    RecurrenceTab,
-    AttachmentsTab
-};
+namespace IncidenceEditorNG
+{
+enum Tabs { GeneralTab = 0, AttendeesTab, ResourcesTab, AlarmsTab, RecurrenceTab, AttachmentsTab };
 
 class IncidenceDialogPrivate : public ItemEditorUi
 {
@@ -129,8 +123,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     layout->addWidget(mCalSelector);
     mCalSelector->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mUi->label->setBuddy(mCalSelector);
-    q->connect(mCalSelector, &Akonadi::CollectionComboBox::currentChanged, q,
-               &IncidenceDialog::handleSelectedCollectionChange);
+    q->connect(mCalSelector, &Akonadi::CollectionComboBox::currentChanged, q, &IncidenceDialog::handleSelectedCollectionChange);
 
     // Now instantiate the logic of the dialog. These editors update the ui, validate
     // fields and load/store incidences in the ui.
@@ -173,26 +166,19 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     const Akonadi::Collection col(colId);
     setCalendarCollection(col);
 
-    q->connect(mEditor, SIGNAL(showMessage(QString,KMessageWidget::MessageType)),
-               SLOT(showMessage(QString,KMessageWidget::MessageType)));
-    q->connect(mEditor, SIGNAL(dirtyStatusChanged(bool)),
-               SLOT(updateButtonStatus(bool)));
+    q->connect(mEditor, SIGNAL(showMessage(QString, KMessageWidget::MessageType)), SLOT(showMessage(QString, KMessageWidget::MessageType)));
+    q->connect(mEditor, SIGNAL(dirtyStatusChanged(bool)), SLOT(updateButtonStatus(bool)));
     q->connect(mItemManager,
                SIGNAL(itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction)),
                SLOT(handleItemSaveFinish(IncidenceEditorNG::EditorItemManager::SaveAction)));
     q->connect(mItemManager,
-               SIGNAL(itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction,QString)),
-               SLOT(handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction,QString)));
-    q->connect(ieAlarm, SIGNAL(alarmCountChanged(int)),
-               SLOT(handleAlarmCountChange(int)));
-    q->connect(mIeRecurrence, SIGNAL(recurrenceChanged(IncidenceEditorNG::RecurrenceType)),
-               SLOT(handleRecurrenceChange(IncidenceEditorNG::RecurrenceType)));
-    q->connect(ieAttachments, SIGNAL(attachmentCountChanged(int)),
-               SLOT(updateAttachmentCount(int)));
-    q->connect(mIeAttendee, SIGNAL(attendeeCountChanged(int)),
-               SLOT(updateAttendeeCount(int)));
-    q->connect(mIeResource, SIGNAL(resourceCountChanged(int)),
-               SLOT(updateResourceCount(int)));
+               SIGNAL(itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction, QString)),
+               SLOT(handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction, QString)));
+    q->connect(ieAlarm, SIGNAL(alarmCountChanged(int)), SLOT(handleAlarmCountChange(int)));
+    q->connect(mIeRecurrence, SIGNAL(recurrenceChanged(IncidenceEditorNG::RecurrenceType)), SLOT(handleRecurrenceChange(IncidenceEditorNG::RecurrenceType)));
+    q->connect(ieAttachments, SIGNAL(attachmentCountChanged(int)), SLOT(updateAttachmentCount(int)));
+    q->connect(mIeAttendee, SIGNAL(attendeeCountChanged(int)), SLOT(updateAttendeeCount(int)));
+    q->connect(mIeResource, SIGNAL(resourceCountChanged(int)), SLOT(updateResourceCount(int)));
 }
 
 IncidenceDialogPrivate::~IncidenceDialogPrivate()
@@ -227,13 +213,9 @@ void IncidenceDialogPrivate::handleAlarmCountChange(int newCount)
 {
     QString tabText;
     if (newCount > 0) {
-        tabText
-            = i18nc("@title:tab Tab to configure the reminders of an event or todo",
-                    "Reminder (%1)", newCount);
+        tabText = i18nc("@title:tab Tab to configure the reminders of an event or todo", "Reminder (%1)", newCount);
     } else {
-        tabText
-            = i18nc("@title:tab Tab to configure the reminders of an event or todo",
-                    "Reminder");
+        tabText = i18nc("@title:tab Tab to configure the reminders of an event or todo", "Reminder");
     }
 
     mUi->mTabWidget->setTabText(AlarmsTab, tabText);
@@ -241,9 +223,7 @@ void IncidenceDialogPrivate::handleAlarmCountChange(int newCount)
 
 void IncidenceDialogPrivate::handleRecurrenceChange(IncidenceEditorNG::RecurrenceType type)
 {
-    QString tabText
-        = i18nc("@title:tab Tab to configure the recurrence of an event or todo",
-                "Rec&urrence");
+    QString tabText = i18nc("@title:tab Tab to configure the recurrence of an event or todo", "Rec&urrence");
 
     // Keep this numbers in sync with the items in mUi->mRecurrenceTypeCombo. I
     // tried adding an enum to IncidenceRecurrence but for whatever reason I could
@@ -265,8 +245,7 @@ void IncidenceDialogPrivate::handleRecurrenceChange(IncidenceEditorNG::Recurrenc
         tabText += i18nc("@title:tab Yearly recurring event, capital first letter only", " (Y)");
         break;
     case RecurrenceTypeException:
-        tabText += i18nc("@title:tab Exception to a recurring event, capital first letter only",
-                         " (E)");
+        tabText += i18nc("@title:tab Exception to a recurring event, capital first letter only", " (E)");
         break;
     default:
         Q_ASSERT_X(false, "handleRecurrenceChange", "Fix your program");
@@ -296,32 +275,23 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 
     KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
-    const QString fileName = QStandardPaths::locate(
-        QStandardPaths::GenericDataLocation,
-        QStringLiteral("/korganizer/templates/")
-        +typeToString(mEditor->type()) + QLatin1Char('/')
-        +templateName);
+    const QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                    QStringLiteral("/korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/') + templateName);
 
     if (fileName.isEmpty()) {
-        KMessageBox::error(
-            q,
-            i18nc("@info", "Unable to find template '%1'.", templateName));
+        KMessageBox::error(q, i18nc("@info", "Unable to find template '%1'.", templateName));
         return;
     }
 
     KCalendarCore::ICalFormat format;
     if (!format.load(cal, fileName)) {
-        KMessageBox::error(
-            q,
-            i18nc("@info", "Error loading template file '%1'.", fileName));
+        KMessageBox::error(q, i18nc("@info", "Error loading template file '%1'.", fileName));
         return;
     }
 
     KCalendarCore::Incidence::List incidences = cal->incidences();
     if (incidences.isEmpty()) {
-        KMessageBox::error(
-            q,
-            i18nc("@info", "Template does not contain a valid incidence."));
+        KMessageBox::error(q, i18nc("@info", "Template does not contain a valid incidence."));
         return;
     }
 
@@ -339,19 +309,14 @@ void IncidenceDialogPrivate::manageTemplates()
 {
     Q_Q(IncidenceDialog);
 
-    QStringList &templates
-        = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
+    QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
 
     QPointer<IncidenceEditorNG::TemplateManagementDialog> dialog(
-        new IncidenceEditorNG::TemplateManagementDialog(
-            q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
+        new IncidenceEditorNG::TemplateManagementDialog(q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
 
-    q->connect(dialog, SIGNAL(loadTemplate(QString)),
-               SLOT(loadTemplate(QString)));
-    q->connect(dialog, SIGNAL(templatesChanged(QStringList)),
-               SLOT(storeTemplatesInConfig(QStringList)));
-    q->connect(dialog, SIGNAL(saveTemplate(QString)),
-               SLOT(saveTemplate(QString)));
+    q->connect(dialog, SIGNAL(loadTemplate(QString)), SLOT(loadTemplate(QString)));
+    q->connect(dialog, SIGNAL(templatesChanged(QStringList)), SLOT(storeTemplatesInConfig(QStringList)));
+    q->connect(dialog, SIGNAL(saveTemplate(QString)), SLOT(saveTemplate(QString)));
     dialog->exec();
     delete dialog;
 }
@@ -363,22 +328,19 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
     KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     switch (mEditor->type()) {
-    case KCalendarCore::Incidence::TypeEvent:
-    {
+    case KCalendarCore::Incidence::TypeEvent: {
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event());
         mEditor->save(event);
         cal->addEvent(KCalendarCore::Event::Ptr(event->clone()));
         break;
     }
-    case KCalendarCore::Incidence::TypeTodo:
-    {
+    case KCalendarCore::Incidence::TypeTodo: {
         KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         mEditor->save(todo);
         cal->addTodo(KCalendarCore::Todo::Ptr(todo->clone()));
         break;
     }
-    case KCalendarCore::Incidence::TypeJournal:
-    {
+    case KCalendarCore::Incidence::TypeJournal: {
         KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
         mEditor->save(journal);
         cal->addJournal(KCalendarCore::Journal::Ptr(journal->clone()));
@@ -388,9 +350,8 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
         Q_ASSERT_X(false, "saveTemplate", "Fix your program");
     }
 
-    QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-                       +QStringLiteral("/korganizer/templates/") + typeToString(mEditor->type())
-                       + QLatin1Char('/');
+    QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/templates/")
+        + typeToString(mEditor->type()) + QLatin1Char('/');
     QDir().mkpath(fileName);
     fileName += templateName;
 
@@ -402,12 +363,9 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
 {
     // I find this somewhat broken. templates() returns a reference, maybe it should
     // be changed by adding a setTemplates method.
-    const QStringList origTemplates
-        = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
-    const QString defaultPath
-        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-          +QStringLiteral("korganizer/templates/")
-          +typeToString(mEditor->type()) + QLatin1Char('/');
+    const QStringList origTemplates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
+    const QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("korganizer/templates/")
+        + typeToString(mEditor->type()) + QLatin1Char('/');
     QDir().mkpath(defaultPath);
     for (const QString &tmpl : origTemplates) {
         if (!templateNames.contains(tmpl)) {
@@ -426,45 +384,27 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
 void IncidenceDialogPrivate::updateAttachmentCount(int newCount)
 {
     if (newCount > 0) {
-        mUi->mTabWidget->setTabText(
-            AttachmentsTab,
-            i18nc("@title:tab Tab to modify attachments of an event or todo",
-                  "Attac&hments (%1)", newCount));
+        mUi->mTabWidget->setTabText(AttachmentsTab, i18nc("@title:tab Tab to modify attachments of an event or todo", "Attac&hments (%1)", newCount));
     } else {
-        mUi->mTabWidget->setTabText(
-            AttachmentsTab,
-            i18nc("@title:tab Tab to modify attachments of an event or todo",
-                  "Attac&hments"));
+        mUi->mTabWidget->setTabText(AttachmentsTab, i18nc("@title:tab Tab to modify attachments of an event or todo", "Attac&hments"));
     }
 }
 
 void IncidenceDialogPrivate::updateAttendeeCount(int newCount)
 {
     if (newCount > 0) {
-        mUi->mTabWidget->setTabText(
-            AttendeesTab,
-            i18nc("@title:tab Tab to modify attendees of an event or todo",
-                  "&Attendees (%1)", newCount));
+        mUi->mTabWidget->setTabText(AttendeesTab, i18nc("@title:tab Tab to modify attendees of an event or todo", "&Attendees (%1)", newCount));
     } else {
-        mUi->mTabWidget->setTabText(
-            AttendeesTab,
-            i18nc("@title:tab Tab to modify attendees of an event or todo",
-                  "&Attendees"));
+        mUi->mTabWidget->setTabText(AttendeesTab, i18nc("@title:tab Tab to modify attendees of an event or todo", "&Attendees"));
     }
 }
 
 void IncidenceDialogPrivate::updateResourceCount(int newCount)
 {
     if (newCount > 0) {
-        mUi->mTabWidget->setTabText(
-            ResourcesTab,
-            i18nc("@title:tab Tab to modify attendees of an event or todo",
-                  "&Resources (%1)", newCount));
+        mUi->mTabWidget->setTabText(ResourcesTab, i18nc("@title:tab Tab to modify attendees of an event or todo", "&Resources (%1)", newCount));
     } else {
-        mUi->mTabWidget->setTabText(
-            ResourcesTab,
-            i18nc("@title:tab Tab to modify attendees of an event or todo",
-                  "&Resources"));
+        mUi->mTabWidget->setTabText(ResourcesTab, i18nc("@title:tab Tab to modify attendees of an event or todo", "&Resources"));
     }
 }
 
@@ -473,8 +413,7 @@ void IncidenceDialogPrivate::updateButtonStatus(bool isDirty)
     mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(isDirty || mInitiallyDirty);
 }
 
-bool IncidenceDialogPrivate::containsPayloadIdentifiers(
-    const QSet<QByteArray> &partIdentifiers) const
+bool IncidenceDialogPrivate::containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const
 {
     return partIdentifiers.contains(QByteArray("PLD:RFC822"));
 }
@@ -506,26 +445,25 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
-    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) &&
-        (mCalSelector->count() > 1) &&
-        (CalendarSupport::KCalPrefs::instance()->defaultCalendarId() == -1)) {
-            const QString collectionName = mCalSelector->currentText();
-            const QString message =
-                xi18nc("@info",
-                      "<para>You have not set a default calendar for your events yet.</para>"
-                      "<para>Setting a default calendar will make creating new events faster and "
-                      "easier with less chance of filing them into the wrong folder.</para>"
-                      "<para>Would you like to set your default events calendar to "
-                      "<resource>%1</resource>?</para>",
-                      collectionName);
-          if (KMessageBox::questionYesNo(q,
-              message,
-              i18nc("@title:window", "Set Default Calendar?"),
-              KStandardGuiItem::yes(), // Make collectionName My Default Calendar
-              KStandardGuiItem::no(),  // Do Not Set a Default Calendar at this Time"
-              QStringLiteral("setDefaultCalendarCollection")) == KMessageBox::Yes) {
-              CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
-          }
+    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) && (mCalSelector->count() > 1)
+        && (CalendarSupport::KCalPrefs::instance()->defaultCalendarId() == -1)) {
+        const QString collectionName = mCalSelector->currentText();
+        const QString message = xi18nc("@info",
+                                       "<para>You have not set a default calendar for your events yet.</para>"
+                                       "<para>Setting a default calendar will make creating new events faster and "
+                                       "easier with less chance of filing them into the wrong folder.</para>"
+                                       "<para>Would you like to set your default events calendar to "
+                                       "<resource>%1</resource>?</para>",
+                                       collectionName);
+        if (KMessageBox::questionYesNo(q,
+                                       message,
+                                       i18nc("@title:window", "Set Default Calendar?"),
+                                       KStandardGuiItem::yes(), // Make collectionName My Default Calendar
+                                       KStandardGuiItem::no(), // Do Not Set a Default Calendar at this Time"
+                                       QStringLiteral("setDefaultCalendarCollection"))
+            == KMessageBox::Yes) {
+            CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
+        }
     }
 
     if (mCloseOnSave) {
@@ -560,8 +498,7 @@ bool IncidenceDialogPrivate::hasSupportedPayload(const Akonadi::Item &item) cons
 bool IncidenceDialogPrivate::isDirty() const
 {
     if (mItem.isValid()) {
-        return mEditor->isDirty()
-               || mCalSelector->currentCollection().id() != mItem.storageCollectionId();
+        return mEditor->isDirty() || mCalSelector->currentCollection().id() != mItem.storageCollectionId();
     } else {
         return mEditor->isDirty();
     }
@@ -590,7 +527,7 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
     Q_ASSERT(hasSupportedPayload(item));
 
     if (CalendarSupport::hasJournal(item)) {
-        //mUi->mTabWidget->removeTab(5);
+        // mUi->mTabWidget->removeTab(5);
         mUi->mTabWidget->removeTab(AttachmentsTab);
         mUi->mTabWidget->removeTab(RecurrenceTab);
         mUi->mTabWidget->removeTab(AlarmsTab);
@@ -605,19 +542,17 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
     const QStringList allEmails = IncidenceEditorNG::EditorConfig::instance()->allEmails();
     const KCalendarCore::Attendee me = incidence->attendeeByMails(allEmails);
 
-    if (incidence->attendeeCount() > 1     // >1 because you won't drink alone
-        && !me.isNull() && (me.status() == KCalendarCore::Attendee::NeedsAction
-                            || me.status() == KCalendarCore::Attendee::Tentative
-                            || me.status() == KCalendarCore::Attendee::InProcess)) {
+    if (incidence->attendeeCount() > 1 // >1 because you won't drink alone
+        && !me.isNull()
+        && (me.status() == KCalendarCore::Attendee::NeedsAction || me.status() == KCalendarCore::Attendee::Tentative
+            || me.status() == KCalendarCore::Attendee::InProcess)) {
         // Show the invitation bar: "You are invited [accept] [decline]"
         mUi->mInvitationBar->show();
     } else {
         mUi->mInvitationBar->hide();
     }
 
-    qCDebug(INCIDENCEEDITOR_LOG) << "Loading item " << item.id() << "; parent "
-                                 << item.parentCollection().id()
-                                 << "; storage " << item.storageCollectionId();
+    qCDebug(INCIDENCEEDITOR_LOG) << "Loading item " << item.id() << "; parent " << item.parentCollection().id() << "; storage " << item.storageCollectionId();
 
     if (item.storageCollectionId() > -1) {
         mCalSelector->setDefaultCollection(Akonadi::Collection(item.storageCollectionId()));
@@ -704,41 +639,31 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *pa
     d->mUi->mTabWidget->setCurrentIndex(0);
     d->mUi->mSummaryEdit->setFocus();
 
-    d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(i18nc("@info:tooltip",
-                                                                         "Save current changes"));
-    d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setToolTip(i18nc("@action:button",
-                                                                      "Save changes and close dialog"));
-    d->mUi->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(i18nc("@action:button",
-                                                                          "Discard changes and close dialog"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setToolTip(i18nc("@info:tooltip", "Save current changes"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setToolTip(i18nc("@action:button", "Save changes and close dialog"));
+    d->mUi->buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(i18nc("@action:button", "Discard changes and close dialog"));
     d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
     auto defaultButton = d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults);
     defaultButton->setText(i18nc("@action:button", "&Templates..."));
     defaultButton->setIcon(QIcon::fromTheme(QStringLiteral("project-development-new-template")));
     defaultButton->setToolTip(i18nc("@info:tooltip", "Manage templates for this item"));
-    defaultButton->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Push this button to show a dialog that helps "
-              "you manage a set of templates. Templates "
-              "can make creating new items easier and faster "
-              "by putting your favorite default values into "
-              "the editor automatically."));
+    defaultButton->setWhatsThis(i18nc("@info:whatsthis",
+                                      "Push this button to show a dialog that helps "
+                                      "you manage a set of templates. Templates "
+                                      "can make creating new items easier and faster "
+                                      "by putting your favorite default values into "
+                                      "the editor automatically."));
 
-    connect(d->mUi->buttonBox, &QDialogButtonBox::clicked, this,
-            &IncidenceDialog::slotButtonClicked);
+    connect(d->mUi->buttonBox, &QDialogButtonBox::clicked, this, &IncidenceDialog::slotButtonClicked);
 
     setModal(false);
 
-    connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked,
-            d->mIeAttendee, &IncidenceAttendee::acceptForMe);
-    connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked,
-            d->mUi->mInvitationBar, &QWidget::hide);
-    connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked,
-            d->mIeAttendee, &IncidenceAttendee::declineForMe);
-    connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked,
-            d->mUi->mInvitationBar, &QWidget::hide);
-    connect(this, SIGNAL(invalidCollection()),
-            this, SLOT(slotInvalidCollection()));
+    connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked, d->mIeAttendee, &IncidenceAttendee::acceptForMe);
+    connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked, d->mUi->mInvitationBar, &QWidget::hide);
+    connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked, d->mIeAttendee, &IncidenceAttendee::declineForMe);
+    connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked, d->mUi->mInvitationBar, &QWidget::hide);
+    connect(this, SIGNAL(invalidCollection()), this, SLOT(slotInvalidCollection()));
     readConfig();
 }
 
@@ -769,7 +694,7 @@ void IncidenceDialog::load(const Akonadi::Item &item, const QDate &activeDate)
 {
     Q_D(IncidenceDialog);
     d->mIeDateTime->setActiveDate(activeDate);
-    if (item.isValid()) {   // We're editing
+    if (item.isValid()) { // We're editing
         d->mItemManager->load(item);
     } else { // We're creating
         Q_ASSERT(d->hasSupportedPayload(item));
@@ -821,10 +746,8 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
         d->mItemManager->save();
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::Cancel) == button) {
         if (d->isDirty()
-            && KMessageBox::questionYesNo(
-                this,
-                i18nc("@info", "Do you really want to cancel?"),
-                i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
+            && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+                == KMessageBox::Yes) {
             QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
             QDialog::reject(); // No pending changes, just close the dialog.
@@ -832,7 +755,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
         d->manageTemplates();
     } else {
-        Q_ASSERT(false);   // Shouldn't happen
+        Q_ASSERT(false); // Shouldn't happen
     }
 }
 
@@ -840,10 +763,8 @@ void IncidenceDialog::reject()
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
-        && KMessageBox::questionYesNo(
-            this,
-            i18nc("@info", "Do you really want to cancel?"),
-            i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
+        && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+            == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
     } else if (!d->isDirty()) {
         QDialog::reject(); // No pending changes, just close the dialog.
@@ -854,10 +775,8 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
-        && KMessageBox::questionYesNo(
-            this,
-            i18nc("@info", "Do you really want to cancel?"),
-            i18nc("@title:window", "KOrganizer Confirmation")) == KMessageBox::Yes) {
+        && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+            == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
         QDialog::closeEvent(event);
     } else if (!d->isDirty()) {
@@ -884,8 +803,7 @@ void IncidenceDialog::handleSelectedCollectionChange(const Akonadi::Collection &
 {
     Q_D(IncidenceDialog);
     if (d->mItem.parentCollection().isValid()) {
-        d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(
-            collection.id() != d->mItem.parentCollection().id());
+        d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(collection.id() != d->mItem.parentCollection().id());
     }
 }
 

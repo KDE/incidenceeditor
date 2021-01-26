@@ -36,12 +36,9 @@ private Q_SLOTS:
 
         // Just make sure, that the QCombobox is sorted like we think
         QComboBox *first = dialog.mAttendeeDecision[0].second;
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(0, Qt::UserRole).toInt(),
-                 IndividualMailDialog::Update);
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(1, Qt::UserRole).toInt(),
-                 IndividualMailDialog::NoUpdate);
-        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(2, Qt::UserRole).toInt(),
-                 IndividualMailDialog::Edit);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(0, Qt::UserRole).toInt(), IndividualMailDialog::Update);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(1, Qt::UserRole).toInt(), IndividualMailDialog::NoUpdate);
+        QCOMPARE((IndividualMailDialog::Decisions)first->itemData(2, Qt::UserRole).toInt(), IndividualMailDialog::Edit);
 
         // No update for first attendee, other default
         first->setCurrentIndex(1);

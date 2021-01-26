@@ -12,11 +12,11 @@
 #include <Akonadi/Calendar/ITIPHandler>
 
 // Class to edit counter proposals through incidence editors
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class INCIDENCEEDITOR_EXPORT GroupwareUiDelegate : public Akonadi::GroupwareUiDelegate
 {
 public:
-
     void requestIncidenceEditor(const Akonadi::Item &item) override;
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) override;
     void createCalendar() override;

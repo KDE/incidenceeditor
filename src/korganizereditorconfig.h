@@ -11,7 +11,8 @@
 
 #include <KCalendarCore/IncidenceBase>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * @brief The KOrganizerEditorConfig class
  */

@@ -7,13 +7,14 @@
 #ifndef INCIDENCEEDITOR_ATTENDEELINEEDITDELEGATE_H
 #define INCIDENCEEDITOR_ATTENDEELINEEDITDELEGATE_H
 
-#include <QStyledItemDelegate>
 #include <QModelIndex>
 #include <QString>
+#include <QStyledItemDelegate>
 
 #include <KCompletion>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /** show a AttendeeLineEdit as editor */
 class AttendeeLineEditDelegate : public QStyledItemDelegate
 {

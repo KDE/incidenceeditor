@@ -27,7 +27,7 @@ void AttendeeEditor::slotLineAdded(KPIM::MultiplyingLine *line)
     }
 
     connect(att, qOverload<>(&AttendeeLine::changed), this, &AttendeeEditor::slotCalculateTotal);
-    connect(att, qOverload<const KCalendarCore::Attendee &, const KCalendarCore::Attendee &>(&AttendeeLine:: changed), this, &AttendeeEditor::changed);
+    connect(att, qOverload<const KCalendarCore::Attendee &, const KCalendarCore::Attendee &>(&AttendeeLine::changed), this, &AttendeeEditor::changed);
     connect(att, &AttendeeLine::editingFinished, this, &AttendeeEditor::editingFinished);
 }
 
@@ -58,7 +58,7 @@ AttendeeData::List AttendeeEditor::attendees() const
 {
     const QVector<KPIM::MultiplyingLineData::Ptr> dataList = allData();
     AttendeeData::List attList;
-    //qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
+    // qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
     for (const KPIM::MultiplyingLineData::Ptr &datum : dataList) {
         AttendeeData::Ptr att = qSharedPointerDynamicCast<AttendeeData>(datum);
         if (!att) {

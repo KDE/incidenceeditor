@@ -27,8 +27,7 @@ void CombinedIncidenceEditor::combine(IncidenceEditor *other)
 {
     Q_ASSERT(other);
     mCombinedEditors.append(other);
-    connect(other, &IncidenceEditor::dirtyStatusChanged,
-            this, &CombinedIncidenceEditor::handleDirtyStatusChange);
+    connect(other, &IncidenceEditor::dirtyStatusChanged, this, &CombinedIncidenceEditor::handleDirtyStatusChange);
 }
 
 bool CombinedIncidenceEditor::isDirty() const
@@ -87,8 +86,7 @@ void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidenc
         if (editor->isDirty()) {
             // We are going to crash due to assert. Print some useful info before crashing.
             qCWarning(INCIDENCEEDITOR_LOG) << "Faulty editor was " << editor->objectName();
-            qCWarning(INCIDENCEEDITOR_LOG) << "Incidence "
-                                           << (incidence ? incidence->uid() : QStringLiteral("null"));
+            qCWarning(INCIDENCEEDITOR_LOG) << "Incidence " << (incidence ? incidence->uid() : QStringLiteral("null"));
 
             editor->printDebugInfo();
 

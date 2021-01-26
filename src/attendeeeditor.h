@@ -8,17 +8,19 @@
 #ifndef INCIDENCEEDITOR_ATTENDEEEDITOR_H
 #define INCIDENCEEDITOR_ATTENDEEEDITOR_H
 
-#include "attendeeline.h"
 #include "attendeedata.h"
+#include "attendeeline.h"
 
 #include <Libkdepim/MultiplyingLineEditor>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttendeeLineFactory : public KPIM::MultiplyingLineFactory
 {
     Q_OBJECT
 public:
-    explicit AttendeeLineFactory(QObject *parent) : KPIM::MultiplyingLineFactory(parent)
+    explicit AttendeeLineFactory(QObject *parent)
+        : KPIM::MultiplyingLineFactory(parent)
     {
     }
 

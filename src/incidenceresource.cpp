@@ -5,17 +5,16 @@
  */
 
 #include "incidenceresource.h"
-#include "resourcemanagement.h"
-#include "resourcemodel.h"
 #include "attendeecomboboxdelegate.h"
 #include "attendeelineeditdelegate.h"
 #include "incidencedatetime.h"
+#include "resourcemanagement.h"
+#include "resourcemodel.h"
 
 #include "ui_dialogdesktop.h"
 
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
-
 
 using namespace IncidenceEditorNG;
 
@@ -47,16 +46,13 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     , resourceDialog(new ResourceManagement())
 {
     setObjectName(QStringLiteral("IncidenceResource"));
-    connect(resourceDialog, &ResourceManagement::accepted, this,
-            &IncidenceResource::dialogOkPressed);
+    connect(resourceDialog, &ResourceManagement::accepted, this, &IncidenceResource::dialogOkPressed);
 
-    connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
-            &IncidenceResource::slotDateChanged);
-    connect(mDateTime, &IncidenceDateTime::endDateChanged, this,
-            &IncidenceResource::slotDateChanged);
+    connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceResource::slotDateChanged);
+    connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceResource::slotDateChanged);
 
     QStringList attrs;
-    attrs << QStringLiteral("cn") <<  QStringLiteral("mail");
+    attrs << QStringLiteral("cn") << QStringLiteral("mail");
 
     completer = new QCompleter(this);
     auto *model = new ResourceModel(attrs, this);
@@ -78,29 +74,19 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     filterProxyModel->setSourceModel(dataModel);
 
     mUi->mResourcesTable->setModel(filterProxyModel);
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Role,
-                                                   ieAttendee->roleDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Role, ieAttendee->roleDelegate());
     mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::FullName, attendeeDelegate);
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Status,
-                                                   ieAttendee->stateDelegate());
-    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Response,
-                                                   ieAttendee->responseDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Status, ieAttendee->stateDelegate());
+    mUi->mResourcesTable->setItemDelegateForColumn(AttendeeTableModel::Response, ieAttendee->responseDelegate());
 
-    connect(mUi->mFindResourcesButton, &QPushButton::clicked, this,
-            &IncidenceResource::findResources);
-    connect(mUi->mBookResourceButton, &QPushButton::clicked, this,
-            &IncidenceResource::bookResource);
-    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this,
-            &IncidenceResource::layoutChanged);
-    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this,
-            &IncidenceResource::updateCount);
-    connect(filterProxyModel, &ResourceFilterProxyModel::rowsInserted, this,
-            &IncidenceResource::updateCount);
-    connect(filterProxyModel, &ResourceFilterProxyModel::rowsRemoved, this,
-            &IncidenceResource::updateCount);
+    connect(mUi->mFindResourcesButton, &QPushButton::clicked, this, &IncidenceResource::findResources);
+    connect(mUi->mBookResourceButton, &QPushButton::clicked, this, &IncidenceResource::bookResource);
+    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::layoutChanged);
+    connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::rowsInserted, this, &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::rowsRemoved, this, &IncidenceResource::updateCount);
     // only update when FullName is changed
-    connect(filterProxyModel, &ResourceFilterProxyModel::dataChanged, this,
-            &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::dataChanged, this, &IncidenceResource::updateCount);
 }
 
 IncidenceResource::~IncidenceResource()
@@ -122,12 +108,12 @@ void IncidenceResource::slotDateChanged()
 void IncidenceResource::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_UNUSED(incidence)
-    //all logic inside IncidenceAtendee (using same model)
+    // all logic inside IncidenceAtendee (using same model)
 }
 
 bool IncidenceResource::isDirty() const
 {
-    //all logic inside IncidenceAtendee (using same model)
+    // all logic inside IncidenceAtendee (using same model)
     return false;
 }
 

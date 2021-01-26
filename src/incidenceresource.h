@@ -7,25 +7,27 @@
 #ifndef INCIDENCEEDITOR_INCIDENCERESOURCE_H
 #define INCIDENCEEDITOR_INCIDENCERESOURCE_H
 
-#include "incidenceeditor-ng.h"
-#include "incidenceattendee.h"
 #include "attendeetablemodel.h"
+#include "incidenceattendee.h"
+#include "incidenceeditor-ng.h"
 
 #include <QCompleter>
 
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class ResourceManagement;
 
 class IncidenceResource : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
+    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
 
     explicit IncidenceResource(IncidenceAttendee *mIeAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceResource() override;
@@ -42,6 +44,7 @@ Q_SIGNALS:
      * @arg: new count of resources.
      */
     void resourceCountChanged(int);
+
 private:
     void findResources();
     void bookResource();

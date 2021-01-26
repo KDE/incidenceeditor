@@ -19,7 +19,10 @@ using namespace IncidenceEditorNG;
 
 // IndividualMessageQueueJob
 
-IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::Identity &identity, const KCalendarCore::Attendee::List &update, const KCalendarCore::Attendee::List &edit, QObject *parent)
+IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::Identity &identity,
+                                                     const KCalendarCore::Attendee::List &update,
+                                                     const KCalendarCore::Attendee::List &edit,
+                                                     QObject *parent)
     : MailTransport::MessageQueueJob(parent)
     , mUpdate(update)
     , mEdit(edit)
@@ -43,8 +46,7 @@ void IndividualMessageQueueJob::start()
             attendeesAutoCc.append(attendee.fullName());
         }
     }
-    if (!attendeesAutoTo.isEmpty() || !attendeesAutoCc.isEmpty()
-        || !addressAttribute().bcc().isEmpty()) {
+    if (!attendeesAutoTo.isEmpty() || !attendeesAutoCc.isEmpty() || !addressAttribute().bcc().isEmpty()) {
         startQueueJob(attendeesAutoTo, addressAttribute().to(), attendeesAutoCc, addressAttribute().cc());
     }
 
@@ -90,24 +92,18 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
             mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToCollection);
             mQueueJob->sentBehaviourAttribute().setMoveToCollection(sentCollection);
         } else {
-            mQueueJob->sentBehaviourAttribute().setSentBehaviour(
-                MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
+            mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
         }
     }
 
-    connect(mQueueJob, &MailTransport::MessageQueueJob::finished, this,
-            &IndividualMessageQueueJob::handleJobFinished);
+    connect(mQueueJob, &MailTransport::MessageQueueJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
     mQueueJob->start();
 }
 
 void IndividualMessageQueueJob::startComposerJob(const QStringList &to, const QStringList &cc)
 {
-    mComposerJob
-        = new OpenComposerJob(this, to.join(QLatin1String(", ")), cc.join(QLatin1String(
-                                                                              ", ")),
-                              QString(), message(), mIdentity);
-    connect(mComposerJob, &OpenComposerJob::finished, this,
-            &IndividualMessageQueueJob::handleJobFinished);
+    mComposerJob = new OpenComposerJob(this, to.join(QLatin1String(", ")), cc.join(QLatin1String(", ")), QString(), message(), mIdentity);
+    connect(mComposerJob, &OpenComposerJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
     mComposerJob->start();
 }
 
@@ -141,14 +137,19 @@ void IndividualMessageQueueJob::handleJobFinished(KJob *job)
 
 // IndividualMailAskDelegator
 
-IndividualMailITIPHandlerDialogDelegate::IndividualMailITIPHandlerDialogDelegate(
-    const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
+IndividualMailITIPHandlerDialogDelegate::IndividualMailITIPHandlerDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence,
+                                                                                 KCalendarCore::iTIPMethod method,
+                                                                                 QWidget *parent)
     : Akonadi::ITIPHandlerDialogDelegate(incidence, method, parent)
     , mDialog(nullptr)
 {
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
+void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question,
+                                                         const KCalendarCore::Attendee::List &attendees,
+                                                         Action action,
+                                                         const KGuiItem &buttonYes,
+                                                         const KGuiItem &buttonNo)
 {
     switch (action) {
     case ActionSendMessage:
@@ -170,8 +171,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question
         case (CalendarSupport::KCalPrefs::InvitationPolicyAsk):
         default:
             mDialog = new IndividualMailDialog(question, attendees, buttonYes, buttonNo, mParent);
-            connect(mDialog, &QDialog::finished, this,
-                    &IndividualMailITIPHandlerDialogDelegate::onDialogClosed);
+            connect(mDialog, &QDialog::finished, this, &IndividualMailITIPHandlerDialogDelegate::onDialogClosed);
             mDialog->show();
             break;
         }
@@ -179,7 +179,11 @@ void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question
     }
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
+void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipient recipient,
+                                                                         const QString &question,
+                                                                         Action action,
+                                                                         const KGuiItem &buttonYes,
+                                                                         const KGuiItem &buttonNo)
 {
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
@@ -189,8 +193,12 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
     }
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
-    bool attendeeStatusChanged, Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
+void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(bool attendeeStatusChanged,
+                                                                          Recipient recipient,
+                                                                          const QString &question,
+                                                                          Action action,
+                                                                          const KGuiItem &buttonYes,
+                                                                          const KGuiItem &buttonNo)
 {
     Q_UNUSED(attendeeStatusChanged)
     if (recipient == Attendees) {
@@ -201,7 +209,11 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(
     }
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipient recipient, const QString &question, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo)
+void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipient recipient,
+                                                                         const QString &question,
+                                                                         Action action,
+                                                                         const KGuiItem &buttonYes,
+                                                                         const KGuiItem &buttonNo)
 {
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
@@ -228,22 +240,20 @@ IndividualMailComponentFactory::IndividualMailComponentFactory(QObject *parent)
 {
 }
 
-MailTransport::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(
-    const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent)
+MailTransport::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                                                                      const KIdentityManagement::Identity &identity,
+                                                                                      QObject *parent)
 {
-    return new IndividualMessageQueueJob(identity, mUpdate.take(incidence->uid()),
-                                         mEdit.take(incidence->uid()), parent);
+    return new IndividualMessageQueueJob(identity, mUpdate.take(incidence->uid()), mEdit.take(incidence->uid()), parent);
 }
 
-Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHanderDialogDelegate(
-    const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent)
+Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence,
+                                                                                                   KCalendarCore::iTIPMethod method,
+                                                                                                   QWidget *parent)
 {
-    auto *askDelegator
-        = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
-    connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setEdit, this,
-            &IndividualMailComponentFactory::onSetEdit);
-    connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setUpdate, this,
-            &IndividualMailComponentFactory::onSetUpdate);
+    auto *askDelegator = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
+    connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setEdit, this, &IndividualMailComponentFactory::onSetEdit);
+    connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setUpdate, this, &IndividualMailComponentFactory::onSetUpdate);
 
     return askDelegator;
 }

@@ -15,7 +15,11 @@
 
 using namespace IncidenceEditorNG;
 
-IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, const KGuiItem &buttonYes, const KGuiItem &buttonNo, QWidget *parent)
+IndividualMailDialog::IndividualMailDialog(const QString &question,
+                                           const KCalendarCore::Attendee::List &attendees,
+                                           const KGuiItem &buttonYes,
+                                           const KGuiItem &buttonNo,
+                                           QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));
@@ -25,16 +29,11 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalen
     int row = 0;
     for (const KCalendarCore::Attendee &attendee : attendees) {
         auto *options = new QComboBox();
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
-                               "Send update"), QVariant(Update));
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
-                               "Send no update"), QVariant(NoUpdate));
-        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee",
-                               "Edit mail"), QVariant(Edit));
-        options->setWhatsThis(i18nc("@info:whatsthis",
-                                    "Options for this particular attendee."));
-        options->setToolTip(i18nc("@info:tooltip",
-                                  "Choose an option for this attendee."));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send update"), QVariant(Update));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send no update"), QVariant(NoUpdate));
+        options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Edit mail"), QVariant(Edit));
+        options->setWhatsThis(i18nc("@info:whatsthis", "Options for this particular attendee."));
+        options->setToolTip(i18nc("@info:tooltip", "Choose an option for this attendee."));
         mAttendeeDecision.push_back(std::make_pair(attendee, options));
 
         layout->addWidget(new QLabel(attendee.fullName()), row, 0);
@@ -53,8 +52,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question, const KCalen
     topLayout->addWidget(m_detailsWidget);
 
     m_buttons = new QDialogButtonBox(this);
-    m_buttons->setStandardButtons(
-        QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Help);
+    m_buttons->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Help);
     auto yesButton = m_buttons->button(QDialogButtonBox::Yes);
     yesButton->setText(buttonYes.text());
     connect(yesButton, &QPushButton::clicked, this, [this]() {
@@ -110,10 +108,8 @@ void IndividualMailDialog::updateButtonState()
 {
     auto detailsButton = m_buttons->button(QDialogButtonBox::Help);
     if (m_detailsWidget->isVisible()) {
-        detailsButton->setText(i18nc("@action:button show list of attendees",
-                                     "Individual mailsettings <<"));
+        detailsButton->setText(i18nc("@action:button show list of attendees", "Individual mailsettings <<"));
     } else {
-        detailsButton->setText(i18nc("@action:button show list of attendees",
-                                     "Individual mailsettings >>"));
+        detailsButton->setText(i18nc("@action:button show list of attendees", "Individual mailsettings >>"));
     }
 }

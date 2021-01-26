@@ -38,9 +38,9 @@ void KTimeZoneComboBox::Private::fillComboBox()
     std::sort(mZones.begin(), mZones.end());
 
     // Prepend Local, UTC and Floating, for convenience
-    mZones.prepend("UTC");        // do not use i18n here  index=2
-    mZones.prepend("Floating");   // do not use i18n here  index=1
-    mZones.prepend(QTimeZone::systemTimeZoneId());    // index=0
+    mZones.prepend("UTC"); // do not use i18n here  index=2
+    mZones.prepend("Floating"); // do not use i18n here  index=1
+    mZones.prepend(QTimeZone::systemTimeZoneId()); // index=0
 
     // Put translated zones into the combobox
     for (const auto &z : qAsConst(mZones)) {
@@ -75,11 +75,11 @@ void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
 
     if (nCurrentlySet == -1) {
         if (zone == QTimeZone::utc()) {
-            setCurrentIndex(2);   // UTC
+            setCurrentIndex(2); // UTC
         } else if (zone == QTimeZone::systemTimeZone()) {
-            setCurrentIndex(0);   // Local
+            setCurrentIndex(0); // Local
         } else {
-            setCurrentIndex(1);   // Floating event
+            setCurrentIndex(1); // Floating event
         }
     } else {
         setCurrentIndex(nCurrentlySet);
@@ -90,11 +90,11 @@ QTimeZone KTimeZoneComboBox::selectedTimeZone() const
 {
     QTimeZone zone;
     if (currentIndex() >= 0) {
-        if (currentIndex() == 0) {   // Local
+        if (currentIndex() == 0) { // Local
             zone = QTimeZone::systemTimeZone();
-        } else if (currentIndex() == 1) {   // Floating event
+        } else if (currentIndex() == 1) { // Floating event
             zone = QTimeZone::systemTimeZone();
-        } else if (currentIndex() == 2) {   // UTC
+        } else if (currentIndex() == 2) { // UTC
             zone = QTimeZone::utc();
         } else {
             zone = QTimeZone(d->mZones[currentIndex()]);

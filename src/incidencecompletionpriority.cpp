@@ -15,6 +15,7 @@ using namespace IncidenceEditorNG;
 class IncidenceCompletionPriority::Private
 {
     IncidenceCompletionPriority *const q;
+
 public:
     explicit Private(IncidenceCompletionPriority *parent)
         : q(parent)
@@ -58,7 +59,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     connect(d->mUi->mCompletionSlider, qOverload<int>(&QSlider::valueChanged), this, [this](int val) {
         d->sliderValueChanged(val);
     });
-    connect(d->mUi->mPriorityCombo, qOverload< int>(&QComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
+    connect(d->mUi->mPriorityCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceCompletionPriority::checkDirtyStatus);
 }
 
 IncidenceCompletionPriority::~IncidenceCompletionPriority()

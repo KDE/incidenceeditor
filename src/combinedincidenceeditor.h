@@ -10,10 +10,11 @@
 
 #include "incidenceeditor-ng.h"
 
-#include <KMessageWidget>
 #include <AkonadiCore/Item>
+#include <KMessageWidget>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * The CombinedIncidenceEditor combines optional widgets with zero or more
  * IncidenceEditors. The CombinedIncidenceEditor keeps track of the dirty state

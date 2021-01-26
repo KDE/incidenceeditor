@@ -12,7 +12,8 @@
 
 class KLineEdit;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class FreeBusyUrlWidget;
 
 class FreeBusyUrlDialog : public QDialog

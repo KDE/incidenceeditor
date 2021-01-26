@@ -14,12 +14,14 @@
 #include <QBitArray>
 #include <QDate>
 
-namespace IncidenceEditorNG {
-//FIXME: This class assumes all weeks have 7 days. We should use KCalenderSystem instead.
+namespace IncidenceEditorNG
+{
+// FIXME: This class assumes all weeks have 7 days. We should use KCalenderSystem instead.
 /**
  * A combobox that is populated with the days of the week from the current
  * KCalenderSystem. The days are checkable.
- * @note: KCalenderSystem numbers weekdays starting with 1, however this widget is 0 indexed and handles the conversion to the 1 based system internally. Use this widget as a normal 0 indexed container.
+ * @note: KCalenderSystem numbers weekdays starting with 1, however this widget is 0 indexed and handles the conversion to the 1 based system internally. Use
+ * this widget as a normal 0 indexed container.
  * @see KCalenderSystem
  */
 class KWeekdayCheckCombo : public KPIM::KCheckComboBox
@@ -27,8 +29,8 @@ class KWeekdayCheckCombo : public KPIM::KCheckComboBox
     Q_OBJECT
 public:
     /**
-    * @param first5Checked if true the first 5 weekdays will be checked by default
-    */
+     * @param first5Checked if true the first 5 weekdays will be checked by default
+     */
     explicit KWeekdayCheckCombo(QWidget *parent = nullptr, bool first5Checked = false);
     ~KWeekdayCheckCombo() override;
 

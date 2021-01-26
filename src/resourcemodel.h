@@ -16,7 +16,8 @@
 #include <QModelIndex>
 #include <QSet>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class ResourceModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -25,10 +26,7 @@ public:
     /* Copied from https://doc.qt.io/qt-5/qtwidgets-itemviews-editabletreemodel-example.html:
      * Editable Tree Model Example
      */
-    enum Roles {
-        Resource = Qt::UserRole,
-        FullName
-    };
+    enum Roles { Resource = Qt::UserRole, FullName };
 
     explicit ResourceModel(const QStringList &headers, QObject *parent = nullptr);
     ~ResourceModel() override;
@@ -45,19 +43,19 @@ public:
     Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     Q_REQUIRED_RESULT bool removeRows(int position, int rows, const QModelIndex &parent = QModelIndex()) override;
+
 private:
     ResourceItem *getItem(const QModelIndex &index) const;
 
     ResourceItem::Ptr mRootItem;
 
 public:
-
     /* Start search on LDAP Server with the given string.
      * If the model is not ready to search, the string is cached and is executed afterwards.
      */
     void startSearch(const QString &);
-private:
 
+private:
     /* Start search with cached string (stored in searchString)
      *
      */
@@ -82,7 +80,7 @@ private:
     /* A Set of all collection ResourceItems
      *
      */
-    QSet <ResourceItem::Ptr> mLdapCollections;
+    QSet<ResourceItem::Ptr> mLdapCollections;
 
     /* Cached searchString (set by startSearch(QString))
      *

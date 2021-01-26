@@ -9,16 +9,16 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 
-#include <QBoxLayout>
 #include "incidenceeditor_debug.h"
-#include <QFrame>
-#include <QLabel>
 #include <KConfig>
 #include <KConfigGroup>
+#include <QBoxLayout>
 #include <QDialogButtonBox>
+#include <QFrame>
+#include <QLabel>
 #include <QPushButton>
-#include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QVBoxLayout>
 
 using namespace IncidenceEditorNG;
 
@@ -30,8 +30,7 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     auto *mainLayout = new QVBoxLayout(this);
 
     QFrame *topFrame = new QFrame(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(topFrame);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -61,17 +60,13 @@ FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget 
 {
     QBoxLayout *topLayout = new QVBoxLayout(this);
 
-    QLabel *label
-        = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:",
-                           mAttendee->name(), mAttendee->email()), this);
+    QLabel *label = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:", mAttendee->name(), mAttendee->email()), this);
     topLayout->addWidget(label);
 
     mUrlEdit = new KLineEdit(this);
     mUrlEdit->setFocus();
-    mUrlEdit->setWhatsThis(i18nc("@info:whatsthis",
-                                 "Enter the location of the Free/Busy information for the attendee."));
-    mUrlEdit->setToolTip(i18nc("@info:tooltip",
-                               "Enter the location of the information."));
+    mUrlEdit->setWhatsThis(i18nc("@info:whatsthis", "Enter the location of the Free/Busy information for the attendee."));
+    mUrlEdit->setToolTip(i18nc("@info:tooltip", "Enter the location of the information."));
     topLayout->addWidget(mUrlEdit);
 }
 
@@ -81,8 +76,7 @@ FreeBusyUrlWidget::~FreeBusyUrlWidget()
 
 static QString freeBusyUrlStore()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-           + QStringLiteral("/korganizer/freebusyurls");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusyurls");
 }
 
 void FreeBusyUrlWidget::loadConfig()

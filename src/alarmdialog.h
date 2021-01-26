@@ -12,27 +12,20 @@
 
 #include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class AlarmDialog;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AlarmDialog : public QDialog
 {
     Q_OBJECT
 public:
-    enum Unit {
-        Minutes,
-        Hours,
-        Days
-    };
+    enum Unit { Minutes, Hours, Days };
 
-    enum When {
-        BeforeStart = 0,
-        AfterStart,
-        BeforeEnd,
-        AfterEnd
-    };
+    enum When { BeforeStart = 0, AfterStart, BeforeEnd, AfterEnd };
 
 public:
     /**

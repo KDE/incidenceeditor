@@ -32,7 +32,7 @@ Qt::ItemFlags AttendeeTableModel::flags(const QModelIndex &index) const
     if (!index.isValid()) {
         return Qt::ItemIsEnabled;
     }
-    if (index.column() == Available || index.column() == Name || index.column() == Email) { //Available is read only
+    if (index.column() == Available || index.column() == Name || index.column() == Email) { // Available is read only
         return QAbstractTableModel::flags(index);
     } else {
         return QAbstractTableModel::flags(index) | Qt::ItemIsEditable;
@@ -56,8 +56,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
             return attendee.role();
         case FullName:
             return attendee.fullName();
-        case Available:
-        {
+        case Available: {
             AvailableStatus available = mAttendeeAvailable[index.row()];
             if (role == Qt::DisplayRole) {
                 switch (available) {
@@ -154,8 +153,7 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
         case Available:
             return i18nc("Is attendee available for incidence", "Available");
         case Status:
-            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, ...)",
-                         "Status");
+            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, ...)", "Status");
         case CuType:
             return i18nc("Type of calendar user (vCard attribute)", "User Type");
         case Response:
@@ -274,10 +272,8 @@ ResourceFilterProxyModel::ResourceFilterProxyModel(QObject *parent)
 
 bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
-                                                   sourceParent);
-    KCalendarCore::Attendee::CuType cuType
-        = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
+    KCalendarCore::Attendee::CuType cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
     return cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room;
 }
@@ -289,10 +285,8 @@ AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
 
 bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType,
-                                                   sourceParent);
-    KCalendarCore::Attendee::CuType cuType
-        = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
+    KCalendarCore::Attendee::CuType cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
     return !(cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room);
 }

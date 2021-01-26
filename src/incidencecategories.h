@@ -10,11 +10,13 @@
 
 #include "incidenceeditor-ng.h"
 
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceCategories : public IncidenceEditor
 {
     Q_OBJECT

@@ -11,17 +11,17 @@
 
 #include "ui_categoryeditdialog_base.h"
 
-#include <CalendarSupport/CategoryHierarchyReader>
 #include <CalendarSupport/CategoryConfig>
+#include <CalendarSupport/CategoryHierarchyReader>
 
 #include <KLocalizedString>
 #include <QIcon>
 
+#include <QDialogButtonBox>
 #include <QHeaderView>
 #include <QList>
-#include <QStringList>
-#include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStringList>
 #include <QVBoxLayout>
 
 using namespace IncidenceEditorNG;
@@ -33,8 +33,7 @@ CategoryEditDialog::CategoryEditDialog(CategoryConfig *categoryConfig, QWidget *
 {
     setWindowTitle(i18nc("@title:window", "Edit Categories"));
     auto *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -59,17 +58,20 @@ CategoryEditDialog::CategoryEditDialog(CategoryConfig *categoryConfig, QWidget *
     // unfortunately, kde-core-devel will not allow this code in QDialog
     // because these button's functionality cannot be easily generalized.
     okButton->setToolTip(i18n("Apply changes and close"));
-    okButton->setWhatsThis(i18n("When clicking <b>Ok</b>, "
-                                "the settings will be handed over to the "
-                                "program and the dialog will be closed."));
+    okButton->setWhatsThis(
+        i18n("When clicking <b>Ok</b>, "
+             "the settings will be handed over to the "
+             "program and the dialog will be closed."));
     buttonBox->button(QDialogButtonBox::Cancel)->setToolTip(i18n("Cancel changes and close"));
-    buttonBox->button(QDialogButtonBox::Cancel)->setWhatsThis(i18n("When clicking <b>Cancel</b>, "
-                                                                   "the settings will be discarded and the "
-                                                                   "dialog will be closed."));
+    buttonBox->button(QDialogButtonBox::Cancel)
+        ->setWhatsThis(i18n("When clicking <b>Cancel</b>, "
+                            "the settings will be discarded and the "
+                            "dialog will be closed."));
 
-    buttonBox->button(QDialogButtonBox::Help)->setWhatsThis(i18n("When clicking <b>Help</b>, "
-                                                                 "a separate KHelpCenter window will open "
-                                                                 "providing more information about the settings."));
+    buttonBox->button(QDialogButtonBox::Help)
+        ->setWhatsThis(i18n("When clicking <b>Help</b>, "
+                            "a separate KHelpCenter window will open "
+                            "providing more information about the settings."));
 
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
@@ -78,21 +80,15 @@ CategoryEditDialog::CategoryEditDialog(CategoryConfig *categoryConfig, QWidget *
 
     mWidgets->mCategories->setFocus();
 
-    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemSelectionChanged,
-            this, &CategoryEditDialog::editItem);
-    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemSelectionChanged,
-            this, &CategoryEditDialog::slotSelectionChanged);
-    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemCollapsed, this,
-            &CategoryEditDialog::expandIfToplevel);
+    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemSelectionChanged, this, &CategoryEditDialog::editItem);
+    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemSelectionChanged, this, &CategoryEditDialog::slotSelectionChanged);
+    connect(mWidgets->mCategories, &IncidenceEditorNG::AutoCheckTreeWidget::itemCollapsed, this, &CategoryEditDialog::expandIfToplevel);
     connect(mWidgets->mEdit, &QLineEdit::textChanged, this, &CategoryEditDialog::slotTextChanged);
     connect(mWidgets->mButtonAdd, &QPushButton::clicked, this, &CategoryEditDialog::add);
-    connect(mWidgets->mButtonAddSubcategory, &QPushButton::clicked, this,
-            &CategoryEditDialog::addSubcategory);
+    connect(mWidgets->mButtonAddSubcategory, &QPushButton::clicked, this, &CategoryEditDialog::addSubcategory);
     connect(mWidgets->mButtonRemove, &QPushButton::clicked, this, &CategoryEditDialog::remove);
     connect(okButton, &QPushButton::clicked, this, &CategoryEditDialog::slotOk);
-    connect(buttonBox->button(
-                QDialogButtonBox::Cancel), &QPushButton::clicked, this,
-            &CategoryEditDialog::slotCancel);
+    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, &CategoryEditDialog::slotCancel);
 }
 
 CategoryEditDialog::~CategoryEditDialog()
@@ -102,8 +98,7 @@ CategoryEditDialog::~CategoryEditDialog()
 
 void CategoryEditDialog::fillList()
 {
-    CalendarSupport::CategoryHierarchyReaderQTreeWidget(
-        mWidgets->mCategories).read(mCategoryConfig->customCategories());
+    CalendarSupport::CategoryHierarchyReaderQTreeWidget(mWidgets->mCategories).read(mCategoryConfig->customCategories());
 }
 
 void CategoryEditDialog::slotTextChanged(const QString &text)
@@ -123,9 +118,7 @@ void CategoryEditDialog::slotSelectionChanged()
 
 void CategoryEditDialog::add()
 {
-    QTreeWidgetItem *newItem
-        = new QTreeWidgetItem(mWidgets->mCategories,
-                              QStringList(i18n("New category")));
+    QTreeWidgetItem *newItem = new QTreeWidgetItem(mWidgets->mCategories, QStringList(i18n("New category")));
     newItem->setExpanded(true);
 
     mWidgets->mCategories->setCurrentItem(newItem);
@@ -139,9 +132,7 @@ void CategoryEditDialog::add()
 void CategoryEditDialog::addSubcategory()
 {
     if (!mWidgets->mEdit->text().isEmpty()) {
-        QTreeWidgetItem *newItem
-            = new QTreeWidgetItem(mWidgets->mCategories->currentItem(),
-                                  QStringList(i18n("New subcategory")));
+        QTreeWidgetItem *newItem = new QTreeWidgetItem(mWidgets->mCategories->currentItem(), QStringList(i18n("New subcategory")));
         newItem->setExpanded(true);
 
         mWidgets->mCategories->setCurrentItem(newItem);
@@ -193,9 +184,7 @@ void CategoryEditDialog::slotApply()
     QTreeWidgetItemIterator it(mWidgets->mCategories);
     while (*it) {
         path = mWidgets->mCategories->pathByItem(*it++);
-        path.replaceInStrings(
-            CategoryConfig::categorySeparator,
-            QLatin1Char('\\') + CategoryConfig::categorySeparator);
+        path.replaceInStrings(CategoryConfig::categorySeparator, QLatin1Char('\\') + CategoryConfig::categorySeparator);
         l.append(path.join(CategoryConfig::categorySeparator));
     }
     mCategoryConfig->setCustomCategories(l);

@@ -10,14 +10,16 @@
 
 #include "ui_schedulingdialog.h"
 
-#include <QDialog>
 #include <QDateTime>
+#include <QDialog>
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class FreePeriodModel;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class ConflictResolver;
 class VisualFreeBusyWidget;
 

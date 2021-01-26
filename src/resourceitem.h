@@ -17,7 +17,8 @@
 #include <QVariant>
 #include <QVector>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class ResourceItem : public QObject
 {
     Q_OBJECT

@@ -12,18 +12,21 @@
 
 #include <KCalendarCore/FreeBusy>
 #include <KContacts/Addressee>
-namespace Ui {
+namespace Ui
+{
 class EventOrTodoDesktop;
 }
 
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 class ContactGroup;
 }
 
 class KJob;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttendeeComboBoxDelegate;
 class AttendeeLineEditDelegate;
 class AttendeeTableModel;
@@ -34,8 +37,8 @@ class IncidenceAttendee : public IncidenceEditor
 {
     Q_OBJECT
 public:
-    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
+    using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
     explicit IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceAttendee() override;
 

@@ -7,39 +7,35 @@
 
 #include "templatemanagementdialog.h"
 
-#include <QInputDialog>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KStandardGuiItem>
+#include <QInputDialog>
 
-#include <QTimer>
+#include <QDesktopServices>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QVBoxLayout>
+#include <QTimer>
 #include <QUrlQuery>
-#include <QDesktopServices>
+#include <QVBoxLayout>
 
 using namespace IncidenceEditorNG;
 
-TemplateManagementDialog::TemplateManagementDialog(
-    QWidget *parent, const QStringList &templates, const QString &incidenceType)
+TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType)
     : QDialog(parent)
     , m_templates(templates)
     , m_type(incidenceType)
 {
     QString m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     auto *mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TemplateManagementDialog::reject);
     setObjectName(QStringLiteral("template_management_dialog"));
-    connect(buttonBox->button(
-                QDialogButtonBox::Help), &QPushButton::clicked, this,
-            &TemplateManagementDialog::slotHelp);
+    connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &TemplateManagementDialog::slotHelp);
     QWidget *widget = new QWidget(this);
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
@@ -50,17 +46,12 @@ TemplateManagementDialog::TemplateManagementDialog(
     m_base.m_listBox->addItems(m_templates);
     m_base.m_listBox->setSelectionMode(QAbstractItemView::SingleSelection);
 
-    connect(m_base.m_buttonAdd, &QPushButton::clicked, this,
-            &TemplateManagementDialog::slotAddTemplate);
-    connect(m_base.m_buttonRemove, &QPushButton::clicked, this,
-            &TemplateManagementDialog::slotRemoveTemplate);
-    connect(m_base.m_buttonApply, &QPushButton::clicked, this,
-            &TemplateManagementDialog::slotApplyTemplate);
+    connect(m_base.m_buttonAdd, &QPushButton::clicked, this, &TemplateManagementDialog::slotAddTemplate);
+    connect(m_base.m_buttonRemove, &QPushButton::clicked, this, &TemplateManagementDialog::slotRemoveTemplate);
+    connect(m_base.m_buttonApply, &QPushButton::clicked, this, &TemplateManagementDialog::slotApplyTemplate);
 
-    connect(m_base.m_listBox, &QListWidget::itemSelectionChanged, this,
-            &TemplateManagementDialog::slotItemSelected);
-    connect(m_base.m_listBox, &QListWidget::itemDoubleClicked, this,
-            &TemplateManagementDialog::slotApplyTemplate);
+    connect(m_base.m_listBox, &QListWidget::itemSelectionChanged, this, &TemplateManagementDialog::slotItemSelected);
+    connect(m_base.m_listBox, &QListWidget::itemDoubleClicked, this, &TemplateManagementDialog::slotApplyTemplate);
     connect(okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotOk);
 
     m_base.m_buttonRemove->setEnabled(false);
@@ -69,12 +60,9 @@ TemplateManagementDialog::TemplateManagementDialog(
 
 void TemplateManagementDialog::slotHelp()
 {
-    QUrl url
-        = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral(
-                                                           "korganizer/entering-data.html")));
+    QUrl url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/entering-data.html")));
     QUrlQuery query(url);
-    query.addQueryItem(QStringLiteral("anchor"),
-                       QStringLiteral("entering-data-events-template-buttons"));
+    query.addQueryItem(QStringLiteral("anchor"), QStringLiteral("entering-data-events-template-buttons"));
     url.setQuery(query);
     // launch khelpcenter, or a browser for URIs not handled by khelpcenter
     QDesktopServices::openUrl(url);
@@ -93,19 +81,19 @@ void TemplateManagementDialog::slotAddTemplate()
     QString m_type_translated = i18n(qPrintable(m_type));
     const QString newTemplate = QInputDialog::getText(this,
                                                       i18n("Template Name"),
-                                                      i18n(
-                                                          "Please enter a name for the new template:"), QLineEdit::Normal,
-                                                      i18n("New %1 Template",
-                                                           m_type_translated), &ok);
+                                                      i18n("Please enter a name for the new template:"),
+                                                      QLineEdit::Normal,
+                                                      i18n("New %1 Template", m_type_translated),
+                                                      &ok);
     if (newTemplate.isEmpty() || !ok) {
         return;
     }
 
     if (m_templates.contains(newTemplate)) {
-        int rc = KMessageBox::warningContinueCancel(
-            this,
-            i18n("A template with that name already exists, do you want to overwrite it?"),
-            i18n("Duplicate Template Name"), KStandardGuiItem::overwrite());
+        int rc = KMessageBox::warningContinueCancel(this,
+                                                    i18n("A template with that name already exists, do you want to overwrite it?"),
+                                                    i18n("Duplicate Template Name"),
+                                                    KStandardGuiItem::overwrite());
         if (rc == KMessageBox::Cancel) {
             QTimer::singleShot(0, this, &TemplateManagementDialog::slotAddTemplate);
             return;
@@ -125,7 +113,7 @@ void TemplateManagementDialog::slotAddTemplate()
 
     // From this point on we need to keep the original event around until the
     // user has closed the dialog, applying a template would make little sense
-    //buttonBox->button(QDialogButtonBox::Apply)->setEnabled( false );
+    // buttonBox->button(QDialogButtonBox::Apply)->setEnabled( false );
     // neither does adding it again
     m_base.m_buttonAdd->setEnabled(false);
 }
@@ -137,10 +125,10 @@ void TemplateManagementDialog::slotRemoveTemplate()
         return; // can't happen (TM)
     }
 
-    int rc = KMessageBox::warningContinueCancel(
-        this,
-        i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
-        i18n("Remove Template"), KStandardGuiItem::remove());
+    int rc = KMessageBox::warningContinueCancel(this,
+                                                i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
+                                                i18n("Remove Template"),
+                                                KStandardGuiItem::remove());
 
     if (rc == KMessageBox::Cancel) {
         return;

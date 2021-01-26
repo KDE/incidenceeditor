@@ -12,14 +12,16 @@
 #include <Collection>
 #include <QObject>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 class Item;
 }
 
 class KJob;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class ItemEditorUi;
 class ItemEditorPrivate;
 
@@ -47,8 +49,8 @@ public:
     ~EditorItemManager() override;
 
     enum ItemState {
-        AfterSave,  /**< Returns the last saved item */
-        BeforeSave  /**< Returns an item with the original payload before the last save call */
+        AfterSave, /**< Returns the last saved item */
+        BeforeSave /**< Returns an item with the original payload before the last save call */
     };
 
     /**
@@ -72,8 +74,8 @@ public:
     enum SaveAction {
         Create, /**< A new item was created */
         Modify, /**< An existing item was modified */
-        None,   /**< Nothing happened. */
-        Move,    /**< An existing item was moved to another collection */
+        None, /**< Nothing happened. */
+        Move, /**< An existing item was moved to another collection */
         MoveAndModify /**< An existing item was moved to another collection and modified */
     };
 
@@ -95,13 +97,10 @@ private:
     Q_PRIVATE_SLOT(d_ptr, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
     Q_PRIVATE_SLOT(d_ptr, void itemFetchResult(KJob *))
     Q_PRIVATE_SLOT(d_ptr, void itemMoveResult(KJob *))
-    Q_PRIVATE_SLOT(d_ptr, void onModifyFinished(int changeId, const Akonadi::Item &item,
-                                                Akonadi::IncidenceChanger::ResultCode resultCode,
-                                                const QString &errorString))
-    Q_PRIVATE_SLOT(d_ptr, void onCreateFinished(int changeId,
-                                                const Akonadi::Item &item,
-                                                Akonadi::IncidenceChanger::ResultCode resultCode,
-                                                const QString &errorString))
+    Q_PRIVATE_SLOT(d_ptr,
+                   void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString))
+    Q_PRIVATE_SLOT(d_ptr,
+                   void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString))
     Q_PRIVATE_SLOT(d_ptr, void moveJobFinished(KJob *job))
 };
 
@@ -109,7 +108,7 @@ class ItemEditorUi
 {
 public:
     enum RejectReason {
-        ItemFetchFailed,      ///> Either the fetchjob failed or no items where returned
+        ItemFetchFailed, ///> Either the fetchjob failed or no items where returned
         ItemHasInvalidPayload, ///> The fetched item has an invalid payload
         ItemMoveFailed ///> Item move failed
     };

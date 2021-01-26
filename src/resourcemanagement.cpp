@@ -5,10 +5,10 @@
  */
 
 #include "resourcemanagement.h"
-#include "ui_resourcemanagement.h"
-#include "resourcemodel.h"
-#include <CalendarSupport/FreeBusyItem>
 #include "ldaputils.h"
+#include "resourcemodel.h"
+#include "ui_resourcemanagement.h"
+#include <CalendarSupport/FreeBusyItem>
 
 #include "freebusyganttproxymodel.h"
 
@@ -21,15 +21,15 @@
 
 #include <KGantt/KGanttGraphicsView>
 
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
+#include <QColor>
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QPushButton>
 #include <QStringList>
-#include <QLabel>
-#include <QColor>
 
 using namespace IncidenceEditorNG;
 
@@ -59,9 +59,7 @@ public:
     QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         bool ok = false;
-        int status = incidence->customProperty(QStringLiteral(
-                                                   "FREEBUSY").toLatin1(), QStringLiteral(
-                                                   "STATUS").toLatin1()).toInt(&ok);
+        int status = incidence->customProperty(QStringLiteral("FREEBUSY").toLatin1(), QStringLiteral("STATUS").toLatin1()).toInt(&ok);
 
         if (!ok) {
             return QColor(85, 85, 85);
@@ -98,8 +96,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Resource Management"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(
-        QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -130,8 +127,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     mUi->resourceCalender->addWidget(mAgendaView);
 
     QStringList attrs;
-    attrs << QStringLiteral("cn") << QStringLiteral("mail")
-          << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn")
+    attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn")
           << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
     auto *resourcemodel = new ResourceModel(attrs, this);
     mUi->treeResults->setModel(resourcemodel);
@@ -140,13 +136,11 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     mUi->treeResults->setSelectionMode(QAbstractItemView::SingleSelection);
     selectionModel = mUi->treeResults->selectionModel();
 
-    connect(mUi->resourceSearch, &QLineEdit::textChanged, this,
-            &ResourceManagement::slotStartSearch);
+    connect(mUi->resourceSearch, &QLineEdit::textChanged, this, &ResourceManagement::slotStartSearch);
 
     connect(mUi->treeResults, &QTreeView::clicked, this, &ResourceManagement::slotShowDetails);
 
-    connect(resourcemodel, &ResourceModel::layoutChanged, this,
-            &ResourceManagement::slotLayoutChanged);
+    connect(resourcemodel, &ResourceModel::layoutChanged, this, &ResourceManagement::slotLayoutChanged);
     readConfig();
 }
 
@@ -185,8 +179,7 @@ void ResourceManagement::slotStartSearch(const QString &text)
 
 void ResourceManagement::slotShowDetails(const QModelIndex &current)
 {
-    ResourceItem::Ptr item
-        = current.model()->data(current, ResourceModel::Resource).value<ResourceItem::Ptr>();
+    ResourceItem::Ptr item = current.model()->data(current, ResourceModel::Resource).value<ResourceItem::Ptr>();
     mSelectedItem = item;
     showDetails(item->ldapObject(), item->ldapClient());
 }
@@ -208,26 +201,20 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
             continue;
         } else if (key == QLatin1String("owner")) {
             QStringList attrs;
-            attrs << QStringLiteral("cn") << QStringLiteral("mail")
-                  << QStringLiteral("mobile") <<  QStringLiteral("telephoneNumber")
+            attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("mobile") << QStringLiteral("telephoneNumber")
                   << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
-            mOwnerItem
-                = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(QString::fromUtf8(it.value().at(0))),
-                                                     attrs, client));
-            connect(
-                mOwnerItem.data(), &ResourceItem::searchFinished, this,
-                &ResourceManagement::slotOwnerSearchFinished);
+            mOwnerItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(QString::fromUtf8(it.value().at(0))), attrs, client));
+            connect(mOwnerItem.data(), &ResourceItem::searchFinished, this, &ResourceManagement::slotOwnerSearchFinished);
             mOwnerItem->startSearch();
             continue;
         }
         QStringList list;
         const QList<QByteArray> values = it.value();
         list.reserve(values.count());
-        for (const QByteArray &value: values) {
+        for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key),
-                                 new QLabel(list.join(QLatin1Char('\n'))));
+        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
     }
 
     QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
@@ -260,10 +247,7 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAP::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1String("objectClass")
-            || key == QLatin1String("owner")
-            || key == QLatin1String("givenname")
-            || key == QLatin1String("sn")) {
+        if (key == QLatin1String("objectClass") || key == QLatin1String("owner") || key == QLatin1String("givenname") || key == QLatin1String("sn")) {
             continue;
         }
         QStringList list;
@@ -272,8 +256,7 @@ void ResourceManagement::slotOwnerSearchFinished()
         for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key),
-                               new QLabel(list.join(QLatin1Char('\n'))));
+        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
     }
 }
 

@@ -12,17 +12,19 @@
 #define INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H
 
 #include <KCalendarCore/Attachment>
-#include <QUrl>
 #include <QDialog>
 #include <QMimeType>
+#include <QUrl>
 
 class QPushButton;
 
-namespace Ui {
+namespace Ui
+{
 class AttachmentEditDialog;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class AttachmentIconItem;
 
 class AttachmentEditDialog : public QDialog

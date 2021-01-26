@@ -5,21 +5,21 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "korganizereditorconfig.h"
-#include "incidencedialog.h"
 #include "incidencedefaults.h"
+#include "incidencedialog.h"
+#include "korganizereditorconfig.h"
 
 #include <CalendarSupport/KCalPrefs>
-#include <akonadi/calendar/calendarsettings.h>
 #include <Item>
+#include <akonadi/calendar/calendarsettings.h>
 
 #include <KCalendarCore/Event>
-#include <KCalendarCore/Todo>
 #include <KCalendarCore/Journal>
+#include <KCalendarCore/Todo>
 
 #include <QApplication>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
 
 #include <iostream>
 
@@ -36,12 +36,10 @@ int main(int argc, char **argv)
     parser.addVersionOption();
     parser.addOption(QCommandLineOption(QStringLiteral("new-event"), QStringLiteral("Creates a new event")));
     parser.addOption(QCommandLineOption(QStringLiteral("new-todo"), QStringLiteral("Creates a new todo")));
-    parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), QStringLiteral(
-                                            "Creates a new journal")));
+    parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), QStringLiteral("Creates a new journal")));
     parser.addOption(QCommandLineOption(QStringLiteral("item"),
-                                        QStringLiteral(
-                                            "Loads an existing item, or returns without doing anything "
-                                            "when the item is not an event or todo."),
+                                        QStringLiteral("Loads an existing item, or returns without doing anything "
+                                                       "when the item is not an event or todo."),
                                         QStringLiteral("id")));
     parser.process(app);
 
@@ -57,8 +55,7 @@ int main(int argc, char **argv)
     //       This method should somehow depend on the calendar selected to which
     //       the incidence is added.
     if (CalendarSupport::KCalPrefs::instance()->useGroupwareCommunication()) {
-        defaults.setGroupWareDomain(
-            QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
+        defaults.setGroupWareDomain(QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
     }
 
     if (parser.isSet(QStringLiteral("new-event"))) {
@@ -102,7 +99,7 @@ int main(int argc, char **argv)
         dialog->selectCollection(collection);
     }
 
-    dialog->load(item);   // The dialog will show up once the item is loaded.
+    dialog->load(item); // The dialog will show up once the item is loaded.
 
     return app.exec();
 }

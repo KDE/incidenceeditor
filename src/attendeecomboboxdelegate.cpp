@@ -11,17 +11,16 @@
 #include <QAbstractItemView>
 #include <QApplication>
 #include <QHelpEvent>
+#include <QMenu>
 #include <QToolTip>
 #include <QWhatsThis>
-#include <QMenu>
 
 using namespace IncidenceEditorNG;
 
 AttendeeComboBoxDelegate::AttendeeComboBoxDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
 {
-    connect(this, &AttendeeComboBoxDelegate::closeEditor, this,
-            &AttendeeComboBoxDelegate::doCloseEditor);
+    connect(this, &AttendeeComboBoxDelegate::closeEditor, this, &AttendeeComboBoxDelegate::doCloseEditor);
 }
 
 void AttendeeComboBoxDelegate::addItem(const QIcon &icon, const QString &text)
@@ -127,14 +126,12 @@ void AttendeeComboBoxDelegate::doCloseEditor(QWidget *editor)
 
 void AttendeeComboBoxDelegate::leftPressed()
 {
-    Q_EMIT closeEditor(
-        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
+    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditPreviousItem);
 }
 
 void AttendeeComboBoxDelegate::rightPressed()
 {
-    Q_EMIT closeEditor(
-        static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
+    Q_EMIT closeEditor(static_cast<QWidget *>(QObject::sender()), QAbstractItemDelegate::EditNextItem);
 }
 
 bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index)
@@ -144,8 +141,7 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
     }
     switch (event->type()) {
 #ifndef QT_NO_TOOLTIP
-    case QEvent::ToolTip:
-    {
+    case QEvent::ToolTip: {
         QToolTip::showText(event->globalPos(), mToolTip, view);
         return true;
     }
@@ -153,8 +149,7 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
 #ifndef QT_NO_WHATSTHIS
     case QEvent::QueryWhatsThis:
         return true;
-    case QEvent::WhatsThis:
-    {
+    case QEvent::WhatsThis: {
         QWhatsThis::showText(event->globalPos(), mWhatsThis, view);
         return true;
     }

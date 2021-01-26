@@ -10,8 +10,9 @@
 
 #include <QString>
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 Q_REQUIRED_RESULT QString translateLDAPAttributeForDisplay(const QString &attribute);
 } // namespace IncidenceEditorNG
 
-#endif //LDAPUTLS_H
+#endif // LDAPUTLS_H

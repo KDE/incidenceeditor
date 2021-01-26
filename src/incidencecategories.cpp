@@ -9,8 +9,8 @@
 
 #include "editorconfig.h"
 
-#include "ui_dialogdesktop.h"
 #include "incidenceeditor_debug.h"
+#include "ui_dialogdesktop.h"
 
 #include <TagAttribute>
 #include <TagCreateJob>
@@ -24,8 +24,7 @@ IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
 {
     setObjectName(QStringLiteral("IncidenceCategories"));
 
-    connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this,
-            &IncidenceCategories::onSelectionChanged);
+    connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this, &IncidenceCategories::onSelectionChanged);
 }
 
 void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
@@ -82,8 +81,7 @@ void IncidenceCategories::createMissingCategories()
     for (const QString &category : qAsConst(mMissingCategories)) {
         Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
         auto *createJob = new Akonadi::TagCreateJob(missingTag, this);
-        connect(createJob, &Akonadi::TagCreateJob::result, this,
-                &IncidenceCategories::onMissingTagCreated);
+        connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
     }
 }
 
@@ -96,8 +94,7 @@ void IncidenceCategories::printDebugInfo() const
 {
     qCDebug(INCIDENCEEDITOR_LOG) << "selected categories = " << categories();
     qCDebug(INCIDENCEEDITOR_LOG) << "mMissingCategories = " << mMissingCategories;
-    qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = "
-                                 << mLoadedIncidence->categories();
+    qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = " << mLoadedIncidence->categories();
 }
 
 void IncidenceCategories::onTagsFetched(KJob *job)

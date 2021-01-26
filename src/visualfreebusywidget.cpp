@@ -9,14 +9,14 @@
 #include "freebusyganttproxymodel.h"
 #include <CalendarSupport/FreeBusyItemModel>
 
+#include <KGantt/KGanttAbstractRowController>
+#include <KGantt/KGanttDateTimeGrid>
 #include <KGantt/KGanttGraphicsView>
 #include <KGantt/KGanttView>
-#include <KGantt/KGanttDateTimeGrid>
-#include <KGantt/KGanttAbstractRowController>
 
-#include <QComboBox>
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
+#include <QComboBox>
 
 #include <QHeaderView>
 #include <QLabel>
@@ -29,7 +29,8 @@
 
 using namespace IncidenceEditorNG;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class RowController : public KGantt::AbstractRowController
 {
 private:
@@ -110,7 +111,8 @@ private:
 class GanttHeaderView : public QHeaderView
 {
 public:
-    explicit GanttHeaderView(QWidget *parent = nullptr) : QHeaderView(Qt::Horizontal, parent)
+    explicit GanttHeaderView(QWidget *parent = nullptr)
+        : QHeaderView(Qt::Horizontal, parent)
     {
     }
 
@@ -138,54 +140,42 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     controlLayout->addWidget(label);
 
     mScaleCombo = new QComboBox(this);
-    mScaleCombo->setToolTip(
-        i18nc("@info:tooltip", "Set the Gantt chart zoom level"));
-    mScaleCombo->setWhatsThis(
-        xi18nc("@info:whatsthis",
-               "Select the Gantt chart zoom level from one of the following:<nl/>"
-               "'Hour' shows a range of several hours,<nl/>"
-               "'Day' shows a range of a few days,<nl/>"
-               "'Week' shows a range of a few months,<nl/>"
-               "and 'Month' shows a range of a few years,<nl/>"
-               "while 'Automatic' selects the range most "
-               "appropriate for the current event or to-do."));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in hours", "Hour"),
-                         QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleHour));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in days", "Day"),
-                         QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleDay));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in weeks", "Week"),
-                         QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleWeek));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range in months", "Month"),
-                         QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleMonth));
-    mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"),
-                         QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
-    mScaleCombo->setCurrentIndex(0);   // start with "hour"
-    connect(mScaleCombo, qOverload< int>(&QComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
+    mScaleCombo->setToolTip(i18nc("@info:tooltip", "Set the Gantt chart zoom level"));
+    mScaleCombo->setWhatsThis(xi18nc("@info:whatsthis",
+                                     "Select the Gantt chart zoom level from one of the following:<nl/>"
+                                     "'Hour' shows a range of several hours,<nl/>"
+                                     "'Day' shows a range of a few days,<nl/>"
+                                     "'Week' shows a range of a few months,<nl/>"
+                                     "and 'Month' shows a range of a few years,<nl/>"
+                                     "while 'Automatic' selects the range most "
+                                     "appropriate for the current event or to-do."));
+    mScaleCombo->addItem(i18nc("@item:inlistbox range in hours", "Hour"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleHour));
+    mScaleCombo->addItem(i18nc("@item:inlistbox range in days", "Day"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleDay));
+    mScaleCombo->addItem(i18nc("@item:inlistbox range in weeks", "Week"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleWeek));
+    mScaleCombo->addItem(i18nc("@item:inlistbox range in months", "Month"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleMonth));
+    mScaleCombo->addItem(i18nc("@item:inlistbox range is computed automatically", "Automatic"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleAuto));
+    mScaleCombo->setCurrentIndex(0); // start with "hour"
+    connect(mScaleCombo, qOverload<int>(&QComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
 
     QPushButton *button = new QPushButton(i18nc("@action:button", "Center on Start"), this);
-    button->setToolTip(
-        i18nc("@info:tooltip",
-              "Center the Gantt chart on the event start date and time"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Click this button to center the Gantt chart on the start "
-              "time and day of this event."));
+    button->setToolTip(i18nc("@info:tooltip", "Center the Gantt chart on the event start date and time"));
+    button->setWhatsThis(i18nc("@info:whatsthis",
+                               "Click this button to center the Gantt chart on the start "
+                               "time and day of this event."));
     connect(button, &QPushButton::clicked, this, &VisualFreeBusyWidget::slotCenterOnStart);
     controlLayout->addWidget(button);
 
     controlLayout->addStretch(1);
 
     button = new QPushButton(i18nc("@action:button", "Pick Date"), this);
-    button->setToolTip(
-        i18nc("@info:tooltip",
-              "Move the event to a date and time when all "
-              "attendees are available"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Click this button to move the event to a date "
-              "and time when all the attendees have time "
-              "available in their Free/Busy lists."));
+    button->setToolTip(i18nc("@info:tooltip",
+                             "Move the event to a date and time when all "
+                             "attendees are available"));
+    button->setWhatsThis(i18nc("@info:whatsthis",
+                               "Click this button to move the event to a date "
+                               "and time when all the attendees have time "
+                               "available in their Free/Busy lists."));
     button->setEnabled(false);
     connect(button, &QPushButton::clicked, this, &VisualFreeBusyWidget::slotPickDate);
     controlLayout->addWidget(button);
@@ -193,13 +183,10 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     controlLayout->addStretch(1);
 
     button = new QPushButton(i18nc("@action:button reload freebusy data", "Reload"), this);
-    button->setToolTip(
-        i18nc("@info:tooltip",
-              "Reload Free/Busy data for all attendees"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Pressing this button will cause the Free/Busy data for all "
-              "attendees to be reloaded from their corresponding servers."));
+    button->setToolTip(i18nc("@info:tooltip", "Reload Free/Busy data for all attendees"));
+    button->setWhatsThis(i18nc("@info:whatsthis",
+                               "Pressing this button will cause the Free/Busy data for all "
+                               "attendees to be reloaded from their corresponding servers."));
     controlLayout->addWidget(button);
     connect(button, &QPushButton::clicked, this, &VisualFreeBusyWidget::manualReload);
 
@@ -209,29 +196,24 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mLeftView->setModel(model);
     mLeftView->setHeader(new GanttHeaderView);
     mLeftView->header()->setStretchLastSection(true);
-    mLeftView->setToolTip(i18nc("@info:tooltip",
-                                "Shows the tree list of all data"));
-    mLeftView->setWhatsThis(i18nc("@info:whatsthis",
-                                  "Shows the tree list of all data"));
+    mLeftView->setToolTip(i18nc("@info:tooltip", "Shows the tree list of all data"));
+    mLeftView->setWhatsThis(i18nc("@info:whatsthis", "Shows the tree list of all data"));
     mLeftView->setRootIsDecorated(false);
     mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mLeftView->setContextMenuPolicy(Qt::CustomContextMenu);
     mGanttGraphicsView = new KGantt::GraphicsView(this);
     mGanttGraphicsView->setObjectName(QStringLiteral("mGanttGraphicsView"));
-    mGanttGraphicsView->setToolTip(
-        i18nc("@info:tooltip",
-              "Shows the Free/Busy status of all attendees"));
-    mGanttGraphicsView->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Shows the Free/Busy status of all attendees. "
-              "Double-clicking on an attendee's entry in the "
-              "list will allow you to enter the location of "
-              "their Free/Busy Information."));
+    mGanttGraphicsView->setToolTip(i18nc("@info:tooltip", "Shows the Free/Busy status of all attendees"));
+    mGanttGraphicsView->setWhatsThis(i18nc("@info:whatsthis",
+                                           "Shows the Free/Busy status of all attendees. "
+                                           "Double-clicking on an attendee's entry in the "
+                                           "list will allow you to enter the location of "
+                                           "their Free/Busy Information."));
     mModel = new FreeBusyGanttProxyModel(this);
     mModel->setSourceModel(model);
 
     mRowController = new RowController;
-    mRowController->setRowHeight(fontMetrics().height());   //TODO: detect
+    mRowController->setRowHeight(fontMetrics().height()); // TODO: detect
 
     mRowController->setModel(mModel);
     mGanttGraphicsView->setRowController(mRowController);
@@ -253,16 +235,13 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     // Initially, show 15 days back and forth
     // set start to even hours, i.e. to 12:AM 0 Min 0 Sec
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    const QDateTime horizonStart
-        = QDateTime(QDateTime::currentDateTime().addDays(-15).date());
+    const QDateTime horizonStart = QDateTime(QDateTime::currentDateTime().addDays(-15).date());
 #else
-    const QDateTime horizonStart
-        = QDateTime(QDateTime::currentDateTime().addDays(-15).date().startOfDay());
+    const QDateTime horizonStart = QDateTime(QDateTime::currentDateTime().addDays(-15).date().startOfDay());
 #endif
     mGanttGrid->setStartDateTime(horizonStart);
 
-    connect(mLeftView, &QTreeView::customContextMenuRequested, this,
-            &VisualFreeBusyWidget::showAttendeeStatusMenu);
+    connect(mLeftView, &QTreeView::customContextMenuRequested, this, &VisualFreeBusyWidget::showAttendeeStatusMenu);
 }
 
 VisualFreeBusyWidget::~VisualFreeBusyWidget()

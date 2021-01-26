@@ -13,7 +13,8 @@
 #include <KCalendarCore/IncidenceBase>
 
 #include <QDialog>
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class TemplateManagementDialog : public QDialog
 {
     Q_OBJECT

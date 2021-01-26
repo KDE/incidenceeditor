@@ -8,8 +8,8 @@
 #include "freebusyganttproxymodel.h"
 #include <CalendarSupport/FreeBusyItemModel>
 
-#include <KGantt/KGanttGraphicsView>
 #include <KCalendarCore/FreeBusyPeriod>
+#include <KGantt/KGanttGraphicsView>
 
 #include <KLocalizedString>
 
@@ -42,9 +42,8 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 
     // if the index is valid, then it corresponds to a free busy period
-    KCalendarCore::FreeBusyPeriod period
-        = sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).
-          value<KCalendarCore::FreeBusyPeriod>();
+    KCalendarCore::FreeBusyPeriod period =
+        sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).value<KCalendarCore::FreeBusyPeriod>();
 
     switch (role) {
     case KGantt::ItemTypeRole:
@@ -67,31 +66,22 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
 QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod &period) const
 {
     QString toolTip = QStringLiteral("<qt>");
-    toolTip += QLatin1String("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QLatin1String(
-        "</b>");
+    toolTip += QLatin1String("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QLatin1String("</b>");
     toolTip += QStringLiteral("<hr>");
     if (!period.summary().isEmpty()) {
-        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1String(
-            "</i>") + QStringLiteral("&nbsp;");
+        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1String("</i>") + QStringLiteral("&nbsp;");
         toolTip += period.summary();
         toolTip += QStringLiteral("<br>");
     }
     if (!period.location().isEmpty()) {
-        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1String(
-            "</i>") + QStringLiteral("&nbsp;");
+        toolTip += QLatin1String("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1String("</i>") + QStringLiteral("&nbsp;");
         toolTip += period.location();
         toolTip += QStringLiteral("<br>");
     }
-    toolTip += QStringLiteral("<i>")
-               + i18nc("@info:tooltip period start time",
-                       "Start:") + QStringLiteral("</i>") + QStringLiteral(
-        "&nbsp;");
+    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period start time", "Start:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
     toolTip += QLocale().toString(period.start().toLocalTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
-    toolTip += QStringLiteral("<i>")
-               + i18nc("@info:tooltip period end time",
-                       "End:") + QStringLiteral("</i>") + QStringLiteral(
-        "&nbsp;");
+    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period end time", "End:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
     toolTip += QLocale().toString(period.end().toLocalTime(), QLocale::ShortFormat);
     toolTip += QStringLiteral("<br>");
     toolTip += QStringLiteral("</qt>");

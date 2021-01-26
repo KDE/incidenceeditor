@@ -13,12 +13,13 @@
 
 #include <QUrl>
 
-#include <QStringList>
 #include <QDateTime>
+#include <QStringList>
 
 class KConfigSkeleton;
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * Configuration details. An application can inherit from this class
  * to provide application specific configurations to the editor.

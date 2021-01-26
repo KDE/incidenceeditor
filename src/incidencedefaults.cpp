@@ -7,8 +7,8 @@
 
 #include <config-enterprise.h>
 
-#include "incidencedefaults.h"
 #include "alarmpresets.h"
+#include "incidencedefaults.h"
 #include "incidenceeditor_debug.h"
 
 #include <CalendarSupport/KCalPrefs>
@@ -16,10 +16,10 @@
 
 #include <KContacts/Addressee>
 
-#include <KCalendarCore/Event>
-#include <KCalendarCore/Todo>
-#include <KCalendarCore/Journal>
 #include <KCalendarCore/Alarm>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Journal>
+#include <KCalendarCore/Todo>
 
 #include <KEmailAddress>
 
@@ -27,17 +27,16 @@
 #include <KIO/StoredTransferJob>
 #include <KLocalizedString>
 
-#include <QUrl>
 #include <QFile>
+#include <QUrl>
 
 using namespace CalendarSupport;
 using namespace IncidenceEditorNG;
 using namespace KCalendarCore;
 
-namespace IncidenceEditorNG {
-enum {
-    UNSPECIFED_PRIORITY = 0
-};
+namespace IncidenceEditorNG
+{
+enum { UNSPECIFED_PRIORITY = 0 };
 
 class IncidenceDefaultsPrivate
 {
@@ -109,8 +108,7 @@ KCalendarCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     return organizer;
 }
 
-KCalendarCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(
-    const KCalendarCore::Person &organizer) const
+KCalendarCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(const KCalendarCore::Person &organizer) const
 {
     KCalendarCore::Attendee organizerAsAttendee;
     // Really, the appropriate values (even the fall back values) should come from
@@ -138,8 +136,7 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalendarCore::Event::Ptr &ev
     }
 
     const QTime defaultDurationTime = KCalPrefs::instance()->defaultDuration().time();
-    const int defaultDuration = (defaultDurationTime.hour() * 3600)
-                                +(defaultDurationTime.minute() * 60);
+    const int defaultDuration = (defaultDurationTime.hour() * 3600) + (defaultDurationTime.minute() * 60);
 
     const QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
 
@@ -181,8 +178,7 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
         todo->setDtStart(mStartDt);
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(QDateTime());
-    } else if (relatedTodo && relatedTodo->hasStartDate()
-               && relatedTodo->dtStart() <= todo->dtDue()) {
+    } else if (relatedTodo && relatedTodo->hasStartDate() && relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
     } else if (!mEndDt.isValid() || (QDateTime::currentDateTime() < mEndDt)) {
@@ -232,7 +228,10 @@ IncidenceDefaults &IncidenceDefaults::operator=(const IncidenceDefaults &other)
     return *this;
 }
 
-void IncidenceDefaults::setAttachments(const QStringList &attachments, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment)
+void IncidenceDefaults::setAttachments(const QStringList &attachments,
+                                       const QStringList &attachmentMimetypes,
+                                       const QStringList &attachmentLabels,
+                                       bool inlineAttachment)
 {
     Q_D(IncidenceDefaults);
     d->mAttachments.clear();
@@ -243,7 +242,7 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
         if (!(*it).isEmpty()) {
             QString mimeType;
             if (attachmentMimetypes.count() > i) {
-                mimeType = attachmentMimetypes[ i ];
+                mimeType = attachmentMimetypes[i];
             }
 
             KCalendarCore::Attachment attachment;
@@ -254,11 +253,10 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                     attachment = KCalendarCore::Attachment(data.toBase64(), mimeType);
 
                     if (i < attachmentLabels.count()) {
-                        attachment.setLabel(attachmentLabels[ i ]);
+                        attachment.setLabel(attachmentLabels[i]);
                     }
                 } else {
-                    qCCritical(INCIDENCEEDITOR_LOG) << "Error downloading uri " << *it
-                                                    << job->errorString();
+                    qCCritical(INCIDENCEEDITOR_LOG) << "Error downloading uri " << *it << job->errorString();
                 }
 
                 if (d_ptr->mCleanupTemporaryFiles) {
@@ -270,7 +268,7 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
             } else {
                 attachment = KCalendarCore::Attachment(*it, mimeType);
                 if (i < attachmentLabels.count()) {
-                    attachment.setLabel(attachmentLabels[ i ]);
+                    attachment.setLabel(attachmentLabels[i]);
                 }
             }
 
@@ -279,8 +277,7 @@ void IncidenceDefaults::setAttachments(const QStringList &attachments, const QSt
                     if (attachment.isUri()) {
                         attachment.setLabel(attachment.uri());
                     } else {
-                        attachment.setLabel(
-                            i18nc("@label attachment contains binary data", "[Binary data]"));
+                        attachment.setLabel(i18nc("@label attachment contains binary data", "[Binary data]"));
                     }
                 }
                 d->mAttachments << attachment;
@@ -385,8 +382,7 @@ void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &inciden
         d->journalDefaults(incidence.dynamicCast<KCalendarCore::Journal>());
         break;
     default:
-        qCDebug(INCIDENCEEDITOR_LOG) << "Unsupported incidence type, keeping current values. Type: "
-                                     << static_cast<int>(incidence->type());
+        qCDebug(INCIDENCEEDITOR_LOG) << "Unsupported incidence type, keeping current values. Type: " << static_cast<int>(incidence->type());
     }
 }
 
@@ -405,8 +401,7 @@ IncidenceDefaults IncidenceDefaults::minimalIncidenceDefaults(bool cleanupAttach
     //       This method should somehow depend on the calendar selected to which
     //       the incidence is added.
     if (CalendarSupport::KCalPrefs::instance()->useGroupwareCommunication()) {
-        defaults.setGroupWareDomain(
-            QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
+        defaults.setGroupWareDomain(QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
     }
     return defaults;
 }
@@ -414,7 +409,6 @@ IncidenceDefaults IncidenceDefaults::minimalIncidenceDefaults(bool cleanupAttach
 /** static */
 QString IncidenceDefaults::invalidEmailAddress()
 {
-    static const QString invalidEmail(i18nc("@label invalid email address marker",
-                                            "invalid@email.address"));
+    static const QString invalidEmail(i18nc("@label invalid email address marker", "invalid@email.address"));
     return invalidEmail;
 }

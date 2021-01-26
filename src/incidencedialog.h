@@ -8,19 +8,21 @@
 #ifndef INCIDENCEEDITOR_INCIDENCEDIALOG_H
 #define INCIDENCEEDITOR_INCIDENCEDIALOG_H
 
-#include "incidenceeditor_export.h"
 #include "editoritemmanager.h"
+#include "incidenceeditor_export.h"
 
 #include <QDate>
 #include <QDialog>
 
 class QAbstractButton;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceDialogPrivate;
 /**
  * @brief The IncidenceDialog class
@@ -77,6 +79,7 @@ Q_SIGNALS:
      */
     void incidenceCreated(const Akonadi::Item &);
     void invalidCollection() const;
+
 protected:
     void closeEvent(QCloseEvent *event) override;
 
@@ -94,11 +97,8 @@ private:
     void readConfig();
 
     Q_PRIVATE_SLOT(d_ptr, void handleAlarmCountChange(int))
-    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFinish(
-                       IncidenceEditorNG::EditorItemManager::SaveAction))
-    Q_PRIVATE_SLOT(d_ptr,
-                   void handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction,
-                                           QString))
+    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFinish(IncidenceEditorNG::EditorItemManager::SaveAction))
+    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction, QString))
     Q_PRIVATE_SLOT(d_ptr, void handleRecurrenceChange(IncidenceEditorNG::RecurrenceType))
     Q_PRIVATE_SLOT(d_ptr, void loadTemplate(QString))
     Q_PRIVATE_SLOT(d_ptr, void saveTemplate(QString))

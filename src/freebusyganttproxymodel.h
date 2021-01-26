@@ -12,11 +12,13 @@
 
 #include <QSortFilterProxyModel>
 
-namespace KCalendarCore {
+namespace KCalendarCore
+{
 class FreeBusyPeriod;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * This is a private proxy model, that wraps the free busy data exposed
  * by the FreeBusyItemModel for use by KDGantt2.

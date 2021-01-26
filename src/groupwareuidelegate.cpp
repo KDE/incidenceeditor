@@ -10,15 +10,15 @@
 
 #include <CalendarSupport/Utils>
 
-#include <Item>
 #include "incidenceeditor_debug.h"
+#include <Item>
 using namespace IncidenceEditorNG;
 
 void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
 {
-// TODO_KDE5:
-// The GroupwareUiDelegate interface should be a QObject. Right now we have no way of emitting a
-// finished signal, so we have to use dialog->exec();
+    // TODO_KDE5:
+    // The GroupwareUiDelegate interface should be a QObject. Right now we have no way of emitting a
+    // finished signal, so we have to use dialog->exec();
 
     const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
     if (!incidence) {
@@ -26,9 +26,7 @@ void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
         return;
     }
 
-    IncidenceDialog *dialog = IncidenceDialogFactory::create(/*needs initial saving=*/ false,
-                                                             incidence->type(),
-                                                             nullptr);
+    IncidenceDialog *dialog = IncidenceDialogFactory::create(/*needs initial saving=*/false, incidence->type(), nullptr);
     dialog->setAttribute(Qt::WA_DeleteOnClose, false);
     dialog->setIsCounterProposal(true);
     dialog->load(item, QDate::currentDate());

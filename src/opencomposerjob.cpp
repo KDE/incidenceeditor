@@ -13,7 +13,12 @@
 
 using namespace IncidenceEditorNG;
 
-OpenComposerJob::OpenComposerJob(QObject *parent, const QString &to, const QString &cc, const QString &bcc, const KMime::Message::Ptr &message, const KIdentityManagement::Identity &identity)
+OpenComposerJob::OpenComposerJob(QObject *parent,
+                                 const QString &to,
+                                 const QString &cc,
+                                 const QString &bcc,
+                                 const KMime::Message::Ptr &message,
+                                 const KIdentityManagement::Identity &identity)
     : KJob(parent)
     , mTo(to)
     , mCc(cc)
@@ -46,8 +51,7 @@ void OpenComposerJob::start()
         const QString inReplyTo;
         bool hidden = false;
 
-        messages << mTo << mCc << mBcc << subject << body << hidden
-                 << messageFile << attachmentPaths << customHeaders << replyTo << inReplyTo;
+        messages << mTo << mCc << mBcc << subject << body << hidden << messageFile << attachmentPaths << customHeaders << replyTo << inReplyTo;
     } else {
         KMime::Content *attachment(mMessage->contents().at(1));
         QString attachName = attachment->contentType()->name();
@@ -61,23 +65,18 @@ void OpenComposerJob::start()
         QString attachParamValue = attachment->contentType()->parameter(QStringLiteral("method"));
         QByteArray attachData = attachment->encodedBody();
 
-        messages << mTo << mCc << mBcc << subject << body
-                 << attachName << attachCte << attachData << attachType << attachSubType
-                 << attachParamAttr << attachParamValue << attachContDisp << attachCharset
-                 << identity;
+        messages << mTo << mCc << mBcc << subject << body << attachName << attachCte << attachData << attachType << attachSubType << attachParamAttr
+                 << attachParamValue << attachContDisp << attachCharset << identity;
     }
 
     // with D-Bus autostart, this will start kmail if it's not running yet
-    QDBusInterface kmailObj(QStringLiteral("org.kde.kmail"), QStringLiteral(
-                                "/KMail"), QStringLiteral("org.kde.kmail.kmail"));
+    QDBusInterface kmailObj(QStringLiteral("org.kde.kmail"), QStringLiteral("/KMail"), QStringLiteral("org.kde.kmail.kmail"));
 
-    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, QStringLiteral(
-                                                                         "openComposer"), messages);
+    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, QStringLiteral("openComposer"), messages);
 
     if (!composerDbusPath.isValid()) {
         setError(KJob::UserDefinedError);
-        setErrorText(i18nc("errormessage: dbus is running but still no connection kmail",
-                           "Cannot connect to email service"));
+        setErrorText(i18nc("errormessage: dbus is running but still no connection kmail", "Cannot connect to email service"));
     }
     emitResult();
 }

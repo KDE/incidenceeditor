@@ -11,32 +11,32 @@
 */
 
 #include "incidenceattendee.h"
-#include "attendeetablemodel.h"
-#include "attendeeeditor.h"
 #include "attendeecomboboxdelegate.h"
+#include "attendeeeditor.h"
 #include "attendeelineeditdelegate.h"
+#include "attendeetablemodel.h"
 #include "conflictresolver.h"
 #include "editorconfig.h"
 #include "incidencedatetime.h"
 #include "schedulingdialog.h"
-#include <CalendarSupport/FreeBusyItemModel>
 #include "ui_dialogdesktop.h"
+#include <CalendarSupport/FreeBusyItemModel>
 
+#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
-#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 
+#include <KCalUtils/Stringify>
 #include <KEmailAddress>
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <KCalUtils/Stringify>
 
 #include "incidenceeditor_debug.h"
-#include <QTreeView>
-#include <QPointer>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <QPointer>
+#include <QTreeView>
 
 using namespace IncidenceEditorNG;
 
@@ -57,20 +57,14 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
                            KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
     mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-observer.png")),
                            KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-chair.png")),
-                           KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
+    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-chair.png")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
-    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral(
-                                                    "meeting-participant-request-response")),
-                               i18nc("@item:inlistbox", "Request Response"));
-    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")),
-                               i18nc("@item:inlistbox", "Request No Response"));
+    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-request-response")), i18nc("@item:inlistbox", "Request Response"));
+    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")), i18nc("@item:inlistbox", "Request No Response"));
 
-    mStateDelegate->setWhatsThis(i18nc("@info:whatsthis",
-                                       "Edits the current attendance status of the attendee."));
+    mStateDelegate->setWhatsThis(i18nc("@info:whatsthis", "Edits the current attendance status of the attendee."));
 
-    mRoleDelegate->setWhatsThis(i18nc("@info:whatsthis",
-                                      "Edits the role of the attendee."));
+    mRoleDelegate->setWhatsThis(i18nc("@info:whatsthis", "Edits the role of the attendee."));
 
     mResponseDelegate->setToolTip(i18nc("@info:tooltip", "Request a response from the attendee"));
     mResponseDelegate->setWhatsThis(i18nc("@info:whatsthis",
@@ -84,8 +78,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(mDataModel);
 
-    connect(mUi->mGroupSubstitution, &QPushButton::clicked, this,
-            &IncidenceAttendee::slotGroupSubstitutionPressed);
+    connect(mUi->mGroupSubstitution, &QPushButton::clicked, this, &IncidenceAttendee::slotGroupSubstitutionPressed);
 
     mUi->mAttendeeTable->setModel(filterProxyModel);
 
@@ -108,68 +101,45 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mConflictResolver->setLatestDate(mDateTime->endDate());
     mConflictResolver->setLatestTime(mDateTime->endTime());
 
-    connect(mUi->mSelectButton, &QPushButton::clicked, this,
-            &IncidenceAttendee::slotSelectAddresses);
-    connect(mUi->mSolveButton, &QPushButton::clicked, this,
-            &IncidenceAttendee::slotSolveConflictPressed);
+    connect(mUi->mSelectButton, &QPushButton::clicked, this, &IncidenceAttendee::slotSelectAddresses);
+    connect(mUi->mSolveButton, &QPushButton::clicked, this, &IncidenceAttendee::slotSolveConflictPressed);
     /* Added as part of kolab/issue2297, which is currently under review
     connect(mUi->mOrganizerCombo, qOverload<const QString &>(&QComboBox::activated),
             this, &IncidenceAttendee::slotOrganizerChanged);
     */
-    connect(mUi->mOrganizerCombo, qOverload<int>(&QComboBox::currentIndexChanged),
-            this, &IncidenceAttendee::checkDirtyStatus);
+    connect(mUi->mOrganizerCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceAttendee::checkDirtyStatus);
 
-    connect(mDateTime, &IncidenceDateTime::startDateChanged, this,
-            &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::endDateChanged, this,
-            &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::startTimeChanged, this,
-            &IncidenceAttendee::slotEventDurationChanged);
-    connect(mDateTime, &IncidenceDateTime::endTimeChanged, this,
-            &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::startTimeChanged, this, &IncidenceAttendee::slotEventDurationChanged);
+    connect(mDateTime, &IncidenceDateTime::endTimeChanged, this, &IncidenceAttendee::slotEventDurationChanged);
 
-    connect(mConflictResolver, &ConflictResolver::conflictsDetected, this,
-            &IncidenceAttendee::slotUpdateConflictLabel);
+    connect(mConflictResolver, &ConflictResolver::conflictsDetected, this, &IncidenceAttendee::slotUpdateConflictLabel);
 
-    connect(mConflictResolver->model(), &QAbstractItemModel::rowsInserted,
-            this, &IncidenceAttendee::slotFreeBusyAdded);
+    connect(mConflictResolver->model(), &QAbstractItemModel::rowsInserted, this, &IncidenceAttendee::slotFreeBusyAdded);
     connect(mConflictResolver->model(), SIGNAL(layoutChanged()), SLOT(updateFBStatus()));
-    connect(mConflictResolver->model(), &QAbstractItemModel::dataChanged,
-            this, &IncidenceAttendee::slotFreeBusyChanged);
+    connect(mConflictResolver->model(), &QAbstractItemModel::dataChanged, this, &IncidenceAttendee::slotFreeBusyChanged);
 
-    slotUpdateConflictLabel(0);   //initialize label
+    slotUpdateConflictLabel(0); // initialize label
 
     // conflict resolver (should show also resources)
-    connect(mDataModel, &AttendeeTableModel::layoutChanged, this,
-            &IncidenceAttendee::slotConflictResolverLayoutChanged);
-    connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this,
-            &IncidenceAttendee::slotConflictResolverAttendeeRemoved);
-    connect(mDataModel, &AttendeeTableModel::rowsInserted, this,
-            &IncidenceAttendee::slotConflictResolverAttendeeAdded);
-    connect(mDataModel, &AttendeeTableModel::dataChanged, this,
-            &IncidenceAttendee::slotConflictResolverAttendeeChanged);
+    connect(mDataModel, &AttendeeTableModel::layoutChanged, this, &IncidenceAttendee::slotConflictResolverLayoutChanged);
+    connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotConflictResolverAttendeeRemoved);
+    connect(mDataModel, &AttendeeTableModel::rowsInserted, this, &IncidenceAttendee::slotConflictResolverAttendeeAdded);
+    connect(mDataModel, &AttendeeTableModel::dataChanged, this, &IncidenceAttendee::slotConflictResolverAttendeeChanged);
 
-    //Group substitution
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
-            &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsAboutToBeRemoved, this,
-            &IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this,
-            &IncidenceAttendee::slotGroupSubstitutionAttendeeAdded);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this,
-            &IncidenceAttendee::slotGroupSubstitutionAttendeeChanged);
+    // Group substitution
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeAdded);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeChanged);
 
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this,
-            &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsRemoved, this,
-            &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this, &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::rowsRemoved, this, &IncidenceAttendee::updateCount);
     // only update when FullName is changed
-    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this,
-            &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
-            &IncidenceAttendee::updateCount);
-    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this,
-            &IncidenceAttendee::filterLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::filterLayoutChanged);
 }
 
 IncidenceAttendee::~IncidenceAttendee()
@@ -187,8 +157,7 @@ void IncidenceAttendee::load(const KCalendarCore::Incidence::Ptr &incidence)
         const QString fullOrganizer = incidence->organizer().fullName();
         const QString organizerEmail = incidence->organizer().email();
         for (int i = 0; i < mUi->mOrganizerCombo->count(); ++i) {
-            KCalendarCore::Person organizerCandidate
-                = KCalendarCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
+            KCalendarCore::Person organizerCandidate = KCalendarCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
             if (organizerCandidate.email() == organizerEmail) {
                 found = i;
                 mUi->mOrganizerCombo->setCurrentIndex(i);
@@ -233,13 +202,13 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
             continue;
         }
         if (KEmailAddress::isValidAddress(attendee.email())) {
-            if (KMessageBox::warningYesNo(
-                    nullptr,
-                    i18nc("@info",
-                          "%1 does not look like a valid email address. "
-                          "Are you sure you want to invite this participant?",
-                          attendee.email()),
-                    i18nc("@title:window", "Invalid Email Address")) != KMessageBox::Yes) {
+            if (KMessageBox::warningYesNo(nullptr,
+                                          i18nc("@info",
+                                                "%1 does not look like a valid email address. "
+                                                "Are you sure you want to invite this participant?",
+                                                attendee.email()),
+                                          i18nc("@title:window", "Invalid Email Address"))
+                != KMessageBox::Yes) {
                 skip = true;
             }
         }
@@ -267,11 +236,8 @@ bool IncidenceAttendee::isDirty() const
         tmp.setOrganizer(mUi->mOrganizerCombo->currentText());
 
         if (mLoadedIncidence->organizer().email() != tmp.organizer().email()) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was "
-                                         << mLoadedIncidence->organizer().name()
-                                         << mLoadedIncidence->organizer().email() << "; new is "
-                                         << tmp.organizer().name()
-                                         << tmp.organizer().email();
+            qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was " << mLoadedIncidence->organizer().name() << mLoadedIncidence->organizer().email()
+                                         << "; new is " << tmp.organizer().name() << tmp.organizer().email();
             return true;
         }
     }
@@ -370,8 +336,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &
     if (!fullname.isEmpty()) {
         auto *job = new Akonadi::ContactGroupSearchJob();
         job->setQuery(Akonadi::ContactGroupSearchJob::Name, fullname);
-        connect(job, &Akonadi::ContactGroupSearchJob::result, this,
-                &IncidenceAttendee::groupSearchResult);
+        connect(job, &Akonadi::ContactGroupSearchJob::result, this, &IncidenceAttendee::groupSearchResult);
 
         mMightBeGroupJobs.insert(job, attendee.uid());
     }
@@ -411,8 +376,7 @@ void IncidenceAttendee::slotGroupSubstitutionPressed()
 {
     for (auto it = mGroupList.cbegin(), end = mGroupList.cend(); it != end; ++it) {
         auto *expandJob = new Akonadi::ContactGroupExpandJob(it.value(), this);
-        connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this,
-                &IncidenceAttendee::expandResult);
+        connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
         mExpandGroupJobs.insert(expandJob, it.key());
         expandJob->start();
     }
@@ -439,11 +403,7 @@ void IncidenceAttendee::expandResult(KJob *job)
     if (!wasACorrectEmail) {
         dataModel()->removeRow(row);
         for (const KContacts::Addressee &member : groupMembers) {
-            KCalendarCore::Attendee newAt(member.realName(), member.preferredEmail(),
-                                          attendee.RSVP(),
-                                          attendee.status(),
-                                          attendee.role(),
-                                          member.uid());
+            KCalendarCore::Attendee newAt(member.realName(), member.preferredEmail(), attendee.RSVP(), attendee.status(), attendee.role(), member.uid());
             dataModel()->insertAttendee(row, newAt);
         }
     }
@@ -473,20 +433,13 @@ void IncidenceAttendee::slotSelectAddresses()
         const Akonadi::EmailAddressSelection::List list = dialog->selectedAddresses();
         for (const Akonadi::EmailAddressSelection &selection : list) {
             if (selection.item().hasPayload<KContacts::ContactGroup>()) {
-                Akonadi::ContactGroupExpandJob *job
-                    = new Akonadi::ContactGroupExpandJob(
-                          selection.item().payload<KContacts::ContactGroup>(), this);
-                connect(job, &Akonadi::ContactGroupExpandJob::result, this,
-                        &IncidenceAttendee::expandResult);
+                Akonadi::ContactGroupExpandJob *job = new Akonadi::ContactGroupExpandJob(selection.item().payload<KContacts::ContactGroup>(), this);
+                connect(job, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
                 KCalendarCore::Attendee::PartStat partStat = KCalendarCore::Attendee::NeedsAction;
                 bool rsvp = true;
 
                 int pos = 0;
-                KCalendarCore::Attendee newAt(selection.name(),
-                                              selection.email(),
-                                              rsvp,
-                                              partStat,
-                                              KCalendarCore::Attendee::ReqParticipant);
+                KCalendarCore::Attendee newAt(selection.name(), selection.email(), rsvp, partStat, KCalendarCore::Attendee::ReqParticipant);
                 dataModel()->insertAttendee(pos, newAt);
 
                 mExpandGroupJobs.insert(job, newAt.uid());
@@ -509,10 +462,7 @@ void IncidenceAttendee::slotSelectAddresses()
 void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
 {
     const int duration = mDateTime->startTime().secsTo(mDateTime->endTime());
-    QScopedPointer<SchedulingDialog> dialog(new SchedulingDialog(mDateTime->startDate(),
-                                                                 mDateTime->startTime(),
-                                                                 duration, mConflictResolver,
-                                                                 mParentWidget));
+    QScopedPointer<SchedulingDialog> dialog(new SchedulingDialog(mDateTime->startDate(), mDateTime->startTime(), duration, mConflictResolver, mParentWidget));
     dialog->slotUpdateIncidenceStartEnd(mDateTime->currentStartDateTime(), mDateTime->currentEndDateTime());
     if (dialog->exec() == QDialog::Accepted) {
         qCDebug(INCIDENCEEDITOR_LOG) << dialog->selectedStartDate() << dialog->selectedStartTime();
@@ -525,13 +475,10 @@ void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
 
 void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column()
-        && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email,
-                                                                 AttendeeTableModel::AttendeeRole).
-                                               value<KCalendarCore::Attendee>();
+            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             if (mConflictResolver->containsAttendee(attendee)) {
                 mConflictResolver->removeAttendee(attendee);
             }
@@ -548,9 +495,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeAdded(const QModelIndex &ind
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
-            mConflictResolver->insertAttendee(dataModel()->data(email,
-                                                                AttendeeTableModel::AttendeeRole).value<
-                                                  KCalendarCore::Attendee>());
+            mConflictResolver->insertAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>());
         }
     }
     checkDirtyStatus();
@@ -561,9 +506,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeRemoved(const QModelIndex &i
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
-            mConflictResolver->removeAttendee(dataModel()->data(email,
-                                                                AttendeeTableModel::AttendeeRole).value<
-                                                  KCalendarCore::Attendee>());
+            mConflictResolver->removeAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>());
         }
     }
     checkDirtyStatus();
@@ -590,10 +533,8 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
         QModelIndex index = model->index(i, 0, parent);
-        const KCalendarCore::Attendee &attendee
-            = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
-        const KCalendarCore::FreeBusy::Ptr &fb
-            = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
+        const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
             updateFBStatus(attendee, fb);
         }
@@ -609,10 +550,8 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalendarCore::Attendee &attendee
-            = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
-        const KCalendarCore::FreeBusy::Ptr &fb
-            = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
+        const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
             updateFBStatus(attendee, fb);
         }
@@ -624,10 +563,8 @@ void IncidenceAttendee::updateFBStatus()
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
         QModelIndex index = model->index(i, 0);
-        const KCalendarCore::Attendee &attendee
-            = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
-        const KCalendarCore::FreeBusy::Ptr &fb
-            = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
+        const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
             updateFBStatus(attendee, fb);
         }
@@ -647,8 +584,7 @@ void IncidenceAttendee::updateFBStatus(const KCalendarCore::Attendee &attendee, 
             for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
                 // periods started before and lapping into the incidence (s < startTime && e >= startTime)
                 // periods starting in the time of incidence (s >= startTime && s <= endTime)
-                if (((*it).start() < startTime && (*it).end() > startTime)
-                    || ((*it).start() >= startTime && (*it).start() <= endTime)) {
+                if (((*it).start() < startTime && (*it).end() > startTime) || ((*it).start() >= startTime && (*it).start() <= endTime)) {
                     switch (attendee.status()) {
                     case KCalendarCore::Attendee::Accepted:
                         dataModel()->setData(attendeeIndex, AttendeeTableModel::Accepted);
@@ -671,9 +607,7 @@ void IncidenceAttendee::slotUpdateConflictLabel(int count)
     if (attendeeCount() > 0) {
         mUi->mSolveButton->setEnabled(true);
         if (count > 0) {
-            QString label = i18ncp("@label Shows the number of scheduling conflicts",
-                                   "%1 conflict",
-                                   "%1 conflicts", count);
+            QString label = i18ncp("@label Shows the number of scheduling conflicts", "%1 conflict", "%1 conflicts", count);
             mUi->mConflictsLabel->setText(label);
             mUi->mConflictsLabel->setVisible(true);
         } else {
@@ -687,13 +621,10 @@ void IncidenceAttendee::slotUpdateConflictLabel(int count)
 
 void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 {
-    if (AttendeeTableModel::FullName <= bottomRight.column()
-        && AttendeeTableModel::FullName >= topLeft.column()) {
+    if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email,
-                                                                 AttendeeTableModel::AttendeeRole).
-                                               value<KCalendarCore::Attendee>();
+            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
     }
@@ -705,9 +636,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &in
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalendarCore::Attendee attendee
-            = dataModel()->data(email,
-                                AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         checkIfExpansionIsNeeded(attendee);
     }
     updateGroupExpand();
@@ -718,9 +647,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalendarCore::Attendee attendee
-            = dataModel()->data(email,
-                                AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         KJob *job = mMightBeGroupJobs.key(attendee.uid());
         if (job) {
             disconnect(job);
@@ -763,9 +690,7 @@ void IncidenceAttendee::slotGroupSubstitutionLayoutChanged()
         QModelIndex index = model->index(i, AttendeeTableModel::FullName);
         if (!model->data(index).toString().isEmpty()) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email,
-                                                                 AttendeeTableModel::AttendeeRole).
-                                               value<KCalendarCore::Attendee>();
+            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
     }
@@ -785,10 +710,7 @@ bool IncidenceAttendee::iAmOrganizer() const
 
 void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &a, int pos /*=-1*/)
 {
-    const bool sameAsOrganizer
-        = mUi->mOrganizerCombo && KEmailAddress::compareEmail(a.preferredEmail(),
-                                                              mUi->mOrganizerCombo->currentText(),
-                                                              false);
+    const bool sameAsOrganizer = mUi->mOrganizerCombo && KEmailAddress::compareEmail(a.preferredEmail(), mUi->mOrganizerCombo->currentText(), false);
     KCalendarCore::Attendee::PartStat partStat = KCalendarCore::Attendee::NeedsAction;
     bool rsvp = true;
 
@@ -796,11 +718,7 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
         partStat = KCalendarCore::Attendee::Accepted;
         rsvp = false;
     }
-    KCalendarCore::Attendee newAt(a.realName(), a.preferredEmail(),
-                                  rsvp,
-                                  partStat,
-                                  KCalendarCore::Attendee::ReqParticipant,
-                                  a.uid());
+    KCalendarCore::Attendee newAt(a.realName(), a.preferredEmail(), rsvp, partStat, KCalendarCore::Attendee::ReqParticipant, a.uid());
     if (pos < 0) {
         pos = dataModel()->rowCount() - 1;
     }
@@ -813,7 +731,7 @@ void IncidenceAttendee::slotEventDurationChanged()
     const QDateTime start = mDateTime->currentStartDateTime();
     const QDateTime end = mDateTime->currentEndDateTime();
 
-    if (start >= end) {   // This can happen, especially for todos.
+    if (start >= end) { // This can happen, especially for todos.
         return;
     }
 
@@ -854,12 +772,11 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
 
     int answer = KMessageBox::No;
     if (currentOrganizerAttendee > -1) {
-        answer = KMessageBox::questionYesNo(
-            mParentWidget,
-            i18nc("@option",
-                  "You are changing the organizer of this event. "
-                  "Since the organizer is also attending this event, would you "
-                  "like to change the corresponding attendee as well?"));
+        answer = KMessageBox::questionYesNo(mParentWidget,
+                                            i18nc("@option",
+                                                  "You are changing the organizer of this event. "
+                                                  "Since the organizer is also attending this event, would you "
+                                                  "like to change the corresponding attendee as well?"));
     } else {
         answer = KMessageBox::Yes;
     }
@@ -871,11 +788,9 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
 
         if (newOrganizerAttendee == -1) {
             bool rsvp = !iAmOrganizer(); // if it is the user, don't make him rsvp.
-            KCalendarCore::Attendee::PartStat status = iAmOrganizer() ? KCalendarCore::Attendee::Accepted
-                                                       : KCalendarCore::Attendee::NeedsAction;
+            KCalendarCore::Attendee::PartStat status = iAmOrganizer() ? KCalendarCore::Attendee::Accepted : KCalendarCore::Attendee::NeedsAction;
 
-            KCalendarCore::Attendee newAt(name, email, rsvp, status,
-                                          KCalendarCore::Attendee::ReqParticipant);
+            KCalendarCore::Attendee newAt(name, email, rsvp, status, KCalendarCore::Attendee::ReqParticipant);
 
             mDataModel->insertAttendee(mDataModel->rowCount(), newAt);
         }
@@ -949,31 +864,19 @@ void IncidenceAttendee::setActions(KCalendarCore::Incidence::IncidenceType actio
 {
     mStateDelegate->clear();
     if (actions == KCalendarCore::Incidence::TypeEvent) {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
     } else {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-complete.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-ongoing.png")),
-                                KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-complete.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
+        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-ongoing.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
     }
 }
 
@@ -1012,26 +915,13 @@ void IncidenceAttendee::printDebugInfo() const
         }
 
         if (!found) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Attendee not found: " << attendee.email()
-                                         << attendee.name()
-                                         << attendee.status()
-                                         << attendee.RSVP()
-                                         << attendee.role()
-                                         << attendee.uid()
-                                         << attendee.cuType()
-                                         << attendee.delegate()
-                                         << attendee.delegator()
+            qCDebug(INCIDENCEEDITOR_LOG) << "Attendee not found: " << attendee.email() << attendee.name() << attendee.status() << attendee.RSVP()
+                                         << attendee.role() << attendee.uid() << attendee.cuType() << attendee.delegate() << attendee.delegator()
                                          << "; we have:";
             for (int i = 0, total = newList.count(); i < total; ++i) {
                 const KCalendarCore::Attendee newAttendee = newList[i];
-                qCDebug(INCIDENCEEDITOR_LOG) << "Attendee: " << newAttendee.email()
-                                             << newAttendee.name()
-                                             << newAttendee.status()
-                                             << newAttendee.RSVP()
-                                             << newAttendee.role()
-                                             << newAttendee.uid()
-                                             << newAttendee.cuType()
-                                             << newAttendee.delegate()
+                qCDebug(INCIDENCEEDITOR_LOG) << "Attendee: " << newAttendee.email() << newAttendee.name() << newAttendee.status() << newAttendee.RSVP()
+                                             << newAttendee.role() << newAttendee.uid() << newAttendee.cuType() << newAttendee.delegate()
                                              << newAttendee.delegator();
             }
 

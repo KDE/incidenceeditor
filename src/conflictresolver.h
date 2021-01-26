@@ -17,11 +17,13 @@
 #include <QSet>
 #include <QTimer>
 
-namespace CalendarSupport {
+namespace CalendarSupport
+{
 class FreeBusyItemModel;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 /**
  * Takes a list of attendees and event info (e.g., min time start, max time end)
  * fetches their freebusy information, then identifies conflicts and periods of non-conflict.
@@ -167,7 +169,7 @@ private:
     void calculateConflicts();
 
     KCalendarCore::Period mTimeframeConstraint; //!< the datetime range for outside of which
-    //free slots won't be searched.
+    // free slots won't be searched.
     KCalendarCore::Period::List mAvailableSlots;
 
     QTimer mCalculateTimer; //!< A timer is used control the calculation of conflicts

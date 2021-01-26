@@ -102,7 +102,7 @@ QStringList KOrganizerEditorConfig::activeDesignerFields() const
 QStringList &KOrganizerEditorConfig::templates(KCalendarCore::IncidenceBase::IncidenceType type)
 {
     if (type == KCalendarCore::IncidenceBase::TypeEvent) {
-        //TODO remove mEventTemplates+etc from Prefs::instance()
+        // TODO remove mEventTemplates+etc from Prefs::instance()
         return CalendarSupport::KCalPrefs::instance()->mEventTemplates;
     }
     if (type == KCalendarCore::IncidenceBase::TypeTodo) {

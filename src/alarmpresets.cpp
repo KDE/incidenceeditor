@@ -9,7 +9,6 @@
 
 #include <CalendarSupport/KCalPrefs>
 
-
 #include <KLocalizedString>
 
 #include "incidenceeditor_debug.h"
@@ -17,8 +16,10 @@
 using namespace CalendarSupport;
 using namespace KCalendarCore;
 
-namespace IncidenceEditorNG {
-namespace AlarmPresets {
+namespace IncidenceEditorNG
+{
+namespace AlarmPresets
+{
 // Don't use a map, because order matters
 Q_GLOBAL_STATIC(QStringList, sBeforeStartPresetNames)
 Q_GLOBAL_STATIC(QStringList, sBeforeEndPresetNames)
@@ -37,9 +38,7 @@ int configuredReminderTimeInMinutes()
     const int unitsToUse = configuredUnits >= 0 && configuredUnits <= 2 ? configuredUnits : 0;
 
     const int configuredReminderTime = KCalPrefs::instance()->reminderTime();
-    const int reminderTimeToUse = configuredReminderTime >= 0
-                                  ? configuredReminderTime
-                                  : DEFAULT_REMINDER_OFFSET;
+    const int reminderTimeToUse = configuredReminderTime >= 0 ? configuredReminderTime : DEFAULT_REMINDER_OFFSET;
 
     return reminderTimeToUse * units[unitsToUse];
 }
@@ -47,17 +46,13 @@ int configuredReminderTimeInMinutes()
 void initPresets(AlarmPresets::When when)
 {
     QList<int> hardcodedPresets;
-    hardcodedPresets << 0           // at start/due
-                     << 5           // 5 minutes
-                     << 10
-                     << 15
-                     << 30
-                     << 45
-                     << 60          // 1 hour
-                     << 2 * 60      // 2 hours
-                     << 24 * 60     // 1 day
+    hardcodedPresets << 0 // at start/due
+                     << 5 // 5 minutes
+                     << 10 << 15 << 30 << 45 << 60 // 1 hour
+                     << 2 * 60 // 2 hours
+                     << 24 * 60 // 1 day
                      << 2 * 24 * 60 // 2 days
-                     << 5 * 24 * 60;// 5 days
+                     << 5 * 24 * 60; // 5 days
 
     sDefaultAlarmOffset = configuredReminderTimeInMinutes();
 
@@ -85,21 +80,13 @@ void initPresets(AlarmPresets::When when)
             alarm->setStartOffset(-minutes * 60);
             alarm->setEnabled(true);
             if (minutes == 0) {
-                sBeforeStartPresetNames->append(i18nc("@item:inlistbox",
-                                                      "At start"));
+                sBeforeStartPresetNames->append(i18nc("@item:inlistbox", "At start"));
             } else if (minutes < 60) {
-                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox",
-                                                       "%1 minute before start",
-                                                       "%1 minutes before start", minutes));
+                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox", "%1 minute before start", "%1 minutes before start", minutes));
             } else if (minutes < 24 * 60) {
-                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox",
-                                                       "%1 hour before start",
-                                                       "%1 hours before start", minutes / 60));
+                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox", "%1 hour before start", "%1 hours before start", minutes / 60));
             } else {
-                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox",
-                                                       "%1 day before start",
-                                                       "%1 days before start",
-                                                       minutes / (24 * 60)));
+                sBeforeStartPresetNames->append(i18ncp("@item:inlistbox", "%1 day before start", "%1 days before start", minutes / (24 * 60)));
             }
             sBeforeStartPresets->append(alarm);
         }
@@ -115,17 +102,11 @@ void initPresets(AlarmPresets::When when)
             if (minutes == 0) {
                 sBeforeEndPresetNames->append(i18nc("@item:inlistbox", "When due"));
             } else if (minutes < 60) {
-                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox",
-                                                     "%1 minute before due",
-                                                     "%1 minutes before due", minutes));
+                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox", "%1 minute before due", "%1 minutes before due", minutes));
             } else if (minutes < 24 * 60) {
-                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox",
-                                                     "%1 hour before due",
-                                                     "%1 hours before due", minutes / 60));
+                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox", "%1 hour before due", "%1 hours before due", minutes / 60));
             } else {
-                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox",
-                                                     "%1 day before due",
-                                                     "%1 days before due", minutes / (24 * 60)));
+                sBeforeEndPresetNames->append(i18ncp("@item:inlistbox", "%1 day before due", "%1 days before due", minutes / (24 * 60)));
             }
             sBeforeEndPresets->append(alarm);
         }
@@ -180,21 +161,16 @@ KCalendarCore::Alarm::Ptr preset(When when, const QString &name)
         // The name should exists and only once
         if (sBeforeStartPresetNames->count(name) != 1) {
             // print some debug info before crashing
-            qCDebug(INCIDENCEEDITOR_LOG) << " name = " << name << "; when = " << when
-                                         << "; count for name = " << sBeforeStartPresetNames->count(
-                name)
-                                         <<  "; global count = "
-                                         << sBeforeStartPresetNames->count();
+            qCDebug(INCIDENCEEDITOR_LOG) << " name = " << name << "; when = " << when << "; count for name = " << sBeforeStartPresetNames->count(name)
+                                         << "; global count = " << sBeforeStartPresetNames->count();
             Q_ASSERT_X(false, "preset", "Number of presets should be one");
         }
 
-        return KCalendarCore::Alarm::Ptr(
-            new KCalendarCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
+        return KCalendarCore::Alarm::Ptr(new KCalendarCore::Alarm(*sBeforeStartPresets->at(sBeforeStartPresetNames->indexOf(name))));
     case AlarmPresets::BeforeEnd:
-        Q_ASSERT(sBeforeEndPresetNames->count(name) == 1);     // The name should exists and only once
+        Q_ASSERT(sBeforeEndPresetNames->count(name) == 1); // The name should exists and only once
 
-        return KCalendarCore::Alarm::Ptr(
-            new KCalendarCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
+        return KCalendarCore::Alarm::Ptr(new KCalendarCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
     }
     return KCalendarCore::Alarm::Ptr();
 }

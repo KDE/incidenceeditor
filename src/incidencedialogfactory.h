@@ -10,17 +10,20 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KCalendarCore/IncidenceBase>
 #include <Collection>
+#include <KCalendarCore/IncidenceBase>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class IncidenceChanger;
 }
 
-namespace IncidenceEditorNG {
+namespace IncidenceEditorNG
+{
 class IncidenceDialog;
 
-namespace IncidenceDialogFactory {
+namespace IncidenceDialogFactory
+{
 /**
  * Creates a new IncidenceDialog for given type. Returns 0 for unsupported types.
  *
@@ -35,16 +38,35 @@ namespace IncidenceDialogFactory {
  * TODO: Implement support for Journals.
  * NOTE: There is no editor for Incidence::TypeFreeBusy
  */
-INCIDENCEEDITOR_EXPORT IncidenceDialog *create(
-    bool needsSaving, KCalendarCore::IncidenceBase::IncidenceType type, Akonadi::IncidenceChanger *changer, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+INCIDENCEEDITOR_EXPORT IncidenceDialog *create(bool needsSaving,
+                                               KCalendarCore::IncidenceBase::IncidenceType type,
+                                               Akonadi::IncidenceChanger *changer,
+                                               QWidget *parent = nullptr,
+                                               Qt::WindowFlags flags = {});
 
-INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(
-    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTemp,
-    QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(const QString &summary,
+                                                         const QString &description,
+                                                         const QStringList &attachments,
+                                                         const QStringList &attendees,
+                                                         const QStringList &attachmentMimetypes,
+                                                         const QStringList &attachmentLabels,
+                                                         bool inlineAttachment,
+                                                         const Akonadi::Collection &defaultCollection,
+                                                         bool cleanupAttachmentTemp,
+                                                         QWidget *parent = nullptr,
+                                                         Qt::WindowFlags flags = {});
 
-INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(
-    const QString &summary, const QString &description, const QStringList &attachments, const QStringList &attendees, const QStringList &attachmentMimetypes, const QStringList &attachmentLabels, bool inlineAttachment, const Akonadi::Collection &defaultCollection, bool cleanupAttachmentTempFiles,
-    QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(const QString &summary,
+                                                          const QString &description,
+                                                          const QStringList &attachments,
+                                                          const QStringList &attendees,
+                                                          const QStringList &attachmentMimetypes,
+                                                          const QStringList &attachmentLabels,
+                                                          bool inlineAttachment,
+                                                          const Akonadi::Collection &defaultCollection,
+                                                          bool cleanupAttachmentTempFiles,
+                                                          QWidget *parent = nullptr,
+                                                          Qt::WindowFlags flags = {});
 } // namespace IncidenceDialogFactory
 } // namespace IncidenceEditorNG
 
