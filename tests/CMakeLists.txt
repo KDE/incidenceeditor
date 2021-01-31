@@ -7,8 +7,8 @@ include_directories(
 set(resourcemanagement_gui_SRCS resourcemanagment_gui.cpp)
 add_executable(resourcemanagement_gui ${resourcemanagement_gui_SRCS})
 target_link_libraries(resourcemanagement_gui
-  Qt5::Core
-  Qt5::Gui
+  Qt::Core
+  Qt::Gui
   KF5::Mime
   KF5::IncidenceEditor
   KF5::Libkdepim
