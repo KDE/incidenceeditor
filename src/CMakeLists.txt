@@ -65,7 +65,6 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   resourcemodel.cpp
   kweekdaycheckcombo.cpp
 )
-qt5_add_resources(incidenceeditors_ng_shared_LIB_SRCS incidenceeditor.qrc)
 
 ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
         OLD_CATEGORY_NAMES log_incidenceeditor
@@ -81,6 +80,7 @@ set(incidenceeditors_ng_desktop_LIB_SRCS
   incidencedialogfactory.cpp
   incidencedialog.cpp
   visualfreebusywidget.cpp
+  incidenceeditor.qrc
 )
 
 ki18n_wrap_ui(incidenceeditors_ng_desktop_LIB_SRCS
