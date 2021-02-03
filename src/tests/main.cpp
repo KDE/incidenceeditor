@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 
     EditorConfig::setEditorConfig(new KOrganizerEditorConfig);
 
-    auto *dialog = new IncidenceDialog();
+    auto dialog = new IncidenceDialog();
 
     Akonadi::Collection collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
 

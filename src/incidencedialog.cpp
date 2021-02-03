@@ -117,7 +117,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     Q_Q(IncidenceDialog);
     mUi->setupUi(q);
     mUi->mMessageWidget->hide();
-    auto *layout = new QGridLayout(mUi->mCalSelectorPlaceHolder);
+    auto layout = new QGridLayout(mUi->mCalSelectorPlaceHolder);
     layout->setSpacing(0);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mCalSelector);
@@ -127,31 +127,31 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
 
     // Now instantiate the logic of the dialog. These editors update the ui, validate
     // fields and load/store incidences in the ui.
-    auto *ieGeneral = new IncidenceWhatWhere(mUi);
+    auto ieGeneral = new IncidenceWhatWhere(mUi);
     mEditor->combine(ieGeneral);
 
-    auto *ieCategories = new IncidenceCategories(mUi);
+    auto ieCategories = new IncidenceCategories(mUi);
     mEditor->combine(ieCategories);
 
     mIeDateTime = new IncidenceDateTime(mUi);
     mEditor->combine(mIeDateTime);
 
-    auto *ieCompletionPriority = new IncidenceCompletionPriority(mUi);
+    auto ieCompletionPriority = new IncidenceCompletionPriority(mUi);
     mEditor->combine(ieCompletionPriority);
 
-    auto *ieDescription = new IncidenceDescription(mUi);
+    auto ieDescription = new IncidenceDescription(mUi);
     mEditor->combine(ieDescription);
 
-    auto *ieAlarm = new IncidenceAlarm(mIeDateTime, mUi);
+    auto ieAlarm = new IncidenceAlarm(mIeDateTime, mUi);
     mEditor->combine(ieAlarm);
 
-    auto *ieAttachments = new IncidenceAttachment(mUi);
+    auto ieAttachments = new IncidenceAttachment(mUi);
     mEditor->combine(ieAttachments);
 
     mIeRecurrence = new IncidenceRecurrence(mIeDateTime, mUi);
     mEditor->combine(mIeRecurrence);
 
-    auto *ieSecrecy = new IncidenceSecrecy(mUi);
+    auto ieSecrecy = new IncidenceSecrecy(mUi);
     mEditor->combine(ieSecrecy);
 
     mIeAttendee = new IncidenceAttendee(qq, mIeDateTime, mUi);

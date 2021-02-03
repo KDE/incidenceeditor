@@ -29,7 +29,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     QString m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

@@ -37,7 +37,7 @@ CategorySelectWidget::CategorySelectWidget(CategoryConfig *cc, QWidget *parent)
     : QWidget(parent)
     , mCategoryConfig(cc)
 {
-    auto *topL = new QHBoxLayout(this);
+    auto topL = new QHBoxLayout(this);
     topL->setContentsMargins(0, 0, 0, 0);
     mWidgets = new CategorySelectWidgetBase(this);
     topL->addWidget(mWidgets);
@@ -151,7 +151,7 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
     , d(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "Select Categories"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox =
         new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel /*| QDialogButtonBox::Help*/ | QDialogButtonBox::Apply, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -160,7 +160,7 @@ CategorySelectDialog::CategorySelectDialog(CategoryConfig *cc, QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CategorySelectDialog::reject);
 
     QWidget *page = new QWidget;
-    auto *lay = new QVBoxLayout(page);
+    auto lay = new QVBoxLayout(page);
     lay->setContentsMargins(0, 0, 0, 0);
 
     mWidgets = new CategorySelectWidget(cc, this);

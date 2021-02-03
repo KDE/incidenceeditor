@@ -24,11 +24,11 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
 {
     setWindowTitle(i18nc("@title:window", "Group Scheduling Email"));
     m_detailsWidget = new QWidget();
-    auto *layout = new QGridLayout(m_detailsWidget);
+    auto layout = new QGridLayout(m_detailsWidget);
     mAttendeeDecision.reserve(attendees.size());
     int row = 0;
     for (const KCalendarCore::Attendee &attendee : attendees) {
-        auto *options = new QComboBox();
+        auto options = new QComboBox();
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send update"), QVariant(Update));
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Send no update"), QVariant(NoUpdate));
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Edit mail"), QVariant(Edit));

@@ -27,7 +27,7 @@ private Q_SLOTS:
         Akonadi::Item item;
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
         item.setPayload<KCalendarCore::Event::Ptr>(event);
-        auto *dialog = new IncidenceDialog();
+        auto dialog = new IncidenceDialog();
         dialog->load(item);
 
         // Put the dialog into a known, valid state.

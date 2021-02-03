@@ -42,7 +42,7 @@ void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
     mMissingCategories.clear();
 
     if (mLoadedIncidence) {
-        auto *fetchJob = new Akonadi::TagFetchJob(this);
+        auto fetchJob = new Akonadi::TagFetchJob(this);
         fetchJob->fetchScope().fetchAttribute<Akonadi::TagAttribute>();
         connect(fetchJob, &Akonadi::TagFetchJob::result, this, &IncidenceCategories::onTagsFetched);
     }
@@ -80,7 +80,7 @@ void IncidenceCategories::createMissingCategories()
 {
     for (const QString &category : qAsConst(mMissingCategories)) {
         Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
-        auto *createJob = new Akonadi::TagCreateJob(missingTag, this);
+        auto createJob = new Akonadi::TagCreateJob(missingTag, this);
         connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
     }
 }
@@ -103,7 +103,7 @@ void IncidenceCategories::onTagsFetched(KJob *job)
         qCWarning(INCIDENCEEDITOR_LOG) << "Failed to load tags " << job->errorString();
         return;
     }
-    auto *fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
+    auto fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
     const Akonadi::Tag::List jobTags = fetchJob->tags();
 
     Q_ASSERT(mLoadedIncidence);
@@ -127,7 +127,7 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
         qCWarning(INCIDENCEEDITOR_LOG) << "Failed to create tag " << job->errorString();
         return;
     }
-    auto *createJob = static_cast<Akonadi::TagCreateJob *>(job);
+    auto createJob = static_cast<Akonadi::TagCreateJob *>(job);
     int count = mMissingCategories.removeAll(createJob->tag().name());
     Q_ASSERT(count > 0);
 

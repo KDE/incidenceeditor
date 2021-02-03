@@ -195,7 +195,7 @@ QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> items) co
     QStringList labels;
     for (QListWidgetItem *it : items) {
         if (it->isSelected()) {
-            auto *item = static_cast<AttachmentIconItem *>(it);
+            auto item = static_cast<AttachmentIconItem *>(it);
             if (item->isBinary()) {
                 urls.append(item->tempFileForAttachment());
             } else {
@@ -205,7 +205,7 @@ QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> items) co
         }
     }
     if (selectionMode() == NoSelection) {
-        auto *item = static_cast<AttachmentIconItem *>(currentItem());
+        auto item = static_cast<AttachmentIconItem *>(currentItem());
         if (item) {
             urls.append(QUrl(item->uri()));
             labels.append(QString::fromLatin1(QUrl::toPercentEncoding(item->label())));
@@ -215,7 +215,7 @@ QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> items) co
     QMap<QString, QString> metadata;
     metadata[QStringLiteral("labels")] = labels.join(QLatin1Char(':'));
 
-    auto *mimeData = new QMimeData;
+    auto mimeData = new QMimeData;
     mimeData->setUrls(urls);
     KUrlMimeData::setMetaData(metadata, mimeData);
     return mimeData;
@@ -240,7 +240,7 @@ void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 
     const QPoint hotspot(pixmap.width() / 2, pixmap.height() / 2);
 
-    auto *drag = new QDrag(this);
+    auto drag = new QDrag(this);
     drag->setMimeData(mimeData());
 
     drag->setPixmap(pixmap);

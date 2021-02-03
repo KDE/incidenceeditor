@@ -170,7 +170,7 @@ void IncidenceAttachment::removeSelectedAttachments()
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *it = mAttachmentView->item(itemIndex);
         if (it->isSelected()) {
-            auto *attitem = static_cast<AttachmentIconItem *>(it);
+            auto attitem = static_cast<AttachmentIconItem *>(it);
             if (attitem) {
                 const KCalendarCore::Attachment att = attitem->attachment();
                 labels << att.label();
@@ -217,7 +217,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
     Q_ASSERT(item);
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-    auto *attitem = static_cast<AttachmentIconItem *>(item);
+    auto attitem = static_cast<AttachmentIconItem *>(item);
     if (attitem->attachment().isEmpty()) {
         return;
     }
@@ -258,7 +258,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
 {
     Q_ASSERT(item);
     Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
-    auto *attitem = static_cast<AttachmentIconItem *>(item);
+    auto attitem = static_cast<AttachmentIconItem *>(item);
     if (attitem->attachment().isEmpty()) {
         return;
     }
@@ -323,7 +323,7 @@ void IncidenceAttachment::editSelectedAttachments()
         if (item->isSelected()) {
             Q_ASSERT(dynamic_cast<AttachmentIconItem *>(item));
 
-            auto *attitem = static_cast<AttachmentIconItem *>(item);
+            auto attitem = static_cast<AttachmentIconItem *>(item);
             if (attitem->attachment().isEmpty()) {
                 return;
             }
@@ -518,7 +518,7 @@ void IncidenceAttachment::setupAttachmentIconView()
     connect(mAttachmentView, &AttachmentIconView::itemSelectionChanged, this, &IncidenceAttachment::slotSelectionChanged);
     connect(mAttachmentView, &AttachmentIconView::customContextMenuRequested, this, &IncidenceAttachment::showContextMenu);
 
-    auto *layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
+    auto layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mAttachmentView);
 }

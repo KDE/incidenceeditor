@@ -27,7 +27,7 @@ IncidenceDialog *IncidenceDialogFactory::create(bool needsSaving,
     case KCalendarCore::IncidenceBase::TypeEvent: // Fall through
     case KCalendarCore::IncidenceBase::TypeTodo:
     case KCalendarCore::IncidenceBase::TypeJournal: {
-        auto *dialog = new IncidenceDialog(changer, parent, flags);
+        auto dialog = new IncidenceDialog(changer, parent, flags);
 
         // needs to be save to akonadi?, apply button should be turned on if so.
         dialog->setInitiallyDirty(needsSaving /* mInitiallyDirty */);

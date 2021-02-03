@@ -55,11 +55,11 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     attrs << QStringLiteral("cn") << QStringLiteral("mail");
 
     completer = new QCompleter(this);
-    auto *model = new ResourceModel(attrs, this);
+    auto model = new ResourceModel(attrs, this);
 
-    auto *proxyModel = new KDescendantsProxyModel(this);
+    auto proxyModel = new KDescendantsProxyModel(this);
     proxyModel->setSourceModel(model);
-    auto *proxyModel2 = new SwitchRoleProxy(this);
+    auto proxyModel2 = new SwitchRoleProxy(this);
     proxyModel2->setSourceModel(proxyModel);
 
     completer->setModel(proxyModel2);
@@ -67,9 +67,9 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     completer->setWrapAround(false);
     mUi->mNewResource->setCompleter(completer);
 
-    auto *attendeeDelegate = new AttendeeLineEditDelegate(this);
+    auto attendeeDelegate = new AttendeeLineEditDelegate(this);
 
-    auto *filterProxyModel = new ResourceFilterProxyModel(this);
+    auto filterProxyModel = new ResourceFilterProxyModel(this);
     filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(dataModel);
 

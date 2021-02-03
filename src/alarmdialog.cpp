@@ -23,7 +23,7 @@ AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, 
     , mIncidenceType(incidenceType)
 {
     setWindowTitle(i18nc("@title:window", "Create a new reminder"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);

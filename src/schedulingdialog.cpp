@@ -26,7 +26,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     , mPeriodModel(new CalendarSupport::FreePeriodModel(this))
 {
     setWindowTitle(i18nc("@title:window", "Scheduling"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QWidget *w = new QWidget(this);
     setupUi(w);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -44,7 +44,7 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
     mDuration = duration;
 
     mVisualWidget = new VisualFreeBusyWidget(resolver->model(), 8);
-    auto *ganttlayout = new QVBoxLayout(mGanttTab);
+    auto ganttlayout = new QVBoxLayout(mGanttTab);
 
     mGanttTab->setLayout(ganttlayout);
     ganttlayout->addWidget(mVisualWidget);

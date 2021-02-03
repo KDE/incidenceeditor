@@ -109,7 +109,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     QWidget *w = new QWidget(this);
     mUi->setupUi(w);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
 
     mainLayout->addWidget(buttonBox);
@@ -119,7 +119,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     mAgendaView = new EventViews::AgendaView(QDate(), QDate(), false, false);
 
-    auto *fbCalendar = new FreebusyViewCalendar();
+    auto fbCalendar = new FreebusyViewCalendar();
     fbCalendar->mCalendar = mFreebusyCalendar.calendar();
     mFbCalendar = EventViews::ViewCalendar::Ptr(fbCalendar);
     mAgendaView->addCalendar(mFbCalendar);
@@ -129,7 +129,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     QStringList attrs;
     attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn")
           << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
-    auto *resourcemodel = new ResourceModel(attrs, this);
+    auto resourcemodel = new ResourceModel(attrs, this);
     mUi->treeResults->setModel(resourcemodel);
 
     // This doesn't work till now :(-> that's why i use the click signal

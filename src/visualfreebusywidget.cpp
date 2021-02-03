@@ -128,7 +128,7 @@ public:
 VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)
     : QWidget(parent)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setSpacing(spacing);
 
     // The control panel for the gantt widget
@@ -190,7 +190,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     controlLayout->addWidget(button);
     connect(button, &QPushButton::clicked, this, &VisualFreeBusyWidget::manualReload);
 
-    auto *splitter = new QSplitter(Qt::Horizontal, this);
+    auto splitter = new QSplitter(Qt::Horizontal, this);
     connect(splitter, &QSplitter::splitterMoved, this, &VisualFreeBusyWidget::splitterMoved);
     mLeftView = new QTreeView(this);
     mLeftView->setModel(model);
@@ -254,7 +254,7 @@ void VisualFreeBusyWidget::showAttendeeStatusMenu()
 
 void VisualFreeBusyWidget::slotCenterOnStart()
 {
-    auto *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
+    auto grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
     int daysTo = grid->startDateTime().daysTo(mDtStart);
     mGanttGraphicsView->horizontalScrollBar()->setValue(daysTo * 800);
 }
@@ -292,7 +292,7 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, 
     QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date().startOfDay());
 #endif
 
-    auto *grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
+    auto grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
     grid->setStartDateTime(horizonStart);
     slotCenterOnStart();
     mGanttGrid->setStartDateTime(horizonStart);

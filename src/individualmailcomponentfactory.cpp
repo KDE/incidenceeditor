@@ -251,7 +251,7 @@ Akonadi::ITIPHandlerDialogDelegate *IndividualMailComponentFactory::createITIPHa
                                                                                                    KCalendarCore::iTIPMethod method,
                                                                                                    QWidget *parent)
 {
-    auto *askDelegator = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
+    auto askDelegator = new IndividualMailITIPHandlerDialogDelegate(incidence, method, parent);
     connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setEdit, this, &IndividualMailComponentFactory::onSetEdit);
     connect(askDelegator, &IndividualMailITIPHandlerDialogDelegate::setUpdate, this, &IndividualMailComponentFactory::onSetUpdate);
 
