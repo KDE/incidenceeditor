@@ -338,8 +338,7 @@ void EditorItemManager::save()
             Q_EMIT itemSaveFinished(EditorItemManager::Modify);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
-            KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(d->mItem);
-            d->mChanger->createIncidence(incidence, d->mItemUi->selectedCollection());
+            d->mChanger->createFromItem(d->mItem, d->mItemUi->selectedCollection());
         }
     }
 }
