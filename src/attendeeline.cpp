@@ -335,6 +335,7 @@ int AttendeeLine::setColumnWidth(int w)
 
 void AttendeeLine::setActions(AttendeeActions actions)
 {
+    Q_UNUSED(actions);
     mStateCombo->clear();
 }
 

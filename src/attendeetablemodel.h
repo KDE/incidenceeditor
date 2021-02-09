@@ -50,12 +50,12 @@ public:
     Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
     Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
-    Q_REQUIRED_RESULT bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
-    Q_REQUIRED_RESULT bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
-    Q_REQUIRED_RESULT bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
+    bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
+    bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
 
-    Q_REQUIRED_RESULT bool insertAttendee(int position, const KCalendarCore::Attendee &attendee);
+    bool insertAttendee(int position, const KCalendarCore::Attendee &attendee);
 
     void setAttendees(const KCalendarCore::Attendee::List &resources);
     Q_REQUIRED_RESULT KCalendarCore::Attendee::List attendees() const;

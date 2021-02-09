@@ -85,21 +85,15 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
     switch (event->type()) {
 #ifndef QT_NO_TOOLTIP
     case QEvent::ToolTip:
-    {
-        auto *he = static_cast<QHelpEvent *>(event);
-        QToolTip::showText(he->globalPos(), mToolTip, view);
+        QToolTip::showText(event->globalPos(), mToolTip, view);
         return true;
-    }
 #endif
 #ifndef QT_NO_WHATSTHIS
     case QEvent::QueryWhatsThis:
         return true;
     case QEvent::WhatsThis:
-    {
-        auto *he = static_cast<QHelpEvent *>(event);
-        QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
+        QWhatsThis::showText(event->globalPos(), mWhatsThis, view);
         return true;
-    }
 #endif
     default:
         break;

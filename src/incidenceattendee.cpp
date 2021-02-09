@@ -133,7 +133,8 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
 
     connect(mConflictResolver->model(), &QAbstractItemModel::rowsInserted,
             this, &IncidenceAttendee::slotFreeBusyAdded);
-    connect(mConflictResolver->model(), SIGNAL(layoutChanged()), SLOT(updateFBStatus()));
+    connect(mConflictResolver->model(), &QAbstractItemModel::layoutChanged,
+            this, qOverload<>(&IncidenceAttendee::updateFBStatus));
     connect(mConflictResolver->model(), &QAbstractItemModel::dataChanged,
             this, &IncidenceAttendee::slotFreeBusyChanged);
 
