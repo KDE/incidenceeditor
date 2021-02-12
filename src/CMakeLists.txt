@@ -48,11 +48,6 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   editorconfig.cpp
   korganizereditorconfig.cpp
 
-  autochecktreewidget.cpp
-  categoryeditdialog.cpp
-  categoryselectdialog.cpp
-  categorydialog.cpp
-
   # Individual mail
   individualmailcomponentfactory.cpp
   individualmaildialog.cpp
@@ -84,9 +79,6 @@ set(incidenceeditors_ng_desktop_LIB_SRCS
 )
 
 ki18n_wrap_ui(incidenceeditors_ng_desktop_LIB_SRCS
-  ui/categoryeditdialog_base.ui
-  ui/categoryselectdialog_base.ui
-  ui/categorydialog_base.ui
   ui/template_management_dialog_base.ui
   ui/dialogdesktop.ui
   ui/alarmdialog.ui
