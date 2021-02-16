@@ -18,10 +18,9 @@ class EventOrTodoDesktop;
 namespace IncidenceEditorNG
 {
 /**
- * The IncidenceGeneralEditor keeps track of the following Incidence parts:
+ * The IncidenceWhatWhere editor keeps track of the following Incidence parts:
  * - Summary
  * - Location
- * - Categories
  */
 class IncidenceWhatWhere : public IncidenceEditor
 {
