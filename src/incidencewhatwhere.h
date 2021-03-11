@@ -39,7 +39,7 @@ public:
     virtual void validate();
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 };
 } // IncidenceEditorNG
 

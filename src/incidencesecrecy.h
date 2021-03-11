@@ -31,7 +31,7 @@ public:
     Q_REQUIRED_RESULT bool isDirty() const override;
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 };
 }
 

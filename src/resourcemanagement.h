@@ -38,7 +38,7 @@ class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
     Q_OBJECT
 public:
     explicit ResourceManagement(QWidget *parent = nullptr);
-    ~ResourceManagement();
+    ~ResourceManagement() override;
 
     Q_REQUIRED_RESULT ResourceItem::Ptr selectedItem() const;
 
