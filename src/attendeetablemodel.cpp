@@ -97,7 +97,7 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
 {
     QString email, name;
     if (index.isValid() && role == Qt::EditRole) {
-        KCalendarCore::Attendee &attendee = mAttendeeList[index.row()];
+        KCalendarCore::Attendee &attendee = mAttendeeList[index.row()];// clazy:exclude=detaching-member
         switch (index.column()) {
         case Role:
             attendee.setRole(static_cast<KCalendarCore::Attendee::Role>(value.toInt()));

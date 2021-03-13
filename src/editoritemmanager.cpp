@@ -326,7 +326,7 @@ void EditorItemManager::save()
             qCDebug(INCIDENCEEDITOR_LOG) << "Moving from" << d->mItem.parentCollection().id() << "to" << d->mItemUi->selectedCollection().id();
 
             if (d->mItemUi->isDirty()) {
-                d->mChanger->modifyIncidence(d->mItem, oldPayload);
+                (void) d->mChanger->modifyIncidence(d->mItem, oldPayload);
             } else {
                 Akonadi::ItemMoveJob *itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
                 connect(itemMoveJob, SIGNAL(result(KJob *)), SLOT(itemMoveResult(KJob *)));
@@ -338,7 +338,7 @@ void EditorItemManager::save()
             Q_EMIT itemSaveFinished(EditorItemManager::Modify);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
-            d->mChanger->createFromItem(d->mItem, d->mItemUi->selectedCollection());
+            (void) d->mChanger->createFromItem(d->mItem, d->mItemUi->selectedCollection());
         }
     }
 }

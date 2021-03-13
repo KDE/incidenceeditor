@@ -35,7 +35,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
     const QList<QByteArray> lstTimeZoneIds = QTimeZone::availableTimeZoneIds();
     mZones.reserve(lstTimeZoneIds.count());
     std::copy(lstTimeZoneIds.begin(), lstTimeZoneIds.end(), std::back_inserter(mZones));
-    std::sort(mZones.begin(), mZones.end());
+    std::sort(mZones.begin(), mZones.end());    // clazy:exclude=detaching-member
 
     // Prepend Local, UTC and Floating, for convenience
     mZones.prepend("UTC"); // do not use i18n here  index=2

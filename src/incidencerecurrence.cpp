@@ -134,7 +134,6 @@ void IncidenceRecurrence::load(const KCalendarCore::Incidence::Ptr &incidence)
     mCurrentDate = mLoadedIncidence->dateTime(KCalendarCore::IncidenceBase::RoleRecurrenceStart).date();
 
     mDateTime->load(incidence);
-    mDateTime->endDate();
     fillCombos();
     setDefaults();
 

@@ -218,7 +218,7 @@ void ResourceModel::slotLDAPSearchData(const KLDAP::LdapResultObject::List &resu
                 parentIndex = index(parent->childNumber(), 0, parentIndex);
             }
             beginInsertRows(parentIndex, parent->childCount(), parent->childCount());
-            parent->insertChild(parent->childCount(), item);
+            (void) parent->insertChild(parent->childCount(), item);
             endInsertRows();
         }
     }

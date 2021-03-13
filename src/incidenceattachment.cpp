@@ -166,6 +166,8 @@ void IncidenceAttachment::removeSelectedAttachments()
 {
     QList<QListWidgetItem *> selected;
     QStringList labels;
+    selected.reserve(mAttachmentView->count());
+    labels.reserve(mAttachmentView->count());
 
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *it = mAttachmentView->item(itemIndex);
@@ -274,7 +276,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     }
 }
 
-void IncidenceAttachment::showContextMenu(const QPoint &pos)
+void IncidenceAttachment::showContextMenu(const QPoint &pos)    // clazy:exclude=function-args-by-value
 {
     const bool enable = mAttachmentView->itemAt(pos) != nullptr;
 

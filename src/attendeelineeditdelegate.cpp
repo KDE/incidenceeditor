@@ -85,7 +85,6 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
         auto he = static_cast<QHelpEvent *>(event);
         QToolTip::showText(he->globalPos(), mToolTip, view);
         return true;
-    }
 #endif
 #ifndef QT_NO_WHATSTHIS
     case QEvent::QueryWhatsThis:
@@ -94,7 +93,6 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
         auto he = static_cast<QHelpEvent *>(event);
         QWhatsThis::showText(he->globalPos(), mWhatsThis, view);
         return true;
-    }
 #endif
     default:
         break;
