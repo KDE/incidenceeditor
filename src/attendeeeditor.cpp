@@ -57,7 +57,7 @@ void AttendeeEditor::slotCalculateTotal()
 AttendeeData::List AttendeeEditor::attendees() const
 {
     const QVector<KPIM::MultiplyingLineData::Ptr> dataList = allData();
-    AttendeeData::List attList;
+    AttendeeData::List attList; // clazy:exclude=inefficient-qlist
     // qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
     for (const KPIM::MultiplyingLineData::Ptr &datum : dataList) {
         AttendeeData::Ptr att = qSharedPointerDynamicCast<AttendeeData>(datum);

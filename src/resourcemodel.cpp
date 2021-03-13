@@ -155,11 +155,11 @@ void ResourceModel::startSearch()
         if (mLdapCollections.contains(mRootItem->child(i))) {
             QModelIndex parentIndex = index(i, 0, QModelIndex());
             beginRemoveRows(parentIndex, 0, mRootItem->child(i)->childCount() - 1);
-            mRootItem->child(i)->removeChildren(0, mRootItem->child(i)->childCount());
+            (void) mRootItem->child(i)->removeChildren(0, mRootItem->child(i)->childCount());
             endRemoveRows();
         } else {
             beginRemoveRows(QModelIndex(), i, i);
-            mRootItem->removeChildren(i, 1);
+            (void) mRootItem->removeChildren(i, 1);
             endRemoveRows();
         }
     }
@@ -185,7 +185,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
         ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
-        mRootItem->insertChild(mRootItem->childCount(), item);
+        (void) mRootItem->insertChild(mRootItem->childCount(), item);
         mLdapCollections.insert(item);
 
         // Resources in a collection add this link into ldapCollectionsMap

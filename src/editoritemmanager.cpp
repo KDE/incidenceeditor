@@ -318,7 +318,7 @@ void EditorItemManager::save()
         Q_ASSERT(d->mItem.parentCollection().isValid());
         KCalendarCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection() || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
-            d->mChanger->modifyIncidence(d->mItem, oldPayload);
+            (void) d->mChanger->modifyIncidence(d->mItem, oldPayload);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
             Q_ASSERT(d->mItem.parentCollection().isValid());
