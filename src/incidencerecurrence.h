@@ -94,6 +94,7 @@ private:
     void setDefaults();
     void setDuration(int duration);
     void setExceptionDates(const KCalendarCore::DateList &dates);
+    void setExceptionDateTimes(const KCalendarCore::DateTimeList &dateTimes);
     void setFrequency(int freq);
     void toggleRecurrenceWidgets(int enable);
     /** Returns an array with the weekday on which the event occurs set to 1 */
