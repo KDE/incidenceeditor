@@ -54,6 +54,17 @@ enum {
     ComboIndexYearlyDay
 };
 
+static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, KCalendarCore::DateList exDates)
+{
+        KCalendarCore::DateTimeList dts;
+        QDateTime dt = r->startDateTime();
+        for (const auto &e : exDates) {
+            dt.setDate(e);
+            dts.append(dt);
+        }
+        r->setExDateTimes(dts);
+}
+
 IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
     , mDateTime(dateTime)
@@ -198,7 +209,21 @@ void IncidenceRecurrence::load(const KCalendarCore::Incidence::Ptr &incidence)
         }
     }
 
-    setExceptionDates(mLoadedIncidence->recurrence()->exDates());
+    r = mLoadedIncidence->recurrence();
+    if (r->allDay()) {
+        setExceptionDates(r->exDates());
+    } else {
+        if (!r->exDateTimes().isEmpty()) {
+            setExceptionDateTimes(r->exDateTimes());
+        }
+        else if (!r->exDates().isEmpty()) {
+            // Compatibility: IncidenceEditorNG <= v5.16.3 stored EXDATES as
+            // dates only. Upgrade to date-times.
+            setExceptionDates(r->exDates());
+            setExDateTimesFromExDates(r, r->exDates());
+            r->setExDates({});
+        }
+    }
     handleDateTimeToggle();
     mWasDirty = false;
 }
@@ -266,7 +291,7 @@ void IncidenceRecurrence::writeToIncidence(const KCalendarCore::Incidence::Ptr &
             r->addYearlyMonth(currentDate().month());
             r->addYearlyPos(-monthWeekFromEnd(), weekday());
         } else {
-            // The lth day of the year (l : 1 - 356)
+            // The lth day of the year (l : 1 - 366)
             r->addYearlyDay(dayOfYearFromStart());
         }
     }
@@ -276,7 +301,11 @@ void IncidenceRecurrence::writeToIncidence(const KCalendarCore::Incidence::Ptr &
         r->setEndDate(endDate);
     }
 
-    r->setExDates(mExceptionDates);
+    if (r->allDay()) {
+        r->setExDates(mExceptionDates);
+    } else {
+        setExDateTimesFromExDates(r, mExceptionDates);
+    }
 }
 
 void IncidenceRecurrence::save(const KCalendarCore::Incidence::Ptr &incidence)
@@ -368,9 +397,19 @@ bool IncidenceRecurrence::isDirty() const
         }
     }
 
-    // Exceptions
-    if (mExceptionDates != recurrence->exDates()) {
-        return true;
+    // Exception dates
+    if (recurrence->allDay()) {
+        if (mExceptionDates != recurrence->exDates()) {
+            return true;
+        }
+    } else {
+        KCalendarCore::DateList dates;
+        for (const auto &dt : recurrence->exDateTimes()) {
+            dates.append(dt.date());
+        }
+        if (mExceptionDates != dates) {
+            return true;
+        }
     }
 
     return false;
@@ -858,9 +897,19 @@ void IncidenceRecurrence::setExceptionDates(const KCalendarCore::DateList &dates
     mUi->mExceptionList->clear();
     mExceptionDates.clear();
     KCalendarCore::DateList::ConstIterator dit;
-    for (dit = dates.begin(); dit != dates.end(); ++dit) {
-        mUi->mExceptionList->addItem(QLocale().toString(*dit));
-        mExceptionDates.append(*dit);
+    for (const auto &d : dates) {
+        mUi->mExceptionList->addItem(QLocale().toString(d));
+        mExceptionDates.append(d);
+    }
+}
+
+void IncidenceRecurrence::setExceptionDateTimes(const KCalCore::DateTimeList &dateTimes)
+{
+    mUi->mExceptionList->clear();
+    mExceptionDates.clear();
+    for (const auto &dt : dateTimes) {
+        mUi->mExceptionList->addItem(QLocale().toString(dt.date()));
+        mExceptionDates.append(dt.date());
     }
 }
 
