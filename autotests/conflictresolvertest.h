@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef CONFLICTRESOLVERTEST_H
-#define CONFLICTRESOLVERTEST_H
+#pragma once
 
 #include <CalendarSupport/FreeBusyItem>
 
@@ -45,4 +44,3 @@ private:
     QDateTime base, end;
 };
 
-#endif

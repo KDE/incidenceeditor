@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_KORGANIZEREDITORCONFIG_H
-#define INCIDENCEEDITOR_KORGANIZEREDITORCONFIG_H
+#pragma once
 
 #include "editorconfig.h"
 
@@ -42,4 +41,3 @@ public:
 };
 } // IncidenceEditors
 
-#endif

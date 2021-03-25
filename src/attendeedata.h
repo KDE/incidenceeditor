@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_ATTENDEEDATA_H
-#define INCIDENCEEDITOR_ATTENDEEDATA_H
+#pragma once
 
 #include <Libkdepim/MultiplyingLine>
 
@@ -45,4 +44,3 @@ public:
 };
 }
 
-#endif // INCIDENCEEDITOR_ATTENDEEDATA_H

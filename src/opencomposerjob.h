@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#ifndef INCIDENCEEDITOR_OPENCOMPOSERJOB_H
-#define INCIDENCEEDITOR_OPENCOMPOSERJOB_H
+#pragma once
 
 #include <KMime/Message>
 
@@ -38,4 +37,3 @@ private:
     const KIdentityManagement::Identity mIdentity;
 };
 }
-#endif

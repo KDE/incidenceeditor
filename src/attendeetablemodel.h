@@ -4,8 +4,7 @@
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-#ifndef INCIDENCEEDITOR_ATTENDEETABLEMODEL_H
-#define INCIDENCEEDITOR_ATTENDEETABLEMODEL_H
+#pragma once
 
 #include <KCalendarCore/Attendee>
 
@@ -76,4 +75,3 @@ public:
 };
 }
 
-#endif

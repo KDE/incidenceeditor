@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_ALARMDIALOG_H
-#define INCIDENCEEDITOR_ALARMDIALOG_H
+#pragma once
 
 #include <KCalendarCore/Incidence>
 
@@ -53,4 +52,3 @@ private:
 };
 }
 
-#endif // INCIDENCEEDITOR_ALARMDIALOG_H

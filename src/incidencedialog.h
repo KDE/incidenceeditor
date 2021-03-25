@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_INCIDENCEDIALOG_H
-#define INCIDENCEEDITOR_INCIDENCEDIALOG_H
+#pragma once
 
 #include "editoritemmanager.h"
 #include "incidenceeditor_export.h"
@@ -112,4 +111,3 @@ private:
 };
 }
 
-#endif

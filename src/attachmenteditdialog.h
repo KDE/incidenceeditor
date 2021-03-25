@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H
-#define INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H
+#pragma once
 
 #include <KCalendarCore/Attachment>
 #include <QDialog>
@@ -50,4 +49,3 @@ private:
 };
 }
 
-#endif // INCIDENCEEDITOR_ATTACHMENTEDITDIALOG_H

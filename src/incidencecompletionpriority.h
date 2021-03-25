@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_INCIDENCECOMPLETIONPRIORITY_H
-#define INCIDENCEEDITOR_INCIDENCECOMPLETIONPRIORITY_H
+#pragma once
 
 #include "incidenceeditor-ng.h"
 
@@ -37,4 +36,3 @@ private:
 };
 }
 
-#endif

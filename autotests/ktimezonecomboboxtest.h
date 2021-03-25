@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
-#ifndef KTIMEZONECOMBOBOXTEST_H
-#define KTIMEZONECOMBOBOXTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -15,4 +14,3 @@ private Q_SLOTS:
     void test_timeSpec();
 };
 
-#endif

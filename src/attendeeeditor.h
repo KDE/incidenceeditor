@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_ATTENDEEEDITOR_H
-#define INCIDENCEEDITOR_ATTENDEEEDITOR_H
+#pragma once
 
 #include "attendeedata.h"
 #include "attendeeline.h"
@@ -54,4 +53,3 @@ protected Q_SLOTS:
 };
 }
 
-#endif

@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_ALARMPRESETS_H
-#define INCIDENCEEDITOR_ALARMPRESETS_H
+#pragma once
 
 #include <KCalendarCore/Alarm>
 
@@ -56,4 +55,3 @@ Q_REQUIRED_RESULT int defaultPresetIndex();
 }
 }
 
-#endif // INCIDENCEEDITOR_ALARMPRESETS_H

@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_INCIDENCEATTACHMENT_H
-#define INCIDENCEEDITOR_INCIDENCEATTACHMENT_H
+#pragma once
 
 #include "incidenceeditor-ng.h"
 class QUrl;
@@ -86,4 +85,3 @@ private:
 };
 }
 
-#endif

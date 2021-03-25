@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_GROUPWAREUIDELEGATE_H
-#define INCIDENCEEDITOR_GROUPWAREUIDELEGATE_H
+#pragma once
 
 #include "incidenceeditor_export.h"
 
@@ -23,4 +22,3 @@ public:
 };
 }
 
-#endif

@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
  */
 
-#ifndef INCIDENCEEDITOR_ATTENDEECOMBOBOXDELEGATE_H
-#define INCIDENCEEDITOR_ATTENDEECOMBOBOXDELEGATE_H
+#pragma once
 
 #include <QIcon>
 #include <QModelIndex>
@@ -61,4 +60,3 @@ private:
 };
 }
 
-#endif

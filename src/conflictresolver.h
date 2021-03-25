@@ -7,8 +7,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_CONFLICTRESOLVER_H
-#define INCIDENCEEDITOR_CONFLICTRESOLVER_H
+#pragma once
 
 #include "incidenceeditor_export.h"
 #include <CalendarSupport/FreeBusyItem>
@@ -187,4 +186,3 @@ private:
 };
 }
 
-#endif

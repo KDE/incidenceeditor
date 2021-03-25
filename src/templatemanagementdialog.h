@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_TEMPLATEMANAGEMENTDIALOG_H
-#define INCIDENCEEDITOR_TEMPLATEMANAGEMENTDIALOG_H
+#pragma once
 
 #include "ui_template_management_dialog_base.h"
 
@@ -57,4 +56,3 @@ private:
 };
 }
 
-#endif

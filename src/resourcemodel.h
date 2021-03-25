@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef RESOURCEMODEL_H
-#define RESOURCEMODEL_H
+#pragma once
 
 #include "resourceitem.h"
 
@@ -109,4 +108,3 @@ private:
     void slotLDAPSearchData(const KLDAP::LdapResultObject::List &);
 };
 }
-#endif // RESOURCEMODEL_H

@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_FREEBUSYGANTTPROXYMODEL_H
-#define INCIDENCEEDITOR_FREEBUSYGANTTPROXYMODEL_H
+#pragma once
 
 #include "incidenceeditor_export.h"
 
@@ -39,4 +38,3 @@ public:
 };
 }
 
-#endif

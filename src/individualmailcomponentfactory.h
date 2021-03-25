@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
  */
 
-#ifndef INCIDENCEEDITOR_INDIVIDUALMAILCOMPONENTFACTORY_H
-#define INCIDENCEEDITOR_INDIVIDUALMAILCOMPONENTFACTORY_H
+#pragma once
 
 #include "incidenceeditor_export.h"
 
@@ -97,4 +96,3 @@ private:
     QHash<QString, KCalendarCore::Attendee::List> mUpdate;
 };
 }
-#endif

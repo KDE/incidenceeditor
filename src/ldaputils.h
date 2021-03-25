@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef LDAPUTILS_H
-#define LDAPUTILS_H
+#pragma once
 
 #include <QString>
 
@@ -15,4 +14,3 @@ namespace IncidenceEditorNG
 Q_REQUIRED_RESULT QString translateLDAPAttributeForDisplay(const QString &attribute);
 } // namespace IncidenceEditorNG
 
-#endif // LDAPUTLS_H

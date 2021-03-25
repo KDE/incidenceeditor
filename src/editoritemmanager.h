@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_EDITORITEMMANAGER_H
-#define INCIDENCEEDITOR_EDITORITEMMANAGER_H
+#pragma once
 
 #include <Akonadi/Calendar/IncidenceChanger>
 #include <Collection>
@@ -170,4 +169,3 @@ public:
 };
 }
 
-#endif

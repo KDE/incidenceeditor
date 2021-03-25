@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_SCHEDULINGDIALOG_H
-#define INCIDENCEEDITOR_SCHEDULINGDIALOG_H
+#pragma once
 
 #include "ui_schedulingdialog.h"
 
@@ -63,4 +62,3 @@ private:
 };
 }
 
-#endif

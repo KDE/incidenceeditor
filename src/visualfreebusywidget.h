@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_VISUALFREEBUSYWIDGET_H
-#define INCIDENCEEDITOR_VISUALFREEBUSYWIDGET_H
+#pragma once
 
 #include <QDateTime>
 #include <QWidget>
@@ -65,4 +64,3 @@ private:
     QDateTime mDtStart, mDtEnd;
 };
 }
-#endif

@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef RESOURCEITEM_H
-#define RESOURCEITEM_H
+#pragma once
 
 #include <KLDAP/LdapClient>
 
@@ -114,4 +113,3 @@ private:
 Q_DECLARE_TYPEINFO(IncidenceEditorNG::ResourceItem::Ptr, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(IncidenceEditorNG::ResourceItem::Ptr)
 //@endcond
-#endif // RESOURCEITEM_H

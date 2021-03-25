@@ -11,8 +11,7 @@
         kdepim/incidenceeditors/editorattachments.{h,cpp}
 */
 
-#ifndef INCIDENCEEDITOR_ATTACHMENTICONVIEW_H
-#define INCIDENCEEDITOR_ATTACHMENTICONVIEW_H
+#pragma once
 
 #include <KCalendarCore/Attachment>
 
@@ -76,4 +75,3 @@ private:
 };
 }
 
-#endif // INCIDENCEEDITOR_ATTACHMENTICONVIEW_H

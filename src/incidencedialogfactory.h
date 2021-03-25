@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef INCIDENCEEDITOR_INCIDENCEDIALOGFACTORY_H
-#define INCIDENCEEDITOR_INCIDENCEDIALOGFACTORY_H
+#pragma once
 
 #include "incidenceeditor_export.h"
 
@@ -70,4 +69,3 @@ INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(const QString &summary
 } // namespace IncidenceDialogFactory
 } // namespace IncidenceEditorNG
 
-#endif

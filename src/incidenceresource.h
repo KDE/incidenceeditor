@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
  */
 
-#ifndef INCIDENCEEDITOR_INCIDENCERESOURCE_H
-#define INCIDENCEEDITOR_INCIDENCERESOURCE_H
+#pragma once
 
 #include "attendeetablemodel.h"
 #include "incidenceattendee.h"
@@ -67,4 +66,3 @@ private:
 };
 }
 
-#endif

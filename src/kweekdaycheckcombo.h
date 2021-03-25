@@ -6,8 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KWEEKDAYCHECKCOMBO_H
-#define KWEEKDAYCHECKCOMBO_H
+#pragma once
 
 #include <Libkdepim/KCheckComboBox>
 
@@ -55,4 +54,3 @@ public:
     int weekdayIndex(const QDate &date) const;
 };
 }
-#endif // KWEEKDAYCHECKCOMBO_H
