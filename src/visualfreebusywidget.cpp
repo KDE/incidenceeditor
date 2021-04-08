@@ -234,11 +234,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
 
     // Initially, show 15 days back and forth
     // set start to even hours, i.e. to 12:AM 0 Min 0 Sec
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    const QDateTime horizonStart = QDateTime(QDateTime::currentDateTime().addDays(-15).date());
-#else
     const QDateTime horizonStart = QDateTime(QDateTime::currentDateTime().addDays(-15).date().startOfDay());
-#endif
     mGanttGrid->setStartDateTime(horizonStart);
 
     connect(mLeftView, &QTreeView::customContextMenuRequested, this, &VisualFreeBusyWidget::showAttendeeStatusMenu);
@@ -286,11 +282,7 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, 
 {
     mDtStart = dtFrom;
     mDtEnd = dtTo;
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date());
-#else
     QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date().startOfDay());
-#endif
 
     auto grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
     grid->setStartDateTime(horizonStart);
