@@ -675,13 +675,13 @@ IncidenceDialog::~IncidenceDialog()
 
 void IncidenceDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "IncidenceDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
     group.writeEntry("Size", size());
 }
 
 void IncidenceDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "IncidenceDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
     const QSize size = group.readEntry("Size", QSize());
     if (size.isValid()) {
         resize(size);

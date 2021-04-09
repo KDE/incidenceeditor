@@ -153,7 +153,7 @@ ResourceManagement::~ResourceManagement()
 
 void ResourceManagement::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ResourceManagement");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -162,7 +162,7 @@ void ResourceManagement::readConfig()
 
 void ResourceManagement::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ResourceManagement");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
     group.writeEntry("Size", size());
     group.sync();
 }
