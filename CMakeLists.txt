@@ -76,7 +76,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
 )
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
-
+option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
 configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )

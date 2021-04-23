@@ -59,6 +59,7 @@ target_link_libraries(testindividualmaildialog
   KF5::I18n
 )
 
+if (KDEPIM_RUN_AKONADI_TEST)
 # The IncidenceCategories subeditor of the dialog starts Akonadi running, so
 # set up an environment.
 set(AKONADI_RUN_MYSQL_ISOLATED_TESTS FALSE)
@@ -72,3 +73,4 @@ add_akonadi_isolated_test(
   KF5::Libkdepim
   KF5::WidgetsAddons
 )
+endif()
