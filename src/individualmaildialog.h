@@ -9,13 +9,11 @@
 #include <KCalendarCore/Attendee>
 #include <QDialog>
 
-#include <QComboBox>
-#include <QDialogButtonBox>
-
 class KGuiItem;
 
 class TestIndividualMailDialog;
-
+class QDialogButtonBox;
+class QComboBox;
 namespace IncidenceEditorNG
 {
 // Shows a dialog with a question and the option to select which attendee should get the mail or to open a composer for him.
