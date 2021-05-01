@@ -75,7 +75,7 @@ void IncidenceAttachment::save(const KCalendarCore::Incidence::Ptr &incidence)
 
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *item = mAttachmentView->item(itemIndex);
-        auto *attitem = dynamic_cast<AttachmentIconItem *>(item);
+        auto attitem = dynamic_cast<AttachmentIconItem *>(item);
         Q_ASSERT(item);
         incidence->addAttachment(attitem->attachment());
     }
@@ -123,7 +123,7 @@ int IncidenceAttachment::attachmentCount() const
 void IncidenceAttachment::addAttachment()
 {
     QPointer<QObject> that(this);
-    AttachmentIconItem *item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
+    auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
     dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
@@ -269,7 +269,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     if (att.isUri()) {
         openURL(QUrl(att.uri()));
     } else {
-        KIO::OpenUrlJob *job = new KIO::OpenUrlJob(attitem->tempFileForAttachment(), att.mimeType());
+        auto job = new KIO::OpenUrlJob(attitem->tempFileForAttachment(), att.mimeType());
         job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, mAttachmentView));
         job->setDeleteTemporaryFile(true);
         job->start();
@@ -467,7 +467,7 @@ void IncidenceAttachment::downloadComplete(KJob *)
 
 void IncidenceAttachment::setupActions()
 {
-    KActionCollection *ac = new KActionCollection(this);
+    auto ac = new KActionCollection(this);
     //  ac->addAssociatedWidget( this );
 
     mOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), i18nc("@action:inmenu open the attachment in a viewer", "&Open"), this);
@@ -532,7 +532,7 @@ void IncidenceAttachment::setupAttachmentIconView()
 
 void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType, const QString &label)
 {
-    AttachmentIconItem *item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
+    auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QString nlabel = label;
     if (mimeType == QLatin1String("message/rfc822")) {
@@ -558,7 +558,7 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QStrin
 void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mimeType, const QString &label, bool inLine)
 {
     if (!inLine) {
-        AttachmentIconItem *item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
+        auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {

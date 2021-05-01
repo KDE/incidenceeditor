@@ -10,13 +10,11 @@
 #include "incidenceattendee.h"
 #include "incidenceeditor-ng.h"
 
-#include <QCompleter>
-
 namespace Ui
 {
 class EventOrTodoDesktop;
 }
-
+class QCompleter;
 namespace IncidenceEditorNG
 {
 class ResourceManagement;

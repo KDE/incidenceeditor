@@ -433,7 +433,7 @@ void IncidenceAttendee::slotSelectAddresses()
         const Akonadi::EmailAddressSelection::List list = dialog->selectedAddresses();
         for (const Akonadi::EmailAddressSelection &selection : list) {
             if (selection.item().hasPayload<KContacts::ContactGroup>()) {
-                Akonadi::ContactGroupExpandJob *job = new Akonadi::ContactGroupExpandJob(selection.item().payload<KContacts::ContactGroup>(), this);
+                auto job = new Akonadi::ContactGroupExpandJob(selection.item().payload<KContacts::ContactGroup>(), this);
                 connect(job, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
                 KCalendarCore::Attendee::PartStat partStat = KCalendarCore::Attendee::NeedsAction;
                 bool rsvp = true;
@@ -478,7 +478,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &t
     if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+            auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             if (mConflictResolver->containsAttendee(attendee)) {
                 mConflictResolver->removeAttendee(attendee);
             }
@@ -624,7 +624,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &
     if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+            auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
     }
@@ -636,7 +636,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &in
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         checkIfExpansionIsNeeded(attendee);
     }
     updateGroupExpand();
@@ -647,7 +647,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-        KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         KJob *job = mMightBeGroupJobs.key(attendee.uid());
         if (job) {
             disconnect(job);
@@ -690,7 +690,7 @@ void IncidenceAttendee::slotGroupSubstitutionLayoutChanged()
         QModelIndex index = model->index(i, AttendeeTableModel::FullName);
         if (!model->data(index).toString().isEmpty()) {
             QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
-            KCalendarCore::Attendee attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
+            auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
     }

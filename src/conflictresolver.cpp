@@ -134,11 +134,11 @@ int ConflictResolver::tryDate(QDateTime &tryFrom, QDateTime &tryTo)
     int conflicts_count = 0;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalendarCore::Attendee attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        auto attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalendarCore::FreeBusy::Ptr freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
+        auto freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!tryDate(freebusy, tryFrom, tryTo)) {
             ++conflicts_count;
         }
@@ -252,11 +252,11 @@ void ConflictResolver::findAllFreeSlots()
     QList<KCalendarCore::FreeBusy::Ptr> filteredFBItems;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
         QModelIndex index = mFBModel->index(i);
-        KCalendarCore::Attendee attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
+        auto attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
         }
-        KCalendarCore::FreeBusy::Ptr freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
+        auto freebusy = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (freebusy) {
             filteredFBItems << freebusy;
         }

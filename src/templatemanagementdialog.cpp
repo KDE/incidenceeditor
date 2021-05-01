@@ -28,7 +28,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
 {
     QString m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     auto mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
@@ -36,7 +36,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TemplateManagementDialog::reject);
     setObjectName(QStringLiteral("template_management_dialog"));
     connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &TemplateManagementDialog::slotHelp);
-    QWidget *widget = new QWidget(this);
+    auto widget = new QWidget(this);
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
 

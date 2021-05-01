@@ -29,8 +29,8 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     setWindowTitle(i18nc("@title:window", "Edit Free/Busy Location"));
     auto mainLayout = new QVBoxLayout(this);
 
-    QFrame *topFrame = new QFrame(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto topFrame = new QFrame(this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(topFrame);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -60,7 +60,7 @@ FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget 
 {
     QBoxLayout *topLayout = new QVBoxLayout(this);
 
-    QLabel *label = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:", mAttendee->name(), mAttendee->email()), this);
+    auto label = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:", mAttendee->name(), mAttendee->email()), this);
     topLayout->addWidget(label);
 
     mUrlEdit = new KLineEdit(this);

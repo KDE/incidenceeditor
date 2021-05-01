@@ -27,9 +27,9 @@ SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTim
 {
     setWindowTitle(i18nc("@title:window", "Scheduling"));
     auto mainLayout = new QVBoxLayout(this);
-    QWidget *w = new QWidget(this);
+    auto w = new QWidget(this);
     setupUi(w);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -158,7 +158,7 @@ void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current, const
         mMoveApptGroupBox->hide();
         return;
     }
-    KCalendarCore::Period period = current.data(CalendarSupport::FreePeriodModel::PeriodRole).value<KCalendarCore::Period>();
+    auto period = current.data(CalendarSupport::FreePeriodModel::PeriodRole).value<KCalendarCore::Period>();
     const QDate startDate = period.start().date();
 
     const int dayOfWeek = startDate.dayOfWeek();

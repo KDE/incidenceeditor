@@ -170,7 +170,7 @@ void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item, Akonadi
             Q_EMIT q->itemSaveFinished(EditorItemManager::Modify);
             setupMonitor();
         } else { // There's a collection move too.
-            Akonadi::ItemMoveJob *moveJob = new Akonadi::ItemMoveJob(mItem, mItemUi->selectedCollection());
+            auto moveJob = new Akonadi::ItemMoveJob(mItem, mItemUi->selectedCollection());
             q->connect(moveJob, SIGNAL(result(KJob *)), SLOT(moveJobFinished(KJob *)));
         }
     } else if (resultCode == Akonadi::IncidenceChanger::ResultCodeUserCanceled) {
@@ -328,7 +328,7 @@ void EditorItemManager::save()
             if (d->mItemUi->isDirty()) {
                 (void) d->mChanger->modifyIncidence(d->mItem, oldPayload);
             } else {
-                Akonadi::ItemMoveJob *itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
+                auto itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
                 connect(itemMoveJob, SIGNAL(result(KJob *)), SLOT(itemMoveResult(KJob *)));
             }
         }

@@ -129,7 +129,7 @@ void IncidenceDescription::toggleRichTextDescription()
 void IncidenceDescription::setupToolBar()
 {
 #ifndef QT_NO_TOOLBAR
-    KActionCollection *collection = new KActionCollection(this);
+    auto collection = new KActionCollection(this);
     mUi->mDescriptionEdit->richTextComposer()->createActions(collection);
 
     auto mEditToolBar = new KToolBar(mUi->mEditToolBarPlaceHolder);

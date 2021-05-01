@@ -96,7 +96,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Resource Management"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -107,7 +107,7 @@ ResourceManagement::ResourceManagement(QWidget *parent)
 
     mUi = new Ui_resourceManagement;
 
-    QWidget *w = new QWidget(this);
+    auto w = new QWidget(this);
     mUi->setupUi(w);
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
@@ -179,7 +179,7 @@ void ResourceManagement::slotStartSearch(const QString &text)
 
 void ResourceManagement::slotShowDetails(const QModelIndex &current)
 {
-    ResourceItem::Ptr item = current.model()->data(current, ResourceModel::Resource).value<ResourceItem::Ptr>();
+    auto item = current.model()->data(current, ResourceModel::Resource).value<ResourceItem::Ptr>();
     mSelectedItem = item;
     showDetails(item->ldapObject(), item->ldapClient());
 }

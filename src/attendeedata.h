@@ -16,8 +16,8 @@ namespace IncidenceEditorNG
 class AttendeeData : public KPIM::MultiplyingLineData, public KCalendarCore::Attendee
 {
 public:
-    typedef QSharedPointer<AttendeeData> Ptr;
-    typedef QList<AttendeeData::Ptr> List;
+    using Ptr = QSharedPointer<AttendeeData>;
+    using List = QList<AttendeeData::Ptr>;
 
     AttendeeData(const QString &name,
                  const QString &email,

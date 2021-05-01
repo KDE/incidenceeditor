@@ -42,8 +42,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     }
 
     // if the index is valid, then it corresponds to a free busy period
-    KCalendarCore::FreeBusyPeriod period =
-        sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).value<KCalendarCore::FreeBusyPeriod>();
+    auto period = sourceModel()->data(source_index, CalendarSupport::FreeBusyItemModel::FreeBusyPeriodRole).value<KCalendarCore::FreeBusyPeriod>();
 
     switch (role) {
     case KGantt::ItemTypeRole:

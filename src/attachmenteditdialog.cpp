@@ -37,9 +37,9 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     setWindowTitle(i18nc("@title:window", "Edit Attachment"));
     QMimeDatabase db;
     mMimeType = db.mimeTypeForName(item->mimeType());
-    QWidget *page = new QWidget(this);
+    auto page = new QWidget(this);
     auto mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

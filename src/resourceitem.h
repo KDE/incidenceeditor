@@ -29,7 +29,7 @@ public:
     /**
       A shared pointer to an ResourceItem object.
     */
-    typedef QSharedPointer<ResourceItem> Ptr;
+    using Ptr = QSharedPointer<ResourceItem>;
 
     ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem() override;

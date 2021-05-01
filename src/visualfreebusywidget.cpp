@@ -136,7 +136,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     controlLayout->setSpacing(topLayout->spacing());
     topLayout->addItem(controlLayout);
 
-    QLabel *label = new QLabel(i18nc("@label", "Scale: "), this);
+    auto label = new QLabel(i18nc("@label", "Scale: "), this);
     controlLayout->addWidget(label);
 
     mScaleCombo = new QComboBox(this);
@@ -158,7 +158,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     connect(mScaleCombo, qOverload<int>(&QComboBox::activated), this, &VisualFreeBusyWidget::slotScaleChanged);
     controlLayout->addWidget(mScaleCombo);
 
-    QPushButton *button = new QPushButton(i18nc("@action:button", "Center on Start"), this);
+    auto button = new QPushButton(i18nc("@action:button", "Center on Start"), this);
     button->setToolTip(i18nc("@info:tooltip", "Center the Gantt chart on the event start date and time"));
     button->setWhatsThis(i18nc("@info:whatsthis",
                                "Click this button to center the Gantt chart on the start "

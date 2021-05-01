@@ -22,7 +22,7 @@
 
 using namespace IncidenceEditorNG;
 
-typedef QPair<QString, QIcon> TextIconPair;
+using TextIconPair = QPair<QString, QIcon>;
 
 AttendeeComboBox::AttendeeComboBox(QWidget *parent)
     : QToolButton(parent)

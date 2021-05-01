@@ -24,14 +24,14 @@ AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, 
 {
     setWindowTitle(i18nc("@title:window", "Create a new reminder"));
     auto mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AlarmDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AlarmDialog::reject);
 
-    QWidget *mainWidget = new QWidget(this);
+    auto mainWidget = new QWidget(this);
     mUi->setupUi(mainWidget);
     mainLayout->addWidget(mainWidget);
     mainLayout->addWidget(buttonBox);
