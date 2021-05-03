@@ -125,7 +125,7 @@ target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${K
 target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
 
 set_target_properties(KF5IncidenceEditor PROPERTIES
-    VERSION ${INCIDENCEEDITOR_VERSION_STRING}
+    VERSION ${INCIDENCEEDITOR_VERSION}
     SOVERSION ${INCIDENCEEDITOR_SOVERSION}
     EXPORT_NAME IncidenceEditor
 )
