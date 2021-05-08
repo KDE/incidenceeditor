@@ -3,7 +3,7 @@ set(PIM_VERSION "5.17.40")
 
 project(incidenceeditor VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.81.0")
+set(KF5_MIN_VERSION "5.82.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -85,7 +85,7 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055200)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055300)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
