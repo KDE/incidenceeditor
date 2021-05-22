@@ -656,24 +656,9 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
 
 void IncidenceDateTime::save(const KCalendarCore::Event::Ptr &event)
 {
-    if (mUi->mWholeDayCheck->isChecked()) { // All day event
-        event->setAllDay(true);
-
-        // TODO: need to change this.
-        QDateTime eventDTStart = currentStartDateTime();
-        event->setAllDay(true);
-        event->setDtStart(eventDTStart);
-
-        QDateTime eventDTEnd = currentEndDateTime();
-
-        event->setDtEnd(eventDTEnd);
-    } else { // Timed Event
-        event->setAllDay(false);
-
-        // set date/time end
-        event->setDtStart(currentStartDateTime());
-        event->setDtEnd(currentEndDateTime());
-    }
+    event->setAllDay(mUi->mWholeDayCheck->isChecked());
+    event->setDtStart(currentStartDateTime());
+    event->setDtEnd(currentEndDateTime());
 
     // Free == Event::Transparent
     // Busy == Event::Opaque
@@ -684,7 +669,6 @@ void IncidenceDateTime::save(const KCalendarCore::Todo::Ptr &todo)
 {
     if (mUi->mStartCheck->isChecked()) {
         todo->setDtStart(currentStartDateTime());
-        // Set allday must be executed after setDtStart
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
         if (currentStartDateTime() != mInitialStartDT) {
             // We don't offer any way to edit the current completed occurrence.
@@ -696,8 +680,7 @@ void IncidenceDateTime::save(const KCalendarCore::Todo::Ptr &todo)
     }
 
     if (mUi->mEndCheck->isChecked()) {
-        todo->setDtDue(currentEndDateTime(), true /** first */);
-        // Set allday must be executed after setDtDue
+        todo->setDtDue(currentEndDateTime(), true /* first */);
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
     } else {
         todo->setDtDue(QDateTime());
@@ -707,15 +690,7 @@ void IncidenceDateTime::save(const KCalendarCore::Todo::Ptr &todo)
 void IncidenceDateTime::save(const KCalendarCore::Journal::Ptr &journal)
 {
     journal->setAllDay(mUi->mWholeDayCheck->isChecked());
-
-    if (mUi->mWholeDayCheck->isChecked()) { // All day journal
-        QDateTime journalDTStart = currentStartDateTime();
-        journal->setAllDay(true);
-        journal->setDtStart(journalDTStart);
-    } else { // Timed Journal
-        // set date/time end
-        journal->setDtStart(currentStartDateTime());
-    }
+    journal->setDtStart(currentStartDateTime());
 }
 
 void IncidenceDateTime::setDateTimes(const QDateTime &start, const QDateTime &end)
