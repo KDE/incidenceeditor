@@ -57,6 +57,7 @@ target_link_libraries(testindividualmaildialog
   Qt::Widgets
   KF5::WidgetsAddons
   KF5::I18n
+  KF5::IncidenceEditor
 )
 
 if (KDEPIM_RUN_AKONADI_TEST)

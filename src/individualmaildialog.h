@@ -5,7 +5,7 @@
  */
 
 #pragma once
-
+#include "incidenceeditor_private_export.h"
 #include <KCalendarCore/Attendee>
 #include <QDialog>
 
@@ -18,7 +18,7 @@ namespace IncidenceEditorNG
 {
 // Shows a dialog with a question and the option to select which attendee should get the mail or to open a composer for him.
 // Used to get individual mails for attendees of an event.
-class IndividualMailDialog : public QDialog
+class INCIDENCEEDITOR_TESTS_EXPORT IndividualMailDialog : public QDialog
 {
     Q_OBJECT
     friend class ::TestIndividualMailDialog;

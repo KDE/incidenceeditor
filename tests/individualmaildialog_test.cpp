@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "../src/individualmaildialog.h"
+#include "individualmaildialog.h"
 
 #include <KGuiItem>
 #include <QApplication>

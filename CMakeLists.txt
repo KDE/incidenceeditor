@@ -118,6 +118,9 @@ install(FILES
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(BUILD_TESTING)
+  add_definitions(-DBUILD_TESTING)
+endif()
 add_subdirectory(src)
 if (BUILD_TESTING)
    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
