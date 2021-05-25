@@ -1,7 +1,8 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
-
-set(incidenceeditors_ng_shared_LIB_SRCS
+add_library(KF5IncidenceEditor)
+add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
+target_sources(KF5IncidenceEditor PRIVATE
   attachmenteditdialog.cpp
   attachmenticonview.cpp
   attendeedata.cpp
@@ -61,16 +62,15 @@ set(incidenceeditors_ng_shared_LIB_SRCS
   kweekdaycheckcombo.cpp
 )
 
-ecm_qt_declare_logging_category(incidenceeditors_ng_shared_LIB_SRCS HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
+ecm_qt_declare_logging_category(KF5IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
         OLD_CATEGORY_NAMES log_incidenceeditor
         DESCRIPTION "incidenceeditor (incidenceeditor)" EXPORT INCIDENCEEDITOR)
 
-kconfig_add_kcfg_files(incidenceeditors_ng_shared_LIB_SRCS globalsettings_incidenceeditor.kcfgc)
+kconfig_add_kcfg_files(KF5IncidenceEditor globalsettings_incidenceeditor.kcfgc)
 
 ### Build the desktop version
 
-set(incidenceeditors_ng_desktop_LIB_SRCS
-  ${incidenceeditors_ng_shared_LIB_SRCS}
+target_sources(KF5IncidenceEditor PRIVATE
   templatemanagementdialog.cpp
   incidencedialogfactory.cpp
   incidencedialog.cpp
@@ -78,7 +78,7 @@ set(incidenceeditors_ng_desktop_LIB_SRCS
   incidenceeditor.qrc
 )
 
-ki18n_wrap_ui(incidenceeditors_ng_desktop_LIB_SRCS
+ki18n_wrap_ui(KF5IncidenceEditor
   ui/template_management_dialog_base.ui
   ui/dialogdesktop.ui
   ui/alarmdialog.ui
@@ -87,14 +87,10 @@ ki18n_wrap_ui(incidenceeditors_ng_desktop_LIB_SRCS
   ui/resourcemanagement.ui
 )
 
-add_library(KF5IncidenceEditor ${incidenceeditors_ng_desktop_LIB_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5IncidenceEditor PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5IncidenceEditor BASE_NAME incidenceeditor)
-
-add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
-
 
 
 target_link_libraries(KF5IncidenceEditor

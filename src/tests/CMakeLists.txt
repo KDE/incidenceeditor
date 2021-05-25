@@ -1,7 +1,7 @@
 
 set(testincidenceeditor_SRCS main.cpp)
 
-add_executable(kincidenceeditor ${testincidenceeditor_SRCS})
+add_executable(kincidenceeditor main.cpp)
 
 target_link_libraries(kincidenceeditor
     KF5::AkonadiCalendar
