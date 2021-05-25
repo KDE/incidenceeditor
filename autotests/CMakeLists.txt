@@ -34,9 +34,7 @@ ie_unit_tests(
 )
 
 ########### KTimeZoneComboBox unit test #############
-set(ktimezonecomboboxtest_SRCS ktimezonecomboboxtest.cpp)
-
-add_executable(ktimezonecomboboxtest ${ktimezonecomboboxtest_SRCS})
+add_executable(ktimezonecomboboxtest ktimezonecomboboxtest.cpp)
 add_test(NAME ktimezonecomboboxtest COMMAND ktimezonecomboboxtest)
 ecm_mark_as_test(ktimezonecomboboxtest)
 
@@ -47,7 +45,7 @@ target_link_libraries(ktimezonecomboboxtest
   KF5::Completion
 )
 
-add_executable(testindividualmaildialog testindividualmaildialog.cpp ../src/individualmaildialog.cpp)
+add_executable(testindividualmaildialog testindividualmaildialog.cpp)
 ecm_mark_nongui_executable(testindividualmaildialog)
 add_test(NAME testindividualmaildialog COMMAND testindividualmaildialog)
 ecm_mark_as_test(testindividualmaildialog)
