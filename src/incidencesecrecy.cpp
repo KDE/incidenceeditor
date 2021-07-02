@@ -26,11 +26,6 @@ void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
     if (mLoadedIncidence) {
         Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
         mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
-
-        if (incidence->type() == KCalendarCore::Incidence::TypeJournal) {
-            mUi->mSecrecyCombo->setVisible(false);
-            mUi->mSecrecyLabel->setVisible(false);
-        }
     } else {
         mUi->mSecrecyCombo->setCurrentIndex(0);
     }
