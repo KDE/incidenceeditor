@@ -1,2 +1,3 @@
-#cmakedefine KDEPIM_ENTERPRISE_BUILD 1
+#cmakedefine01 KDEPIM_ENTERPRISE_BUILD
+
 

@@ -356,7 +356,7 @@ void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &inciden
     incidence->clearRecurrence();
 
     const KCalendarCore::Person organizerAsPerson = d->organizerAsPerson();
-#ifdef KDEPIM_ENTERPRISE_BUILD
+#if KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif
     for (const KCalendarCore::Attendee &attendee : qAsConst(d->mAttendees)) {

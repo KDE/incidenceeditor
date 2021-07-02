@@ -35,7 +35,7 @@ AttachmentIconItem::AttachmentIconItem(const KCalendarCore::Attachment &att, QLi
         mAttachment = att;
     } else {
         // for the enterprise, inline attachments are the default
-#ifdef KDEPIM_ENTERPRISE_BUILD
+#if KDEPIM_ENTERPRISE_BUILD
         mAttachment = KCalendarCore::Attachment(QByteArray()); // use the non-uri constructor
         // as we want inline by default
 #else
