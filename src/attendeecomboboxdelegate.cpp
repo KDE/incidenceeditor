@@ -55,7 +55,7 @@ QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOpt
 {
     auto editor = new AttendeeComboBox(parent);
 
-    for (const QPair<QIcon, QString> &pair : qAsConst(mEntries)) {
+    for (const QPair<QIcon, QString> &pair : std::as_const(mEntries)) {
         editor->addItem(pair.first, pair.second);
     }
 

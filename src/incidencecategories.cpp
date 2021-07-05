@@ -78,7 +78,7 @@ QStringList IncidenceCategories::categories() const
 
 void IncidenceCategories::createMissingCategories()
 {
-    for (const QString &category : qAsConst(mMissingCategories)) {
+    for (const QString &category : std::as_const(mMissingCategories)) {
         Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
         auto createJob = new Akonadi::TagCreateJob(missingTag, this);
         connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);

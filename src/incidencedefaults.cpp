@@ -78,7 +78,7 @@ KCalendarCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     if (!mGroupWareDomain.isEmpty()) {
         // Check if we have an identity with an email that ends with the groupware
         // domain.
-        for (const QString &fullEmail : qAsConst(mEmails)) {
+        for (const QString &fullEmail : std::as_const(mEmails)) {
             QString name;
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
@@ -93,7 +93,7 @@ KCalendarCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     if (organizer.email() == invalidEmail) {
         // Either, no groupware was used, or we didn't find a groupware email address.
         // Now try to
-        for (const QString &fullEmail : qAsConst(mEmails)) {
+        for (const QString &fullEmail : std::as_const(mEmails)) {
             QString name;
             QString email;
             const bool success = KEmailAddress::extractEmailAddressAndName(fullEmail, email, name);
@@ -359,7 +359,7 @@ void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &inciden
 #if KDEPIM_ENTERPRISE_BUILD
     incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
 #endif
-    for (const KCalendarCore::Attendee &attendee : qAsConst(d->mAttendees)) {
+    for (const KCalendarCore::Attendee &attendee : std::as_const(d->mAttendees)) {
         incidence->addAttendee(attendee);
     }
     // Ical standard: No attendees -> must not have an organizer!
@@ -367,7 +367,7 @@ void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &inciden
         incidence->setOrganizer(organizerAsPerson);
     }
 
-    for (const KCalendarCore::Attachment &attachment : qAsConst(d->mAttachments)) {
+    for (const KCalendarCore::Attachment &attachment : std::as_const(d->mAttachments)) {
         incidence->addAttachment(attachment);
     }
 

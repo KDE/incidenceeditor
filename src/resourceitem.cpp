@@ -29,7 +29,7 @@ ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, co
         mLdapClient.setAttributes(attrs);
     } else {
         itemData.reserve(mAttrs.count());
-        for (const QString &header : qAsConst(mAttrs)) {
+        for (const QString &header : std::as_const(mAttrs)) {
             itemData << header;
         }
     }
@@ -53,7 +53,7 @@ int ResourceItem::childNumber() const
 {
     if (parentItem) {
         int i = 0;
-        for (const ResourceItem::Ptr &child : qAsConst(parentItem->childItems)) {
+        for (const ResourceItem::Ptr &child : std::as_const(parentItem->childItems)) {
             if (child == this) {
                 return i;
             }
@@ -140,7 +140,7 @@ void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client, const KLDAP::
 {
     Q_UNUSED(client)
     mLdapObject = obj;
-    for (const QString &header : qAsConst(mAttrs)) {
+    for (const QString &header : std::as_const(mAttrs)) {
         if (!obj.attributes()[header].isEmpty()) {
             itemData << QString::fromUtf8(obj.attributes()[header][0]);
         } else {

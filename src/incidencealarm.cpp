@@ -98,9 +98,9 @@ bool IncidenceAlarm::isDirty() const
         //       if all currently enabled alarms are also in the incidence. The
         //       disabled alarms are not changed by our code at all, so we assume that
         //       they're still there.
-        for (const KCalendarCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
+        for (const KCalendarCore::Alarm::Ptr &alarm : std::as_const(mAlarms)) {
             bool found = false;
-            for (const KCalendarCore::Alarm::Ptr &initialAlarm : qAsConst(initialAlarms)) {
+            for (const KCalendarCore::Alarm::Ptr &initialAlarm : std::as_const(initialAlarms)) {
                 if (*alarm == *initialAlarm) {
                     found = true;
                     break;
@@ -223,7 +223,7 @@ void IncidenceAlarm::updateAlarmList()
 
     const QModelIndex currentIndex = mUi->mAlarmList->currentIndex();
     mUi->mAlarmList->clear();
-    for (const KCalendarCore::Alarm::Ptr &alarm : qAsConst(mAlarms)) {
+    for (const KCalendarCore::Alarm::Ptr &alarm : std::as_const(mAlarms)) {
         mUi->mAlarmList->addItem(stringForAlarm(alarm));
         if (alarm->enabled()) {
             ++mEnabledAlarmCount;

@@ -181,7 +181,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 
     // qDebug() <<  "Found ldapCollections";
 
-    for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
+    for (const KLDAP::LdapResultObject &result : std::as_const(results)) {
         ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
@@ -202,14 +202,14 @@ void ResourceModel::slotLDAPCollectionData(const KLDAP::LdapResultObject::List &
 
 void ResourceModel::slotLDAPSearchData(const KLDAP::LdapResultObject::List &results)
 {
-    for (const KLDAP::LdapResultObject &result : qAsConst(results)) {
+    for (const KLDAP::LdapResultObject &result : std::as_const(results)) {
         // Add the found items to all collections, where it is member
         QList<ResourceItem::Ptr> parents = mLdapCollectionsMap.values(result.object.dn().toString());
         if (parents.isEmpty()) {
             parents << mRootItem;
         }
 
-        for (const ResourceItem::Ptr &parent : qAsConst(parents)) {
+        for (const ResourceItem::Ptr &parent : std::as_const(parents)) {
             ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, parent));
             item->setLdapObject(result.object);
 

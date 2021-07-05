@@ -229,7 +229,7 @@ void AttendeeTableModel::addEmptyAttendee()
 {
     if (mKeepEmpty) {
         bool create = true;
-        for (const KCalendarCore::Attendee &attendee : qAsConst(mAttendeeList)) {
+        for (const KCalendarCore::Attendee &attendee : std::as_const(mAttendeeList)) {
             if (attendee.fullName().isEmpty()) {
                 create = false;
                 break;

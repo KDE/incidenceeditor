@@ -285,7 +285,7 @@ void ConflictResolver::findAllFreeSlots()
     //   etareti
     // append the allocated array to <fbTable>
     // etareti
-    for (const KCalendarCore::FreeBusy::Ptr &currentFB : qAsConst(filteredFBItems)) {
+    for (const KCalendarCore::FreeBusy::Ptr &currentFB : std::as_const(filteredFBItems)) {
         Q_ASSERT(currentFB); // sanity check
         const KCalendarCore::Period::List busyPeriods = currentFB->busyPeriods();
         QVector<int> fbArray(range);

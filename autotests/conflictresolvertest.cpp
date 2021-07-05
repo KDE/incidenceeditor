@@ -19,7 +19,7 @@ using namespace IncidenceEditorNG;
 
 void ConflictResolverTest::insertAttendees()
 {
-    for (const CalendarSupport::FreeBusyItem::Ptr &item : qAsConst(attendees)) {
+    for (const CalendarSupport::FreeBusyItem::Ptr &item : std::as_const(attendees)) {
         resolver->insertAttendee(item);
     }
 }

@@ -37,7 +37,7 @@ bool CombinedIncidenceEditor::isDirty() const
 
 bool CombinedIncidenceEditor::isValid() const
 {
-    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
+    for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         if (!editor->isValid()) {
             const QString reason = editor->lastErrorString();
             editor->focusInvalidField();
@@ -76,7 +76,7 @@ void CombinedIncidenceEditor::handleDirtyStatusChange(bool isDirty)
 void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
-    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
+    for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
         editor->blockSignals(true);
@@ -101,7 +101,7 @@ void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidenc
 
 void CombinedIncidenceEditor::load(const Akonadi::Item &item)
 {
-    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
+    for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
         editor->blockSignals(true);
@@ -126,14 +126,14 @@ void CombinedIncidenceEditor::load(const Akonadi::Item &item)
 
 void CombinedIncidenceEditor::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
+    for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         editor->save(incidence);
     }
 }
 
 void CombinedIncidenceEditor::save(Akonadi::Item &item)
 {
-    for (IncidenceEditor *editor : qAsConst(mCombinedEditors)) {
+    for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         editor->save(item);
     }
 }

@@ -43,7 +43,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
     mZones.prepend(QTimeZone::systemTimeZoneId()); // index=0
 
     // Put translated zones into the combobox
-    for (const auto &z : qAsConst(mZones)) {
+    for (const auto &z : std::as_const(mZones)) {
         mParent->addItem(i18n(z.constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
     }
 }
@@ -65,7 +65,7 @@ void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
     int nCurrentlySet = -1;
 
     int i = 0;
-    for (const auto &z : qAsConst(d->mZones)) {
+    for (const auto &z : std::as_const(d->mZones)) {
         if (z == zone.id()) {
             nCurrentlySet = i;
             break;
