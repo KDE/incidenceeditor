@@ -12,6 +12,8 @@
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
 
+#include <CalendarSupport/Utils>
+
 #include <TagAttribute>
 #include <TagCreateJob>
 #include <TagFetchJob>
@@ -36,15 +38,30 @@ void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
 
 void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    mLoadedIncidence = incidence;
+    Q_UNUSED(incidence)
+}
+
+void IncidenceCategories::load(const Akonadi::Item &item)
+{
+    mLoadedIncidence = CalendarSupport::incidence(item);
     mDirty = false;
     mWasDirty = false;
-    mMissingCategories.clear();
 
+    Q_ASSERT(mLoadedIncidence);
     if (mLoadedIncidence) {
-        auto fetchJob = new Akonadi::TagFetchJob(this);
-        fetchJob->fetchScope().fetchAttribute<Akonadi::TagAttribute>();
-        connect(fetchJob, &Akonadi::TagFetchJob::result, this, &IncidenceCategories::onTagsFetched);
+        mMissingCategories = mLoadedIncidence->categories();
+        const auto tags = item.tags();
+        Akonadi::Tag::List selectedTags;
+        selectedTags.reserve(mMissingCategories.count());
+        for (const auto &tag : tags) {
+            if (mMissingCategories.removeAll(tag.name()) > 0) {
+                selectedTags << tag;
+            }
+        }
+        createMissingCategories();
+        mUi->mTagWidget->blockSignals(true);
+        mUi->mTagWidget->setSelection(selectedTags);
+        mUi->mTagWidget->blockSignals(false);
     }
 }
 
@@ -95,30 +112,6 @@ void IncidenceCategories::printDebugInfo() const
     qCDebug(INCIDENCEEDITOR_LOG) << "selected categories = " << categories();
     qCDebug(INCIDENCEEDITOR_LOG) << "mMissingCategories = " << mMissingCategories;
     qCDebug(INCIDENCEEDITOR_LOG) << "mLoadedIncidence->categories() = " << mLoadedIncidence->categories();
-}
-
-void IncidenceCategories::onTagsFetched(KJob *job)
-{
-    if (job->error()) {
-        qCWarning(INCIDENCEEDITOR_LOG) << "Failed to load tags " << job->errorString();
-        return;
-    }
-    auto fetchJob = static_cast<Akonadi::TagFetchJob *>(job);
-    const Akonadi::Tag::List jobTags = fetchJob->tags();
-
-    Q_ASSERT(mLoadedIncidence);
-    mMissingCategories = mLoadedIncidence->categories();
-
-    Akonadi::Tag::List selectedTags;
-    selectedTags.reserve(mMissingCategories.count());
-    for (const auto &tag : jobTags) {
-        if (mMissingCategories.removeAll(tag.name()) > 0) {
-            selectedTags << tag;
-        }
-    }
-
-    createMissingCategories();
-    mUi->mTagWidget->setSelection(selectedTags);
 }
 
 void IncidenceCategories::onMissingTagCreated(KJob *job)

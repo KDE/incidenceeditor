@@ -23,6 +23,7 @@ public:
     explicit IncidenceCategories(Ui::EventOrTodoDesktop *ui);
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void load(const Akonadi::Item &item) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(Akonadi::Item &item) override;
 
@@ -38,7 +39,6 @@ private:
     void createMissingCategories();
 
     void onSelectionChanged(const Akonadi::Tag::List &);
-    void onTagsFetched(KJob *);
     void onMissingTagCreated(KJob *);
 
     Ui::EventOrTodoDesktop *mUi = nullptr;
