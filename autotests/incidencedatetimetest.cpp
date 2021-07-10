@@ -43,9 +43,9 @@ private Q_SLOTS:
         auto endCheck = dialog->findChild<QCheckBox *>(QStringLiteral("mEndCheck"));
         QVERIFY2(endCheck, "Couldn't find the 'End' checkbox.");
         endCheck->setCheckState(Qt::Checked);
-        auto title = dialog->findChild<QLineEdit *>(QStringLiteral("mSummaryEdit"));
-        QVERIFY2(title, "Couldn't find the 'Title' field.");
-        title->setText(QStringLiteral("e"));
+        auto summary = dialog->findChild<QLineEdit *>(QStringLiteral("mSummaryEdit"));
+        QVERIFY2(summary, "Couldn't find the 'Summary' field.");
+        summary->setText(QStringLiteral("e"));
         QVERIFY(editor->isValid());
 
         auto startDate = dialog->findChild<KDateComboBox *>(QStringLiteral("mStartDateEdit"));

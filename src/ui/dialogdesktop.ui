@@ -140,23 +140,17 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
        <property name="toolTip">
-        <string comment="@info:tooltip">Set the title</string>
+        <string comment="@info:tooltip">Set the summary</string>
        </property>
        <property name="whatsThis">
-        <string comment="@info:whatsthis">Sets the Title of this event or to-do.</string>
+        <string comment="@info:whatsthis">Sets brief information that will be displayed in many places in the user interface.</string>
        </property>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="text">
-        <string comment="@label">&amp;Title:</string>
+        <string comment="@label">Summar&amp;y:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -175,10 +169,10 @@
         </sizepolicy>
        </property>
        <property name="toolTip">
-        <string comment="@info:tooltip">Set the title</string>
+        <string comment="@info:tooltip">Set the summary</string>
        </property>
        <property name="whatsThis">
-        <string comment="@info:whatsthis">Sets the Title of this event or to-do.</string>
+        <string comment="@info:whatsthis">Sets brief information that will be displayed in many places in the user interface.</string>
        </property>
        <property name="clearButtonEnabled">
         <bool>true</bool>

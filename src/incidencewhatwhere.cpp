@@ -66,8 +66,8 @@ void IncidenceWhatWhere::focusInvalidField()
 bool IncidenceWhatWhere::isValid() const
 {
     if (mUi->mSummaryEdit->text().isEmpty()) {
-        qCDebug(INCIDENCEEDITOR_LOG) << "Specify a title";
-        mLastErrorString = i18nc("@info", "Please specify a title.");
+        qCDebug(INCIDENCEEDITOR_LOG) << "Specify a summary";
+        mLastErrorString = i18nc("@info", "Please enter a summary.");
         return false;
     } else {
         mLastErrorString.clear();
