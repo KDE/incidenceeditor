@@ -1400,17 +1400,17 @@
              </property>
              <item>
               <property name="text">
-               <string comment="@item:inlistbox Speficies when a recurring events end">never</string>
+               <string comment="@item:inlistbox Specifies when a recurring events end">never</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string comment="@item:inlistbox Speficies when a recurring events end">on</string>
+               <string comment="@item:inlistbox Specifies when a recurring events end">on</string>
               </property>
              </item>
              <item>
               <property name="text">
-               <string comment="@item:inlistbox Speficies when a recurring events end">after</string>
+               <string comment="@item:inlistbox Specifies when a recurring events end">after</string>
               </property>
              </item>
             </widget>

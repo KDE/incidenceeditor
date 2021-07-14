@@ -64,7 +64,7 @@ public Q_SLOTS:
     void declineForMe();
 
 private Q_SLOTS:
-    // cheks if row is a group,  that can/should be expanded
+    // checks if row is a group,  that can/should be expanded
     void checkIfExpansionIsNeeded(const KCalendarCore::Attendee &attendee);
 
     // results of the group search job
