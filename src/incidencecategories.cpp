@@ -39,6 +39,8 @@ void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
 void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_UNUSED(incidence)
+    mDirty = false;
+    mWasDirty = false;
 }
 
 void IncidenceCategories::load(const Akonadi::Item &item)
