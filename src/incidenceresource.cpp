@@ -123,7 +123,8 @@ void IncidenceResource::bookResource()
     if (mUi->mNewResource->text().trimmed().isEmpty()) {
         return;
     }
-    QString name, email;
+    QString name;
+    QString email;
     KEmailAddress::extractEmailAddressAndName(mUi->mNewResource->text(), email, name);
     KCalendarCore::Attendee attendee(name, email);
     attendee.setCuType(KCalendarCore::Attendee::Resource);

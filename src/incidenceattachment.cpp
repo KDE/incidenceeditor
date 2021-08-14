@@ -404,7 +404,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
     }
     QMenu menu;
-    QAction *linkAction = nullptr, *cancelAction = nullptr;
+    QAction *linkAction = nullptr;
+    QAction *cancelAction = nullptr;
     if (probablyWeHaveUris) {
         linkAction = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")), i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects

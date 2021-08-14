@@ -234,7 +234,8 @@ void AttendeeLine::dataFromFields()
 
     KCalendarCore::Attendee oldAttendee(mData->attendee());
 
-    QString email, name;
+    QString email;
+    QString name;
     KEmailAddress::extractEmailAddressAndName(mEdit->text(), email, name);
 
     mData->setName(name);

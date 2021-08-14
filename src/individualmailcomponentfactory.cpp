@@ -37,7 +37,8 @@ void IndividualMessageQueueJob::start()
     const auto cc = addressAttribute().cc();
     QSet<QString> attendeesCc(cc.begin(), cc.end());
 
-    QStringList attendeesAutoTo, attendeesAutoCc;
+    QStringList attendeesAutoTo;
+    QStringList attendeesAutoCc;
     for (const KCalendarCore::Attendee &attendee : std::as_const(mUpdate)) {
         if (attendeesTo.contains(attendee.email())) {
             attendeesAutoTo.append(attendee.fullName());
@@ -50,7 +51,8 @@ void IndividualMessageQueueJob::start()
         startQueueJob(attendeesAutoTo, addressAttribute().to(), attendeesAutoCc, addressAttribute().cc());
     }
 
-    QStringList attendeesComposerTo, attendeesComposerCc;
+    QStringList attendeesComposerTo;
+    QStringList attendeesComposerCc;
     for (const KCalendarCore::Attendee &attendee : std::as_const(mEdit)) {
         if (attendeesTo.contains(attendee.email())) {
             attendeesComposerTo.append(attendee.fullName());

@@ -293,7 +293,8 @@ void IncidenceDefaults::setAttendees(const QStringList &attendees)
     d->mAttendees.clear();
     QStringList::ConstIterator it;
     for (it = attendees.begin(); it != attendees.end(); ++it) {
-        QString name, email;
+        QString name;
+        QString email;
         KContacts::Addressee::parseEmailAddress(*it, name, email);
         d->mAttendees << KCalendarCore::Attendee(name, email, true, KCalendarCore::Attendee::NeedsAction);
     }
