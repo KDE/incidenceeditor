@@ -28,7 +28,7 @@ include(ECMAddTests)
 set(INCIDENCEEDITOR_LIB_VERSION ${PIM_VERSION})
 set(AKONADI_MIMELIB_VERSION "5.18.40")
 set(KDEPIM_LIB_VERSION "5.18.40")
-set(QT_REQUIRED_VERSION "5.15.0")
+set(QT_REQUIRED_VERSION "5.15.2")
 set(KMIME_LIB_VERSION "5.18.40")
 set(KMAILTRANSPORT_LIB_VERSION "5.18.40")
 set(KLDAP_LIB_VERSION "5.18.40")
@@ -81,7 +81,7 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 ########### Targets ###########
 
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055600)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
