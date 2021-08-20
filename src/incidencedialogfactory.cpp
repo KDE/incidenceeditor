@@ -74,6 +74,7 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
                                      flags);
     dialog->selectCollection(defaultCollection);
     dialog->load(item);
+    dialog->setInitiallyDirty(true);
     return dialog;
 }
 
@@ -113,6 +114,7 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
 
     dialog->selectCollection(defaultCollection);
     dialog->load(item);
+    dialog->setInitiallyDirty(true);
 
     return dialog;
 }
