@@ -73,7 +73,7 @@ private:
     AttachmentIconView *mAttachmentView = nullptr;
     Ui::EventOrTodoDesktop *const mUi;
 
-    QMenu *mPopupMenu = nullptr;
+    QMenu *const mPopupMenu;
     QAction *mOpenAction = nullptr;
     QAction *mSaveAsAction = nullptr;
 #ifndef QT_NO_CLIPBOARD

@@ -91,7 +91,7 @@ public:
      * @see setMandatoryRoles
      * @see setAllowedWeekdays
      */
-    KCalendarCore::Period::List availableSlots() const;
+    Q_REQUIRED_RESULT KCalendarCore::Period::List availableSlots() const;
 
     /**
       Finds a free slot in the future which has at least the same size as

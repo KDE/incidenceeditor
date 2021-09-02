@@ -52,7 +52,7 @@ public:
     bool mCleanupTemporaryFiles;
 
     /// Methods
-    KCalendarCore::Person organizerAsPerson() const;
+    Q_REQUIRED_RESULT KCalendarCore::Person organizerAsPerson() const;
     KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
 
     void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;

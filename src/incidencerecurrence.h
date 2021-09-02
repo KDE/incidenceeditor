@@ -108,9 +108,9 @@ private:
     QDate currentDate() const;
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
     QDate mCurrentDate;
-    IncidenceDateTime *mDateTime = nullptr;
+    IncidenceDateTime *const mDateTime;
     KCalendarCore::DateList mExceptionDates;
 
     // So we can easily detect if the user changed the type,

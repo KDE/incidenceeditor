@@ -56,7 +56,7 @@ private:
     QTime mSelectedTime;
     int mDuration; //!< In seconds
 
-    ConflictResolver *mResolver = nullptr;
+    ConflictResolver *const mResolver;
     CalendarSupport::FreePeriodModel *const mPeriodModel;
     VisualFreeBusyWidget *mVisualWidget = nullptr;
 };

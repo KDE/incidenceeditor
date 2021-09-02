@@ -51,7 +51,7 @@ private:
     void slotDateChanged();
 
     void dialogOkPressed();
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 
     /** completer for findResources */
     QCompleter *completer = nullptr;

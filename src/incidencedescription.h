@@ -48,7 +48,7 @@ private:
     void setupToolBar();
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
     //@cond PRIVATE
     Q_DECLARE_PRIVATE(IncidenceDescription)
     IncidenceDescriptionPrivate *const d;
