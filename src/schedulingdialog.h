@@ -26,7 +26,7 @@ class SchedulingDialog : public QDialog, private Ui_Dialog
 {
     Q_OBJECT
 public:
-    explicit SchedulingDialog(const QDate &startDate, const QTime &startTime, int duration, ConflictResolver *resolver, QWidget *parent);
+    explicit SchedulingDialog(QDate startDate, QTime startTime, int duration, ConflictResolver *resolver, QWidget *parent);
     ~SchedulingDialog() override;
 
     Q_REQUIRED_RESULT QDate selectedStartDate() const;

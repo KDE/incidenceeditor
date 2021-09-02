@@ -125,10 +125,10 @@ public Q_SLOTS:
      *
      * These control the timeframe for which conflicts are to be resolved.
      */
-    void setEarliestDate(const QDate &newDate);
-    void setEarliestTime(const QTime &newTime);
-    void setLatestDate(const QDate &newDate);
-    void setLatestTime(const QTime &newTime);
+    void setEarliestDate(QDate newDate);
+    void setEarliestTime(QTime newTime);
+    void setLatestDate(QDate newDate);
+    void setLatestTime(QTime newTime);
 
     void setEarliestDateTime(const QDateTime &newDateTime);
     void setLatestDateTime(const QDateTime &newDateTime);

@@ -80,7 +80,7 @@ bool ConflictResolver::containsAttendee(const KCalendarCore::Attendee &attendee)
     return mFBModel->containsAttendee(attendee);
 }
 
-void ConflictResolver::setEarliestDate(const QDate &newDate)
+void ConflictResolver::setEarliestDate(QDate newDate)
 {
     QDateTime newStart = mTimeframeConstraint.start();
     newStart.setDate(newDate);
@@ -88,7 +88,7 @@ void ConflictResolver::setEarliestDate(const QDate &newDate)
     calculateConflicts();
 }
 
-void ConflictResolver::setEarliestTime(const QTime &newTime)
+void ConflictResolver::setEarliestTime(QTime newTime)
 {
     QDateTime newStart = mTimeframeConstraint.start();
     newStart.setTime(newTime);
@@ -96,7 +96,7 @@ void ConflictResolver::setEarliestTime(const QTime &newTime)
     calculateConflicts();
 }
 
-void ConflictResolver::setLatestDate(const QDate &newDate)
+void ConflictResolver::setLatestDate(QDate newDate)
 {
     QDateTime newEnd = mTimeframeConstraint.end();
     newEnd.setDate(newDate);
@@ -104,7 +104,7 @@ void ConflictResolver::setLatestDate(const QDate &newDate)
     calculateConflicts();
 }
 
-void ConflictResolver::setLatestTime(const QTime &newTime)
+void ConflictResolver::setLatestTime(QTime newTime)
 {
     QDateTime newEnd = mTimeframeConstraint.end();
     newEnd.setTime(newTime);

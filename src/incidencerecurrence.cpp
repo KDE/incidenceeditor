@@ -54,10 +54,11 @@ enum {
     ComboIndexYearlyDay
 };
 
-static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, KCalendarCore::DateList exDates)
+static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, const KCalendarCore::DateList &exDates)
 {
         KCalendarCore::DateTimeList dts;
         QDateTime dt = r->startDateTime();
+        dts.reserve(exDates.count());
         for (const auto &e : exDates) {
             dt.setDate(e);
             dts.append(dt);

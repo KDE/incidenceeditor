@@ -20,7 +20,7 @@
 
 using namespace IncidenceEditorNG;
 
-SchedulingDialog::SchedulingDialog(const QDate &startDate, const QTime &startTime, int duration, ConflictResolver *resolver, QWidget *parent)
+SchedulingDialog::SchedulingDialog(QDate startDate, QTime startTime, int duration, ConflictResolver *resolver, QWidget *parent)
     : QDialog(parent)
     , mResolver(resolver)
     , mPeriodModel(new CalendarSupport::FreePeriodModel(this))

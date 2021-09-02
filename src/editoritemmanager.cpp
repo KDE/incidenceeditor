@@ -72,15 +72,17 @@ ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorI
 
     mChanger = changer ? changer : new Akonadi::IncidenceChanger(new IndividualMailComponentFactory(qq), qq);
 
+    // clang-format off
     qq->connect(mChanger,
-                SIGNAL(modifyFinished(int, Akonadi::Item, Akonadi::IncidenceChanger::ResultCode, QString)),
+                SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
                 qq,
-                SLOT(onModifyFinished(int, Akonadi::Item, Akonadi::IncidenceChanger::ResultCode, QString)));
+                SLOT(onModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
 
     qq->connect(mChanger,
-                SIGNAL(createFinished(int, Akonadi::Item, Akonadi::IncidenceChanger::ResultCode, QString)),
+                SIGNAL(createFinished(int, Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
                 qq,
-                SLOT(onCreateFinished(int, Akonadi::Item, Akonadi::IncidenceChanger::ResultCode, QString)));
+                SLOT(onCreateFinished(int, Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+    // clang-format on
 }
 
 void ItemEditorPrivate::moveJobFinished(KJob *job)
