@@ -30,9 +30,9 @@
 #include <CalendarSupport/Utils>
 
 #include <Akonadi/Calendar/ETMCalendar>
-#include <AkonadiCore/EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/Item>
 #include <CollectionComboBox>
-#include <Item>
 
 #include <KCalUtils/Stringify>
 #include <KCalendarCore/ICalFormat>

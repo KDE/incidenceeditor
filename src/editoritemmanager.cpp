@@ -11,14 +11,14 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <AkonadiCore/TagFetchScope>
-#include <Item>
-#include <ItemDeleteJob>
-#include <ItemFetchJob>
-#include <ItemFetchScope>
-#include <ItemMoveJob>
-#include <Monitor>
-#include <Session>
+#include <Akonadi/Item>
+#include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/ItemMoveJob>
+#include <Akonadi/Monitor>
+#include <Akonadi/Session>
+#include <Akonadi/TagFetchScope>
 
 #include "incidenceeditor_debug.h"
 #include <KJob>

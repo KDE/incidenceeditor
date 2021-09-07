@@ -14,10 +14,10 @@
 
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/TagFetchScope>
 #include <TagAttribute>
 #include <TagCreateJob>
 #include <TagFetchJob>
-#include <TagFetchScope>
 
 using namespace IncidenceEditorNG;
 

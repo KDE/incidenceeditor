@@ -9,7 +9,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 namespace IncidenceEditorNG
 {

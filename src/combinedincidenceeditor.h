@@ -9,7 +9,7 @@
 
 #include "incidenceeditor-ng.h"
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KMessageWidget>
 
 namespace IncidenceEditorNG

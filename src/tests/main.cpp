@@ -9,8 +9,8 @@
 #include "incidencedialog.h"
 #include "korganizereditorconfig.h"
 
+#include <Akonadi/Item>
 #include <CalendarSupport/KCalPrefs>
-#include <Item>
 #include <akonadi/calendar/calendarsettings.h>
 
 #include <KCalendarCore/Event>

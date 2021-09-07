@@ -9,7 +9,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <Collection>
+#include <Akonadi/Collection>
 #include <KCalendarCore/IncidenceBase>
 
 namespace Akonadi

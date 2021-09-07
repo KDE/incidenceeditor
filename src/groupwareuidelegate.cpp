@@ -11,7 +11,7 @@
 #include <CalendarSupport/Utils>
 
 #include "incidenceeditor_debug.h"
-#include <Item>
+#include <Akonadi/Item>
 using namespace IncidenceEditorNG;
 
 void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
