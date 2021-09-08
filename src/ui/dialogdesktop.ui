@@ -1790,7 +1790,7 @@
   <customwidget>
    <class>Akonadi::TagWidget</class>
    <extends>QWidget</extends>
-   <header location="global">AkonadiWidgets/TagWidget</header>
+   <header location="global">Akonadi/TagWidget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
