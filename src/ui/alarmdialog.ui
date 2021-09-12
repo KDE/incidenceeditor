@@ -242,11 +242,6 @@
      </item>
      <item>
       <property name="text">
-       <string>Run application / script</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>Send email</string>
       </property>
      </item>
@@ -341,81 +336,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="ApplicationStack">
-      <layout class="QGridLayout" name="gridLayout_3">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="mApplicationLabel">
-         <property name="text">
-          <string>&amp;Application / Script:</string>
-         </property>
-         <property name="buddy">
-          <cstring>mApplication</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="KUrlRequester" name="mApplication">
-         <property name="toolTip">
-          <string>Specify a file containing the application to run when the reminder triggers</string>
-         </property>
-         <property name="whatsThis">
-          <string>Use the adjacent file browser to help you find the file you want to use when running an application when the reminder triggers.</string>
-         </property>
-         <property name="filter">
-          <string>*|All files</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="mAppArgumentsLabel">
-         <property name="text">
-          <string>Ar&amp;guments:</string>
-         </property>
-         <property name="buddy">
-          <cstring>mAppArguments</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="mAppArguments">
-         <property name="toolTip">
-          <string>Specify arguments to pass to the application when the reminder triggers</string>
-         </property>
-         <property name="whatsThis">
-          <string>Enter the application arguments to use when running an application when the reminder triggers.</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
-        <spacer>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>16</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
      <widget class="QWidget" name="EmailStack">
       <layout class="QGridLayout" name="gridLayout_4">
        <property name="leftMargin">
@@ -502,11 +422,6 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <class>KTextEdit</class>
    <extends>QTextEdit</extends>
    <header>ktextedit.h</header>
-  </customwidget>
-  <customwidget>
-   <class>QComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
   </customwidget>
  </customwidgets>
  <includes>

@@ -115,14 +115,8 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
         mUi->mSoundFile->setUrl(QUrl::fromLocalFile(alarm->audioFile()));
         id = 1;
         break;
-    case KCalendarCore::Alarm::Procedure:
-        mUi->mTypeCombo->setCurrentIndex(2);
-        mUi->mApplication->setUrl(QUrl::fromLocalFile(alarm->programFile()));
-        mUi->mAppArguments->setText(alarm->programArguments());
-        id = 2;
-        break;
     case KCalendarCore::Alarm::Email: {
-        mUi->mTypeCombo->setCurrentIndex(3);
+        mUi->mTypeCombo->setCurrentIndex(2);
         KCalendarCore::Person::List addresses = alarm->mailAddresses();
         QStringList add;
         add.reserve(addresses.count());
@@ -132,9 +126,10 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
         }
         mUi->mEmailAddress->setText(add.join(QLatin1String(", ")));
         mUi->mEmailText->setPlainText(alarm->mailText());
-        id = 3;
+        id = 2;
         break;
     }
+    case KCalendarCore::Alarm::Procedure:
     case KCalendarCore::Alarm::Display:
     case KCalendarCore::Alarm::Invalid:
     default:
@@ -195,9 +190,7 @@ void AlarmDialog::save(const KCalendarCore::Alarm::Ptr &alarm) const
 
     if (mUi->mTypeCombo->currentIndex() == 1) { // Audio
         alarm->setAudioAlarm(mUi->mSoundFile->url().toLocalFile());
-    } else if (mUi->mTypeCombo->currentIndex() == 2) { // Application / script
-        alarm->setProcedureAlarm(mUi->mApplication->url().toLocalFile(), mUi->mAppArguments->text());
-    } else if (mUi->mTypeCombo->currentIndex() == 3) { // Email
+    } else if (mUi->mTypeCombo->currentIndex() == 2) { // Email
         QStringList addresses = KEmailAddress::splitAddressList(mUi->mEmailAddress->text());
         KCalendarCore::Person::List add;
         add.reserve(addresses.count());
