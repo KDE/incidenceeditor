@@ -18,7 +18,6 @@
 #include "conflictresolver.h"
 #include "editorconfig.h"
 #include "incidencedatetime.h"
-#include "kcoreaddons_version.h"
 #include "schedulingdialog.h"
 #include "ui_dialogdesktop.h"
 #include <CalendarSupport/FreeBusyItemModel>
@@ -31,7 +30,6 @@
 #include <KCalUtils/Stringify>
 #include <KEmailAddress>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
@@ -420,18 +418,11 @@ void IncidenceAttendee::insertAddresses(const KContacts::Addressee::List &list)
 void IncidenceAttendee::slotSelectAddresses()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        dialog = factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(mParentWidget);
-#else
     const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin, mParentWidget);
     if (result) {
         dialog = result.plugin;
-#endif
 
     } else {
         dialog = new Akonadi::EmailAddressSelectionDialog(mParentWidget);
