@@ -106,7 +106,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(mUi->mOrganizerCombo, qOverload<const QString &>(&QComboBox::activated),
             this, &IncidenceAttendee::slotOrganizerChanged);
     */
-    connect(mUi->mOrganizerCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceAttendee::checkDirtyStatus);
+    connect(mUi->mOrganizerCombo, &QComboBox::currentIndexChanged, this, &IncidenceAttendee::checkDirtyStatus);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
     connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);

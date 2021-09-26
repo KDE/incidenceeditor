@@ -17,7 +17,7 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
 {
     setObjectName(QStringLiteral("IncidenceSecrecy"));
     mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
-    connect(mUi->mSecrecyCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, &IncidenceSecrecy::checkDirtyStatus);
+    connect(mUi->mSecrecyCombo, &QComboBox::currentIndexChanged, this, &IncidenceSecrecy::checkDirtyStatus);
 }
 
 void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
