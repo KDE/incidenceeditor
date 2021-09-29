@@ -34,8 +34,8 @@ public Q_SLOTS:
 private:
     void rightPressed();
     void leftPressed();
-    QString mToolTip;
-    QString mWhatsThis;
+    const QString mToolTip;
+    const QString mWhatsThis;
     KCompletion::CompletionMode mCompletionMode = KCompletion::CompletionPopup;
 };
 }

@@ -19,11 +19,11 @@ using namespace IncidenceEditorNG;
 
 AttendeeLineEditDelegate::AttendeeLineEditDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
-{
-    mToolTip = i18nc("@info:tooltip", "Enter the name or email address of the attendee.");
-    mWhatsThis = i18nc("@info:whatsthis",
+    , mToolTip(i18nc("@info:tooltip", "Enter the name or email address of the attendee."))
+    , mWhatsThis(i18nc("@info:whatsthis",
                        "The email address or name of the attendee. An invitation "
-                       "can be sent to the user if an email address is provided.");
+                       "can be sent to the user if an email address is provided."))
+{
 }
 
 QWidget *AttendeeLineEditDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
