@@ -98,8 +98,11 @@ QStringList IncidenceCategories::categories() const
 void IncidenceCategories::createMissingCategories()
 {
     for (const QString &category : std::as_const(mMissingCategories)) {
-        Akonadi::Tag missingTag = Akonadi::Tag::genericTag(category);
+        // Either the tag doesn't exist, or Akonadi doesn't have a tag <-> item
+        // relation for this category and instance. Try to create a PLAIN tag.
+        Akonadi::Tag missingTag = Akonadi::Tag(category);
         auto createJob = new Akonadi::TagCreateJob(missingTag, this);
+        createJob->setMergeIfExisting(true);
         connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
     }
 }
@@ -124,10 +127,13 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
     }
     auto createJob = static_cast<Akonadi::TagCreateJob *>(job);
     int count = mMissingCategories.removeAll(createJob->tag().name());
-    Q_ASSERT(count > 0);
 
-    QVector<Akonadi::Tag> selectedTags;
-    selectedTags.reserve(mUi->mTagWidget->selection().count() + 1);
-    selectedTags << mUi->mTagWidget->selection() << createJob->tag();
+    auto selectedTags {mUi->mTagWidget->selection()};
+    selectedTags += createJob->tag();
+
+    // If the created tag was one of the instance's missing categories,
+    // adding it to the widget doesn't make it dirty.
+    mUi->mTagWidget->blockSignals(count > 0);
     mUi->mTagWidget->setSelection(selectedTags);
+    mUi->mTagWidget->blockSignals(false);
 }
