@@ -266,10 +266,8 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
     switch (alarm->type()) {
     case KCalendarCore::Alarm::Procedure:
     case KCalendarCore::Alarm::Display:
-        action = i18nc("Alarm action", "Display a dialog");
-        break;
     case KCalendarCore::Alarm::Email:
-        action = i18nc("Alarm action", "Send an email");
+        action = i18nc("Alarm action", "Display a dialog");
         break;
     case KCalendarCore::Alarm::Audio:
         action = i18nc("Alarm action", "Play an audio file");

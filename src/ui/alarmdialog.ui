@@ -240,11 +240,6 @@
        <string>Play sound file</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string>Send email</string>
-      </property>
-     </item>
     </widget>
    </item>
    <item row="3" column="1">
@@ -336,77 +331,11 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="EmailStack">
-      <layout class="QGridLayout" name="gridLayout_4">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="mEmailToLabel">
-         <property name="text">
-          <string>&amp;To:</string>
-         </property>
-         <property name="buddy">
-          <cstring>mEmailAddress</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="PimCommon::AddresseeLineEdit" name="mEmailAddress">
-         <property name="toolTip">
-          <string>Specify a list of addresses to send email when the reminder triggers.
-If the 'To:' field stays empty the email reminder will be sent to the
-default email configured in Kmail (Settings menu/Configure Kmail/Identities).</string>
-         </property>
-         <property name="whatsThis">
-          <string>Enter a list comma-separated addresses to which an email will be sent when the reminder triggers</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="mEmailTextLabel">
-         <property name="text">
-          <string>&amp;Message:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-         </property>
-         <property name="buddy">
-          <cstring>mEmailText</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="KTextEdit" name="mEmailText">
-         <property name="toolTip">
-          <string>Specify text of an email message to send when the reminder triggers</string>
-         </property>
-         <property name="whatsThis">
-          <string>Enter any text you desire for the email message that will be sent when the alarm triggers.</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
     </widget>
    </item>
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>PimCommon::AddresseeLineEdit</class>
-   <extends>KLineEdit</extends>
-   <header>PimCommonAkonadi/AddresseeLineEdit</header>
-  </customwidget>
   <customwidget>
    <class>KLineEdit</class>
    <extends>QLineEdit</extends>
@@ -424,9 +353,6 @@ default email configured in Kmail (Settings menu/Configure Kmail/Identities).</s
    <header>ktextedit.h</header>
   </customwidget>
  </customwidgets>
- <includes>
-  <include location="global">PimCommonAkonadi/AddresseeLineEdit</include>
- </includes>
  <resources/>
  <connections>
   <connection>

@@ -115,20 +115,7 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
         mUi->mSoundFile->setUrl(QUrl::fromLocalFile(alarm->audioFile()));
         id = 1;
         break;
-    case KCalendarCore::Alarm::Email: {
-        mUi->mTypeCombo->setCurrentIndex(2);
-        KCalendarCore::Person::List addresses = alarm->mailAddresses();
-        QStringList add;
-        add.reserve(addresses.count());
-        const KCalendarCore::Person::List::ConstIterator end(addresses.constEnd());
-        for (KCalendarCore::Person::List::ConstIterator it = addresses.constBegin(); it != end; ++it) {
-            add << (*it).fullName();
-        }
-        mUi->mEmailAddress->setText(add.join(QLatin1String(", ")));
-        mUi->mEmailText->setPlainText(alarm->mailText());
-        id = 2;
-        break;
-    }
+    case KCalendarCore::Alarm::Email:
     case KCalendarCore::Alarm::Procedure:
     case KCalendarCore::Alarm::Display:
     case KCalendarCore::Alarm::Invalid:
@@ -190,15 +177,6 @@ void AlarmDialog::save(const KCalendarCore::Alarm::Ptr &alarm) const
 
     if (mUi->mTypeCombo->currentIndex() == 1) { // Audio
         alarm->setAudioAlarm(mUi->mSoundFile->url().toLocalFile());
-    } else if (mUi->mTypeCombo->currentIndex() == 2) { // Email
-        QStringList addresses = KEmailAddress::splitAddressList(mUi->mEmailAddress->text());
-        KCalendarCore::Person::List add;
-        add.reserve(addresses.count());
-        for (QStringList::Iterator it = addresses.begin(), end = addresses.end(); it != end; ++it) {
-            add << KCalendarCore::Person::fromFullName(*it);
-        }
-        // TODO: Add a subject line and possibilities for attachments
-        alarm->setEmailAlarm(QString(), mUi->mEmailText->toPlainText(), add);
     } else { // Display
         alarm->setDisplayAlarm(mUi->mDisplayText->toPlainText());
     }
