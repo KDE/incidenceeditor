@@ -670,7 +670,6 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *pa
 IncidenceDialog::~IncidenceDialog()
 {
     writeConfig();
-    delete d_ptr;
 }
 
 void IncidenceDialog::writeConfig()

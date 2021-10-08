@@ -42,10 +42,7 @@ IncidenceDescription::IncidenceDescription(Ui::EventOrTodoDesktop *ui)
     connect(mUi->mDescriptionEdit->richTextComposer(), &KPIMTextEdit::RichTextComposer::textChanged, this, &IncidenceDescription::checkDirtyStatus);
 }
 
-IncidenceDescription::~IncidenceDescription()
-{
-    delete d;
-}
+IncidenceDescription::~IncidenceDescription() = default;
 
 void IncidenceDescription::load(const KCalendarCore::Incidence::Ptr &incidence)
 {

@@ -9,6 +9,8 @@
 
 #include "incidenceeditor-ng.h"
 
+#include <memory>
+
 namespace Ui
 {
 class EventOrTodoDesktop;
@@ -51,7 +53,7 @@ private:
     Ui::EventOrTodoDesktop *const mUi;
     //@cond PRIVATE
     Q_DECLARE_PRIVATE(IncidenceDescription)
-    IncidenceDescriptionPrivate *const d;
+    std::unique_ptr<IncidenceDescriptionPrivate> const d;
     //@endcond
 };
 }

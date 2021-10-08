@@ -11,6 +11,8 @@
 #include <Akonadi/Collection>
 #include <QObject>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Item;
@@ -88,7 +90,7 @@ Q_SIGNALS:
     void revertFailed(const QString &message);
 
 private:
-    ItemEditorPrivate *const d_ptr;
+    std::unique_ptr<ItemEditorPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(ItemEditor)
     Q_DISABLE_COPY(EditorItemManager)
 

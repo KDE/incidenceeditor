@@ -31,10 +31,7 @@ EditorConfig::EditorConfig()
 {
 }
 
-EditorConfig::~EditorConfig()
-{
-    delete d;
-}
+EditorConfig::~EditorConfig() = default;
 
 EditorConfig *EditorConfig::instance()
 {

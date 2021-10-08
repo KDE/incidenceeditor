@@ -9,6 +9,8 @@
 
 #include "incidenceeditor-ng.h"
 
+#include <memory>
+
 namespace Ui
 {
 class EventOrTodoDesktop;
@@ -32,7 +34,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

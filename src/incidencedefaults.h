@@ -11,6 +11,8 @@
 
 #include <KCalendarCore/Incidence>
 
+#include <memory>
+
 namespace IncidenceEditorNG
 {
 class IncidenceDefaultsPrivate;
@@ -101,7 +103,7 @@ public:
     Q_REQUIRED_RESULT static QString invalidEmailAddress();
 
 private:
-    IncidenceDefaultsPrivate *const d_ptr;
+    std::unique_ptr<IncidenceDefaultsPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(IncidenceDefaults)
 };
 }

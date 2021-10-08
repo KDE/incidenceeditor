@@ -254,10 +254,7 @@ EditorItemManager::EditorItemManager(ItemEditorUi *ui, Akonadi::IncidenceChanger
     d->mItemUi = ui;
 }
 
-EditorItemManager::~EditorItemManager()
-{
-    delete d_ptr;
-}
+EditorItemManager::~EditorItemManager() = default;
 
 Akonadi::Item EditorItemManager::item(ItemState state) const
 {

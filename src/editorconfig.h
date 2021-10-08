@@ -15,6 +15,8 @@
 #include <QDateTime>
 #include <QStringList>
 
+#include <memory>
+
 class KConfigSkeleton;
 
 namespace IncidenceEditorNG
@@ -102,7 +104,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 }
 

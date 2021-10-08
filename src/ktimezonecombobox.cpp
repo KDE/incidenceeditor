@@ -55,10 +55,7 @@ KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
     d->fillComboBox();
 }
 
-KTimeZoneComboBox::~KTimeZoneComboBox()
-{
-    delete d;
-}
+KTimeZoneComboBox::~KTimeZoneComboBox() = default;
 
 void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
 {

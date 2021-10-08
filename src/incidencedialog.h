@@ -13,6 +13,8 @@
 #include <QDate>
 #include <QDialog>
 
+#include <memory>
+
 class QAbstractButton;
 
 namespace Akonadi
@@ -88,7 +90,7 @@ protected Q_SLOTS:
     void reject() override;
 
 private:
-    IncidenceDialogPrivate *const d_ptr;
+    std::unique_ptr<IncidenceDialogPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(IncidenceDialog)
     Q_DISABLE_COPY(IncidenceDialog)
 

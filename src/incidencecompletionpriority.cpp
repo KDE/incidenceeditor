@@ -62,10 +62,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     connect(d->mUi->mPriorityCombo, &QComboBox::currentIndexChanged, this, &IncidenceCompletionPriority::checkDirtyStatus);
 }
 
-IncidenceCompletionPriority::~IncidenceCompletionPriority()
-{
-    delete d;
-}
+IncidenceCompletionPriority::~IncidenceCompletionPriority() = default;
 
 void IncidenceCompletionPriority::load(const KCalendarCore::Incidence::Ptr &incidence)
 {

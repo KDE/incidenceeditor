@@ -215,10 +215,7 @@ IncidenceDefaults::IncidenceDefaults(const IncidenceDefaults &other)
     *d_ptr = *other.d_ptr;
 }
 
-IncidenceDefaults::~IncidenceDefaults()
-{
-    delete d_ptr;
-}
+IncidenceDefaults::~IncidenceDefaults() = default;
 
 IncidenceDefaults &IncidenceDefaults::operator=(const IncidenceDefaults &other)
 {
