@@ -12,12 +12,12 @@
 
 using namespace IncidenceEditorNG;
 
-class IncidenceCompletionPriority::Private
+class IncidenceEditorNG::IncidenceCompletionPriorityPrivate
 {
     IncidenceCompletionPriority *const q;
 
 public:
-    explicit Private(IncidenceCompletionPriority *parent)
+    explicit IncidenceCompletionPriorityPrivate(IncidenceCompletionPriority *parent)
         : q(parent)
     {
     }
@@ -30,7 +30,7 @@ public: // slots
     void sliderValueChanged(int);
 };
 
-void IncidenceCompletionPriority::Private::sliderValueChanged(int value)
+void IncidenceCompletionPriorityPrivate::sliderValueChanged(int value)
 {
     if (q->sender() == mUi->mCompletionSlider) {
         mOrigPercentCompleted = -1;
@@ -42,7 +42,7 @@ void IncidenceCompletionPriority::Private::sliderValueChanged(int value)
 
 IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor()
-    , d(new Private(this))
+    , d(new IncidenceCompletionPriorityPrivate(this))
 {
     Q_ASSERT(ui != nullptr);
     setObjectName(QStringLiteral("IncidenceCompletionPriority"));

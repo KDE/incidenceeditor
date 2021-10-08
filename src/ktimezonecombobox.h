@@ -16,6 +16,8 @@
 
 namespace IncidenceEditorNG
 {
+class KTimeZoneComboBoxPrivate;
+
 /**
  * A combobox that shows the system timezones available in QTimeZone
  * and provides methods to easily select the item corresponding to a given
@@ -63,8 +65,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<KTimeZoneComboBoxPrivate> const d;
     //@endcond
 };
 }

@@ -11,7 +11,7 @@
 
 using namespace IncidenceEditorNG;
 
-class EditorConfig::Private
+class IncidenceEditorNG::EditorConfigPrivate
 {
 public:
     static EditorConfig *config;
@@ -24,10 +24,10 @@ public:
     QHash<KCalendarCore::IncidenceBase::IncidenceType, QStringList> mTemplates;
 };
 
-EditorConfig *EditorConfig::Private::config = nullptr;
+EditorConfig *EditorConfigPrivate::config = nullptr;
 
 EditorConfig::EditorConfig()
-    : d(new Private)
+    : d(new EditorConfigPrivate)
 {
 }
 
@@ -35,49 +35,49 @@ EditorConfig::~EditorConfig() = default;
 
 EditorConfig *EditorConfig::instance()
 {
-    if (!Private::config) {
+    if (!EditorConfigPrivate::config) {
         // No one called setEditorConfig(), so we default to a KorganizerEditorConfig.
         EditorConfig::setEditorConfig(new IncidenceEditorNG::KOrganizerEditorConfig);
     }
 
-    return Private::config;
+    return EditorConfigPrivate::config;
 }
 
 void EditorConfig::setEditorConfig(EditorConfig *config)
 {
-    delete Private::config;
-    Private::config = config;
-    qAddPostRoutine(Private::cleanup_config);
+    delete EditorConfigPrivate::config;
+    EditorConfigPrivate::config = config;
+    qAddPostRoutine(EditorConfigPrivate::cleanup_config);
 }
 
 QString EditorConfig::fullName() const
 {
-    if (Private::config != this) {
-        return Private::config->fullName();
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->fullName();
     }
     return QString();
 }
 
 QString EditorConfig::email() const
 {
-    if (Private::config != this) {
-        return Private::config->email();
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->email();
     }
     return QString();
 }
 
 bool EditorConfig::thatIsMe(const QString &mail) const
 {
-    if (Private::config != this) {
-        return Private::config->thatIsMe(mail);
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->thatIsMe(mail);
     }
     return false;
 }
 
 QStringList EditorConfig::allEmails() const
 {
-    if (Private::config != this) {
-        return Private::config->allEmails();
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->allEmails();
     }
 
     QStringList mails;
@@ -90,16 +90,16 @@ QStringList EditorConfig::allEmails() const
 
 QStringList EditorConfig::fullEmails() const
 {
-    if (Private::config != this) {
-        return Private::config->fullEmails();
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->fullEmails();
     }
     return QStringList();
 }
 
 bool EditorConfig::showTimeZoneSelectorInIncidenceEditor() const
 {
-    if (Private::config != this) {
-        return Private::config->showTimeZoneSelectorInIncidenceEditor();
+    if (EditorConfigPrivate::config != this) {
+        return EditorConfigPrivate::config->showTimeZoneSelectorInIncidenceEditor();
     }
     return true;
 }

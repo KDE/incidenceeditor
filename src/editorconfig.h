@@ -21,6 +21,8 @@ class KConfigSkeleton;
 
 namespace IncidenceEditorNG
 {
+class EditorConfigPrivate;
+
 /**
  * Configuration details. An application can inherit from this class
  * to provide application specific configurations to the editor.
@@ -103,8 +105,7 @@ public:
     Q_REQUIRED_RESULT virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<EditorConfigPrivate> const d;
 };
 }
 

@@ -13,10 +13,10 @@
 
 using namespace IncidenceEditorNG;
 
-class Q_DECL_HIDDEN KTimeZoneComboBox::Private
+class IncidenceEditorNG::KTimeZoneComboBoxPrivate
 {
 public:
-    Private(KTimeZoneComboBox *parent)
+    KTimeZoneComboBoxPrivate(KTimeZoneComboBox *parent)
         : mParent(parent)
     {
     }
@@ -26,7 +26,7 @@ public:
     QVector<QByteArray> mZones;
 };
 
-void KTimeZoneComboBox::Private::fillComboBox()
+void KTimeZoneComboBoxPrivate::fillComboBox()
 {
     mParent->clear();
     mZones.clear();
@@ -50,7 +50,7 @@ void KTimeZoneComboBox::Private::fillComboBox()
 
 KTimeZoneComboBox::KTimeZoneComboBox(QWidget *parent)
     : QComboBox(parent)
-    , d(new KTimeZoneComboBox::Private(this))
+    , d(new KTimeZoneComboBoxPrivate(this))
 {
     d->fillComboBox();
 }

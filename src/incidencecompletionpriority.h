@@ -18,6 +18,8 @@ class EventOrTodoDesktop;
 
 namespace IncidenceEditorNG
 {
+class IncidenceCompletionPriorityPrivate;
+
 class IncidenceCompletionPriority : public IncidenceEditor
 {
     Q_OBJECT
@@ -33,8 +35,8 @@ public:
     bool isDirty() const override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class IncidenceCompletionPriorityPrivate;
+    std::unique_ptr<IncidenceCompletionPriorityPrivate> const d;
 };
 }
 
