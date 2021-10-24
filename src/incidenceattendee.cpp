@@ -36,6 +36,7 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QTreeView>
+#include <kcontacts_version.h>
 
 using namespace IncidenceEditorNG;
 
@@ -448,7 +449,11 @@ void IncidenceAttendee::slotSelectAddresses()
             } else {
                 KContacts::Addressee contact;
                 contact.setName(selection.name());
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
                 contact.insertEmail(selection.email());
+#else
+                contact.addEmail(KContacts::Email(selection.email()));
+#endif
 
                 if (selection.item().hasPayload<KContacts::Addressee>()) {
                     contact.setUid(selection.item().payload<KContacts::Addressee>().uid());
