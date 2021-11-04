@@ -60,6 +60,54 @@ target_sources(KF5IncidenceEditor PRIVATE
   resourceitem.cpp
   resourcemodel.cpp
   kweekdaycheckcombo.cpp
+
+  attendeeeditor.h
+  editorconfig.h
+  alarmpresets.h
+  individualmaildialog.h
+  attachmenteditdialog.h
+  incidencecompletionpriority.h
+  incidencewhatwhere.h
+  visualfreebusywidget.h
+  attachmenticonview.h
+  incidenceeditor_private_export.h
+  resourcemanagement.h
+  ldaputils.h
+  resourcemodel.h
+  incidencealarm.h
+  incidencedefaults.h
+  freebusyganttproxymodel.h
+  incidenceattendee.h
+  korganizereditorconfig.h
+  freebusyurldialog.h
+  ktimezonecombobox.h
+  incidencedescription.h
+  conflictresolver.h
+  editoritemmanager.h
+  alarmdialog.h
+  incidencesecrecy.h
+  combinedincidenceeditor.h
+  incidencedatetime.h
+  groupwareuidelegate.h
+  incidencerecurrence.h
+  attendeetablemodel.h
+  incidenceresource.h
+  individualmailcomponentfactory.h
+  opencomposerjob.h
+  schedulingdialog.h
+  incidencedialog.h
+  attendeecomboboxdelegate.h
+  incidencedialogfactory.h
+  templatemanagementdialog.h
+  incidenceeditor-ng.h
+  incidencecategories.h
+  attendeedata.h
+  resourceitem.h
+  kweekdaycheckcombo.h
+  incidenceattachment.h
+  attendeelineeditdelegate.h
+  incidenceeditorsettings.h
+  attendeeline.h
 )
 
 ecm_qt_declare_logging_category(KF5IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
