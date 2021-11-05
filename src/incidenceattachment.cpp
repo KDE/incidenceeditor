@@ -190,8 +190,8 @@ void IncidenceAttachment::removeSelectedAttachments()
     if (KMessageBox::questionYesNo(nullptr,
                                    xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
                                    i18nc("@title:window", "Remove Attachments?"),
-                                   KStandardGuiItem::yes(),
-                                   KStandardGuiItem::no(),
+                                   KStandardGuiItem::remove(),
+                                   KStandardGuiItem::cancel(),
                                    QStringLiteral("calendarRemoveAttachments"))
         != KMessageBox::Yes) {
         return;

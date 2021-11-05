@@ -429,7 +429,12 @@ void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction, c
                                       "Unable to store the incidence in the calendar. Try again?\n\n "
                                       "Reason: %1",
                                       errorMessage);
-        retry = (KMessageBox::warningYesNo(q, message) == KMessageBox::Yes);
+        const int answer = KMessageBox::warningYesNo(q,
+                                                     message,
+                                                     QString(),
+                                                     KGuiItem(i18nc("@action:button", "Retry"), QStringLiteral("dialog-ok")),
+                                                     KStandardGuiItem::cancel());
+        retry = (answer == KMessageBox::Yes);
     }
 
     if (retry) {
@@ -455,13 +460,13 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
                                        "<para>Would you like to set your default events calendar to "
                                        "<resource>%1</resource>?</para>",
                                        collectionName);
-        if (KMessageBox::questionYesNo(q,
-                                       message,
-                                       i18nc("@title:window", "Set Default Calendar?"),
-                                       KStandardGuiItem::yes(), // Make collectionName My Default Calendar
-                                       KStandardGuiItem::no(), // Do Not Set a Default Calendar at this Time"
-                                       QStringLiteral("setDefaultCalendarCollection"))
-            == KMessageBox::Yes) {
+        const int answer = KMessageBox::questionYesNo(q,
+                                                      message,
+                                                      i18nc("@title:window", "Set Default Calendar?"),
+                                                      KGuiItem(i18nc("@action:button", "Set As Default"), QStringLiteral("dialog-ok")),
+                                                      KGuiItem(i18nc("@action:button", "Do Not Set"), QStringLiteral("dialog-cancel")),
+                                                      QStringLiteral("setDefaultCalendarCollection"));
+        if (answer == KMessageBox::Yes) {
             CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
         }
     }
@@ -745,7 +750,11 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
         d->mItemManager->save();
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::Cancel) == button) {
         if (d->isDirty()
-            && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+            && KMessageBox::questionYesNo(this,
+                                          i18nc("@info", "Do you really want to cancel?"),
+                                          i18nc("@title:window", "KOrganizer Confirmation"),
+                                          KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                          KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
                 == KMessageBox::Yes) {
             QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
@@ -762,7 +771,11 @@ void IncidenceDialog::reject()
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
-        && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+        && KMessageBox::questionYesNo(this,
+                                      i18nc("@info", "Do you really want to cancel?"),
+                                      i18nc("@title:window", "KOrganizer Confirmation"),
+                                      KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                      KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
             == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
     } else if (!d->isDirty()) {
@@ -774,7 +787,11 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
-        && KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "KOrganizer Confirmation"))
+        && KMessageBox::questionYesNo(this,
+                                      i18nc("@info", "Do you really want to cancel?"),
+                                      i18nc("@title:window", "KOrganizer Confirmation"),
+                                      KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                      KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
             == KMessageBox::Yes) {
         QDialog::reject(); // Discard current changes
         QDialog::closeEvent(event);

@@ -207,7 +207,9 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
                                                 "%1 does not look like a valid email address. "
                                                 "Are you sure you want to invite this participant?",
                                                 attendee.email()),
-                                          i18nc("@title:window", "Invalid Email Address"))
+                                          i18nc("@title:window", "Invalid Email Address"),
+                                          KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
+                                          KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
                 != KMessageBox::Yes) {
                 skip = true;
             }
@@ -782,7 +784,10 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
                                             i18nc("@option",
                                                   "You are changing the organizer of this event. "
                                                   "Since the organizer is also attending this event, would you "
-                                                  "like to change the corresponding attendee as well?"));
+                                                  "like to change the corresponding attendee as well?"),
+                                            QString(),
+                                            KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
+                                            KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
     } else {
         answer = KMessageBox::Yes;
     }
