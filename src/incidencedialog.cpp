@@ -93,15 +93,15 @@ public:
     void setCalendarCollection(const Akonadi::Collection &collection);
 
     /// ItemEditorUi methods
-    bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const override;
+    Q_REQUIRED_RESULT bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const override;
     void handleItemSaveFinish(EditorItemManager::SaveAction);
     void handleItemSaveFail(EditorItemManager::SaveAction, const QString &errorMessage);
-    bool hasSupportedPayload(const Akonadi::Item &item) const override;
-    bool isDirty() const override;
-    bool isValid() const override;
+    Q_REQUIRED_RESULT bool hasSupportedPayload(const Akonadi::Item &item) const override;
+    Q_REQUIRED_RESULT bool isDirty() const override;
+    Q_REQUIRED_RESULT bool isValid() const override;
     void load(const Akonadi::Item &item) override;
     Akonadi::Item save(const Akonadi::Item &item) override;
-    Akonadi::Collection selectedCollection() const override;
+    Q_REQUIRED_RESULT Akonadi::Collection selectedCollection() const override;
 
     void reject(RejectReason reason, const QString &errorMessage = QString()) override;
 };

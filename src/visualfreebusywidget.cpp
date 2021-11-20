@@ -48,42 +48,42 @@ public:
         m_model = model;
     }
 
-    int headerHeight() const override
+    Q_REQUIRED_RESULT int headerHeight() const override
     {
         return 2 * mRowHeight + 10;
     }
 
-    bool isRowVisible(const QModelIndex &) const override
+    Q_REQUIRED_RESULT bool isRowVisible(const QModelIndex &) const override
     {
         return true;
     }
 
-    bool isRowExpanded(const QModelIndex &) const override
+    Q_REQUIRED_RESULT bool isRowExpanded(const QModelIndex &) const override
     {
         return false;
     }
 
-    KGantt::Span rowGeometry(const QModelIndex &idx) const override
+    Q_REQUIRED_RESULT KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
         return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
 
-    int maximumItemHeight() const override
+    Q_REQUIRED_RESULT int maximumItemHeight() const override
     {
         return mRowHeight / 2;
     }
 
-    int totalHeight() const override
+    Q_REQUIRED_RESULT int totalHeight() const override
     {
         return m_model->rowCount() * mRowHeight;
     }
 
-    QModelIndex indexAt(int height) const override
+    Q_REQUIRED_RESULT QModelIndex indexAt(int height) const override
     {
         return m_model->index(height / mRowHeight, 0);
     }
 
-    QModelIndex indexBelow(const QModelIndex &idx) const override
+    Q_REQUIRED_RESULT QModelIndex indexBelow(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -91,7 +91,7 @@ public:
         return idx.model()->index(idx.row() + 1, idx.column(), idx.parent());
     }
 
-    QModelIndex indexAbove(const QModelIndex &idx) const override
+    Q_REQUIRED_RESULT QModelIndex indexAbove(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -116,7 +116,7 @@ public:
     {
     }
 
-    QSize sizeHint() const override
+    Q_REQUIRED_RESULT QSize sizeHint() const override
     {
         QSize s = QHeaderView::sizeHint();
         s.rheight() *= 2;

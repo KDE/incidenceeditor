@@ -53,7 +53,7 @@ public:
 
     /// Methods
     Q_REQUIRED_RESULT KCalendarCore::Person organizerAsPerson() const;
-    KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
+    Q_REQUIRED_RESULT KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
 
     void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;
     void eventDefaults(const KCalendarCore::Event::Ptr &event) const;

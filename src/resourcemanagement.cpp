@@ -40,23 +40,23 @@ public:
     {
     }
 
-    bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override
+    Q_REQUIRED_RESULT bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         return isValid(incidence->uid());
     }
 
-    bool isValid(const QString &incidenceIdentifier) const override
+    Q_REQUIRED_RESULT bool isValid(const QString &incidenceIdentifier) const override
     {
         return incidenceIdentifier.startsWith(QLatin1String("fb-"));
     }
 
-    QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
+    Q_REQUIRED_RESULT QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence)
         return QStringLiteral("Freebusy");
     }
 
-    QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
+    Q_REQUIRED_RESULT QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         bool ok = false;
         int status = incidence->customProperty(QStringLiteral("FREEBUSY").toLatin1(), QStringLiteral("STATUS").toLatin1()).toInt(&ok);
@@ -78,13 +78,13 @@ public:
         }
     }
 
-    QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
+    Q_REQUIRED_RESULT QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence)
         return QString();
     }
 
-    KCalendarCore::Calendar::Ptr getCalendar() const override
+    Q_REQUIRED_RESULT KCalendarCore::Calendar::Ptr getCalendar() const override
     {
         return mCalendar;
     }
