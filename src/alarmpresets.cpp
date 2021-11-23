@@ -149,7 +149,7 @@ QStringList availablePresets(AlarmPresets::When when)
     case AlarmPresets::BeforeEnd:
         return *sBeforeEndPresetNames;
     }
-    return QStringList();
+    return {};
 }
 
 KCalendarCore::Alarm::Ptr preset(When when, const QString &name)
@@ -172,7 +172,7 @@ KCalendarCore::Alarm::Ptr preset(When when, const QString &name)
 
         return KCalendarCore::Alarm::Ptr(new KCalendarCore::Alarm(*sBeforeEndPresets->at(sBeforeEndPresetNames->indexOf(name))));
     }
-    return KCalendarCore::Alarm::Ptr();
+    return {};
 }
 
 KCalendarCore::Alarm::Ptr defaultAlarm(When when)
@@ -185,7 +185,7 @@ KCalendarCore::Alarm::Ptr defaultAlarm(When when)
     case AlarmPresets::BeforeEnd:
         return Alarm::Ptr(new Alarm(*sBeforeEndPresets->at(sDefaultPresetIndex)));
     }
-    return Alarm::Ptr();
+    return {};
 }
 
 int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm)

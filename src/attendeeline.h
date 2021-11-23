@@ -76,9 +76,7 @@ public:
     enum AttendeeActions { EventActions, TodoActions };
 
     explicit AttendeeLine(QWidget *parent);
-    ~AttendeeLine() override
-    {
-    }
+    ~AttendeeLine() override = default;
 
     void activate() override;
     bool isActive() const override;

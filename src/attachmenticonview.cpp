@@ -46,9 +46,7 @@ AttachmentIconItem::AttachmentIconItem(const KCalendarCore::Attachment &att, QLi
     setFlags(flags() | Qt::ItemIsDragEnabled);
 }
 
-AttachmentIconItem::~AttachmentIconItem()
-{
-}
+AttachmentIconItem::~AttachmentIconItem() = default;
 
 KCalendarCore::Attachment AttachmentIconItem::attachment() const
 {

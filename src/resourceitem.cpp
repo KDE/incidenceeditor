@@ -35,9 +35,7 @@ ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, co
     }
 }
 
-ResourceItem::~ResourceItem()
-{
-}
+ResourceItem::~ResourceItem() = default;
 
 ResourceItem::Ptr ResourceItem::child(int number)
 {
@@ -79,7 +77,7 @@ QVariant ResourceItem::data(const QString &column) const
     if (!mLdapObject.attributes()[column].isEmpty()) {
         return QString::fromUtf8(mLdapObject.attributes()[column][0]);
     }
-    return QVariant();
+    return {};
 }
 
 bool ResourceItem::insertChild(int position, const ResourceItem::Ptr &item)

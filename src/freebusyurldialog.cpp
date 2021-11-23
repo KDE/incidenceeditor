@@ -70,9 +70,7 @@ FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget 
     topLayout->addWidget(mUrlEdit);
 }
 
-FreeBusyUrlWidget::~FreeBusyUrlWidget()
-{
-}
+FreeBusyUrlWidget::~FreeBusyUrlWidget() = default;
 
 static QString freeBusyUrlStore()
 {

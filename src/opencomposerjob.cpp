@@ -28,9 +28,7 @@ OpenComposerJob::OpenComposerJob(QObject *parent,
 {
 }
 
-OpenComposerJob::~OpenComposerJob()
-{
-}
+OpenComposerJob::~OpenComposerJob() = default;
 
 void OpenComposerJob::start()
 {

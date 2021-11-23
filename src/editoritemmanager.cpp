@@ -279,7 +279,7 @@ Akonadi::Item EditorItemManager::item(ItemState state) const
     }
     qCDebug(INCIDENCEEDITOR_LOG) << "state = " << state;
     Q_ASSERT_X(false, "EditorItemManager::item", "Unknown enum value");
-    return Akonadi::Item();
+    return {};
 }
 
 void EditorItemManager::load(const Akonadi::Item &item)
@@ -348,9 +348,7 @@ void EditorItemManager::setIsCounterProposal(bool isCounterProposal)
     d->mIsCounterProposal = isCounterProposal;
 }
 
-ItemEditorUi::~ItemEditorUi()
-{
-}
+ItemEditorUi::~ItemEditorUi() = default;
 
 bool ItemEditorUi::isValid() const
 {

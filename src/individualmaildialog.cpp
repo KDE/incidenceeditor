@@ -36,7 +36,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
         options->addItem(i18nc("@item:inlistbox ITIP Messages for one attendee", "Edit mail"), QVariant(Edit));
         options->setWhatsThis(i18nc("@info:whatsthis", "Options for this particular attendee."));
         options->setToolTip(i18nc("@info:tooltip", "Choose an option for this attendee."));
-        mAttendeeDecision.push_back(std::make_pair(attendee, options));
+        mAttendeeDecision.emplace_back(attendee, options);
 
         layout->addWidget(new QLabel(attendee.fullName()), row, 0);
         layout->addWidget(options, row, 1);
@@ -78,9 +78,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
     topLayout->addWidget(m_buttons);
 }
 
-IndividualMailDialog::~IndividualMailDialog()
-{
-}
+IndividualMailDialog::~IndividualMailDialog() = default;
 
 KCalendarCore::Attendee::List IndividualMailDialog::editAttendees() const
 {

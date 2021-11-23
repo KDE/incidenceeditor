@@ -90,9 +90,7 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
     connect(mUi->mEndCheck, &QCheckBox::toggled, this, &IncidenceDateTime::updateEndToolTips);
 }
 
-IncidenceDateTime::~IncidenceDateTime()
-{
-}
+IncidenceDateTime::~IncidenceDateTime() = default;
 
 bool IncidenceDateTime::eventFilter(QObject *obj, QEvent *event)
 {

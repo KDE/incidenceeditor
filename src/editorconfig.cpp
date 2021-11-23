@@ -55,7 +55,7 @@ QString EditorConfig::fullName() const
     if (EditorConfigPrivate::config != this) {
         return EditorConfigPrivate::config->fullName();
     }
-    return QString();
+    return {};
 }
 
 QString EditorConfig::email() const
@@ -63,7 +63,7 @@ QString EditorConfig::email() const
     if (EditorConfigPrivate::config != this) {
         return EditorConfigPrivate::config->email();
     }
-    return QString();
+    return {};
 }
 
 bool EditorConfig::thatIsMe(const QString &mail) const
@@ -93,7 +93,7 @@ QStringList EditorConfig::fullEmails() const
     if (EditorConfigPrivate::config != this) {
         return EditorConfigPrivate::config->fullEmails();
     }
-    return QStringList();
+    return {};
 }
 
 bool EditorConfig::showTimeZoneSelectorInIncidenceEditor() const

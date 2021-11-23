@@ -15,9 +15,7 @@ KOrganizerEditorConfig::KOrganizerEditorConfig()
 {
 }
 
-KOrganizerEditorConfig::~KOrganizerEditorConfig()
-{
-}
+KOrganizerEditorConfig::~KOrganizerEditorConfig() = default;
 
 KConfigSkeleton *KOrganizerEditorConfig::config() const
 {

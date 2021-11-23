@@ -42,11 +42,11 @@ Qt::ItemFlags AttendeeTableModel::flags(const QModelIndex &index) const
 QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() >= mAttendeeList.size()) {
-        return QVariant();
+        return {};
     }
 
     const KCalendarCore::Attendee attendee = mAttendeeList[index.row()];
@@ -90,7 +90,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
     if (role == AttendeeRole) {
         return QVariant::fromValue(attendee);
     }
-    return QVariant();
+    return {};
 }
 
 bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -142,7 +142,7 @@ bool AttendeeTableModel::setData(const QModelIndex &index, const QVariant &value
 QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (role != Qt::DisplayRole) {
-        return QVariant();
+        return {};
     }
 
     if (orientation == Qt::Horizontal) {
@@ -166,7 +166,7 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &parent)

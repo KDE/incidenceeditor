@@ -25,7 +25,7 @@ FreeBusyGanttProxyModel::FreeBusyGanttProxyModel(QObject *parent)
 QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
     QModelIndex source_index = mapToSource(index);
 
@@ -37,7 +37,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
         case Qt::DisplayRole:
             return source_index.data(Qt::DisplayRole);
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -58,7 +58,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return sourceModel()->data(source_index.parent(), Qt::DisplayRole);
     default:
-        return QVariant();
+        return {};
     }
 }
 

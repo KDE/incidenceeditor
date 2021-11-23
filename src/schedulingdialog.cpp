@@ -78,9 +78,7 @@ SchedulingDialog::SchedulingDialog(QDate startDate, QTime startTime, int duratio
     mMoveApptGroupBox->hide();
 }
 
-SchedulingDialog::~SchedulingDialog()
-{
-}
+SchedulingDialog::~SchedulingDialog() = default;
 
 void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTime, const QDateTime &endDateTime)
 {

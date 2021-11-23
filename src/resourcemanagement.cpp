@@ -36,9 +36,7 @@ using namespace IncidenceEditorNG;
 class FreebusyViewCalendar : public EventViews::ViewCalendar
 {
 public:
-    ~FreebusyViewCalendar() override
-    {
-    }
+    ~FreebusyViewCalendar() override = default;
 
     Q_REQUIRED_RESULT bool isValid(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
@@ -62,26 +60,26 @@ public:
         int status = incidence->customProperty(QStringLiteral("FREEBUSY").toLatin1(), QStringLiteral("STATUS").toLatin1()).toInt(&ok);
 
         if (!ok) {
-            return QColor(85, 85, 85);
+            return {85, 85, 85};
         }
 
         switch (status) {
         case KCalendarCore::FreeBusyPeriod::Busy:
-            return QColor(255, 0, 0);
+            return {255, 0, 0};
         case KCalendarCore::FreeBusyPeriod::BusyTentative:
         case KCalendarCore::FreeBusyPeriod::BusyUnavailable:
-            return QColor(255, 119, 0);
+            return {255, 119, 0};
         case KCalendarCore::FreeBusyPeriod::Free:
-            return QColor(0, 255, 0);
+            return {0, 255, 0};
         default:
-            return QColor(85, 85, 85);
+            return {85, 85, 85};
         }
     }
 
     Q_REQUIRED_RESULT QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence)
-        return QString();
+        return {};
     }
 
     Q_REQUIRED_RESULT KCalendarCore::Calendar::Ptr getCalendar() const override

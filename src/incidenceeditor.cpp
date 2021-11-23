@@ -16,9 +16,7 @@ IncidenceEditor::IncidenceEditor(QObject *parent)
 {
 }
 
-IncidenceEditor::~IncidenceEditor()
-{
-}
+IncidenceEditor::~IncidenceEditor() = default;
 
 void IncidenceEditor::checkDirtyStatus()
 {

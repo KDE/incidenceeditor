@@ -142,9 +142,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::filterLayoutChanged);
 }
 
-IncidenceAttendee::~IncidenceAttendee()
-{
-}
+IncidenceAttendee::~IncidenceAttendee() = default;
 
 void IncidenceAttendee::load(const KCalendarCore::Incidence::Ptr &incidence)
 {

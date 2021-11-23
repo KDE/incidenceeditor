@@ -36,9 +36,7 @@ KWeekdayCheckCombo::KWeekdayCheckCombo(QWidget *parent, bool first5Checked)
     }
 }
 
-KWeekdayCheckCombo::~KWeekdayCheckCombo()
-{
-}
+KWeekdayCheckCombo::~KWeekdayCheckCombo() = default;
 
 QBitArray KWeekdayCheckCombo::days() const
 {

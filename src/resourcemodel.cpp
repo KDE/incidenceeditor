@@ -37,9 +37,7 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     mLdapSearchCollections->startSearch(QStringLiteral("*"));
 }
 
-ResourceModel::~ResourceModel()
-{
-}
+ResourceModel::~ResourceModel() = default;
 
 int ResourceModel::columnCount(const QModelIndex & /* parent */) const
 {
@@ -49,7 +47,7 @@ int ResourceModel::columnCount(const QModelIndex & /* parent */) const
 QVariant ResourceModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::EditRole || role == Qt::DisplayRole) {
@@ -62,7 +60,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
         return KEmailAddress::normalizedAddress(item->data(QStringLiteral("cn")).toString(), item->data(QStringLiteral("mail")).toString());
     }
 
-    return QVariant();
+    return {};
 }
 
 Qt::ItemFlags ResourceModel::flags(const QModelIndex &index) const
@@ -91,7 +89,7 @@ QVariant ResourceModel::headerData(int section, Qt::Orientation orientation, int
         return translateLDAPAttributeForDisplay(mRootItem->data(section).toString());
     }
 
-    return QVariant();
+    return {};
 }
 
 QModelIndex ResourceModel::index(int row, int column, const QModelIndex &parent) const
@@ -102,20 +100,20 @@ QModelIndex ResourceModel::index(int row, int column, const QModelIndex &parent)
     if (row < parentItem->childCount() && childItem) {
         return createIndex(row, column, childItem.data());
     } else {
-        return QModelIndex();
+        return {};
     }
 }
 
 QModelIndex ResourceModel::parent(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QModelIndex();
+        return {};
     }
     ResourceItem *childItem = getItem(index);
     ResourceItem::Ptr parentItem = childItem->parent();
 
     if (parentItem == mRootItem) {
-        return QModelIndex();
+        return {};
     }
 
     return createIndex(parentItem->childNumber(), index.column(), parentItem.data());

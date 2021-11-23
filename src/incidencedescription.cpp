@@ -21,9 +21,7 @@ namespace IncidenceEditorNG
 class IncidenceDescriptionPrivate
 {
 public:
-    IncidenceDescriptionPrivate()
-    {
-    }
+    IncidenceDescriptionPrivate() = default;
 
     QString mRealOriginalDescriptionEditContents;
     bool mRichTextEnabled = false;

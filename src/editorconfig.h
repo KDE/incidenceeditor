@@ -74,7 +74,7 @@ public:
 
     Q_REQUIRED_RESULT virtual QUrl audioFilePath() const
     {
-        return QUrl();
+        return {};
     }
 
     Q_REQUIRED_RESULT virtual int reminderTime() const
@@ -99,7 +99,7 @@ public:
 
     Q_REQUIRED_RESULT virtual QStringList activeDesignerFields() const
     {
-        return QStringList();
+        return {};
     }
 
     Q_REQUIRED_RESULT virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);

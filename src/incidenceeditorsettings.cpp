@@ -21,10 +21,6 @@ IncidenceEditorSettings *IncidenceEditorSettings::self()
     return mSelf;
 }
 
-IncidenceEditorSettings::IncidenceEditorSettings()
-{
-}
+IncidenceEditorSettings::IncidenceEditorSettings() = default;
 
-IncidenceEditorSettings::~IncidenceEditorSettings()
-{
-}
+IncidenceEditorSettings::~IncidenceEditorSettings() = default;
