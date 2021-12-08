@@ -1,4 +1,5 @@
-
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 set(testincidenceeditor_SRCS main.cpp)
 
 add_executable(kincidenceeditor main.cpp)

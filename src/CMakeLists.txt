@@ -1,4 +1,5 @@
-
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
 add_library(KF5IncidenceEditor)
 add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
