@@ -46,6 +46,11 @@ public:
     void selectTimeZone(const QTimeZone &zone);
 
     /**
+     * Selects the item in the combobox corresponding to the zone for the given @p datetime.
+     */
+    void selectTimeZoneFor(const QDateTime &dateTime);
+
+    /**
      * Convenience version of selectTimeZone(const QTimeZone &).
      * Selects the local time zone specified in the user settings.
      */
@@ -59,9 +64,21 @@ public:
     void setFloating(bool floating, const QTimeZone &zone = {});
 
     /**
+     * Applies the selected timezone to the given QDateTime
+     * This isn't the same as dt.setTimeZone(selectedTimeZone) because
+     * of the "floating" special case.
+     */
+    void applyTimeZoneTo(QDateTime &dt) const;
+
+    /**
      * Return the time zone associated with the currently selected item.
      */
     Q_REQUIRED_RESULT QTimeZone selectedTimeZone() const;
+
+    /**
+     * Returns true if the selecting timezone is the floating time zone
+     */
+    Q_REQUIRED_RESULT bool isFloating() const;
 
 private:
     //@cond PRIVATE

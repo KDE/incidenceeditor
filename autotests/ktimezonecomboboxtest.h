@@ -12,5 +12,6 @@ class KTimeZoneComboBoxTest : public QObject
     Q_OBJECT
 private Q_SLOTS:
     void test_timeSpec();
+    void test_dateTime();
 };
 
