@@ -25,7 +25,7 @@ endmacro()
 
 macro(IE_EXECUTABLE_TESTS)
   foreach(_testname ${ARGN})
-    add_executable(${_testname} NOGUI TEST ${_testname}.cpp)
+    add_executable(${_testname} NOGUI TEST ${_testname}.cpp ${_testname}.h)
     target_link_libraries(${_testname} KF5::CalendarCore Qt::Test KF5::IncidenceEditor Qt::Widgets)
   endforeach()
 endmacro()
@@ -36,7 +36,7 @@ ie_unit_tests(
 )
 
 ########### KTimeZoneComboBox unit test #############
-add_executable(ktimezonecomboboxtest ktimezonecomboboxtest.cpp)
+add_executable(ktimezonecomboboxtest ktimezonecomboboxtest.cpp ktimezonecomboboxtest.h)
 add_test(NAME ktimezonecomboboxtest COMMAND ktimezonecomboboxtest)
 ecm_mark_as_test(ktimezonecomboboxtest)
 
