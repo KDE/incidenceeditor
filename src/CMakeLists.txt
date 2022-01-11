@@ -166,7 +166,7 @@ PRIVATE
   KF5::Libkdepim
   KF5::PimCommonAkonadi
 )
-target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/IncidenceEditor/;${KDE_INSTALL_INCLUDEDIR_KF5}/incidenceeditor>")
+target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/;${KDE_INSTALL_INCLUDEDIR_KF}/incidenceeditor>")
 target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
 
 set_target_properties(KF5IncidenceEditor PROPERTIES
@@ -196,12 +196,12 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
 
 ecm_generate_pri_file(BASE_NAME IncidenceEditor
     LIB_NAME KF5IncidenceEditor
-    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils KMailTransport CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/IncidenceEditor
+    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils KMailTransport CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor
 )
 
 install(FILES
     ${IncidenceEditor_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/IncidenceEditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor
     COMPONENT Devel
 )
 
@@ -209,7 +209,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/globalsettings_incidenceeditor.h
     ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_export.h
     ${IncidenceEditor_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/incidenceeditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/incidenceeditor
     COMPONENT Devel
 )
 install(FILES
