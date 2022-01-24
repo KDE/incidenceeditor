@@ -166,7 +166,7 @@ PRIVATE
   KF5::Libkdepim
   KF5::PimCommonAkonadi
 )
-target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/;${KDE_INSTALL_INCLUDEDIR_KF}/incidenceeditor>")
+target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/>")
 target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
 
 set_target_properties(KF5IncidenceEditor PROPERTIES
@@ -201,7 +201,7 @@ ecm_generate_pri_file(BASE_NAME IncidenceEditor
 
 install(FILES
     ${IncidenceEditor_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/IncidenceEditor
     COMPONENT Devel
 )
 
@@ -209,7 +209,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/globalsettings_incidenceeditor.h
     ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_export.h
     ${IncidenceEditor_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/incidenceeditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/incidenceeditor
     COMPONENT Devel
 )
 install(FILES
