@@ -153,6 +153,7 @@ PUBLIC
   KF5::EventViews
 PRIVATE
   KGantt              # For FreeBusy Editor
+  KF5::PimTextEdit
   KF5::Codecs
   KF5::Ldap
   KF5::AkonadiWidgets

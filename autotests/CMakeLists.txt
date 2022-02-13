@@ -69,6 +69,7 @@ add_akonadi_isolated_test(
   KF5::AkonadiWidgets
   KF5::Completion
   KF5::IncidenceEditor
+  KF5::PimTextEdit
   KF5::Libkdepim
   KF5::WidgetsAddons
 )
