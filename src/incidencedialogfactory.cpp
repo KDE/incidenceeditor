@@ -9,7 +9,7 @@
 #include "incidencedefaults.h"
 #include "incidencedialog.h"
 
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>

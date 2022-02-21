@@ -8,7 +8,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 #include <KIdentityManagement/Identity>
 #include <MailTransportAkonadi/MessageQueueJob>
 namespace IncidenceEditorNG

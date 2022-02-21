@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include <Akonadi/Calendar/IncidenceChanger>
 #include <Akonadi/Collection>
+#include <Akonadi/IncidenceChanger>
 #include <QObject>
 
 #include <memory>

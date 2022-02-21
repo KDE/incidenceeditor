@@ -11,7 +11,7 @@
 
 #include <Akonadi/Item>
 #include <CalendarSupport/KCalPrefs>
-#include <akonadi/calendar/calendarsettings.h>
+#include <akonadi/calendarsettings.h>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>

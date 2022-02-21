@@ -29,8 +29,8 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
-#include <Akonadi/Calendar/ETMCalendar>
 #include <Akonadi/CollectionComboBox>
+#include <Akonadi/ETMCalendar>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/Item>
 

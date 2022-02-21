@@ -12,7 +12,7 @@
 
 #include "freebusyganttproxymodel.h"
 
-#include <Akonadi/Calendar/FreeBusyManager>
+#include <Akonadi/FreeBusyManager>
 
 #include <EventViews/AgendaView>
 
