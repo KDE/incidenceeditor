@@ -22,10 +22,10 @@
 #include "ui_dialogdesktop.h"
 #include <CalendarSupport/FreeBusyItemModel>
 
-#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <Akonadi/Contact/ContactGroupSearchJob>
-#include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/AbstractEmailAddressSelectionDialog>
+#include <Akonadi/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupSearchJob>
+#include <Akonadi/EmailAddressSelectionDialog>
 
 #include <KCalUtils/Stringify>
 #include <KEmailAddress>
