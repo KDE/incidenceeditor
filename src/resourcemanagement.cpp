@@ -19,8 +19,6 @@
 #include <KCalendarCore/Event>
 #include <KCalendarCore/MemoryCalendar>
 
-#include <KGantt/KGanttGraphicsView>
-
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
