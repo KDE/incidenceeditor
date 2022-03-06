@@ -497,7 +497,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 
 bool IncidenceDialogPrivate::hasSupportedPayload(const Akonadi::Item &item) const
 {
-    return CalendarSupport::incidence(item);
+    return !CalendarSupport::incidence(item).isNull();
 }
 
 bool IncidenceDialogPrivate::isDirty() const
