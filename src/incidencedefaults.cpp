@@ -135,10 +135,20 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalendarCore::Event::Ptr &ev
         }
     }
 
+    if (startDT.timeSpec() == Qt::LocalTime) {
+        // Ensure the default is not "floating"
+        startDT.setTimeZone(QTimeZone::systemTimeZone());
+    }
+
     const QTime defaultDurationTime = KCalPrefs::instance()->defaultDuration().time();
     const int defaultDuration = (defaultDurationTime.hour() * 3600) + (defaultDurationTime.minute() * 60);
 
-    const QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
+    QDateTime endDT = mEndDt.isValid() ? mEndDt : startDT.addSecs(defaultDuration);
+
+    if (endDT.timeSpec() == Qt::LocalTime) {
+        // Ensure the default is not "floating"
+        endDT.setTimeZone(QTimeZone::systemTimeZone());
+    }
 
     event->setDtStart(startDT);
     event->setDtEnd(endDT);

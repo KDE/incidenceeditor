@@ -147,11 +147,11 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
     enableTimeEdits();
 
     if (mUi->mTimeZoneComboStart->currentIndex() == 0) { // Floating
-        mInitialStartDT.setTimeZone(QTimeZone::systemTimeZone());
+        mInitialStartDT.setTimeSpec(Qt::LocalTime);
     }
 
     if (mUi->mTimeZoneComboEnd->currentIndex() == 0) { // Floating
-        mInitialEndDT.setTimeZone(QTimeZone::systemTimeZone());
+        mInitialEndDT.setTimeSpec(Qt::LocalTime);
     }
 
     mWasDirty = false;
@@ -284,10 +284,10 @@ void IncidenceDateTime::updateStartSpec()
     const QDate prevDate = mCurrentStartDateTime.date();
 
     if (mUi->mEndCheck->isChecked() && currentEndDateTime().timeZone() == mCurrentStartDateTime.timeZone()) {
-        mUi->mTimeZoneComboEnd->selectTimeZone(mUi->mTimeZoneComboStart->selectedTimeZone());
+        mUi->mTimeZoneComboEnd->setFloating(mUi->mTimeZoneComboStart->isFloating(), mUi->mTimeZoneComboStart->selectedTimeZone());
     }
 
-    mCurrentStartDateTime.setTimeZone(mUi->mTimeZoneComboStart->selectedTimeZone());
+    mUi->mTimeZoneComboStart->applyTimeZoneTo(mCurrentStartDateTime);
 
     const bool dateChanged = mCurrentStartDateTime.date() != prevDate;
 
@@ -373,12 +373,18 @@ void IncidenceDateTime::enableTimeEdits()
     if (mUi->mStartCheck->isChecked()) {
         mUi->mStartTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboStart->setEnabled(!wholeDayChecked);
-        mUi->mTimeZoneComboStart->setFloating(wholeDayChecked, mInitialStartDT.timeZone());
+        if (wholeDayChecked)
+            mUi->mTimeZoneComboStart->setFloating(true);
+        else
+            mUi->mTimeZoneComboStart->selectTimeZoneFor(mInitialStartDT);
     }
     if (mUi->mEndCheck->isChecked()) {
         mUi->mEndTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboEnd->setEnabled(!wholeDayChecked);
-        mUi->mTimeZoneComboEnd->setFloating(wholeDayChecked, mInitialEndDT.timeZone());
+        if (wholeDayChecked)
+            mUi->mTimeZoneComboEnd->setFloating(true);
+        else
+            mUi->mTimeZoneComboEnd->selectTimeZoneFor(mInitialEndDT);
     }
 
     /**
@@ -491,12 +497,16 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Journal::Ptr &journal) cons
 
 QDateTime IncidenceDateTime::currentStartDateTime() const
 {
-    return QDateTime(mUi->mStartDateEdit->date(), mUi->mStartTimeEdit->time(), mUi->mTimeZoneComboStart->selectedTimeZone());
+    QDateTime dt(mUi->mStartDateEdit->date(), mUi->mStartTimeEdit->time());
+    mUi->mTimeZoneComboStart->applyTimeZoneTo(dt);
+    return dt;
 }
 
 QDateTime IncidenceDateTime::currentEndDateTime() const
 {
-    return QDateTime(mUi->mEndDateEdit->date(), mUi->mEndTimeEdit->time(), mUi->mTimeZoneComboEnd->selectedTimeZone());
+    QDateTime dt(mUi->mEndDateEdit->date(), mUi->mEndTimeEdit->time());
+    mUi->mTimeZoneComboEnd->applyTimeZoneTo(dt);
+    return dt;
 }
 
 void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemplate, bool templateOverridesTimes)
@@ -696,23 +706,23 @@ void IncidenceDateTime::setDateTimes(const QDateTime &start, const QDateTime &en
     if (start.isValid()) {
         mUi->mStartDateEdit->setDate(start.date());
         mUi->mStartTimeEdit->setTime(start.time());
-        mUi->mTimeZoneComboStart->selectTimeZone(start.timeZone());
+        mUi->mTimeZoneComboStart->selectTimeZoneFor(start);
     } else {
         QDateTime dt = QDateTime::currentDateTime();
         mUi->mStartDateEdit->setDate(dt.date());
         mUi->mStartTimeEdit->setTime(dt.time());
-        mUi->mTimeZoneComboStart->selectTimeZone(dt.timeZone());
+        mUi->mTimeZoneComboStart->selectTimeZoneFor(dt);
     }
 
     if (end.isValid()) {
         mUi->mEndDateEdit->setDate(end.date());
         mUi->mEndTimeEdit->setTime(end.time());
-        mUi->mTimeZoneComboEnd->selectTimeZone(end.timeZone());
+        mUi->mTimeZoneComboEnd->selectTimeZoneFor(end);
     } else {
         QDateTime dt(QDate::currentDate(), QTime::currentTime().addSecs(60 * 60));
         mUi->mEndDateEdit->setDate(dt.date());
         mUi->mEndTimeEdit->setTime(dt.time());
-        mUi->mTimeZoneComboEnd->selectTimeZone(dt.timeZone());
+        mUi->mTimeZoneComboEnd->selectTimeZoneFor(dt);
     }
 
     mCurrentStartDateTime = currentStartDateTime();
@@ -769,8 +779,8 @@ void IncidenceDateTime::setTimes(const QDateTime &start, const QDateTime &end)
 
     mUi->mEndTimeEdit->setTime(end.time());
 
-    mUi->mTimeZoneComboStart->selectTimeZone(start.timeZone());
-    mUi->mTimeZoneComboEnd->selectTimeZone(end.timeZone());
+    mUi->mTimeZoneComboStart->selectTimeZoneFor(start);
+    mUi->mTimeZoneComboEnd->selectTimeZoneFor(end);
 
     //   emitDateTimeStr();
 }

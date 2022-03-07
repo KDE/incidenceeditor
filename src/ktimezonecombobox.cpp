@@ -83,6 +83,14 @@ void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
     }
 }
 
+void KTimeZoneComboBox::selectTimeZoneFor(const QDateTime &dateTime)
+{
+    if (dateTime.timeSpec() == Qt::LocalTime)
+        setCurrentIndex(1); // Floating
+    else
+        selectTimeZone(dateTime.timeZone());
+}
+
 QTimeZone KTimeZoneComboBox::selectedTimeZone() const
 {
     QTimeZone zone;
@@ -117,4 +125,18 @@ void KTimeZoneComboBox::setFloating(bool floating, const QTimeZone &zone)
             selectLocalTimeZone();
         }
     }
+}
+
+void KTimeZoneComboBox::applyTimeZoneTo(QDateTime &dt) const
+{
+    if (isFloating()) {
+        dt.setTimeSpec(Qt::LocalTime);
+    } else {
+        dt.setTimeZone(selectedTimeZone());
+    }
+}
+
+bool KTimeZoneComboBox::isFloating() const
+{
+    return currentIndex() == 1;
 }
