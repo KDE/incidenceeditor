@@ -146,14 +146,6 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
 
     enableTimeEdits();
 
-    if (mUi->mTimeZoneComboStart->currentIndex() == 0) { // Floating
-        mInitialStartDT.setTimeSpec(Qt::LocalTime);
-    }
-
-    if (mUi->mTimeZoneComboEnd->currentIndex() == 0) { // Floating
-        mInitialEndDT.setTimeSpec(Qt::LocalTime);
-    }
-
     mWasDirty = false;
     mLoadingIncidence = false;
 }
