@@ -161,7 +161,11 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalendarCore::Event::Ptr &ev
 
 void IncidenceDefaultsPrivate::journalDefaults(const KCalendarCore::Journal::Ptr &journal) const
 {
-    const QDateTime startDT = mStartDt.isValid() ? mStartDt : QDateTime::currentDateTime();
+    QDateTime startDT = mStartDt.isValid() ? mStartDt : QDateTime::currentDateTime();
+    if (startDT.timeSpec() == Qt::LocalTime) {
+        // Ensure the default is not "floating"
+        startDT.setTimeZone(QTimeZone::systemTimeZone());
+    }
     journal->setDtStart(startDT);
     journal->setAllDay(true);
 }
@@ -174,7 +178,12 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
     }
 
     if (mEndDt.isValid()) {
-        todo->setDtDue(mEndDt, true /** first */);
+        if (mEndDt.timeSpec() == Qt::LocalTime) {
+            // Ensure the default is not "floating"
+            todo->setDtDue(mEndDt.toTimeZone(QTimeZone::systemTimeZone()), true);
+        } else {
+            todo->setDtDue(mEndDt, true /* first */);
+        }
     } else if (relatedTodo && relatedTodo->hasDueDate()) {
         todo->setDtDue(relatedTodo->dtDue(true), true /** first */);
         todo->setAllDay(relatedTodo->allDay());
@@ -185,7 +194,12 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
     }
 
     if (mStartDt.isValid()) {
-        todo->setDtStart(mStartDt);
+        if (mStartDt.timeSpec() == Qt::LocalTime) {
+            // Ensure the default is not "floating"
+            todo->setDtStart(mStartDt.toTimeZone(QTimeZone::systemTimeZone()));
+        } else {
+            todo->setDtStart(mStartDt);
+        }
     } else if (relatedTodo && !relatedTodo->hasStartDate()) {
         todo->setDtStart(QDateTime());
     } else if (relatedTodo && relatedTodo->hasStartDate() && relatedTodo->dtStart() <= todo->dtDue()) {
