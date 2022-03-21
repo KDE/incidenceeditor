@@ -76,6 +76,14 @@ private Q_SLOTS:
         endTime->setCurrentText(QStringLiteral("12:00:00"));
         QVERIFY(editor->isValid());
 
+        auto startZone = dialog->findChild<KTimeZoneComboBox *>(QStringLiteral("mTimeZoneComboStart"));
+        QVERIFY2(startZone, "Couldn't find start time zone field.");
+        auto endZone = dialog->findChild<KTimeZoneComboBox *>(QStringLiteral("mTimeZoneComboEnd"));
+        QVERIFY2(endZone, "Couldn't find end time zone field.");
+        startZone->selectTimeZone(QTimeZone("Africa/Abidjan"));     // UTC.
+        endZone->selectTimeZone(QTimeZone("Africa/Abidjan"));
+        QVERIFY(editor->isValid());
+
         endDate->setDate(startDate->date().addDays(-1));
         endTime->setTime(startTime->time());
         QVERIFY2(!editor->isValid(), "Didn't detect end date < start date");
@@ -85,6 +93,8 @@ private Q_SLOTS:
         QVERIFY2(!editor->isValid(), "Didn't detect end time < start time");
         endTime->setTime(startTime->time());
         QVERIFY(editor->isValid());
+        endZone->selectTimeZone(QTimeZone("Africa/Addis_Ababa"));   // UTC+3; causes 3-hour shift in effective end time.
+        QVERIFY2(!editor->isValid(), "Didn't detect end time < start time in different time zone");
 
         QLocale::setDefault(currentLocale);
     }
