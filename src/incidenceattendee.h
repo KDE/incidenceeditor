@@ -139,4 +139,3 @@ private:
     QMap<KJob *, QString> mExpandGroupJobs;
 };
 }
-

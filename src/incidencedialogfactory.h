@@ -68,4 +68,3 @@ INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(const QString &summary
                                                           Qt::WindowFlags flags = {});
 } // namespace IncidenceDialogFactory
 } // namespace IncidenceEditorNG
-

@@ -29,4 +29,3 @@ private:
     static IncidenceEditorSettings *mSelf;
 };
 }
-

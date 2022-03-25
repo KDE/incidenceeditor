@@ -56,14 +56,14 @@ enum {
 
 static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, const KCalendarCore::DateList &exDates)
 {
-        KCalendarCore::DateTimeList dts;
-        QDateTime dt = r->startDateTime();
-        dts.reserve(exDates.count());
-        for (const auto &e : exDates) {
-            dt.setDate(e);
-            dts.append(dt);
-        }
-        r->setExDateTimes(dts);
+    KCalendarCore::DateTimeList dts;
+    QDateTime dt = r->startDateTime();
+    dts.reserve(exDates.count());
+    for (const auto &e : exDates) {
+        dt.setDate(e);
+        dts.append(dt);
+    }
+    r->setExDateTimes(dts);
 }
 
 IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
@@ -216,8 +216,7 @@ void IncidenceRecurrence::load(const KCalendarCore::Incidence::Ptr &incidence)
     } else {
         if (!r->exDateTimes().isEmpty()) {
             setExceptionDateTimes(r->exDateTimes());
-        }
-        else if (!r->exDates().isEmpty()) {
+        } else if (!r->exDates().isEmpty()) {
             // Compatibility: IncidenceEditorNG <= v5.16.3 stored EXDATES as
             // dates only. Upgrade to date-times.
             setExceptionDates(r->exDates());

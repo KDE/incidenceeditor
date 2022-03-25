@@ -54,4 +54,3 @@ Q_REQUIRED_RESULT int presetIndex(When when, const KCalendarCore::Alarm::Ptr &al
 Q_REQUIRED_RESULT int defaultPresetIndex();
 }
 }
-

@@ -84,4 +84,3 @@ private:
     QAction *mEditAction = nullptr;
 };
 }
-

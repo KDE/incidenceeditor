@@ -52,4 +52,3 @@ protected Q_SLOTS:
     void slotCalculateTotal();
 };
 }
-

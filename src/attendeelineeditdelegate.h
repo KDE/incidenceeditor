@@ -39,4 +39,3 @@ private:
     KCompletion::CompletionMode mCompletionMode = KCompletion::CompletionPopup;
 };
 }
-

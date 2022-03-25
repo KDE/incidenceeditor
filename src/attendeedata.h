@@ -43,4 +43,3 @@ public:
     Q_REQUIRED_RESULT KCalendarCore::Attendee attendee() const;
 };
 }
-

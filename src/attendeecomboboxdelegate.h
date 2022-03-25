@@ -59,4 +59,3 @@ private:
     int mStandardIndex = 0;
 };
 }
-

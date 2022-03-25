@@ -58,4 +58,3 @@ private:
     int mDirtyEditorCount = 0;
 };
 }
-

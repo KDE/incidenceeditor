@@ -47,4 +47,3 @@ private:
     QWidget *m_detailsWidget = nullptr;
 };
 }
-

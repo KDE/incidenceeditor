@@ -108,4 +108,3 @@ private:
     std::unique_ptr<EditorConfigPrivate> const d;
 };
 }
-

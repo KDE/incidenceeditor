@@ -53,4 +53,3 @@ private:
     bool mIsTodo = false;
 };
 }
-

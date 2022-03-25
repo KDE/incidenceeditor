@@ -69,7 +69,8 @@ public:
     Q_REQUIRED_RESULT KCalendarCore::IncidenceBase::IncidenceType type() const;
 
     /** Convenience method to get a pointer for a specific const Incidence Type. */
-    template<typename IncidenceT> QSharedPointer<IncidenceT> incidence() const
+    template<typename IncidenceT>
+    QSharedPointer<IncidenceT> incidence() const
     {
         return mLoadedIncidence.dynamicCast<IncidenceT>();
     }
@@ -102,7 +103,8 @@ protected:
     /** Only subclasses can instantiate IncidenceEditors */
     IncidenceEditor(QObject *parent = nullptr);
 
-    template<typename IncidenceT> QSharedPointer<IncidenceT> incidence(const KCalendarCore::Incidence::Ptr &inc)
+    template<typename IncidenceT>
+    QSharedPointer<IncidenceT> incidence(const KCalendarCore::Incidence::Ptr &inc)
     {
         return inc.dynamicCast<IncidenceT>();
     }
@@ -114,4 +116,3 @@ protected:
     bool mLoadingIncidence = false;
 };
 } // IncidenceEditorNG
-

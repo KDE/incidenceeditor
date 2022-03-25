@@ -14,4 +14,3 @@ private Q_SLOTS:
     void test_timeSpec();
     void test_dateTime();
 };
-

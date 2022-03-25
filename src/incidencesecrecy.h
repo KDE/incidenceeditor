@@ -33,4 +33,3 @@ private:
     Ui::EventOrTodoDesktop *const mUi;
 };
 }
-

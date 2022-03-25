@@ -276,7 +276,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
     }
 }
 
-void IncidenceAttachment::showContextMenu(const QPoint &pos)    // clazy:exclude=function-args-by-value
+void IncidenceAttachment::showContextMenu(const QPoint &pos) // clazy:exclude=function-args-by-value
 {
     const bool enable = mAttachmentView->itemAt(pos) != nullptr;
 

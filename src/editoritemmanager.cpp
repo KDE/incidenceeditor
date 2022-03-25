@@ -317,7 +317,7 @@ void EditorItemManager::save()
         Q_ASSERT(d->mItem.parentCollection().isValid());
         KCalendarCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection() || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
-            (void) d->mChanger->modifyIncidence(d->mItem, oldPayload);
+            (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
             Q_ASSERT(d->mItem.parentCollection().isValid());
@@ -325,7 +325,7 @@ void EditorItemManager::save()
             qCDebug(INCIDENCEEDITOR_LOG) << "Moving from" << d->mItem.parentCollection().id() << "to" << d->mItemUi->selectedCollection().id();
 
             if (d->mItemUi->isDirty()) {
-                (void) d->mChanger->modifyIncidence(d->mItem, oldPayload);
+                (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
             } else {
                 auto itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
                 connect(itemMoveJob, SIGNAL(result(KJob *)), SLOT(itemMoveResult(KJob *)));
@@ -337,7 +337,7 @@ void EditorItemManager::save()
             Q_EMIT itemSaveFinished(EditorItemManager::Modify);
         } else {
             Q_ASSERT(d->mItemUi->selectedCollection().isValid());
-            (void) d->mChanger->createFromItem(d->mItem, d->mItemUi->selectedCollection());
+            (void)d->mChanger->createFromItem(d->mItem, d->mItemUi->selectedCollection());
         }
     }
 }

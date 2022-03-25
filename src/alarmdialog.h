@@ -51,4 +51,3 @@ private:
     bool mAllowEndReminders = true;
 };
 }
-

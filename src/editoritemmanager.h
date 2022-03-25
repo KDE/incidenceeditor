@@ -169,4 +169,3 @@ public:
     virtual void reject(RejectReason reason, const QString &errorMessage = QString()) = 0;
 };
 }
-

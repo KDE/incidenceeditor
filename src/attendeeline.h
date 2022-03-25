@@ -123,4 +123,3 @@ private:
     bool mModified;
 };
 }
-

@@ -119,4 +119,3 @@ private:
     int mYearlyInitialType = -1;
 };
 }
-

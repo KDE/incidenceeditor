@@ -37,4 +37,3 @@ public:
     Q_REQUIRED_RESULT QString tooltipify(const KCalendarCore::FreeBusyPeriod &period) const;
 };
 }
-

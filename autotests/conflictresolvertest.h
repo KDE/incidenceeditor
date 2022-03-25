@@ -43,4 +43,3 @@ private:
     IncidenceEditorNG::ConflictResolver *resolver;
     QDateTime base, end;
 };
-

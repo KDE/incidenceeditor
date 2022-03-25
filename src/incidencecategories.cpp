@@ -128,7 +128,7 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
     auto createJob = static_cast<Akonadi::TagCreateJob *>(job);
     int count = mMissingCategories.removeAll(createJob->tag().name());
 
-    auto selectedTags {mUi->mTagWidget->selection()};
+    auto selectedTags{mUi->mTagWidget->selection()};
     selectedTags += createJob->tag();
 
     // If the created tag was one of the instance's missing categories,

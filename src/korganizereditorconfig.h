@@ -40,4 +40,3 @@ public:
     Q_REQUIRED_RESULT QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type) override;
 };
 } // IncidenceEditors
-

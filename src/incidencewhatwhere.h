@@ -41,4 +41,3 @@ private:
     Ui::EventOrTodoDesktop *const mUi;
 };
 } // IncidenceEditorNG
-

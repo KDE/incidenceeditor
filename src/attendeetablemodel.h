@@ -74,4 +74,3 @@ public:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
 }
-
