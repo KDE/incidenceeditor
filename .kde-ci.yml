@@ -16,3 +16,4 @@ Dependencies:
     'pim/kmailtransport' : '@same'
     'pim/kmime' : '@same'
     'pim/libkdepim' : '@same'
+    'pim/pimcommon' : '@same'
