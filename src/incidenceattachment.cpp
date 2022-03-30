@@ -524,6 +524,7 @@ void IncidenceAttachment::setupAttachmentIconView()
     auto layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(mAttachmentView);
+    QWidget::setTabOrder(mUi->mAddButton, mAttachmentView);
 }
 
 // void IncidenceAttachmentEditor::addAttachment( KCalendarCore::Attachment *attachment )
