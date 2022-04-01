@@ -128,6 +128,7 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
     }
 
     const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1String("true");
+    incidence->removeCustomProperty("kdepim", "isTemplate");
     const bool templateOverridesTimes = incidenceHasDefaultTimes(mLoadedIncidence);
 
     mLoadedIncidence = incidence;
