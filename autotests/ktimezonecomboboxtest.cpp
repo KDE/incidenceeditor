@@ -12,16 +12,19 @@
 
 QTEST_MAIN(KTimeZoneComboBoxTest)
 
+const auto TEST_TZ = "Asia/Tokyo";      // Not UTC, not Paris.
+
+void KTimeZoneComboBoxTest::initTestCase()
+{
+    qputenv("TZ", TEST_TZ);
+}
+
 void KTimeZoneComboBoxTest::test_timeSpec()
 {
     IncidenceEditorNG::KTimeZoneComboBox combo;
     combo.selectLocalTimeZone();
     QVERIFY(!combo.isFloating());
-    if (combo.selectedTimeZone().id() != "UTC") {
-        QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
-    } else {
-        QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
-    }
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
 
     combo.selectTimeZone(QTimeZone());
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
@@ -31,7 +34,7 @@ void KTimeZoneComboBoxTest::test_timeSpec()
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
 }
 
-void KTimeZoneComboBoxTest::test_dateTime()
+void KTimeZoneComboBoxTest::test_selectTimeZoneFor()
 {
     IncidenceEditorNG::KTimeZoneComboBox combo;
 
@@ -41,12 +44,46 @@ void KTimeZoneComboBoxTest::test_dateTime()
     combo.selectTimeZoneFor(dt);
     QVERIFY(combo.isFloating());
 
-    // Non-floating
+    // System time zone.
+    QDateTime dtSys(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone());
+    combo.selectTimeZoneFor(dtSys);
+    QVERIFY(!combo.isFloating());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
+
+    // UTC.
+    QDateTime dtUtc = QDateTime::currentDateTimeUtc();
+    combo.selectTimeZoneFor(dtUtc);
+    QVERIFY(!combo.isFloating());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
+
+    // General case.
     const QDateTime dtParis(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone("Europe/Paris"));
     QCOMPARE(dtParis.timeSpec(), Qt::TimeZone);
     combo.selectTimeZoneFor(dtParis);
     QVERIFY(!combo.isFloating());
     QCOMPARE(combo.selectedTimeZone().id(), "Europe/Paris");
+}
+
+void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
+{
+    IncidenceEditorNG::KTimeZoneComboBox combo;
+    QDateTime dt = QDateTime::currentDateTime();
+
+    combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), Qt::LocalTime));
+    combo.applyTimeZoneTo(dt);
+    QCOMPARE(dt.timeSpec(), Qt::LocalTime);
+
+    combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone()));
+    combo.applyTimeZoneTo(dt);
+    QCOMPARE(dt.timeSpec(), Qt::TimeZone);
+    QCOMPARE(dt.timeZone(), QTimeZone::systemTimeZone());
+
+    combo.selectTimeZoneFor(QDateTime::currentDateTimeUtc());
+    combo.applyTimeZoneTo(dt);
+    QCOMPARE(dt.timeSpec(), Qt::TimeZone);
+    QCOMPARE(dt.timeZone(), QTimeZone::utc());
+
+    combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone("Europe/Paris")));
     combo.applyTimeZoneTo(dt);
     QCOMPARE(dt.timeSpec(), Qt::TimeZone);
     QCOMPARE(dt.timeZone().id(), "Europe/Paris");

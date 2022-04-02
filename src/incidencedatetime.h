@@ -83,6 +83,7 @@ private Q_SLOTS: /// General
     void updateStartTime(const QTime &newTime);
     void updateStartDate(const QDate &newDate);
     void updateStartSpec();
+    void updateEndSpec();
     void updateStartToolTips();
     void updateEndToolTips();
 

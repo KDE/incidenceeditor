@@ -17,6 +17,11 @@
 
 using namespace IncidenceEditorNG;
 
+static bool identical(QDateTime dt1, QDateTime dt2)
+{
+    return dt1 == dt2 && dt1.timeSpec() == dt2.timeSpec() && dt1.timeZone() == dt2.timeZone();
+}
+
 /**
  * Returns true if the incidence's dates are equal to the default ones specified in config.
  */
@@ -123,6 +128,7 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
     }
 
     const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1String("true");
+    incidence->removeCustomProperty("kdepim", "isTemplate");
     const bool templateOverridesTimes = incidenceHasDefaultTimes(mLoadedIncidence);
 
     mLoadedIncidence = incidence;
@@ -145,14 +151,6 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
     mInitialEndDT = currentEndDateTime();
 
     enableTimeEdits();
-
-    if (mUi->mTimeZoneComboStart->currentIndex() == 0) { // Floating
-        mInitialStartDT.setTimeSpec(Qt::LocalTime);
-    }
-
-    if (mUi->mTimeZoneComboEnd->currentIndex() == 0) { // Floating
-        mInitialEndDT.setTimeSpec(Qt::LocalTime);
-    }
 
     mWasDirty = false;
     mLoadingIncidence = false;
@@ -283,8 +281,12 @@ void IncidenceDateTime::updateStartSpec()
 {
     const QDate prevDate = mCurrentStartDateTime.date();
 
-    if (mUi->mEndCheck->isChecked() && currentEndDateTime().timeZone() == mCurrentStartDateTime.timeZone()) {
-        mUi->mTimeZoneComboEnd->setFloating(mUi->mTimeZoneComboStart->isFloating(), mUi->mTimeZoneComboStart->selectedTimeZone());
+    // RFC 5545 states that both date-times must be "floating" if either is.
+    // Otherwise, for the user's convenience, if both combos used to be the same
+    // then keep them the same.
+    if ( (mUi->mTimeZoneComboStart->isFloating() != mUi->mTimeZoneComboEnd->isFloating())
+            || currentEndDateTime().timeZone() == mCurrentStartDateTime.timeZone() ) {
+        mUi->mTimeZoneComboEnd->setCurrentIndex(mUi->mTimeZoneComboStart->currentIndex());
     }
 
     mUi->mTimeZoneComboStart->applyTimeZoneTo(mCurrentStartDateTime);
@@ -298,6 +300,15 @@ void IncidenceDateTime::updateStartSpec()
     if (type() == KCalendarCore::Incidence::TypeJournal) {
         checkDirtyStatus();
     }
+}
+
+void IncidenceDateTime::updateEndSpec()
+{
+    // RFC 5545 states that both date-times must be "floating" if either is.
+    if (mUi->mTimeZoneComboStart->isFloating() != mUi->mTimeZoneComboEnd->isFloating()) {
+        mUi->mTimeZoneComboStart->setCurrentIndex(mUi->mTimeZoneComboEnd->currentIndex());
+    }
+    checkDirtyStatus();
 }
 
 /// private slots for Todo
@@ -323,7 +334,6 @@ void IncidenceDateTime::enableStartEdit(bool enable)
         mUi->mTimeZoneComboStart->setEnabled(false);
     }
 
-    mUi->mTimeZoneComboStart->setFloating(!mUi->mTimeZoneComboStart->isEnabled());
     checkDirtyStatus();
 }
 
@@ -348,7 +358,6 @@ void IncidenceDateTime::enableEndEdit(bool enable)
         mUi->mTimeZoneComboEnd->setEnabled(false);
     }
 
-    mUi->mTimeZoneComboEnd->setFloating(!mUi->mTimeZoneComboEnd->isEnabled());
     checkDirtyStatus();
 }
 
@@ -428,17 +437,16 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Todo::Ptr &todo) const
         return true;
     }
 
-    if (mUi->mStartCheck->isChecked()) {
-        // Use mActiveStartTime. This is the QTimeZone selected on load coming from
-        // the combobox. We use this one as it can slightly differ (e.g. missing
-        // country code in the incidence time spec) from the incidence.
-        if (currentStartDateTime() != mInitialStartDT) {
+    if (todo->allDay()) {
+        if ((mUi->mStartCheck->isChecked() && mUi->mStartDateEdit->date() != mInitialStartDT.date())
+          || (mUi->mEndCheck->isChecked() && mUi->mEndDateEdit->date() != mInitialEndDT.date())) {
             return true;
         }
-    }
-
-    if (mUi->mEndCheck->isChecked() && currentEndDateTime() != mInitialEndDT) {
-        return true;
+    } else {
+        if ((mUi->mStartCheck->isChecked() &&!identical(currentStartDateTime(), mInitialStartDT))
+          || (mUi->mEndCheck->isChecked() && !identical(currentEndDateTime(), mInitialEndDT))) {
+            return true;
+        }
     }
 
     return false;
@@ -465,8 +473,7 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Event::Ptr &event) const
             return true;
         }
     } else {
-        if (currentStartDateTime() != mInitialStartDT || currentEndDateTime() != mInitialEndDT
-            || currentStartDateTime().timeZone() != mInitialStartDT.timeZone() || currentEndDateTime().timeZone() != mInitialEndDT.timeZone()) {
+        if (!identical(currentStartDateTime(), mInitialStartDT) || !identical(currentEndDateTime(), mInitialEndDT)) {
             return true;
         }
     }
@@ -485,7 +492,7 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Journal::Ptr &journal) cons
             return true;
         }
     } else {
-        if (currentStartDateTime() != mInitialStartDT) {
+        if (!identical(currentStartDateTime(), mInitialStartDT)) {
             return true;
         }
     }
@@ -538,7 +545,7 @@ void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemp
     connect(mUi->mTimeZoneComboEnd,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged),
             this,
-            &IncidenceDateTime::checkDirtyStatus);
+            &IncidenceDateTime::updateEndSpec);
     mUi->mWholeDayCheck->setChecked(event->allDay());
     enableTimeEdits();
 
@@ -593,12 +600,8 @@ void IncidenceDateTime::load(const KCalendarCore::Journal::Ptr &journal, bool is
         }
     } else {
         QDateTime startDT = journal->dtStart();
-
-        // Convert UTC to local timezone, if needed (i.e. for kolab #204059)
-        if (startDT.timeZone() == QTimeZone::utc()) {
-            startDT = startDT.toLocalTime();
-        }
-        setDateTimes(startDT, QDateTime());
+        // Journals do not have end dates, so pick an arbitrary suitable date.
+        setDateTimes(startDT, startDT);
     }
 }
 
@@ -647,7 +650,7 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
     connect(mUi->mTimeZoneComboEnd,
             static_cast<void (IncidenceEditorNG::KTimeZoneComboBox::*)(int)>(&IncidenceEditorNG::KTimeZoneComboBox::currentIndexChanged),
             this,
-            &IncidenceDateTime::checkDirtyStatus);
+            &IncidenceDateTime::updateEndSpec);
     const QDateTime rightNow = QDateTime::currentDateTime();
 
     if (isTemplate) {
