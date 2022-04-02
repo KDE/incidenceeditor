@@ -437,17 +437,16 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Todo::Ptr &todo) const
         return true;
     }
 
-    if (mUi->mStartCheck->isChecked()) {
-        // Use mActiveStartTime. This is the QTimeZone selected on load coming from
-        // the combobox. We use this one as it can slightly differ (e.g. missing
-        // country code in the incidence time spec) from the incidence.
-        if (!identical(currentStartDateTime(), mInitialStartDT)) {
+    if (todo->allDay()) {
+        if ((mUi->mStartCheck->isChecked() && mUi->mStartDateEdit->date() != mInitialStartDT.date())
+          || (mUi->mEndCheck->isChecked() && mUi->mEndDateEdit->date() != mInitialEndDT.date())) {
             return true;
         }
-    }
-
-    if (mUi->mEndCheck->isChecked() && !identical(currentEndDateTime(), mInitialEndDT)) {
-        return true;
+    } else {
+        if ((mUi->mStartCheck->isChecked() &&!identical(currentStartDateTime(), mInitialStartDT))
+          || (mUi->mEndCheck->isChecked() && !identical(currentEndDateTime(), mInitialEndDT))) {
+            return true;
+        }
     }
 
     return false;
