@@ -12,8 +12,7 @@
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
 
-#include <CalendarSupport/Utils>
-
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/TagAttribute>
 #include <Akonadi/TagCreateJob>
 #include <Akonadi/TagFetchJob>
@@ -45,7 +44,7 @@ void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
 
 void IncidenceCategories::load(const Akonadi::Item &item)
 {
-    mLoadedIncidence = CalendarSupport::incidence(item);
+    mLoadedIncidence = Akonadi::CalendarUtils::incidence(item);
     mDirty = false;
     mWasDirty = false;
 

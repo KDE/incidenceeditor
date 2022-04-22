@@ -29,6 +29,7 @@
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/ETMCalendar>
 #include <Akonadi/EntityTreeModel>
@@ -497,7 +498,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 
 bool IncidenceDialogPrivate::hasSupportedPayload(const Akonadi::Item &item) const
 {
-    return !CalendarSupport::incidence(item).isNull();
+    return Akonadi::CalendarUtils::incidence(item).isNull();
 }
 
 bool IncidenceDialogPrivate::isDirty() const
@@ -540,10 +541,10 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
         mUi->mTabWidget->removeTab(ResourcesTab);
     }
 
-    mEditor->load(CalendarSupport::incidence(item));
+    mEditor->load(Akonadi::CalendarUtils::incidence(item));
     mEditor->load(item);
 
-    const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
+    const KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
     const QStringList allEmails = IncidenceEditorNG::EditorConfig::instance()->allEmails();
     const KCalendarCore::Attendee me = incidence->attendeeByMails(allEmails);
 

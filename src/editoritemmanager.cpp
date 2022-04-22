@@ -9,8 +9,8 @@
 #include "individualmailcomponentfactory.h"
 
 #include <CalendarSupport/KCalPrefs>
-#include <CalendarSupport/Utils>
 
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/Item>
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemFetchJob>
@@ -315,7 +315,7 @@ void EditorItemManager::save()
 
     if (d->mItem.isValid()) { // A valid item. Means we're modifying.
         Q_ASSERT(d->mItem.parentCollection().isValid());
-        KCalendarCore::Incidence::Ptr oldPayload = CalendarSupport::incidence(d->mPrevItem);
+        KCalendarCore::Incidence::Ptr oldPayload = Akonadi::CalendarUtils::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection() || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
             (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
         } else {

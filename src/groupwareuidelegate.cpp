@@ -7,10 +7,9 @@
 #include "groupwareuidelegate.h"
 #include "incidencedialog.h"
 #include "incidencedialogfactory.h"
-
-#include <CalendarSupport/Utils>
-
 #include "incidenceeditor_debug.h"
+
+#include <Akonadi/CalendarUtils>
 #include <Akonadi/Item>
 using namespace IncidenceEditorNG;
 
@@ -20,7 +19,7 @@ void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
     // The GroupwareUiDelegate interface should be a QObject. Right now we have no way of emitting a
     // finished signal, so we have to use dialog->exec();
 
-    const KCalendarCore::Incidence::Ptr incidence = CalendarSupport::incidence(item);
+    const KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
     if (!incidence) {
         qCWarning(INCIDENCEEDITOR_LOG) << "Incidence is null, won't open the editor";
         return;
