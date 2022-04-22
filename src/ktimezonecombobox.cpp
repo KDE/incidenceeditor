@@ -31,16 +31,14 @@ void KTimeZoneComboBoxPrivate::fillComboBox()
     mParent->clear();
     mZones.clear();
 
-    // Read all system time zones
+    // Read all known time zones.
     const QList<QByteArray> lstTimeZoneIds = QTimeZone::availableTimeZoneIds();
     mZones.reserve(lstTimeZoneIds.count());
     std::copy(lstTimeZoneIds.begin(), lstTimeZoneIds.end(), std::back_inserter(mZones));
     std::sort(mZones.begin(), mZones.end()); // clazy:exclude=detaching-member
 
-    // Prepend Local, UTC and Floating, for convenience
-    mZones.prepend("UTC"); // do not use i18n here  index=2
-    mZones.prepend("Floating"); // do not use i18n here  index=1
-    mZones.prepend(QTimeZone::systemTimeZoneId()); // index=0
+    std::copy(lstTimeZoneIds.begin(), lstTimeZoneIds.end(), std::back_inserter(mZones));
+    std::sort(sortStart, mZones.end());    // clazy:exclude=detaching-member
 
     // Put translated zones into the combobox
     for (const auto &z : std::as_const(mZones)) {

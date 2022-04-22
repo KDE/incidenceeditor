@@ -15,4 +15,5 @@ private Q_SLOTS:
     void test_timeSpec();
     void test_selectTimeZoneFor();
     void test_applyTimeZoneTo();
+    void test_convenience();
 };
