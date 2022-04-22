@@ -88,3 +88,22 @@ void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
     QCOMPARE(dt.timeSpec(), Qt::TimeZone);
     QCOMPARE(dt.timeZone().id(), "Europe/Paris");
 }
+
+/**
+ * For the user's convenience, the first three items are the system time zone,
+ * "floating", and UTC.
+ */
+void KTimeZoneComboBoxTest::test_convenience()
+{
+    IncidenceEditorNG::KTimeZoneComboBox combo;
+    combo.setCurrentIndex(0);
+    QVERIFY(!combo.isFloating());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
+
+    combo.setCurrentIndex(1);
+    QVERIFY(combo.isFloating());
+
+    combo.setCurrentIndex(2);
+    QVERIFY(!combo.isFloating());
+    QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
+}
