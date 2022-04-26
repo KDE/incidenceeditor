@@ -28,6 +28,7 @@ class IncidenceDateTimeTest : public QObject
     KDateComboBox *mEndDate;
     KTimeComboBox *mEndTime;
     KTimeZoneComboBox *mEndZone;
+    IncidenceEditor *mEditor;
 
 public:
     IncidenceDateTimeTest()
@@ -51,6 +52,8 @@ public:
         QVERIFY2(mEndTime, "Couldn't find end time field.");
         mEndZone = mDialog->findChild<KTimeZoneComboBox *>(QStringLiteral("mTimeZoneComboEnd"));
         QVERIFY2(mEndZone, "Couldn't find end time zone field.");
+        mEditor = mDialog->findChild<IncidenceEditor *>();
+        QVERIFY2(mEditor, "Couldn't find the combined editor.");
     }
 
 private Q_SLOTS:
@@ -60,7 +63,7 @@ private Q_SLOTS:
         qputenv("TZ", "Asia/Tokyo");
     }
 
-    void testStartTimeValidation()
+    void testEventTimeValidation()
     {
         QLocale currentLocale;
         QLocale::setDefault(QLocale::c());
@@ -79,54 +82,69 @@ private Q_SLOTS:
         Akonadi::Item item;
         item.setPayload<KCalendarCore::Event::Ptr>(event);
         mDialog->load(item);
-        auto editor = mDialog->findChild<IncidenceEditor *>();
-        QVERIFY2(editor, "Couldn't find the combined editor.");
-        QCOMPARE(editor->metaObject()->className(), "IncidenceEditorNG::CombinedIncidenceEditor");
-        QVERIFY(editor->isValid());
+        QVERIFY(mEditor->isValid());
 
         auto validDate = mStartDate->currentText();
         auto invalidDate = mStartDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
         mStartDate->setCurrentText(invalidDate);
-        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start date ").append(invalidDate)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start date ").append(invalidDate)));
         mStartDate->setCurrentText(validDate);
-        QVERIFY2(editor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
 
         auto validTime = mStartTime->currentText();
         auto invalidTime = mStartTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
         mStartTime->setCurrentText(invalidTime);
-        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start time ").append(invalidTime)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start time ").append(invalidTime)));
         mStartTime->setCurrentText(validTime);
-        QVERIFY2(editor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
 
         validDate = mEndDate->currentText();
         invalidDate = mEndDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
         mEndDate->setCurrentText(invalidDate);
-        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end date ").append(invalidDate)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end date ").append(invalidDate)));
         mEndDate->setCurrentText(validDate);
-        QVERIFY2(editor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
 
         validTime = mEndTime->currentText();
         invalidTime = mEndTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
         mEndTime->setCurrentText(invalidTime);
-        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end time ").append(invalidTime)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end time ").append(invalidTime)));
         mEndTime->setCurrentText(validTime);
-        QVERIFY2(editor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
+    }
 
-        mStartZone->selectTimeZone(QTimeZone("Africa/Abidjan"));     // UTC.
-        mEndZone->selectTimeZone(QTimeZone("Africa/Abidjan"));
-        QVERIFY(editor->isValid());
+    void testEventTimeOrdering()
+    {
+        QLocale currentLocale;
+        QLocale::setDefault(QLocale::c());
+
+        const QDate date {2022, 04, 11};
+        const QTime time {10, 11, 12};
+        const QTimeZone zone {"Africa/Abidjan"};     // UTC+0.
+        const QDateTime dt {date, time, zone};
+
+        // Put the dialog into a known, valid state.
+        KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
+        event->setSummary(QStringLiteral("e"));
+        event->setDtStart(dt);
+        event->setDtEnd(dt);
+        event->setAllDay(false);
+        Akonadi::Item item;
+        item.setPayload<KCalendarCore::Event::Ptr>(event);
+        mDialog->load(item);
+        QVERIFY(mEditor->isValid());
 
         mEndDate->setDate(mStartDate->date().addDays(-1));
         mEndTime->setTime(mStartTime->time());
-        QVERIFY2(!editor->isValid(), "Didn't detect end date < start date");
+        QVERIFY2(!mEditor->isValid(), "Didn't detect end date < start date");
         mEndDate->setDate(mStartDate->date());
-        QVERIFY(editor->isValid());
+        QVERIFY(mEditor->isValid());
         mEndTime->setTime(mStartTime->time().addSecs(-60));
-        QVERIFY2(!editor->isValid(), "Didn't detect end time < start time");
+        QVERIFY2(!mEditor->isValid(), "Didn't detect end time < start time");
         mEndTime->setTime(mStartTime->time());
-        QVERIFY(editor->isValid());
+        QVERIFY(mEditor->isValid());
         mEndZone->selectTimeZone(QTimeZone("Africa/Addis_Ababa"));   // UTC+3; causes 3-hour shift in effective end time.
-        QVERIFY2(!editor->isValid(), "Didn't detect end time < start time in different time zone");
+        QVERIFY2(!mEditor->isValid(), "Didn't detect end time < start time in different time zone");
 
         QLocale::setDefault(currentLocale);
     }
