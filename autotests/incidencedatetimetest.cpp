@@ -65,8 +65,8 @@ private Q_SLOTS:
         QLocale currentLocale;
         QLocale::setDefault(QLocale::c());
 
-        const QDate date {2022, 04, 01};
-        const QTime time {00, 00, 00};
+        const QDate date {2022, 04, 11};
+        const QTime time {10, 11, 12};
         const QTimeZone zone {"Etc/UTC"};
         const QDateTime dt {date, time, zone};
 
@@ -84,25 +84,33 @@ private Q_SLOTS:
         QCOMPARE(editor->metaObject()->className(), "IncidenceEditorNG::CombinedIncidenceEditor");
         QVERIFY(editor->isValid());
 
-        mStartDate->setCurrentText(QStringLiteral("32 Jan 2000"));
-        QVERIFY2(!editor->isValid(), "Didn't detect invalid start date.");
-        mStartDate->setCurrentText(QStringLiteral("12 Jan 2000"));
-        QVERIFY(editor->isValid());
+        auto validDate = mStartDate->currentText();
+        auto invalidDate = mStartDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
+        mStartDate->setCurrentText(invalidDate);
+        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start date ").append(invalidDate)));
+        mStartDate->setCurrentText(validDate);
+        QVERIFY2(editor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
 
-        mStartTime->setCurrentText(QStringLiteral("12:99:00"));
-        QVERIFY2(!editor->isValid(), "Didn't detect invalid start time.");
-        mStartTime->setCurrentText(QStringLiteral("12:00:00"));
-        QVERIFY(editor->isValid());
+        auto validTime = mStartTime->currentText();
+        auto invalidTime = mStartTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
+        mStartTime->setCurrentText(invalidTime);
+        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start time ").append(invalidTime)));
+        mStartTime->setCurrentText(validTime);
+        QVERIFY2(editor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
 
-        mEndDate->setCurrentText(QStringLiteral("33 Jan 2000"));
-        QVERIFY2(!editor->isValid(), "Didn't detect invalid end date.");
-        mEndDate->setCurrentText(QStringLiteral("13 Jan 2000"));
-        QVERIFY(editor->isValid());
+        validDate = mEndDate->currentText();
+        invalidDate = mEndDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
+        mEndDate->setCurrentText(invalidDate);
+        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end date ").append(invalidDate)));
+        mEndDate->setCurrentText(validDate);
+        QVERIFY2(editor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
 
-        mEndTime->setCurrentText(QStringLiteral("12:99:00"));
-        QVERIFY2(!editor->isValid(), "Didn't detect invalid end time.");
-        mEndTime->setCurrentText(QStringLiteral("12:00:00"));
-        QVERIFY(editor->isValid());
+        validTime = mEndTime->currentText();
+        invalidTime = mEndTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
+        mEndTime->setCurrentText(invalidTime);
+        QVERIFY2(!editor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end time ").append(invalidTime)));
+        mEndTime->setCurrentText(validTime);
+        QVERIFY2(editor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
 
         mStartZone->selectTimeZone(QTimeZone("Africa/Abidjan"));     // UTC.
         mEndZone->selectTimeZone(QTimeZone("Africa/Abidjan"));
