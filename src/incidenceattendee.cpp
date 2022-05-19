@@ -771,7 +771,7 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
         }
     }
 
-    int answer = KMessageBox::No;
+    int answer;
     if (currentOrganizerAttendee > -1) {
         answer = KMessageBox::questionYesNo(mParentWidget,
                                             i18nc("@option",
