@@ -694,7 +694,7 @@ void IncidenceDateTime::save(const KCalendarCore::Todo::Ptr &todo)
         todo->setDtDue(currentEndDateTime(), true /* first */);
         todo->setAllDay(mUi->mWholeDayCheck->isChecked());
     } else {
-        todo->setDtDue(QDateTime());
+        todo->setDtDue(QDateTime(), true /* first */);
     }
 }
 
