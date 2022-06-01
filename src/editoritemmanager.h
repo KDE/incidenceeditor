@@ -93,15 +93,6 @@ private:
     std::unique_ptr<ItemEditorPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(ItemEditor)
     Q_DISABLE_COPY(EditorItemManager)
-
-    Q_PRIVATE_SLOT(d_ptr, void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &))
-    Q_PRIVATE_SLOT(d_ptr, void itemFetchResult(KJob *))
-    Q_PRIVATE_SLOT(d_ptr, void itemMoveResult(KJob *))
-    Q_PRIVATE_SLOT(d_ptr,
-                   void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString))
-    Q_PRIVATE_SLOT(d_ptr,
-                   void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString))
-    Q_PRIVATE_SLOT(d_ptr, void moveJobFinished(KJob *job))
 };
 
 class ItemEditorUi

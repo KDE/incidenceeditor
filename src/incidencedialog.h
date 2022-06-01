@@ -96,19 +96,5 @@ private:
 
     void writeConfig();
     void readConfig();
-
-    Q_PRIVATE_SLOT(d_ptr, void handleAlarmCountChange(int))
-    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFinish(IncidenceEditorNG::EditorItemManager::SaveAction))
-    Q_PRIVATE_SLOT(d_ptr, void handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction, QString))
-    Q_PRIVATE_SLOT(d_ptr, void handleRecurrenceChange(IncidenceEditorNG::RecurrenceType))
-    Q_PRIVATE_SLOT(d_ptr, void loadTemplate(QString))
-    Q_PRIVATE_SLOT(d_ptr, void saveTemplate(QString))
-    Q_PRIVATE_SLOT(d_ptr, void storeTemplatesInConfig(QStringList))
-    Q_PRIVATE_SLOT(d_ptr, void updateAttachmentCount(int))
-    Q_PRIVATE_SLOT(d_ptr, void updateAttendeeCount(int))
-    Q_PRIVATE_SLOT(d_ptr, void updateResourceCount(int))
-    Q_PRIVATE_SLOT(d_ptr, void updateButtonStatus(bool))
-    Q_PRIVATE_SLOT(d_ptr, void showMessage(QString, KMessageWidget::MessageType))
-    Q_PRIVATE_SLOT(d_ptr, void slotInvalidCollection())
 };
 }

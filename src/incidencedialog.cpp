@@ -167,19 +167,33 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     const Akonadi::Collection col(colId);
     setCalendarCollection(col);
 
-    q->connect(mEditor, SIGNAL(showMessage(QString, KMessageWidget::MessageType)), SLOT(showMessage(QString, KMessageWidget::MessageType)));
-    q->connect(mEditor, SIGNAL(dirtyStatusChanged(bool)), SLOT(updateButtonStatus(bool)));
-    q->connect(mItemManager,
-               SIGNAL(itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction)),
-               SLOT(handleItemSaveFinish(IncidenceEditorNG::EditorItemManager::SaveAction)));
-    q->connect(mItemManager,
-               SIGNAL(itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction, QString)),
-               SLOT(handleItemSaveFail(IncidenceEditorNG::EditorItemManager::SaveAction, QString)));
-    q->connect(ieAlarm, SIGNAL(alarmCountChanged(int)), SLOT(handleAlarmCountChange(int)));
-    q->connect(mIeRecurrence, SIGNAL(recurrenceChanged(IncidenceEditorNG::RecurrenceType)), SLOT(handleRecurrenceChange(IncidenceEditorNG::RecurrenceType)));
-    q->connect(ieAttachments, SIGNAL(attachmentCountChanged(int)), SLOT(updateAttachmentCount(int)));
-    q->connect(mIeAttendee, SIGNAL(attendeeCountChanged(int)), SLOT(updateAttendeeCount(int)));
-    q->connect(mIeResource, SIGNAL(resourceCountChanged(int)), SLOT(updateResourceCount(int)));
+    q->connect(mEditor, &CombinedIncidenceEditor::showMessage, q, [this](const QString &reason, KMessageWidget::MessageType msgType) {
+        showMessage(reason, msgType);
+    });
+    q->connect(mEditor, &IncidenceEditor::dirtyStatusChanged, q, [this](bool isDirty) {
+        updateButtonStatus(isDirty);
+    });
+    q->connect(mItemManager, &EditorItemManager::itemSaveFinished, q, [this](EditorItemManager::SaveAction action) {
+        handleItemSaveFinish(action);
+    });
+    q->connect(mItemManager, &EditorItemManager::itemSaveFailed, q, [this](EditorItemManager::SaveAction action, const QString &message) {
+        handleItemSaveFail(action, message);
+    });
+    q->connect(ieAlarm, &IncidenceAlarm::alarmCountChanged, q, [this](int newCount) {
+        handleAlarmCountChange(newCount);
+    });
+    q->connect(mIeRecurrence, &IncidenceRecurrence::recurrenceChanged, q, [this](IncidenceEditorNG::RecurrenceType type) {
+        handleRecurrenceChange(type);
+    });
+    q->connect(ieAttachments, &IncidenceAttachment::attachmentCountChanged, q, [this](int newCount) {
+        updateAttachmentCount(newCount);
+    });
+    q->connect(mIeAttendee, &IncidenceAttendee::attendeeCountChanged, q, [this](int count) {
+        updateAttendeeCount(count);
+    });
+    q->connect(mIeResource, &IncidenceResource::resourceCountChanged, q, [this](int count) {
+        updateResourceCount(count);
+    });
 }
 
 IncidenceDialogPrivate::~IncidenceDialogPrivate()
@@ -315,9 +329,15 @@ void IncidenceDialogPrivate::manageTemplates()
     QPointer<IncidenceEditorNG::TemplateManagementDialog> dialog(
         new IncidenceEditorNG::TemplateManagementDialog(q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
 
-    q->connect(dialog, SIGNAL(loadTemplate(QString)), SLOT(loadTemplate(QString)));
-    q->connect(dialog, SIGNAL(templatesChanged(QStringList)), SLOT(storeTemplatesInConfig(QStringList)));
-    q->connect(dialog, SIGNAL(saveTemplate(QString)), SLOT(saveTemplate(QString)));
+    q->connect(dialog, &TemplateManagementDialog::loadTemplate, q, [this](const QString &templateName) {
+        loadTemplate(templateName);
+    });
+    q->connect(dialog, &TemplateManagementDialog::templatesChanged, q, [this](const QStringList &templates) {
+        storeTemplatesInConfig(templates);
+    });
+    q->connect(dialog, &TemplateManagementDialog::saveTemplate, q, [this](const QString &templateName) {
+        saveTemplate(templateName);
+    });
     dialog->exec();
     delete dialog;
 }
@@ -669,7 +689,9 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *pa
     connect(d->mUi->mAcceptInvitationButton, &QAbstractButton::clicked, d->mUi->mInvitationBar, &QWidget::hide);
     connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked, d->mIeAttendee, &IncidenceAttendee::declineForMe);
     connect(d->mUi->mDeclineInvitationButton, &QAbstractButton::clicked, d->mUi->mInvitationBar, &QWidget::hide);
-    connect(this, SIGNAL(invalidCollection()), this, SLOT(slotInvalidCollection()));
+    connect(this, &IncidenceDialog::invalidCollection, this, [d]() {
+        d->slotInvalidCollection();
+    });
     readConfig();
 }
 

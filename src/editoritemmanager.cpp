@@ -51,9 +51,9 @@ public:
     void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &);
     void itemFetchResult(KJob *job);
     void itemMoveResult(KJob *job);
-    void onModifyFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    void onModifyFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
-    void onCreateFinished(int changeId, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
+    void onCreateFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void setupMonitor();
     void moveJobFinished(KJob *job);
@@ -74,14 +74,16 @@ ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorI
 
     // clang-format off
     qq->connect(mChanger,
-                SIGNAL(modifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+                &Akonadi::IncidenceChanger::modifyFinished,
                 qq,
-                SLOT(onModifyFinished(int,Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+                [this](int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString) {
+                onModifyFinished(item, resultCode, errorString); });
 
     qq->connect(mChanger,
-                SIGNAL(createFinished(int, Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)),
+                &Akonadi::IncidenceChanger::createFinished,
                 qq,
-                SLOT(onCreateFinished(int, Akonadi::Item,Akonadi::IncidenceChanger::ResultCode,QString)));
+                [this](int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString) {
+                    onCreateFinished(item, resultCode, errorString); });
     // clang-format on
 }
 
@@ -163,7 +165,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     }
 }
 
-void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
+void ItemEditorPrivate::onModifyFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_Q(EditorItemManager);
     if (resultCode == Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -173,7 +175,9 @@ void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item, Akonadi
             setupMonitor();
         } else { // There's a collection move too.
             auto moveJob = new Akonadi::ItemMoveJob(mItem, mItemUi->selectedCollection());
-            q->connect(moveJob, SIGNAL(result(KJob *)), SLOT(moveJobFinished(KJob *)));
+            q->connect(moveJob, &KJob::result, q, [this](KJob *job) {
+                moveJobFinished(job);
+            });
         }
     } else if (resultCode == Akonadi::IncidenceChanger::ResultCodeUserCanceled) {
         Q_EMIT q->itemSaveFailed(EditorItemManager::Modify, QString());
@@ -184,7 +188,7 @@ void ItemEditorPrivate::onModifyFinished(int, const Akonadi::Item &item, Akonadi
     }
 }
 
-void ItemEditorPrivate::onCreateFinished(int, const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
+void ItemEditorPrivate::onCreateFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_Q(EditorItemManager);
     if (resultCode == Akonadi::IncidenceChanger::ResultCodeSuccess) {
@@ -289,7 +293,9 @@ void EditorItemManager::load(const Akonadi::Item &item)
     // We fetch anyways to make sure we have everything required including tags
     auto job = new Akonadi::ItemFetchJob(item, this);
     job->setFetchScope(d->mFetchScope);
-    connect(job, SIGNAL(result(KJob *)), SLOT(itemFetchResult(KJob *)));
+    connect(job, &KJob::result, this, [d](KJob *job) {
+        d->itemFetchResult(job);
+    });
 }
 
 void EditorItemManager::save()
@@ -328,7 +334,9 @@ void EditorItemManager::save()
                 (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
             } else {
                 auto itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
-                connect(itemMoveJob, SIGNAL(result(KJob *)), SLOT(itemMoveResult(KJob *)));
+                connect(itemMoveJob, &KJob::result, this, [d](KJob *job) {
+                    d->itemMoveResult(job);
+                });
             }
         }
     } else { // An invalid item. Means we're creating.
