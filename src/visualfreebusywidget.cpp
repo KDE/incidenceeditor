@@ -9,17 +9,10 @@
 #include "freebusyganttproxymodel.h"
 #include <CalendarSupport/FreeBusyItemModel>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <KGantt/KGanttAbstractRowController>
-#include <KGantt/KGanttDateTimeGrid>
-#include <KGantt/KGanttGraphicsView>
-#include <KGantt/KGanttView>
-#else
 #include <KGanttAbstractRowController>
 #include <KGanttDateTimeGrid>
 #include <KGanttGraphicsView>
 #include <KGanttView>
-#endif
 
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>

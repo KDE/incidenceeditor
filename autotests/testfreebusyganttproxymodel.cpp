@@ -12,11 +12,7 @@
 #include <CalendarSupport/FreeBusyItemModel>
 
 #include <KCalendarCore/Attendee>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <KGantt/KGanttGraphicsView>
-#else
 #include <KGanttGraphicsView>
-#endif
 
 #include <QAbstractItemModelTester>
 #include <QStandardPaths>

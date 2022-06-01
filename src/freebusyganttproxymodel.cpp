@@ -9,11 +9,7 @@
 #include <CalendarSupport/FreeBusyItemModel>
 
 #include <KCalendarCore/FreeBusyPeriod>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <KGantt/KGanttGraphicsView>
-#else
 #include <KGanttGraphicsView>
-#endif
 
 #include <KLocalizedString>
 
