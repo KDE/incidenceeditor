@@ -42,7 +42,7 @@ void KTimeZoneComboBoxPrivate::fillComboBox()
     const auto sortStart = mZones.end();
 
     std::copy(lstTimeZoneIds.begin(), lstTimeZoneIds.end(), std::back_inserter(mZones));
-    std::sort(sortStart, mZones.end());    // clazy:exclude=detaching-member
+    std::sort(sortStart, mZones.end()); // clazy:exclude=detaching-member
 
     // Put translated zones into the combobox
     for (const auto &z : std::as_const(mZones)) {

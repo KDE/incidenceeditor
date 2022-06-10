@@ -12,7 +12,7 @@
 
 QTEST_MAIN(KTimeZoneComboBoxTest)
 
-const auto TEST_TZ = "Asia/Tokyo";      // Not UTC, not Paris.
+const auto TEST_TZ = "Asia/Tokyo"; // Not UTC, not Paris.
 
 void KTimeZoneComboBoxTest::initTestCase()
 {

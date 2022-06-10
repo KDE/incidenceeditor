@@ -284,8 +284,8 @@ void IncidenceDateTime::updateStartSpec()
     // RFC 5545 states that both date-times must be "floating" if either is.
     // Otherwise, for the user's convenience, if both combos used to be the same
     // then keep them the same.
-    if ( (mUi->mTimeZoneComboStart->isFloating() != mUi->mTimeZoneComboEnd->isFloating())
-            || currentEndDateTime().timeZone() == mCurrentStartDateTime.timeZone() ) {
+    if ((mUi->mTimeZoneComboStart->isFloating() != mUi->mTimeZoneComboEnd->isFloating())
+        || currentEndDateTime().timeZone() == mCurrentStartDateTime.timeZone()) {
         mUi->mTimeZoneComboEnd->setCurrentIndex(mUi->mTimeZoneComboStart->currentIndex());
     }
 
@@ -439,12 +439,12 @@ bool IncidenceDateTime::isDirty(const KCalendarCore::Todo::Ptr &todo) const
 
     if (todo->allDay()) {
         if ((mUi->mStartCheck->isChecked() && mUi->mStartDateEdit->date() != mInitialStartDT.date())
-          || (mUi->mEndCheck->isChecked() && mUi->mEndDateEdit->date() != mInitialEndDT.date())) {
+            || (mUi->mEndCheck->isChecked() && mUi->mEndDateEdit->date() != mInitialEndDT.date())) {
             return true;
         }
     } else {
-        if ((mUi->mStartCheck->isChecked() &&!identical(currentStartDateTime(), mInitialStartDT))
-          || (mUi->mEndCheck->isChecked() && !identical(currentEndDateTime(), mInitialEndDT))) {
+        if ((mUi->mStartCheck->isChecked() && !identical(currentStartDateTime(), mInitialStartDT))
+            || (mUi->mEndCheck->isChecked() && !identical(currentEndDateTime(), mInitialEndDT))) {
             return true;
         }
     }

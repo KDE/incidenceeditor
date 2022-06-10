@@ -68,10 +68,10 @@ private Q_SLOTS:
         QLocale currentLocale;
         QLocale::setDefault(QLocale::c());
 
-        const QDate date {2022, 04, 11};
-        const QTime time {10, 11, 12};
-        const QTimeZone zone {"Etc/UTC"};
-        const QDateTime dt {date, time, zone};
+        const QDate date{2022, 04, 11};
+        const QTime time{10, 11, 12};
+        const QTimeZone zone{"Etc/UTC"};
+        const QDateTime dt{date, time, zone};
 
         // Put the dialog into a known, valid state.
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
@@ -118,10 +118,10 @@ private Q_SLOTS:
         QLocale currentLocale;
         QLocale::setDefault(QLocale::c());
 
-        const QDate date {2022, 04, 11};
-        const QTime time {10, 11, 12};
-        const QTimeZone zone {"Africa/Abidjan"};     // UTC+0.
-        const QDateTime dt {date, time, zone};
+        const QDate date{2022, 04, 11};
+        const QTime time{10, 11, 12};
+        const QTimeZone zone{"Africa/Abidjan"}; // UTC+0.
+        const QDateTime dt{date, time, zone};
 
         // Put the dialog into a known, valid state.
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
@@ -143,7 +143,7 @@ private Q_SLOTS:
         QVERIFY2(!mEditor->isValid(), "Didn't detect end time < start time");
         mEndTime->setTime(mStartTime->time());
         QVERIFY(mEditor->isValid());
-        mEndZone->selectTimeZone(QTimeZone("Africa/Addis_Ababa"));   // UTC+3; causes 3-hour shift in effective end time.
+        mEndZone->selectTimeZone(QTimeZone("Africa/Addis_Ababa")); // UTC+3; causes 3-hour shift in effective end time.
         QVERIFY2(!mEditor->isValid(), "Didn't detect end time < start time in different time zone");
 
         QLocale::setDefault(currentLocale);
@@ -151,7 +151,7 @@ private Q_SLOTS:
 
     void testLoadingTimelessTodo()
     {
-        KCalendarCore::Todo::Ptr todo {new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
         todo->setDtStart(QDateTime());
         todo->setDtDue(QDateTime());
         todo->setAllDay(false);
@@ -159,7 +159,7 @@ private Q_SLOTS:
         item.setPayload<KCalendarCore::Todo::Ptr>(todo);
         mDialog->load(item);
 
-        QVERIFY( ! mAllDay->isEnabled());
+        QVERIFY(!mAllDay->isEnabled());
         QVERIFY(mAllDay->isVisible());
         QVERIFY(mStartCheck->isEnabled());
         QVERIFY(mStartCheck->isVisible());
@@ -171,12 +171,12 @@ private Q_SLOTS:
 
     void testLoadingTimedTodo()
     {
-        const QDate date {2022, 04, 01};
-        const QTime time {00, 00, 00};
-        const QTimeZone zone {"Africa/Abidjan"};
-        const QDateTime dt {date, time, zone};
+        const QDate date{2022, 04, 01};
+        const QTime time{00, 00, 00};
+        const QTimeZone zone{"Africa/Abidjan"};
+        const QDateTime dt{date, time, zone};
 
-        KCalendarCore::Todo::Ptr todo {new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
         todo->setDtStart(dt);
         todo->setDtDue(dt);
         todo->setAllDay(false);
@@ -203,12 +203,12 @@ private Q_SLOTS:
 
     void testLoadingAlldayTodo()
     {
-        const QDate date {2022, 04, 01};
-        const QTime time {00, 00, 00};
-        const QTimeZone zone {"Africa/Abidjan"};
-        const QDateTime dt {date, time, zone};
+        const QDate date{2022, 04, 01};
+        const QTime time{00, 00, 00};
+        const QTimeZone zone{"Africa/Abidjan"};
+        const QDateTime dt{date, time, zone};
 
-        KCalendarCore::Todo::Ptr todo {new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
         todo->setDtStart(dt);
         todo->setDtDue(dt);
         todo->setAllDay(true);
@@ -223,15 +223,14 @@ private Q_SLOTS:
         QVERIFY(mStartCheck->isVisible());
         QCOMPARE(mStartCheck->checkState(), Qt::Checked);
         QCOMPARE(mStartDate->date(), date);
-        QVERIFY( ! mStartTime->isEnabled());
-        QVERIFY( ! mStartZone->isVisible());
+        QVERIFY(!mStartTime->isEnabled());
+        QVERIFY(!mStartZone->isVisible());
         QVERIFY(mEndCheck->isEnabled());
         QVERIFY(mEndCheck->isVisible());
         QCOMPARE(mEndCheck->checkState(), Qt::Checked);
-        QVERIFY( ! mEndTime->isEnabled());
-        QVERIFY( ! mEndZone->isVisible());
+        QVERIFY(!mEndTime->isEnabled());
+        QVERIFY(!mEndZone->isVisible());
     }
-
 };
 
 QTEST_MAIN(IncidenceDateTimeTest)
