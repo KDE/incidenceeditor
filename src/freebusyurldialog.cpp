@@ -57,13 +57,13 @@ void FreeBusyUrlDialog::slotOk()
 FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget *parent)
     : QWidget(parent)
     , mAttendee(attendee)
+    , mUrlEdit(new KLineEdit(this))
 {
     QBoxLayout *topLayout = new QVBoxLayout(this);
 
     auto label = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:", mAttendee->name(), mAttendee->email()), this);
     topLayout->addWidget(label);
 
-    mUrlEdit = new KLineEdit(this);
     mUrlEdit->setFocus();
     mUrlEdit->setWhatsThis(i18nc("@info:whatsthis", "Enter the location of the Free/Busy information for the attendee."));
     mUrlEdit->setToolTip(i18nc("@info:tooltip", "Enter the location of the information."));

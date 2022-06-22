@@ -42,7 +42,7 @@ protected Q_SLOTS:
 
 private:
     KCalendarCore::Attachment mAttachment;
-    AttachmentIconItem *mItem = nullptr;
+    AttachmentIconItem *const mItem;
     QMimeType mMimeType;
     Ui::AttachmentEditDialog *const mUi;
     QPushButton *mOkButton = nullptr;

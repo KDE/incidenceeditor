@@ -175,7 +175,7 @@ private:
     // to prevent the process from being repeated many times
     // after a series of quick parameter changes.
 
-    CalendarSupport::FreeBusyItemModel *mFBModel = nullptr;
+    CalendarSupport::FreeBusyItemModel *const mFBModel;
     QWidget *mParentWidget = nullptr;
 
     QSet<KCalendarCore::Attendee::Role> mMandatoryRoles;

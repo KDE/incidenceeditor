@@ -41,7 +41,7 @@ private:
     void onSelectionChanged(const Akonadi::Tag::List &);
     void onMissingTagCreated(KJob *);
 
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 
     /**
      * List of categories for which no tag might exist.

@@ -48,7 +48,7 @@ private:
     Ui::EventOrTodoDesktop *const mUi;
 
     KCalendarCore::Alarm::List mAlarms;
-    IncidenceDateTime *mDateTime = nullptr;
+    IncidenceDateTime *const mDateTime;
     int mEnabledAlarmCount = 0;
     bool mIsTodo = false;
 };
