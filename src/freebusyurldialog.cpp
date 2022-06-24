@@ -56,8 +56,8 @@ void FreeBusyUrlDialog::slotOk()
 
 FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget *parent)
     : QWidget(parent)
-    , mAttendee(attendee)
     , mUrlEdit(new KLineEdit(this))
+    , mAttendee(attendee)
 {
     QBoxLayout *topLayout = new QVBoxLayout(this);
 
