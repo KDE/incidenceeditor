@@ -8,7 +8,7 @@ set(grant_lib KGantt)
 
 macro(IE_UNIT_TESTS)
   foreach(_testname ${ARGN})
-    add_executable(${_testname} ${_testname}.cpp)
+    add_executable(${_testname} ${_testname}.cpp ${_testname}.h)
     add_test(NAME ${_testname} COMMAND ${_testname})
     ecm_mark_as_test(${_testname})
     target_link_libraries(${_testname}
