@@ -4,8 +4,8 @@ set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 add_executable(resourcemanagement_gui resourcemanagment_gui.cpp)
 target_link_libraries(resourcemanagement_gui
-  Qt${QT_MAJOR_VERSION}::Core
-  Qt${QT_MAJOR_VERSION}::Gui
+  Qt::Core
+  Qt::Gui
   KF5::Mime
   KF5::IncidenceEditor
   KF5::Libkdepim
