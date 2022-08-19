@@ -177,6 +177,9 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
         todo->setCategories(relatedTodo->categories());
     }
 
+    // Now, but not in the "floating" time zone.
+    auto const systemNow = QDateTime::currentDateTime().toTimeZone(QTimeZone::systemTimeZone());
+
     if (mEndDt.isValid()) {
         if (mEndDt.timeSpec() == Qt::LocalTime) {
             // Ensure the default is not "floating"
@@ -190,7 +193,7 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
     } else if (relatedTodo) {
         todo->setDtDue(QDateTime());
     } else {
-        todo->setDtDue(QDateTime::currentDateTime().addDays(1), true /** first */);
+        todo->setDtDue(systemNow.addDays(1), true /** first */);
     }
 
     if (mStartDt.isValid()) {
@@ -205,8 +208,8 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
     } else if (relatedTodo && relatedTodo->hasStartDate() && relatedTodo->dtStart() <= todo->dtDue()) {
         todo->setDtStart(relatedTodo->dtStart());
         todo->setAllDay(relatedTodo->allDay());
-    } else if (!mEndDt.isValid() || (QDateTime::currentDateTime() < mEndDt)) {
-        todo->setDtStart(QDateTime::currentDateTime());
+    } else if (!mEndDt.isValid() || systemNow < mEndDt) {
+        todo->setDtStart(systemNow);
     } else {
         todo->setDtStart(mEndDt.addDays(-1));
     }
