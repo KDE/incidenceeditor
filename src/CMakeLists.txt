@@ -178,7 +178,7 @@ set_target_properties(KF5IncidenceEditor PROPERTIES
 
 install(TARGETS
     KF5IncidenceEditor
-    EXPORT KF5IncidenceEditorTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} 
+    EXPORT KF5IncidenceEditorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS} 
 )
 
 ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
