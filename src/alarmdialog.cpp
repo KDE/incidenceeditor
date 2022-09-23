@@ -9,7 +9,6 @@
 #include "editorconfig.h"
 #include "ui_alarmdialog.h"
 
-#include <KEmailAddress>
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>

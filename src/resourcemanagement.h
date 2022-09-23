@@ -9,7 +9,6 @@
 #include "incidenceeditor_export.h"
 
 #include <KLDAP/LdapClient>
-#include <KLDAP/LdapClientSearch>
 
 #include "resourceitem.h"
 #include <CalendarSupport/FreeBusyCalendar>

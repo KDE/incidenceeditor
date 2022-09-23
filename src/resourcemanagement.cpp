@@ -17,7 +17,6 @@
 #include <EventViews/AgendaView>
 
 #include <KCalendarCore/Event>
-#include <KCalendarCore/MemoryCalendar>
 
 #include <KConfigGroup>
 #include <KLocalizedString>

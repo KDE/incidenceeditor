@@ -24,7 +24,6 @@
 #include <KEmailAddress>
 
 #include <KIO/Job>
-#include <KIO/StoredTransferJob>
 #include <KLocalizedString>
 
 #include <QFile>
