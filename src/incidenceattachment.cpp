@@ -18,12 +18,8 @@
 
 #include <KActionCollection>
 #include <KIO/Job>
-#include <kio_version.h>
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 98, 0)
-#include <KIO/JobUiDelegateFactory>
-#else
 #include <KIO/JobUiDelegate>
-#endif
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
@@ -275,11 +271,7 @@ void IncidenceAttachment::showAttachment(QListWidgetItem *item)
         openURL(QUrl(att.uri()));
     } else {
         auto job = new KIO::OpenUrlJob(attitem->tempFileForAttachment(), att.mimeType());
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 98, 0)
         job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, mAttachmentView));
-#else
-        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, mAttachmentView));
-#endif
         job->setDeleteTemporaryFile(true);
         job->start();
     }
