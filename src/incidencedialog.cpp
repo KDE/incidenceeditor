@@ -42,11 +42,13 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 
+#include <KWindowConfig>
 #include <QCloseEvent>
 #include <QDir>
 #include <QIcon>
 #include <QStandardPaths>
 #include <QTimeZone>
+#include <QWindow>
 
 using namespace IncidenceEditorNG;
 
@@ -703,18 +705,16 @@ IncidenceDialog::~IncidenceDialog()
 void IncidenceDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void IncidenceDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 500));
     KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
-    const QSize size = group.readEntry("Size", QSize());
-    if (size.isValid()) {
-        resize(size);
-    } else {
-        resize(QSize(500, 500).expandedTo(minimumSizeHint()));
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void IncidenceDialog::load(const Akonadi::Item &item, const QDate &activeDate)

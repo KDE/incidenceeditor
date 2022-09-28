@@ -22,11 +22,13 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
+#include <KWindowConfig>
 #include <QColor>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QStringList>
+#include <QWindow>
 
 using namespace IncidenceEditorNG;
 
@@ -148,17 +150,17 @@ ResourceManagement::~ResourceManagement()
 
 void ResourceManagement::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
     KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ResourceManagement::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
 
