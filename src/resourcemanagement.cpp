@@ -10,8 +10,6 @@
 #include "ui_resourcemanagement.h"
 #include <CalendarSupport/FreeBusyItem>
 
-#include "freebusyganttproxymodel.h"
-
 #include <Akonadi/FreeBusyManager>
 
 #include <EventViews/AgendaView>

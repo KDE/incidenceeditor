@@ -9,7 +9,6 @@
 #include <KLineEdit>
 #include <KLocalizedString>
 
-#include "incidenceeditor_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <QBoxLayout>

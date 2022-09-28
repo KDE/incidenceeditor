@@ -7,8 +7,6 @@
 
 #include "incidencecategories.h"
 
-#include "editorconfig.h"
-
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
 

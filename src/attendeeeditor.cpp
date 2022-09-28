@@ -7,8 +7,6 @@
 
 #include "attendeeeditor.h"
 
-#include "incidenceeditor_debug.h"
-
 using namespace IncidenceEditorNG;
 
 AttendeeEditor::AttendeeEditor(QWidget *parent)
