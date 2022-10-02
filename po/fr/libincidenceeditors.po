@@ -1,0 +1,3589 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2010, 2011, 2012, 2013, 2014.
+# Sébastien Renard <renard@kde.org>, 2012, 2013, 2014.
+# xavier <xavier.besnard@neuf.fr>, 2012, 2020, 2021.
+# Vincent Pinon <vpinon@kde.org>, 2017, 2018.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2021-11-06 22:41+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.08.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: alarmdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a new reminder"
+msgstr "Créer un nouveau rappel"
+
+#: alarmdialog.cpp:67
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit existing reminder"
+msgstr "Éditer le rappel existant"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "Before the to-do starts"
+msgstr "Avant que la tâche commence"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "After the to-do starts"
+msgstr "Après que la tâche commence"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "Before the to-do is due"
+msgstr "Avant que la tâche expire"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "After the to-do is due"
+msgstr "Après que la tâche expire"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "Before the event starts"
+msgstr "Avant que l'évènement commence"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "After the event starts"
+msgstr "Après que l'évènement commence"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "Before the event ends"
+msgstr "Avant que l'évènement se termine"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "After the event ends"
+msgstr "Après que l'évènement se termine"
+
+#: alarmpresets.cpp:83
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "At start"
+msgstr "Au démarrage"
+
+#: alarmpresets.cpp:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before start"
+msgid_plural "%1 minutes before start"
+msgstr[0] "%1 minute avant le début"
+msgstr[1] "%1 minutes avant le début"
+
+#: alarmpresets.cpp:87
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before start"
+msgid_plural "%1 hours before start"
+msgstr[0] "%1 heure avant le début"
+msgstr[1] "%1 heures avant le début"
+
+#: alarmpresets.cpp:89
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before start"
+msgid_plural "%1 days before start"
+msgstr[0] "%1 jour avant le début"
+msgstr[1] "%1 jours avant le début"
+
+#: alarmpresets.cpp:103
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "When due"
+msgstr "Lors de l'expiration"
+
+#: alarmpresets.cpp:105
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before due"
+msgid_plural "%1 minutes before due"
+msgstr[0] "%1 minute avant l'expiration"
+msgstr[1] "%1 minutes avant l'expiration"
+
+#: alarmpresets.cpp:107
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before due"
+msgid_plural "%1 hours before due"
+msgstr[0] "%1 heure avant l'expiration"
+msgstr[1] "%1 heures avant l'expiration"
+
+#: alarmpresets.cpp:109
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before due"
+msgid_plural "%1 days before due"
+msgstr[0] "%1 jour avant l'expiration"
+msgstr[1] "%1 jours avant l'expiration"
+
+#: attachmenteditdialog.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Attachment"
+msgstr "Modifier la pièce jointe"
+
+#: attachmenteditdialog.cpp:57
+#, kde-format
+msgctxt "@label unknown mimetype"
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: attachmenteditdialog.cpp:110
+#, kde-format
+msgctxt "@label"
+msgid "New attachment"
+msgstr "Nouvelle pièce jointe"
+
+#: attendeeline.cpp:147 incidenceattendee.cpp:61
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request Response"
+msgstr "Requiert une réponse"
+
+#: attendeeline.cpp:148 incidenceattendee.cpp:62
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request No Response"
+msgstr "Ne requiert pas de réponse"
+
+#: attendeeline.cpp:150 attendeelineeditdelegate.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the name or email address of the attendee."
+msgstr "Saisissez le nom ou l'adresse de courriel du participant."
+
+#: attendeeline.cpp:153 incidenceattendee.cpp:64
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the current attendance status of the attendee."
+msgstr "Édite l'état actuel de participation du participant."
+
+#: attendeeline.cpp:155 incidenceattendee.cpp:66 schedulingdialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the role of the attendee."
+msgstr "Édite le rôle du participant."
+
+#: attendeeline.cpp:158 attendeelineeditdelegate.cpp:24
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The email address or name of the attendee. An invitation can be sent to the "
+"user if an email address is provided."
+msgstr ""
+"L'adresse courriel ou le nom du participant. Une invitation peut être "
+"envoyée à l'utilisateur si une adresse courriel est fournie."
+
+#: attendeeline.cpp:163 incidenceattendee.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Request a response from the attendee"
+msgstr "Exiger une réponse du participant"
+
+#: attendeeline.cpp:165 incidenceattendee.cpp:70
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Edits whether to send an email to the attendee to request a response "
+"concerning attendance."
+msgstr ""
+"Édite s'il faut envoyer un courriel au participant pour requérir une réponse "
+"à propos de la participation."
+
+#: attendeetablemodel.cpp:64
+#, kde-format
+msgid "Free"
+msgstr "Libre"
+
+#: attendeetablemodel.cpp:66
+#, kde-format
+msgid "Busy"
+msgstr "Occupé(e)"
+
+#: attendeetablemodel.cpp:68
+#, kde-format
+msgid "Accepted"
+msgstr "Acceptée"
+
+#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#, kde-format
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: attendeetablemodel.cpp:151
+#, kde-format
+msgctxt "vCard attendee role"
+msgid "Role"
+msgstr "Rôle"
+
+#: attendeetablemodel.cpp:153
+#, kde-format
+msgctxt "Attendees  (name+emailaddress)"
+msgid "Name"
+msgstr "Nom"
+
+#: attendeetablemodel.cpp:155
+#, kde-format
+msgctxt "Is attendee available for incidence"
+msgid "Available"
+msgstr "Disponible"
+
+#: attendeetablemodel.cpp:157
+#, kde-format
+msgctxt ""
+"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgid "Status"
+msgstr "État"
+
+#: attendeetablemodel.cpp:159
+#, kde-format
+msgctxt "Type of calendar user (vCard attribute)"
+msgid "User Type"
+msgstr "Type d'utilisateur"
+
+#: attendeetablemodel.cpp:161
+#, kde-format
+msgctxt "Has attendee to respond to the invitation"
+msgid "Response"
+msgstr "Réponse"
+
+#: attendeetablemodel.cpp:163
+#, kde-format
+msgctxt "Attendee name"
+msgid "Name"
+msgstr "Nom"
+
+#: attendeetablemodel.cpp:165
+#, kde-format
+msgctxt "Attendee email"
+msgid "Email"
+msgstr "Courriel"
+
+#: editoritemmanager.cpp:227
+#, kde-format
+msgid ""
+"The item has been changed by another application.\n"
+"What should be done?"
+msgstr ""
+"L'élément a été modifié par une autre application.\n"
+"Que faut-il faire ?"
+
+#: editoritemmanager.cpp:229
+#, kde-format
+msgid "Take over changes"
+msgstr "Reprendre les modifications"
+
+#: editoritemmanager.cpp:230
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Ignorer et écraser les modifications"
+
+#: freebusyganttproxymodel.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Free/Busy Period"
+msgstr "Période de disponibilité"
+
+#: freebusyganttproxymodel.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Summary:"
+msgstr "Résumé :"
+
+#: freebusyganttproxymodel.cpp:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Location:"
+msgstr "Emplacement :"
+
+#: freebusyganttproxymodel.cpp:80
+#, kde-format
+msgctxt "@info:tooltip period start time"
+msgid "Start:"
+msgstr "Début :"
+
+#: freebusyganttproxymodel.cpp:83
+#, kde-format
+msgctxt "@info:tooltip period end time"
+msgid "End:"
+msgstr "Fin :"
+
+#: freebusyurldialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Free/Busy Location"
+msgstr "Éditer l'emplacement de la disponibilité"
+
+#: freebusyurldialog.cpp:63
+#, kde-kuit-format
+msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+msgstr ""
+"Emplacement de l'information de disponibilité pour %1 <placeholder>%2</"
+"placeholder> :"
+
+#: freebusyurldialog.cpp:67
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Enter the location of the Free/Busy information for the attendee."
+msgstr ""
+"Saisissez l'emplacement de l'information Libre / Occupé pour le participant."
+
+#: freebusyurldialog.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the location of the information."
+msgstr "Saisissez l'emplacement de l'information."
+
+#: incidencealarm.cpp:250
+#, kde-format
+msgctxt "Disable currently selected reminder"
+msgid "Disable"
+msgstr "Désactiver"
+
+#: incidencealarm.cpp:252
+#, kde-format
+msgctxt "Enable currently selected reminder"
+msgid "Enable"
+msgstr "Activer"
+
+#: incidencealarm.cpp:270
+#, kde-format
+msgctxt "Alarm action"
+msgid "Display a dialog"
+msgstr "Afficher une boîte de dialogue"
+
+#: incidencealarm.cpp:273
+#, kde-format
+msgctxt "Alarm action"
+msgid "Play an audio file"
+msgstr "Jouer un fichier audio"
+
+#: incidencealarm.cpp:276
+#, kde-format
+msgctxt "Alarm action"
+msgid "Invalid Reminder."
+msgstr "Rappel non valable."
+
+#: incidencealarm.cpp:282
+#, kde-format
+msgctxt "The reminder is set to X minutes before/after the event"
+msgid "1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "1 minute"
+msgstr[1] "%1 minutes"
+
+#: incidencealarm.cpp:287
+#, kde-format
+msgctxt "The reminder is set to X days before/after the event"
+msgid "1 day"
+msgid_plural "%1 days"
+msgstr[0] "1 jour"
+msgstr[1] "%1 jours"
+
+#: incidencealarm.cpp:290
+#, kde-format
+msgctxt "The reminder is set to X hours before/after the event"
+msgid "1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "1 heure"
+msgstr[1] "%1 heures"
+
+#: incidencealarm.cpp:295
+#, kde-format
+msgctxt "The reminder is configured to repeat after snooze"
+msgid "(Repeats)"
+msgstr "(se répète)"
+
+#. i18n: These series of strings are used to show the user a description of
+#. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
+#. one of the time units above, %3 is the (Repeats) part that will be used
+#. in case of repetition of the alarm.
+#: incidencealarm.cpp:305
+#, kde-format
+msgid "%1 %2 after the to-do started %3"
+msgstr "%1 %2 après que la tâche commence %3"
+
+#: incidencealarm.cpp:307
+#, kde-format
+msgid "%1 %2 after the event started %3"
+msgstr "%1 %2 après que l'évènement commence %3"
+
+#: incidencealarm.cpp:311
+#, kde-format
+msgid "%1 %2 before the to-do starts %3"
+msgstr "%1 %2 avant que la tâche commence %3"
+
+#: incidencealarm.cpp:313
+#, kde-format
+msgid "%1 %2 before the event starts %3"
+msgstr "%1 %2 avant que l'évènement commence %3"
+
+#: incidencealarm.cpp:317
+#, kde-format
+msgid "%1 %2 after the to-do is due %3"
+msgstr "%1 %2 après que la tâche expire %3"
+
+#: incidencealarm.cpp:319
+#, kde-format
+msgid "%1 %2 after the event ends %3"
+msgstr "%1 %2 après que l'évènement se termine %3"
+
+#: incidencealarm.cpp:323
+#, kde-format
+msgid "%1 %2 before the to-do is due %3"
+msgstr "%1 %2 avant que la tâche expire %3"
+
+#: incidencealarm.cpp:325
+#, kde-format
+msgid "%1 %2 before the event ends %3"
+msgstr "%1 %2 avant que l'évènement se termine %3"
+
+#: incidencealarm.cpp:331
+#, kde-format
+msgid "%1 %2 after the to-do started %3 (Disabled)"
+msgstr "%1 %2 après que la tâche commence %3 (désactivé)"
+
+#: incidencealarm.cpp:333
+#, kde-format
+msgid "%1 %2 after the event started %3 (Disabled)"
+msgstr "%1 %2 après que l'évènement commence %3 (désactivé)"
+
+#: incidencealarm.cpp:337
+#, kde-format
+msgid "%1 %2 before the to-do starts %3 (Disabled)"
+msgstr "%1 %2 avant que la tâche commence %3 (désactivé)"
+
+#: incidencealarm.cpp:339
+#, kde-format
+msgid "%1 %2 before the event starts %3 (Disabled)"
+msgstr "%1 %2 avant que l'évènement commence %3 (désactivé)"
+
+#: incidencealarm.cpp:343
+#, kde-format
+msgid "%1 %2 after the to-do is due %3 (Disabled)"
+msgstr "%1 %2 après que la tâche expire %3 (désactivé)"
+
+#: incidencealarm.cpp:345
+#, kde-format
+msgid "%1 %2 after the event ends %3 (Disabled)"
+msgstr "%1 %2 après que l'évènement se termine %3 (désactivé)"
+
+#: incidencealarm.cpp:349
+#, kde-format
+msgid "%1 %2 before the to-do is due %3 (Disabled)"
+msgstr "%1 %2 avant que la tâche expire %3 (désactivé)"
+
+#: incidencealarm.cpp:351
+#, kde-format
+msgid "%1 %2 before the event ends %3 (Disabled)"
+msgstr "%1 %2 avant que l'évènement se termine %3 (désactivé)"
+
+#: incidencealarm.cpp:359
+#, kde-format
+msgid "%1 when the to-do starts"
+msgstr "%1 quand la tâche commence"
+
+#: incidencealarm.cpp:361
+#, kde-format
+msgid "%1 when the event starts"
+msgstr "%1 quand l'évènement commence"
+
+#: incidencealarm.cpp:363
+#, kde-format
+msgid "%1 when the to-do is due"
+msgstr "%1 quand la tâche expire"
+
+#: incidencealarm.cpp:365
+#, kde-format
+msgid "%1 when the event ends"
+msgstr "%1 quand l'évènement se termine"
+
+#: incidencealarm.cpp:369
+#, kde-format
+msgid "%1 when the to-do starts (Disabled)"
+msgstr "%1 quand la tâche commence (désactivé)"
+
+#: incidencealarm.cpp:371
+#, kde-format
+msgid "%1 when the event starts (Disabled)"
+msgstr "%1 quand l'évènement commence (désactivé)"
+
+#: incidencealarm.cpp:373
+#, kde-format
+msgid "%1 when the to-do is due (Disabled)"
+msgstr "%1 quand la tâche expire (désactivé)"
+
+#: incidencealarm.cpp:375
+#, kde-format
+msgid "%1 when the event ends (Disabled)"
+msgstr "%1 quand l'évènement se termine (désactivé)"
+
+#: incidenceattachment.cpp:130
+#, kde-format
+msgctxt "@title"
+msgid "Add Attachment"
+msgstr "Ajouter une pièce jointe"
+
+#: incidenceattachment.cpp:192
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you really want to remove these attachments?<nl/>%1"
+msgstr "Voulez-vous vraiment effacer ces pièces jointes ?<nl/>%1"
+
+#: incidenceattachment.cpp:193
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Attachments?"
+msgstr "Effacer les pièces jointes ?"
+
+#: incidenceattachment.cpp:231
+#, kde-format
+msgctxt "@title"
+msgid "Save Attachment"
+msgstr "Enregistrer la pièce jointe"
+
+#: incidenceattachment.cpp:411
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Link here"
+msgstr "&Lier ici"
+
+#: incidenceattachment.cpp:421 incidenceattachment.cpp:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Copy here"
+msgstr "&Copier ici"
+
+#: incidenceattachment.cpp:428
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&ancel"
+msgstr "&Annuler"
+
+#: incidenceattachment.cpp:475
+#, kde-format
+msgctxt "@action:inmenu open the attachment in a viewer"
+msgid "&Open"
+msgstr "&Ouvrir"
+
+#: incidenceattachment.cpp:481
+#, kde-format
+msgctxt "@action:inmenu save the attachment to a file"
+msgid "Save As..."
+msgstr "Enregistrer sous..."
+
+#: incidenceattachment.cpp:498
+#, kde-format
+msgctxt "@action:inmenu remove the attachment"
+msgid "&Remove"
+msgstr "E&ffacer"
+
+#: incidenceattachment.cpp:506
+#, kde-format
+msgctxt "@action:inmenu show a dialog used to edit the attachment"
+msgid "&Properties..."
+msgstr "&Propriétés..."
+
+#: incidenceattachment.cpp:517
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Displays items (files, mail, etc.) that have been associated with this event "
+"or to-do."
+msgstr ""
+"Affiche les éléments (fichiers, courriels, etc.) qui ont été associé à cet "
+"évènement ou cette tâche."
+
+#: incidenceattendee.cpp:204
+#, kde-format
+msgctxt "@info"
+msgid ""
+"%1 does not look like a valid email address. Are you sure you want to invite "
+"this participant?"
+msgstr ""
+"%1 ne semble pas être une adresse électronique valable. Voulez-vous vraiment "
+"inviter ce participant ?"
+
+#: incidenceattendee.cpp:207
+#, kde-format
+msgctxt "@title:window"
+msgid "Invalid Email Address"
+msgstr "Adresse électronique non valable"
+
+#: incidenceattendee.cpp:208
+#, kde-format
+msgctxt "@action:button"
+msgid "Invite"
+msgstr "Inviter"
+
+#: incidenceattendee.cpp:209
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Invite"
+msgstr "Ne pas inviter"
+
+#: incidenceattendee.cpp:432
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Attendees"
+msgstr "Sélectionner les participants"
+
+#: incidenceattendee.cpp:612
+#, kde-format
+msgctxt "@label Shows the number of scheduling conflicts"
+msgid "%1 conflict"
+msgid_plural "%1 conflicts"
+msgstr[0] "%1 conflit"
+msgstr[1] "%1 conflits"
+
+#: incidenceattendee.cpp:779
+#, kde-format
+msgctxt "@option"
+msgid ""
+"You are changing the organizer of this event. Since the organizer is also "
+"attending this event, would you like to change the corresponding attendee as "
+"well?"
+msgstr ""
+"Vous voulez modifier d'organisateur pour cet évènement. Étant donné que "
+"l'organisateur participe de fait à cet évènement, voulez-vous aussi modifier "
+"le participant correspondant ?"
+
+#: incidenceattendee.cpp:783
+#, kde-format
+msgctxt "@action:button"
+msgid "Change Attendee"
+msgstr "Modifier un participant"
+
+#: incidenceattendee.cpp:784
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Change"
+msgstr "Ne pas modifier"
+
+#: incidencedatetime.cpp:215
+#, kde-format
+msgctxt "@action show or hide the time zone widgets"
+msgid "Time zones"
+msgstr "Zones horaires"
+
+#: incidencedatetime.cpp:617
+#, kde-format
+msgctxt "@label The due date/time of a to-do"
+msgid "Due:"
+msgstr "Expire :"
+
+#: incidencedatetime.cpp:745 incidencedatetime.cpp:746
+#, kde-format
+msgid "Starts: %1"
+msgstr "Début : %1"
+
+#: incidencedatetime.cpp:748
+#, kde-format
+msgid "Starting Date"
+msgstr "Date de début"
+
+#: incidencedatetime.cpp:749
+#, kde-format
+msgid "Starting Time"
+msgstr "Heure de début"
+
+#: incidencedatetime.cpp:758 incidencedatetime.cpp:759
+#, kde-format
+msgid "Due on: %1"
+msgstr "Expiration : %1"
+
+#: incidencedatetime.cpp:761 incidencedatetime.cpp:762
+#, kde-format
+msgid "Ends: %1"
+msgstr "Fin : %1"
+
+#: incidencedatetime.cpp:766
+#, kde-format
+msgid "Due Date"
+msgstr "Date d'expiration"
+
+#: incidencedatetime.cpp:767
+#, kde-format
+msgid "Due Time"
+msgstr "Heure d'expiration"
+
+#: incidencedatetime.cpp:769
+#, kde-format
+msgid "Ending Date"
+msgstr "Date de fin"
+
+#: incidencedatetime.cpp:770
+#, kde-format
+msgid "Ending Time"
+msgstr "Heure de fin"
+
+#: incidencedatetime.cpp:848
+#, kde-format
+msgctxt "@info"
+msgid "Invalid start date."
+msgstr "Date de début non valable."
+
+#: incidencedatetime.cpp:853
+#, kde-format
+msgctxt "@info"
+msgid "Invalid start time."
+msgstr "Heure de début non valable."
+
+#: incidencedatetime.cpp:861
+#, kde-format
+msgctxt "@info"
+msgid "Invalid end date."
+msgstr "Date de fin non valable."
+
+#: incidencedatetime.cpp:866
+#, kde-format
+msgctxt "@info"
+msgid "Invalid end time."
+msgstr "Heure de fin non valable."
+
+#: incidencedatetime.cpp:875
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The event ends before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"L'évènement prend fin avant qu'il ne commence.\n"
+"Veuillez corriger les dates et heures."
+
+#: incidencedatetime.cpp:879
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do is due before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"La tâche expire avant qu'elle ne commence.\n"
+"Veuillez corriger les dates et heures."
+
+#: incidencedefaults.cpp:68
+#, kde-format
+msgctxt "@label"
+msgid "no (valid) identities found"
+msgstr "pas d'identité (valable) trouvé"
+
+#: incidencedefaults.cpp:303
+#, kde-format
+msgctxt "@label attachment contains binary data"
+msgid "[Binary data]"
+msgstr "[Donnée binaire]"
+
+#: incidencedefaults.cpp:436
+#, kde-format
+msgctxt "@label invalid email address marker"
+msgid "invalid@email.address"
+msgstr "non-valable@adresse.courriel"
+
+#: incidencedescription.cpp:99
+#, kde-format
+msgctxt "@action Enable or disable rich text editing"
+msgid "Enable rich text"
+msgstr "Activer le texte enrichi"
+
+#: incidencedescription.cpp:103
+#, kde-format
+msgctxt "@action Enable or disable rich text editing"
+msgid "Disable rich text"
+msgstr "Désactiver le texte enrichi"
+
+#: incidencedialog.cpp:210
+#, kde-format
+msgid "Select a valid collection first."
+msgstr "Sélectionner une collection valable d'abord."
+
+#: incidencedialog.cpp:233
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder (%1)"
+msgstr "Rappel (%1)"
+
+#: incidencedialog.cpp:235
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder"
+msgstr "Rappel"
+
+#: incidencedialog.cpp:243
+#, kde-format
+msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
+msgid "Rec&urrence"
+msgstr "Réc&urrence"
+
+#: incidencedialog.cpp:253
+#, kde-format
+msgctxt "@title:tab Daily recurring event, capital first letter only"
+msgid " (D)"
+msgstr " (J)"
+
+#: incidencedialog.cpp:256
+#, kde-format
+msgctxt "@title:tab Weekly recurring event, capital first letter only"
+msgid " (W)"
+msgstr " (S)"
+
+#: incidencedialog.cpp:259
+#, kde-format
+msgctxt "@title:tab Monthly recurring event, capital first letter only"
+msgid " (M)"
+msgstr " (M)"
+
+#: incidencedialog.cpp:262
+#, kde-format
+msgctxt "@title:tab Yearly recurring event, capital first letter only"
+msgid " (Y)"
+msgstr " (A)"
+
+#: incidencedialog.cpp:265
+#, kde-format
+msgctxt "@title:tab Exception to a recurring event, capital first letter only"
+msgid " (E)"
+msgstr " (E)"
+
+#: incidencedialog.cpp:299
+#, kde-format
+msgctxt "@info"
+msgid "Unable to find template '%1'."
+msgstr "Impossible de trouver le modèle « %1 >."
+
+#: incidencedialog.cpp:305
+#, kde-format
+msgctxt "@info"
+msgid "Error loading template file '%1'."
+msgstr "Erreur de chargement du fichier de modèle « %1 »."
+
+#: incidencedialog.cpp:311
+#, kde-format
+msgctxt "@info"
+msgid "Template does not contain a valid incidence."
+msgstr "Le modèle ne contient pas d'incidence valable."
+
+#: incidencedialog.cpp:410
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments (%1)"
+msgstr "&Pièces jointes (%1)"
+
+#: incidencedialog.cpp:412
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments"
+msgstr "&Pièces jointes"
+
+#: incidencedialog.cpp:419
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees (%1)"
+msgstr "P&articipants (%1)"
+
+#: incidencedialog.cpp:421
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees"
+msgstr "P&articipants"
+
+#: incidencedialog.cpp:428
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources (%1)"
+msgstr "&Ressources (%1)"
+
+#: incidencedialog.cpp:430
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources"
+msgstr "&Ressources"
+
+#: incidencedialog.cpp:452
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Unable to store the incidence in the calendar. Try again?\n"
+"\n"
+" Reason: %1"
+msgstr ""
+"Impossible d'enregistrer l'incidence dans le calendrier. Réessayer ?\n"
+"\n"
+" Motif : %1"
+
+#: incidencedialog.cpp:458
+#, kde-format
+msgctxt "@action:button"
+msgid "Retry"
+msgstr "Réessayer"
+
+#: incidencedialog.cpp:480
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You have not set a default calendar for your events yet.</"
+"para><para>Setting a default calendar will make creating new events faster "
+"and easier with less chance of filing them into the wrong folder.</"
+"para><para>Would you like to set your default events calendar to <resource>"
+"%1</resource>?</para>"
+msgstr ""
+"<para>Vous n'avez pas encore défini un calendrier par défaut pour vos "
+"évènements.</para><para>Le paramétrage d'un calendrier par défaut rendra la "
+"création de nouveaux évènement plus rapide et plus facile, avec moins de "
+"chances de les remplir dans le mauvais dossier</para><para>Voulez-vous "
+"définir votre calendrier d'évènements par défaut à <resource>%1</resource> ?"
+"</para>"
+
+#: incidencedialog.cpp:488
+#, kde-format
+msgctxt "@title:window"
+msgid "Set Default Calendar?"
+msgstr "Définir le calendrier par défaut ?"
+
+#: incidencedialog.cpp:489
+#, kde-format
+msgctxt "@action:button"
+msgid "Set As Default"
+msgstr "Définir comme défaut"
+
+#: incidencedialog.cpp:490
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Set"
+msgstr "Ne pas définir"
+
+#: incidencedialog.cpp:670
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Save current changes"
+msgstr "Enregistrer les modifications actuelles"
+
+#: incidencedialog.cpp:671
+#, kde-format
+msgctxt "@action:button"
+msgid "Save changes and close dialog"
+msgstr "Enregistrer les modifications et fermer la boîte de dialogue"
+
+#: incidencedialog.cpp:672
+#, kde-format
+msgctxt "@action:button"
+msgid "Discard changes and close dialog"
+msgstr "Abandonner les modifications et fermer la boîte de dialogue"
+
+#: incidencedialog.cpp:676
+#, kde-format
+msgctxt "@action:button"
+msgid "&Templates..."
+msgstr "&Modèles..."
+
+#: incidencedialog.cpp:678
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Manage templates for this item"
+msgstr "Gère des modèles pour cet élément"
+
+#: incidencedialog.cpp:680
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Push this button to show a dialog that helps you manage a set of templates. "
+"Templates can make creating new items easier and faster by putting your "
+"favorite default values into the editor automatically."
+msgstr ""
+"Cliquez sur ce bouton pour afficher une boîte de dialogue qui vous aidera à "
+"gérer une série de modèles. Les modèles peuvent permettre de simplifier et "
+"accélérer la création de nouveaux éléments, en plaçant vos valeurs par "
+"défaut préférés dans dans l'éditeur automatiquement."
+
+#: incidencedialog.cpp:777 incidencedialog.cpp:798 incidencedialog.cpp:814
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Voulez-vous vraiment annuler ?"
+
+#: incidencedialog.cpp:778 incidencedialog.cpp:799 incidencedialog.cpp:815
+#, kde-format
+msgctxt "@title:window"
+msgid "KOrganizer Confirmation"
+msgstr "Configuration de KOrganizer"
+
+#: incidencedialog.cpp:779 incidencedialog.cpp:800 incidencedialog.cpp:816
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Annuler la modification"
+
+#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Ne pas annuler"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:12
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr "Méthode par défaut pour joindre les courriels"
+
+#. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:13
+#, kde-format
+msgid "Choose the default way of attaching dropped emails to an event"
+msgstr ""
+"Choisissez la méthode par défaut utilisée pour joindre les courriels "
+"associés à un évènement"
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:14
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr ""
+"La méthode par défaut utilisé pour joindre les courriels associés à un "
+"évènement"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:17
+#, kde-format
+msgid "Always ask"
+msgstr "Toujours demander"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:20
+#, kde-format
+msgid "Only attach link to message"
+msgstr "Ne joindre que le lien au courriel"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:23
+#, kde-format
+msgid "Attach complete message"
+msgstr "Joindre le courriel complet"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:26
+#, kde-format
+msgid "Attach message without attachments"
+msgstr "Joindre le courriel sans ses pièces jointes"
+
+#: incidencerecurrence.cpp:128
+#, kde-format
+msgctxt ""
+"In several of the messages below, an ordinal number is substituted into the "
+"message. Translate this as \"0\" if English ordinal suffixes should be added "
+"(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
+"be substituted (1, 22, 123)."
+msgid "0"
+msgstr "0"
+
+#: incidencerecurrence.cpp:453
+#, kde-format
+msgid ""
+"A recurring event or to-do must occur at least once. Adjust the recurring "
+"parameters."
+msgstr ""
+"Une tâche ou un évènement récurant doit se produire au moins une fois. "
+"Ajustez les paramètres de récurrence."
+
+#: incidencerecurrence.cpp:459
+#, kde-format
+msgid "The incidence's start date is invalid."
+msgstr "La date de début de l'incidence n'est pas valable."
+
+#: incidencerecurrence.cpp:465
+#, kde-format
+msgctxt "@info"
+msgid "The recurrence end date is invalid."
+msgstr "La date de fin de la périodicité est non valable."
+
+#: incidencerecurrence.cpp:508
+#, kde-format
+msgctxt "example: the 30th"
+msgid "the %1"
+msgstr "le %1"
+
+#: incidencerecurrence.cpp:511
+#, kde-format
+msgctxt "example: the 4th to last day"
+msgid "the %1 to last day"
+msgstr "du %1 au dernier jour"
+
+#: incidencerecurrence.cpp:514
+#, kde-format
+msgctxt "example: the 5th Wednesday"
+msgid "the %1 %2"
+msgstr "le %1 %2"
+
+#: incidencerecurrence.cpp:520
+#, kde-format
+msgctxt "example: the last Wednesday"
+msgid "the last %1"
+msgstr "le dernier %1"
+
+#: incidencerecurrence.cpp:522
+#, kde-format
+msgctxt "example: the 5th to last Wednesday"
+msgid "the %1 to last %2"
+msgstr "du %1 au dernier %2"
+
+#: incidencerecurrence.cpp:538
+#, kde-format
+msgctxt "example: the 5th of June"
+msgid "the %1 of %2"
+msgstr "le %1 %2"
+
+#: incidencerecurrence.cpp:541
+#, kde-format
+msgctxt "example: the 3rd to last day of June"
+msgid "the %1 to last day of %2"
+msgstr "du %1 au dernier jour de %2"
+
+#: incidencerecurrence.cpp:544
+#, kde-format
+msgctxt "example: the 4th Wednesday of June"
+msgid "the %1 %2 of %3"
+msgstr "le %1 %2 de %3"
+
+#: incidencerecurrence.cpp:551
+#, kde-format
+msgctxt "example: the last Wednesday of June"
+msgid "the last %1 of %2"
+msgstr "le dernier %1 de %2"
+
+#: incidencerecurrence.cpp:556
+#, kde-format
+msgctxt "example: the 4th to last Wednesday of June"
+msgid "the %1 to last %2 of %3 "
+msgstr "du %1 au dernier %2 de %3"
+
+#: incidencerecurrence.cpp:563
+#, kde-format
+msgctxt "example: the 15th day of the year"
+msgid "the %1 day of the year"
+msgstr "le %1 jour de l'année"
+
+#: incidencerecurrence.cpp:578
+#, kde-format
+msgctxt "Recurrence ends after n occurrences"
+msgid "occurrence"
+msgid_plural "occurrences"
+msgstr[0] "occurrence"
+msgstr[1] "occurrences"
+
+#: incidencerecurrence.cpp:602
+#, kde-format
+msgctxt "repeat every N >weeks<"
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "semaine"
+msgstr[1] "semaines"
+
+#: incidencerecurrence.cpp:606
+#, kde-format
+msgctxt "repeat every N >months<"
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mois"
+msgstr[1] "mois"
+
+#: incidencerecurrence.cpp:610
+#, kde-format
+msgctxt "repeat every N >years<"
+msgid "year"
+msgid_plural "years"
+msgstr[0] "année"
+msgstr[1] "années"
+
+#: incidencerecurrence.cpp:614
+#, kde-format
+msgctxt "repeat every N >days<"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "jour"
+msgstr[1] "jours"
+
+#: incidencerecurrence.cpp:622
+#, kde-format
+msgctxt ""
+"repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
+"weeks, 'm' months, 'y' years"
+msgid "every"
+msgid_plural "every"
+msgstr[0] "tous les"
+msgstr[1] "tous les"
+
+#: incidencewhatwhere.cpp:70
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a summary."
+msgstr "Veuillez saisir un résumé."
+
+#: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
+#: individualmailcomponentfactory.h:63
+#, kde-format
+msgctxt "@action:button dialog positive answer"
+msgid "Send Email"
+msgstr "Envoyer un courriel"
+
+#: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
+#: individualmailcomponentfactory.h:64
+#, kde-format
+msgctxt "@action:button dialog negative answer"
+msgid "Do Not Send"
+msgstr "Ne pas envoyer"
+
+#: individualmaildialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Group Scheduling Email"
+msgstr "Courrier électronique de planification de groupe"
+
+#: individualmaildialog.cpp:34
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send update"
+msgstr "Envoyer une mise à jour"
+
+#: individualmaildialog.cpp:35
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send no update"
+msgstr "N'envoyer aucune mise à jour"
+
+#: individualmaildialog.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Edit mail"
+msgstr "Modifier le courriel"
+
+#: individualmaildialog.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Options for this particular attendee."
+msgstr "Options pour ce participant."
+
+#: individualmaildialog.cpp:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Choose an option for this attendee."
+msgstr "Choisissez une option pour ce participant."
+
+#: individualmaildialog.cpp:111
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings <<"
+msgstr "Paramètres de message individuel <<"
+
+#: individualmaildialog.cpp:113
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings >>"
+msgstr "Paramètres de message individuel >>"
+
+#: ldaputils.cpp:15
+#, kde-format
+msgctxt "ldap attribute cn"
+msgid "Common name"
+msgstr "Nom complet"
+
+#: ldaputils.cpp:17
+#, kde-format
+msgctxt "ldap attribute mail"
+msgid "Email"
+msgstr "Courriel"
+
+#: ldaputils.cpp:19
+#, kde-format
+msgctxt "ldap attribute givenname"
+msgid "Given name"
+msgstr "Prénom"
+
+#: ldaputils.cpp:21
+#, kde-format
+msgctxt "ldap attribute sn"
+msgid "Surname"
+msgstr "Nom de famille"
+
+#: ldaputils.cpp:23
+#, kde-format
+msgctxt "ldap attribute ou"
+msgid "Organization"
+msgstr "Organisation"
+
+#: ldaputils.cpp:25
+#, kde-format
+msgctxt "ldap attribute objectClass"
+msgid "Object class"
+msgstr "Classe d'objet"
+
+#: ldaputils.cpp:27
+#, kde-format
+msgctxt "ldap attribute description"
+msgid "Description"
+msgstr "Description"
+
+#: ldaputils.cpp:29
+#, kde-format
+msgctxt "ldap attribute telephoneNumber"
+msgid "Telephone"
+msgstr "Téléphone"
+
+#: ldaputils.cpp:31
+#, kde-format
+msgctxt "ldap attribute mobile"
+msgid "Mobile"
+msgstr "Portable"
+
+#: opencomposerjob.cpp:77
+#, kde-format
+msgctxt "errormessage: dbus is running but still no connection kmail"
+msgid "Cannot connect to email service"
+msgstr "Impossible de se connecter au service de courriel"
+
+#: resourcemanagement.cpp:93
+#, kde-format
+msgctxt "@title:window"
+msgid "Resource Management"
+msgstr "Gestion des ressources"
+
+#: resourcemanagement.cpp:98
+#, kde-format
+msgctxt "@action:button add resource to attendeelist"
+msgid "Book resource"
+msgstr "Ressource livre"
+
+#: schedulingdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Scheduling"
+msgstr "Ordonnancement"
+
+#: schedulingdialog.cpp:166
+#, kde-format
+msgctxt ""
+"@label Day of week followed by day of the month, then the month. Example: "
+"Monday, 12 June"
+msgid "%1, %2 %3"
+msgstr "%1, %2 %3"
+
+#: schedulingdialog.cpp:187
+#, kde-format
+msgctxt ""
+"@label This is a suffix following a time selecting widget. Example: "
+"[timeedit] to 10:00am"
+msgid "to %1"
+msgstr "à %1"
+
+#: templatemanagementdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage %1 Templates"
+msgstr "Gérer %1 modèles"
+
+#: templatemanagementdialog.cpp:83
+#, kde-format
+msgid "Template Name"
+msgstr "Nom du modèle"
+
+#: templatemanagementdialog.cpp:84
+#, kde-format
+msgid "Please enter a name for the new template:"
+msgstr "Veuillez saisir un nom pour ce nouveau modèle :"
+
+#: templatemanagementdialog.cpp:86
+#, kde-format
+msgid "New %1 Template"
+msgstr "Nouveau modèle %1"
+
+#: templatemanagementdialog.cpp:94
+#, kde-format
+msgid "A template with that name already exists, do you want to overwrite it?"
+msgstr "Un modèle portant ce nom existe déjà. Voulez-vous le remplacer ?"
+
+#: templatemanagementdialog.cpp:95
+#, kde-format
+msgid "Duplicate Template Name"
+msgstr "Nom de modèle en double"
+
+#: templatemanagementdialog.cpp:129
+#, kde-format
+msgid "Are you sure that you want to remove the template <b>%1</b>?"
+msgstr "Voulez-vous vraiment effacer le modèle <b>%1</b> ?"
+
+#: templatemanagementdialog.cpp:130
+#, kde-format
+msgid "Remove Template"
+msgstr "Effacer le modèle"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
+#: ui/alarmdialog.ui:14
+#, kde-format
+msgid "Alarms"
+msgstr "Alarmes"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/alarmdialog.ui:32
+#, kde-format
+msgid "When:"
+msgstr "Quand :"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:47
+#, kde-format
+msgid "Set the reminder trigger time"
+msgstr "Fixe le moment de déclenchement du rappel"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:50
+#, kde-format
+msgid ""
+"This spinbox allows you to set the reminder trigger time. The time unit is "
+"set in the combobox immediately adjacent."
+msgstr ""
+"Cette zone numérique vous permet de fixer un moment de déclenchement du "
+"rappel. L'unité de temps est réglée à l'aide de la liste déroulante qui lui "
+"est accolée."
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:72
+#, kde-format
+msgid "Select the reminder trigger time unit"
+msgstr "Sélectionne l'unité de temps du déclenchement du rappel"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:75
+#, kde-format
+msgid ""
+"This combobox allows you to set the units for the reminder trigger time. The "
+"trigger time value is set in the spinbox immediately adjacent."
+msgstr ""
+"Cette liste déroulante vous permet de régler les unités pour le moment de "
+"déclenchement du rappel. Ce moment de déclenchement est fixé avec la zone "
+"numérique qui lui est accolé."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:79
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in minutes"
+msgid "minute(s)"
+msgstr "minute(s)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:84
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in hours"
+msgid "hour(s)"
+msgstr "heure(s)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:89
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in days"
+msgid "day(s)"
+msgstr "jour(s)"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:97
+#, kde-format
+msgid "Select the reminder trigger relative to the start or end time"
+msgstr ""
+"Sélectionne si le déclenchement du rappel est relatif au moment de début ou "
+"de fin"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:100
+#, kde-format
+msgid ""
+"Use this combobox to specify if you want the reminder to trigger before or "
+"after the start or end time."
+msgstr ""
+"Utilisez cette liste déroulante pour préciser si vous voulez que le rappel "
+"se déclenche avant ou après le moment de début ou de fin."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:104
+#, kde-format
+msgid "before the event starts"
+msgstr "avant le début de l'évènement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:109
+#, kde-format
+msgid "after the event starts"
+msgstr "après le début de l'évènement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:114
+#, kde-format
+msgid "before the event ends"
+msgstr "avant la fin de l'évènement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:119
+#, kde-format
+msgid "after the event ends"
+msgstr "après la fin de l'évènement"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/alarmdialog.ui:129
+#, kde-format
+msgid "Repeat:"
+msgstr "Répéter :"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:144
+#, kde-format
+msgid "Set the reminder to repeat"
+msgstr "Demander au rappel de se répéter"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:147
+#, kde-format
+msgid "Check this if you want to the reminder to recur on a periodic interval."
+msgstr ""
+"Cochez ceci si vous voulez que le rappel se reproduise périodiquement dans "
+"une intervalle donnée."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:160
+#, kde-format
+msgid "Select how often the reminder should repeat"
+msgstr "Sélectionnez à quelle fréquence le rappel devrait se répéter"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:163
+#, kde-format
+msgid ""
+"Use this selector to choose how many times you want the recurring reminder "
+"to repeat."
+msgstr ""
+"Utilisez ceci pour choisir combien de fois la reproduction du rappel doit se "
+"répéter."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:166
+#, kde-format
+msgid " time(s)"
+msgstr " fois"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:182
+#, kde-format
+msgid "Select the time between reminder repeats"
+msgstr "Sélectionner le temps entre chaque rappel"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:185
+#, kde-format
+msgid "Use this selector to choose the time between repeating reminders."
+msgstr ""
+"Utilisez ceci pour choisir le temps écoulé entre chaque répétition de rappel."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:188
+#, kde-format
+msgctxt "@label:spinbox repeat interval expressed in minutes"
+msgid " Minute(s)"
+msgstr " Minute(s)"
+
+#. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:191
+#, kde-format
+msgctxt "repeat every X minutes"
+msgid "every "
+msgstr "toutes les "
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/alarmdialog.ui:212
+#, kde-format
+msgid "What:"
+msgstr "Quoi :"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:222
+#, kde-format
+msgid "Select the alarm type"
+msgstr "Sélectionnez le type d'alarme"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:225
+#, kde-format
+msgid "Use this selector to choose the alarm type for the reminders."
+msgstr "Utilisez ceci pour choisir le type d'alarme pour les rappels."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:235
+#, kde-format
+msgid "Display text"
+msgstr "Afficher le texte"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:240
+#, kde-format
+msgid "Play sound file"
+msgstr "Jouer un fichier de son"
+
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
+#: ui/alarmdialog.ui:273
+#, kde-format
+msgid ""
+"Specify any text you desire to display in the popup notice when the reminder "
+"triggers."
+msgstr ""
+"Spécifiez le texte que vous voulez afficher dans la notification déroulante "
+"quand le rappel se déclenche."
+
+#. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
+#: ui/alarmdialog.ui:296
+#, kde-format
+msgid "Audio File:"
+msgstr "Fichier audio :"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:309
+#, kde-format
+msgid "Specify a file containing a sound to play when the reminder triggers"
+msgstr ""
+"Spécifiez un fichier contenant un son à jouer quand le rappel se déclenche"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:312
+#, kde-format
+msgid ""
+"Use the adjacent file browser to help you find the file you want to use when "
+"playing a sound when the reminder triggers."
+msgstr ""
+"Utilise le navigateur de fichier accolé pour vous aider à trouver le fichier "
+"que vous voulez utiliser pour jouer un son quand le rappel se déclenche."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Give the attachment a name"
+msgstr "Donnez un nom à la pièce jointe"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:41
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Type any string you desire here for the name of the attachment"
+msgstr "Saisissez ici le nom que vous voulez pour cette pièce jointe"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:44
+#, kde-format
+msgctxt "@label"
+msgid "Attachment name"
+msgstr "Nom de la pièce jointe"
+
+#. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
+#: ui/attachmenteditdialog.ui:65
+#, kde-format
+msgctxt "@label File type of attachment is unknown"
+msgid "Unknown"
+msgstr "Inconnu"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:72
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Store the attachment file inside the calendar"
+msgstr "Stocker le fichier de la pièce jointe à l'intérieur du calendrier"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:75
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the attachment to be stored inside your "
+"calendar, which can take a lot of space depending on the size of the "
+"attachment. If this option is not checked, then only a link pointing to the "
+"attachment will be stored.  Do not use a link for attachments that change "
+"often or may be moved (or removed) from their current location."
+msgstr ""
+"En cochant cette option, vous activerez le stockage de la pièce jointe dans "
+"votre calendrier, ce qui peut occuper beaucoup d'espace en fonction de la "
+"taille de la pièce jointe. Si cette option n'est pas activé, alors seul un "
+"lien pointant vers la pièce jointe est stocké. N'utilisez pas de liens pour "
+"les pièces jointes qui peuvent être modifié fréquemment ou qui pourraient "
+"être déplacées ou effacées de leur emplacement actuel."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:78
+#, kde-format
+msgctxt "@option:check"
+msgid "Store attachment inline"
+msgstr "Stocker la pièce jointe incorporée"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/attachmenteditdialog.ui:123
+#, kde-format
+msgid "Location:"
+msgstr "Emplacement :"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Provide a location for the attachment file"
+msgstr "Fournit un emplacement pour le fichier de la pièce jointe"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:136
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter the path to the attachment file or use the file browser by pressing "
+"the adjacent button"
+msgstr ""
+"Saisissez l'emplacement du fichier à joindre ou utilisez l'explorateur de "
+"fichier en pressant le bouton adjacent"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/attachmenteditdialog.ui:159
+#, kde-format
+msgctxt "@label"
+msgid "Size:"
+msgstr "Taille :"
+
+#. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
+#: ui/attachmenteditdialog.ui:166
+#, kde-format
+msgid "0 KB"
+msgstr "0 Ko"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/attachmenteditdialog.ui:183
+#, kde-format
+msgid "Type:"
+msgstr "Type :"
+
+#. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:20
+#, kde-format
+msgid "A message on this incidence item"
+msgstr "Un message sur cet élément d'incidence."
+
+#. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:23
+#, kde-format
+msgid "Use this message to correct the item parameters."
+msgstr "Utilisez ce message pour corriger les paramètres de l'élément."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/dialogdesktop.ui:53
+#, kde-format
+msgctxt "@label:listbox The calendar to which the todo or event must be added"
+msgid "Calen&dar:"
+msgstr "Calen&drier :"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/dialogdesktop.ui:81
+#, kde-format
+msgctxt "@info"
+msgid "You are Invited, what do you want to do?"
+msgstr "Vous êtes invité, que voulez-vous faire ?"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:88
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Accept the invitation"
+msgstr "Accepter l'invitation"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button to accept the invitation."
+msgstr "Cliquez sur ce bouton pour accepter l'invitation."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:94
+#, kde-format
+msgctxt "@action:button Accept an invitation"
+msgid "Accept"
+msgstr "Accepter"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
+#: ui/dialogdesktop.ui:105
+#, kde-format
+msgctxt "@action:button decline an invitation"
+msgid "Decline"
+msgstr "Décliner"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the summary"
+msgstr "Définir le résumé "
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:141 ui/dialogdesktop.ui:169
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets brief information that will be displayed in many places in the user "
+"interface."
+msgstr ""
+"Définit des informations brèves qui seront affichées à plusieurs "
+"emplacements au sein de l'interface utilisateur."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/dialogdesktop.ui:147
+#, kde-format
+msgctxt "@label"
+msgid "Summar&y:"
+msgstr "Résu&mé :"
+
+#. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
+#: ui/dialogdesktop.ui:188
+#, kde-format
+msgctxt "@label"
+msgid "&Location:"
+msgstr "Emp&lacement :"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:207
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the location"
+msgstr "Règle l'emplacement"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:210
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets where the event or to-do will take place."
+msgstr "Règle où l'évènement ou la tâche aura lieu."
+
+#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
+#: ui/dialogdesktop.ui:227
+#, kde-format
+msgctxt "@label line containing to-do specific ui controls"
+msgid "Completion:"
+msgstr "Avancement :"
+
+#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
+#: ui/dialogdesktop.ui:280
+#, kde-format
+msgctxt "@label:slider Showed after the to-do percentage completed slider"
+msgid "completed"
+msgstr "terminée"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ui/dialogdesktop.ui:287
+#, kde-format
+msgctxt "@label:listbox priority of a to-do"
+msgid "Priority:"
+msgstr "Priorité :"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:298
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "unspecified"
+msgstr "non spécifié"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:303
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "1 (highest)"
+msgstr "1 (la plus haute)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:308
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "2"
+msgstr "2"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:313
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "3"
+msgstr "3"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:318
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "4"
+msgstr "4"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:323
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "5 (medium)"
+msgstr "5 (moyenne)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:328
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "6"
+msgstr "6"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:333
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "7"
+msgstr "7"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:338
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "8"
+msgstr "8"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:343
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "9 (lowest)"
+msgstr "9 (la plus basse)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:362
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Set if this to-do's start and due dates have times associated with them."
+msgstr ""
+"Indiquer si les dates de début et d'expiration de la tâche ont des heures "
+"associées."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:365
+#, kde-format
+msgctxt "@option:check"
+msgid "All Day"
+msgstr "Toute la journée"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
+#: ui/dialogdesktop.ui:391
+#, kde-format
+msgctxt "@option:check"
+msgid "Blocks me for other events"
+msgstr "Se rendre indisponible pour d'autres évènements"
+
+#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
+#: ui/dialogdesktop.ui:422
+#, kde-format
+msgctxt "@label Start date/time of the event or todo"
+msgid "S&tart:"
+msgstr "Débu&t :"
+
+#. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:450
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the start date"
+msgstr "Fixe la date de début"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:453
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start date for this to-do"
+msgstr "Fixe la date de début de cette tâche"
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
+#: ui/dialogdesktop.ui:469
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start time for this to-do."
+msgstr "Fixe l'heure de début pour cette tâche."
+
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
+#: ui/dialogdesktop.ui:485 ui/dialogdesktop.ui:600
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Select the timezone for this event. It will also affect recurrences"
+msgstr ""
+"Sélectionnez la zone horaire de cet évènement. Cela affectera également les "
+"reproductions."
+
+#. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
+#: ui/dialogdesktop.ui:503
+#, kde-format
+msgctxt "@action"
+msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
+msgstr "<a href=\"hide\">&lt;&lt; Fuseaux horaires</a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
+#: ui/dialogdesktop.ui:540
+#, kde-format
+msgctxt "@label end date/time for an event or to-do"
+msgid "E&nd:"
+msgstr "Fi&n :"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
+#: ui/dialogdesktop.ui:568
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due date for this to-do."
+msgstr "Fixe la date d'expiration pour cette tâche."
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
+#: ui/dialogdesktop.ui:584
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due time for this to-do."
+msgstr "Fixe l'heure d'expiration pour cette tâche."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
+#: ui/dialogdesktop.ui:636
+#, kde-format
+msgctxt "@title:tab General settings for an event or to-do"
+msgid "General"
+msgstr "Général"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:651 ui/dialogdesktop.ui:716
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the secrecy level"
+msgstr "Règle le niveau de confidentialité"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:654 ui/dialogdesktop.ui:719
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets whether the access to this event or to-do is restricted. Please note "
+"that KOrganizer currently does not use this setting, so the implementation "
+"of the restrictions will depend on the groupware server. This means that "
+"events or to-dos marked as private or confidential may be visible to others."
+msgstr ""
+"Règle si l'accès à cet évènement ou cette tâche est restreint. Veuillez "
+"remarquer que KOrganizer n'utilise actuellement pas ce paramètre c'est-à-"
+"dire que l'implémentation des restrictions dépendra du serveur du logiciel "
+"de groupe de travail. Cela signifie que les évènements ou les tâches marqués "
+"comme privés ou confidentiels pourraient être visible des autres."
+
+#. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
+#: ui/dialogdesktop.ui:657
+#, kde-format
+msgctxt "@label:listbox sets the privacy option of the event or to-do"
+msgid "Access:"
+msgstr "Accès :"
+
+#. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
+#: ui/dialogdesktop.ui:678
+#, kde-format
+msgctxt "@label"
+msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
+msgstr "<a href=\\\"hide\\\">Texte enrichi &gt;&gt;</a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
+#: ui/dialogdesktop.ui:709
+#, kde-format
+msgctxt "@label"
+msgid "Tags:"
+msgstr "Étiquettes :"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
+#: ui/dialogdesktop.ui:730
+#, kde-format
+msgctxt "@title:tab attendees of this event or to-do"
+msgid "Attendees"
+msgstr "Participants"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/dialogdesktop.ui:736
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Meeting organizer:"
+msgstr "Organisateur de la réunion :"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:777
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the organizer identity"
+msgstr "Régler l'identité de l'organisateur"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:780
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets the identity corresponding to the organizer of this to-do or event. "
+"Identities can be set in the 'Personal' section of the KOrganizer "
+"configuration. In addition, identities are gathered from your KMail settings "
+"and from your address book."
+msgstr ""
+"Fixe l'identité correspondante à celle de l'organisateur de cette tâche ou "
+"évènement. Les identités peuvent être gérées dans la section « Personnel » "
+"de la configuration de KOrganizer. Par ailleurs, les identités sont "
+"rassemblées depuis vos paramètres de KMail et votre carnet d'adresse."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/dialogdesktop.ui:812
+#, kde-format
+msgctxt "@label participants of this event or to-do"
+msgid "Participants:"
+msgstr "Participants :"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:831
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Schedule the meeting with your attendees."
+msgstr "Planifie la rencontre avec vos participants."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:834
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Opens the scheduling dialog, which will assist in picking a time slot that "
+"works for all attendees."
+msgstr ""
+"Ouvre la boîte de dialogue d'organisation qui vous aidera à trouver une "
+"plage horaire qui fonctionnera pour tout les participants."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:837
+#, kde-format
+msgctxt "@action:button"
+msgid "Schedule..."
+msgstr "Organiser..."
+
+#. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
+#: ui/dialogdesktop.ui:860
+#, kde-format
+msgid "Substitute with group members"
+msgstr "Substituer avec les membres du groupe"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:867
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select attendees from your address book."
+msgstr "Sélectionner les participants depuis votre carnet d'adresse."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:870
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Opens your address book, allowing you to select new attendees from it."
+msgstr ""
+"Ouvre votre carnet d'adresses, vous permettant d'y sélectionner de nouveaux "
+"participants."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:873
+#, kde-format
+msgctxt "@action:button"
+msgid "Select Attendees..."
+msgstr "Sélectionner les participants..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
+#: ui/dialogdesktop.ui:897
+#, kde-format
+msgid "Resources"
+msgstr "Ressources"
+
+#. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
+#: ui/dialogdesktop.ui:937
+#, kde-format
+msgid "Book Resource"
+msgstr "Ressource livre"
+
+#. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
+#: ui/dialogdesktop.ui:966
+#, kde-format
+msgid "Find Resources..."
+msgstr "Chercher des ressources..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
+#: ui/dialogdesktop.ui:980
+#, kde-format
+msgctxt "@title:tab Tab to configure reminders for events or to-do"
+msgid "Reminder"
+msgstr "Rappel"
+
+#. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
+#: ui/dialogdesktop.ui:992
+#, kde-format
+msgctxt "@label"
+msgid "Add default reminder:"
+msgstr "Ajouter un rappel par défaut :"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
+#: ui/dialogdesktop.ui:1015
+#, kde-format
+msgctxt "@action:button Adds an reminder"
+msgid "Add"
+msgstr "Ajouter"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
+#: ui/dialogdesktop.ui:1046
+#, kde-format
+msgctxt "@action:button create a new reminder"
+msgid "New"
+msgstr "Nouveau"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
+#: ui/dialogdesktop.ui:1057
+#, kde-format
+msgctxt "@action:button modify the selected reminder"
+msgid "Modify"
+msgstr "Modifier"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
+#: ui/dialogdesktop.ui:1068
+#, kde-format
+msgctxt "@action:button disables selected reminder"
+msgid "Disable"
+msgstr "Désactiver"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
+#: ui/dialogdesktop.ui:1075
+#, kde-format
+msgctxt "@action:button removes selected reminders"
+msgid "Remove"
+msgstr "Effacer"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
+#: ui/dialogdesktop.ui:1100
+#, kde-format
+msgctxt "@title:tab"
+msgid "Recurrence"
+msgstr "Récurrence"
+
+#. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
+#: ui/dialogdesktop.ui:1112
+#, kde-format
+msgctxt "@label whether or not this event or to-do repeats"
+msgid "Repeats:"
+msgstr "Répéter :"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1131
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Never"
+msgstr "Jamais"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1136
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Daily"
+msgstr "Quotidiennement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1141
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Weekly"
+msgstr "Hebdomadairement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1146
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Monthly"
+msgstr "Mensuellement"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1151
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Yearly"
+msgstr "Annuellement"
+
+#. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
+#: ui/dialogdesktop.ui:1165
+#, kde-format
+msgctxt "@label repeats every [various options]"
+msgid "every"
+msgstr "tous les"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
+#: ui/dialogdesktop.ui:1197
+#, kde-format
+msgctxt "@label Event or todo recurs every n day(s)"
+msgid "day(s)"
+msgstr "jour(s)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
+#: ui/dialogdesktop.ui:1204
+#, kde-format
+msgid "This and future occurrences."
+msgstr "Celle-ci et de futures occurrences."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
+#: ui/dialogdesktop.ui:1375
+#, kde-format
+msgctxt "@label recurrence ends on|after"
+msgid "Ends:"
+msgstr "Fin :"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1397
+#, kde-format
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "never"
+msgstr "jamais"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1402
+#, kde-format
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "on"
+msgstr "le"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1407
+#, kde-format
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "after"
+msgstr "après"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
+#: ui/dialogdesktop.ui:1462
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Date after which the event or to-do should stop recurring"
+msgstr ""
+"Date après laquelle l'évènement ou la tâche devrait arrêter de se reproduire."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
+#: ui/dialogdesktop.ui:1517
+#, kde-format
+msgctxt "@label"
+msgid "occurrence(s)"
+msgstr "occurrence(s)"
+
+#. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
+#: ui/dialogdesktop.ui:1536
+#, kde-format
+msgctxt "@label exceptions for the recurrence"
+msgid "Exceptions:"
+msgstr "Exceptions :"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
+#: ui/dialogdesktop.ui:1561
+#, kde-format
+msgctxt "@action:button adds an exception on the recurrence"
+msgid "Add"
+msgstr "Ajouter"
+
+#. i18n: ectx: property (text), widget (QLabel, mOnLabel)
+#: ui/dialogdesktop.ui:1600
+#, kde-format
+msgctxt "@label The event ends on [different options]"
+msgid "on:"
+msgstr "le :"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
+#: ui/dialogdesktop.ui:1615
+#, kde-format
+msgctxt "@action:button removes an exception"
+msgid "Remove"
+msgstr "Effacer"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
+#: ui/dialogdesktop.ui:1642
+#, kde-format
+msgctxt "@title:tab configure attachments of an event or todo"
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1664
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an attachment"
+msgstr "Ajouter une pièce jointe"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1667
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows a dialog used to select an attachment to add to this event or to-do as "
+"link or as inline data."
+msgstr ""
+"Affiche une boîte de dialogue utilisée pour sélectionner une pièce jointe à "
+"ajouter à cet évènement ou cette tâche sous forme de lien ou de données "
+"incorporées."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1670
+#, kde-format
+msgctxt "@action:button adds an attachment"
+msgid "Add"
+msgstr "Ajouter"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1690
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove the selected attachment"
+msgstr "Enlever la pièce jointe sélectionné"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1693
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Removes the attachment selected in the list above from this event or to-do."
+msgstr ""
+"Enlève la pièce jointe sélectionné dans la liste ci-dessus de cet évènement "
+"ou tâche."
+
+#. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1696
+#, kde-format
+msgctxt "@action:button remove an attachment"
+msgid "Remove"
+msgstr "Effacer"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:39
+#, kde-format
+msgid "Enter the search term"
+msgstr "Saisissez le terme à rechercher"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:42
+#, kde-format
+msgid ""
+"Use this text box to enter some keyword for the resource you want to find."
+msgstr ""
+"Utilisez cette zone de texte pour saisir un mot clé relatif à la ressource "
+"que vous désirez trouver."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
+#: ui/resourcemanagement.ui:76
+#, kde-format
+msgid "Details"
+msgstr "Détails"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: ui/resourcemanagement.ui:94
+#, kde-format
+msgid "Owner"
+msgstr "Propriétaire"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
+#: ui/schedulingdialog.ui:14
+#, kde-format
+msgid "Schedule a time"
+msgstr "Planifier une heure"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/schedulingdialog.ui:39
+#, kde-format
+msgid "Earliest time to start:"
+msgstr "Heure la plus avancée pour commencer :"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/schedulingdialog.ui:59
+#, kde-format
+msgid "Latest time to end:"
+msgstr "Dernier moment pour avoir fini :"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
+#. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
+#, kde-format
+msgid "Check the weekdays to include in the search."
+msgstr "Vérifier le jour de la semaine pour l'inclure dans la recherche."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:89 ui/schedulingdialog.ui:111
+#, kde-format
+msgid ""
+"Only the checked weekdays will be included in the free time slot search."
+msgstr ""
+"Seul les jours de la semaine cochés seront inclus dans la recherche "
+"d'intervalle de temps libre."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/schedulingdialog.ui:92
+#, kde-format
+msgid "Allowed weekdays:"
+msgstr "Jours de la semaine autorisés :"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
+#, kde-format
+msgid "Check the roles to include in the search."
+msgstr "Vérifier les rôles pour l'inclure dans la recherche."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
+#. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:121 ui/schedulingdialog.ui:143
+#, kde-format
+msgid ""
+"Only the participants with the checked roles will be considered in the free "
+"time slot search."
+msgstr ""
+"Seul les participants ayant les rôles cochés seront pris en compte dans la "
+"recherche d'intervalle de temps libre."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/schedulingdialog.ui:124
+#, kde-format
+msgid "Mandatory roles:"
+msgstr "Rôles mandataires :"
+
+#. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:154
+#, kde-format
+msgid "Select the search option"
+msgstr "Sélectionnez l'option de recherche"
+
+#. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:157
+#, kde-format
+msgid "Use these tabs to choose the search option."
+msgstr "Utilisez ces onglets pour choisir l'option de recherche."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
+#: ui/schedulingdialog.ui:164
+#, kde-format
+msgid "Automatic Search"
+msgstr "Recherche automatique"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
+#: ui/schedulingdialog.ui:199
+#, kde-format
+msgid "Visual Search"
+msgstr "Recherche visuelle"
+
+#. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
+#: ui/schedulingdialog.ui:207
+#, kde-format
+msgid "Move your appointment to:"
+msgstr "Déplacer votre rendez-vous au :"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
+#: ui/schedulingdialog.ui:228
+#, kde-format
+msgid "Monday, 12th June"
+msgstr "Lundi 12 juin"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
+#: ui/schedulingdialog.ui:241
+#, kde-format
+msgid "to 10:00am"
+msgstr "à 10:00"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
+#: ui/template_management_dialog_base.ui:14
+#, kde-format
+msgid "Template Management"
+msgstr "Gestion des modèles"
+
+#. i18n: ectx: property (text), widget (QLabel, m_introLabel)
+#: ui/template_management_dialog_base.ui:26
+#, kde-format
+msgctxt "@label"
+msgid ""
+"Select a template and click <i>Apply</i> to apply it to this item. Click "
+"<i>New</i> to create a new template based on the current item settings."
+msgstr ""
+"Sectionnez un modèle et cliquez sur <interface>Appliquer</interface> pour "
+"l'appliquer à cet élément. Cliquez sur <interface>Nouveau</interface> pour "
+"créer un nouveau modèle fondé sur les paramètres de l'élément actuel."
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:42
+#, kde-format
+msgid "The list of managed templates"
+msgstr "La liste des modèles gérés"
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:45
+#, kde-format
+msgid ""
+"This is a list of all the templates you have currently accessible for "
+"creating new calendar items."
+msgstr ""
+"Ceci est une liste de tous les modèles actuellement accessible pour la "
+"création de nouveaux éléments de calendrier."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:56
+#, kde-format
+msgid "Create a new template from the current settings"
+msgstr "Créer un nouveau modèle à partir des paramètres actuels"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:59
+#, kde-format
+msgid ""
+"Click on this button to create a new template based on the current settings "
+"in the editor. You can use this template to quickly add new items in the "
+"future."
+msgstr ""
+"Cliquez sur ce bouton pour créer un nouveau modèle fondé sur les paramètres "
+"actuels de l'éditeur. Vous pouvez utiliser ce modèle pour ajouter à l'avenir "
+"de nouveaux éléments rapidement."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:62
+#, kde-format
+msgid "&New..."
+msgstr "&Nouveau..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:72
+#, kde-format
+msgid "Remove the currently selected template"
+msgstr "Effacer le modèle actuellement sélectionné"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:75
+#, kde-format
+msgid ""
+"Clicking this button will permanently remove the selected template from your "
+"list of managed templates."
+msgstr ""
+"En cliquant sur ce bouton vous effacerez définitivement le modèle "
+"sélectionné de votre liste des modèles gérés."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:78
+#, kde-format
+msgid "&Remove"
+msgstr "&Effacer"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:85
+#, kde-format
+msgid "Apply the selected template settings"
+msgstr "Applique les paramètres du modèle sélectionné"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:88
+#, kde-format
+msgid ""
+"Clicking this button will apply the settings from the selected template to "
+"the item you are currently editing."
+msgstr ""
+"En cliquant sur ce bouton vous appliquerez les paramètres du modèle "
+"sélectionné à l'élément que vous éditez actuellement."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:91
+#, kde-format
+msgid "Apply"
+msgstr "Appliquer"
+
+#: visualfreebusywidget.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid "Scale: "
+msgstr "Échelle :"
+
+#: visualfreebusywidget.cpp:143
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the Gantt chart zoom level"
+msgstr "Régler le niveau de zoom du diagramme de Gantt"
+
+#: visualfreebusywidget.cpp:145
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
+"shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
+">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
+"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+"current event or to-do."
+msgstr ""
+"Choisissez le niveau de zoom du diagramme de Gantt de l'un des suivant :<nl/"
+"> « Heure » affiche une plage de plusieurs heures, <nl/> « Jour » affiche "
+"une plage de quelques jours, <nl/> « Semaine » affiche une plage de quelques "
+"mois, <nl/> et « Mois » affiche une plage de quelques années, <nl/>alors que "
+"« Automatique » choisi la plage la plus approprié pour l'évènement ou la "
+"tâche actuelle."
+
+#: visualfreebusywidget.cpp:152
+#, kde-format
+msgctxt "@item:inlistbox range in hours"
+msgid "Hour"
+msgstr "Heure"
+
+#: visualfreebusywidget.cpp:153
+#, kde-format
+msgctxt "@item:inlistbox range in days"
+msgid "Day"
+msgstr "Jour"
+
+#: visualfreebusywidget.cpp:154
+#, kde-format
+msgctxt "@item:inlistbox range in weeks"
+msgid "Week"
+msgstr "Semaine"
+
+#: visualfreebusywidget.cpp:155
+#, kde-format
+msgctxt "@item:inlistbox range in months"
+msgid "Month"
+msgstr "Mois"
+
+#: visualfreebusywidget.cpp:156
+#, kde-format
+msgctxt "@item:inlistbox range is computed automatically"
+msgid "Automatic"
+msgstr "Automatique"
+
+#: visualfreebusywidget.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Center on Start"
+msgstr "Centrer sur le début"
+
+#: visualfreebusywidget.cpp:162
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Center the Gantt chart on the event start date and time"
+msgstr ""
+"Centre le diagramme de Gantt sur la date et l'heure de début de l'évènement"
+
+#: visualfreebusywidget.cpp:164
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to center the Gantt chart on the start time and day of "
+"this event."
+msgstr ""
+"Cliquez sur ce bouton pour centrer le diagramme de Gantt sur l'heure et le "
+"jour de début de cet évènement."
+
+#: visualfreebusywidget.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Pick Date"
+msgstr "Choisir une date"
+
+#: visualfreebusywidget.cpp:173
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move the event to a date and time when all attendees are available"
+msgstr ""
+"Déplace l'évènement à une date et une heure ou tous les participants sont "
+"disponibles"
+
+#: visualfreebusywidget.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to move the event to a date and time when all the "
+"attendees have time available in their Free/Busy lists."
+msgstr ""
+"Cliquez sur ce bouton pour déplacer l'évènement à une date et une heure ou "
+"tous les participants ont du temps de disponible dans leurs listes de "
+"disponibilité."
+
+#: visualfreebusywidget.cpp:185
+#, kde-format
+msgctxt "@action:button reload freebusy data"
+msgid "Reload"
+msgstr "Recharger"
+
+#: visualfreebusywidget.cpp:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reload Free/Busy data for all attendees"
+msgstr "Recharge les données de disponibilité de tous les participants"
+
+#: visualfreebusywidget.cpp:188
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Pressing this button will cause the Free/Busy data for all attendees to be "
+"reloaded from their corresponding servers."
+msgstr ""
+"En cliquant sur ce bouton vous provoquerez le rechargement des données de "
+"disponibilité de tous les participants depuis leurs serveurs respectifs."
+
+#: visualfreebusywidget.cpp:199
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the tree list of all data"
+msgstr "Affiche l'arborescence de toutes les données"
+
+#: visualfreebusywidget.cpp:200
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Shows the tree list of all data"
+msgstr "Affiche l'arborescence de toutes les données"
+
+#: visualfreebusywidget.cpp:206
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Free/Busy status of all attendees"
+msgstr "Afficher l'état de disponibilité de tous les participants"
+
+#: visualfreebusywidget.cpp:208
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows the Free/Busy status of all attendees. Double-clicking on an "
+"attendee's entry in the list will allow you to enter the location of their "
+"Free/Busy Information."
+msgstr ""
+"Affiche l'état de disponibilité de tous les participants. Double-cliquer sur "
+"un participant dans la liste, vous permettra de saisir l'emplacement pour "
+"l'information de disponibilité."
+
+#~ msgctxt "Alarm action"
+#~ msgid "Send an email"
+#~ msgstr "Envoyer un courriel"
+
+#~ msgid "Send email"
+#~ msgstr "Envoyer un courriel"
+
+#~ msgid "&To:"
+#~ msgstr "&À :"
+
+#~ msgid ""
+#~ "Specify a list of addresses to send email when the reminder triggers.\n"
+#~ "If the 'To:' field stays empty the email reminder will be sent to the\n"
+#~ "default email configured in Kmail (Settings menu/Configure Kmail/"
+#~ "Identities)."
+#~ msgstr ""
+#~ "Spécifie une liste d'adresses où envoyer le courriel quand le rappel se "
+#~ "déclenche.\n"
+#~ "Si le champ « À : » reste vide le courriel de rappel sera envoyé à "
+#~ "l'adresse\n"
+#~ "par défaut configuré dans KMail (menu Configuration / Configurer KMail / "
+#~ "Identités)."
+
+#~ msgid ""
+#~ "Enter a list comma-separated addresses to which an email will be sent "
+#~ "when the reminder triggers"
+#~ msgstr ""
+#~ "Saisissez une liste d'adresses séparées par virgule vers lesquelles un "
+#~ "courrier électronique sera envoyé quand le rappel se déclenche"
+
+#~ msgid "&Message:"
+#~ msgstr "&Message : "
+
+#~ msgid "Specify text of an email message to send when the reminder triggers"
+#~ msgstr ""
+#~ "Spécifie le texte du courrier électronique à envoyer quand le rappel se "
+#~ "déclenche"
+
+#~ msgid ""
+#~ "Enter any text you desire for the email message that will be sent when "
+#~ "the alarm triggers."
+#~ msgstr ""
+#~ "Saisissez le texte que vous souhaitez envoyer comme courrier électronique "
+#~ "quand l'alarme se déclenche"
+
+#~ msgctxt "Alarm action"
+#~ msgid "Execute a script"
+#~ msgstr "Exécuter un script"
+
+#~ msgid "Run application / script"
+#~ msgstr "Lancer une application / un script"
+
+#~ msgid "&Application / Script:"
+#~ msgstr "&Application / script :"
+
+#~ msgid ""
+#~ "Specify a file containing the application to run when the reminder "
+#~ "triggers"
+#~ msgstr ""
+#~ "Spécifie un fichier contenant l'application à démarrer quand le rappel se "
+#~ "déclenche"
+
+#~ msgid ""
+#~ "Use the adjacent file browser to help you find the file you want to use "
+#~ "when running an application when the reminder triggers."
+#~ msgstr ""
+#~ "Utilise le navigateur de fichier accolé pour vous aider à trouver le "
+#~ "fichier que vous voulez exécuter quand le rappel se déclenche."
+
+#~ msgid "*|All files"
+#~ msgstr "*|Tous les fichiers"
+
+#~ msgid "Ar&guments:"
+#~ msgstr "Ar&guments :"
+
+#~ msgid ""
+#~ "Specify arguments to pass to the application when the reminder triggers"
+#~ msgstr ""
+#~ "Spécifie les arguments à passer à l'application quand le rappel se "
+#~ "déclenche"
+
+#~ msgid ""
+#~ "Enter the application arguments to use when running an application when "
+#~ "the reminder triggers."
+#~ msgstr ""
+#~ "Saisissez les arguments à utiliser pour démarrer l'application quand le "
+#~ "rappel est déclenché."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a title."
+#~ msgstr "Veuillez spécifier un titre."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the title"
+#~ msgstr "Règle le titre"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the Title of this event or to-do."
+#~ msgstr "Règle le titre de cet évènement ou de cette tâche."
+
+#~ msgctxt "@label"
+#~ msgid "&Title:"
+#~ msgstr "&Titre :"
+
+#~ msgctxt "@label"
+#~ msgid "Categories:"
+#~ msgstr "Catégories :"
+
+#~ msgid "Click to add a new category"
+#~ msgstr "Cliquez pour ajouter une nouvelle catégorie"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Categories"
+#~ msgstr "Sélectionner les catégories"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Categories"
+#~ msgstr "Éditer les catégories"
+
+#~ msgid "Apply changes and close"
+#~ msgstr "Appliquer les changement et fermer"
+
+#~ msgid ""
+#~ "When clicking <b>Ok</b>, the settings will be handed over to the program "
+#~ "and the dialog will be closed."
+#~ msgstr ""
+#~ "En cliquant sur <b>Ok</b>, les paramètres seront pris en compte par le "
+#~ "programme et la boîte de dialogue sera fermée."
+
+#~ msgid "Cancel changes and close"
+#~ msgstr "Annuler les changements et fermer"
+
+#~ msgid ""
+#~ "When clicking <b>Cancel</b>, the settings will be discarded and the "
+#~ "dialog will be closed."
+#~ msgstr ""
+#~ "En cliquant sur <b>Annuler</b>, les paramètres seront abandonnés et la "
+#~ "boîte de dialogue sera fermée."
+
+#~ msgid ""
+#~ "When clicking <b>Help</b>, a separate KHelpCenter window will open "
+#~ "providing more information about the settings."
+#~ msgstr ""
+#~ "En cliquant sur <b>Aide</b>, une fenêtre Khelpcenter séparée s'ouvrira "
+#~ "vous donnant plus d'informations à propos des paramètres."
+
+#~ msgid "New category"
+#~ msgstr "Nouvelle catégorie"
+
+#~ msgid "New subcategory"
+#~ msgstr "Nouvelle sous-catégorie"
+
+#~ msgid "Select Categories"
+#~ msgstr "Sélectionner les catégories"
+
+#~ msgid "Select categories"
+#~ msgstr "Sélectionner les catégories"
+
+#~ msgid "Use this list to choose categories."
+#~ msgstr "Utilisez cette liste pour choisir les catégories."
+
+#~ msgid "Category"
+#~ msgstr "Catégorie"
+
+#~ msgid "Edit Categories"
+#~ msgstr "Éditer les catégories"
+
+#~ msgid "New category entry"
+#~ msgstr "Nouvelle entrée de catégorie"
+
+#~ msgid "Type in any text you want to use as a new category or sub-category."
+#~ msgstr ""
+#~ "Saisissez ici le texte que vous voulez utilisé comme nouvelle catégorie "
+#~ "ou sous-catégorie."
+
+#~ msgid "Add the entry to the category list"
+#~ msgstr "Ajouté l'entrée à la liste de catégorie"
+
+#~ msgid "Click this button to insert the entry into the category list."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton pour insérer l'entrée dans la liste de catégorie."
+
+#~ msgid "A&dd"
+#~ msgstr "A&jouter"
+
+#~ msgid "Add the entry as a subcategory of the selected category"
+#~ msgstr "Ajouter l'entrée comme sous-catégorie de la catégorie sélectionné"
+
+#~ msgid ""
+#~ "Click this button to insert the entry as a subcategory of the currently "
+#~ "selected category."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton pour insérer l'entrée comme une sous-catégorie de "
+#~ "la catégorie actuellement sélectionné."
+
+#~ msgid "Add &Subcategory"
+#~ msgstr "Ajouter une &sous-catégorie"
+
+#~ msgid "Remove the selected category"
+#~ msgstr "Enlever la catégorie sélectionnée"
+
+#~ msgid ""
+#~ "Click this button to remove the selected category from the category list."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton pour enlever la catégorie sélectionnée dans la "
+#~ "liste de catégorie."
+
+#~ msgid "Category list"
+#~ msgstr "Liste de catégorie"
+
+#~ msgid ""
+#~ "This is a list of all the categories available. You can create as many "
+#~ "sub-categories as you want here."
+#~ msgstr ""
+#~ "Ceci est une liste de toutes les catégories disponibles. Vous pouvez "
+#~ "créer autant de sous-catégories que vous le voulez ici."
+
+#~ msgid "Default Category"
+#~ msgstr "Catégorie par défaut"
+
+#~ msgid "Select incidence categories"
+#~ msgstr "Sélectionner les catégories de l'incidence"
+
+#~ msgid "Use this list to choose incidence categories."
+#~ msgstr "Utilisez cette liste pour choisir les catégories de l'incidence."
+
+#~ msgid "&Clear Selection"
+#~ msgstr "Effacer la séle&ction"
+
+#~ msgid "&Edit Categories..."
+#~ msgstr "Édit&er les catégories..."
+
+#~ msgid "The last selected folder."
+#~ msgstr "Le dernier dossier sélectionné."
+
+#~ msgctxt "errormessage: can't create a kontact process"
+#~ msgid "Can't create composer: Failed to start kontact."
+#~ msgstr "Impossible de créer le l'éditeur : échec au démarrage de kontact."
+
+#~ msgctxt ""
+#~ "errormessage: No connection via dbus nor starting kontact process worked."
+#~ msgid "Can't create composer: Neither dbus nor kontact responded in time."
+#~ msgstr ""
+#~ "Impossible de créer le l'éditeur : ni D-Bus ni kontact n'ont répondu dans "
+#~ "les temps."
+
+#~ msgctxt "The reminder is set to X days before/after the event"
+#~ msgid "days"
+#~ msgstr "jours"
+
+#~ msgctxt "@action:button Configures selected reminder"
+#~ msgid "Configure"
+#~ msgstr "Configurer"
+
+#~ msgctxt "@info"
+#~ msgid "%1 already exists. Do you want to overwrite it?"
+#~ msgstr "%1 existe déjà. Voulez-vous le remplacer ?"
+
+#~ msgid "audio/x-wav audio/x-mp3 application/ogg"
+#~ msgstr "audio/x-wav audio/x-mp3 application/ogg"
+
+#~ msgctxt "@label Start date/time of the event or todo"
+#~ msgid "&Start:"
+#~ msgstr "Dé&but :"
+
+#~ msgid "Overwrite"
+#~ msgstr "Remplacer"
+
+#~ msgid "Remove"
+#~ msgstr "Effacer"
+
+#~ msgid "Creates a new event"
+#~ msgstr "Créer un nouvel évènement"
+
+#~ msgid "Creates a new todo"
+#~ msgstr "Créer une nouvelle tâche"
+
+#~ msgid "Creates a new journal"
+#~ msgstr "Créer un nouveau journal"
+
+#~ msgid ""
+#~ "Loads an existing item, or returns without doing anything when the item "
+#~ "is not an event or todo."
+#~ msgstr ""
+#~ "Charge un élément existant ou revient sans n'avoir rien fait si l'élément "
+#~ "n'est pas une tâche ou un évènement."
+
+#~ msgctxt "@label end date/time for an event or to-do"
+#~ msgid "&End:"
+#~ msgstr "&Fin :"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the description in plain text or rich text."
+#~ msgstr "Régler la description en texte brut ou enrichi."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the description for this event, to-do or journal. This will be "
+#~ "displayed in a reminder if one is set, as well as in a tooltip when you "
+#~ "hover over the event."
+#~ msgstr ""
+#~ "Fixe la description pour cet évènement, cette tâche ou ce journal. Ceci "
+#~ "sera affiché dans le rappel s'il est activé ainsi que dans la bulle "
+#~ "d'aide lorsque vous survolez l'évènement."
+
+#~ msgid "KOrganizer"
+#~ msgstr "KOrganizer"
+
+#~ msgid "KDE application to run the KOrganizer incidenceeditor."
+#~ msgstr ""
+#~ "Application KDE destinée à démarrer l'éditeur d'incidence de KOrganizer"
+
+#~ msgid "(C) 2010 Bertjan Broeksema"
+#~ msgstr "(C) 2010 Bertjan Broeksema"
+
+#~ msgid "Run the KOrganizer incidenceeditor ng."
+#~ msgstr ""
+#~ "Démarrer la nouvelle génération de l'éditeur d'incidence de KOrganizer"
+
+#~ msgid "Bertjan Broeksema"
+#~ msgstr "Bertjan Broeksema"
+
+#~ msgid "Author"
+#~ msgstr "Auteur"
+
+#~ msgctxt "@label Start date/time of the event or task"
+#~ msgid "Start:"
+#~ msgstr "Début :"
+
+#~ msgctxt "@label End date/time of the task or event"
+#~ msgid "End:"
+#~ msgstr "Fin :"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "All Day"
+#~ msgstr "Toute la journée"
+
+#~ msgctxt "@label:slider completed percentage of a task"
+#~ msgid "completed"
+#~ msgstr "terminée"
+
+#~ msgctxt "@label:listbox Priority of the task"
+#~ msgid "Priority:"
+#~ msgstr "Priorité :"
+
+#~ msgctxt "@item:inlistbox No priority specified for a task"
+#~ msgid "unspecified"
+#~ msgstr "non spécifié"
+
+#~ msgctxt "@item:inlistbox highest priority for a task"
+#~ msgid "1 (highest)"
+#~ msgstr "1 (la plus haute)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgctxt "@item:inlistbox medium priority for a task"
+#~ msgid "5 (medium)"
+#~ msgstr "5 (moyenne)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgctxt "@item:inlistbox lowest priority for a task"
+#~ msgid "9 (lowest)"
+#~ msgstr "9 (la plus basse)"
+
+#~ msgctxt ""
+#~ "@label Task specific line in the dialog containing progress and priority"
+#~ msgid "Progress:"
+#~ msgstr "Progression :"
+
+#~ msgid ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#~ msgstr ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Texte enrichi &gt;&gt;</font></a>"
+
+#~ msgctxt ""
+#~ "Opens a selection dialog for selecting categories of an event or task"
+#~ msgid "Select"
+#~ msgstr "Sélectionner"
+
+#~ msgid "Access:"
+#~ msgstr "Accès :"
+
+#~ msgid "Organizer:"
+#~ msgstr "Organisateur :"
+
+#~ msgid "Participants:"
+#~ msgstr "Participants :"
+
+#~ msgid "X time conflicts"
+#~ msgstr "X fois en conflit"
+
+#~ msgid "Solve..."
+#~ msgstr "Résoudre :"
+
+#~ msgctxt "Select attendees from addressbook"
+#~ msgid "Select..."
+#~ msgstr "Sélectionner..."
+
+#~ msgid "Add"
+#~ msgstr "Ajouter"
+
+#~ msgid "Configure"
+#~ msgstr "Configurer"
+
+#~ msgid "Disable"
+#~ msgstr "Désactiver"
+
+#~ msgid "Repeat never"
+#~ msgstr "Ne jamais répéter"
+
+#~ msgid "Repeat daily"
+#~ msgstr "Répéter quotidiennement"
+
+#~ msgid "Repeat weekly"
+#~ msgstr "Répéter hebdomadairement"
+
+#~ msgid "Repeat monthly"
+#~ msgstr "Répéter mensuellement"
+
+#~ msgid "Repeat yearly"
+#~ msgstr "Répéter annuellement"
+
+#~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
+#~ msgid "every"
+#~ msgstr "tous les"
+
+#~ msgid "Ends never"
+#~ msgstr "Ne fini jamais"
+
+#~ msgid "Ends on"
+#~ msgstr "Se fini le"
+
+#~ msgid "Ends after"
+#~ msgstr "Se fini après"
+
+#~ msgid "MM.dd.yyyy"
+#~ msgstr "MM.dd.yyyy"
+
+#~ msgid "Exceptions:"
+#~ msgstr "Exceptions :"
+
+#~ msgid "dd.MM.yyyy"
+#~ msgstr "dd. MM. yyyy"
+
+#~ msgid "Time"
+#~ msgstr "Moment"
+
+#~ msgid "&How often:"
+#~ msgstr "À quelle &fréquence :"
+
+#~ msgid "&Interval:"
+#~ msgstr "&Intervalle :"
+
+#~ msgid "&Repeating:"
+#~ msgstr "&Répétition :"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Display optional text when the reminder is triggered"
+#~ msgstr "Afficher un texte optionnel quand le rappel est déclenché"
+
+#~ msgid ""
+#~ "Check this option if you want to display optional text in a popup notice "
+#~ "when the reminder triggers."
+#~ msgstr ""
+#~ "Cochez cette option si vous voulez afficher un texte optionnel dans la "
+#~ "notification déroulante quand le rappel se déclenche."
+
+#~ msgid "&Display"
+#~ msgstr "A&fficher"
+
+#~ msgid "Play a sound when the reminder is triggered"
+#~ msgstr "Jouer un son quand le rappel se déclenche"
+
+#~ msgid ""
+#~ "Check this option if you want to play a sound when the reminder triggers."
+#~ msgstr ""
+#~ "Cochez cette option si vous voulez qu'un son soit joué quand le rappel se "
+#~ "déclenche."
+
+#~ msgid "&Sound"
+#~ msgstr "&Son"
+
+#~ msgid "Run an application or script when the reminder is triggered"
+#~ msgstr "Démarrer une application ou un script quand le rappel se déclenche"
+
+#~ msgid ""
+#~ "Check this option if you want to run an application (or script) when the "
+#~ "reminder triggers."
+#~ msgstr ""
+#~ "Cochez cette option si vous voulez démarrer une application (ou un "
+#~ "script) quand le rappel se déclenche."
+
+#~ msgid "Application / script"
+#~ msgstr "Application / script"
+
+#~ msgid "Send email when the reminder is triggered"
+#~ msgstr "Envoyer un courriel quand le rappel se déclenche"
+
+#~ msgid ""
+#~ "Check this option if you want to send an email message when the reminder "
+#~ "triggers."
+#~ msgstr ""
+#~ "Cochez cette option si vous voulez envoyer un courrier électronique quand "
+#~ "le rappel se déclenche."
+
+#~ msgid "Display &text:"
+#~ msgstr "Afficher le &texte :"
+
+#~ msgid "Sound &file:"
+#~ msgstr "&Fichier sonore :"
+
+#~ msgid "&Text of the message:"
+#~ msgstr "&Texte du message :"
+
+#~ msgid "Remove the currently selected reminder"
+#~ msgstr "Enlève le rappel actuellement sélectionné"
+
+#~ msgid ""
+#~ "Click this button if you want to remove the currently selected reminder. "
+#~ "Be careful with this option as there is no way to undo this operation."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton si vous voulez enlever le rappel actuellement "
+#~ "sélectionné. Soyez attentif avec cette option car il n'y a aucun moyen "
+#~ "d'annuler cette opération."
+
+#~ msgid "Create a new reminder using the settings specified below"
+#~ msgstr "Créer un nouveau rappel avec les paramètres indiqués ci-dessous"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "specified below. You can continue to change the settings as needed."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton pour créer un nouveau rappel avec les paramètres "
+#~ "indiqués ci-dessous. Vous pouvez continuer en changeant les paramètres "
+#~ "comme vous voulez."
+
+#~ msgctxt "Add a new alarm to the alarm list"
+#~ msgid "&Add"
+#~ msgstr "&Ajouter"
+
+#~ msgid "Create a new reminder from the currently selected reminder"
+#~ msgstr ""
+#~ "Créer une nouveau rappel à partir du rappel actuellement sélectionné"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "stored in the currently selected reminder. You can continue to change the "
+#~ "settings as needed."
+#~ msgstr ""
+#~ "Cliquez sur ce bouton si vous voulez créer un nouveau rappel utilisant "
+#~ "les paramètres enregistrés pour le rappel actuellement sélectionné. Vous "
+#~ "pouvez continuer en changeant les paramètres comme vous voulez."
+
+#~ msgid "D&uplicate"
+#~ msgstr "D&upliquer"
+
+#~ msgid "The list of reminders for this event or to-do"
+#~ msgstr "La liste des rappels pour cet évènement ou cette tâche"
+
+#~ msgid ""
+#~ "This area displays a list of all the reminders you have specified for "
+#~ "this event or to-do."
+#~ msgstr ""
+#~ "Cette zone affiche une liste de tous les rappels que vous avez spécifié "
+#~ "pour cet évènement ou cette tâche."
+
+#~ msgid "Offset"
+#~ msgstr "Position"
+
+#~ msgid "Repeat"
+#~ msgstr "Répéter"
+
+#, fuzzy
+#~| msgid "Type"
+#~ msgctxt "Type of resource (vCard attribute)"
+#~ msgid "cuType"
+#~ msgstr "Type"
+
+#, fuzzy
+#~| msgid "Send email"
+#~ msgctxt "attendee email"
+#~ msgid "email"
+#~ msgstr "Envoyer un courriel"
+
+#~ msgctxt "@label Day of the week name, example: Monday,"
+#~ msgid "%1,"
+#~ msgstr "%1, "
+
+#~ msgctxt ""
+#~ "@label A time period duration. It is preceded/followed (based on the "
+#~ "orientation) by the name of the week, see the message above. example: 12 "
+#~ "June, 8:00am to 9:30am"
+#~ msgid "%1 %2, %3 to %4"
+#~ msgstr "%1 %2, de %3 à %4"
+
+#~ msgctxt ""
+#~ "@label A time period duration. KLocale is used to format the components. "
+#~ "example: Monday, 12 June, 8:00am to 9:30am"
+#~ msgid "%1, %2 %3, %4 to %5"
+#~ msgstr "%1 %2 %3, de %4 à %5"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Free Period"
+#~ msgstr "Temps libre"
+
+#~ msgctxt "@info:tooltip period duration"
+#~ msgid "Duration:"
+#~ msgstr "Durée :"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "geoffray.levasseurbrandin@numericable.fr"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Select Categories"
+#~ msgstr "Sélectionner les catégories"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Select a template and "
+#~ "click <span style=\" font-weight:600;\">Apply</span> to apply it to this "
+#~ "item. Click <span style=\" font-weight:600;\">New</span> to create a new "
+#~ "template based on the current item settings.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Sectionnez un modèle et "
+#~ "cliquez <span style=\" font-weight:600;\">Appliquer</span> pour "
+#~ "l'appliquer à cet élément. Cliquez sur <span style=\" font-weight:600;"
+#~ "\">Nouveau</span> pour créer un nouveau modèle fondé sur les paramètres "
+#~ "de l'élément actuel.</p></body></html>"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Categories..."
+#~ msgstr "&Catégories..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Manage categories for this item"
+#~ msgstr "Gère des catégories pour cet élément"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Push this button to show a dialog that helps you manage your categories."
+#~ msgstr ""
+#~ "Appuyez sur ce bouton pour afficher une boite de dialogue qui vous aidera "
+#~ "à gérer vos catégories."
+
+#~ msgctxt "@option:check"
+#~ msgid "Takes the whole day"
+#~ msgstr "Occupe toute la journée"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "Whole day"
+#~ msgstr "Toute la journée"
+
+#~ msgctxt "@label There are no scheduling conflicts."
+#~ msgid "No conflicts"
+#~ msgstr "Pas de conflit"
+
+#~ msgctxt "Disable currently selected alarm"
+#~ msgid "Disable"
+#~ msgstr "Désactiver"
+
+#~ msgid "StackedWidget"
+#~ msgstr "StackedWidget"
+
+#~ msgctxt "@label"
+#~ msgid "TextLabel"
+#~ msgstr "TextLabel"
+
+#~ msgid "TextLabel"
+#~ msgstr "TextLabel"
+
+#~ msgctxt "@label Shows the number of scheduling conflicts"
+#~ msgid "%1 scheduling conflict"
+#~ msgid_plural "%1 scheduling conflicts"
+#~ msgstr[0] "%1 conflit d'emploi du temps"
+#~ msgstr[1] "%1 conflits d'emploi du temps"
+
+#~ msgctxt "@label There are no scheduling conflicts."
+#~ msgid "No scheduling conflicts"
+#~ msgstr "Pas de conflit d'emploi du temps"

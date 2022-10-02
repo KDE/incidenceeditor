@@ -1,0 +1,3601 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <megaribi@epn.ba>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libincidenceeditors.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2015-01-09 11:55+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: bs <bs@kde.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 06:04+0000\n"
+
+#: alarmdialog.cpp:24
+#, fuzzy, kde-format
+#| msgid "Create a new reminder"
+msgctxt "@title:window"
+msgid "Create a new reminder"
+msgstr "Kreiraj novi podsjetnik"
+
+#: alarmdialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "Edit existing reminder"
+msgctxt "@title:window"
+msgid "Edit existing reminder"
+msgstr "Izmijeni postojeći podsjetnik"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "Before the to-do starts"
+msgstr "Prije nego što to-do počne"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "After the to-do starts"
+msgstr "Nakon što zadatak počne"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "Before the to-do is due"
+msgstr "Prije nego je zadatak prispio"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "After the to-do is due"
+msgstr "Nakon što je zadatak prispio"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "Before the event starts"
+msgstr "Prije nego što događaj počne"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "After the event starts"
+msgstr "Nakon što događaj počne"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "Before the event ends"
+msgstr "Prije nego što događaj završi"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "After the event ends"
+msgstr "Nakon što događaj završi"
+
+#: alarmpresets.cpp:83
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "At start"
+msgstr ""
+
+#: alarmpresets.cpp:85
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before start"
+msgid_plural "%1 minutes before start"
+msgstr[0] "%1 minuta prije početka"
+msgstr[1] "%1 minuta prije početka"
+msgstr[2] "%1 minuta prije početka"
+
+#: alarmpresets.cpp:87
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before start"
+msgid_plural "%1 hours before start"
+msgstr[0] "%1 sati prije početka"
+msgstr[1] "%1 sati prije početka"
+msgstr[2] "%1 sati prije početka"
+
+#: alarmpresets.cpp:89
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before start"
+msgid_plural "%1 days before start"
+msgstr[0] "%1 dana prije početka"
+msgstr[1] "%1 dana prije početka"
+msgstr[2] "%1 dana prije početka"
+
+#: alarmpresets.cpp:103
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "When due"
+msgstr "Kada:"
+
+#: alarmpresets.cpp:105
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before due"
+msgid_plural "%1 minutes before due"
+msgstr[0] "%1 minuta prije zbog"
+msgstr[1] "%1 minuta prije zbog"
+msgstr[2] "%1 minuta prije zbog"
+
+#: alarmpresets.cpp:107
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before due"
+msgid_plural "%1 hours before due"
+msgstr[0] "%1 sati prije zbog"
+msgstr[1] "%1 sati prije zbog"
+msgstr[2] "%1 sati prije zbog"
+
+#: alarmpresets.cpp:109
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before due"
+msgid_plural "%1 days before due"
+msgstr[0] "%1 dana prije zbog"
+msgstr[1] "%1 dana prije zbog"
+msgstr[2] "%1 dana prije zbog"
+
+#: attachmenteditdialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Add Attachment"
+msgctxt "@title:window"
+msgid "Edit Attachment"
+msgstr "Dodaj prilog"
+
+#: attachmenteditdialog.cpp:57
+#, kde-format
+msgctxt "@label unknown mimetype"
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: attachmenteditdialog.cpp:110
+#, kde-format
+msgctxt "@label"
+msgid "New attachment"
+msgstr "Novi prilog"
+
+#: attendeeline.cpp:147 incidenceattendee.cpp:61
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request Response"
+msgstr "Zahtijeva odgovor"
+
+#: attendeeline.cpp:148 incidenceattendee.cpp:62
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request No Response"
+msgstr "Ne zahtjeva odgovor"
+
+#: attendeeline.cpp:150 attendeelineeditdelegate.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the name or email address of the attendee."
+msgstr "Unesi ime ili email adresu sudionika."
+
+#: attendeeline.cpp:153 incidenceattendee.cpp:64
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the current attendance status of the attendee."
+msgstr "Uređivanja trenutnog prisustva sudionika."
+
+#: attendeeline.cpp:155 incidenceattendee.cpp:66 schedulingdialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the role of the attendee."
+msgstr "Uređivanja uloge sudionika."
+
+#: attendeeline.cpp:158 attendeelineeditdelegate.cpp:24
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The email address or name of the attendee. An invitation can be sent to the "
+"user if an email address is provided."
+msgstr ""
+"Email adresa ili ime sudionika. Poziv moze biti poslan korisniku ako je "
+"email adresa pružena."
+
+#: attendeeline.cpp:163 incidenceattendee.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Request a response from the attendee"
+msgstr "Zahtijevaj odgovor od sudionika"
+
+#: attendeeline.cpp:165 incidenceattendee.cpp:70
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Edits whether to send an email to the attendee to request a response "
+"concerning attendance."
+msgstr "Izmjene o slanju email-a sudioniku da trazi odgovor o prisustvu."
+
+#: attendeetablemodel.cpp:64
+#, kde-format
+msgid "Free"
+msgstr ""
+
+#: attendeetablemodel.cpp:66
+#, kde-format
+msgid "Busy"
+msgstr ""
+
+#: attendeetablemodel.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "@action:button Accept an invitation"
+#| msgid "Accept"
+msgid "Accepted"
+msgstr "Prihvatanje"
+
+#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#, fuzzy, kde-format
+#| msgctxt "@label unknown mimetype"
+#| msgid "Unknown"
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: attendeetablemodel.cpp:151
+#, kde-format
+msgctxt "vCard attendee role"
+msgid "Role"
+msgstr ""
+
+#: attendeetablemodel.cpp:153
+#, kde-format
+msgctxt "Attendees  (name+emailaddress)"
+msgid "Name"
+msgstr ""
+
+#: attendeetablemodel.cpp:155
+#, fuzzy, kde-format
+#| msgid "Disable"
+msgctxt "Is attendee available for incidence"
+msgid "Available"
+msgstr "Isključi"
+
+#: attendeetablemodel.cpp:157
+#, kde-format
+msgctxt ""
+"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgid "Status"
+msgstr ""
+
+#: attendeetablemodel.cpp:159
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "Type of calendar user (vCard attribute)"
+msgid "User Type"
+msgstr "Tip"
+
+#: attendeetablemodel.cpp:161
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Request Response"
+msgctxt "Has attendee to respond to the invitation"
+msgid "Response"
+msgstr "Zahtijeva odgovor"
+
+#: attendeetablemodel.cpp:163
+#, kde-format
+msgctxt "Attendee name"
+msgid "Name"
+msgstr ""
+
+#: attendeetablemodel.cpp:165
+#, fuzzy, kde-format
+msgctxt "Attendee email"
+msgid "Email"
+msgstr "Pošalji e-mail"
+
+#: editoritemmanager.cpp:227
+#, kde-format
+msgid ""
+"The item has been changed by another application.\n"
+"What should be done?"
+msgstr ""
+"Stavka je promjenjena od strane druge aplikacije.\n"
+"Sta treba učiniti?"
+
+#: editoritemmanager.cpp:229
+#, kde-format
+msgid "Take over changes"
+msgstr "Preuzmi promjene"
+
+#: editoritemmanager.cpp:230
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Ignoriši i piši preko promjena"
+
+#: freebusyganttproxymodel.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Free/Busy Period"
+msgstr "Slobodni/Zauzeti period"
+
+#: freebusyganttproxymodel.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Summary:"
+msgstr "Sažetak:"
+
+#: freebusyganttproxymodel.cpp:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Location:"
+msgstr "Mjesto:"
+
+#: freebusyganttproxymodel.cpp:80
+#, kde-format
+msgctxt "@info:tooltip period start time"
+msgid "Start:"
+msgstr "Početak:"
+
+#: freebusyganttproxymodel.cpp:83
+#, kde-format
+msgctxt "@info:tooltip period end time"
+msgid "End:"
+msgstr "Kraj:"
+
+#: freebusyurldialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Edit Free/Busy Location"
+msgctxt "@title:window"
+msgid "Edit Free/Busy Location"
+msgstr "Objavi informaciju slobodno-zauzeto"
+
+#: freebusyurldialog.cpp:63
+#, kde-kuit-format
+msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+msgstr "Lokacija Slobodnih/zauzetih za %1 <placeholder>%2</placeholder>:"
+
+#: freebusyurldialog.cpp:67
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Enter the name or email address of the attendee."
+msgctxt "@info:whatsthis"
+msgid "Enter the location of the Free/Busy information for the attendee."
+msgstr "Unesi ime ili email adresu sudionika."
+
+#: freebusyurldialog.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the location of the information."
+msgstr ""
+
+#: incidencealarm.cpp:250
+#, kde-format
+msgctxt "Disable currently selected reminder"
+msgid "Disable"
+msgstr "Isključi"
+
+#: incidencealarm.cpp:252
+#, kde-format
+msgctxt "Enable currently selected reminder"
+msgid "Enable"
+msgstr "Uključi"
+
+#: incidencealarm.cpp:270
+#, fuzzy, kde-format
+#| msgid "Display a dialog"
+msgctxt "Alarm action"
+msgid "Display a dialog"
+msgstr "Prikaži dijalog"
+
+#: incidencealarm.cpp:273
+#, fuzzy, kde-format
+#| msgid "Play an audio file"
+msgctxt "Alarm action"
+msgid "Play an audio file"
+msgstr "Reproduciraj audio datoteku"
+
+#: incidencealarm.cpp:276
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "Alarm action"
+msgid "Invalid Reminder."
+msgstr "Neispravan podsjetnik."
+
+#: incidencealarm.cpp:282
+#, fuzzy, kde-format
+#| msgctxt "The reminder is set to X minutes before/after the event"
+#| msgid "minutes"
+msgctxt "The reminder is set to X minutes before/after the event"
+msgid "1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "minute"
+msgstr[1] "minute"
+msgstr[2] "minute"
+
+#: incidencealarm.cpp:287
+#, kde-format
+msgctxt "The reminder is set to X days before/after the event"
+msgid "1 day"
+msgid_plural "%1 days"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: incidencealarm.cpp:290
+#, fuzzy, kde-format
+#| msgctxt "The reminder is set to X hours before/after the event"
+#| msgid "hours"
+msgctxt "The reminder is set to X hours before/after the event"
+msgid "1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "sati"
+msgstr[1] "sati"
+msgstr[2] "sati"
+
+#: incidencealarm.cpp:295
+#, kde-format
+msgctxt "The reminder is configured to repeat after snooze"
+msgid "(Repeats)"
+msgstr "(Ponavlja)"
+
+#. i18n: These series of strings are used to show the user a description of
+#. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
+#. one of the time units above, %3 is the (Repeats) part that will be used
+#. in case of repetition of the alarm.
+#: incidencealarm.cpp:305
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do started %4"
+msgid "%1 %2 after the to-do started %3"
+msgstr "%1 %2 %3 nakon sto je planirani zadatak počeo %4"
+
+#: incidencealarm.cpp:307
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event started %4"
+msgid "%1 %2 after the event started %3"
+msgstr "%1 %2 %3 nakon sto je događaj počeo %4"
+
+#: incidencealarm.cpp:311
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do starts %4"
+msgid "%1 %2 before the to-do starts %3"
+msgstr "%1 %2 %3 prije nego što planirani zadatak počne %4"
+
+#: incidencealarm.cpp:313
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event starts %4"
+msgid "%1 %2 before the event starts %3"
+msgstr "%1 %2 %3 prije nego što događaj počne %4"
+
+#: incidencealarm.cpp:317
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do is due %4"
+msgid "%1 %2 after the to-do is due %3"
+msgstr "%1 %2 %3 nekon što je planirani zadatak zbog %4"
+
+#: incidencealarm.cpp:319
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event ends %4"
+msgid "%1 %2 after the event ends %3"
+msgstr "%1 %2 %3 nakon što se događaj završi %4"
+
+#: incidencealarm.cpp:323
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do is due %4"
+msgid "%1 %2 before the to-do is due %3"
+msgstr "%1 %2 %3 prije što je planirani zadatak zbog %4"
+
+#: incidencealarm.cpp:325
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event ends %4"
+msgid "%1 %2 before the event ends %3"
+msgstr "%1 %2 %3 prije nego što događaj završi %4"
+
+#: incidencealarm.cpp:331
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do started %4 (Disabled)"
+msgid "%1 %2 after the to-do started %3 (Disabled)"
+msgstr "%1 %2 %3 nakon što planirani zadatak počne %4"
+
+#: incidencealarm.cpp:333
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event started %4 (Disabled)"
+msgid "%1 %2 after the event started %3 (Disabled)"
+msgstr "%1 %2 %3 nakon što događaj počne %4"
+
+#: incidencealarm.cpp:337
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do starts %4 (Disabled)"
+msgid "%1 %2 before the to-do starts %3 (Disabled)"
+msgstr "%1 %2 %3 prije nego što planirani zadatak počne %4"
+
+#: incidencealarm.cpp:339
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event starts %4 (Disabled)"
+msgid "%1 %2 before the event starts %3 (Disabled)"
+msgstr "%1 %2 %3 prije nego što događaj počne %4"
+
+#: incidencealarm.cpp:343
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do is due %4 (Disabled)"
+msgid "%1 %2 after the to-do is due %3 (Disabled)"
+msgstr "%1 %2 %3 nakon što je planirani zadatak zbog %4(Onemogućen)"
+
+#: incidencealarm.cpp:345
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event ends %4 (Disabled)"
+msgid "%1 %2 after the event ends %3 (Disabled)"
+msgstr "%1 %2 %3 nakon što događaj završi %4(Onemogućen)"
+
+#: incidencealarm.cpp:349
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do is due %4 (Disabled)"
+msgid "%1 %2 before the to-do is due %3 (Disabled)"
+msgstr "%1 %2 %3 prije nego što je planirani zadatak zbog %4(Onemogućen)"
+
+#: incidencealarm.cpp:351
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event ends %4 (Disabled)"
+msgid "%1 %2 before the event ends %3 (Disabled)"
+msgstr "%1 %2 %3 prije nego što događaj završi %4(Onemogućen)"
+
+#: incidencealarm.cpp:359
+#, kde-format
+msgid "%1 when the to-do starts"
+msgstr "%1 kada planirani zadatak počne"
+
+#: incidencealarm.cpp:361
+#, kde-format
+msgid "%1 when the event starts"
+msgstr "%1 kada događaj počne"
+
+#: incidencealarm.cpp:363
+#, kde-format
+msgid "%1 when the to-do is due"
+msgstr "%1 kada je planirani zadatak zbog"
+
+#: incidencealarm.cpp:365
+#, kde-format
+msgid "%1 when the event ends"
+msgstr "%1 kada događaj završi"
+
+#: incidencealarm.cpp:369
+#, kde-format
+msgid "%1 when the to-do starts (Disabled)"
+msgstr "%1 kada planirani zadatak počne(Onemogućeno)"
+
+#: incidencealarm.cpp:371
+#, kde-format
+msgid "%1 when the event starts (Disabled)"
+msgstr "%1 kada događaj počne(Onemogućeno)"
+
+#: incidencealarm.cpp:373
+#, kde-format
+msgid "%1 when the to-do is due (Disabled)"
+msgstr "%1 kada je planirani zadatak zbog (Onemogućeno)"
+
+#: incidencealarm.cpp:375
+#, kde-format
+msgid "%1 when the event ends (Disabled)"
+msgstr "%1 kada događaj završi (Onemogućeno)"
+
+#: incidenceattachment.cpp:130
+#, kde-format
+msgctxt "@title"
+msgid "Add Attachment"
+msgstr "Dodaj prilog"
+
+#: incidenceattachment.cpp:192
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you really want to remove these attachments?<nl/>%1"
+msgstr "Da li zaista zelite da uklonite ove priloge?<nl/>%1"
+
+#: incidenceattachment.cpp:193
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Attachments?"
+msgstr "Ukloni priloge?"
+
+#: incidenceattachment.cpp:231
+#, kde-format
+msgctxt "@title"
+msgid "Save Attachment"
+msgstr "Sačuvaj prilog"
+
+#: incidenceattachment.cpp:411
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Link here"
+msgstr "Po&veži ovdje"
+
+#: incidenceattachment.cpp:421 incidenceattachment.cpp:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Copy here"
+msgstr "&Kopiraj ovdje"
+
+#: incidenceattachment.cpp:428
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&ancel"
+msgstr "&Odustani"
+
+#: incidenceattachment.cpp:475
+#, kde-format
+msgctxt "@action:inmenu open the attachment in a viewer"
+msgid "&Open"
+msgstr "&Otvori"
+
+#: incidenceattachment.cpp:481
+#, kde-format
+msgctxt "@action:inmenu save the attachment to a file"
+msgid "Save As..."
+msgstr "Snimi kao..."
+
+#: incidenceattachment.cpp:498
+#, kde-format
+msgctxt "@action:inmenu remove the attachment"
+msgid "&Remove"
+msgstr "&Ukloni"
+
+#: incidenceattachment.cpp:506
+#, kde-format
+msgctxt "@action:inmenu show a dialog used to edit the attachment"
+msgid "&Properties..."
+msgstr "&Osobine..."
+
+#: incidenceattachment.cpp:517
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Displays items (files, mail, etc.) that have been associated with this event "
+"or to-do."
+msgstr ""
+"Prikazuje stavke (datoteke, pošta, itd.) koje su povezane s ovim događajem "
+"ili planiranim zadatkom."
+
+#: incidenceattendee.cpp:204
+#, kde-format
+msgctxt "@info"
+msgid ""
+"%1 does not look like a valid email address. Are you sure you want to invite "
+"this participant?"
+msgstr ""
+"%1 ne liči na ispravnu e-mail adresu. Želite li zaista da pozovete ovog "
+"učesnika?"
+
+#: incidenceattendee.cpp:207
+#, kde-format
+msgctxt "@title:window"
+msgid "Invalid Email Address"
+msgstr "Pogrešna e-mail adresa"
+
+#: incidenceattendee.cpp:208
+#, kde-format
+msgctxt "@action:button"
+msgid "Invite"
+msgstr ""
+
+#: incidenceattendee.cpp:209
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Invite"
+msgstr ""
+
+#: incidenceattendee.cpp:432
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select Attendees..."
+msgctxt "@title:window"
+msgid "Select Attendees"
+msgstr "Izaberi prisutne..."
+
+#: incidenceattendee.cpp:612
+#, kde-format
+msgctxt "@label Shows the number of scheduling conflicts"
+msgid "%1 conflict"
+msgid_plural "%1 conflicts"
+msgstr[0] "%1 konflikta"
+msgstr[1] "%1 konflikata"
+msgstr[2] "%1 konflikta"
+
+#: incidenceattendee.cpp:779
+#, kde-format
+msgctxt "@option"
+msgid ""
+"You are changing the organizer of this event. Since the organizer is also "
+"attending this event, would you like to change the corresponding attendee as "
+"well?"
+msgstr ""
+"Mijenjate organizatora ovog događaja. S obzirom da organizator prisustvuje "
+"događaju također, da li želite da promjenite odgovarajuće sudionike također?"
+
+#: incidenceattendee.cpp:783
+#, fuzzy, kde-format
+#| msgid "Attendee"
+msgctxt "@action:button"
+msgid "Change Attendee"
+msgstr "Prisutni"
+
+#: incidenceattendee.cpp:784
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Change"
+msgstr ""
+
+#: incidencedatetime.cpp:215
+#, kde-format
+msgctxt "@action show or hide the time zone widgets"
+msgid "Time zones"
+msgstr "Vremenske zone"
+
+#: incidencedatetime.cpp:617
+#, kde-format
+msgctxt "@label The due date/time of a to-do"
+msgid "Due:"
+msgstr "Rok:"
+
+#: incidencedatetime.cpp:745 incidencedatetime.cpp:746
+#, kde-format
+msgid "Starts: %1"
+msgstr "Počinje: %1"
+
+#: incidencedatetime.cpp:748
+#, kde-format
+msgid "Starting Date"
+msgstr "Početni Datum"
+
+#: incidencedatetime.cpp:749
+#, kde-format
+msgid "Starting Time"
+msgstr "Početni vrijeme"
+
+#: incidencedatetime.cpp:758 incidencedatetime.cpp:759
+#, kde-format
+msgid "Due on: %1"
+msgstr "Rok do: %1"
+
+#: incidencedatetime.cpp:761 incidencedatetime.cpp:762
+#, kde-format
+msgid "Ends: %1"
+msgstr "Završava: %1"
+
+#: incidencedatetime.cpp:766
+#, kde-format
+msgid "Due Date"
+msgstr "Krajnji rok"
+
+#: incidencedatetime.cpp:767
+#, kde-format
+msgid "Due Time"
+msgstr "Krajnje vrijeme"
+
+#: incidencedatetime.cpp:769
+#, kde-format
+msgid "Ending Date"
+msgstr "Završni Datum"
+
+#: incidencedatetime.cpp:770
+#, kde-format
+msgid "Ending Time"
+msgstr "Završno vrijeme"
+
+#: incidencedatetime.cpp:848
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid start date."
+msgstr "Neispravan podsjetnik."
+
+#: incidencedatetime.cpp:853
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid start time."
+msgstr "Neispravan podsjetnik."
+
+#: incidencedatetime.cpp:861
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid end date."
+msgstr "Neispravan podsjetnik."
+
+#: incidencedatetime.cpp:866
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid end time."
+msgstr "Neispravan podsjetnik."
+
+#: incidencedatetime.cpp:875
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The event ends before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Događaj se završava prije nego što počinje.\n"
+"Ispravite datume i vremena."
+
+#: incidencedatetime.cpp:879
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do is due before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Planirani zadatak se završava prije nego što počinje.\n"
+"Ispravite datume i vremena."
+
+#: incidencedefaults.cpp:68
+#, kde-format
+msgctxt "@label"
+msgid "no (valid) identities found"
+msgstr "nema pronađenih (validnih) identiteta"
+
+#: incidencedefaults.cpp:303
+#, kde-format
+msgctxt "@label attachment contains binary data"
+msgid "[Binary data]"
+msgstr "[Binarni podaci]"
+
+#: incidencedefaults.cpp:436
+#, kde-format
+msgctxt "@label invalid email address marker"
+msgid "invalid@email.address"
+msgstr "neispravna@eposta.adresa"
+
+#: incidencedescription.cpp:99
+#, fuzzy, kde-format
+#| msgctxt "@action Enable or disable rich text editting"
+#| msgid "Enable rich text"
+msgctxt "@action Enable or disable rich text editing"
+msgid "Enable rich text"
+msgstr "Omogući obimniji text"
+
+#: incidencedescription.cpp:103
+#, fuzzy, kde-format
+#| msgctxt "@action Enable or disable rich text editting"
+#| msgid "Disable rich text"
+msgctxt "@action Enable or disable rich text editing"
+msgid "Disable rich text"
+msgstr "Isključi bogati tekst"
+
+#: incidencedialog.cpp:210
+#, kde-format
+msgid "Select a valid collection first."
+msgstr ""
+
+#: incidencedialog.cpp:233
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder (%1)"
+msgstr "Podsjetnik(%1)"
+
+#: incidencedialog.cpp:235
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder"
+msgstr "Podsjetnik:"
+
+#: incidencedialog.cpp:243
+#, kde-format
+msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
+msgid "Rec&urrence"
+msgstr "Ponavljanje"
+
+#: incidencedialog.cpp:253
+#, kde-format
+msgctxt "@title:tab Daily recurring event, capital first letter only"
+msgid " (D)"
+msgstr " (D)"
+
+#: incidencedialog.cpp:256
+#, kde-format
+msgctxt "@title:tab Weekly recurring event, capital first letter only"
+msgid " (W)"
+msgstr " (W)"
+
+#: incidencedialog.cpp:259
+#, kde-format
+msgctxt "@title:tab Monthly recurring event, capital first letter only"
+msgid " (M)"
+msgstr " (M)"
+
+#: incidencedialog.cpp:262
+#, kde-format
+msgctxt "@title:tab Yearly recurring event, capital first letter only"
+msgid " (Y)"
+msgstr " (Y)"
+
+#: incidencedialog.cpp:265
+#, kde-format
+msgctxt "@title:tab Exception to a recurring event, capital first letter only"
+msgid " (E)"
+msgstr " (E)"
+
+#: incidencedialog.cpp:299
+#, kde-format
+msgctxt "@info"
+msgid "Unable to find template '%1'."
+msgstr "Ne mogu da nađem šablon '%1'."
+
+#: incidencedialog.cpp:305
+#, kde-format
+msgctxt "@info"
+msgid "Error loading template file '%1'."
+msgstr "Greška pri učitavanju datoteke '%1'."
+
+#: incidencedialog.cpp:311
+#, kde-format
+msgctxt "@info"
+msgid "Template does not contain a valid incidence."
+msgstr "Šablon ne sadrži validnu incidenciju."
+
+#: incidencedialog.cpp:410
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments (%1)"
+msgstr "Poveznice(%1)"
+
+#: incidencedialog.cpp:412
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments"
+msgstr "Poveznice"
+
+#: incidencedialog.cpp:419
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees (%1)"
+msgstr "&Prisutni(%1)"
+
+#: incidencedialog.cpp:421
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees"
+msgstr "&Prisutni"
+
+#: incidencedialog.cpp:428
+#, fuzzy, kde-format
+#| msgctxt "@title:tab Tab to modify attendees of an event or todo"
+#| msgid "&Attendees (%1)"
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources (%1)"
+msgstr "&Prisutni(%1)"
+
+#: incidencedialog.cpp:430
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources"
+msgstr ""
+
+#: incidencedialog.cpp:452
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Unable to store the incidence in the calendar. Try again?\n"
+"\n"
+" Reason: %1"
+msgstr ""
+"Nije moguće pohraniti incidenciju u kalendar. Pokušajte ponovo ?\n"
+"Razlog:%1"
+
+#: incidencedialog.cpp:458
+#, kde-format
+msgctxt "@action:button"
+msgid "Retry"
+msgstr ""
+
+#: incidencedialog.cpp:480
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You have not set a default calendar for your events yet.</"
+"para><para>Setting a default calendar will make creating new events faster "
+"and easier with less chance of filing them into the wrong folder.</"
+"para><para>Would you like to set your default events calendar to <resource>"
+"%1</resource>?</para>"
+msgstr ""
+
+#: incidencedialog.cpp:488
+#, fuzzy, kde-format
+#| msgid "Default Category"
+msgctxt "@title:window"
+msgid "Set Default Calendar?"
+msgstr "Podrazumijevana kategorija"
+
+#: incidencedialog.cpp:489
+#, fuzzy, kde-format
+#| msgid "Default Category"
+msgctxt "@action:button"
+msgid "Set As Default"
+msgstr "Podrazumijevana kategorija"
+
+#: incidencedialog.cpp:490
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Set"
+msgstr ""
+
+#: incidencedialog.cpp:670
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Save current changes"
+msgstr "Sačuvajte trenutne izmene"
+
+#: incidencedialog.cpp:671
+#, kde-format
+msgctxt "@action:button"
+msgid "Save changes and close dialog"
+msgstr "Sačuvaj izmjene i zatvori dijalog"
+
+#: incidencedialog.cpp:672
+#, kde-format
+msgctxt "@action:button"
+msgid "Discard changes and close dialog"
+msgstr "Odbaci izmjene i zatvori dijalog"
+
+#: incidencedialog.cpp:676
+#, kde-format
+msgctxt "@action:button"
+msgid "&Templates..."
+msgstr "&Preglošcii..."
+
+#: incidencedialog.cpp:678
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Manage templates for this item"
+msgstr "Upravljanje predlošcima za ovu stavku"
+
+#: incidencedialog.cpp:680
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Push this button to show a dialog that helps you manage a set of templates. "
+"Templates can make creating new items easier and faster by putting your "
+"favorite default values into the editor automatically."
+msgstr ""
+"Pritisnite ovo dugme za prikaz dijaloga koji vam pomaže upravljati skupom "
+"predložaka. Predlošci mogu napraviti stvaranje nove stavke lakše i brže "
+"stavljajući svoje omiljene zadane vrijednosti u editor automatski."
+
+#: incidencedialog.cpp:777 incidencedialog.cpp:798 incidencedialog.cpp:814
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Zaista želite da otkažete?"
+
+#: incidencedialog.cpp:778 incidencedialog.cpp:799 incidencedialog.cpp:815
+#, kde-format
+msgctxt "@title:window"
+msgid "KOrganizer Confirmation"
+msgstr "Potvrda KOrganizer-u"
+
+#: incidencedialog.cpp:779 incidencedialog.cpp:800 incidencedialog.cpp:816
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr ""
+
+#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:12
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr "Podrazumijevana metoda prikački e-pošte"
+
+#. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:13
+#, fuzzy, kde-format
+#| msgid "The default way of attaching dropped emails to an event"
+msgid "Choose the default way of attaching dropped emails to an event"
+msgstr "Podrazumijevani način kačenja ispuštene e-poruke"
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:14
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr "Podrazumijevani način kačenja ispuštene e-poruke"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:17
+#, kde-format
+msgid "Always ask"
+msgstr "Uvijek pitati"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:20
+#, kde-format
+msgid "Only attach link to message"
+msgstr "Priloži samo vezu do poruke"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:23
+#, kde-format
+msgid "Attach complete message"
+msgstr "Priloži kompletnu poruku"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:26
+#, kde-format
+msgid "Attach message without attachments"
+msgstr "Prikačiti poruku bez njenih priloga"
+
+#: incidencerecurrence.cpp:128
+#, kde-format
+msgctxt ""
+"In several of the messages below, an ordinal number is substituted into the "
+"message. Translate this as \"0\" if English ordinal suffixes should be added "
+"(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
+"be substituted (1, 22, 123)."
+msgid "0"
+msgstr "0"
+
+#: incidencerecurrence.cpp:453
+#, kde-format
+msgid ""
+"A recurring event or to-do must occur at least once. Adjust the recurring "
+"parameters."
+msgstr ""
+"Ponavljajući događaj ili zadatak mora se desiti barem jednom. Prilagodite "
+"parametre ponavljanja."
+
+#: incidencerecurrence.cpp:459
+#, kde-format
+msgid "The incidence's start date is invalid."
+msgstr "Datum početka događaja nije validan."
+
+#: incidencerecurrence.cpp:465
+#, fuzzy, kde-format
+#| msgid "The incidence's start date is invalid."
+msgctxt "@info"
+msgid "The recurrence end date is invalid."
+msgstr "Datum početka događaja nije validan."
+
+#: incidencerecurrence.cpp:508
+#, kde-format
+msgctxt "example: the 30th"
+msgid "the %1"
+msgstr "%1"
+
+#: incidencerecurrence.cpp:511
+#, kde-format
+msgctxt "example: the 4th to last day"
+msgid "the %1 to last day"
+msgstr "%1 do zadnjeg dana"
+
+#: incidencerecurrence.cpp:514
+#, kde-format
+msgctxt "example: the 5th Wednesday"
+msgid "the %1 %2"
+msgstr "%1 %2"
+
+#: incidencerecurrence.cpp:520
+#, kde-format
+msgctxt "example: the last Wednesday"
+msgid "the last %1"
+msgstr "zadnji %1"
+
+#: incidencerecurrence.cpp:522
+#, kde-format
+msgctxt "example: the 5th to last Wednesday"
+msgid "the %1 to last %2"
+msgstr "%1 do zadnjih %2"
+
+#: incidencerecurrence.cpp:538
+#, kde-format
+msgctxt "example: the 5th of June"
+msgid "the %1 of %2"
+msgstr "%1 od %2"
+
+#: incidencerecurrence.cpp:541
+#, kde-format
+msgctxt "example: the 3rd to last day of June"
+msgid "the %1 to last day of %2"
+msgstr "%1 do zadnjeg dana od %2"
+
+#: incidencerecurrence.cpp:544
+#, kde-format
+msgctxt "example: the 4th Wednesday of June"
+msgid "the %1 %2 of %3"
+msgstr "%1 %2 od %3"
+
+#: incidencerecurrence.cpp:551
+#, kde-format
+msgctxt "example: the last Wednesday of June"
+msgid "the last %1 of %2"
+msgstr "zadnjih %1 od %2"
+
+#: incidencerecurrence.cpp:556
+#, kde-format
+msgctxt "example: the 4th to last Wednesday of June"
+msgid "the %1 to last %2 of %3 "
+msgstr "%1 do zadnjih %2 od %3 "
+
+#: incidencerecurrence.cpp:563
+#, kde-format
+msgctxt "example: the 15th day of the year"
+msgid "the %1 day of the year"
+msgstr "%1 dan godine"
+
+#: incidencerecurrence.cpp:578
+#, kde-format
+msgctxt "Recurrence ends after n occurrences"
+msgid "occurrence"
+msgid_plural "occurrences"
+msgstr[0] "pojavljivanje"
+msgstr[1] "pojava"
+msgstr[2] "pojave"
+
+#: incidencerecurrence.cpp:602
+#, kde-format
+msgctxt "repeat every N >weeks<"
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "sedmica"
+msgstr[1] "sedmice"
+msgstr[2] "sedmica"
+
+#         translations.
+#: incidencerecurrence.cpp:606
+#, kde-format
+msgctxt "repeat every N >months<"
+msgid "month"
+msgid_plural "months"
+msgstr[0] "mjesec"
+msgstr[1] "mjeseci"
+msgstr[2] "mjeseci"
+
+#: incidencerecurrence.cpp:610
+#, kde-format
+msgctxt "repeat every N >years<"
+msgid "year"
+msgid_plural "years"
+msgstr[0] "god."
+msgstr[1] "godine"
+msgstr[2] "godina"
+
+#: incidencerecurrence.cpp:614
+#, kde-format
+msgctxt "repeat every N >days<"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dana"
+msgstr[1] "dani"
+msgstr[2] "dana"
+
+#: incidencerecurrence.cpp:622
+#, kde-format
+msgctxt ""
+"repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
+"weeks, 'm' months, 'y' years"
+msgid "every"
+msgid_plural "every"
+msgstr[0] "svaki"
+msgstr[1] "svake"
+msgstr[2] "svaki"
+
+#: incidencewhatwhere.cpp:70
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a summary."
+msgstr ""
+
+#: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
+#: individualmailcomponentfactory.h:63
+#, fuzzy, kde-format
+msgctxt "@action:button dialog positive answer"
+msgid "Send Email"
+msgstr "Pošalji e-mail"
+
+#: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
+#: individualmailcomponentfactory.h:64
+#, kde-format
+msgctxt "@action:button dialog negative answer"
+msgid "Do Not Send"
+msgstr ""
+
+#: individualmaildialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Group Scheduling Email"
+msgstr ""
+
+#: individualmaildialog.cpp:34
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send update"
+msgstr ""
+
+#: individualmaildialog.cpp:35
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send no update"
+msgstr ""
+
+#: individualmaildialog.cpp:36
+#, fuzzy, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Edit mail"
+msgstr "Pošalji e-mail"
+
+#: individualmaildialog.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Options for this particular attendee."
+msgstr ""
+
+#: individualmaildialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Provide a location for the attachment file"
+msgctxt "@info:tooltip"
+msgid "Choose an option for this attendee."
+msgstr "Osigurajte mjesto za priloge"
+
+#: individualmaildialog.cpp:111
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings <<"
+msgstr ""
+
+#: individualmaildialog.cpp:113
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings >>"
+msgstr ""
+
+#: ldaputils.cpp:15
+#, kde-format
+msgctxt "ldap attribute cn"
+msgid "Common name"
+msgstr ""
+
+#: ldaputils.cpp:17
+#, fuzzy, kde-format
+msgctxt "ldap attribute mail"
+msgid "Email"
+msgstr "Pošalji e-mail"
+
+#: ldaputils.cpp:19
+#, kde-format
+msgctxt "ldap attribute givenname"
+msgid "Given name"
+msgstr ""
+
+#: ldaputils.cpp:21
+#, fuzzy, kde-format
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "ldap attribute sn"
+msgid "Surname"
+msgstr "Ahmed Dizdar,Samir Ribić,Vedran Ljubovic"
+
+#: ldaputils.cpp:23
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "KOrganizer Confirmation"
+msgctxt "ldap attribute ou"
+msgid "Organization"
+msgstr "Potvrda KOrganizer-u"
+
+#: ldaputils.cpp:25
+#, kde-format
+msgctxt "ldap attribute objectClass"
+msgid "Object class"
+msgstr ""
+
+#: ldaputils.cpp:27
+#, kde-format
+msgctxt "ldap attribute description"
+msgid "Description"
+msgstr ""
+
+#: ldaputils.cpp:29
+#, kde-format
+msgctxt "ldap attribute telephoneNumber"
+msgid "Telephone"
+msgstr ""
+
+#: ldaputils.cpp:31
+#, kde-format
+msgctxt "ldap attribute mobile"
+msgid "Mobile"
+msgstr ""
+
+#: opencomposerjob.cpp:77
+#, kde-format
+msgctxt "errormessage: dbus is running but still no connection kmail"
+msgid "Cannot connect to email service"
+msgstr ""
+
+#: resourcemanagement.cpp:93
+#, fuzzy, kde-format
+#| msgid "Template Management"
+msgctxt "@title:window"
+msgid "Resource Management"
+msgstr "Upravljanje šablonima"
+
+#: resourcemanagement.cpp:98
+#, kde-format
+msgctxt "@action:button add resource to attendeelist"
+msgid "Book resource"
+msgstr ""
+
+#: schedulingdialog.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
+msgctxt "@title:window"
+msgid "Scheduling"
+msgstr "Zakaži..."
+
+#: schedulingdialog.cpp:166
+#, kde-format
+msgctxt ""
+"@label Day of week followed by day of the month, then the month. Example: "
+"Monday, 12 June"
+msgid "%1, %2 %3"
+msgstr "%1, %2 %3"
+
+#: schedulingdialog.cpp:187
+#, kde-format
+msgctxt ""
+"@label This is a suffix following a time selecting widget. Example: "
+"[timeedit] to 10:00am"
+msgid "to %1"
+msgstr "do %1"
+
+#: templatemanagementdialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Manage %1 Templates"
+msgctxt "@title:window"
+msgid "Manage %1 Templates"
+msgstr "Upravljanje %1 predlošcima"
+
+#: templatemanagementdialog.cpp:83
+#, kde-format
+msgid "Template Name"
+msgstr "Ime šablona"
+
+#: templatemanagementdialog.cpp:84
+#, kde-format
+msgid "Please enter a name for the new template:"
+msgstr "Molim unesite naziv za novi šablon:"
+
+#: templatemanagementdialog.cpp:86
+#, kde-format
+msgid "New %1 Template"
+msgstr "Novi predložak %1"
+
+#: templatemanagementdialog.cpp:94
+#, kde-format
+msgid "A template with that name already exists, do you want to overwrite it?"
+msgstr "Šablon s istim imenom već postoji, želite li da ga prebrišete ?"
+
+#: templatemanagementdialog.cpp:95
+#, kde-format
+msgid "Duplicate Template Name"
+msgstr "Dvostruki naziv šablona"
+
+#: templatemanagementdialog.cpp:129
+#, kde-format
+msgid "Are you sure that you want to remove the template <b>%1</b>?"
+msgstr "Da li ste sigurni da želite ukloniti predložak <b>%1</b>?"
+
+#: templatemanagementdialog.cpp:130
+#, kde-format
+msgid "Remove Template"
+msgstr "Ukloni šablon"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
+#: ui/alarmdialog.ui:14
+#, kde-format
+msgid "Alarms"
+msgstr "Alarmi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/alarmdialog.ui:32
+#, kde-format
+msgid "When:"
+msgstr "Kada:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:47
+#, kde-format
+msgid "Set the reminder trigger time"
+msgstr "Postavite vrijeme za aktivaciju podsjetnika"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:50
+#, kde-format
+msgid ""
+"This spinbox allows you to set the reminder trigger time. The time unit is "
+"set in the combobox immediately adjacent."
+msgstr ""
+"Ovaj spinbox vam omogućuje da postavite vrijeme za aktivaciju podsjetnika. "
+"Jedinica vremena je postavljeno u susjednom combobox-u."
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:72
+#, kde-format
+msgid "Select the reminder trigger time unit"
+msgstr "Odaberite jedinicu za aktivaciju podsjetnika."
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:75
+#, kde-format
+msgid ""
+"This combobox allows you to set the units for the reminder trigger time. The "
+"trigger time value is set in the spinbox immediately adjacent."
+msgstr ""
+"Ovaj combobox vam omogućava da postavite  jedinicu vremena za aktivaciju "
+"podsjetnika. Vrijeme okidača je postavljeno u susjednom spinbox-u."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:79
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in minutes"
+msgid "minute(s)"
+msgstr "minut(e)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:84
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in hours"
+msgid "hour(s)"
+msgstr "sat(i)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:89
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in days"
+msgid "day(s)"
+msgstr "dan(i)"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:97
+#, kde-format
+msgid "Select the reminder trigger relative to the start or end time"
+msgstr "Odaberite aktivaciju podsjetnika u odnosu na vrijeme početka ili kraja"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:100
+#, kde-format
+msgid ""
+"Use this combobox to specify if you want the reminder to trigger before or "
+"after the start or end time."
+msgstr ""
+"Odaberite dati combobox ako želite da navedete aktivaciju podsjetnika prije "
+"ili poslije početka ili kraja vremena."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:104
+#, kde-format
+msgid "before the event starts"
+msgstr "prije početka događaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:109
+#, kde-format
+msgid "after the event starts"
+msgstr "nakon poče događaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:114
+#, kde-format
+msgid "before the event ends"
+msgstr "prije nego događaj završi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:119
+#, kde-format
+msgid "after the event ends"
+msgstr "poslije završetka događaja"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/alarmdialog.ui:129
+#, kde-format
+msgid "Repeat:"
+msgstr "Ponovi:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:144
+#, kde-format
+msgid "Set the reminder to repeat"
+msgstr "Postavite ponavljanje podsjetnika"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:147
+#, kde-format
+msgid "Check this if you want to the reminder to recur on a periodic interval."
+msgstr ""
+"Provjeri ovo ako želiš da se podsjetnik ponavlja u periodičnim intervalima."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:160
+#, kde-format
+msgid "Select how often the reminder should repeat"
+msgstr "Označi koliko često podsjetnik treba da se ponavlja"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:163
+#, kde-format
+msgid ""
+"Use this selector to choose how many times you want the recurring reminder "
+"to repeat."
+msgstr ""
+"Koristiti dati birač ako želite da postavite u kojim vremenskim intervalima "
+"se podsjetnik ponavlja."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:166
+#, kde-format
+msgid " time(s)"
+msgstr " vrijeme/vremena"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:182
+#, kde-format
+msgid "Select the time between reminder repeats"
+msgstr "Izabrati vrijeme između ponavljanja podsjetnika"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:185
+#, kde-format
+msgid "Use this selector to choose the time between repeating reminders."
+msgstr ""
+"Koristiti ovaj birač za odabir vremena između ponavljajućih podsjetnika."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:188
+#, kde-format
+msgctxt "@label:spinbox repeat interval expressed in minutes"
+msgid " Minute(s)"
+msgstr " Minuta/e"
+
+#. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:191
+#, kde-format
+msgctxt "repeat every X minutes"
+msgid "every "
+msgstr "svaki "
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/alarmdialog.ui:212
+#, kde-format
+msgid "What:"
+msgstr "Šta:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:222
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgid "Select the alarm type"
+msgstr "Postavi početni datum"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:225
+#, fuzzy, kde-format
+#| msgid "Use this selector to choose the time between repeating reminders."
+msgid "Use this selector to choose the alarm type for the reminders."
+msgstr ""
+"Koristiti ovaj birač za odabir vremena između ponavljajućih podsjetnika."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:235
+#, kde-format
+msgid "Display text"
+msgstr "Prikaži tekst:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:240
+#, kde-format
+msgid "Play sound file"
+msgstr "Pusti reprodukciju zvučne datoteke"
+
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
+#: ui/alarmdialog.ui:273
+#, kde-format
+msgid ""
+"Specify any text you desire to display in the popup notice when the reminder "
+"triggers."
+msgstr ""
+"Navedite bilo koji tekst ako želite prikazati u popup(iskočnom) obavještenju "
+"kada se podsjetnik aktivira."
+
+#. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
+#: ui/alarmdialog.ui:296
+#, kde-format
+msgid "Audio File:"
+msgstr "Audio datoteka:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:309
+#, kde-format
+msgid "Specify a file containing a sound to play when the reminder triggers"
+msgstr ""
+"Izaberite datoteku koja sadrži zvuk koji će se reproducirati kada se "
+"podsjetnik aktivira"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:312
+#, kde-format
+msgid ""
+"Use the adjacent file browser to help you find the file you want to use when "
+"playing a sound when the reminder triggers."
+msgstr ""
+"Koristite odgovarajući preglednik datoteka koji će vam pomoći da pronađete "
+"datoteku koju želite koristiti kada emitujete zvuk pri aktiviranju "
+"podsjetnika."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Give the attachment a name"
+msgstr "Imenujte prilog"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:41
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Type any string you desire here for the name of the attachment"
+msgstr "Unesite niz znakova za ime priloga"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:44
+#, kde-format
+msgctxt "@label"
+msgid "Attachment name"
+msgstr "Ime priloga"
+
+#. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
+#: ui/attachmenteditdialog.ui:65
+#, kde-format
+msgctxt "@label File type of attachment is unknown"
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:72
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Store the attachment file inside the calendar"
+msgstr "Pohrani datoteku priloga unutar kalendara"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:75
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the attachment to be stored inside your "
+"calendar, which can take a lot of space depending on the size of the "
+"attachment. If this option is not checked, then only a link pointing to the "
+"attachment will be stored.  Do not use a link for attachments that change "
+"often or may be moved (or removed) from their current location."
+msgstr ""
+"Uključenje ove opcije će uzrokovati da prilog bude pohranjen unutar vašeg "
+"kalendara, što može uzeti puno prostora, ovisno o veličini priloga. Ako je "
+"ova opcija nije označena, onda samo link pokazuje na prilog će biti "
+"pohranjen. Ne koristite link na priloge koji često mijenjaju ili mogu biti "
+"premješteni (ili uklonjeni) od svog trenutnog mjesta."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:78
+#, kde-format
+msgctxt "@option:check"
+msgid "Store attachment inline"
+msgstr "Smjesti prilog ugrađeno"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/attachmenteditdialog.ui:123
+#, kde-format
+msgid "Location:"
+msgstr "Lokacija:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Provide a location for the attachment file"
+msgstr "Osigurajte mjesto za priloge"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:136
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter the path to the attachment file or use the file browser by pressing "
+"the adjacent button"
+msgstr ""
+"Unesite put do datoteke priloga ili koristite preglednik datoteka pritiskom "
+"na susjednu tipku"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/attachmenteditdialog.ui:159
+#, kde-format
+msgctxt "@label"
+msgid "Size:"
+msgstr "Veličina:"
+
+#. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
+#: ui/attachmenteditdialog.ui:166
+#, kde-format
+msgid "0 KB"
+msgstr "0 KB"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/attachmenteditdialog.ui:183
+#, kde-format
+msgid "Type:"
+msgstr "Tip:"
+
+#. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:20
+#, kde-format
+msgid "A message on this incidence item"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:23
+#, fuzzy, kde-format
+#| msgid "Use this selector to choose the time between repeating reminders."
+msgid "Use this message to correct the item parameters."
+msgstr ""
+"Koristiti ovaj birač za odabir vremena između ponavljajućih podsjetnika."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/dialogdesktop.ui:53
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label:listbox The calendar to which the todo or event must be added"
+#| msgid "Calendar:"
+msgctxt "@label:listbox The calendar to which the todo or event must be added"
+msgid "Calen&dar:"
+msgstr "Kalendar:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/dialogdesktop.ui:81
+#, kde-format
+msgctxt "@info"
+msgid "You are Invited, what do you want to do?"
+msgstr "Pozvani ste, šta želite uraditi ?"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:88
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Accept the invitation"
+msgstr "Prihvati pozivnicu"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button to accept the invitation."
+msgstr "Pritisni ovo dugme da prihvatiš pozivnicu."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:94
+#, kde-format
+msgctxt "@action:button Accept an invitation"
+msgid "Accept"
+msgstr "Prihvatanje"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
+#: ui/dialogdesktop.ui:105
+#, kde-format
+msgctxt "@action:button decline an invitation"
+msgid "Decline"
+msgstr "Odbij"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgctxt "@info:tooltip"
+msgid "Set the summary"
+msgstr "Postavi početni datum"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:141 ui/dialogdesktop.ui:169
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets brief information that will be displayed in many places in the user "
+"interface."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/dialogdesktop.ui:147
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Summary:"
+msgctxt "@label"
+msgid "Summar&y:"
+msgstr "Sažetak:"
+
+#. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
+#: ui/dialogdesktop.ui:188
+#, kde-format
+msgctxt "@label"
+msgid "&Location:"
+msgstr "&Lokacija:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:207
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the location"
+msgstr "Postavi lokaciju"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:210
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets where the event or to-do will take place."
+msgstr "Postavlja gdje će se događaj ili planirani zadatak odigrati."
+
+#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
+#: ui/dialogdesktop.ui:227
+#, kde-format
+msgctxt "@label line containing to-do specific ui controls"
+msgid "Completion:"
+msgstr "Završetak:"
+
+#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
+#: ui/dialogdesktop.ui:280
+#, kde-format
+msgctxt "@label:slider Showed after the to-do percentage completed slider"
+msgid "completed"
+msgstr "završeno"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ui/dialogdesktop.ui:287
+#, kde-format
+msgctxt "@label:listbox priority of a to-do"
+msgid "Priority:"
+msgstr "Prioritet:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:298
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "unspecified"
+msgstr "neodređeno"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:303
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "1 (highest)"
+msgstr "1 (najviši)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:308
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "2"
+msgstr "2"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:313
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "3"
+msgstr "3"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:318
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "4"
+msgstr "4"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:323
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "5 (medium)"
+msgstr "5 (srednje)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:328
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "6"
+msgstr "6"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:333
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "7"
+msgstr "7"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:338
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "8"
+msgstr "8"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:343
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "9 (lowest)"
+msgstr "9 (najniži)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:362
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Set if this to-do's start and due dates have times associated with them."
+msgstr ""
+"Postaviti ako ovaj početni i krajnji datum zadatka imaju vremena povezana sa "
+"njima."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:365
+#, kde-format
+msgctxt "@option:check"
+msgid "All Day"
+msgstr "Cijeli dan"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
+#: ui/dialogdesktop.ui:391
+#, kde-format
+msgctxt "@option:check"
+msgid "Blocks me for other events"
+msgstr "Blokira me za ostale događaje"
+
+#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
+#: ui/dialogdesktop.ui:422
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip period start time"
+#| msgid "Start:"
+msgctxt "@label Start date/time of the event or todo"
+msgid "S&tart:"
+msgstr "Početak:"
+
+#. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:450
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the start date"
+msgstr "Postavi početni datum"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:453
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start date for this to-do"
+msgstr "Postavlja datum početka za ovu obavezu"
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
+#: ui/dialogdesktop.ui:469
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start time for this to-do."
+msgstr "Postavlja vrijeme početka za ovu obavezu."
+
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
+#: ui/dialogdesktop.ui:485 ui/dialogdesktop.ui:600
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Select the timezone for this event. It will also affect recurrences"
+msgstr ""
+"Označi vremensku zonu za ovaj događaj. To će također djelovati na povratak"
+
+#. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
+#: ui/dialogdesktop.ui:503
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "<a href=\"hide\"><font color='blue'>&lt;&lt; Time zones</font></a>"
+msgctxt "@action"
+msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
+msgstr "<a href=\"hide\"><font color='blue'>&lt;&lt; Vremenske zone</font></a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
+#: ui/dialogdesktop.ui:540
+#, kde-format
+msgctxt "@label end date/time for an event or to-do"
+msgid "E&nd:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
+#: ui/dialogdesktop.ui:568
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due date for this to-do."
+msgstr "Postavlja datum krajnjeg roka za ovu obavezu."
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
+#: ui/dialogdesktop.ui:584
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due time for this to-do."
+msgstr "Postavlja vrijeme krajnjeg roka za ovaj planirani zadatak."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
+#: ui/dialogdesktop.ui:636
+#, kde-format
+msgctxt "@title:tab General settings for an event or to-do"
+msgid "General"
+msgstr "Glavno"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:651 ui/dialogdesktop.ui:716
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the secrecy level"
+msgstr "Postavi tajni nivo"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:654 ui/dialogdesktop.ui:719
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets whether the access to this event or to-do is restricted. Please note "
+"that KOrganizer currently does not use this setting, so the implementation "
+"of the restrictions will depend on the groupware server. This means that "
+"events or to-dos marked as private or confidential may be visible to others."
+msgstr ""
+"Postavlja da li je pristup ovom događaju ili obavezi ograničen. Imajte u "
+"vidu da KOrganizer trenutno ne koristi ovo podešavanje, tako da će "
+"implementacija ograničenja zavisiti od groupware servera. To znači da "
+"obaveze ili događaji označeni kao privatni ili povjerljivi mogu biti "
+"vidljivi drugima."
+
+#. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
+#: ui/dialogdesktop.ui:657
+#, kde-format
+msgctxt "@label:listbox sets the privacy option of the event or to-do"
+msgid "Access:"
+msgstr "Dozvole:"
+
+#. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
+#: ui/dialogdesktop.ui:678
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+msgctxt "@label"
+msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
+msgstr ""
+"<a href=\\\"hide\\\"><font color='blue'>Opširni text &gt;&gt;</font></a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
+#: ui/dialogdesktop.ui:709
+#, kde-format
+msgctxt "@label"
+msgid "Tags:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
+#: ui/dialogdesktop.ui:730
+#, kde-format
+msgctxt "@title:tab attendees of this event or to-do"
+msgid "Attendees"
+msgstr "Učesnici"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/dialogdesktop.ui:736
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Meeting organizer:"
+msgstr "Organizator sastanaka:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:777
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the organizer identity"
+msgstr "Postaviti identitet organizatora"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:780
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Sets the identity corresponding to the organizer of this to-do or event. "
+#| "Identities can be set in the 'Personal' section of the KOrganizer "
+#| "configuration, or in the Personal'->'About Me'->'Password & User Account' "
+#| "section of the System Settings. In addition, identities are gathered from "
+#| "your KMail settings and from your address book. If you choose to set it "
+#| "globally for KDE in the System Settings, be sure to check 'Use email "
+#| "settings from System Settings' in the 'Personal' section of the "
+#| "KOrganizer configuration."
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets the identity corresponding to the organizer of this to-do or event. "
+"Identities can be set in the 'Personal' section of the KOrganizer "
+"configuration. In addition, identities are gathered from your KMail settings "
+"and from your address book."
+msgstr ""
+"Postavlja identitet odgovara organizatoru od planiranog zadatka ili "
+"događaja. Identiteti se može postaviti u \"Osobni\" dio KOrganizatora "
+"konfiguracije, ili u Lični'->-'O meni'->' Lozinka i korisnički račun \" "
+"sekcije sistemskih postavki. Osim toga, identiteti su objedinjeni iz KMail "
+"postavke i iz adresara. Ako izaberete da ga globalno postavite za KDE u "
+"postavke sistema, provjerite \"Koristite podešenja e-mai pošte iz sistemskih "
+"postavki ' u ' osobni ' dijelu KOrganizer konfiguracije."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/dialogdesktop.ui:812
+#, kde-format
+msgctxt "@label participants of this event or to-do"
+msgid "Participants:"
+msgstr "Učesnici:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:831
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Schedule the meeting with your attendees."
+msgstr "Zakaži sastanak s učesnicima."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:834
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Opens the scheduling dialog, which will assist in picking a time slot that "
+"works for all attendees."
+msgstr ""
+"Otvara dijalog za kreiranje rasporeda koji će pomoći u izboru vremena "
+"pogodnog za sve učesnike."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:837
+#, kde-format
+msgctxt "@action:button"
+msgid "Schedule..."
+msgstr "Zakaži..."
+
+#. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
+#: ui/dialogdesktop.ui:860
+#, kde-format
+msgid "Substitute with group members"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:867
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select attendees from your address book."
+msgstr "Izaberi prisutne iz adresara."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:870
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Opens your address book, allowing you to select new attendees from it."
+msgstr ""
+"Otvara vaš adresar, omogućavajući vam da izaberete nove prisutne iz njega."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:873
+#, kde-format
+msgctxt "@action:button"
+msgid "Select Attendees..."
+msgstr "Izaberi prisutne..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
+#: ui/dialogdesktop.ui:897
+#, kde-format
+msgid "Resources"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
+#: ui/dialogdesktop.ui:937
+#, kde-format
+msgid "Book Resource"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
+#: ui/dialogdesktop.ui:966
+#, kde-format
+msgid "Find Resources..."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
+#: ui/dialogdesktop.ui:980
+#, kde-format
+msgctxt "@title:tab Tab to configure reminders for events or to-do"
+msgid "Reminder"
+msgstr "Podsjetnik"
+
+#. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
+#: ui/dialogdesktop.ui:992
+#, kde-format
+msgctxt "@label"
+msgid "Add default reminder:"
+msgstr "Dodaj podrazumjevani podsjetnik:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
+#: ui/dialogdesktop.ui:1015
+#, kde-format
+msgctxt "@action:button Adds an reminder"
+msgid "Add"
+msgstr "Dodati"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
+#: ui/dialogdesktop.ui:1046
+#, fuzzy, kde-format
+#| msgctxt "@action:button Create a new reminder"
+#| msgid "New"
+msgctxt "@action:button create a new reminder"
+msgid "New"
+msgstr "Nova"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
+#: ui/dialogdesktop.ui:1057
+#, kde-format
+msgctxt "@action:button modify the selected reminder"
+msgid "Modify"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
+#: ui/dialogdesktop.ui:1068
+#, kde-format
+msgctxt "@action:button disables selected reminder"
+msgid "Disable"
+msgstr "Isključi"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
+#: ui/dialogdesktop.ui:1075
+#, kde-format
+msgctxt "@action:button removes selected reminders"
+msgid "Remove"
+msgstr "Ukloni"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
+#: ui/dialogdesktop.ui:1100
+#, kde-format
+msgctxt "@title:tab"
+msgid "Recurrence"
+msgstr "Ponavljanje"
+
+#. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
+#: ui/dialogdesktop.ui:1112
+#, kde-format
+msgctxt "@label whether or not this event or to-do repeats"
+msgid "Repeats:"
+msgstr "Ponavlja:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1131
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Never"
+msgstr "Nikad"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1136
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Daily"
+msgstr "Dnevno"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1141
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Weekly"
+msgstr "Sedmično"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1146
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Monthly"
+msgstr "Mjesečno"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1151
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Yearly"
+msgstr "Godišnje"
+
+#. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
+#: ui/dialogdesktop.ui:1165
+#, kde-format
+msgctxt "@label repeats every [various options]"
+msgid "every"
+msgstr "svaki"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
+#: ui/dialogdesktop.ui:1197
+#, kde-format
+msgctxt "@label Event or todo recurs every n day(s)"
+msgid "day(s)"
+msgstr "dan(i)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
+#: ui/dialogdesktop.ui:1204
+#, kde-format
+msgid "This and future occurrences."
+msgstr "Taj i budući događaji."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
+#: ui/dialogdesktop.ui:1375
+#, kde-format
+msgctxt "@label recurrence ends on|after"
+msgid "Ends:"
+msgstr "Krajevi:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1397
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "never"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "never"
+msgstr "nikada"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1402
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "on"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "on"
+msgstr "uključeno"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1407
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "after"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "after"
+msgstr "poslije"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
+#: ui/dialogdesktop.ui:1462
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Date after which the event or to-do should stop recurring"
+msgstr "Datum kada događaj ili planirani zadatak prestaje da se ponavlja"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
+#: ui/dialogdesktop.ui:1517
+#, kde-format
+msgctxt "@label"
+msgid "occurrence(s)"
+msgstr "pojavljivanje(a)"
+
+#. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
+#: ui/dialogdesktop.ui:1536
+#, kde-format
+msgctxt "@label exceptions for the recurrence"
+msgid "Exceptions:"
+msgstr "Izuzeci:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
+#: ui/dialogdesktop.ui:1561
+#, kde-format
+msgctxt "@action:button adds an exception on the recurrence"
+msgid "Add"
+msgstr "Dodati"
+
+#. i18n: ectx: property (text), widget (QLabel, mOnLabel)
+#: ui/dialogdesktop.ui:1600
+#, kde-format
+msgctxt "@label The event ends on [different options]"
+msgid "on:"
+msgstr "uključeno:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
+#: ui/dialogdesktop.ui:1615
+#, kde-format
+msgctxt "@action:button removes an exception"
+msgid "Remove"
+msgstr "Izbriši"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
+#: ui/dialogdesktop.ui:1642
+#, kde-format
+msgctxt "@title:tab configure attachments of an event or todo"
+msgid "Attachments"
+msgstr "Dodaci"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1664
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an attachment"
+msgstr "Dodaj prilog"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1667
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows a dialog used to select an attachment to add to this event or to-do as "
+"link or as inline data."
+msgstr ""
+"Prikazuje se dijaloški prozor korišten za odabir dodatka koji dodajete na "
+"ovaj događaj ili budući zadatak kao link ili kao ugrađene podatke."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1670
+#, kde-format
+msgctxt "@action:button adds an attachment"
+msgid "Add"
+msgstr "Dodati"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1690
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove the selected attachment"
+msgstr "Odstrani izbrani prilog"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1693
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Removes the attachment selected in the list above from this event or to-do."
+msgstr ""
+"Uklanja prilog izabran u gornjoj listi iz ovog događaja ili planiranog "
+"zadatka."
+
+#. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1696
+#, kde-format
+msgctxt "@action:button remove an attachment"
+msgid "Remove"
+msgstr "Izbriši"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:39
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgid "Enter the search term"
+msgstr "Postavi početni datum"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:42
+#, kde-format
+msgid ""
+"Use this text box to enter some keyword for the resource you want to find."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
+#: ui/resourcemanagement.ui:76
+#, kde-format
+msgid "Details"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: ui/resourcemanagement.ui:94
+#, kde-format
+msgid "Owner"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
+#: ui/schedulingdialog.ui:14
+#, kde-format
+msgid "Schedule a time"
+msgstr "Raspored vremena"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/schedulingdialog.ui:39
+#, kde-format
+msgid "Earliest time to start:"
+msgstr "Najranije vrijeme za početak:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/schedulingdialog.ui:59
+#, kde-format
+msgid "Latest time to end:"
+msgstr "Najkasnije vrijeme za kraj:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
+#. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
+#, kde-format
+msgid "Check the weekdays to include in the search."
+msgstr "Označite dane u sedmici koje želite uključiti u pretragu."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:89 ui/schedulingdialog.ui:111
+#, kde-format
+msgid ""
+"Only the checked weekdays will be included in the free time slot search."
+msgstr ""
+"Samo označeni dani u sedmici će biti uključeni u isječku pretrage slobodog "
+"vremena."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/schedulingdialog.ui:92
+#, kde-format
+msgid "Allowed weekdays:"
+msgstr "Dozvoljeni dani u sedmici :"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
+#, kde-format
+msgid "Check the roles to include in the search."
+msgstr "Označi uloge koje ćeš uključiti u pretrage."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
+#. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:121 ui/schedulingdialog.ui:143
+#, kde-format
+msgid ""
+"Only the participants with the checked roles will be considered in the free "
+"time slot search."
+msgstr ""
+"Semo učesnici sa označenim ulogama će biti uzeti u obzir u isječku pretrage "
+"slobodog vremena."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/schedulingdialog.ui:124
+#, kde-format
+msgid "Mandatory roles:"
+msgstr "Obavezujuće uloge:"
+
+#. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:154
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the location"
+msgid "Select the search option"
+msgstr "Postavi lokaciju"
+
+#. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:157
+#, kde-format
+msgid "Use these tabs to choose the search option."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
+#: ui/schedulingdialog.ui:164
+#, kde-format
+msgid "Automatic Search"
+msgstr "Automatska pretraga"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
+#: ui/schedulingdialog.ui:199
+#, kde-format
+msgid "Visual Search"
+msgstr "Vizuelna pretraga"
+
+#. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
+#: ui/schedulingdialog.ui:207
+#, kde-format
+msgid "Move your appointment to:"
+msgstr "Pomjerite vaš sastanak za:"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
+#: ui/schedulingdialog.ui:228
+#, kde-format
+msgid "Monday, 12th June"
+msgstr "Ponedjeljak, 12-i Juni"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
+#: ui/schedulingdialog.ui:241
+#, kde-format
+msgid "to 10:00am"
+msgstr "za 10:00 ujutro"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
+#: ui/template_management_dialog_base.ui:14
+#, kde-format
+msgid "Template Management"
+msgstr "Upravljanje šablonima"
+
+#. i18n: ectx: property (text), widget (QLabel, m_introLabel)
+#: ui/template_management_dialog_base.ui:26
+#, fuzzy, kde-format
+msgctxt "@label"
+msgid ""
+"Select a template and click <i>Apply</i> to apply it to this item. Click "
+"<i>New</i> to create a new template based on the current item settings."
+msgstr ""
+"Odaberite predložak i kliknite <interface>Primijeni</interface> da "
+"primijenite na ovu stavku. Kliknite <interface>Novi</interface> da kreirate "
+"novi predložak baziran na postavkama trenutne stavke."
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:42
+#, kde-format
+msgid "The list of managed templates"
+msgstr "Lista uspjelih šablona"
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:45
+#, kde-format
+msgid ""
+"This is a list of all the templates you have currently accessible for "
+"creating new calendar items."
+msgstr ""
+"Ovo je lista svih šablona koje imate trenutno dostupne za pravljenje stavki "
+"novog kalendara."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:56
+#, kde-format
+msgid "Create a new template from the current settings"
+msgstr "Stvori novi šablon iz trenutnih postavki"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:59
+#, kde-format
+msgid ""
+"Click on this button to create a new template based on the current settings "
+"in the editor. You can use this template to quickly add new items in the "
+"future."
+msgstr ""
+"Pritisnite na ovo dugme da bi stvorili novi šablon temeljen na trenutnim "
+"postavkama u uređivaču. Možete koristiti ovaj šablon da brzo dodate nove "
+"stavke u budućnosti."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:62
+#, kde-format
+msgid "&New..."
+msgstr "&Novi..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:72
+#, kde-format
+msgid "Remove the currently selected template"
+msgstr "Uklonite trenutno odabrani šablon"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:75
+#, kde-format
+msgid ""
+"Clicking this button will permanently remove the selected template from your "
+"list of managed templates."
+msgstr ""
+"Klikom na ovo dugme ćete trajno ukloniti odabrani šablon sa vaše liste "
+"upravljanih šablona."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:78
+#, kde-format
+msgid "&Remove"
+msgstr "&Ukloni"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:85
+#, kde-format
+msgid "Apply the selected template settings"
+msgstr "Primijeniti postavke odabranog šablona"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:88
+#, kde-format
+msgid ""
+"Clicking this button will apply the settings from the selected template to "
+"the item you are currently editing."
+msgstr ""
+"Klikom na ovo dugme ćete primjeniti postavke iz odabranog šablona u stavku "
+"koju trenutno uređujete."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:91
+#, kde-format
+msgid "Apply"
+msgstr "Primijeni"
+
+#: visualfreebusywidget.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid "Scale: "
+msgstr "Razmjera: "
+
+#: visualfreebusywidget.cpp:143
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the Gantt chart zoom level"
+msgstr "Postavi nivo zumiranja Gantt grafikona"
+
+#: visualfreebusywidget.cpp:145
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
+"shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
+">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
+"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+"current event or to-do."
+msgstr ""
+"Odaberite nivo zumiranja gantogram  između sljedećih:<nl/>'Sat' prikazuje "
+"opseg od nekoliko sati,<nl/>'Dan' prikazuje opseg od nekoliko dana,<nl/"
+">'Sedmica' prikazuje opseg od nekoliko mjeseci,<nl/>a 'Mjeseci' prikazuje "
+"opseg od nekoliko godina,<nl/>dok 'Automatski' odabire raspon najprikladniji "
+"za tekući događaj ili obavezu."
+
+#: visualfreebusywidget.cpp:152
+#, kde-format
+msgctxt "@item:inlistbox range in hours"
+msgid "Hour"
+msgstr "Sat"
+
+#: visualfreebusywidget.cpp:153
+#, kde-format
+msgctxt "@item:inlistbox range in days"
+msgid "Day"
+msgstr "Dan"
+
+#: visualfreebusywidget.cpp:154
+#, kde-format
+msgctxt "@item:inlistbox range in weeks"
+msgid "Week"
+msgstr "Sedmica"
+
+#: visualfreebusywidget.cpp:155
+#, kde-format
+msgctxt "@item:inlistbox range in months"
+msgid "Month"
+msgstr "Mjesec"
+
+#: visualfreebusywidget.cpp:156
+#, kde-format
+msgctxt "@item:inlistbox range is computed automatically"
+msgid "Automatic"
+msgstr "Automatski"
+
+#: visualfreebusywidget.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Center on Start"
+msgstr "Centriraj na početku"
+
+#: visualfreebusywidget.cpp:162
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Center the Gantt chart on the event start date and time"
+msgstr "Centriraj Gantt kartu na događaj početka datuma i vremena"
+
+#: visualfreebusywidget.cpp:164
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to center the Gantt chart on the start time and day of "
+"this event."
+msgstr ""
+"Kliknite na ovo dugme da centrirate Gantt kartu na početak vremena  i na dan "
+"ovog događaja."
+
+#: visualfreebusywidget.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Pick Date"
+msgstr "Odaberite datum"
+
+#: visualfreebusywidget.cpp:173
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move the event to a date and time when all attendees are available"
+msgstr "Pomjeri događaj na datum i vrijeme kada su svi učesnici dostupni."
+
+#: visualfreebusywidget.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to move the event to a date and time when all the "
+"attendees have time available in their Free/Busy lists."
+msgstr ""
+"Kliknite na ovo dugme da pomjerite događaj na datum i vrijeme kada svi "
+"učesnici imaju odgovarajuće vrijeme u svojim Slobodno/Zauzeto listama."
+
+#: visualfreebusywidget.cpp:185
+#, kde-format
+msgctxt "@action:button reload freebusy data"
+msgid "Reload"
+msgstr "Ponovo učitaj"
+
+#: visualfreebusywidget.cpp:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reload Free/Busy data for all attendees"
+msgstr "Ponovo učitaj Slobodan/Zauzet podatak za sve učesnike"
+
+#: visualfreebusywidget.cpp:188
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Pressing this button will cause the Free/Busy data for all attendees to be "
+"reloaded from their corresponding servers."
+msgstr ""
+"Klikom na ovo dugme uzrokovat ćete da slobodan/zauzet podatak za sve "
+"učesnike bude ponovo učitan sa odgovarajućih servera."
+
+#: visualfreebusywidget.cpp:199
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Free/Busy status of all attendees"
+msgctxt "@info:tooltip"
+msgid "Shows the tree list of all data"
+msgstr "Prikazuje Slobodno/Zauzeto stanje svih učesnika"
+
+#: visualfreebusywidget.cpp:200
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Free/Busy status of all attendees"
+msgctxt "@info:whatsthis"
+msgid "Shows the tree list of all data"
+msgstr "Prikazuje Slobodno/Zauzeto stanje svih učesnika"
+
+#: visualfreebusywidget.cpp:206
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Free/Busy status of all attendees"
+msgstr "Prikazuje Slobodno/Zauzeto stanje svih učesnika"
+
+#: visualfreebusywidget.cpp:208
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows the Free/Busy status of all attendees. Double-clicking on an "
+"attendee's entry in the list will allow you to enter the location of their "
+"Free/Busy Information."
+msgstr ""
+"Prikazuje Slobodno/Zauzeto stanje svih učesnika. Duplim klikanjem na prijavu "
+"učesnika u listi omogućit će da se upiše informacija da li je Slobodan/"
+"Zauzet."
+
+#, fuzzy
+#~| msgid "Send an email"
+#~ msgctxt "Alarm action"
+#~ msgid "Send an email"
+#~ msgstr "Pošalji epoštu"
+
+#~ msgid "Send email"
+#~ msgstr "Pošalji e-mail"
+
+#~ msgid "&To:"
+#~ msgstr "&Za:"
+
+#~ msgid ""
+#~ "Specify a list of addresses to send email when the reminder triggers.\n"
+#~ "If the 'To:' field stays empty the email reminder will be sent to the\n"
+#~ "default email configured in Kmail (Settings menu/Configure Kmail/"
+#~ "Identities)."
+#~ msgstr ""
+#~ "Navedi listu adresa za slanje email pošte kada se podsjetnik aktivira.\n"
+#~ "Ako je 'Za:' polje prazno email podjsetnik će biti poslan\n"
+#~ "Standardni email podešen u Kmail (Opcije meni/Podešavanje Kmail/"
+#~ "identiteti)."
+
+#~ msgid ""
+#~ "Enter a list comma-separated addresses to which an email will be sent "
+#~ "when the reminder triggers"
+#~ msgstr ""
+#~ "Unesi listu adresa odvojenih zarezom na koje će email pošta biti poslana "
+#~ "kada se podsjetnik aktivira"
+
+#~ msgid "&Message:"
+#~ msgstr "&Poruka:"
+
+#~ msgid "Specify text of an email message to send when the reminder triggers"
+#~ msgstr ""
+#~ "Navedite tekst e-pošte, koja će se poslati pri aktiviranju podsjetnika"
+
+#~ msgid ""
+#~ "Enter any text you desire for the email message that will be sent when "
+#~ "the alarm triggers."
+#~ msgstr ""
+#~ "Unesite text koji želite za email poštu koja će biti poslana kada se "
+#~ "alarm aktivira."
+
+#, fuzzy
+#~| msgid "Execute a script"
+#~ msgctxt "Alarm action"
+#~ msgid "Execute a script"
+#~ msgstr "Izvrši skriptu"
+
+#~ msgid "Run application / script"
+#~ msgstr "Pokreni aplikaciju/skriptu"
+
+#~ msgid "&Application / Script:"
+#~ msgstr "&Program/skripta:"
+
+#~ msgid ""
+#~ "Specify a file containing the application to run when the reminder "
+#~ "triggers"
+#~ msgstr ""
+#~ "Navedite datoteku koja sadrži program pokrenut kada se podsjetnik pokrene"
+
+#~ msgid ""
+#~ "Use the adjacent file browser to help you find the file you want to use "
+#~ "when running an application when the reminder triggers."
+#~ msgstr ""
+#~ "Koristite dati preglednik datoteka koji će vam pomoći da pronađete "
+#~ "datoteku koju želite koristiti, kada se pokrene aplikacija koju "
+#~ "podsjetnik aktivira."
+
+#~ msgid "*|All files"
+#~ msgstr "*|Sve datoteke"
+
+#~ msgid "Ar&guments:"
+#~ msgstr "&Argumenti:"
+
+#~ msgid ""
+#~ "Specify arguments to pass to the application when the reminder triggers"
+#~ msgstr ""
+#~ "Navedite argumente proslijeđene programu, kada se podsjetnik aktivira"
+
+#~ msgid ""
+#~ "Enter the application arguments to use when running an application when "
+#~ "the reminder triggers."
+#~ msgstr ""
+#~ "Unesite programske argumente za program, koji će biti pokrenut pri "
+#~ "aktiviranju podsjetnika."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a title."
+#~ msgstr "Navedite naslov."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the title"
+#~ msgstr "Postaviti naslov"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the Title of this event or to-do."
+#~ msgstr "Postavlja naslov ovog događaja ili obaveze."
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "T&itle:"
+#~ msgctxt "@label"
+#~ msgid "&Title:"
+#~ msgstr "&Naslov:"
+
+#~ msgctxt "@label"
+#~ msgid "Categories:"
+#~ msgstr "Kategorije:"
+
+#~ msgid "Click to add a new category"
+#~ msgstr "Kliknite da biste dodali novu kategoriju"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgctxt "@title:window"
+#~ msgid "Select Categories"
+#~ msgstr "Izaberite kategorije"
+
+#, fuzzy
+#~| msgid "Edit Categories"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Categories"
+#~ msgstr "Izmijeni kategorije"
+
+#~ msgid "Apply changes and close"
+#~ msgstr "Primijeni izmjene i zatvori"
+
+#~ msgid ""
+#~ "When clicking <b>Ok</b>, the settings will be handed over to the program "
+#~ "and the dialog will be closed."
+#~ msgstr ""
+#~ "Kada kliknete <b>Ok</b>, postavke će se predati programu i dijalog će "
+#~ "biti zatvoren."
+
+#~ msgid "Cancel changes and close"
+#~ msgstr "Poništi izmjene i zatvori"
+
+#~ msgid ""
+#~ "When clicking <b>Cancel</b>, the settings will be discarded and the "
+#~ "dialog will be closed."
+#~ msgstr ""
+#~ "Kada kliknete <b>Otkaži</b>, postavke će biti odbačene i dijalog će biti "
+#~ "zatvoren."
+
+#~ msgid ""
+#~ "When clicking <b>Help</b>, a separate KHelpCenter window will open "
+#~ "providing more information about the settings."
+#~ msgstr ""
+#~ "Kada kliknete <b>Pomoć</b>, zaseban KHelpCenter prozor će se otvoriti "
+#~ "pružajući više informacija o postavkama."
+
+#~ msgid "New category"
+#~ msgstr "Nova kategorija"
+
+#~ msgid "New subcategory"
+#~ msgstr "Nova podkategorija"
+
+#~ msgid "Select Categories"
+#~ msgstr "Izaberite kategorije"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgid "Select categories"
+#~ msgstr "Izaberite kategorije"
+
+#, fuzzy
+#~| msgid "Add the entry to the category list"
+#~ msgid "Use this list to choose categories."
+#~ msgstr "Dodaj stavku u listu kategorija"
+
+#~ msgid "Category"
+#~ msgstr "Kategorija"
+
+#~ msgid "Edit Categories"
+#~ msgstr "Izmijeni kategorije"
+
+#~ msgid "New category entry"
+#~ msgstr "Nova kategorijska stavka"
+
+#~ msgid "Type in any text you want to use as a new category or sub-category."
+#~ msgstr ""
+#~ "Upišite u bilo koji tekst koji želite koristiti kao novu kategoriju ili "
+#~ "pod-kategoriju."
+
+#~ msgid "Add the entry to the category list"
+#~ msgstr "Dodaj stavku u listu kategorija"
+
+#~ msgid "Click this button to insert the entry into the category list."
+#~ msgstr "Pritisnite ovo dugme za umetanje unosa u popisu kategorija."
+
+#~ msgid "A&dd"
+#~ msgstr "&Dodaj"
+
+#~ msgid "Add the entry as a subcategory of the selected category"
+#~ msgstr "Dodaj stavku kao podkategorija u odabranoj kategoriji"
+
+#~ msgid ""
+#~ "Click this button to insert the entry as a subcategory of the currently "
+#~ "selected category."
+#~ msgstr ""
+#~ "Pritisnite dugme za umetanje stavke kao podkategorije trenutno odabrane "
+#~ "kategorije."
+
+#~ msgid "Add &Subcategory"
+#~ msgstr "Dodaj &podkategoriju"
+
+#~ msgid "Remove the selected category"
+#~ msgstr "Ukloni odabrane kategorije"
+
+#~ msgid ""
+#~ "Click this button to remove the selected category from the category list."
+#~ msgstr ""
+#~ "Pritisnite ovo dugme za uklanjanje odabrane kategorije iz popisa "
+#~ "kategorija."
+
+#~ msgid "Category list"
+#~ msgstr "Popis kategorija"
+
+#~ msgid ""
+#~ "This is a list of all the categories available. You can create as many "
+#~ "sub-categories as you want here."
+#~ msgstr ""
+#~ "Ovo je popis svih kategorija na raspolaganju. Možete stvoriti  pod-"
+#~ "kategorija koliko želite ovdje."
+
+#~ msgid "Default Category"
+#~ msgstr "Podrazumijevana kategorija"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgid "Select incidence categories"
+#~ msgstr "Izaberite kategorije"
+
+#, fuzzy
+#~| msgid "Use this selector to choose the time between repeating reminders."
+#~ msgid "Use this list to choose incidence categories."
+#~ msgstr ""
+#~ "Koristiti ovaj birač za odabir vremena između ponavljajućih podsjetnika."
+
+#~ msgid "&Clear Selection"
+#~ msgstr "&Očisti izbor"
+
+#~ msgid "&Edit Categories..."
+#~ msgstr "&Izmijeni kategorije..."
+
+#~ msgctxt "The reminder is set to X days before/after the event"
+#~ msgid "days"
+#~ msgstr "dani"
+
+#~ msgctxt "@action:button Configures selected reminder"
+#~ msgid "Configure"
+#~ msgstr "Konfiguriši"
+
+#~ msgctxt "@info"
+#~ msgid "%1 already exists. Do you want to overwrite it?"
+#~ msgstr "%1 već postoji. Želite li pisati preko njega?"
+
+#~ msgid "audio/x-wav audio/x-mp3 application/ogg"
+#~ msgstr "audio/x-wav audio/x-mp3 application/ogg"
+
+#~ msgctxt "@label Start date/time of the event or todo"
+#~ msgid "&Start:"
+#~ msgstr "Status:"
+
+#~ msgid "Overwrite"
+#~ msgstr "Prebriši"
+
+#~ msgid "Remove"
+#~ msgstr "Ukloni"
+
+#~ msgid "Creates a new event"
+#~ msgstr "Kreira novi događaj"
+
+#~ msgid "Creates a new todo"
+#~ msgstr "Kreira novi planirani zadatak"
+
+#~ msgid "Creates a new journal"
+#~ msgstr "Kreira novi dnevnik"
+
+#~ msgid ""
+#~ "Loads an existing item, or returns without doing anything when the item "
+#~ "is not an event or todo."
+#~ msgstr ""
+#~ "Pokreće postojeću stavku ili ne radi ništa ako stavka nije događaj ili "
+#~ "planirani zadatak."
+
+#~ msgctxt "@label end date/time for an event or to-do"
+#~ msgid "&End:"
+#~ msgstr "&Kraj:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the description in plain text or rich text."
+#~ msgstr "Postavi opis u obični text ili u opširni text."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the description for this event, to-do or journal. This will be "
+#~ "displayed in a reminder if one is set, as well as in a tooltip when you "
+#~ "hover over the event."
+#~ msgstr ""
+#~ "Postavi opis za ovaj događaj, obavezu ili dnevnik. Ovo će biti prikazano "
+#~ "u podsjetniku ako je jedno od ovih postavljeno, kao i u alatkama koje su "
+#~ "tu oko tog događaja."
+
+#~ msgid "KOrganizer"
+#~ msgstr "KOrganizator"
+
+#~ msgid "KDE application to run the KOrganizer incidenceeditor."
+#~ msgstr "KDE aplikacija za pokretanje KOorganizatora incidencije urednika."
+
+#~ msgid "(C) 2010 Bertjan Broeksema"
+#~ msgstr "(C) 2010 Bertjan Broeksema"
+
+#~ msgid "Run the KOrganizer incidenceeditor ng."
+#~ msgstr "Pokreni KOrganizator uređenja učestalosti."
+
+#~ msgid "Bertjan Broeksema"
+#~ msgstr "Bertjan Broeksema"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgctxt "@label Start date/time of the event or task"
+#~ msgid "Start:"
+#~ msgstr "Početak:"
+
+#~ msgctxt "@label End date/time of the task or event"
+#~ msgid "End:"
+#~ msgstr "Kraj:"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "All Day"
+#~ msgstr "Cijeli dan"
+
+#~ msgctxt "@label:slider completed percentage of a task"
+#~ msgid "completed"
+#~ msgstr "završeno"
+
+#~ msgctxt "@label:listbox Priority of the task"
+#~ msgid "Priority:"
+#~ msgstr "Prednost:"
+
+#~ msgctxt "@item:inlistbox No priority specified for a task"
+#~ msgid "unspecified"
+#~ msgstr "neodređeno"
+
+#~ msgctxt "@item:inlistbox highest priority for a task"
+#~ msgid "1 (highest)"
+#~ msgstr "1 (najviši)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2"
+#~ msgstr "Sintaksno analiziranje XPath izraza nije uspjelo."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgctxt "@item:inlistbox medium priority for a task"
+#~ msgid "5 (medium)"
+#~ msgstr "5 (srednji)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgctxt "@item:inlistbox lowest priority for a task"
+#~ msgid "9 (lowest)"
+#~ msgstr "9 (najniži)"
+
+#~ msgctxt ""
+#~ "@label Task specific line in the dialog containing progress and priority"
+#~ msgid "Progress:"
+#~ msgstr "Napredak:"
+
+#~ msgid ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#~ msgstr ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Opširni text &gt;&gt;</font></a>"
+
+#~ msgctxt ""
+#~ "Opens a selection dialog for selecting categories of an event or task"
+#~ msgid "Select"
+#~ msgstr "Izaberite"
+
+#~ msgid "Access:"
+#~ msgstr "Dozvole:"
+
+#~ msgid "Organizer:"
+#~ msgstr "Organizator:"
+
+#~ msgid "Participants:"
+#~ msgstr "Učesnici:"
+
+#~ msgid "X time conflicts"
+#~ msgstr "X vrijeme sukoba"
+
+#~ msgid "Solve..."
+#~ msgstr "Riješiti..."
+
+#~ msgctxt "Select attendees from addressbook"
+#~ msgid "Select..."
+#~ msgstr "Izaberi..."
+
+#~ msgid "Add"
+#~ msgstr "Dodati"
+
+#~ msgid "Configure"
+#~ msgstr "Konfiguriši"
+
+#~ msgid "Disable"
+#~ msgstr "Isključi"
+
+#~ msgid "Repeat never"
+#~ msgstr "Ne ponavljaj nikada"
+
+#~ msgid "Repeat daily"
+#~ msgstr "Ponavljaj dnevno"
+
+#~ msgid "Repeat weekly"
+#~ msgstr "Ponavljaj sedmično"
+
+#~ msgid "Repeat monthly"
+#~ msgstr "Ponavljaj mjesečno"
+
+#~ msgid "Repeat yearly"
+#~ msgstr "Ponavljaj godišnje"
+
+#~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
+#~ msgid "every"
+#~ msgstr "svaki"
+
+#~ msgid "Ends never"
+#~ msgstr "Ne završava nikada"
+
+#~ msgid "Ends on"
+#~ msgstr "Završava na"
+
+#~ msgid "Ends after"
+#~ msgstr "Završava nakon"
+
+#~ msgid "MM.dd.yyyy"
+#~ msgstr "MM.dd.gggg"
+
+#~ msgid "Exceptions:"
+#~ msgstr "Izuzeci:"
+
+#~ msgid "dd.MM.yyyy"
+#~ msgstr "dd.MM.gggg"
+
+#~ msgid "Time"
+#~ msgstr "Vrijeme"
+
+#~ msgid "&How often:"
+#~ msgstr "&Koliko često:"
+
+#~ msgid "&Interval:"
+#~ msgstr "&Period:"
+
+#~ msgid "&Repeating:"
+#~ msgstr "&Ponavljanje:"
+
+#~ msgid "Type"
+#~ msgstr "Tip"
+
+#~ msgid "Display optional text when the reminder is triggered"
+#~ msgstr "Prikaži neobavezni tekst kada se podsjetnik pokreće"
+
+#~ msgid ""
+#~ "Check this option if you want to display optional text in a popup notice "
+#~ "when the reminder triggers."
+#~ msgstr ""
+#~ "Uključite ovu opciju ako želite prikazati opcionalni tekst u iskočnom "
+#~ "obavještenju kada se podsjetnik aktivira."
+
+#~ msgid "&Display"
+#~ msgstr "&Prikaži"
+
+#~ msgid "Play a sound when the reminder is triggered"
+#~ msgstr "Reproduciraj zvuk kada se podsjetnik pokreće"
+
+#~ msgid ""
+#~ "Check this option if you want to play a sound when the reminder triggers."
+#~ msgstr ""
+#~ "Uključite ovu opciju ako želite emitovati zvuk kada se podsjetnik "
+#~ "aktivira."
+
+#~ msgid "&Sound"
+#~ msgstr "&Zvuk"
+
+#~ msgid "Run an application or script when the reminder is triggered"
+#~ msgstr "Kad se podsjetnik aktivira, pokreni program ili skriptu"
+
+#~ msgid ""
+#~ "Check this option if you want to run an application (or script) when the "
+#~ "reminder triggers."
+#~ msgstr ""
+#~ "Uključite ovu opciju ako želite pokrenuti program (ili skriptu) kada je "
+#~ "podsjetnik aktiviran."
+
+#~ msgid "Application / script"
+#~ msgstr "Program / skripta"
+
+#~ msgid "Send email when the reminder is triggered"
+#~ msgstr "Kad se podsjetnik aktivira, pošalji e-poštu"
+
+#~ msgid ""
+#~ "Check this option if you want to send an email message when the reminder "
+#~ "triggers."
+#~ msgstr ""
+#~ "Uključite ovu opciju ako želite poslati e-mail poruku kada podsjetnik "
+#~ "aktiviran."
+
+#~ msgid "Display &text:"
+#~ msgstr "Prikazani &tekst:"
+
+#~ msgid "Sound &file:"
+#~ msgstr "Zvučna &datoteka:"
+
+#~ msgid "&Text of the message:"
+#~ msgstr "&Tekst poruke:"
+
+#~ msgid "Remove the currently selected reminder"
+#~ msgstr "Odstrani trenutno izabrani podsjetnik"
+
+#~ msgid ""
+#~ "Click this button if you want to remove the currently selected reminder. "
+#~ "Be careful with this option as there is no way to undo this operation."
+#~ msgstr ""
+#~ "Kliknite na ovo dugme, ako želite ukloniti trenutno odabrane podsjetnike. "
+#~ "Budite oprezni s ovom opcijom jer ne postoji način da se poništi ova "
+#~ "operacija."
+
+#~ msgid "Create a new reminder using the settings specified below"
+#~ msgstr "Napravi novi podsjetnik pomoću postavki koje su navedene u nastavku"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "specified below. You can continue to change the settings as needed."
+#~ msgstr ""
+#~ "Kliknite na ovo dugme, ako želite stvoriti novi podsjetnik pomoću "
+#~ "postavki koje su navedene u nastavku. Možete nastaviti da biste "
+#~ "promijenili postavke po potrebi."
+
+#~ msgctxt "Add a new alarm to the alarm list"
+#~ msgid "&Add"
+#~ msgstr "&Dodaj"
+
+#~ msgid "Create a new reminder from the currently selected reminder"
+#~ msgstr "Kreiraj podsjetnik iz trenutno izbranoga podsjetnika"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "stored in the currently selected reminder. You can continue to change the "
+#~ "settings as needed."
+#~ msgstr ""
+#~ "Kliknite na ovo dugme, ako želite stvoriti novi podsjetnik koristeći "
+#~ "postavke spremljene u trenutno odabranom podsjetniku. Možete nastaviti da "
+#~ "biste promijenili postavke po potrebi."
+
+#~ msgid "D&uplicate"
+#~ msgstr "&Duplikat"
+
+#~ msgid "The list of reminders for this event or to-do"
+#~ msgstr "Popis podsjetnike za taj događaj ili zadatak"
+
+#~ msgid ""
+#~ "This area displays a list of all the reminders you have specified for "
+#~ "this event or to-do."
+#~ msgstr ""
+#~ "Ovo područje prikazuje popis svih podsjetnika koji ste naveli za taj "
+#~ "događaj ili budući zadatak."
+
+#~ msgid "Offset"
+#~ msgstr "Pomjeraj"
+
+#~ msgid "Repeat"
+#~ msgstr "Ponovi"
+
+#, fuzzy
+#~| msgid "Type"
+#~ msgctxt "Type of resource (vCard attribute)"
+#~ msgid "cuType"
+#~ msgstr "Tip"
+
+#, fuzzy
+#~| msgid "Send email"
+#~ msgctxt "attendee email"
+#~ msgid "email"
+#~ msgstr "Pošalji e-mail"
+
+#~ msgctxt "@label Day of the week name, example: Monday,"
+#~ msgid "%1,"
+#~ msgstr "%1"
+
+#~ msgctxt ""
+#~ "@label A time period duration. It is preceded/followed (based on the "
+#~ "orientation) by the name of the week, see the message above. example: 12 "
+#~ "June, 8:00am to 9:30am"
+#~ msgid "%1 %2, %3 to %4"
+#~ msgstr "%1 %2, %3 do %4"
+
+#~ msgctxt ""
+#~ "@label A time period duration. KLocale is used to format the components. "
+#~ "example: Monday, 12 June, 8:00am to 9:30am"
+#~ msgid "%1, %2 %3, %4 to %5"
+#~ msgstr "%1, %2 %3, %4 do %5"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Free Period"
+#~ msgstr "Slobodno vrijeme"
+
+#~ msgctxt "@info:tooltip period duration"
+#~ msgid "Duration:"
+#~ msgstr "Trajanje:"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Adizdar1@etf.unsa.ba,samir.ribic@etf.unsa.ba,vljubovic@smartnet.ba"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Select Categories"
+#~ msgstr "Izaberite kategorije"

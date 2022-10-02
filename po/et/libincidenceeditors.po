@@ -1,0 +1,5161 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2010, 2011, 2012, 2014, 2016, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2020-05-14 12:39+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: alarmdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Create a new reminder"
+msgstr "Uue meeldetuletuse loomine"
+
+#: alarmdialog.cpp:67
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit existing reminder"
+msgstr "Olemasoleva meeldetuletuse muutmine"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "Before the to-do starts"
+msgstr "Enne ülesande algust"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "After the to-do starts"
+msgstr "Pärast ülesande algust"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "Before the to-do is due"
+msgstr "Enne ülesande tähtaega"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "After the to-do is due"
+msgstr "Pärast ülesande tähtaega"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "Before the event starts"
+msgstr "Enne sündmuse algust"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "After the event starts"
+msgstr "Pärast sündmuse algust"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "Before the event ends"
+msgstr "Enne sündmuse lõppu"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "After the event ends"
+msgstr "Pärast sündmuse lõppu"
+
+#: alarmpresets.cpp:83
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "At start"
+msgstr "Käivitumisel"
+
+#: alarmpresets.cpp:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before start"
+msgid_plural "%1 minutes before start"
+msgstr[0] "%1 minut enne algust"
+msgstr[1] "%1 minutit enne algust"
+
+#: alarmpresets.cpp:87
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before start"
+msgid_plural "%1 hours before start"
+msgstr[0] "%1 tund enne algust"
+msgstr[1] "%1 tundi enne algust"
+
+#: alarmpresets.cpp:89
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before start"
+msgid_plural "%1 days before start"
+msgstr[0] "%1 päev enne algust"
+msgstr[1] "%1 päeva enne algust"
+
+#: alarmpresets.cpp:103
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "When due"
+msgstr "Tähtajal"
+
+#: alarmpresets.cpp:105
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 minute before due"
+msgid_plural "%1 minutes before due"
+msgstr[0] "%1 minut enne tähtaega"
+msgstr[1] "%1 minutit enne tähtaega"
+
+#: alarmpresets.cpp:107
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 hour before due"
+msgid_plural "%1 hours before due"
+msgstr[0] "%1 tund enne tähtaega"
+msgstr[1] "%1 tundi enne tähtaega"
+
+#: alarmpresets.cpp:109
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "%1 day before due"
+msgid_plural "%1 days before due"
+msgstr[0] "%1 päev enne tähtaega"
+msgstr[1] "%1 päeva enne tähtaega"
+
+#: attachmenteditdialog.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Attachment"
+msgstr "Manuse muutmine"
+
+#: attachmenteditdialog.cpp:57
+#, kde-format
+msgctxt "@label unknown mimetype"
+msgid "Unknown"
+msgstr "Tundmatu"
+
+#: attachmenteditdialog.cpp:110
+#, kde-format
+msgctxt "@label"
+msgid "New attachment"
+msgstr "Uus manus"
+
+#: attendeeline.cpp:147 incidenceattendee.cpp:61
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request Response"
+msgstr "Vastuse küsimine"
+
+#: attendeeline.cpp:148 incidenceattendee.cpp:62
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request No Response"
+msgstr "Vastust ei küsita"
+
+#: attendeeline.cpp:150 attendeelineeditdelegate.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the name or email address of the attendee."
+msgstr "Sisesta osaleja nimi või e-posti aadress."
+
+#: attendeeline.cpp:153 incidenceattendee.cpp:64
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the current attendance status of the attendee."
+msgstr "Muudab osaleja kehtivat staatust."
+
+#: attendeeline.cpp:155 incidenceattendee.cpp:66 schedulingdialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the role of the attendee."
+msgstr "Muudab osaleja rolli."
+
+#: attendeeline.cpp:158 attendeelineeditdelegate.cpp:24
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The email address or name of the attendee. An invitation can be sent to the "
+"user if an email address is provided."
+msgstr ""
+"Osaleja e-posti aadress või nimi. Kutse saab kasutajale saata siis, kui "
+"määratud on tema e-posti aadress."
+
+#: attendeeline.cpp:163 incidenceattendee.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Request a response from the attendee"
+msgstr "Osalejalt vastuse küsimine"
+
+#: attendeeline.cpp:165 incidenceattendee.cpp:70
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Edits whether to send an email to the attendee to request a response "
+"concerning attendance."
+msgstr ""
+"Võimaldab muuta seda, kas osalejalt oodatakse osalemise kohta vastust või "
+"mitte."
+
+#: attendeetablemodel.cpp:64
+#, kde-format
+msgid "Free"
+msgstr "Vaba"
+
+#: attendeetablemodel.cpp:66
+#, kde-format
+msgid "Busy"
+msgstr "Hõivatud"
+
+#: attendeetablemodel.cpp:68
+#, kde-format
+msgid "Accepted"
+msgstr "Nõus"
+
+#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#, kde-format
+msgid "Unknown"
+msgstr "Teadmata"
+
+#: attendeetablemodel.cpp:151
+#, kde-format
+msgctxt "vCard attendee role"
+msgid "Role"
+msgstr "Roll"
+
+#: attendeetablemodel.cpp:153
+#, kde-format
+msgctxt "Attendees  (name+emailaddress)"
+msgid "Name"
+msgstr "Nimi"
+
+#: attendeetablemodel.cpp:155
+#, kde-format
+msgctxt "Is attendee available for incidence"
+msgid "Available"
+msgstr "Saadaval"
+
+#: attendeetablemodel.cpp:157
+#, kde-format
+msgctxt ""
+"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgid "Status"
+msgstr "Olek"
+
+#: attendeetablemodel.cpp:159
+#, kde-format
+msgctxt "Type of calendar user (vCard attribute)"
+msgid "User Type"
+msgstr "Kasutaja tüüp"
+
+#: attendeetablemodel.cpp:161
+#, kde-format
+msgctxt "Has attendee to respond to the invitation"
+msgid "Response"
+msgstr "Vastus"
+
+#: attendeetablemodel.cpp:163
+#, kde-format
+msgctxt "Attendee name"
+msgid "Name"
+msgstr "Nimi"
+
+#: attendeetablemodel.cpp:165
+#, kde-format
+msgctxt "Attendee email"
+msgid "Email"
+msgstr "E-post"
+
+#: editoritemmanager.cpp:227
+#, kde-format
+msgid ""
+"The item has been changed by another application.\n"
+"What should be done?"
+msgstr ""
+"Teine rakendus on elementi muutnud.\n"
+"Mida ette võtta?"
+
+#: editoritemmanager.cpp:229
+#, kde-format
+msgid "Take over changes"
+msgstr "Võta muudatused üle"
+
+#: editoritemmanager.cpp:230
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Eira muudatusi ja kirjuta nad üle"
+
+#: freebusyganttproxymodel.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Free/Busy Period"
+msgstr "Vaba/hõivatud periood"
+
+#: freebusyganttproxymodel.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Summary:"
+msgstr "Kokkuvõte:"
+
+#: freebusyganttproxymodel.cpp:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Location:"
+msgstr "Asukoht:"
+
+#: freebusyganttproxymodel.cpp:80
+#, kde-format
+msgctxt "@info:tooltip period start time"
+msgid "Start:"
+msgstr "Algus:"
+
+#: freebusyganttproxymodel.cpp:83
+#, kde-format
+msgctxt "@info:tooltip period end time"
+msgid "End:"
+msgstr "Lõpp:"
+
+#: freebusyurldialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Free/Busy Location"
+msgstr "Vaba/hõivatud info asukoha muutmine"
+
+#: freebusyurldialog.cpp:63
+#, kde-kuit-format
+msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+msgstr "%1 <placeholder>%2</placeholder> vaba/hõivatud info asukoht:"
+
+#: freebusyurldialog.cpp:67
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Enter the location of the Free/Busy information for the attendee."
+msgstr "Sisesta osaleja vaba/hõivatud teabe asukoht."
+
+#: freebusyurldialog.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the location of the information."
+msgstr "Sisesta teabe asukoht."
+
+#: incidencealarm.cpp:250
+#, kde-format
+msgctxt "Disable currently selected reminder"
+msgid "Disable"
+msgstr "Keela"
+
+#: incidencealarm.cpp:252
+#, kde-format
+msgctxt "Enable currently selected reminder"
+msgid "Enable"
+msgstr "Luba"
+
+#: incidencealarm.cpp:270
+#, kde-format
+msgctxt "Alarm action"
+msgid "Display a dialog"
+msgstr "Dialoogi näitamine"
+
+#: incidencealarm.cpp:273
+#, kde-format
+msgctxt "Alarm action"
+msgid "Play an audio file"
+msgstr "Helifaili esitamine"
+
+#: incidencealarm.cpp:276
+#, kde-format
+msgctxt "Alarm action"
+msgid "Invalid Reminder."
+msgstr "Vigane meeldetuletus."
+
+#: incidencealarm.cpp:282
+#, kde-format
+msgctxt "The reminder is set to X minutes before/after the event"
+msgid "1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "1 minut"
+msgstr[1] "%1 minutit"
+
+#: incidencealarm.cpp:287
+#, kde-format
+msgctxt "The reminder is set to X days before/after the event"
+msgid "1 day"
+msgid_plural "%1 days"
+msgstr[0] "1 päev"
+msgstr[1] "%1 päeva"
+
+#: incidencealarm.cpp:290
+#, kde-format
+msgctxt "The reminder is set to X hours before/after the event"
+msgid "1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "1 tund"
+msgstr[1] "%1 tundi"
+
+#: incidencealarm.cpp:295
+#, kde-format
+msgctxt "The reminder is configured to repeat after snooze"
+msgid "(Repeats)"
+msgstr "(Kordub)"
+
+#. i18n: These series of strings are used to show the user a description of
+#. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
+#. one of the time units above, %3 is the (Repeats) part that will be used
+#. in case of repetition of the alarm.
+#: incidencealarm.cpp:305
+#, kde-format
+msgid "%1 %2 after the to-do started %3"
+msgstr "%1 %2 pärast ülesande algust %3"
+
+#: incidencealarm.cpp:307
+#, kde-format
+msgid "%1 %2 after the event started %3"
+msgstr "%1 %2 pärast sündmuse algust %3"
+
+#: incidencealarm.cpp:311
+#, kde-format
+msgid "%1 %2 before the to-do starts %3"
+msgstr "%1 %2 enne ülesande algust %3"
+
+#: incidencealarm.cpp:313
+#, kde-format
+msgid "%1 %2 before the event starts %3"
+msgstr "%1 %2 enne sündmuse algust %3"
+
+#: incidencealarm.cpp:317
+#, kde-format
+msgid "%1 %2 after the to-do is due %3"
+msgstr "%1 %2 pärast ülesande tähtaega %3"
+
+#: incidencealarm.cpp:319
+#, kde-format
+msgid "%1 %2 after the event ends %3"
+msgstr "%1 %2 pärast sündmuse lõppu %3"
+
+#: incidencealarm.cpp:323
+#, kde-format
+msgid "%1 %2 before the to-do is due %3"
+msgstr "%1 %2 enne ülesande tähtaega %3"
+
+#: incidencealarm.cpp:325
+#, kde-format
+msgid "%1 %2 before the event ends %3"
+msgstr "%1 %2 enne sündmuse lõppu %3"
+
+#: incidencealarm.cpp:331
+#, kde-format
+msgid "%1 %2 after the to-do started %3 (Disabled)"
+msgstr "%1 %2 pärast ülesande algust %3 (keelatud)"
+
+#: incidencealarm.cpp:333
+#, kde-format
+msgid "%1 %2 after the event started %3 (Disabled)"
+msgstr "%1 %2 pärast sündmuse algust %3 (keelatud)"
+
+#: incidencealarm.cpp:337
+#, kde-format
+msgid "%1 %2 before the to-do starts %3 (Disabled)"
+msgstr "%1 %2 enne ülesande algust %3 (keelatud)"
+
+#: incidencealarm.cpp:339
+#, kde-format
+msgid "%1 %2 before the event starts %3 (Disabled)"
+msgstr "%1 %2 enne sündmuse algust %3 (keelatud)"
+
+#: incidencealarm.cpp:343
+#, kde-format
+msgid "%1 %2 after the to-do is due %3 (Disabled)"
+msgstr "%1 %2 pärast ülesande tähtaega %3 (keelatud)"
+
+#: incidencealarm.cpp:345
+#, kde-format
+msgid "%1 %2 after the event ends %3 (Disabled)"
+msgstr "%1 %2 pärast sündmuse lõppu %3 (keelatud)"
+
+#: incidencealarm.cpp:349
+#, kde-format
+msgid "%1 %2 before the to-do is due %3 (Disabled)"
+msgstr "%1 %2 enne ülesande tähtaega %3 (keelatud)"
+
+#: incidencealarm.cpp:351
+#, kde-format
+msgid "%1 %2 before the event ends %3 (Disabled)"
+msgstr "%1 %2 enne sündmuse lõppu %3 (keelatud)"
+
+#: incidencealarm.cpp:359
+#, kde-format
+msgid "%1 when the to-do starts"
+msgstr "%1, kui ülesanne algab"
+
+#: incidencealarm.cpp:361
+#, kde-format
+msgid "%1 when the event starts"
+msgstr "%1, kui sündmus algab"
+
+#: incidencealarm.cpp:363
+#, kde-format
+msgid "%1 when the to-do is due"
+msgstr "%1, kui on ülesande tähtaeg"
+
+#: incidencealarm.cpp:365
+#, kde-format
+msgid "%1 when the event ends"
+msgstr "%1, kui sündmus lõpeb"
+
+#: incidencealarm.cpp:369
+#, kde-format
+msgid "%1 when the to-do starts (Disabled)"
+msgstr "%1, kui ülesanne algab (keelatud)"
+
+#: incidencealarm.cpp:371
+#, kde-format
+msgid "%1 when the event starts (Disabled)"
+msgstr "%1, kui sündmus algab (keelatud)"
+
+#: incidencealarm.cpp:373
+#, kde-format
+msgid "%1 when the to-do is due (Disabled)"
+msgstr "%1, kui on ülesande tähtaeg (keelatud)"
+
+#: incidencealarm.cpp:375
+#, kde-format
+msgid "%1 when the event ends (Disabled)"
+msgstr "%1, kui sündmus lõpeb (keelatud)"
+
+#: incidenceattachment.cpp:130
+#, kde-format
+msgctxt "@title"
+msgid "Add Attachment"
+msgstr "Manuse lisamine"
+
+#: incidenceattachment.cpp:192
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you really want to remove these attachments?<nl/>%1"
+msgstr "Kas tõesti eemaldada need manused?<nl/>%1"
+
+#: incidenceattachment.cpp:193
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Attachments?"
+msgstr "Kas eemaldada manused?"
+
+#: incidenceattachment.cpp:231
+#, kde-format
+msgctxt "@title"
+msgid "Save Attachment"
+msgstr "Manuse salvestamine"
+
+#: incidenceattachment.cpp:411
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Link here"
+msgstr "&Lingi siia"
+
+#: incidenceattachment.cpp:421 incidenceattachment.cpp:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Copy here"
+msgstr "&Kopeeri siia"
+
+#: incidenceattachment.cpp:428
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&ancel"
+msgstr "&Loobu"
+
+#: incidenceattachment.cpp:475
+#, kde-format
+msgctxt "@action:inmenu open the attachment in a viewer"
+msgid "&Open"
+msgstr "&Ava"
+
+#: incidenceattachment.cpp:481
+#, kde-format
+msgctxt "@action:inmenu save the attachment to a file"
+msgid "Save As..."
+msgstr "Salvesta kui..."
+
+#: incidenceattachment.cpp:498
+#, kde-format
+msgctxt "@action:inmenu remove the attachment"
+msgid "&Remove"
+msgstr "&Eemalda"
+
+#: incidenceattachment.cpp:506
+#, kde-format
+msgctxt "@action:inmenu show a dialog used to edit the attachment"
+msgid "&Properties..."
+msgstr "O&madused..."
+
+#: incidenceattachment.cpp:517
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Displays items (files, mail, etc.) that have been associated with this event "
+"or to-do."
+msgstr ""
+"Näitab aktiivsete elementide (failid, kirjad jne.) nimekirja, mis on seotud "
+"antud sündmuse või ülesandega."
+
+#: incidenceattendee.cpp:204
+#, kde-format
+msgctxt "@info"
+msgid ""
+"%1 does not look like a valid email address. Are you sure you want to invite "
+"this participant?"
+msgstr ""
+"%1 ei paista olevat korrektne e-posti aadress. Kas oled ikka kindel, et "
+"soovid selle osaleja kutsuda?"
+
+#: incidenceattendee.cpp:207
+#, kde-format
+msgctxt "@title:window"
+msgid "Invalid Email Address"
+msgstr "Vigane e-posti aadress"
+
+#: incidenceattendee.cpp:208
+#, kde-format
+msgctxt "@action:button"
+msgid "Invite"
+msgstr ""
+
+#: incidenceattendee.cpp:209
+#, fuzzy, kde-format
+#| msgctxt "@action:button dialog negative answer"
+#| msgid "Do Not Send"
+msgctxt "@action:button"
+msgid "Do Not Invite"
+msgstr "Ära saada"
+
+#: incidenceattendee.cpp:432
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Attendees"
+msgstr "Osalejate valimine"
+
+#: incidenceattendee.cpp:612
+#, kde-format
+msgctxt "@label Shows the number of scheduling conflicts"
+msgid "%1 conflict"
+msgid_plural "%1 conflicts"
+msgstr[0] "%1 konflikt"
+msgstr[1] "%1 konflikti"
+
+#: incidenceattendee.cpp:779
+#, kde-format
+msgctxt "@option"
+msgid ""
+"You are changing the organizer of this event. Since the organizer is also "
+"attending this event, would you like to change the corresponding attendee as "
+"well?"
+msgstr ""
+"Kavatsed muuta selle sündmuse korraldajat, kes samuti sellel osaleb. Kas "
+"soovid siis muuta ka tema osalemist?"
+
+#: incidenceattendee.cpp:783
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "One attendee"
+#| msgid_plural "%1 attendees"
+msgctxt "@action:button"
+msgid "Change Attendee"
+msgstr "1 osaleja"
+
+#: incidenceattendee.cpp:784
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "No Changes"
+msgctxt "@action:button"
+msgid "Do Not Change"
+msgstr "Muutusi pole"
+
+#: incidencedatetime.cpp:215
+#, kde-format
+msgctxt "@action show or hide the time zone widgets"
+msgid "Time zones"
+msgstr "Ajavööndid"
+
+#: incidencedatetime.cpp:617
+#, kde-format
+msgctxt "@label The due date/time of a to-do"
+msgid "Due:"
+msgstr "Tähtaeg:"
+
+#: incidencedatetime.cpp:745 incidencedatetime.cpp:746
+#, kde-format
+msgid "Starts: %1"
+msgstr "Algus: %1"
+
+#: incidencedatetime.cpp:748
+#, kde-format
+msgid "Starting Date"
+msgstr "Alguskuupäev"
+
+#: incidencedatetime.cpp:749
+#, kde-format
+msgid "Starting Time"
+msgstr "Algusaeg"
+
+#: incidencedatetime.cpp:758 incidencedatetime.cpp:759
+#, kde-format
+msgid "Due on: %1"
+msgstr "Tähtaeg: %1"
+
+#: incidencedatetime.cpp:761 incidencedatetime.cpp:762
+#, kde-format
+msgid "Ends: %1"
+msgstr "Lõpp: %1"
+
+#: incidencedatetime.cpp:766
+#, kde-format
+msgid "Due Date"
+msgstr "Tähtaeg"
+
+#: incidencedatetime.cpp:767
+#, kde-format
+msgid "Due Time"
+msgstr "Tähtaeg"
+
+#: incidencedatetime.cpp:769
+#, kde-format
+msgid "Ending Date"
+msgstr "Lõppkuupäev"
+
+#: incidencedatetime.cpp:770
+#, kde-format
+msgid "Ending Time"
+msgstr "Lõppaeg"
+
+#: incidencedatetime.cpp:848
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Invalid start date and time."
+msgctxt "@info"
+msgid "Invalid start date."
+msgstr "Vigane alguse kuupäev ja kellaaeg."
+
+#: incidencedatetime.cpp:853
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Invalid start date and time."
+msgctxt "@info"
+msgid "Invalid start time."
+msgstr "Vigane alguse kuupäev ja kellaaeg."
+
+#: incidencedatetime.cpp:861
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Invalid end date and time."
+msgctxt "@info"
+msgid "Invalid end date."
+msgstr "Vigane lõppemise kuupäev ja kellaaeg."
+
+#: incidencedatetime.cpp:866
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Invalid end date and time."
+msgctxt "@info"
+msgid "Invalid end time."
+msgstr "Vigane lõppemise kuupäev ja kellaaeg."
+
+#: incidencedatetime.cpp:875
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The event ends before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Sündmus lõpeb enne algamist.\n"
+"Palun korrigeeri kuupäeva ja kellaaega."
+
+#: incidencedatetime.cpp:879
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do is due before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Ülesande tähtaeg on enne algust.\n"
+"Palun korrigeeri kuupäeva ja kellaaega."
+
+#: incidencedefaults.cpp:68
+#, kde-format
+msgctxt "@label"
+msgid "no (valid) identities found"
+msgstr "ühtegi (korrektset) identiteeti ei leitud"
+
+#: incidencedefaults.cpp:303
+#, kde-format
+msgctxt "@label attachment contains binary data"
+msgid "[Binary data]"
+msgstr "[Binaarandmed]"
+
+#: incidencedefaults.cpp:436
+#, kde-format
+msgctxt "@label invalid email address marker"
+msgid "invalid@email.address"
+msgstr "vigane@e-posti.aadress"
+
+#: incidencedescription.cpp:99
+#, kde-format
+msgctxt "@action Enable or disable rich text editing"
+msgid "Enable rich text"
+msgstr "Vormindatud teksti lubamine"
+
+#: incidencedescription.cpp:103
+#, kde-format
+msgctxt "@action Enable or disable rich text editing"
+msgid "Disable rich text"
+msgstr "Vormindatud teksti keelamine"
+
+#: incidencedialog.cpp:210
+#, kde-format
+msgid "Select a valid collection first."
+msgstr "Vali kõigepealt korrektne kogu."
+
+#: incidencedialog.cpp:233
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder (%1)"
+msgstr "Meeldetuletus (%1)"
+
+#: incidencedialog.cpp:235
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder"
+msgstr "Meeldetuletus"
+
+#: incidencedialog.cpp:243
+#, kde-format
+msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
+msgid "Rec&urrence"
+msgstr "Kord&us"
+
+#: incidencedialog.cpp:253
+#, kde-format
+msgctxt "@title:tab Daily recurring event, capital first letter only"
+msgid " (D)"
+msgstr " (P)"
+
+#: incidencedialog.cpp:256
+#, kde-format
+msgctxt "@title:tab Weekly recurring event, capital first letter only"
+msgid " (W)"
+msgstr " (N)"
+
+#: incidencedialog.cpp:259
+#, kde-format
+msgctxt "@title:tab Monthly recurring event, capital first letter only"
+msgid " (M)"
+msgstr " (K)"
+
+#: incidencedialog.cpp:262
+#, kde-format
+msgctxt "@title:tab Yearly recurring event, capital first letter only"
+msgid " (Y)"
+msgstr " (A)"
+
+#: incidencedialog.cpp:265
+#, kde-format
+msgctxt "@title:tab Exception to a recurring event, capital first letter only"
+msgid " (E)"
+msgstr " (E)"
+
+#: incidencedialog.cpp:299
+#, kde-format
+msgctxt "@info"
+msgid "Unable to find template '%1'."
+msgstr "Malli '%1' ei leitud."
+
+#: incidencedialog.cpp:305
+#, kde-format
+msgctxt "@info"
+msgid "Error loading template file '%1'."
+msgstr "Malli '%1' laadimisel tekkis viga."
+
+#: incidencedialog.cpp:311
+#, kde-format
+msgctxt "@info"
+msgid "Template does not contain a valid incidence."
+msgstr "Mall ei sisalda ühtegi korrektset sündmust."
+
+#: incidencedialog.cpp:410
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments (%1)"
+msgstr "&Manused (%1)"
+
+#: incidencedialog.cpp:412
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments"
+msgstr "&Manused"
+
+#: incidencedialog.cpp:419
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees (%1)"
+msgstr "Osale&jad (%1)"
+
+#: incidencedialog.cpp:421
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees"
+msgstr "Osale&jad"
+
+#: incidencedialog.cpp:428
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources (%1)"
+msgstr "&Ressursid (%1)"
+
+#: incidencedialog.cpp:430
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources"
+msgstr "&Ressursid"
+
+#: incidencedialog.cpp:452
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Unable to store the incidence in the calendar. Try again?\n"
+"\n"
+" Reason: %1"
+msgstr ""
+"Sündmuse või ülesande salvestamine kalendrisse nurjus. Kas proovida uuesti?\n"
+" \n"
+" Põhjus: %1"
+
+#: incidencedialog.cpp:458
+#, kde-format
+msgctxt "@action:button"
+msgid "Retry"
+msgstr ""
+
+#: incidencedialog.cpp:480
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You have not set a default calendar for your events yet.</"
+"para><para>Setting a default calendar will make creating new events faster "
+"and easier with less chance of filing them into the wrong folder.</"
+"para><para>Would you like to set your default events calendar to <resource>"
+"%1</resource>?</para>"
+msgstr ""
+"<para>Sa ei ole veel oma sündmustele kalendrit määranud.</"
+"para><para>Vaikekalendri määamine muudab uute sündmuste loomise kiiremaks ja "
+"hõlpsamaks ning peaaegu välistab võimaluse panna neid valesse kataloogi,</"
+"para><para>Kas luua ressursile <resource>%1</resource>  vaikimisi sündmuste "
+"kalender?</para>"
+
+#: incidencedialog.cpp:488
+#, kde-format
+msgctxt "@title:window"
+msgid "Set Default Calendar?"
+msgstr "Kas määrata vaikimisi kalender?"
+
+#: incidencedialog.cpp:489
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Set Default Calendar?"
+msgctxt "@action:button"
+msgid "Set As Default"
+msgstr "Kas määrata vaikimisi kalender?"
+
+#: incidencedialog.cpp:490
+#, fuzzy, kde-format
+#| msgctxt "@action:button dialog negative answer"
+#| msgid "Do Not Send"
+msgctxt "@action:button"
+msgid "Do Not Set"
+msgstr "Ära saada"
+
+#: incidencedialog.cpp:670
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Save current changes"
+msgstr "Salvestab aktiivsed muudatused"
+
+#: incidencedialog.cpp:671
+#, kde-format
+msgctxt "@action:button"
+msgid "Save changes and close dialog"
+msgstr "Unusta muudatused ja sulge dialoog"
+
+#: incidencedialog.cpp:672
+#, kde-format
+msgctxt "@action:button"
+msgid "Discard changes and close dialog"
+msgstr "Unusta muudatused ja sulge dialoog"
+
+#: incidencedialog.cpp:676
+#, kde-format
+msgctxt "@action:button"
+msgid "&Templates..."
+msgstr "Malli&d..."
+
+#: incidencedialog.cpp:678
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Manage templates for this item"
+msgstr "Selle elemendi mallide haldamine"
+
+#: incidencedialog.cpp:680
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Push this button to show a dialog that helps you manage a set of templates. "
+"Templates can make creating new items easier and faster by putting your "
+"favorite default values into the editor automatically."
+msgstr ""
+"Klõps sellele nupule avab dialoogi, mis aitab hallata malle. Mallid võivad "
+"muuta uute elementide loomise hõlpsamaks ja kiiremaks, asetades automaatselt "
+"redaktorisse sulle vajalikud väärtused."
+
+#: incidencedialog.cpp:777 incidencedialog.cpp:798 incidencedialog.cpp:814
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Kas tõesti loobuda?"
+
+#: incidencedialog.cpp:778 incidencedialog.cpp:799 incidencedialog.cpp:815
+#, kde-format
+msgctxt "@title:window"
+msgid "KOrganizer Confirmation"
+msgstr "KOrganizeri kinnitus"
+
+#: incidencedialog.cpp:779 incidencedialog.cpp:800 incidencedialog.cpp:816
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr ""
+
+#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#, fuzzy, kde-format
+#| msgctxt "@action:button dialog negative answer"
+#| msgid "Do Not Send"
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Ära saada"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:12
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr "Vaikimisi e-kirja kaasamise viis"
+
+#. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:13
+#, kde-format
+msgid "Choose the default way of attaching dropped emails to an event"
+msgstr "Vaikeviis e-kirjade kaasamiseks sündmusele"
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:14
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr "Vaikeviis e-kirjade kaasamiseks sündmusele"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:17
+#, kde-format
+msgid "Always ask"
+msgstr "Alati küsitakse"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:20
+#, kde-format
+msgid "Only attach link to message"
+msgstr "Kaasatakse ainult kirja link"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:23
+#, kde-format
+msgid "Attach complete message"
+msgstr "Kaasatakse terve kiri"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:26
+#, kde-format
+msgid "Attach message without attachments"
+msgstr "Kaasatakse kiri ilma manusteta"
+
+#: incidencerecurrence.cpp:128
+#, kde-format
+msgctxt ""
+"In several of the messages below, an ordinal number is substituted into the "
+"message. Translate this as \"0\" if English ordinal suffixes should be added "
+"(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
+"be substituted (1, 22, 123)."
+msgid "0"
+msgstr "1"
+
+#: incidencerecurrence.cpp:453
+#, kde-format
+msgid ""
+"A recurring event or to-do must occur at least once. Adjust the recurring "
+"parameters."
+msgstr ""
+"Korduv sündmus või ülesanne peab korduma vähemalt ühe korra. Kohanda "
+"kordumisparameetreid."
+
+#: incidencerecurrence.cpp:459
+#, kde-format
+msgid "The incidence's start date is invalid."
+msgstr "Sündmuse alguskuupäev on vigane."
+
+#: incidencerecurrence.cpp:465
+#, fuzzy, kde-format
+#| msgid "The incidence's start date is invalid."
+msgctxt "@info"
+msgid "The recurrence end date is invalid."
+msgstr "Sündmuse alguskuupäev on vigane."
+
+#: incidencerecurrence.cpp:508
+#, kde-format
+msgctxt "example: the 30th"
+msgid "the %1"
+msgstr "%1."
+
+#: incidencerecurrence.cpp:511
+#, kde-format
+msgctxt "example: the 4th to last day"
+msgid "the %1 to last day"
+msgstr "%1. kuni viimane"
+
+#: incidencerecurrence.cpp:514
+#, kde-format
+msgctxt "example: the 5th Wednesday"
+msgid "the %1 %2"
+msgstr "%1. %2"
+
+#: incidencerecurrence.cpp:520
+#, kde-format
+msgctxt "example: the last Wednesday"
+msgid "the last %1"
+msgstr "viimane %1"
+
+#: incidencerecurrence.cpp:522
+#, kde-format
+msgctxt "example: the 5th to last Wednesday"
+msgid "the %1 to last %2"
+msgstr "%1. kuni viimane %2"
+
+#: incidencerecurrence.cpp:538
+#, kde-format
+msgctxt "example: the 5th of June"
+msgid "the %1 of %2"
+msgstr "%1. %2"
+
+#: incidencerecurrence.cpp:541
+#, kde-format
+msgctxt "example: the 3rd to last day of June"
+msgid "the %1 to last day of %2"
+msgstr "%1. kuni viimane %2 päev"
+
+#: incidencerecurrence.cpp:544
+#, kde-format
+msgctxt "example: the 4th Wednesday of June"
+msgid "the %1 %2 of %3"
+msgstr "%3 %1. %2"
+
+#: incidencerecurrence.cpp:551
+#, kde-format
+msgctxt "example: the last Wednesday of June"
+msgid "the last %1 of %2"
+msgstr "%2 viimane %1"
+
+#: incidencerecurrence.cpp:556
+#, kde-format
+msgctxt "example: the 4th to last Wednesday of June"
+msgid "the %1 to last %2 of %3 "
+msgstr "%1. kuni %3 viimane %2 "
+
+#: incidencerecurrence.cpp:563
+#, kde-format
+msgctxt "example: the 15th day of the year"
+msgid "the %1 day of the year"
+msgstr "aasta %1. päev"
+
+#: incidencerecurrence.cpp:578
+#, kde-format
+msgctxt "Recurrence ends after n occurrences"
+msgid "occurrence"
+msgid_plural "occurrences"
+msgstr[0] "kordust"
+msgstr[1] "kordust"
+
+#: incidencerecurrence.cpp:602
+#, kde-format
+msgctxt "repeat every N >weeks<"
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "nädala tagant"
+msgstr[1] "nädala tagant"
+
+#: incidencerecurrence.cpp:606
+#, kde-format
+msgctxt "repeat every N >months<"
+msgid "month"
+msgid_plural "months"
+msgstr[0] "kuu tagant"
+msgstr[1] "kuu tagant"
+
+#: incidencerecurrence.cpp:610
+#, kde-format
+msgctxt "repeat every N >years<"
+msgid "year"
+msgid_plural "years"
+msgstr[0] "aasta tagant"
+msgstr[1] "aasta tagant"
+
+#: incidencerecurrence.cpp:614
+#, kde-format
+msgctxt "repeat every N >days<"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "päeva tagant"
+msgstr[1] "päeva tagant"
+
+#: incidencerecurrence.cpp:622
+#, kde-format
+msgctxt ""
+"repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
+"weeks, 'm' months, 'y' years"
+msgid "every"
+msgid_plural "every"
+msgstr[0] "iga"
+msgstr[1] "iga"
+
+#: incidencewhatwhere.cpp:70
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a summary."
+msgstr ""
+
+#: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
+#: individualmailcomponentfactory.h:63
+#, kde-format
+msgctxt "@action:button dialog positive answer"
+msgid "Send Email"
+msgstr "Saada e-kiri"
+
+#: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
+#: individualmailcomponentfactory.h:64
+#, kde-format
+msgctxt "@action:button dialog negative answer"
+msgid "Do Not Send"
+msgstr "Ära saada"
+
+#: individualmaildialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Group Scheduling Email"
+msgstr "Grupitöö ajaplaneerija e-post"
+
+#: individualmaildialog.cpp:34
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send update"
+msgstr "Uuenduse saatmine"
+
+#: individualmaildialog.cpp:35
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send no update"
+msgstr "Uuendust ei saadeta"
+
+#: individualmaildialog.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Edit mail"
+msgstr "Kirja muutmine"
+
+#: individualmaildialog.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Options for this particular attendee."
+msgstr "Konkreetse osaleja valikud."
+
+#: individualmaildialog.cpp:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Choose an option for this attendee."
+msgstr "Osaleja valiku valimine."
+
+#: individualmaildialog.cpp:111
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings <<"
+msgstr "Individuaalsed e-posti seadistused <<"
+
+#: individualmaildialog.cpp:113
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings >>"
+msgstr "Individuaalsed e-posti seadistused >>"
+
+#: ldaputils.cpp:15
+#, kde-format
+msgctxt "ldap attribute cn"
+msgid "Common name"
+msgstr "Üldnimi"
+
+#: ldaputils.cpp:17
+#, kde-format
+msgctxt "ldap attribute mail"
+msgid "Email"
+msgstr "E-post"
+
+#: ldaputils.cpp:19
+#, kde-format
+msgctxt "ldap attribute givenname"
+msgid "Given name"
+msgstr "Eesnimi"
+
+#: ldaputils.cpp:21
+#, kde-format
+msgctxt "ldap attribute sn"
+msgid "Surname"
+msgstr "Perekonnanimi"
+
+#: ldaputils.cpp:23
+#, kde-format
+msgctxt "ldap attribute ou"
+msgid "Organization"
+msgstr "Organisatsioon"
+
+#: ldaputils.cpp:25
+#, kde-format
+msgctxt "ldap attribute objectClass"
+msgid "Object class"
+msgstr "Objekti klass"
+
+#: ldaputils.cpp:27
+#, kde-format
+msgctxt "ldap attribute description"
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: ldaputils.cpp:29
+#, kde-format
+msgctxt "ldap attribute telephoneNumber"
+msgid "Telephone"
+msgstr "Telefon"
+
+#: ldaputils.cpp:31
+#, kde-format
+msgctxt "ldap attribute mobile"
+msgid "Mobile"
+msgstr "Mobiil"
+
+#: opencomposerjob.cpp:77
+#, kde-format
+msgctxt "errormessage: dbus is running but still no connection kmail"
+msgid "Cannot connect to email service"
+msgstr "Ühendumine e-posti teenusega nurjus"
+
+#: resourcemanagement.cpp:93
+#, kde-format
+msgctxt "@title:window"
+msgid "Resource Management"
+msgstr "Ressursihaldus"
+
+#: resourcemanagement.cpp:98
+#, kde-format
+msgctxt "@action:button add resource to attendeelist"
+msgid "Book resource"
+msgstr "Broneeri ressurss"
+
+#: schedulingdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Scheduling"
+msgstr "Ajastamine"
+
+#: schedulingdialog.cpp:166
+#, kde-format
+msgctxt ""
+"@label Day of week followed by day of the month, then the month. Example: "
+"Monday, 12 June"
+msgid "%1, %2 %3"
+msgstr "%1, %2. %3"
+
+#: schedulingdialog.cpp:187
+#, kde-format
+msgctxt ""
+"@label This is a suffix following a time selecting widget. Example: "
+"[timeedit] to 10:00am"
+msgid "to %1"
+msgstr "kuni %1"
+
+#: templatemanagementdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Manage %1 Templates"
+msgstr "%1 mallide haldamine"
+
+#: templatemanagementdialog.cpp:83
+#, kde-format
+msgid "Template Name"
+msgstr "Malli nimi"
+
+#: templatemanagementdialog.cpp:84
+#, kde-format
+msgid "Please enter a name for the new template:"
+msgstr "Uue malli nimi:"
+
+#: templatemanagementdialog.cpp:86
+#, kde-format
+msgid "New %1 Template"
+msgstr "Uus %1 mall"
+
+#: templatemanagementdialog.cpp:94
+#, kde-format
+msgid "A template with that name already exists, do you want to overwrite it?"
+msgstr "Sellise nimega mall on juba olemas. Kas kirjutada see üle?"
+
+#: templatemanagementdialog.cpp:95
+#, kde-format
+msgid "Duplicate Template Name"
+msgstr "Korduv mallinimi"
+
+#: templatemanagementdialog.cpp:129
+#, kde-format
+msgid "Are you sure that you want to remove the template <b>%1</b>?"
+msgstr "Kas tõesti eemaldada mall <b>%1</b>?"
+
+#: templatemanagementdialog.cpp:130
+#, kde-format
+msgid "Remove Template"
+msgstr "Malli kustutamine"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
+#: ui/alarmdialog.ui:14
+#, kde-format
+msgid "Alarms"
+msgstr "Häired"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/alarmdialog.ui:32
+#, kde-format
+msgid "When:"
+msgstr "Millal:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:47
+#, kde-format
+msgid "Set the reminder trigger time"
+msgstr "Meeldetuletuse käivitamisaja määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:50
+#, kde-format
+msgid ""
+"This spinbox allows you to set the reminder trigger time. The time unit is "
+"set in the combobox immediately adjacent."
+msgstr ""
+"Kerimiskast võimaldab määrata meeldetuletuse käivitamisaja. Ajaühiku saab "
+"määrata samas kõrval olevas liitkastis."
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:72
+#, kde-format
+msgid "Select the reminder trigger time unit"
+msgstr "Meeldetuletuse käivitamise ajaühiku määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:75
+#, kde-format
+msgid ""
+"This combobox allows you to set the units for the reminder trigger time. The "
+"trigger time value is set in the spinbox immediately adjacent."
+msgstr ""
+"See liitkast võimaldab määrata meeldetuletuse käivitamise ajaühiku. "
+"Käivitamisaja väärtuse saab määrata samas kõrval asuvas liitkastis."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:79
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in minutes"
+msgid "minute(s)"
+msgstr "minut(it)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:84
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in hours"
+msgid "hour(s)"
+msgstr "tund(i)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:89
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in days"
+msgid "day(s)"
+msgstr "päev(a)"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:97
+#, kde-format
+msgid "Select the reminder trigger relative to the start or end time"
+msgstr "Algus- või lõpuajaga seotud meeldetuletuse käivitaja valimine"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:100
+#, kde-format
+msgid ""
+"Use this combobox to specify if you want the reminder to trigger before or "
+"after the start or end time."
+msgstr ""
+"Selles liitkastis saab määrata, kas käivitada meeldetuletus enne või pärast "
+"algus- või lõpuaega."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:104
+#, kde-format
+msgid "before the event starts"
+msgstr "enne sündmuse algust"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:109
+#, kde-format
+msgid "after the event starts"
+msgstr "pärast sündmuse algust"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:114
+#, kde-format
+msgid "before the event ends"
+msgstr "enne sündmuse lõppu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:119
+#, kde-format
+msgid "after the event ends"
+msgstr "pärast sündmuse lõppu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/alarmdialog.ui:129
+#, kde-format
+msgid "Repeat:"
+msgstr "Kordus:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:144
+#, kde-format
+msgid "Set the reminder to repeat"
+msgstr "Määra meeldetuletus korduma"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:147
+#, kde-format
+msgid "Check this if you want to the reminder to recur on a periodic interval."
+msgstr "Märkimisel korratakse meeldetuletust kindla ajavahemiku järel."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:160
+#, kde-format
+msgid "Select how often the reminder should repeat"
+msgstr "Vali, kui sageli meeldetuletus peab korduma."
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:163
+#, kde-format
+msgid ""
+"Use this selector to choose how many times you want the recurring reminder "
+"to repeat."
+msgstr ""
+"Selle valijaga saab määrata, mitu korda peab korduv meeldetuletus korduma."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:166
+#, kde-format
+msgid " time(s)"
+msgstr " korda"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:182
+#, kde-format
+msgid "Select the time between reminder repeats"
+msgstr "Meeldetuletuse korduse vahelise aja valimine"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:185
+#, kde-format
+msgid "Use this selector to choose the time between repeating reminders."
+msgstr "Siin saab määrata korduvate meeldetuletuse vahele jääva aja."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:188
+#, kde-format
+msgctxt "@label:spinbox repeat interval expressed in minutes"
+msgid " Minute(s)"
+msgstr " minuti tagant"
+
+#. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:191
+#, kde-format
+msgctxt "repeat every X minutes"
+msgid "every "
+msgstr "iga "
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/alarmdialog.ui:212
+#, kde-format
+msgid "What:"
+msgstr "Mis:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:222
+#, kde-format
+msgid "Select the alarm type"
+msgstr "Häiretüübi valimine"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:225
+#, kde-format
+msgid "Use this selector to choose the alarm type for the reminders."
+msgstr "Siin saab määrata meeldetuletuse häiretüübi."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:235
+#, kde-format
+msgid "Display text"
+msgstr "Teksti näitamine"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:240
+#, kde-format
+msgid "Play sound file"
+msgstr "Helifaili esitamine"
+
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
+#: ui/alarmdialog.ui:273
+#, kde-format
+msgid ""
+"Specify any text you desire to display in the popup notice when the reminder "
+"triggers."
+msgstr ""
+"Teksti määramine, mida näidatakse meeldetuletuse käivitamisel "
+"hüpikmärguandes."
+
+#. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
+#: ui/alarmdialog.ui:296
+#, kde-format
+msgid "Audio File:"
+msgstr "Helifail:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:309
+#, kde-format
+msgid "Specify a file containing a sound to play when the reminder triggers"
+msgstr "Helifaili määramine, mida esitatakse meeldetuletuse käivitamisel"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:312
+#, kde-format
+msgid ""
+"Use the adjacent file browser to help you find the file you want to use when "
+"playing a sound when the reminder triggers."
+msgstr ""
+"Kõrvalasuva failisirvija abil saab leida faili, mida kasutada heli "
+"esitamiseks meeldetuletuse käivitamisel."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Give the attachment a name"
+msgstr "Manusele nime andmine"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:41
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Type any string you desire here for the name of the attachment"
+msgstr "Kirjuta just selline nimi, mida soovid kaasatud failile anda"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:44
+#, kde-format
+msgctxt "@label"
+msgid "Attachment name"
+msgstr "Manuse nimi"
+
+#. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
+#: ui/attachmenteditdialog.ui:65
+#, kde-format
+msgctxt "@label File type of attachment is unknown"
+msgid "Unknown"
+msgstr "Tundmatu"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:72
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Store the attachment file inside the calendar"
+msgstr "Manuse salvestamine kalendris"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:75
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the attachment to be stored inside your "
+"calendar, which can take a lot of space depending on the size of the "
+"attachment. If this option is not checked, then only a link pointing to the "
+"attachment will be stored.  Do not use a link for attachments that change "
+"often or may be moved (or removed) from their current location."
+msgstr ""
+"Märkimisel salvestatakse manus sinu kalendris, mis võib sõltuvalt faili "
+"suurusest võtta üsna palju ruumi. Kui see on märkimata, salvestatakse üksnes "
+"kaasatud failile osutav link. Ära kasuta linki manuste puhul, mis muutuvad "
+"sageli või võivad oma praegusest asukohast mujale liikuda."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:78
+#, kde-format
+msgctxt "@option:check"
+msgid "Store attachment inline"
+msgstr "Manuse salvestamine tekstisiseselt"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/attachmenteditdialog.ui:123
+#, kde-format
+msgid "Location:"
+msgstr "Asukoht:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Provide a location for the attachment file"
+msgstr "Manuse asukoht"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:136
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter the path to the attachment file or use the file browser by pressing "
+"the adjacent button"
+msgstr ""
+"Siia saab sisestada manuse asukoha või valida selle nupule klõpsates "
+"failisirvijast"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/attachmenteditdialog.ui:159
+#, kde-format
+msgctxt "@label"
+msgid "Size:"
+msgstr "Suurus:"
+
+#. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
+#: ui/attachmenteditdialog.ui:166
+#, kde-format
+msgid "0 KB"
+msgstr "0 KB"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/attachmenteditdialog.ui:183
+#, kde-format
+msgid "Type:"
+msgstr "Tüüp:"
+
+#. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:20
+#, kde-format
+msgid "A message on this incidence item"
+msgstr "Sõnum intsidendile"
+
+#. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:23
+#, kde-format
+msgid "Use this message to correct the item parameters."
+msgstr "Siin saab määrata sõnumi, millega korrigeerida elemendi parameetreid."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/dialogdesktop.ui:53
+#, kde-format
+msgctxt "@label:listbox The calendar to which the todo or event must be added"
+msgid "Calen&dar:"
+msgstr "Kalen&der:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/dialogdesktop.ui:81
+#, kde-format
+msgctxt "@info"
+msgid "You are Invited, what do you want to do?"
+msgstr "Oled kutsutud. Mida soovid ette võtta?"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:88
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Accept the invitation"
+msgstr "Võta kutse vastu"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button to accept the invitation."
+msgstr "Sellele nupule klõpsates saab kutse vastu võtta."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:94
+#, kde-format
+msgctxt "@action:button Accept an invitation"
+msgid "Accept"
+msgstr "Nõustu"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
+#: ui/dialogdesktop.ui:105
+#, kde-format
+msgctxt "@action:button decline an invitation"
+msgid "Decline"
+msgstr "Keeldu"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgctxt "@info:tooltip"
+msgid "Set the summary"
+msgstr "Alguskuupäeva määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:141 ui/dialogdesktop.ui:169
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets brief information that will be displayed in many places in the user "
+"interface."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/dialogdesktop.ui:147
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Summary:"
+msgctxt "@label"
+msgid "Summar&y:"
+msgstr "Kokkuvõte:"
+
+#. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
+#: ui/dialogdesktop.ui:188
+#, kde-format
+msgctxt "@label"
+msgid "&Location:"
+msgstr "&Asukoht:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:207
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the location"
+msgstr "Asukoha määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:210
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets where the event or to-do will take place."
+msgstr "Määrab koha, kus sündmus või ülesanne aset leiab."
+
+#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
+#: ui/dialogdesktop.ui:227
+#, kde-format
+msgctxt "@label line containing to-do specific ui controls"
+msgid "Completion:"
+msgstr "Täitmine:"
+
+#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
+#: ui/dialogdesktop.ui:280
+#, kde-format
+msgctxt "@label:slider Showed after the to-do percentage completed slider"
+msgid "completed"
+msgstr "täidetud"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ui/dialogdesktop.ui:287
+#, kde-format
+msgctxt "@label:listbox priority of a to-do"
+msgid "Priority:"
+msgstr "Tähtsus:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:298
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "unspecified"
+msgstr "määramata"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:303
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "1 (highest)"
+msgstr "1 (kõrgeim)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:308
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "2"
+msgstr "2"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:313
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "3"
+msgstr "3"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:318
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "4"
+msgstr "4"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:323
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "5 (medium)"
+msgstr "5 (keskmine)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:328
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "6"
+msgstr "6"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:333
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "7"
+msgstr "7"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:338
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "8"
+msgstr "8"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:343
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "9 (lowest)"
+msgstr "9 (madalaim)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:362
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Set if this to-do's start and due dates have times associated with them."
+msgstr ""
+"Määrab, kas antud ülesande algusaja ja tähtaja kuupäevaga on seotud kellaaeg."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:365
+#, kde-format
+msgctxt "@option:check"
+msgid "All Day"
+msgstr "Kogu päev"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
+#: ui/dialogdesktop.ui:391
+#, kde-format
+msgctxt "@option:check"
+msgid "Blocks me for other events"
+msgstr "Teiste sündmuste blokeerimine"
+
+#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
+#: ui/dialogdesktop.ui:422
+#, kde-format
+msgctxt "@label Start date/time of the event or todo"
+msgid "S&tart:"
+msgstr "Al&gus:"
+
+#. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:450
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the start date"
+msgstr "Alguskuupäeva määramine"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:453
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start date for this to-do"
+msgstr "Määrab ülesande alguskuupäeva."
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
+#: ui/dialogdesktop.ui:469
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start time for this to-do."
+msgstr "Määrab ülesande alguskellaaja."
+
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
+#: ui/dialogdesktop.ui:485 ui/dialogdesktop.ui:600
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Select the timezone for this event. It will also affect recurrences"
+msgstr "Sündmuse ajavööndi valimine. See mõjutab ka kordusi"
+
+#. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
+#: ui/dialogdesktop.ui:503
+#, kde-format
+msgctxt "@action"
+msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
+msgstr "<a href=\"hide\">&lt;&lt; Ajavööndid</a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
+#: ui/dialogdesktop.ui:540
+#, kde-format
+msgctxt "@label end date/time for an event or to-do"
+msgid "E&nd:"
+msgstr "Lõ&pp:"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
+#: ui/dialogdesktop.ui:568
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due date for this to-do."
+msgstr "Määrab ülesande tähtaja kuupäeva."
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
+#: ui/dialogdesktop.ui:584
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due time for this to-do."
+msgstr "Määrab ülesande tähtaja kellaaja."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
+#: ui/dialogdesktop.ui:636
+#, kde-format
+msgctxt "@title:tab General settings for an event or to-do"
+msgid "General"
+msgstr "Üldine"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:651 ui/dialogdesktop.ui:716
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the secrecy level"
+msgstr "Salastustaseme määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:654 ui/dialogdesktop.ui:719
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets whether the access to this event or to-do is restricted. Please note "
+"that KOrganizer currently does not use this setting, so the implementation "
+"of the restrictions will depend on the groupware server. This means that "
+"events or to-dos marked as private or confidential may be visible to others."
+msgstr ""
+"Määrab, kas ligipääs antud sündmusele või ülesandele on piiratud või mitte. "
+"Palun arvesta, et KOrganizer ei kasuta praegu seda määratlust, mistõttu "
+"piirangute kasutamine sõltub eelkõige grupitöö serverist. See tähendab, et "
+"ka privaatse või konfidentsiaalsena tähistatud sündmused või ülesanded "
+"võivad olla teistele nähtavad."
+
+#. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
+#: ui/dialogdesktop.ui:657
+#, kde-format
+msgctxt "@label:listbox sets the privacy option of the event or to-do"
+msgid "Access:"
+msgstr "Ligipääs:"
+
+#. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
+#: ui/dialogdesktop.ui:678
+#, kde-format
+msgctxt "@label"
+msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
+msgstr "<a href=\\\"hide\\\">Vormindatud tekst &gt;&gt;</a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
+#: ui/dialogdesktop.ui:709
+#, kde-format
+msgctxt "@label"
+msgid "Tags:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
+#: ui/dialogdesktop.ui:730
+#, kde-format
+msgctxt "@title:tab attendees of this event or to-do"
+msgid "Attendees"
+msgstr "Osalejad"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/dialogdesktop.ui:736
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Meeting organizer:"
+msgstr "Korraldaja:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:777
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the organizer identity"
+msgstr "Korraldaja identiteedi määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:780
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets the identity corresponding to the organizer of this to-do or event. "
+"Identities can be set in the 'Personal' section of the KOrganizer "
+"configuration. In addition, identities are gathered from your KMail settings "
+"and from your address book."
+msgstr ""
+"Määrab antud ülesande või sündmuse korraldaja identiteedi. Identiteeti saab "
+"määrata kas KOrganizeri seadistustedialoogi osas 'Isiklik'. Lisaks kogutakse "
+"identiteediinfot sinu KMaili seadistustest ja aadressiraamatust."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/dialogdesktop.ui:812
+#, kde-format
+msgctxt "@label participants of this event or to-do"
+msgid "Participants:"
+msgstr "Osalejad:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:831
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Schedule the meeting with your attendees."
+msgstr "Kohtumise aja kooskõlastamine osalejatega."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:834
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Opens the scheduling dialog, which will assist in picking a time slot that "
+"works for all attendees."
+msgstr ""
+"Avab ajastamise dialoogi, kus saab valida aja, mis sobib kõigile osalejatele."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:837
+#, kde-format
+msgctxt "@action:button"
+msgid "Schedule..."
+msgstr "Muuda aega..."
+
+#. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
+#: ui/dialogdesktop.ui:860
+#, kde-format
+msgid "Substitute with group members"
+msgstr "Asenda grupi liikmetega"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:867
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select attendees from your address book."
+msgstr "Osalejate valimine aadressiraamatust."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:870
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Opens your address book, allowing you to select new attendees from it."
+msgstr "Avab aadressiraamatu, kust saab valida uusi osalejaid."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:873
+#, kde-format
+msgctxt "@action:button"
+msgid "Select Attendees..."
+msgstr "Vali osalejad..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
+#: ui/dialogdesktop.ui:897
+#, kde-format
+msgid "Resources"
+msgstr "Ressursid"
+
+#. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
+#: ui/dialogdesktop.ui:937
+#, kde-format
+msgid "Book Resource"
+msgstr "Broneeri ressurss"
+
+#. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
+#: ui/dialogdesktop.ui:966
+#, kde-format
+msgid "Find Resources..."
+msgstr "Otsi ressursse..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
+#: ui/dialogdesktop.ui:980
+#, kde-format
+msgctxt "@title:tab Tab to configure reminders for events or to-do"
+msgid "Reminder"
+msgstr "Meeldetuletus"
+
+#. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
+#: ui/dialogdesktop.ui:992
+#, kde-format
+msgctxt "@label"
+msgid "Add default reminder:"
+msgstr "Vaikimisi meeldetuletus:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
+#: ui/dialogdesktop.ui:1015
+#, kde-format
+msgctxt "@action:button Adds an reminder"
+msgid "Add"
+msgstr "Lisa"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
+#: ui/dialogdesktop.ui:1046
+#, kde-format
+msgctxt "@action:button create a new reminder"
+msgid "New"
+msgstr "Uus"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
+#: ui/dialogdesktop.ui:1057
+#, kde-format
+msgctxt "@action:button modify the selected reminder"
+msgid "Modify"
+msgstr "Muuda"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
+#: ui/dialogdesktop.ui:1068
+#, kde-format
+msgctxt "@action:button disables selected reminder"
+msgid "Disable"
+msgstr "Keela"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
+#: ui/dialogdesktop.ui:1075
+#, kde-format
+msgctxt "@action:button removes selected reminders"
+msgid "Remove"
+msgstr "Eemalda"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
+#: ui/dialogdesktop.ui:1100
+#, kde-format
+msgctxt "@title:tab"
+msgid "Recurrence"
+msgstr "Kordamine"
+
+#. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
+#: ui/dialogdesktop.ui:1112
+#, kde-format
+msgctxt "@label whether or not this event or to-do repeats"
+msgid "Repeats:"
+msgstr "Kordus: "
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1131
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Never"
+msgstr "Mitte kunagi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1136
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Daily"
+msgstr "Igapäevane"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1141
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Weekly"
+msgstr "Iganädalane"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1146
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Monthly"
+msgstr "Igakuine"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1151
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Yearly"
+msgstr "Iga-aastane"
+
+#. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
+#: ui/dialogdesktop.ui:1165
+#, kde-format
+msgctxt "@label repeats every [various options]"
+msgid "every"
+msgstr "iga"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
+#: ui/dialogdesktop.ui:1197
+#, kde-format
+msgctxt "@label Event or todo recurs every n day(s)"
+msgid "day(s)"
+msgstr "päeva järel"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
+#: ui/dialogdesktop.ui:1204
+#, kde-format
+msgid "This and future occurrences."
+msgstr "See ja tulevased kordused."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
+#: ui/dialogdesktop.ui:1375
+#, kde-format
+msgctxt "@label recurrence ends on|after"
+msgid "Ends:"
+msgstr "Lõpp:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1397
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "never"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "never"
+msgstr "mitte kunagi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1402
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "on"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "on"
+msgstr "kuupäeval "
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1407
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "after"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "after"
+msgstr "pärast"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
+#: ui/dialogdesktop.ui:1462
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Date after which the event or to-do should stop recurring"
+msgstr "Kuupäev, mille järel sündmust või ülesannet enam ei korrata."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
+#: ui/dialogdesktop.ui:1517
+#, kde-format
+msgctxt "@label"
+msgid "occurrence(s)"
+msgstr "korda"
+
+#. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
+#: ui/dialogdesktop.ui:1536
+#, kde-format
+msgctxt "@label exceptions for the recurrence"
+msgid "Exceptions:"
+msgstr "Erandid:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
+#: ui/dialogdesktop.ui:1561
+#, kde-format
+msgctxt "@action:button adds an exception on the recurrence"
+msgid "Add"
+msgstr "Lisa"
+
+#. i18n: ectx: property (text), widget (QLabel, mOnLabel)
+#: ui/dialogdesktop.ui:1600
+#, kde-format
+msgctxt "@label The event ends on [different options]"
+msgid "on:"
+msgstr ":"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
+#: ui/dialogdesktop.ui:1615
+#, kde-format
+msgctxt "@action:button removes an exception"
+msgid "Remove"
+msgstr "Eemalda"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
+#: ui/dialogdesktop.ui:1642
+#, kde-format
+msgctxt "@title:tab configure attachments of an event or todo"
+msgid "Attachments"
+msgstr "Manused"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1664
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an attachment"
+msgstr "Manuse lisamine"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1667
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows a dialog used to select an attachment to add to this event or to-do as "
+"link or as inline data."
+msgstr ""
+"Avab dialoogi, kus saab valida sellele sündmusele või ülesandele lingina või "
+"kirjasiseselt lisatava faili."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1670
+#, kde-format
+msgctxt "@action:button adds an attachment"
+msgid "Add"
+msgstr "Lisa"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1690
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove the selected attachment"
+msgstr "Manuse eemaldamine"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1693
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Removes the attachment selected in the list above from this event or to-do."
+msgstr ""
+"Eemaldab ülalasuvast nimekirjast valitud manuse sellelt sündmuselt või "
+"ülesandelt."
+
+#. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1696
+#, kde-format
+msgctxt "@action:button remove an attachment"
+msgid "Remove"
+msgstr "Eemalda"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:39
+#, kde-format
+msgid "Enter the search term"
+msgstr "Otsingumõiste sisestamine"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:42
+#, kde-format
+msgid ""
+"Use this text box to enter some keyword for the resource you want to find."
+msgstr "Siin saab sisestada mõned märksõnad, mille järgi ressurssi leida."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
+#: ui/resourcemanagement.ui:76
+#, kde-format
+msgid "Details"
+msgstr "Üksikasjad"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: ui/resourcemanagement.ui:94
+#, kde-format
+msgid "Owner"
+msgstr "Omanik"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
+#: ui/schedulingdialog.ui:14
+#, kde-format
+msgid "Schedule a time"
+msgstr "Kellaaja määramine"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/schedulingdialog.ui:39
+#, kde-format
+msgid "Earliest time to start:"
+msgstr "Varaseim algus:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/schedulingdialog.ui:59
+#, kde-format
+msgid "Latest time to end:"
+msgstr "Hiliseim lõpp:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
+#. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
+#, kde-format
+msgid "Check the weekdays to include in the search."
+msgstr "Märgi nädalapäevad, mida otsingusse kaasata."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:89 ui/schedulingdialog.ui:111
+#, kde-format
+msgid ""
+"Only the checked weekdays will be included in the free time slot search."
+msgstr "Vaba aja otsingul kaasatakse ainult märgitud nädalapäevad."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/schedulingdialog.ui:92
+#, kde-format
+msgid "Allowed weekdays:"
+msgstr "Lubatud nädalapäevad:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
+#, kde-format
+msgid "Check the roles to include in the search."
+msgstr "Märgi rollid, mida otsingusse kaasata."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
+#. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:121 ui/schedulingdialog.ui:143
+#, kde-format
+msgid ""
+"Only the participants with the checked roles will be considered in the free "
+"time slot search."
+msgstr "Vaba aja otsingul kaasatakse ainult märgitud rollidega osalejad."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/schedulingdialog.ui:124
+#, kde-format
+msgid "Mandatory roles:"
+msgstr "Kohustuslikud rollid:"
+
+#. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:154
+#, kde-format
+msgid "Select the search option"
+msgstr "Otsinguvalikute määramine"
+
+#. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:157
+#, kde-format
+msgid "Use these tabs to choose the search option."
+msgstr "Neil kaartidel saab valida otsinguvalikuid."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
+#: ui/schedulingdialog.ui:164
+#, kde-format
+msgid "Automatic Search"
+msgstr "Automaatne otsing"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
+#: ui/schedulingdialog.ui:199
+#, kde-format
+msgid "Visual Search"
+msgstr "Visuaalne otsing"
+
+#. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
+#: ui/schedulingdialog.ui:207
+#, kde-format
+msgid "Move your appointment to:"
+msgstr "Kohtumise uus aeg:"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
+#: ui/schedulingdialog.ui:228
+#, kde-format
+msgid "Monday, 12th June"
+msgstr "esmaspäev, 12. juuni"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
+#: ui/schedulingdialog.ui:241
+#, kde-format
+msgid "to 10:00am"
+msgstr "10.00 e.l."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
+#: ui/template_management_dialog_base.ui:14
+#, kde-format
+msgid "Template Management"
+msgstr "Mallihaldus"
+
+#. i18n: ectx: property (text), widget (QLabel, m_introLabel)
+#: ui/template_management_dialog_base.ui:26
+#, kde-format
+msgctxt "@label"
+msgid ""
+"Select a template and click <i>Apply</i> to apply it to this item. Click "
+"<i>New</i> to create a new template based on the current item settings."
+msgstr ""
+"Vali mall ja klõpsa <i>Rakenda</i> selle rakendamiseks antud elemendile. "
+"Klõpsa <i>Uus</i> uue malli loomiseks antud elemendi seadistuste põhjal."
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:42
+#, kde-format
+msgid "The list of managed templates"
+msgstr "Hallatavate mallide loend"
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:45
+#, kde-format
+msgid ""
+"This is a list of all the templates you have currently accessible for "
+"creating new calendar items."
+msgstr ""
+"Kõigi mallide loend, mida saab praegu kasutada kalendri uute elementide "
+"loomisel."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:56
+#, kde-format
+msgid "Create a new template from the current settings"
+msgstr "Uue malli loomine kehtivate seadistuste põhjal"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:59
+#, kde-format
+msgid ""
+"Click on this button to create a new template based on the current settings "
+"in the editor. You can use this template to quickly add new items in the "
+"future."
+msgstr ""
+"Sellele nupule klõpsates luuakse uus mall kehtivate seadistuste põhjal. "
+"Malli abil saab edaspidi kiiresti uusi elemente lisada."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:62
+#, kde-format
+msgid "&New..."
+msgstr "&Uus..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:72
+#, kde-format
+msgid "Remove the currently selected template"
+msgstr "Eemalda valitud mall"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:75
+#, kde-format
+msgid ""
+"Clicking this button will permanently remove the selected template from your "
+"list of managed templates."
+msgstr ""
+"Sellele nupule klõpsates eemaldatakse valitud mall jäädavalt hallatavate "
+"mallide loendist."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:78
+#, kde-format
+msgid "&Remove"
+msgstr "&Eemalda"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:85
+#, kde-format
+msgid "Apply the selected template settings"
+msgstr "Rakenda valitud malli seadistused"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:88
+#, kde-format
+msgid ""
+"Clicking this button will apply the settings from the selected template to "
+"the item you are currently editing."
+msgstr ""
+"Sellele nupule klõpsates rakendatakse valitud malli seadistused elemendile, "
+"mida parajasti redigeerid."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:91
+#, kde-format
+msgid "Apply"
+msgstr "Rakenda"
+
+#: visualfreebusywidget.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid "Scale: "
+msgstr "Skaala: "
+
+#: visualfreebusywidget.cpp:143
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the Gantt chart zoom level"
+msgstr "Määra Gantti diagrammi suurendustase"
+
+#: visualfreebusywidget.cpp:145
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
+"shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
+">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
+"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+"current event or to-do."
+msgstr ""
+"Vali Gantti diagrammi suurendustaseme:<nl/>'Tund' näitab mõnetunnist "
+"vahemikku,<nl/>'Päev' mõnepäevast,<nl/>'Nädal' mõnenädalast<nl/>ja 'Kuu' "
+"mõnekuist vahemikku,<nl/>'Automaatne' aga valib vahemiku, mis kõige paremini "
+"sobib antud sündmuse või ülesandega."
+
+#: visualfreebusywidget.cpp:152
+#, kde-format
+msgctxt "@item:inlistbox range in hours"
+msgid "Hour"
+msgstr "Tund"
+
+#: visualfreebusywidget.cpp:153
+#, kde-format
+msgctxt "@item:inlistbox range in days"
+msgid "Day"
+msgstr "Päev"
+
+#: visualfreebusywidget.cpp:154
+#, kde-format
+msgctxt "@item:inlistbox range in weeks"
+msgid "Week"
+msgstr "Nädal"
+
+#: visualfreebusywidget.cpp:155
+#, kde-format
+msgctxt "@item:inlistbox range in months"
+msgid "Month"
+msgstr "Kuu"
+
+#: visualfreebusywidget.cpp:156
+#, kde-format
+msgctxt "@item:inlistbox range is computed automatically"
+msgid "Automatic"
+msgstr "Automaatne"
+
+#: visualfreebusywidget.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Center on Start"
+msgstr "Fokuseeri algusele"
+
+#: visualfreebusywidget.cpp:162
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Center the Gantt chart on the event start date and time"
+msgstr "Fokuseerib Gantti diagrammi sündmuse algusajale ja -päevale"
+
+#: visualfreebusywidget.cpp:164
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to center the Gantt chart on the start time and day of "
+"this event."
+msgstr ""
+"Klõpsa sellele nupule Gantti diagrammi fokuseerimiseks sündmuse algusajale "
+"ja -päevale."
+
+#: visualfreebusywidget.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Pick Date"
+msgstr "Vali kuupäev"
+
+#: visualfreebusywidget.cpp:173
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move the event to a date and time when all attendees are available"
+msgstr "Liigutab sündmuse kuupäevale ja ajale, mis kõik osalejad on vabad"
+
+#: visualfreebusywidget.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to move the event to a date and time when all the "
+"attendees have time available in their Free/Busy lists."
+msgstr ""
+"Klõpsa sellele nupule sündmuse liigutamiseks kuupäevale ja ajale, mil kõik "
+"osalejad on vabad."
+
+#: visualfreebusywidget.cpp:185
+#, kde-format
+msgctxt "@action:button reload freebusy data"
+msgid "Reload"
+msgstr "Laadi uuesti"
+
+#: visualfreebusywidget.cpp:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reload Free/Busy data for all attendees"
+msgstr "Laadib kõigi osalejate vaba/hõivatud info uuesti"
+
+#: visualfreebusywidget.cpp:188
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Pressing this button will cause the Free/Busy data for all attendees to be "
+"reloaded from their corresponding servers."
+msgstr ""
+"Klõpsa sellele nupule kõigi osalejate vaba/hõivatud info laadimiseks "
+"vastavatest serveritest."
+
+#: visualfreebusywidget.cpp:199
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the tree list of all data"
+msgstr "Kõigi andmete puuloendi näitamine"
+
+#: visualfreebusywidget.cpp:200
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Shows the tree list of all data"
+msgstr "Kõigi andmete puuloendi näitamine"
+
+#: visualfreebusywidget.cpp:206
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Free/Busy status of all attendees"
+msgstr "Kõigi osalejate vaba/hõivatud info näitamine"
+
+#: visualfreebusywidget.cpp:208
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows the Free/Busy status of all attendees. Double-clicking on an "
+"attendee's entry in the list will allow you to enter the location of their "
+"Free/Busy Information."
+msgstr ""
+"Näitab kõigi osalejate vaba/hõivatud infot. Topeltklõps osaleja nimel lubab "
+"sisestada tema vaba/hõivatud info asukoha."
+
+#~ msgctxt "Alarm action"
+#~ msgid "Send an email"
+#~ msgstr "E-kirja saatmine"
+
+#~ msgid "Send email"
+#~ msgstr "E-kirja saatmine"
+
+#~ msgid "&To:"
+#~ msgstr "&Saaja:"
+
+#~ msgid ""
+#~ "Specify a list of addresses to send email when the reminder triggers.\n"
+#~ "If the 'To:' field stays empty the email reminder will be sent to the\n"
+#~ "default email configured in Kmail (Settings menu/Configure Kmail/"
+#~ "Identities)."
+#~ msgstr ""
+#~ "Siin saab määrata aadressid, millele saadetakse kiri meeldetuletuse "
+#~ "käivitamisel.\n"
+#~ "Kui väki \"Saaja\" on tühi, saadetakse meeldetuletus kirjaga aadressile,\n"
+#~ "mis on määratud KMaili seadistustes (Seadistused->KMaili seadistamine-"
+#~ ">Identiteedid)."
+
+#~ msgid ""
+#~ "Enter a list comma-separated addresses to which an email will be sent "
+#~ "when the reminder triggers"
+#~ msgstr ""
+#~ "Siin saab määrata komadega eraldatult aadressid, millele saadetakse "
+#~ "meeldetuletuse käivitamisel e-kiri"
+
+#~ msgid "&Message:"
+#~ msgstr "&Sõnum:"
+
+#~ msgid "Specify text of an email message to send when the reminder triggers"
+#~ msgstr "Meeldetuletuse käivitamisel saadetava e-kirja teksti määramine"
+
+#~ msgid ""
+#~ "Enter any text you desire for the email message that will be sent when "
+#~ "the alarm triggers."
+#~ msgstr ""
+#~ "Siin saab määrata teksti, mis saadetakse e-kirjaga häire käivitamisel."
+
+#~ msgctxt "Alarm action"
+#~ msgid "Execute a script"
+#~ msgstr "Skripti käivitamine"
+
+#~ msgid "Run application / script"
+#~ msgstr "Rakenduse / skripti käivitamine"
+
+#~ msgid "&Application / Script:"
+#~ msgstr "&Rakendus / skript:"
+
+#~ msgid ""
+#~ "Specify a file containing the application to run when the reminder "
+#~ "triggers"
+#~ msgstr ""
+#~ "Rakenduse faili määramine, mis käivitatakse meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Use the adjacent file browser to help you find the file you want to use "
+#~ "when running an application when the reminder triggers."
+#~ msgstr ""
+#~ "Kõrvalasuva failisirvija abil saab leida faili, mida kasutada rakenduse "
+#~ "käivitamiseks meeldetuletuse käivitamisel."
+
+#~ msgid "*|All files"
+#~ msgstr "*|Kõik failid"
+
+#~ msgid "Ar&guments:"
+#~ msgstr "Ar&gumendid:"
+
+#~ msgid ""
+#~ "Specify arguments to pass to the application when the reminder triggers"
+#~ msgstr "Rakendusele edastatavad argumendid meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Enter the application arguments to use when running an application when "
+#~ "the reminder triggers."
+#~ msgstr ""
+#~ "Siin saab sisestada rakenduse argumendid, mida kasutatakse meeldetuletuse "
+#~ "käivitamisel tööle pandavas rakenduses."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a title."
+#~ msgstr "Palun määra nimi."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the title"
+#~ msgstr "Nime määramine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the Title of this event or to-do."
+#~ msgstr "Määrab sündmuse või ülesande nime."
+
+#~ msgctxt "@label"
+#~ msgid "&Title:"
+#~ msgstr "N&imi:"
+
+#~ msgctxt "@label"
+#~ msgid "Categories:"
+#~ msgstr "Kategooriad:"
+
+#~ msgid "Click to add a new category"
+#~ msgstr "Klõpsa uue kategooria lisamiseks"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Categories"
+#~ msgstr "Kategooriate valimine"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Categories"
+#~ msgstr "Kategooriate muutmine"
+
+#~ msgid "Apply changes and close"
+#~ msgstr "Muudatuste rakendamine ja sulgemine"
+
+#~ msgid ""
+#~ "When clicking <b>Ok</b>, the settings will be handed over to the program "
+#~ "and the dialog will be closed."
+#~ msgstr ""
+#~ "Klõpsuga nupule <b>OK</b> kehtestatakse rakenduses muudatused ja dialoog "
+#~ "suletakse."
+
+#~ msgid "Cancel changes and close"
+#~ msgstr "Muudatustest loobumine ja sulgemine"
+
+#~ msgid ""
+#~ "When clicking <b>Cancel</b>, the settings will be discarded and the "
+#~ "dialog will be closed."
+#~ msgstr ""
+#~ "Klõpsuga nupule <b>Loobu</b> unustatakse tehtud muudatused ja dialoog "
+#~ "suletakse."
+
+#~ msgid ""
+#~ "When clicking <b>Help</b>, a separate KHelpCenter window will open "
+#~ "providing more information about the settings."
+#~ msgstr ""
+#~ "Klõpsuga nupule <b>Abi</b> avaneb eraldi KDE abikeskuse aken, kust leiab "
+#~ "seadistuste kohta täpsemat teavet."
+
+#~ msgid "New category"
+#~ msgstr "Uus kategooria"
+
+#~ msgid "New subcategory"
+#~ msgstr "Uus alamkategooria"
+
+#~ msgid "Select Categories"
+#~ msgstr "Kategooriate valimine"
+
+#~ msgid "Select categories"
+#~ msgstr "Kategooriate valimine"
+
+#~ msgid "Use this list to choose categories."
+#~ msgstr "Siin saab valida kategooriad."
+
+#~ msgid "Category"
+#~ msgstr "Kategooria"
+
+#~ msgid "Edit Categories"
+#~ msgstr "Kategooriate muutmine"
+
+#~ msgid "New category entry"
+#~ msgstr "Uus kategooriakirje"
+
+#~ msgid "Type in any text you want to use as a new category or sub-category."
+#~ msgstr ""
+#~ "Kirjuta tekst, mida soovid kasutada uue kategooria või alamkategooriana."
+
+#~ msgid "Add the entry to the category list"
+#~ msgstr "Lisa kirje kategooriate nimekirja"
+
+#~ msgid "Click this button to insert the entry into the category list."
+#~ msgstr "Klõpsa nupule kirje lisamiseks kategooriate nimekirja."
+
+#~ msgid "A&dd"
+#~ msgstr "Lis&a"
+
+#~ msgid "Add the entry as a subcategory of the selected category"
+#~ msgstr "Lisa kirje valitud kategooria alamkategooriana"
+
+#~ msgid ""
+#~ "Click this button to insert the entry as a subcategory of the currently "
+#~ "selected category."
+#~ msgstr "Klõpsa nupule kirje lisamiseks valitud kategooria alamkategooriana."
+
+#~ msgid "Add &Subcategory"
+#~ msgstr "Li&sa alamkategooria"
+
+#~ msgid "Remove the selected category"
+#~ msgstr "Eemalda valitud kategooria"
+
+#~ msgid ""
+#~ "Click this button to remove the selected category from the category list."
+#~ msgstr ""
+#~ "Klõpsa nupule valitud kategooria eemaldamiseks kategooriate nimekirjast."
+
+#~ msgid "Category list"
+#~ msgstr "Kategooriate nimekiri"
+
+#~ msgid ""
+#~ "This is a list of all the categories available. You can create as many "
+#~ "sub-categories as you want here."
+#~ msgstr ""
+#~ "See on kõigi saadaolevate kategooriate nimekiri. Siia võib lisada nii "
+#~ "palju alamkategooriad, kui vaja."
+
+#~ msgid "Default Category"
+#~ msgstr "Vaikimisi kategooria"
+
+#~ msgid "Select incidence categories"
+#~ msgstr "Intsidentide kategooriate valimine"
+
+#~ msgid "Use this list to choose incidence categories."
+#~ msgstr "Siin saab valida intsidentide kategooriad."
+
+#~ msgid "&Clear Selection"
+#~ msgstr "&Puhasta valik"
+
+#~ msgid "&Edit Categories..."
+#~ msgstr "&Muuda kategooriaid..."
+
+#~ msgid "The last selected folder."
+#~ msgstr "Viimati valitud kataloog."
+
+#~ msgctxt "errormessage: can't create a kontact process"
+#~ msgid "Can't create composer: Failed to start kontact."
+#~ msgstr "Koostaja loomine nurjus. Kontacti ei õnnestunud käivitada."
+
+#~ msgctxt ""
+#~ "errormessage: No connection via dbus nor starting kontact process worked."
+#~ msgid "Can't create composer: Neither dbus nor kontact responded in time."
+#~ msgstr ""
+#~ "Koostaja loomine nurjus. Ei dbus ega kontact vastanud nõutava ajaga."
+
+#~ msgctxt "The reminder is set to X minutes before/after the event"
+#~ msgid "minutes"
+#~ msgstr "minutit"
+
+#~ msgctxt "The reminder is set to X days before/after the event"
+#~ msgid "days"
+#~ msgstr "päeva"
+
+#~ msgctxt "The reminder is set to X hours before/after the event"
+#~ msgid "hours"
+#~ msgstr "tundi"
+
+#~ msgctxt "@action:button Configures selected reminder"
+#~ msgid "Configure"
+#~ msgstr "Seadista"
+
+#~ msgctxt "@info"
+#~ msgid "%1 already exists. Do you want to overwrite it?"
+#~ msgstr "%1 on juba olemas. Kas kirjutada see üle?"
+
+#~ msgid "audio/x-wav audio/x-mp3 application/ogg"
+#~ msgstr "audio/x-wav audio/x-mp3 application/ogg"
+
+#~ msgctxt "@label Start date/time of the event or todo"
+#~ msgid "&Start:"
+#~ msgstr "Algu&s:"
+
+#~ msgid "Overwrite"
+#~ msgstr "Kirjuta üle"
+
+#~ msgid "Remove"
+#~ msgstr "Eemalda"
+
+#~ msgid "Creates a new event"
+#~ msgstr "Uue sündmuse loomine"
+
+#~ msgid "Creates a new todo"
+#~ msgstr "Uue ülesande loomine"
+
+#~ msgid "Creates a new journal"
+#~ msgstr "Uue päeviku loomine"
+
+#~ msgid ""
+#~ "Loads an existing item, or returns without doing anything when the item "
+#~ "is not an event or todo."
+#~ msgstr ""
+#~ "Olemsaoleva elemendi laadimine või naasmine midagi tegemata, kui element "
+#~ "ei ole sündmus ega ülesanne."
+
+#~ msgctxt "@label end date/time for an event or to-do"
+#~ msgid "&End:"
+#~ msgstr "&Lõpp:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the description in plain text or rich text."
+#~ msgstr "Kirjelduses kas liht- või vormindatud teksti kasutamine."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the description for this event, to-do or journal. This will be "
+#~ "displayed in a reminder if one is set, as well as in a tooltip when you "
+#~ "hover over the event."
+#~ msgstr ""
+#~ "Määrab sündmuse, ülesande või päeviku kirjelduse. Seda näidatakse "
+#~ "meeldetuletuses (kui see on määratud) või kohtspikrina, kui viid hiire "
+#~ "sündmuse kohale."
+
+#~ msgid "KOrganizer"
+#~ msgstr "KOrganizer"
+
+#~ msgid "KDE application to run the KOrganizer incidenceeditor."
+#~ msgstr "KDE rakendus KOrganizeri sündmuste redaktori käivitamiseks"
+
+#~ msgid "(C) 2010 Bertjan Broeksema"
+#~ msgstr "(C) 2010: Bertjan Broeksema"
+
+#~ msgid "Run the KOrganizer incidenceeditor ng."
+#~ msgstr "KOrganizeri uue sündmuste redaktori käivitamine"
+
+#~ msgid "Bertjan Broeksema"
+#~ msgstr "Bertjan Broeksema"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgctxt "@label Start date/time of the event or task"
+#~ msgid "Start:"
+#~ msgstr "Algus:"
+
+#~ msgctxt "@label End date/time of the task or event"
+#~ msgid "End:"
+#~ msgstr "Lõpp:"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "All Day"
+#~ msgstr "Kogu päev"
+
+#~ msgctxt "@label:slider completed percentage of a task"
+#~ msgid "completed"
+#~ msgstr "täidetud"
+
+#~ msgctxt "@label:listbox Priority of the task"
+#~ msgid "Priority:"
+#~ msgstr "Tähtsus:"
+
+#~ msgctxt "@item:inlistbox No priority specified for a task"
+#~ msgid "unspecified"
+#~ msgstr "määramata"
+
+#~ msgctxt "@item:inlistbox highest priority for a task"
+#~ msgid "1 (highest)"
+#~ msgstr "1 (kõrgeim)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgctxt "@item:inlistbox medium priority for a task"
+#~ msgid "5 (medium)"
+#~ msgstr "5 (keskmine)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgctxt "@item:inlistbox lowest priority for a task"
+#~ msgid "9 (lowest)"
+#~ msgstr "9 (madalaim)"
+
+#~ msgctxt ""
+#~ "@label Task specific line in the dialog containing progress and priority"
+#~ msgid "Progress:"
+#~ msgstr "Edenemine:"
+
+#~ msgid ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#~ msgstr ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Vormindatud tekst &gt;&gt;</"
+#~ "font></a>"
+
+#~ msgctxt ""
+#~ "Opens a selection dialog for selecting categories of an event or task"
+#~ msgid "Select"
+#~ msgstr "Vali"
+
+#~ msgid "Access:"
+#~ msgstr "Ligipääs:"
+
+#~ msgid "Organizer:"
+#~ msgstr "Korraldaja:"
+
+#~ msgid "Participants:"
+#~ msgstr "Osalejad:"
+
+#~ msgid "X time conflicts"
+#~ msgstr "X aja konflikt"
+
+#~ msgid "Solve..."
+#~ msgstr "Lahenda..."
+
+#~ msgctxt "Select attendees from addressbook"
+#~ msgid "Select..."
+#~ msgstr "Vali..."
+
+#~ msgid "Add"
+#~ msgstr "Lisa"
+
+#~ msgid "Configure"
+#~ msgstr "Seadista"
+
+#~ msgid "Disable"
+#~ msgstr "Keela"
+
+#~ msgid "Repeat never"
+#~ msgstr "Ei korrata kunagi"
+
+#~ msgid "Repeat daily"
+#~ msgstr "Korratakse iga päev"
+
+#~ msgid "Repeat weekly"
+#~ msgstr "Korratakse iga nädal"
+
+#~ msgid "Repeat monthly"
+#~ msgstr "Korratakse iga kuu"
+
+#~ msgid "Repeat yearly"
+#~ msgstr "Korratakse iga aasta"
+
+#~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
+#~ msgid "every"
+#~ msgstr "iga"
+
+#~ msgid "Ends never"
+#~ msgstr "Ei lõpe kunagi"
+
+#~ msgid "Ends on"
+#~ msgstr "Lõpeb"
+
+#~ msgid "Ends after"
+#~ msgstr "Lõpeb pärast"
+
+#~ msgid "MM.dd.yyyy"
+#~ msgstr "PP.kk.aaaa"
+
+#~ msgid "Exceptions:"
+#~ msgstr "Erandid:"
+
+#~ msgid "dd.MM.yyyy"
+#~ msgstr "pp.KK.aaaa"
+
+#~ msgid "Time"
+#~ msgstr "Aeg"
+
+#~ msgid "&How often:"
+#~ msgstr "Sage&dus:"
+
+#~ msgid "&Interval:"
+#~ msgstr "&Intervall:"
+
+#~ msgid "&Repeating:"
+#~ msgstr "Ko&rdus"
+
+#~ msgid "Type"
+#~ msgstr "Tüüp"
+
+#~ msgid "Display optional text when the reminder is triggered"
+#~ msgstr "Soovi korral teksti näitamine meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Check this option if you want to display optional text in a popup notice "
+#~ "when the reminder triggers."
+#~ msgstr ""
+#~ "Märkimisel saab meeldetuletuse käivitamisel lasta hüpikmärguandes näidata "
+#~ "teksti."
+
+#~ msgid "&Display"
+#~ msgstr "&Kuvamine"
+
+#~ msgid "Play a sound when the reminder is triggered"
+#~ msgstr "Heli esitamine meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Check this option if you want to play a sound when the reminder triggers."
+#~ msgstr ""
+#~ "Sisselülitamisel saab meeldetuletuse käivitamisel lasta esitada heli."
+
+#~ msgid "&Sound"
+#~ msgstr "&Heli"
+
+#~ msgid "Run an application or script when the reminder is triggered"
+#~ msgstr "Rakenduse või skripti käivitamine meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Check this option if you want to run an application (or script) when the "
+#~ "reminder triggers."
+#~ msgstr ""
+#~ "Sisselülitamisel saab meeldetuletuse käivitamisel panna tööle rakenduse "
+#~ "(või skripti)."
+
+#~ msgid "Application / script"
+#~ msgstr "Rakendus / skript"
+
+#~ msgid "Send email when the reminder is triggered"
+#~ msgstr "E-kirja saatmine meeldetuletuse käivitamisel"
+
+#~ msgid ""
+#~ "Check this option if you want to send an email message when the reminder "
+#~ "triggers."
+#~ msgstr "Märkimisel saab meeldetuletuse käivitamisel lasta saata e-kirja."
+
+#~ msgid "Display &text:"
+#~ msgstr "Kuvatav &tekst:"
+
+#~ msgid "Sound &file:"
+#~ msgstr "Heli&fail:"
+
+#~ msgid "&Text of the message:"
+#~ msgstr "Sõnumi &tekst:"
+
+#~ msgid "Remove the currently selected reminder"
+#~ msgstr "Eemalda valitud meeldetuletus"
+
+#~ msgid ""
+#~ "Click this button if you want to remove the currently selected reminder. "
+#~ "Be careful with this option as there is no way to undo this operation."
+#~ msgstr ""
+#~ "Klõpsuga nupule saab eemaldada valitud meeldetuletuse. Ole ettevaatlik, "
+#~ "sest seda toimingut ei saa tagasi võtta."
+
+#~ msgid "Create a new reminder using the settings specified below"
+#~ msgstr "Uue meeldetuletuse loomine allpool määratud seadistuste põhjal"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "specified below. You can continue to change the settings as needed."
+#~ msgstr ""
+#~ "Sellele nupule klõpsates luuakse uus meeldetuletus allpool määratud "
+#~ "seadistuste põhjal. Seadistusi saab vajaduse korral edasi muuta."
+
+#~ msgctxt "Add a new alarm to the alarm list"
+#~ msgid "&Add"
+#~ msgstr "Lis&a"
+
+#~ msgid "Create a new reminder from the currently selected reminder"
+#~ msgstr "Uue meeldetuletuse loomine valitud meeldetuletuse põhjal"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "stored in the currently selected reminder. You can continue to change the "
+#~ "settings as needed."
+#~ msgstr ""
+#~ "Sellele nupule klõpsates luuakse uus meeldetuletus valitud meeldetuletuse "
+#~ "seadistuste põhjal- Seadistusi saab vajaduse korral edasi muuta."
+
+#~ msgid "D&uplicate"
+#~ msgstr "K&looni"
+
+#~ msgid "The list of reminders for this event or to-do"
+#~ msgstr "Sündmuse või ülesande meeldetuletuste nimekiri"
+
+#~ msgid ""
+#~ "This area displays a list of all the reminders you have specified for "
+#~ "this event or to-do."
+#~ msgstr ""
+#~ "Siin on näha kogu sellele sündmusele või ülesandele määratud "
+#~ "meeldetuletuste nimekiri."
+
+#~ msgid "Offset"
+#~ msgstr "Distants"
+
+#~ msgid "Repeat"
+#~ msgstr "Kordus"
+
+#, fuzzy
+#~| msgctxt "@item:intext sample attendee email name"
+#~| msgid "name"
+#~ msgctxt "attendees  (name+emailaddress)"
+#~ msgid "Fullname"
+#~ msgstr "nimi"
+
+#, fuzzy
+#~| msgid "Type"
+#~ msgctxt "Type of resource (vCard attribute)"
+#~ msgid "cuType"
+#~ msgstr "Tüüp"
+
+#, fuzzy
+#~| msgctxt "@item:intext sample attendee email name"
+#~| msgid "name"
+#~ msgctxt "attendee name"
+#~ msgid "name"
+#~ msgstr "nimi"
+
+#, fuzzy
+#~| msgctxt "@option send email reminder"
+#~| msgid "Email"
+#~ msgctxt "attendee email"
+#~ msgid "email"
+#~ msgstr "E-post"
+
+#~ msgid "Attendee"
+#~ msgstr "Osaleja"
+
+#~ msgctxt "@label Day of the week name, example: Monday,"
+#~ msgid "%1,"
+#~ msgstr "%1,"
+
+#~ msgctxt ""
+#~ "@label A time period duration. It is preceded/followed (based on the "
+#~ "orientation) by the name of the week, see the message above. example: 12 "
+#~ "June, 8:00am to 9:30am"
+#~ msgid "%1 %2, %3 to %4"
+#~ msgstr "%1. %2, %3 kuni %4"
+
+#~ msgctxt ""
+#~ "@label A time period duration. KLocale is used to format the components. "
+#~ "example: Monday, 12 June, 8:00am to 9:30am"
+#~ msgid "%1, %2 %3, %4 to %5"
+#~ msgstr "%1, %2. %3, %4 kuni %5"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Free Period"
+#~ msgstr "Vaba aeg"
+
+#~ msgctxt "@info:tooltip period duration"
+#~ msgid "Duration:"
+#~ msgstr "Kestus:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bald@smail.ee"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Select Categories"
+#~ msgstr "Kategooriate valimine"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Select a template and "
+#~ "click <span style=\" font-weight:600;\">Apply</span> to apply it to this "
+#~ "item. Click <span style=\" font-weight:600;\">New</span> to create a new "
+#~ "template based on the current item settings.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Vali mall ja klõpsa "
+#~ "<span style=\" font-weight:600;\">Rakenda</span> selle rakendamiseks "
+#~ "antud elemendile. Klõpsa <span style=\" font-weight:600;\">Uus</span> uue "
+#~ "malli loomiseks antud elemendi seadistuste põhjal.</p></body></html>"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Categories..."
+#~ msgstr "&Kategooriad..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Manage categories for this item"
+#~ msgstr "Selle elemendi kategooriate haldamine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Push this button to show a dialog that helps you manage your categories."
+#~ msgstr ""
+#~ "Klõpsuga sellele nupule avaneb dialoog, kus saab hallata kategooriaid."
+
+#~ msgctxt "@option:check"
+#~ msgid "Takes the whole day"
+#~ msgstr "Hõlmab kogu päeva"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "Whole day"
+#~ msgstr "Kogu päev"
+
+#~ msgctxt "@label There are no scheduling conflicts."
+#~ msgid "No conflicts"
+#~ msgstr "Konflikte pole"
+
+#~ msgctxt "Disable currently selected alarm"
+#~ msgid "Disable"
+#~ msgstr "Keela"
+
+#~ msgid "StackedWidget"
+#~ msgstr "StackedWidget"
+
+#~ msgctxt "@label"
+#~ msgid "TextLabel"
+#~ msgstr "Tekstipealdis"
+
+#~ msgid "TextLabel"
+#~ msgstr "Tekstipealdis"
+
+#~ msgctxt "@label Shows the number of scheduling conflicts"
+#~ msgid "%1 scheduling conflict"
+#~ msgid_plural "%1 scheduling conflicts"
+#~ msgstr[0] "%1 ajastamiskonflikt"
+#~ msgstr[1] "%1 ajastamiskonflikti"
+
+#~ msgctxt "@label There are no scheduling conflicts."
+#~ msgid "No scheduling conflicts"
+#~ msgstr "Ajastamiskonflikte pole"
+
+#~ msgctxt "incidence category: appointment"
+#~ msgid "Appointment"
+#~ msgstr "Kohtumine"
+
+#~ msgctxt "incidence category"
+#~ msgid "Business"
+#~ msgstr "Äri"
+
+#~ msgctxt "incidence category"
+#~ msgid "Meeting"
+#~ msgstr "Koosolek"
+
+#~ msgctxt "incidence category: phone call"
+#~ msgid "Phone Call"
+#~ msgstr "Telefonikõne"
+
+#~ msgctxt "incidence category"
+#~ msgid "Education"
+#~ msgstr "Haridus"
+
+#~ msgctxt ""
+#~ "incidence category: official or unofficial observance of religious/"
+#~ "national/cultural/other significance, often accompanied by celebrations "
+#~ "or festivities"
+#~ msgid "Holiday"
+#~ msgstr "Püha"
+
+#~ msgctxt ""
+#~ "incidence category: a lengthy time away from work or school, a trip "
+#~ "abroad, or simply a pleasure trip away from home"
+#~ msgid "Vacation"
+#~ msgstr "Puhkus"
+
+#~ msgctxt ""
+#~ "incidence category: examples: anniversary of historical or personal "
+#~ "event; big date; remembrance, etc"
+#~ msgid "Special Occasion"
+#~ msgstr "Erisündmus"
+
+#~ msgctxt "incidence category"
+#~ msgid "Personal"
+#~ msgstr "Isiklik"
+
+#~ msgctxt ""
+#~ "incidence category: typically associated with leaving home for business, "
+#~ "and not pleasure"
+#~ msgid "Travel"
+#~ msgstr "Reis"
+
+#~ msgctxt "incidence category"
+#~ msgid "Miscellaneous"
+#~ msgstr "Muu"
+
+#~ msgctxt "incidence category"
+#~ msgid "Birthday"
+#~ msgstr "Sünnipäev"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "5 minutes before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "15 minutes before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "30 minutes before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "45 minutes before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2 hours before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2 days before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~| msgid "%1 before the start"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "5 days before start"
+#~ msgstr "%1 enne algust"
+
+#, fuzzy
+#~| msgid "&Start:"
+#~ msgctxt "@label Start date/time of the event or task"
+#~ msgid "&Start:"
+#~ msgstr "&Algus:"
+
+#, fuzzy
+#~| msgid "&End:"
+#~ msgctxt "@label End date/time of the task or event"
+#~ msgid "&End:"
+#~ msgstr "&Lõpp:"
+
+#~ msgctxt "@info"
+#~ msgid "Do you really want to remove these attachments?<nl>%1</nl>"
+#~ msgstr "Kas tõesti eemaldada need manused?<nl>%1</nl>"
+
+#, fuzzy
+#~| msgctxt "@title:column attendee name"
+#~| msgid "Attendee"
+#~ msgctxt "@label:listbox A list showing attendees"
+#~ msgid "Attendee"
+#~ msgstr "Osaleja"
+
+#~ msgctxt "@info"
+#~ msgid "The meeting already has suitable start/end times."
+#~ msgstr "Kohtumisel on juba igati sobiv algus/lõpuaeg."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The next available time slot for the meeting is:<nl/>Start: %1<nl/>End: "
+#~ "%2<nl/>Would you like to move the meeting to this time slot?"
+#~ msgstr ""
+#~ "Järgmine kohtumiseks vaba aeg on:<nl/>Algus: %1<nl/>Lõpp: %2<nl/>Kas "
+#~ "liigutada kohtumine sellele ajale?"
+
+#~ msgctxt "@info"
+#~ msgid "No suitable date found."
+#~ msgstr "Sobivat aega ei leitud."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "Of the %1 participants, %2 have accepted, %3 have tentatively accepted, "
+#~ "and %4 have declined."
+#~ msgstr "%1 osavõtjast oli %2 nõus, %3 tõrksalt nõus ja %4 keeldus."
+
+#~ msgctxt "@title:column attendee name"
+#~ msgid "Attendee"
+#~ msgstr "Osaleja"
+
+#~ msgid "Sets the title of this journal."
+#~ msgstr "Määrab päeviku nime."
+
+#~ msgctxt "journal title"
+#~ msgid "T&itle:"
+#~ msgstr "N&imi:"
+
+#~ msgid "&Date:"
+#~ msgstr "Kuu&päev:"
+
+#~ msgid "&Time: "
+#~ msgstr "&Kellaaeg: "
+
+#~ msgid "Allows you to select the categories that this journal belongs to."
+#~ msgstr "Lubab valida kategooria(d), millesse antud päevik kuulub."
+
+#~ msgid "Select Cate&gories..."
+#~ msgstr "Vali kate&gooriad..."
+
+#~ msgid "Please specify a valid date, for example '%1'."
+#~ msgstr "Palun vali korrektne kuupäev, näiteks '%1'."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a journal title."
+#~ msgstr "Palun määra päeviku nimi."
+
+#~ msgctxt "@title general journal settings"
+#~ msgid "General"
+#~ msgstr "Üldine"
+
+#~ msgctxt "@title:window"
+#~ msgid "New Journal"
+#~ msgstr "Uus päevik"
+
+#~ msgctxt "@title"
+#~ msgid "Properties for %1"
+#~ msgstr "%1 omadused"
+
+#~ msgctxt "@label"
+#~ msgid "Type:"
+#~ msgstr "Tüüp:"
+
+#~ msgctxt "@label"
+#~ msgid "Location:"
+#~ msgstr "Asukoht:"
+
+#~ msgctxt "@label"
+#~ msgid "Attachments:"
+#~ msgstr "Manused:"
+
+#~ msgid "Calendar:"
+#~ msgstr "Kalender:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit %1: %2"
+#~ msgstr "%1 muutmine: %2"
+
+#~ msgctxt "@title:tab"
+#~ msgid "Atte&ndees"
+#~ msgstr "Osale&jad"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The Attendees tab allows you to Add or Remove Attendees to/from this "
+#~ "event or to-do."
+#~ msgstr ""
+#~ "Kaart \"Osalejad\" võimaldab lisada sündmusele või ülesandele osalejaid "
+#~ "või neid eemaldada."
+
+#~ msgctxt "@info"
+#~ msgid "The incidence got changed. Reloading editor now."
+#~ msgstr "Sündmust muudeti. Redaktor laaditakse uuesti."
+
+#~ msgctxt "@info"
+#~ msgid "The incidence got removed. Closing editor now."
+#~ msgstr "Sündmus eemaldati. Redaktor suletakse."
+
+#~ msgctxt "@title:window"
+#~ msgid "Create to-do"
+#~ msgstr "Ülesande loomine"
+
+#~ msgctxt "@action:button"
+#~ msgid "Create to-do"
+#~ msgstr "Loo ülesanne"
+
+#~ msgctxt "@title:window"
+#~ msgid "Counter proposal"
+#~ msgstr "Vastuettepanek"
+
+#~ msgctxt "@action:button"
+#~ msgid "Counter proposal"
+#~ msgstr "Vastuettepanek"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Displays information about current attendees. To edit an attendee, select "
+#~ "it in this list and modify the values in the area below. Clicking on a "
+#~ "column title will sort the list according to that column. The RSVP column "
+#~ "indicates whether or not a response is requested from the attendee."
+#~ msgstr ""
+#~ "Näitab infot aktiivsete osalejate kohta. Osaleja muutmiseks vali see "
+#~ "nimekirjast ja muuda allpool vajalikke välju. Klõpsuga veerupealdisele "
+#~ "sorteeritakse nimekiri antud veeru tunnuse järgi. RSVP veerg näitab, kas "
+#~ "osalejalt oodatakse vastust või mitte."
+
+#~ msgctxt "@title:column attendee has RSVPed?"
+#~ msgid "RSVP"
+#~ msgstr "RSVP"
+
+#~ msgctxt "@title:column attendee delegated to"
+#~ msgid "Delegated To"
+#~ msgstr "Delegeeritud osalejale"
+
+#~ msgctxt "@title:column attendee delegated from"
+#~ msgid "Delegated From"
+#~ msgstr "Delegeerija"
+
+#~ msgctxt "@title"
+#~ msgid "Invalid Email Address"
+#~ msgstr "Vigane e-posti aadress"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the identity corresponding to the organizer of this to-do or event. "
+#~ "Identities can be set in the 'Personal' section of the KOrganizer "
+#~ "configuration, or in the 'Personal'->'About Me'->'Password & User "
+#~ "Account' section of the System Settings. In addition, identities are "
+#~ "gathered from your KMail settings and from your address book. If you "
+#~ "choose to set it globally for KDE in the System Settings, be sure to "
+#~ "check 'Use email settings from System Settings' in the 'Personal' section "
+#~ "of the KOrganizer configuration."
+#~ msgstr ""
+#~ "Määrab antud ülesande või sündmuse korraldaja identiteedi. Identiteeti "
+#~ "saab määrata kas KOrganizeri seadistustedialoogi osas 'Isiklik' või KDE "
+#~ "Süsteemi seadistuste sektsioonis 'Isiklik'->'Isiklik info'. Lisaks "
+#~ "kogutakse identiteediinfot sinu KMaili seadistustest ja "
+#~ "aadressiraamatust. Kui otsustad määrata identiteedi globaalselt süsteemi "
+#~ "seadistustes, märgi kindlasti KOrganizeri seadistustedialoogi sektsioonis "
+#~ "'Isiklik' ära võimalus 'Süsteemi seadistuste e-posti seadistuste "
+#~ "kasutamine'."
+
+#~ msgctxt "@label"
+#~ msgid "Identity as organizer:"
+#~ msgstr "Korraldaja identiteet:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Edits the name of the attendee selected in the list above, or adds a new "
+#~ "attendee if there are no attendees in the list."
+#~ msgstr ""
+#~ "Muudab nimekirjast valitud osaleja nime või lisab uue osaleja, kui "
+#~ "nimekirjas pole kedagi."
+
+#~ msgctxt "@label attendee's name"
+#~ msgid "Na&me:"
+#~ msgstr "Ni&mi:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Edits the role of the attendee selected in the list above."
+#~ msgstr "Muudab nimekirjas valitud osaleja rolli."
+
+#~ msgctxt "@label"
+#~ msgid "Ro&le:"
+#~ msgstr "Ro&ll:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the attendee participation role"
+#~ msgstr "Osaleja rolli valimine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Edits the current attendance status of the attendee selected in the list "
+#~ "above."
+#~ msgstr "Muudab nimekirjas valitud osaleja kehtivat staatust."
+
+#~ msgctxt "@label"
+#~ msgid "Stat&us:"
+#~ msgstr "Ol&ek:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the attendee participation status"
+#~ msgstr "Osaleja oleku valimine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Edits whether to send an email to the attendee selected in the list above "
+#~ "to request a response concerning attendance."
+#~ msgstr ""
+#~ "Võimaldab muuta seda, kas nimekirjas valitud osalejalt oodatakse "
+#~ "osalemise kohta vastust või mitte."
+
+#~ msgctxt "@action:button new attendee"
+#~ msgid "&New"
+#~ msgstr "&Uus"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Add an attendee"
+#~ msgstr "Osaleja lisamine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Adds a new attendee to the list. Once the attendee is added, you will be "
+#~ "able to edit the attendee's name, role, attendance status, and whether or "
+#~ "not the attendee is required to respond to the invitation. To select an "
+#~ "attendee from your address book, click the 'Select Addressee' button "
+#~ "instead."
+#~ msgstr ""
+#~ "Lisab uue osaleja nimekirja. Kui see on lisatud, saad muuta tema nime, "
+#~ "rolli, staatust ja sedagi, kas tema käest oodatakse kutsele vastust või "
+#~ "mitte. Osaleja valimiseks aadressiraamatust klõpsa aga nupule 'Vali "
+#~ "adressaat'."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Remove"
+#~ msgstr "&Eemalda"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Removes the attendee selected in the list above."
+#~ msgstr "Nimekirjas valitud osaleja eemaldamine."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Addressee..."
+#~ msgstr "Vali adressaat..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open your address book"
+#~ msgstr "Aadressiraamatu avamine"
+
+#~ msgctxt "@info"
+#~ msgid "Please edit the example attendee, before adding more."
+#~ msgstr "Palun muuda enne uue lisamist näidisosalejat."
+
+#~ msgctxt "@item:intext sample attendee name"
+#~ msgid "Firstname Lastname"
+#~ msgstr "Eesnimi Perekonnanimi"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the organizer"
+#~ msgstr "Vali korraldaja"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Select the identity to use as the organizer for this incidence."
+#~ msgstr "Vali selle sündmuse korraldaja identiteet."
+
+#~ msgctxt "@label"
+#~ msgid "Organizer: %1"
+#~ msgstr "Korraldaja: %1"
+
+#~ msgctxt "@label"
+#~ msgid "Delegated to %1"
+#~ msgstr "Delegeeritud osalejale %1"
+
+#~ msgctxt "@label"
+#~ msgid "Delegated from %1"
+#~ msgstr "Delegeeris %1"
+
+#~ msgctxt "@label"
+#~ msgid "Not delegated"
+#~ msgstr "Pole delegeeritud"
+
+#~ msgid "Showing URL %1"
+#~ msgstr "URL-i %1 näitamine"
+
+#~ msgid "No attendees"
+#~ msgstr "Osalejad puuduvad"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Allows you to select the categories that this event or to-do belongs to."
+#~ msgstr ""
+#~ "Lubab valida kategooria(d), millesse antud sündmus või ülesanne kuulub."
+
+#~ msgid "&Select..."
+#~ msgstr "&Vali..."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets options related to the date and time of the event or to-do."
+#~ msgstr "Määrab sündmuse või ülesande kuupäeva ja kellaajaga seotud valikud."
+
+#~ msgid "&Start:"
+#~ msgstr "&Algus:"
+
+#~ msgid "Sets the start date for this to-do"
+#~ msgstr "Määrab ülesande alguskuupäeva."
+
+#~ msgctxt "@option:check to-do start datetime"
+#~ msgid "Sta&rt:"
+#~ msgstr "Al&gus:"
+
+#~ msgid "Sets the start time for this to-do."
+#~ msgstr "Määrab ülesande alguskellaaja."
+
+#~ msgid "&End:"
+#~ msgstr "&Lõpp:"
+
+#~ msgid "Sets the due date for this to-do."
+#~ msgstr "Määrab ülesande tähtaja kuupäeva."
+
+#~ msgctxt "to-do due datetime"
+#~ msgid "&Due:"
+#~ msgstr "&Tähtaeg:"
+
+#~ msgid "Sets the due time for this to-do."
+#~ msgstr "Määrab ülesande tähtaja kellaaja."
+
+#~ msgid ""
+#~ "Set if this to-do's start and due dates have times associated with them."
+#~ msgstr ""
+#~ "Määrab, kas antud ülesande algusaja ja tähtaja kuupäevaga on seotud "
+#~ "kellaaeg."
+
+#~ msgid "Ti&me associated"
+#~ msgstr "&Määratud aeg"
+
+#~ msgid "0 hours"
+#~ msgstr "0 tundi"
+
+#~ msgid "Show time as:"
+#~ msgstr "Aega näidatakse kui:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set this event as Busy or Free time"
+#~ msgstr "Sündmuse määramine vaba/hõivatud ajaks"
+
+#~ msgid "Recurrence:"
+#~ msgstr "Kordumine:"
+
+#~ msgctxt "@label"
+#~ msgid "Acc&ess:"
+#~ msgstr "&Ligipääs:"
+
+#~ msgid "alarmBellImage"
+#~ msgstr "alarmBellImage"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set a reminder"
+#~ msgstr "Meeldetuletuse määramine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Activates a reminder for this event or to-do."
+#~ msgstr "Aktiveerib antud sündmusele või ülesandele meeldetuletuse."
+
+#~ msgctxt "@option:check"
+#~ msgid "&Reminder"
+#~ msgstr "&Meeldetuletus"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set an alarm"
+#~ msgstr "Häire määramine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets how long before the event occurs the reminder will be triggered."
+#~ msgstr ""
+#~ "Määrab, kui kaua enne sündmuse asetleidmist käivitada meeldetuletus."
+
+#~ msgctxt "@item:inlistbox alarm expressed in minutes"
+#~ msgid "minute(s)"
+#~ msgstr "minuti tagant"
+
+#~ msgctxt "@item:inlistbox alarm expressed in hours"
+#~ msgid "hour(s)"
+#~ msgstr "tunni tagant"
+
+#~ msgctxt "@item:inlistbox alarm expressed in days"
+#~ msgid "day(s)"
+#~ msgstr "päeva tagant"
+
+#~ msgid "XXX reminders configured"
+#~ msgstr "XXX meeldetuletust seadistatud"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set an advanced alarm"
+#~ msgstr "Häire põhjalikum määramine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Push this button to create an advanced alarm for this event or to-do"
+#~ msgstr ""
+#~ "Sellele nupule klõpsates saab sündmuse või ülesande häiret täpsemalt "
+#~ "määrata."
+
+#~ msgctxt "@action:button advanced alarm settings"
+#~ msgid "Ad&vanced..."
+#~ msgstr "M&uu..."
+
+#~ msgctxt "percent completed"
+#~ msgid "co&mpleted"
+#~ msgstr "valmi&s"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the current completion status of this to-do as a percentage."
+#~ msgstr "Määrab ülesande parajasti kehtiva valmisoleku staatuse protsendina."
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "0 %"
+#~ msgstr "0 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "10 %"
+#~ msgstr "10 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "20 %"
+#~ msgstr "20 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "30 %"
+#~ msgstr "30 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "40 %"
+#~ msgstr "40 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "50 %"
+#~ msgstr "50 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "60 %"
+#~ msgstr "60 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "70 %"
+#~ msgstr "70 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "80 %"
+#~ msgstr "80 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "90 %"
+#~ msgstr "90 %"
+
+#~ msgctxt "@item:inlistbox Percent complete"
+#~ msgid "100 %"
+#~ msgstr "100 %"
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "Sets the priority of this to-do on a scale from one to nine, with one "
+#~ "being the highest priority, five being a medium priority, and nine being "
+#~ "the lowest. In programs that have a different scale, the numbers will be "
+#~ "adjusted to match the appropriate scale."
+#~ msgstr ""
+#~ "Määrab ülesande tähtsuse skaalal 1-9, kus 1 on suurim, 5 keskmine ja 9 "
+#~ "väikseim tähtsus. Muud skaalat kasutavates programmides kohandatakse siin "
+#~ "määratud numbrid vastavale skaalale."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Tähtsus:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the priority of this to-do on a scale from one to nine, with one "
+#~ "being the highest priority, five being a medium priority, and nine being "
+#~ "the lowest. In programs that have a different scale, the numbers will be "
+#~ "adjusted to match the appropriate scale."
+#~ msgstr ""
+#~ "Määrab ülesande tähtsuse skaalal 1-9, kus 1 on suurim, 5 keskmine ja 9 "
+#~ "väikseim tähtsus. Muud skaalat kasutavates programmides kohandatakse siin "
+#~ "määratud numbrid vastavale skaalale."
+
+#~ msgctxt "unspecified priority"
+#~ msgid "unspecified"
+#~ msgstr "määramata"
+
+#~ msgctxt "highest priority"
+#~ msgid "1 (highest)"
+#~ msgstr "1 (kõrgeim)"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgctxt "medium priority"
+#~ msgid "5 (medium)"
+#~ msgstr "5 (keskmine)"
+
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgctxt "lowest priority"
+#~ msgid "9 (lowest)"
+#~ msgstr "9 (madalaim)"
+
+#~ msgctxt "@label event or to-do title"
+#~ msgid "T&itle:"
+#~ msgstr "N&imi:"
+
+#~ msgctxt "@action:button select a category"
+#~ msgid "&Select..."
+#~ msgstr "&Vali..."
+
+#~ msgctxt "@option:check"
+#~ msgid "Rich text"
+#~ msgstr "Vormindatud tekst"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Select this option if you would like to enter rich text into the "
+#~ "description field of this event or to-do."
+#~ msgstr ""
+#~ "Selle valimisel saab sündmuse või ülesande kirjelduses kasutada "
+#~ "vormindatud teksti."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Toggle Rich Text"
+#~ msgstr "Vormindatud teksti lülitamine"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the description in plain text or rich text"
+#~ msgstr "Kirjelduses kas liht- või vormindatud teksti kasutamine"
+
+#~ msgctxt "@option:check"
+#~ msgid "&Reminder:"
+#~ msgstr "&Meeldetuletus:"
+
+#~ msgctxt "@action:button advanced alarm settings"
+#~ msgid "Advanced..."
+#~ msgstr "Muu..."
+
+#~ msgctxt "@label"
+#~ msgid "1 reminder configured"
+#~ msgid_plural "%1 reminders configured"
+#~ msgstr[0] "Üks meeldetuletus seadistatud"
+#~ msgstr[1] "%1 meeldetuletust seadistatud"
+
+#~ msgctxt "@label"
+#~ msgid "1 advanced reminder configured"
+#~ msgstr "1 keerukam meeldetuletus seadistatud"
+
+#~ msgctxt "@label"
+#~ msgid "No attendees"
+#~ msgstr "Osalejad puuduvad"
+
+#~ msgctxt "@option unknown alarm type"
+#~ msgid "Unknown"
+#~ msgstr "Tundmatu"
+
+#~ msgctxt "@option popup reminder dialog"
+#~ msgid "Reminder Dialog"
+#~ msgstr "Meeldetuletuse dialoog"
+
+#~ msgctxt "@option run application or script"
+#~ msgid "Application/Script"
+#~ msgstr "Rakendus/skript"
+
+#~ msgctxt "@option play a sound"
+#~ msgid "Audio"
+#~ msgstr "Heli"
+
+#~ msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~ msgid "%1 before the start"
+#~ msgstr "%1 enne algust"
+
+#~ msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~ msgid "%1 before the end"
+#~ msgstr "%1 enne lõppu"
+
+#~ msgctxt "@item@intable N days/hours/minutes before/after the start/end"
+#~ msgid "%1 after the end"
+#~ msgstr "%1 pärast lõppu"
+
+#~ msgctxt "@item@intable yes, the alarm repeats"
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgctxt "@title"
+#~ msgid "Edit Reminders"
+#~ msgstr "Meeldetuletuste muutmine"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "before the to-do starts"
+#~ msgstr "enne ülesande algust"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "after the to-do starts"
+#~ msgstr "pärast ülesande algust"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "before the to-do is due"
+#~ msgstr "enne ülesande tähtaega"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "after the to-do is due"
+#~ msgstr "pärast ülesande tähtaega"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the reminder trigger relative to the start or due time"
+#~ msgstr "Algusaja või tähtajaga seotud meeldetuletuse käivitaja valimine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Use this combobox to specify if you want the reminder to trigger before "
+#~ "or after the start or due time."
+#~ msgstr ""
+#~ "Selles liitkastis saab määrata, kas käivitada meeldetuletus enne või "
+#~ "pärast algusaega või tähtaega."
+
+#~ msgctxt "@label"
+#~ msgid "Duration: "
+#~ msgstr "Kestus: "
+
+#~ msgctxt "@label"
+#~ msgid "1 hour"
+#~ msgid_plural "%1 hours"
+#~ msgstr[0] "1 tund"
+#~ msgstr[1] "%1 tundi"
+
+#~ msgctxt "@label"
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgctxt "@label"
+#~ msgid "1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "1 minut"
+#~ msgstr[1] "%1 minutit"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Shows the duration of the event or to-do with the current start and end "
+#~ "dates and times."
+#~ msgstr ""
+#~ "Näitab sündmuse või ülesande kestust koos kehtiva algus- ja lõppkuupäeva "
+#~ "ning -kellaajaga."
+
+#~ msgctxt "@label"
+#~ msgid "From: %1   To: %2   %3"
+#~ msgstr "Alates %1 kuni %2   %3"
+
+#~ msgctxt "to-do completed on datetime"
+#~ msgid "co&mpleted on"
+#~ msgstr "valmi&s "
+
+#~ msgctxt "to-do completed"
+#~ msgid "co&mpleted"
+#~ msgstr "valmi&s"
+
+#~ msgctxt "@label recurrence expressed in days"
+#~ msgid "day(s)"
+#~ msgstr "päeva järel"
+
+#~ msgctxt "@label"
+#~ msgid "week(s) on:"
+#~ msgstr "nädala järel"
+
+#~ msgctxt "@label"
+#~ msgid "month(s)"
+#~ msgstr "kuu järel"
+
+#~ msgctxt "@title:group"
+#~ msgid "Date && Time"
+#~ msgstr "Kuupäev ja kellaaeg"
+
+#~ msgid "Clean"
+#~ msgstr "Puhas"
+
+#~ msgid "Dirty"
+#~ msgstr "Räpane"
+
+#~ msgid "IncidenceEditorApp"
+#~ msgstr "IncidenceEditorApp"
+
+#~ msgid "(C) 2009 Sebastian Sauer"
+#~ msgstr "(C) 2009: Sebastian Sauer"
+
+#~ msgid "Sebastian Sauer"
+#~ msgstr "Sebastian Sauer"
+
+#~ msgctxt "@title:tab general event settings"
+#~ msgid "&General"
+#~ msgstr "Ül&dine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The General tab allows you to set the most common options for the event."
+#~ msgstr ""
+#~ "Kaart \"Üldine\" võimaldab määrata sündmuse kõige põhilisemad valikud."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The Free/Busy tab allows you to see whether other attendees are free or "
+#~ "busy during your event."
+#~ msgstr ""
+#~ "Kaart \"Vaba/hõivatud\" võimaldab näha, kas teised osalejad on antud "
+#~ "sündmuse ajal vabad või hõivatud."
+
+#~ msgctxt "@title:window"
+#~ msgid "New Event"
+#~ msgstr "Uus sündmus"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You did not modify the event so no counter proposal has been sent to the "
+#~ "organizer."
+#~ msgstr ""
+#~ "Sa ei muutnud sündmust, mistõttu korraldajale ei saadetud ka "
+#~ "vastuettepanekut."
+
+#~ msgctxt "@item"
+#~ msgid "My counter proposal for: %1"
+#~ msgstr "Minu vastuettepanek ettepanekule: %1"
+
+#~ msgctxt "@title:tab general to-do settings"
+#~ msgid "&General"
+#~ msgstr "Ül&dine"
+
+#~ msgctxt "@title:window"
+#~ msgid "New To-do"
+#~ msgstr "Uus ülesanne"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The number of the week from the beginning of the month on which this "
+#~ "event or to-do should recur."
+#~ msgstr ""
+#~ "Nädala number kuu algusest arvates, mil antud sündmus või ülesanne kordub."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "1st"
+#~ msgstr "1."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2nd"
+#~ msgstr "2."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3rd"
+#~ msgstr "3."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "4th"
+#~ msgstr "4."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "5th"
+#~ msgstr "5."
+
+#~ msgctxt "@item:inlistbox last week of the month"
+#~ msgid "Last"
+#~ msgstr "viimasel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2nd Last"
+#~ msgstr "eelviimasel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3rd Last"
+#~ msgstr "eel-eelviimasel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "5th Last"
+#~ msgstr "eel-eel-eel-eelviimasel"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "The weekday on which this event or to-do should recur."
+#~ msgstr "Nädalapäev, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "The month during which this event or to-do should recur."
+#~ msgstr "Kuu, mil ülesanne või sündmus kordub."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets how often this event or to-do should recur."
+#~ msgstr "Määrab, kui sageli sündmus või ülesanne kordub."
+
+#~ msgctxt "@label"
+#~ msgid "&Recur every"
+#~ msgstr "&Kordub iga"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Set %1 as the day when this event or to-do should recur."
+#~ msgstr "%1 määratakse päevaks, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Recur on %1"
+#~ msgstr "&Kordub iga %1"
+
+#~ msgctxt "@option:radio"
+#~ msgid "&Recur on the"
+#~ msgstr "&Kordub iga"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a specific day of the month on which this event or to-do should "
+#~ "recur."
+#~ msgstr "Määrab konkreetse päeva kuus, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "The day of the month on which this event or to-do should recur."
+#~ msgstr "Päev kuus, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6th"
+#~ msgstr "6."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7th"
+#~ msgstr "7."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8th"
+#~ msgstr "8."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "9th"
+#~ msgstr "9."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "10th"
+#~ msgstr "10."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "11th"
+#~ msgstr "11."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "12th"
+#~ msgstr "12."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "13th"
+#~ msgstr "13."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "14th"
+#~ msgstr "14."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "15th"
+#~ msgstr "15."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "16th"
+#~ msgstr "16."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "17th"
+#~ msgstr "17."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "18th"
+#~ msgstr "18."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "19th"
+#~ msgstr "19."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "20th"
+#~ msgstr "20."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "21st"
+#~ msgstr "21."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "22nd"
+#~ msgstr "22."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "23rd"
+#~ msgstr "23."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "24th"
+#~ msgstr "24."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "25th"
+#~ msgstr "25."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "26th"
+#~ msgstr "26."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "27th"
+#~ msgstr "27."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "28th"
+#~ msgstr "28."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "29th"
+#~ msgstr "29."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "30th"
+#~ msgstr "30."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "31st"
+#~ msgstr "31."
+
+#~ msgctxt "@item:inlistbox last day of the month"
+#~ msgid "Last"
+#~ msgstr "viimasel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6th Last"
+#~ msgstr "tagant kuuendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7th Last"
+#~ msgstr "tagant seitsmendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8th Last"
+#~ msgstr "tagant kaheksandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "9th Last"
+#~ msgstr "tagant üheksandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "10th Last"
+#~ msgstr "tagant kümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "11th Last"
+#~ msgstr "tagant üheteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "12th Last"
+#~ msgstr "tagant kaheteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "13th Last"
+#~ msgstr "tagant kolmeteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "14th Last"
+#~ msgstr "tagant neljateistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "15th Last"
+#~ msgstr "tagant viieteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "16th Last"
+#~ msgstr "tagant kuueteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "17th Last"
+#~ msgstr "tagant seitsmeteistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "18th Last"
+#~ msgstr "tagant kaheksateistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "19th Last"
+#~ msgstr "tagant üheksateistkümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "20th Last"
+#~ msgstr "tagant kahekümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "21st Last"
+#~ msgstr "tagant kahekümne esimesel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "22nd Last"
+#~ msgstr "tagant kahekümne teisel"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "23rd Last"
+#~ msgstr "tagant kahekümne kolmandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "24th Last"
+#~ msgstr "tagant kahekümne neljandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "25th Last"
+#~ msgstr "tagant kahekümne viiendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "26th Last"
+#~ msgstr "tagant kahekümne kuuendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "27th Last"
+#~ msgstr "tagant kahekümne seitsmendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "28th Last"
+#~ msgstr "tagant kahekümne kaheksandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "29th Last"
+#~ msgstr "tagant kahekümne üheksandal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "30th Last"
+#~ msgstr "tagant kolmekümnendal"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "31st Last"
+#~ msgstr "tagant kolmekümne esimesel"
+
+#~ msgctxt "@label"
+#~ msgid "day"
+#~ msgstr "päeval"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a weekday and specific week in the month on which this event or to-"
+#~ "do should recur"
+#~ msgstr "Määrab nädalapäeva ja nädala kuus, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@option:radio part before XXX of 'Recur on day XXX of month YYY'"
+#~ msgid "&Recur on day "
+#~ msgstr "&Kordub "
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a specific day in a specific month on which this event or to-do "
+#~ "should recur."
+#~ msgstr "Määrab päeva kuus, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@label part between XXX and YYY of 'Recur on day XXX of month YYY'"
+#~ msgid " &of "
+#~ msgstr ". "
+
+#~ msgctxt "@option:radio Part before XXX in 'Recur on NNN. WEEKDAY of MONTH'"
+#~ msgid "&On the"
+#~ msgstr "K&ordub"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a specific day in a specific week of a specific month on which this "
+#~ "event or to-do should recur."
+#~ msgstr "Määrab päeva nädalas ja kuus, mil sündmus või ülesanne kordub."
+
+#~ msgctxt ""
+#~ "@label part between WEEKDAY and MONTH in 'Recur on NNN. WEEKDAY of MONTH'"
+#~ msgid " o&f "
+#~ msgstr " "
+
+#~ msgctxt "@option:radio"
+#~ msgid "Recur on &day #"
+#~ msgstr "Kor&dub "
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a specific day within the year on which this event or to-do should "
+#~ "recur."
+#~ msgstr "Määrab päeva aastas, mil sündmus või ülesanne kordub."
+
+#~ msgctxt "@title:group"
+#~ msgid "E&xceptions"
+#~ msgstr "E&randid"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "A date that should be considered an exception to the recurrence rules for "
+#~ "this event or to-do."
+#~ msgstr ""
+#~ "Kuupäev, mida peetakse sündmuse või ülesande kordumise reeglite "
+#~ "arvestamisel erandiks."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Add"
+#~ msgstr "&Lisa"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Add this date as an exception to the recurrence rules for this event or "
+#~ "to-do."
+#~ msgstr "Lisab kuupäeva erandina sündmuse või ülesande kordumise reeglitele."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Change"
+#~ msgstr "&Muuda"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Replace the currently selected date with this date."
+#~ msgstr "Asendab valitud kuupäeva selle kuupäevaga."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Delete"
+#~ msgstr "&Kustuta"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Delete the currently selected date from the list of dates that should be "
+#~ "considered exceptions to the recurrence rules for this event or to-do."
+#~ msgstr ""
+#~ "Kustutab valitud kuupäeva kuupäevade nimekirjast, mida hinnatakse "
+#~ "sündmuse või ülesande kordumise reeglite arvestamisel erandina."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Displays current dates that are being considered exceptions to the "
+#~ "recurrence rules for this event or to-do."
+#~ msgstr ""
+#~ "Näitab kuupäevi, mida hinnatakse sündmuse või ülesande kordumise reeglite "
+#~ "arvestamisel erandina."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Exceptions"
+#~ msgstr "Erandite muutmine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets a range for which these recurrence rules will apply to this event or "
+#~ "to-do."
+#~ msgstr ""
+#~ "Määrab ajavahemiku, mille korral kordumise reegleid sündmuse või ülesande "
+#~ "puhul kasutada."
+
+#~ msgctxt "@label"
+#~ msgid "Begin on:"
+#~ msgstr "Alustamine:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The date on which the recurrences for this event or to-do should begin."
+#~ msgstr ""
+#~ "Kuupäev, millest alustada sündmuse või ülesande kordamise arvestamist."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the event or to-do to recur forever."
+#~ msgstr "Määrab sündmuse või ülesande igavesti korduma."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the event or to-do to stop recurring after a certain number of "
+#~ "occurrences."
+#~ msgstr ""
+#~ "Määrab sündmuse või ülesande kordumise lõpetamise teatud arvu kordumiste "
+#~ "järel."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the event or to-do to stop recurring on a certain date."
+#~ msgstr "Määrab sündmuse ülesande kordamise lõpetamise teatud kuupäeval."
+
+#~ msgctxt "@option:radio"
+#~ msgid "End &on:"
+#~ msgstr "Lõp&etamine:"
+
+#~ msgctxt "@label"
+#~ msgid "Begins on: %1"
+#~ msgstr "Algus: %1"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Recurrence Range"
+#~ msgstr "Kordamise vahemiku muutmine"
+
+#~ msgctxt "@title:group"
+#~ msgid "Recurrence Types"
+#~ msgstr "Korduse tüübid"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the event or to-do to recur daily according to the specified rules."
+#~ msgstr ""
+#~ "Määrab sündmuse või ülesande korduma igapäevaselt vastavalt määratud "
+#~ "reeglitele."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the event or to-do to recur weekly according to the specified rules."
+#~ msgstr ""
+#~ "Määrab sündmuse või ülesande korduma iganädalaselt vastavalt määratud "
+#~ "reeglitele."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the event or to-do to recur monthly according to the specified rules."
+#~ msgstr ""
+#~ "Määrab sündmuse või ülesande korduma igakuiselt vastavalt määratud "
+#~ "reeglitele."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the event or to-do to recur yearly according to the specified rules."
+#~ msgstr ""
+#~ "Määrab sündmuse või ülesande korduma iga-aastaselt vastavalt määratud "
+#~ "reeglitele."
+
+#~ msgctxt "@option:check"
+#~ msgid "&Enable recurrence"
+#~ msgstr "Kor&duv sündmus"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Enables recurrence for this event or to-do according to the specified "
+#~ "rules."
+#~ msgstr ""
+#~ "Lubab sündmuse või ülesande kordamist vastavalt määratud reeglitele."
+
+#~ msgctxt "@title:group"
+#~ msgid "Appointment Time "
+#~ msgstr "Kohtumise aeg "
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Displays appointment time information."
+#~ msgstr "Näitab kohtumise aja kohta käivat infot."
+
+#~ msgctxt "@title:group"
+#~ msgid "Recurrence Rule"
+#~ msgstr "Kordamise reegel"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Options concerning the type of recurrence this event or to-do should have."
+#~ msgstr "Sündmuse või ülesande kordumise tüüpi puudutavad valikud."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Options concerning the time range during which this event or to-do should "
+#~ "recur."
+#~ msgstr ""
+#~ "Ajavahemikku puudutavad valikud, mille jooksul sündmus või ülesanne "
+#~ "kordub."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The end date '%1' of the recurrence must be after the start date '%2' of "
+#~ "the event."
+#~ msgstr ""
+#~ "Kordumise lõppkuupäev '%1' peab olema hilisem kui sündmuse alguskuupäev "
+#~ "'%2'."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "A weekly recurring event or task has to have at least one weekday "
+#~ "associated with it."
+#~ msgstr ""
+#~ "Nädalas korduva sündmuse või ülesandega peab olema seotud vähemalt üks "
+#~ "nädalapäev."
+
+#~ msgid "Sets options for due and start dates and times for this to-do."
+#~ msgstr "Määrab antud ülesande tähtaja ja algusaja kuupäeva ja kellaaja."
+
+#~ msgid "Select the timezone for this event. It will also affect recurrences"
+#~ msgstr "Vali sündmuse ajavöönd. See mõjutab ka kordusi."
+
+#~ msgctxt "@label"
+#~ msgid "Recurrence:"
+#~ msgstr "Kordumine:"
+
+#~ msgid "Sets the current completion status of this to-do as a percentage."
+#~ msgstr "Määrab ülesande parajasti kehtiva valmisoleku staatuse protsendina."
+
+#~ msgid ""
+#~ "Sets the priority of this to-do on a scale from one to nine, with one "
+#~ "being the highest priority, five being a medium priority, and nine being "
+#~ "the lowest. In programs that have a different scale, the numbers will be "
+#~ "adjusted to match the appropriate scale."
+#~ msgstr ""
+#~ "Määrab ülesande tähtsuse skaalal 1-9, kus 1 on suurim, 5 keskmine ja 9 "
+#~ "väikseim tähtsus. Muud skaalat kasutavates programmides kohandatakse siin "
+#~ "määratud numbrid vastavale skaalale."
+
+#~ msgid "Please specify a valid due date."
+#~ msgstr "Palun määra korrektne tähtaja kuupäev."
+
+#~ msgid "Please specify a valid due time."
+#~ msgstr "Palun määra korrektne tähtaja kellaaeg."
+
+#~ msgid "Please specify a valid start date."
+#~ msgstr "Palun määra korrektne alguse kuupäev."
+
+#~ msgid "Please specify a valid start time."
+#~ msgstr "Palun määra korrektne alguse kellaaeg."
+
+#~ msgctxt "@label event start time"
+#~ msgid "&Start:"
+#~ msgstr "Algu&s:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Select the starting date for this event."
+#~ msgstr "Sündmusele alguskuupäeva valimine."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Select the starting time for this event."
+#~ msgstr "Sündmuse alguskellaaja valimine."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the timezone for the start date/time"
+#~ msgstr "Alguskuupäeva/kellaaja ajavööndi valimine"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the timezone for the end date/time"
+#~ msgstr "Lõppkuupäeva/kellaaja ajavööndi valimine"
+
+#~ msgctxt "@label"
+#~ msgid "&End:"
+#~ msgstr "&Lõpp:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Select the ending date for this event."
+#~ msgstr "Sündmuse lõppkuupäeva valimine."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the end time"
+#~ msgstr "Lõppkellaaja määramine"
+
+#~ msgctxt "@option:check"
+#~ msgid "T&ime associated"
+#~ msgstr "&Määratud aeg"
+
+#~ msgctxt "@label"
+#~ msgid "S&how time as:"
+#~ msgstr "Ae&ga näidatakse kui:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets how this time will appear on your Free/Busy information."
+#~ msgstr "Määrab, kuidas antud aeg on näha sinu vaba/hõivatud infos."
+
+#~ msgctxt "@info"
+#~ msgid "You have not yet definitely responded to this invitation."
+#~ msgstr "Sa ei ole veel sellele kutsele kindlat vastust andnud."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Decline the invitation"
+#~ msgstr "Lükka kutse tagasi"
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a valid start time, for example '%1'."
+#~ msgstr "Palun määra korrektne alguse kellaaeg, näiteks '%1'."
+
+#~ msgctxt "@title:window"
+#~ msgid "Event Entry Validation"
+#~ msgstr "Sündmuse kirje kontrollimine"
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a valid end time, for example '%1'."
+#~ msgstr "Palun määra korrektne lõppemise kellaaeg, näiteks '%1'."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a valid start date, for example '%1'."
+#~ msgstr "Palun määra korrektne alguse kuupäev, näiteks '%1'."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a valid end date, for example '%1'."
+#~ msgstr "Palun määra korrektne lõppemise kuupäev, näiteks '%1'."
+
+#~ msgctxt "@info"
+#~ msgid "You specified a starting date/time in the past '%1'"
+#~ msgstr "Määrasid alguskuupäeva/kellaaja minevikku '%1'"
+
+#~ msgctxt "@info"
+#~ msgid "You specified an ending date/time in the past '%1'"
+#~ msgstr "Määrasid lõppkuupäeva/kellaaja minevikku '%1'"
+
+#~ msgctxt "@title:group"
+#~ msgid "Appointment Time"
+#~ msgstr "Kohtumise aeg"
+
+#~ msgid "&Recur every"
+#~ msgstr "&Kordub iga"
+
+#~ msgid "&Tue"
+#~ msgstr "&T"
+
+#~ msgid "Wed"
+#~ msgstr "K"
+
+#~ msgid "T&hu"
+#~ msgstr "&N"
+
+#~ msgid "&Fri"
+#~ msgstr "&R"
+
+#~ msgid "&Sat"
+#~ msgstr "&L"
+
+#~ msgid "S&un"
+#~ msgstr "&P"
+
+#~ msgid "Recur on the"
+#~ msgstr "Kordub iga"
+
+#~ msgid "Recu&r on day"
+#~ msgstr "&Kordub "
+
+#~ msgid "On &the"
+#~ msgstr "K&ordub"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "31th Last"
+#~ msgstr "tagant kolmekümne esimesel"
+
+#~ msgctxt ""
+#~ "@label part between WEEKDAY and MONTH in 'Recur on NNN. WEEKDAY of MONTH'"
+#~ msgid "o&f"
+#~ msgstr " "
+
+#~ msgid "Recur on &day #"
+#~ msgstr "Kor&dub "
+
+#~ msgctxt "@label part after NNN of 'Recur on day #NNN of the year'"
+#~ msgid "of &the year"
+#~ msgstr " päe&val"
+
+#~ msgctxt "@label"
+#~ msgid "Begins on:"
+#~ msgstr "Algus:"
+
+#~ msgctxt "@label"
+#~ msgid "occurrence(&s)"
+#~ msgstr "&kordust"
+
+#~ msgid "Chan&ge"
+#~ msgstr "Muu&da"
+
+#~ msgid "De&lete"
+#~ msgstr "&Kustuta"
+
+#~ msgctxt "@option:check"
+#~ msgid "Ric&h text"
+#~ msgstr "&Vormindatud tekst"

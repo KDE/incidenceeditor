@@ -1,0 +1,3597 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2013-07-07 05:47+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.2\n"
+
+#: alarmdialog.cpp:24
+#, fuzzy, kde-format
+#| msgid "Create a new reminder"
+msgctxt "@title:window"
+msgid "Create a new reminder"
+msgstr "Еске салуды жоспарлау"
+
+#: alarmdialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "Edit existing reminder"
+msgctxt "@title:window"
+msgid "Edit existing reminder"
+msgstr "Бар еске салуды өзгерту"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "Before the to-do starts"
+msgstr "Іс басталу алдында"
+
+#: alarmdialog.cpp:192
+#, kde-format
+msgid "After the to-do starts"
+msgstr "Іс басталғаннан кейін"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "Before the to-do is due"
+msgstr "Іс біту алдында"
+
+#: alarmdialog.cpp:196
+#, kde-format
+msgid "After the to-do is due"
+msgstr "Іс біткенінен кейін"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "Before the event starts"
+msgstr "Оқиға басталу алдында"
+
+#: alarmdialog.cpp:200
+#, kde-format
+msgid "After the event starts"
+msgstr "Оқиға басталғаннан кейін"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "Before the event ends"
+msgstr "Оқиға аяқталу алдында"
+
+#: alarmdialog.cpp:203
+#, kde-format
+msgid "After the event ends"
+msgstr "Оқиға аяқталғаннан кейін"
+
+#: alarmpresets.cpp:83
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "At start"
+msgstr ""
+
+#: alarmpresets.cpp:85
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 minutes before start"
+msgctxt "@item:inlistbox"
+msgid "%1 minute before start"
+msgid_plural "%1 minutes before start"
+msgstr[0] "Басталуына %1 минут қалды"
+
+#: alarmpresets.cpp:87
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 hours before start"
+msgctxt "@item:inlistbox"
+msgid "%1 hour before start"
+msgid_plural "%1 hours before start"
+msgstr[0] "Басталуына %1 сағат қалды"
+
+#: alarmpresets.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 days before start"
+msgctxt "@item:inlistbox"
+msgid "%1 day before start"
+msgid_plural "%1 days before start"
+msgstr[0] "Басталуына %1 күн қалды"
+
+#: alarmpresets.cpp:103
+#, fuzzy, kde-format
+#| msgid "When:"
+msgctxt "@item:inlistbox"
+msgid "When due"
+msgstr "Қашан:"
+
+#: alarmpresets.cpp:105
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 minutes before due"
+msgctxt "@item:inlistbox"
+msgid "%1 minute before due"
+msgid_plural "%1 minutes before due"
+msgstr[0] "Бітуіне %1 минут қалды"
+
+#: alarmpresets.cpp:107
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 hours before due"
+msgctxt "@item:inlistbox"
+msgid "%1 hour before due"
+msgid_plural "%1 hours before due"
+msgstr[0] "Бітуіне %1 сағат қалды"
+
+#: alarmpresets.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "%1 days before due"
+msgctxt "@item:inlistbox"
+msgid "%1 day before due"
+msgid_plural "%1 days before due"
+msgstr[0] "Бітуіне %1 күн қалды"
+
+#: attachmenteditdialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Add Attachment"
+msgctxt "@title:window"
+msgid "Edit Attachment"
+msgstr "Тіркеме қосу"
+
+#: attachmenteditdialog.cpp:57
+#, kde-format
+msgctxt "@label unknown mimetype"
+msgid "Unknown"
+msgstr "Беймәлім"
+
+#: attachmenteditdialog.cpp:110
+#, kde-format
+msgctxt "@label"
+msgid "New attachment"
+msgstr "Жаңа тіркеме"
+
+#: attendeeline.cpp:147 incidenceattendee.cpp:61
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request Response"
+msgstr "Жауабын сұрау"
+
+#: attendeeline.cpp:148 incidenceattendee.cpp:62
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Request No Response"
+msgstr "Жауабын сұрамау"
+
+#: attendeeline.cpp:150 attendeelineeditdelegate.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the name or email address of the attendee."
+msgstr "Қатысушының эл.пошта адресін келтіріңіз."
+
+#: attendeeline.cpp:153 incidenceattendee.cpp:64
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the current attendance status of the attendee."
+msgstr "Қатысушысының күй-жайын өзгерту."
+
+#: attendeeline.cpp:155 incidenceattendee.cpp:66 schedulingdialog.cpp:97
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Edits the role of the attendee."
+msgstr "Қатысушы атқаратын қызметін өзгерту."
+
+#: attendeeline.cpp:158 attendeelineeditdelegate.cpp:24
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The email address or name of the attendee. An invitation can be sent to the "
+"user if an email address is provided."
+msgstr ""
+"Қатысушының эл.пошта адресі не аты. Шақыру, эл.поштасы келтірілсе ғана  "
+"жіберіледі."
+
+#: attendeeline.cpp:163 incidenceattendee.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Request a response from the attendee"
+msgstr "Қатысушының жауабын сұрау"
+
+#: attendeeline.cpp:165 incidenceattendee.cpp:70
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Edits whether to send an email to the attendee to request a response "
+"concerning attendance."
+msgstr ""
+"Қатысатын - қатыспайтын туралы мәліметін сұрап эл.пошта жіберу керегін "
+"белгілеу."
+
+#: attendeetablemodel.cpp:64
+#, kde-format
+msgid "Free"
+msgstr ""
+
+#: attendeetablemodel.cpp:66
+#, kde-format
+msgid "Busy"
+msgstr ""
+
+#: attendeetablemodel.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "@action:button Accept an invitation"
+#| msgid "Accept"
+msgid "Accepted"
+msgstr "Қабылдау"
+
+#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#, fuzzy, kde-format
+#| msgctxt "@label unknown mimetype"
+#| msgid "Unknown"
+msgid "Unknown"
+msgstr "Беймәлім"
+
+#: attendeetablemodel.cpp:151
+#, kde-format
+msgctxt "vCard attendee role"
+msgid "Role"
+msgstr ""
+
+#: attendeetablemodel.cpp:153
+#, kde-format
+msgctxt "Attendees  (name+emailaddress)"
+msgid "Name"
+msgstr ""
+
+#: attendeetablemodel.cpp:155
+#, fuzzy, kde-format
+#| msgid "Disable"
+msgctxt "Is attendee available for incidence"
+msgid "Available"
+msgstr "Болмасын"
+
+#: attendeetablemodel.cpp:157
+#, kde-format
+msgctxt ""
+"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgid "Status"
+msgstr ""
+
+#: attendeetablemodel.cpp:159
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "Type of calendar user (vCard attribute)"
+msgid "User Type"
+msgstr "Түрі"
+
+#: attendeetablemodel.cpp:161
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Request Response"
+msgctxt "Has attendee to respond to the invitation"
+msgid "Response"
+msgstr "Жауабын сұрау"
+
+#: attendeetablemodel.cpp:163
+#, kde-format
+msgctxt "Attendee name"
+msgid "Name"
+msgstr ""
+
+#: attendeetablemodel.cpp:165
+#, fuzzy, kde-format
+#| msgid "Send email"
+msgctxt "Attendee email"
+msgid "Email"
+msgstr "Эл.поштаны жіберу"
+
+#: editoritemmanager.cpp:227
+#, kde-format
+msgid ""
+"The item has been changed by another application.\n"
+"What should be done?"
+msgstr "Басқа бағдарлама бұған өзгеріс енгізіп қойды. Не істеу керек?"
+
+#: editoritemmanager.cpp:229
+#, kde-format
+msgid "Take over changes"
+msgstr "Өзгерістерді мойындау"
+
+#: editoritemmanager.cpp:230
+#, kde-format
+msgid "Ignore and Overwrite changes"
+msgstr "Өзгерістерді елемей өзінше жаза беру"
+
+#: freebusyganttproxymodel.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Free/Busy Period"
+msgstr "Бос/Істе кезі"
+
+#: freebusyganttproxymodel.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Summary:"
+msgstr "Мазмұндамасы:"
+
+#: freebusyganttproxymodel.cpp:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Location:"
+msgstr "Орны:"
+
+#: freebusyganttproxymodel.cpp:80
+#, kde-format
+msgctxt "@info:tooltip period start time"
+msgid "Start:"
+msgstr "Басталуы:"
+
+#: freebusyganttproxymodel.cpp:83
+#, kde-format
+msgctxt "@info:tooltip period end time"
+msgid "End:"
+msgstr "Аяқталуы:"
+
+#: freebusyurldialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Edit Free/Busy Location"
+msgctxt "@title:window"
+msgid "Edit Free/Busy Location"
+msgstr "Бос/Істе мәліметтің орынын өзгерту"
+
+#: freebusyurldialog.cpp:63
+#, kde-kuit-format
+msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+msgstr "%1 <placeholder>%2</placeholder> дегеннің Бос/Істе мәліметінің орны:"
+
+#: freebusyurldialog.cpp:67
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Enter the name or email address of the attendee."
+msgctxt "@info:whatsthis"
+msgid "Enter the location of the Free/Busy information for the attendee."
+msgstr "Қатысушының эл.пошта адресін келтіріңіз."
+
+#: freebusyurldialog.cpp:68
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter the location of the information."
+msgstr ""
+
+#: incidencealarm.cpp:250
+#, kde-format
+msgctxt "Disable currently selected reminder"
+msgid "Disable"
+msgstr "Болмасын"
+
+#: incidencealarm.cpp:252
+#, kde-format
+msgctxt "Enable currently selected reminder"
+msgid "Enable"
+msgstr "Болсын"
+
+#: incidencealarm.cpp:270
+#, fuzzy, kde-format
+#| msgid "Display a dialog"
+msgctxt "Alarm action"
+msgid "Display a dialog"
+msgstr "Диалогты көрсету"
+
+#: incidencealarm.cpp:273
+#, fuzzy, kde-format
+#| msgid "Play an audio file"
+msgctxt "Alarm action"
+msgid "Play an audio file"
+msgstr "Дыбыс файлының орындау"
+
+#: incidencealarm.cpp:276
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "Alarm action"
+msgid "Invalid Reminder."
+msgstr "Дұрыс емес еске салу."
+
+#: incidencealarm.cpp:282
+#, fuzzy, kde-format
+#| msgctxt "The reminder is set to X minutes before/after the event"
+#| msgid "minutes"
+msgctxt "The reminder is set to X minutes before/after the event"
+msgid "1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "минут"
+
+#: incidencealarm.cpp:287
+#, kde-format
+msgctxt "The reminder is set to X days before/after the event"
+msgid "1 day"
+msgid_plural "%1 days"
+msgstr[0] ""
+
+#: incidencealarm.cpp:290
+#, fuzzy, kde-format
+#| msgctxt "The reminder is set to X hours before/after the event"
+#| msgid "hours"
+msgctxt "The reminder is set to X hours before/after the event"
+msgid "1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "сағат"
+
+#: incidencealarm.cpp:295
+#, kde-format
+msgctxt "The reminder is configured to repeat after snooze"
+msgid "(Repeats)"
+msgstr "(Қайталау)"
+
+#. i18n: These series of strings are used to show the user a description of
+#. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
+#. one of the time units above, %3 is the (Repeats) part that will be used
+#. in case of repetition of the alarm.
+#: incidencealarm.cpp:305
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do started %4"
+msgid "%1 %2 after the to-do started %3"
+msgstr "Жосарлаған %4 ісі басталған соң %1 %2 %3"
+
+#: incidencealarm.cpp:307
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event started %4"
+msgid "%1 %2 after the event started %3"
+msgstr "%1 %2 %3 %4 оқиғасы басталған соң"
+
+#: incidencealarm.cpp:311
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do starts %4"
+msgid "%1 %2 before the to-do starts %3"
+msgstr "%1 %2 %3 %4 ісі басталу алдында"
+
+#: incidencealarm.cpp:313
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event starts %4"
+msgid "%1 %2 before the event starts %3"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталу алдында"
+
+#: incidencealarm.cpp:317
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do is due %4"
+msgid "%1 %2 after the to-do is due %3"
+msgstr "%1 %2 %3 %4 ісі біткенінен кейін"
+
+#: incidencealarm.cpp:319
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event ends %4"
+msgid "%1 %2 after the event ends %3"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталғаннан кейін"
+
+#: incidencealarm.cpp:323
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do is due %4"
+msgid "%1 %2 before the to-do is due %3"
+msgstr "%1 %2 %3 %4 ісі біту алдында"
+
+#: incidencealarm.cpp:325
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event ends %4"
+msgid "%1 %2 before the event ends %3"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталу алдында"
+
+#: incidencealarm.cpp:331
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do started %4 (Disabled)"
+msgid "%1 %2 after the to-do started %3 (Disabled)"
+msgstr "Жосарлаған %4 ісі басталған соң %1 %2 %3 (Бұғатталған)"
+
+#: incidencealarm.cpp:333
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event started %4 (Disabled)"
+msgid "%1 %2 after the event started %3 (Disabled)"
+msgstr "%1 %2 %3 %4 оқиғасы басталған соң (Бұғатталған)"
+
+#: incidencealarm.cpp:337
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do starts %4 (Disabled)"
+msgid "%1 %2 before the to-do starts %3 (Disabled)"
+msgstr "%1 %2 %3 %4 ісі басталу алдында (Бұғатталған)"
+
+#: incidencealarm.cpp:339
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event starts %4 (Disabled)"
+msgid "%1 %2 before the event starts %3 (Disabled)"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталу алдында (Бұғатталған)"
+
+#: incidencealarm.cpp:343
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the to-do is due %4 (Disabled)"
+msgid "%1 %2 after the to-do is due %3 (Disabled)"
+msgstr "%1 %2 %3 %4 ісі біткенінен кейін (Бұғатталған)"
+
+#: incidencealarm.cpp:345
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 after the event ends %4 (Disabled)"
+msgid "%1 %2 after the event ends %3 (Disabled)"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталғаннан кейін (Бұғатталған)"
+
+#: incidencealarm.cpp:349
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the to-do is due %4 (Disabled)"
+msgid "%1 %2 before the to-do is due %3 (Disabled)"
+msgstr "%1 %2 %3 %4 ісі біту алдында (Бұғатталған)"
+
+#: incidencealarm.cpp:351
+#, fuzzy, kde-format
+#| msgid "%1 %2 %3 before the event ends %4 (Disabled)"
+msgid "%1 %2 before the event ends %3 (Disabled)"
+msgstr "%1 %2 %3 %4 оқиғасы аяқталу алдында (Бұғатталған)"
+
+#: incidencealarm.cpp:359
+#, kde-format
+msgid "%1 when the to-do starts"
+msgstr "%1, іс басталғаннан кейін"
+
+#: incidencealarm.cpp:361
+#, kde-format
+msgid "%1 when the event starts"
+msgstr "%1, оқиға басталғаннан кейін"
+
+#: incidencealarm.cpp:363
+#, kde-format
+msgid "%1 when the to-do is due"
+msgstr "%1, іс біткеннен кейін"
+
+#: incidencealarm.cpp:365
+#, kde-format
+msgid "%1 when the event ends"
+msgstr "%1, оқиға аяқталғаннан кейін"
+
+#: incidencealarm.cpp:369
+#, kde-format
+msgid "%1 when the to-do starts (Disabled)"
+msgstr "%1, іс басталғаннан кейін (Бұғатталған)"
+
+#: incidencealarm.cpp:371
+#, kde-format
+msgid "%1 when the event starts (Disabled)"
+msgstr "%1, оқиға басталғаннан кейін (Бұғатталған)"
+
+#: incidencealarm.cpp:373
+#, kde-format
+msgid "%1 when the to-do is due (Disabled)"
+msgstr "%1, іс біткеннен кейін (Бұғатталған)"
+
+#: incidencealarm.cpp:375
+#, kde-format
+msgid "%1 when the event ends (Disabled)"
+msgstr "%1, оқиға аяқталғаннан кейін (Бұғатталған)"
+
+#: incidenceattachment.cpp:130
+#, kde-format
+msgctxt "@title"
+msgid "Add Attachment"
+msgstr "Тіркеме қосу"
+
+#: incidenceattachment.cpp:192
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Do you really want to remove these attachments?<nl/>%1"
+msgstr "Осы тіркемелерді шын өшірмексіз бе?<nl/>%1"
+
+#: incidenceattachment.cpp:193
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove Attachments?"
+msgstr "Тіркемелер өшірілсін бе?"
+
+#: incidenceattachment.cpp:231
+#, kde-format
+msgctxt "@title"
+msgid "Save Attachment"
+msgstr "Тіркемені сақтау"
+
+#: incidenceattachment.cpp:411
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Link here"
+msgstr "Осында &сілтемелеу"
+
+#: incidenceattachment.cpp:421 incidenceattachment.cpp:424
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Copy here"
+msgstr "Осында &көшірмелеу"
+
+#: incidenceattachment.cpp:428
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&ancel"
+msgstr "Қ&айту"
+
+#: incidenceattachment.cpp:475
+#, kde-format
+msgctxt "@action:inmenu open the attachment in a viewer"
+msgid "&Open"
+msgstr "&Ашу"
+
+#: incidenceattachment.cpp:481
+#, kde-format
+msgctxt "@action:inmenu save the attachment to a file"
+msgid "Save As..."
+msgstr "Былай сақтау..."
+
+#: incidenceattachment.cpp:498
+#, kde-format
+msgctxt "@action:inmenu remove the attachment"
+msgid "&Remove"
+msgstr "Ө&шіру"
+
+#: incidenceattachment.cpp:506
+#, kde-format
+msgctxt "@action:inmenu show a dialog used to edit the attachment"
+msgid "&Properties..."
+msgstr "Қ&асиеттер..."
+
+#: incidenceattachment.cpp:517
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Displays items (files, mail, etc.) that have been associated with this event "
+"or to-do."
+msgstr ""
+"Оы оқиға не іс жоспарымен байланысты аталымдарды (файл, хат, т.б.) көрсетеді."
+
+#: incidenceattendee.cpp:204
+#, kde-format
+msgctxt "@info"
+msgid ""
+"%1 does not look like a valid email address. Are you sure you want to invite "
+"this participant?"
+msgstr ""
+"%1 деген дұрыс эл.пошта адресі емес сияқты. Бұндайды қатысуға шын "
+"шақырғаныңыз келе ме?"
+
+#: incidenceattendee.cpp:207
+#, kde-format
+msgctxt "@title:window"
+msgid "Invalid Email Address"
+msgstr "Жарамсыз эл.пошта адресі"
+
+#: incidenceattendee.cpp:208
+#, kde-format
+msgctxt "@action:button"
+msgid "Invite"
+msgstr ""
+
+#: incidenceattendee.cpp:209
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Invite"
+msgstr ""
+
+#: incidenceattendee.cpp:432
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select Attendees..."
+msgctxt "@title:window"
+msgid "Select Attendees"
+msgstr "Қатысушыларды таңдау…"
+
+#: incidenceattendee.cpp:612
+#, kde-format
+msgctxt "@label Shows the number of scheduling conflicts"
+msgid "%1 conflict"
+msgid_plural "%1 conflicts"
+msgstr[0] "%1 қайшылық"
+
+#: incidenceattendee.cpp:779
+#, kde-format
+msgctxt "@option"
+msgid ""
+"You are changing the organizer of this event. Since the organizer is also "
+"attending this event, would you like to change the corresponding attendee as "
+"well?"
+msgstr ""
+"Сіз оқиғаның ұйымдастырушысын өзгертіп жатырсыз. Ол да оқиғаның қатысушысы "
+"болғандықтан, қатысушының параметрлерін өзгертпейсіз бе?"
+
+#: incidenceattendee.cpp:783
+#, fuzzy, kde-format
+#| msgid "Attendee"
+msgctxt "@action:button"
+msgid "Change Attendee"
+msgstr "Қатысушысы"
+
+#: incidenceattendee.cpp:784
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Change"
+msgstr ""
+
+#: incidencedatetime.cpp:215
+#, kde-format
+msgctxt "@action show or hide the time zone widgets"
+msgid "Time zones"
+msgstr "Уақыт белдеулері"
+
+#: incidencedatetime.cpp:617
+#, kde-format
+msgctxt "@label The due date/time of a to-do"
+msgid "Due:"
+msgstr "Бітуі:"
+
+#: incidencedatetime.cpp:745 incidencedatetime.cpp:746
+#, kde-format
+msgid "Starts: %1"
+msgstr "Басталуы: %1"
+
+#: incidencedatetime.cpp:748
+#, kde-format
+msgid "Starting Date"
+msgstr "Бастау күні"
+
+#: incidencedatetime.cpp:749
+#, kde-format
+msgid "Starting Time"
+msgstr "Бастау уақыты"
+
+#: incidencedatetime.cpp:758 incidencedatetime.cpp:759
+#, kde-format
+msgid "Due on: %1"
+msgstr "Тағайындалғаны: %1"
+
+#: incidencedatetime.cpp:761 incidencedatetime.cpp:762
+#, kde-format
+msgid "Ends: %1"
+msgstr "Аяқталуы: %1"
+
+#: incidencedatetime.cpp:766
+#, kde-format
+msgid "Due Date"
+msgstr "Тағайындалған күні"
+
+#: incidencedatetime.cpp:767
+#, kde-format
+msgid "Due Time"
+msgstr "Тағайындалған уақыт"
+
+#: incidencedatetime.cpp:769
+#, kde-format
+msgid "Ending Date"
+msgstr "Аяқтау күні"
+
+#: incidencedatetime.cpp:770
+#, kde-format
+msgid "Ending Time"
+msgstr "Аяқтау уақыты"
+
+#: incidencedatetime.cpp:848
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid start date."
+msgstr "Дұрыс емес еске салу."
+
+#: incidencedatetime.cpp:853
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid start time."
+msgstr "Дұрыс емес еске салу."
+
+#: incidencedatetime.cpp:861
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid end date."
+msgstr "Дұрыс емес еске салу."
+
+#: incidencedatetime.cpp:866
+#, fuzzy, kde-format
+#| msgid "Invalid Reminder."
+msgctxt "@info"
+msgid "Invalid end time."
+msgstr "Дұрыс емес еске салу."
+
+#: incidencedatetime.cpp:875
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The event ends before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Оқиғаның аяқталуы басталудан ерте.\n"
+"Күн мен уақытын түзеңіз."
+
+#: incidencedatetime.cpp:879
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do is due before it starts.\n"
+"Please correct dates and times."
+msgstr ""
+"Іс жоспарының бітуі басталудан ерте.\n"
+"Күн мен уақытын түзеңіз."
+
+#: incidencedefaults.cpp:68
+#, kde-format
+msgctxt "@label"
+msgid "no (valid) identities found"
+msgstr "(дұрыс) іс-әлпеттері табылған жоқ"
+
+#: incidencedefaults.cpp:303
+#, kde-format
+msgctxt "@label attachment contains binary data"
+msgid "[Binary data]"
+msgstr "[Бинарлы дерек]"
+
+#: incidencedefaults.cpp:436
+#, kde-format
+msgctxt "@label invalid email address marker"
+msgid "invalid@email.address"
+msgstr "жарамсыз@эл.пошта"
+
+#: incidencedescription.cpp:99
+#, fuzzy, kde-format
+#| msgctxt "@action Enable or disable rich text editting"
+#| msgid "Enable rich text"
+msgctxt "@action Enable or disable rich text editing"
+msgid "Enable rich text"
+msgstr "Пішімделген мәтін болсын"
+
+#: incidencedescription.cpp:103
+#, fuzzy, kde-format
+#| msgctxt "@action Enable or disable rich text editting"
+#| msgid "Disable rich text"
+msgctxt "@action Enable or disable rich text editing"
+msgid "Disable rich text"
+msgstr "Пішімделген мәтін болмасын"
+
+#: incidencedialog.cpp:210
+#, kde-format
+msgid "Select a valid collection first."
+msgstr ""
+
+#: incidencedialog.cpp:233
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder (%1)"
+msgstr "Еске салу (%1)"
+
+#: incidencedialog.cpp:235
+#, kde-format
+msgctxt "@title:tab Tab to configure the reminders of an event or todo"
+msgid "Reminder"
+msgstr "Еске салу"
+
+#: incidencedialog.cpp:243
+#, kde-format
+msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
+msgid "Rec&urrence"
+msgstr "Қа&йталануы"
+
+#: incidencedialog.cpp:253
+#, kde-format
+msgctxt "@title:tab Daily recurring event, capital first letter only"
+msgid " (D)"
+msgstr " (К)"
+
+#: incidencedialog.cpp:256
+#, kde-format
+msgctxt "@title:tab Weekly recurring event, capital first letter only"
+msgid " (W)"
+msgstr " (Ап)"
+
+#: incidencedialog.cpp:259
+#, kde-format
+msgctxt "@title:tab Monthly recurring event, capital first letter only"
+msgid " (M)"
+msgstr " (Ай)"
+
+#: incidencedialog.cpp:262
+#, kde-format
+msgctxt "@title:tab Yearly recurring event, capital first letter only"
+msgid " (Y)"
+msgstr " (Ж)"
+
+#: incidencedialog.cpp:265
+#, kde-format
+msgctxt "@title:tab Exception to a recurring event, capital first letter only"
+msgid " (E)"
+msgstr " (Е)"
+
+#: incidencedialog.cpp:299
+#, kde-format
+msgctxt "@info"
+msgid "Unable to find template '%1'."
+msgstr "'%1 деген үлгісі табылмады."
+
+#: incidencedialog.cpp:305
+#, kde-format
+msgctxt "@info"
+msgid "Error loading template file '%1'."
+msgstr "'%1' үлгі файлын жүктеу қатесі."
+
+#: incidencedialog.cpp:311
+#, kde-format
+msgctxt "@info"
+msgid "Template does not contain a valid incidence."
+msgstr "Үлгіде керек оқиға жоқ."
+
+#: incidencedialog.cpp:410
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments (%1)"
+msgstr "Тірке&мелер (%1)"
+
+#: incidencedialog.cpp:412
+#, kde-format
+msgctxt "@title:tab Tab to modify attachments of an event or todo"
+msgid "Attac&hments"
+msgstr "Тірке&мелер"
+
+#: incidencedialog.cpp:419
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees (%1)"
+msgstr "&Қатысушылар (%1)"
+
+#: incidencedialog.cpp:421
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Attendees"
+msgstr "&Қатысушылар"
+
+#: incidencedialog.cpp:428
+#, fuzzy, kde-format
+#| msgctxt "@title:tab Tab to modify attendees of an event or todo"
+#| msgid "&Attendees (%1)"
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources (%1)"
+msgstr "&Қатысушылар (%1)"
+
+#: incidencedialog.cpp:430
+#, kde-format
+msgctxt "@title:tab Tab to modify attendees of an event or todo"
+msgid "&Resources"
+msgstr ""
+
+#: incidencedialog.cpp:452
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Unable to store the incidence in the calendar. Try again?\n"
+"\n"
+" Reason: %1"
+msgstr ""
+"Оқиға күнтізбеге сақталмады. Қайталап көрейік пе?\n"
+"\n"
+"Себебі: %1"
+
+#: incidencedialog.cpp:458
+#, kde-format
+msgctxt "@action:button"
+msgid "Retry"
+msgstr ""
+
+#: incidencedialog.cpp:480
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You have not set a default calendar for your events yet.</"
+"para><para>Setting a default calendar will make creating new events faster "
+"and easier with less chance of filing them into the wrong folder.</"
+"para><para>Would you like to set your default events calendar to <resource>"
+"%1</resource>?</para>"
+msgstr ""
+
+#: incidencedialog.cpp:488
+#, fuzzy, kde-format
+#| msgid "Default Category"
+msgctxt "@title:window"
+msgid "Set Default Calendar?"
+msgstr "Әдетті санаты"
+
+#: incidencedialog.cpp:489
+#, fuzzy, kde-format
+#| msgid "Default Category"
+msgctxt "@action:button"
+msgid "Set As Default"
+msgstr "Әдетті санаты"
+
+#: incidencedialog.cpp:490
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Set"
+msgstr ""
+
+#: incidencedialog.cpp:670
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Save current changes"
+msgstr "Өзгерістерін сақтау"
+
+#: incidencedialog.cpp:671
+#, kde-format
+msgctxt "@action:button"
+msgid "Save changes and close dialog"
+msgstr "Өзгерістерін сақтап диалогты жабу"
+
+#: incidencedialog.cpp:672
+#, kde-format
+msgctxt "@action:button"
+msgid "Discard changes and close dialog"
+msgstr "Өзгерістерін тастап диалогты жабу"
+
+#: incidencedialog.cpp:676
+#, kde-format
+msgctxt "@action:button"
+msgid "&Templates..."
+msgstr "&Үлгілер"
+
+#: incidencedialog.cpp:678
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Manage templates for this item"
+msgstr "Осының үлгісін басқару"
+
+#: incidencedialog.cpp:680
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Push this button to show a dialog that helps you manage a set of templates. "
+"Templates can make creating new items easier and faster by putting your "
+"favorite default values into the editor automatically."
+msgstr ""
+"Осы батырманы басып үлгілер жинағын басқаратын диалогын шығарыңыз. Үлгілерге "
+"өзіңіздің әдетті параметрлеріңізді редакторда қосып жаңа аталымдарды оп-оңай "
+"және теп-тез құрып бере аласыз. "
+
+#: incidencedialog.cpp:777 incidencedialog.cpp:798 incidencedialog.cpp:814
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Шынымен айнымақсыз ба?"
+
+#: incidencedialog.cpp:778 incidencedialog.cpp:799 incidencedialog.cpp:815
+#, kde-format
+msgctxt "@title:window"
+msgid "KOrganizer Confirmation"
+msgstr "KOrganizer құптауы"
+
+#: incidencedialog.cpp:779 incidencedialog.cpp:800 incidencedialog.cpp:816
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr ""
+
+#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr ""
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:12
+#, kde-format
+msgid "Default Email Attachment Method"
+msgstr "Эл.поштаны тіркемелеу әдетті әдісі"
+
+#. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:13
+#, fuzzy, kde-format
+#| msgid "The default way of attaching dropped emails to an event"
+msgid "Choose the default way of attaching dropped emails to an event"
+msgstr "Түскен эл.поштаны оқиғаға тіркемелеу әдетті әдісі"
+
+#. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:14
+#, kde-format
+msgid "The default way of attaching dropped emails to an event"
+msgstr "Түскен эл.поштаны оқиғаға тіркемелеу әдетті әдісі"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:17
+#, kde-format
+msgid "Always ask"
+msgstr "Әрқашанда сұрап"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:20
+#, kde-format
+msgid "Only attach link to message"
+msgstr "Хатқа сілтеме ғана болсын"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:23
+#, kde-format
+msgid "Attach complete message"
+msgstr "Хат толығымен тіркемеленсін"
+
+#. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
+#: incidenceeditor.kcfg:26
+#, kde-format
+msgid "Attach message without attachments"
+msgstr "Хаттың өзі (тіркемелерісіз) тіркемеленсін"
+
+#: incidencerecurrence.cpp:128
+#, kde-format
+msgctxt ""
+"In several of the messages below, an ordinal number is substituted into the "
+"message. Translate this as \"0\" if English ordinal suffixes should be added "
+"(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
+"be substituted (1, 22, 123)."
+msgid "0"
+msgstr "1"
+
+#: incidencerecurrence.cpp:453
+#, kde-format
+msgid ""
+"A recurring event or to-do must occur at least once. Adjust the recurring "
+"parameters."
+msgstr ""
+"Қайталанатын оқиға не іс кемінде бір рет болу керек қой. Қайталану "
+"параметрін түзеңіз."
+
+#: incidencerecurrence.cpp:459
+#, kde-format
+msgid "The incidence's start date is invalid."
+msgstr "Оқиғаның бастау кезі дұрыс емес."
+
+#: incidencerecurrence.cpp:465
+#, fuzzy, kde-format
+#| msgid "The incidence's start date is invalid."
+msgctxt "@info"
+msgid "The recurrence end date is invalid."
+msgstr "Оқиғаның бастау кезі дұрыс емес."
+
+#: incidencerecurrence.cpp:508
+#, kde-format
+msgctxt "example: the 30th"
+msgid "the %1"
+msgstr "%1"
+
+#: incidencerecurrence.cpp:511
+#, kde-format
+msgctxt "example: the 4th to last day"
+msgid "the %1 to last day"
+msgstr "соңынан %1-күн"
+
+#: incidencerecurrence.cpp:514
+#, kde-format
+msgctxt "example: the 5th Wednesday"
+msgid "the %1 %2"
+msgstr "%1-%2"
+
+#: incidencerecurrence.cpp:520
+#, kde-format
+msgctxt "example: the last Wednesday"
+msgid "the last %1"
+msgstr "соңғы %1"
+
+#: incidencerecurrence.cpp:522
+#, kde-format
+msgctxt "example: the 5th to last Wednesday"
+msgid "the %1 to last %2"
+msgstr "соңғы %1 күніне қалған %2-күн"
+
+#: incidencerecurrence.cpp:538
+#, kde-format
+msgctxt "example: the 5th of June"
+msgid "the %1 of %2"
+msgstr "%1-%2"
+
+#: incidencerecurrence.cpp:541
+#, kde-format
+msgctxt "example: the 3rd to last day of June"
+msgid "the %1 to last day of %2"
+msgstr "%2 соңынан %1-күн"
+
+#: incidencerecurrence.cpp:544
+#, kde-format
+msgctxt "example: the 4th Wednesday of June"
+msgid "the %1 %2 of %3"
+msgstr "%3 айының %1-%2 күні"
+
+#: incidencerecurrence.cpp:551
+#, kde-format
+msgctxt "example: the last Wednesday of June"
+msgid "the last %1 of %2"
+msgstr "%2 айының соңғы %1 күні"
+
+#: incidencerecurrence.cpp:556
+#, kde-format
+msgctxt "example: the 4th to last Wednesday of June"
+msgid "the %1 to last %2 of %3 "
+msgstr "%3 айының %2 күніне қалған %1-күн"
+
+#: incidencerecurrence.cpp:563
+#, kde-format
+msgctxt "example: the 15th day of the year"
+msgid "the %1 day of the year"
+msgstr "жылдың %1-күні"
+
+#: incidencerecurrence.cpp:578
+#, kde-format
+msgctxt "Recurrence ends after n occurrences"
+msgid "occurrence"
+msgid_plural "occurrences"
+msgstr[0] "реттен кейін"
+
+#: incidencerecurrence.cpp:602
+#, kde-format
+msgctxt "repeat every N >weeks<"
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] "апта сайын"
+
+#: incidencerecurrence.cpp:606
+#, kde-format
+msgctxt "repeat every N >months<"
+msgid "month"
+msgid_plural "months"
+msgstr[0] "ай сайын"
+
+#: incidencerecurrence.cpp:610
+#, kde-format
+msgctxt "repeat every N >years<"
+msgid "year"
+msgid_plural "years"
+msgstr[0] "жыл сайын"
+
+#: incidencerecurrence.cpp:614
+#, kde-format
+msgctxt "repeat every N >days<"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "күн сайын"
+
+#: incidencerecurrence.cpp:622
+#, kde-format
+msgctxt ""
+"repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
+"weeks, 'm' months, 'y' years"
+msgid "every"
+msgid_plural "every"
+msgstr[0] "әрбір"
+
+#: incidencewhatwhere.cpp:70
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a summary."
+msgstr ""
+
+#: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
+#: individualmailcomponentfactory.h:63
+#, fuzzy, kde-format
+#| msgid "Send email"
+msgctxt "@action:button dialog positive answer"
+msgid "Send Email"
+msgstr "Эл.поштаны жіберу"
+
+#: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
+#: individualmailcomponentfactory.h:64
+#, kde-format
+msgctxt "@action:button dialog negative answer"
+msgid "Do Not Send"
+msgstr ""
+
+#: individualmaildialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Group Scheduling Email"
+msgstr ""
+
+#: individualmaildialog.cpp:34
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send update"
+msgstr ""
+
+#: individualmaildialog.cpp:35
+#, kde-format
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Send no update"
+msgstr ""
+
+#: individualmaildialog.cpp:36
+#, fuzzy, kde-format
+#| msgid "Send email"
+msgctxt "@item:inlistbox ITIP Messages for one attendee"
+msgid "Edit mail"
+msgstr "Эл.поштаны жіберу"
+
+#: individualmaildialog.cpp:37
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Options for this particular attendee."
+msgstr ""
+
+#: individualmaildialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Provide a location for the attachment file"
+msgctxt "@info:tooltip"
+msgid "Choose an option for this attendee."
+msgstr "Тіркеме файлы жатқан орынды көрсету"
+
+#: individualmaildialog.cpp:111
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings <<"
+msgstr ""
+
+#: individualmaildialog.cpp:113
+#, kde-format
+msgctxt "@action:button show list of attendees"
+msgid "Individual mailsettings >>"
+msgstr ""
+
+#: ldaputils.cpp:15
+#, kde-format
+msgctxt "ldap attribute cn"
+msgid "Common name"
+msgstr ""
+
+#: ldaputils.cpp:17
+#, fuzzy, kde-format
+#| msgid "Send email"
+msgctxt "ldap attribute mail"
+msgid "Email"
+msgstr "Эл.поштаны жіберу"
+
+#: ldaputils.cpp:19
+#, kde-format
+msgctxt "ldap attribute givenname"
+msgid "Given name"
+msgstr ""
+
+#: ldaputils.cpp:21
+#, fuzzy, kde-format
+#| msgctxt "NAME OF TRANSLATORS"
+#| msgid "Your names"
+msgctxt "ldap attribute sn"
+msgid "Surname"
+msgstr "Сайран Киккарин"
+
+#: ldaputils.cpp:23
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "KOrganizer Confirmation"
+msgctxt "ldap attribute ou"
+msgid "Organization"
+msgstr "KOrganizer құптауы"
+
+#: ldaputils.cpp:25
+#, kde-format
+msgctxt "ldap attribute objectClass"
+msgid "Object class"
+msgstr ""
+
+#: ldaputils.cpp:27
+#, kde-format
+msgctxt "ldap attribute description"
+msgid "Description"
+msgstr ""
+
+#: ldaputils.cpp:29
+#, kde-format
+msgctxt "ldap attribute telephoneNumber"
+msgid "Telephone"
+msgstr ""
+
+#: ldaputils.cpp:31
+#, kde-format
+msgctxt "ldap attribute mobile"
+msgid "Mobile"
+msgstr ""
+
+#: opencomposerjob.cpp:77
+#, kde-format
+msgctxt "errormessage: dbus is running but still no connection kmail"
+msgid "Cannot connect to email service"
+msgstr ""
+
+#: resourcemanagement.cpp:93
+#, fuzzy, kde-format
+#| msgid "Template Management"
+msgctxt "@title:window"
+msgid "Resource Management"
+msgstr "Үлгіні басқару"
+
+#: resourcemanagement.cpp:98
+#, kde-format
+msgctxt "@action:button add resource to attendeelist"
+msgid "Book resource"
+msgstr ""
+
+#: schedulingdialog.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
+msgctxt "@title:window"
+msgid "Scheduling"
+msgstr "Жоспарлау..."
+
+#: schedulingdialog.cpp:166
+#, kde-format
+msgctxt ""
+"@label Day of week followed by day of the month, then the month. Example: "
+"Monday, 12 June"
+msgid "%1, %2 %3"
+msgstr "%1, %2 %3"
+
+#: schedulingdialog.cpp:187
+#, kde-format
+msgctxt ""
+"@label This is a suffix following a time selecting widget. Example: "
+"[timeedit] to 10:00am"
+msgid "to %1"
+msgstr "%1 дейін"
+
+#: templatemanagementdialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Manage %1 Templates"
+msgctxt "@title:window"
+msgid "Manage %1 Templates"
+msgstr "%1 үлгілерін басқару"
+
+#: templatemanagementdialog.cpp:83
+#, kde-format
+msgid "Template Name"
+msgstr "Үлгінің атауы"
+
+#: templatemanagementdialog.cpp:84
+#, kde-format
+msgid "Please enter a name for the new template:"
+msgstr "Жаңа үлгінің атауын келтіріңіз:"
+
+#: templatemanagementdialog.cpp:86
+#, kde-format
+msgid "New %1 Template"
+msgstr "Жаңа %1 үлгісі"
+
+#: templatemanagementdialog.cpp:94
+#, kde-format
+msgid "A template with that name already exists, do you want to overwrite it?"
+msgstr "Осылай аталған үлгі бар екен, үстінен жаза берейік пе?"
+
+#: templatemanagementdialog.cpp:95
+#, kde-format
+msgid "Duplicate Template Name"
+msgstr "Үлгінің атауын қайталау"
+
+#: templatemanagementdialog.cpp:129
+#, kde-format
+msgid "Are you sure that you want to remove the template <b>%1</b>?"
+msgstr "<b>%1</b> деп аталған үлгіні шын өшірмексіз бе?"
+
+#: templatemanagementdialog.cpp:130
+#, kde-format
+msgid "Remove Template"
+msgstr "Үлгіні өшіру"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
+#: ui/alarmdialog.ui:14
+#, kde-format
+msgid "Alarms"
+msgstr "Ескертулер"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/alarmdialog.ui:32
+#, kde-format
+msgid "When:"
+msgstr "Қашан:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:47
+#, kde-format
+msgid "Set the reminder trigger time"
+msgstr "Еске салуды бастау уақыты"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
+#: ui/alarmdialog.ui:50
+#, kde-format
+msgid ""
+"This spinbox allows you to set the reminder trigger time. The time unit is "
+"set in the combobox immediately adjacent."
+msgstr ""
+"Бұл сан тергіштің көмегімен еске салуды бастау уақытын орната аласыз. "
+"Қасындағы ашылмалы тізім - уақыт бірлігін таңдау үшін."
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:72
+#, kde-format
+msgid "Select the reminder trigger time unit"
+msgstr "Еске салуды бастау уақыттың бірлігі"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:75
+#, kde-format
+msgid ""
+"This combobox allows you to set the units for the reminder trigger time. The "
+"trigger time value is set in the spinbox immediately adjacent."
+msgstr ""
+"Бұл сан ашылмалы тізімінің көмегімен еске салуды бастау уақытының өлшем "
+"бірлігін орната аласыз. Қасындағы сан тергіш - уақытты орнату үшін."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:79
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in minutes"
+msgid "minute(s)"
+msgstr "минут"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:84
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in hours"
+msgid "hour(s)"
+msgstr "сағат"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
+#: ui/alarmdialog.ui:89
+#, kde-format
+msgctxt "@item:inlistbox alarm offset expressed in days"
+msgid "day(s)"
+msgstr "күн"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:97
+#, kde-format
+msgid "Select the reminder trigger relative to the start or end time"
+msgstr "Еске салу уақытын басталу не аяқталу уақтынан санап қойыңыз."
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:100
+#, kde-format
+msgid ""
+"Use this combobox to specify if you want the reminder to trigger before or "
+"after the start or end time."
+msgstr ""
+"бұл ашылмалы тізім еске салу уақытын басталу не аяқталу уақтынан санап қою "
+"үшін."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:104
+#, kde-format
+msgid "before the event starts"
+msgstr "оқиға аяқталу алдында"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:109
+#, kde-format
+msgid "after the event starts"
+msgstr "оқиға басталғаннан кейін"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:114
+#, kde-format
+msgid "before the event ends"
+msgstr "оқиға аяқталу алдында"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
+#: ui/alarmdialog.ui:119
+#, kde-format
+msgid "after the event ends"
+msgstr "оқиға аяқталғаннан кейін"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/alarmdialog.ui:129
+#, kde-format
+msgid "Repeat:"
+msgstr "Қайталауы:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:144
+#, kde-format
+msgid "Set the reminder to repeat"
+msgstr "Еске салуды қайталауын орнату"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
+#: ui/alarmdialog.ui:147
+#, kde-format
+msgid "Check this if you want to the reminder to recur on a periodic interval."
+msgstr "Еске салу мезгіллі қайталансын десеңіз - белгісін қойыңыз."
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:160
+#, kde-format
+msgid "Select how often the reminder should repeat"
+msgstr "Еске салуды қайталауының жиілігін таңдау"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:163
+#, kde-format
+msgid ""
+"Use this selector to choose how many times you want the recurring reminder "
+"to repeat."
+msgstr "Еске салуды неше рет қайталауы керегін осымен таңдаңыз."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
+#: ui/alarmdialog.ui:166
+#, kde-format
+msgid " time(s)"
+msgstr " рет"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:182
+#, kde-format
+msgid "Select the time between reminder repeats"
+msgstr "Еске салуды қайталауларының аралығын таңдау"
+
+#. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:185
+#, kde-format
+msgid "Use this selector to choose the time between repeating reminders."
+msgstr "Еске салуларының қайталау аралық уақытын осымен таңдаңыз."
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:188
+#, kde-format
+msgctxt "@label:spinbox repeat interval expressed in minutes"
+msgid " Minute(s)"
+msgstr " минут"
+
+#. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
+#: ui/alarmdialog.ui:191
+#, kde-format
+msgctxt "repeat every X minutes"
+msgid "every "
+msgstr "әрбір "
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/alarmdialog.ui:212
+#, kde-format
+msgid "What:"
+msgstr "Нені:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:222
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgid "Select the alarm type"
+msgstr "Бастапқы күнің келтіру"
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:225
+#, fuzzy, kde-format
+#| msgid "Use this selector to choose the time between repeating reminders."
+msgid "Use this selector to choose the alarm type for the reminders."
+msgstr "Еске салуларының қайталау аралық уақытын осымен таңдаңыз."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:235
+#, kde-format
+msgid "Display text"
+msgstr "Жазуды көресту"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
+#: ui/alarmdialog.ui:240
+#, kde-format
+msgid "Play sound file"
+msgstr "Дыбыс файлын орындау"
+
+#. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
+#: ui/alarmdialog.ui:273
+#, kde-format
+msgid ""
+"Specify any text you desire to display in the popup notice when the reminder "
+"triggers."
+msgstr "Еске салу қалқымалы жазуының мәтінін келтіріңіз."
+
+#. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
+#: ui/alarmdialog.ui:296
+#, kde-format
+msgid "Audio File:"
+msgstr "Дыбыс файлы:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:309
+#, kde-format
+msgid "Specify a file containing a sound to play when the reminder triggers"
+msgstr "Еске салуының орындайтын дыбыс файлын келтіріңіз"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
+#: ui/alarmdialog.ui:312
+#, kde-format
+msgid ""
+"Use the adjacent file browser to help you find the file you want to use when "
+"playing a sound when the reminder triggers."
+msgstr ""
+"Еске салуының орындайтын дыбыс файлын табу үшін қасындағы файл шолғышын "
+"пайдаланыңыз."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Give the attachment a name"
+msgstr "Тіркемені атау"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:41
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Type any string you desire here for the name of the attachment"
+msgstr "Тіркемеге қалаған атау беріңіз"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
+#: ui/attachmenteditdialog.ui:44
+#, kde-format
+msgctxt "@label"
+msgid "Attachment name"
+msgstr "Тіркеменің атауы"
+
+#. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
+#: ui/attachmenteditdialog.ui:65
+#, kde-format
+msgctxt "@label File type of attachment is unknown"
+msgid "Unknown"
+msgstr "Беймәлім"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:72
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Store the attachment file inside the calendar"
+msgstr "Тіркеме күнтізбенің ішінде сақталсын"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:75
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Checking this option will cause the attachment to be stored inside your "
+"calendar, which can take a lot of space depending on the size of the "
+"attachment. If this option is not checked, then only a link pointing to the "
+"attachment will be stored.  Do not use a link for attachments that change "
+"often or may be moved (or removed) from their current location."
+msgstr ""
+"Бұны белгілесе, тіркеме күнтізбеңіздің құрамында, мүмкін көп орын алып, "
+"сақталады. Әйтпесе, тек тіркеменің сілтемесі ғана сақталады. Жиі орының "
+"ауыстратын не өшірулі мүмкін тіркемеге сілтеме жасамаңыз."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
+#: ui/attachmenteditdialog.ui:78
+#, kde-format
+msgctxt "@option:check"
+msgid "Store attachment inline"
+msgstr "Тіркемені құрамына енгізу"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/attachmenteditdialog.ui:123
+#, kde-format
+msgid "Location:"
+msgstr "Орны:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Provide a location for the attachment file"
+msgstr "Тіркеме файлы жатқан орынды көрсету"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, mURLRequester)
+#: ui/attachmenteditdialog.ui:136
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter the path to the attachment file or use the file browser by pressing "
+"the adjacent button"
+msgstr ""
+"Керек болса (қасындағы батырмасын басып) файл шолғыштың көмегімен, тіркеме "
+"файлына баратын жолын келтіріңіз"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/attachmenteditdialog.ui:159
+#, kde-format
+msgctxt "@label"
+msgid "Size:"
+msgstr "Өлшемі:"
+
+#. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
+#: ui/attachmenteditdialog.ui:166
+#, kde-format
+msgid "0 KB"
+msgstr "0 KБ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/attachmenteditdialog.ui:183
+#, kde-format
+msgid "Type:"
+msgstr "Түрі:"
+
+#. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:20
+#, kde-format
+msgid "A message on this incidence item"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
+#: ui/dialogdesktop.ui:23
+#, fuzzy, kde-format
+#| msgid "Use this selector to choose the time between repeating reminders."
+msgid "Use this message to correct the item parameters."
+msgstr "Еске салуларының қайталау аралық уақытын осымен таңдаңыз."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/dialogdesktop.ui:53
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label:listbox The calendar to which the todo or event must be added"
+#| msgid "Calendar:"
+msgctxt "@label:listbox The calendar to which the todo or event must be added"
+msgid "Calen&dar:"
+msgstr "Күнтізбе:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/dialogdesktop.ui:81
+#, kde-format
+msgctxt "@info"
+msgid "You are Invited, what do you want to do?"
+msgstr "Сізге шақыру келді, не істемексіз?"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:88
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Accept the invitation"
+msgstr "Шақыруды қабылдау"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Click this button to accept the invitation."
+msgstr "Шақыруды қабылдау үшін осыны басыңыз."
+
+#. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
+#: ui/dialogdesktop.ui:94
+#, kde-format
+msgctxt "@action:button Accept an invitation"
+msgid "Accept"
+msgstr "Қабылдау"
+
+#. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
+#: ui/dialogdesktop.ui:105
+#, kde-format
+msgctxt "@action:button decline an invitation"
+msgid "Decline"
+msgstr "Қабылдамау"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_2)
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgctxt "@info:tooltip"
+msgid "Set the summary"
+msgstr "Бастапқы күнің келтіру"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
+#: ui/dialogdesktop.ui:141 ui/dialogdesktop.ui:169
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets brief information that will be displayed in many places in the user "
+"interface."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/dialogdesktop.ui:147
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Summary:"
+msgctxt "@label"
+msgid "Summar&y:"
+msgstr "Мазмұндамасы:"
+
+#. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
+#: ui/dialogdesktop.ui:188
+#, kde-format
+msgctxt "@label"
+msgid "&Location:"
+msgstr "&Орны:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:207
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the location"
+msgstr "Орнын анықтау"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
+#: ui/dialogdesktop.ui:210
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets where the event or to-do will take place."
+msgstr "Оқиғаның не істің болатын орнын анықтау."
+
+#. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
+#: ui/dialogdesktop.ui:227
+#, kde-format
+msgctxt "@label line containing to-do specific ui controls"
+msgid "Completion:"
+msgstr "Біткендгі:"
+
+#. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
+#: ui/dialogdesktop.ui:280
+#, kde-format
+msgctxt "@label:slider Showed after the to-do percentage completed slider"
+msgid "completed"
+msgstr "біткен"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: ui/dialogdesktop.ui:287
+#, kde-format
+msgctxt "@label:listbox priority of a to-do"
+msgid "Priority:"
+msgstr "Маңыздылығы:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:298
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "unspecified"
+msgstr "белгіленбеген"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:303
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "1 (highest)"
+msgstr "1 (ең жоғары)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:308
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "2"
+msgstr "2"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:313
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "3"
+msgstr "3"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:318
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "4"
+msgstr "4"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:323
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "5 (medium)"
+msgstr "5 (орташа)"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:328
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "6"
+msgstr "6"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:333
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "7"
+msgstr "7"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:338
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "8"
+msgstr "8"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
+#: ui/dialogdesktop.ui:343
+#, kde-format
+msgctxt "@item:inlistbox Priority of a to-do"
+msgid "9 (lowest)"
+msgstr "9 (ең төмені)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:362
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Set if this to-do's start and due dates have times associated with them."
+msgstr ""
+"Бұны, іс жоспарлардың күндерінде тағайындалған уақыттары болса ортнатыңыз."
+
+#. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
+#: ui/dialogdesktop.ui:365
+#, kde-format
+msgctxt "@option:check"
+msgid "All Day"
+msgstr "Толық күн"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
+#: ui/dialogdesktop.ui:391
+#, kde-format
+msgctxt "@option:check"
+msgid "Blocks me for other events"
+msgstr "Өзге оқиғаларға қатысуға кедергі"
+
+#. i18n: ectx: property (text), widget (QLabel, mStartLabel)
+#: ui/dialogdesktop.ui:422
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip period start time"
+#| msgid "Start:"
+msgctxt "@label Start date/time of the event or todo"
+msgid "S&tart:"
+msgstr "Басталуы:"
+
+#. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:450
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the start date"
+msgstr "Бастапқы күнің келтіру"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
+#: ui/dialogdesktop.ui:453
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start date for this to-do"
+msgstr "Осы іс басталатын күнін орнату"
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
+#: ui/dialogdesktop.ui:469
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the start time for this to-do."
+msgstr "Осы іс басталатын уақытын орнату."
+
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
+#: ui/dialogdesktop.ui:485 ui/dialogdesktop.ui:600
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Select the timezone for this event. It will also affect recurrences"
+msgstr "Осы оқиғаның уақыт белдеуін көрсетіңіз. Бұл қайталауына да әсер ететі."
+
+#. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
+#: ui/dialogdesktop.ui:503
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "<a href=\"hide\"><font color='blue'>&lt;&lt; Time zones</font></a>"
+msgctxt "@action"
+msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
+msgstr ""
+"<a href=\"hide\"><font color='blue'>&lt;&lt; Уақыт белдеулері</font></a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mEndLabel)
+#: ui/dialogdesktop.ui:540
+#, kde-format
+msgctxt "@label end date/time for an event or to-do"
+msgid "E&nd:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
+#: ui/dialogdesktop.ui:568
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due date for this to-do."
+msgstr "Осы іс аяқталатын күнін орнату."
+
+#. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
+#: ui/dialogdesktop.ui:584
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Sets the due time for this to-do."
+msgstr "Осы іс аяқталатын уақытын орнату."
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
+#: ui/dialogdesktop.ui:636
+#, kde-format
+msgctxt "@title:tab General settings for an event or to-do"
+msgid "General"
+msgstr "Жалпы"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:651 ui/dialogdesktop.ui:716
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the secrecy level"
+msgstr "Құпиялық деңгейін орнату"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
+#: ui/dialogdesktop.ui:654 ui/dialogdesktop.ui:719
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets whether the access to this event or to-do is restricted. Please note "
+"that KOrganizer currently does not use this setting, so the implementation "
+"of the restrictions will depend on the groupware server. This means that "
+"events or to-dos marked as private or confidential may be visible to others."
+msgstr ""
+"Оқиғаға не іс жоспарына қатынау құқықтарын орнату. ӘзіршеKOrganizer бұл "
+"параметрді пайдаланбайды, бұның қолдану - қолданбауы топтық іс серверіне "
+"тәуелді. Сонымен, сырлы не құпиялы деп белгіленген оқига не іс жоспары "
+"басқаларға көрініп қалуы мүмкін."
+
+#. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
+#: ui/dialogdesktop.ui:657
+#, kde-format
+msgctxt "@label:listbox sets the privacy option of the event or to-do"
+msgid "Access:"
+msgstr "Рұқсаттары:"
+
+#. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
+#: ui/dialogdesktop.ui:678
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+msgctxt "@label"
+msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
+msgstr ""
+"<a href=\\\"hide\\\"><font color='blue'>Пішімделген мәтін &gt;&gt;</font></a>"
+
+#. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
+#: ui/dialogdesktop.ui:709
+#, kde-format
+msgctxt "@label"
+msgid "Tags:"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
+#: ui/dialogdesktop.ui:730
+#, kde-format
+msgctxt "@title:tab attendees of this event or to-do"
+msgid "Attendees"
+msgstr "Қатысушылар"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/dialogdesktop.ui:736
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Meeting organizer:"
+msgstr "Жиналыс ұйымдастырушысы:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:777
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the organizer identity"
+msgstr "ұйымдастырушының іс-әлпетін орнату "
+
+#. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
+#: ui/dialogdesktop.ui:780
+#, fuzzy, kde-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Sets the identity corresponding to the organizer of this to-do or event. "
+#| "Identities can be set in the 'Personal' section of the KOrganizer "
+#| "configuration, or in the Personal'->'About Me'->'Password & User Account' "
+#| "section of the System Settings. In addition, identities are gathered from "
+#| "your KMail settings and from your address book. If you choose to set it "
+#| "globally for KDE in the System Settings, be sure to check 'Use email "
+#| "settings from System Settings' in the 'Personal' section of the "
+#| "KOrganizer configuration."
+msgctxt "@info:whatsthis"
+msgid ""
+"Sets the identity corresponding to the organizer of this to-do or event. "
+"Identities can be set in the 'Personal' section of the KOrganizer "
+"configuration. In addition, identities are gathered from your KMail settings "
+"and from your address book."
+msgstr ""
+"Жоспар құрушы я оқиғаны ұйымдастырушының іс-әлпетін орнату. Ол KOrganizer "
+"баптауларының 'Дербес' бөлімінің немесе  Жүйе параметрлерінің 'Дербес "
+"мәлімет'->'Өзім туралы'->'Пароль мен тіркелгі' бөлімінде орнатылады. Оған "
+"қоса, іс-әлпеті туралы мәлімет KMail баптауларыңыздан және адрестік "
+"кітапшаңыздан жиналады. Егер бұны KDE Жүйе параметрлерінде, жалпы жүйелік "
+"деңгейінде орнатсаңыз, KOrganizer баптауларының 'Дербес' бөліміндегі 'Жүйе "
+"параметрлердегі эл.пошта қолданылсын' деген белгісі қойылғанын тексеріңіз."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/dialogdesktop.ui:812
+#, kde-format
+msgctxt "@label participants of this event or to-do"
+msgid "Participants:"
+msgstr "Қатысушылары:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:831
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Schedule the meeting with your attendees."
+msgstr "Сіздің қатысуымен жиналысты жоспарлау"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:834
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Opens the scheduling dialog, which will assist in picking a time slot that "
+"works for all attendees."
+msgstr ""
+"Барлық қатысушыларға ыңғайлы уақытты жоспарлауға көмектесетін диалогты ашады."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
+#: ui/dialogdesktop.ui:837
+#, kde-format
+msgctxt "@action:button"
+msgid "Schedule..."
+msgstr "Жоспарлау..."
+
+#. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
+#: ui/dialogdesktop.ui:860
+#, kde-format
+msgid "Substitute with group members"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:867
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select attendees from your address book."
+msgstr "Адрестік кітапшаңыздан қатысушыларды таңдау."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:870
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Opens your address book, allowing you to select new attendees from it."
+msgstr ""
+"Адрестік кітапшаңызды ашып, одан жаңа қатысушыларды таңдап алуға мүмкіндік "
+"береді."
+
+#. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
+#: ui/dialogdesktop.ui:873
+#, kde-format
+msgctxt "@action:button"
+msgid "Select Attendees..."
+msgstr "Қатысушыларды таңдау…"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
+#: ui/dialogdesktop.ui:897
+#, kde-format
+msgid "Resources"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
+#: ui/dialogdesktop.ui:937
+#, kde-format
+msgid "Book Resource"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
+#: ui/dialogdesktop.ui:966
+#, kde-format
+msgid "Find Resources..."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
+#: ui/dialogdesktop.ui:980
+#, kde-format
+msgctxt "@title:tab Tab to configure reminders for events or to-do"
+msgid "Reminder"
+msgstr "Еске салу"
+
+#. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
+#: ui/dialogdesktop.ui:992
+#, kde-format
+msgctxt "@label"
+msgid "Add default reminder:"
+msgstr "Әдетті еске салуы:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
+#: ui/dialogdesktop.ui:1015
+#, kde-format
+msgctxt "@action:button Adds an reminder"
+msgid "Add"
+msgstr "Қосу"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
+#: ui/dialogdesktop.ui:1046
+#, fuzzy, kde-format
+#| msgctxt "@action:button Create a new reminder"
+#| msgid "New"
+msgctxt "@action:button create a new reminder"
+msgid "New"
+msgstr "Жаңа"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
+#: ui/dialogdesktop.ui:1057
+#, kde-format
+msgctxt "@action:button modify the selected reminder"
+msgid "Modify"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
+#: ui/dialogdesktop.ui:1068
+#, kde-format
+msgctxt "@action:button disables selected reminder"
+msgid "Disable"
+msgstr "Болмасын"
+
+#. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
+#: ui/dialogdesktop.ui:1075
+#, kde-format
+msgctxt "@action:button removes selected reminders"
+msgid "Remove"
+msgstr "Өшіру"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
+#: ui/dialogdesktop.ui:1100
+#, kde-format
+msgctxt "@title:tab"
+msgid "Recurrence"
+msgstr "Қайталануы"
+
+#. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
+#: ui/dialogdesktop.ui:1112
+#, kde-format
+msgctxt "@label whether or not this event or to-do repeats"
+msgid "Repeats:"
+msgstr "Қайталауы:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1131
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Never"
+msgstr "Ешқашан"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1136
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Daily"
+msgstr "Күн сайын"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1141
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Weekly"
+msgstr "Апта сайын"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1146
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Monthly"
+msgstr "Ай сайын"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
+#: ui/dialogdesktop.ui:1151
+#, kde-format
+msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
+msgid "Yearly"
+msgstr "Жыл сайын"
+
+#. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
+#: ui/dialogdesktop.ui:1165
+#, kde-format
+msgctxt "@label repeats every [various options]"
+msgid "every"
+msgstr "әрбір"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
+#: ui/dialogdesktop.ui:1197
+#, kde-format
+msgctxt "@label Event or todo recurs every n day(s)"
+msgid "day(s)"
+msgstr "күн сайын"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
+#: ui/dialogdesktop.ui:1204
+#, kde-format
+msgid "This and future occurrences."
+msgstr "Осы және болашақ қайталанулар."
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
+#: ui/dialogdesktop.ui:1375
+#, kde-format
+msgctxt "@label recurrence ends on|after"
+msgid "Ends:"
+msgstr "Аяқталуы:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1397
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "never"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "never"
+msgstr "ешқашанда"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1402
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "on"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "on"
+msgstr "мына кезде: "
+
+#. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
+#: ui/dialogdesktop.ui:1407
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Speficies when a recurring events end"
+#| msgid "after"
+msgctxt "@item:inlistbox Specifies when a recurring events end"
+msgid "after"
+msgstr "мынадан кейін:"
+
+#. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
+#: ui/dialogdesktop.ui:1462
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Date after which the event or to-do should stop recurring"
+msgstr "Оқиға не жоспарлаған іс қайталануын тоқтататын күн"
+
+#. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
+#: ui/dialogdesktop.ui:1517
+#, kde-format
+msgctxt "@label"
+msgid "occurrence(s)"
+msgstr "рет"
+
+#. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
+#: ui/dialogdesktop.ui:1536
+#, kde-format
+msgctxt "@label exceptions for the recurrence"
+msgid "Exceptions:"
+msgstr "Болмайтын кездері:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
+#: ui/dialogdesktop.ui:1561
+#, kde-format
+msgctxt "@action:button adds an exception on the recurrence"
+msgid "Add"
+msgstr "Қосу"
+
+#. i18n: ectx: property (text), widget (QLabel, mOnLabel)
+#: ui/dialogdesktop.ui:1600
+#, kde-format
+msgctxt "@label The event ends on [different options]"
+msgid "on:"
+msgstr "мына кезде:"
+
+#. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
+#: ui/dialogdesktop.ui:1615
+#, kde-format
+msgctxt "@action:button removes an exception"
+msgid "Remove"
+msgstr "Өшіру"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
+#: ui/dialogdesktop.ui:1642
+#, kde-format
+msgctxt "@title:tab configure attachments of an event or todo"
+msgid "Attachments"
+msgstr "Тіркемелері"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1664
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an attachment"
+msgstr "Тіркеме қосу"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1667
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows a dialog used to select an attachment to add to this event or to-do as "
+"link or as inline data."
+msgstr ""
+"Осы оқиғаға не жопарлаған іске, сілтеме ретінде не құрамына енгізіп, "
+"тіремені таңдап қосып беретін диалогын ашады. "
+
+#. i18n: ectx: property (text), widget (QPushButton, mAddButton)
+#: ui/dialogdesktop.ui:1670
+#, kde-format
+msgctxt "@action:button adds an attachment"
+msgid "Add"
+msgstr "Қосу"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1690
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove the selected attachment"
+msgstr "Таңдалған тіркемені өшіру"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1693
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Removes the attachment selected in the list above from this event or to-do."
+msgstr ""
+"Осы оқиғаға не жопарлаған істен, көрсетілген тізімінен, таңдалған "
+"тіркемелерін өшіру.  "
+
+#. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
+#: ui/dialogdesktop.ui:1696
+#, kde-format
+msgctxt "@action:button remove an attachment"
+msgid "Remove"
+msgstr "Өшіру"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:39
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the start date"
+msgid "Enter the search term"
+msgstr "Бастапқы күнің келтіру"
+
+#. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
+#: ui/resourcemanagement.ui:42
+#, kde-format
+msgid ""
+"Use this text box to enter some keyword for the resource you want to find."
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
+#: ui/resourcemanagement.ui:76
+#, kde-format
+msgid "Details"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
+#: ui/resourcemanagement.ui:94
+#, kde-format
+msgid "Owner"
+msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
+#: ui/schedulingdialog.ui:14
+#, kde-format
+msgid "Schedule a time"
+msgstr "Уақытын жоспарлау"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/schedulingdialog.ui:39
+#, kde-format
+msgid "Earliest time to start:"
+msgstr "Ең ерте бастау уақыты:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/schedulingdialog.ui:59
+#, kde-format
+msgid "Latest time to end:"
+msgstr "Ең кеш бастау уақыты:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_3)
+#. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
+#, kde-format
+msgid "Check the weekdays to include in the search."
+msgstr "Іздеуге кіретін апта күндерін белгілеңіз."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
+#: ui/schedulingdialog.ui:89 ui/schedulingdialog.ui:111
+#, kde-format
+msgid ""
+"Only the checked weekdays will be included in the free time slot search."
+msgstr ""
+"Бос уақыт аралығын іздегенде тек белгіленген апта күндері қарастырылады."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: ui/schedulingdialog.ui:92
+#, kde-format
+msgid "Allowed weekdays:"
+msgstr "Апта күндендері:"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
+#. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
+#, kde-format
+msgid "Check the roles to include in the search."
+msgstr "Іздеуге кіретін атқаратын міндеттерін белгілеңіз."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
+#. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
+#: ui/schedulingdialog.ui:121 ui/schedulingdialog.ui:143
+#, kde-format
+msgid ""
+"Only the participants with the checked roles will be considered in the free "
+"time slot search."
+msgstr ""
+"Бос уақыт аралығын іздегенде тек белгіленген атқаратын міндетті "
+"қатысушылардың арасында іздеу жүргізіледі."
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ui/schedulingdialog.ui:124
+#, kde-format
+msgid "Mandatory roles:"
+msgstr "Атқататын міндеттері:"
+
+#. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:154
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Set the location"
+msgid "Select the search option"
+msgstr "Орнын анықтау"
+
+#. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
+#: ui/schedulingdialog.ui:157
+#, kde-format
+msgid "Use these tabs to choose the search option."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
+#: ui/schedulingdialog.ui:164
+#, kde-format
+msgid "Automatic Search"
+msgstr "Автоіздеу"
+
+#. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
+#: ui/schedulingdialog.ui:199
+#, kde-format
+msgid "Visual Search"
+msgstr "Қарап іздеу"
+
+#. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
+#: ui/schedulingdialog.ui:207
+#, kde-format
+msgid "Move your appointment to:"
+msgstr "Кездесу мынаған жылжытылсын:"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
+#: ui/schedulingdialog.ui:228
+#, kde-format
+msgid "Monday, 12th June"
+msgstr "Дүйсенбі, 1 Маусым"
+
+#. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
+#: ui/schedulingdialog.ui:241
+#, kde-format
+msgid "to 10:00am"
+msgstr "10:00 дейін"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
+#: ui/template_management_dialog_base.ui:14
+#, kde-format
+msgid "Template Management"
+msgstr "Үлгіні басқару"
+
+#. i18n: ectx: property (text), widget (QLabel, m_introLabel)
+#: ui/template_management_dialog_base.ui:26
+#, fuzzy, kde-format
+#| msgctxt "@label/rich"
+#| msgid ""
+#| "Select a template and click <interface>Apply</interface> to apply it to "
+#| "this item. Click <interface>New</interface> to create a new template "
+#| "based on the current item settings."
+msgctxt "@label"
+msgid ""
+"Select a template and click <i>Apply</i> to apply it to this item. Click "
+"<i>New</i> to create a new template based on the current item settings."
+msgstr ""
+"Үлгіні осыған қолдану үшін, үлгіні таңдап <interface>Қолдану</interface> "
+"дегенді басыңыз. Бар параметрлерді қолданып жаңа үлгіні құру үшін "
+"<interface>Жаңа</interface> дегенді басыңыз."
+
+#. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:42
+#, kde-format
+msgid "The list of managed templates"
+msgstr "Басқарылатын үлгілер тізімі"
+
+#. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
+#: ui/template_management_dialog_base.ui:45
+#, kde-format
+msgid ""
+"This is a list of all the templates you have currently accessible for "
+"creating new calendar items."
+msgstr "Бұл, күнтізбеде  жаңа аталымдарды құруға дайын бүкіл үлгілер тізімі."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:56
+#, kde-format
+msgid "Create a new template from the current settings"
+msgstr "Қазіргі параметрлерімен жаңа үлгіні құру"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:59
+#, kde-format
+msgid ""
+"Click on this button to create a new template based on the current settings "
+"in the editor. You can use this template to quickly add new items in the "
+"future."
+msgstr ""
+"Осы батырманы басып, редактордын қолданыстағы параметрлерімен жаңа үлгіні "
+"құра аласыз. Болашақта бұл үлгіні жаңа аталымды оңай қосуға қолданасыз."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
+#: ui/template_management_dialog_base.ui:62
+#, kde-format
+msgid "&New..."
+msgstr "&Жаңа..."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:72
+#, kde-format
+msgid "Remove the currently selected template"
+msgstr "Таңдалған үлгіні өшіру"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:75
+#, kde-format
+msgid ""
+"Clicking this button will permanently remove the selected template from your "
+"list of managed templates."
+msgstr "Бұны басқанда, таңдалған үлгі бар үлгілер тізімінен кетіріледі."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
+#: ui/template_management_dialog_base.ui:78
+#, kde-format
+msgid "&Remove"
+msgstr "Ө&шіру"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:85
+#, kde-format
+msgid "Apply the selected template settings"
+msgstr "Таңдалған үлгінің параметрлерін қолдану"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:88
+#, kde-format
+msgid ""
+"Clicking this button will apply the settings from the selected template to "
+"the item you are currently editing."
+msgstr ""
+"Бұны басқанда, таңдалған үлгі қазір өңделіп жатқан аталымға қолданылады. "
+
+#. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
+#: ui/template_management_dialog_base.ui:91
+#, kde-format
+msgid "Apply"
+msgstr "Қолдану"
+
+#: visualfreebusywidget.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid "Scale: "
+msgstr "Масштабы: "
+
+#: visualfreebusywidget.cpp:143
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the Gantt chart zoom level"
+msgstr "Гант  диаграммасының масштабын орнату"
+
+#: visualfreebusywidget.cpp:145
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
+"shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
+">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
+"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+"current event or to-do."
+msgstr ""
+"Гант диаграммасының масштабын клесі бірінен таңдап алыңыз:<nl/> 'Сағат' - "
+"бірнеше сағат ауқымын көрсету үшін, <nl/>'Күн' - бірнеше күн ауқымын көрсету "
+"үшін, <nl/>'Апта' - бірнеше ай ауқымын көрсету үшін, <nl/>'Ай' - бірнеше жыл "
+"ауқымын көрсету үшін, <nl/>және 'Авто' - автоматты түрде қолданыстағы "
+"оқиғалар мен іс жоспарларға лайықты ауқымын таңдау үшін."
+
+#: visualfreebusywidget.cpp:152
+#, kde-format
+msgctxt "@item:inlistbox range in hours"
+msgid "Hour"
+msgstr "Сағат"
+
+#: visualfreebusywidget.cpp:153
+#, kde-format
+msgctxt "@item:inlistbox range in days"
+msgid "Day"
+msgstr "Күн"
+
+#: visualfreebusywidget.cpp:154
+#, kde-format
+msgctxt "@item:inlistbox range in weeks"
+msgid "Week"
+msgstr "Апта"
+
+#: visualfreebusywidget.cpp:155
+#, kde-format
+msgctxt "@item:inlistbox range in months"
+msgid "Month"
+msgstr "Ай"
+
+#: visualfreebusywidget.cpp:156
+#, kde-format
+msgctxt "@item:inlistbox range is computed automatically"
+msgid "Automatic"
+msgstr "Авто"
+
+#: visualfreebusywidget.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Center on Start"
+msgstr "Бастауын ортаға"
+
+#: visualfreebusywidget.cpp:162
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Center the Gantt chart on the event start date and time"
+msgstr "Гант диаграмма ортасын оқиғаның бастау кезіне келтіру"
+
+#: visualfreebusywidget.cpp:164
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to center the Gantt chart on the start time and day of "
+"this event."
+msgstr ""
+"Гант диаграмма ортасын оқиғаның бастау кезіне келтіру үшін осы батырманы "
+"басыңыз."
+
+#: visualfreebusywidget.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Pick Date"
+msgstr "Кезін таңдау"
+
+#: visualfreebusywidget.cpp:173
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move the event to a date and time when all attendees are available"
+msgstr "Оқиға кезенін бүкіл қатысушылар бос кезіне жылжыту"
+
+#: visualfreebusywidget.cpp:176
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to move the event to a date and time when all the "
+"attendees have time available in their Free/Busy lists."
+msgstr ""
+"Оқиға кезенін бүкіл қатысушылар, Бос/Істе тізімдері бойынша бос кезіне "
+"жылжыту үшін осы батырманы басыңыз."
+
+#: visualfreebusywidget.cpp:185
+#, kde-format
+msgctxt "@action:button reload freebusy data"
+msgid "Reload"
+msgstr "Қайта жүктеу"
+
+#: visualfreebusywidget.cpp:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reload Free/Busy data for all attendees"
+msgstr "Бүкіл қатысушылардың Бос/Істе туралы мәліметін қайта жүктеу"
+
+#: visualfreebusywidget.cpp:188
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Pressing this button will cause the Free/Busy data for all attendees to be "
+"reloaded from their corresponding servers."
+msgstr ""
+"Бүкіл қатысушылардың Бос/Істе туралы мәліметін, орналасқан серверлерінен "
+"қайта жүктеу үшін осы батырманы басыңыз."
+
+#: visualfreebusywidget.cpp:199
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Free/Busy status of all attendees"
+msgctxt "@info:tooltip"
+msgid "Shows the tree list of all data"
+msgstr "Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді"
+
+#: visualfreebusywidget.cpp:200
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Free/Busy status of all attendees"
+msgctxt "@info:whatsthis"
+msgid "Shows the tree list of all data"
+msgstr "Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді"
+
+#: visualfreebusywidget.cpp:206
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Shows the Free/Busy status of all attendees"
+msgstr "Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді"
+
+#: visualfreebusywidget.cpp:208
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Shows the Free/Busy status of all attendees. Double-clicking on an "
+"attendee's entry in the list will allow you to enter the location of their "
+"Free/Busy Information."
+msgstr ""
+"Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді. Қатысушының жазуынан "
+"қос түртіп, оның Бос/Істе туралы мәліметі орналасқан адресін келтіруге "
+"болады."
+
+#, fuzzy
+#~| msgid "Send an email"
+#~ msgctxt "Alarm action"
+#~ msgid "Send an email"
+#~ msgstr "Эл.поштаны жіберу"
+
+#~ msgid "Send email"
+#~ msgstr "Эл.поштаны жіберу"
+
+#~ msgid "&To:"
+#~ msgstr "&Кімге:"
+
+#~ msgid ""
+#~ "Specify a list of addresses to send email when the reminder triggers.\n"
+#~ "If the 'To:' field stays empty the email reminder will be sent to the\n"
+#~ "default email configured in Kmail (Settings menu/Configure Kmail/"
+#~ "Identities)."
+#~ msgstr ""
+#~ "Еске салуының жіберетін эл.пошта адрестерінің тізімін келтіріңіз.\n"
+#~ "Егер 'Кімге:' өрісі бос қалса, онда еске салу әл.хаты Kmail-дегі\n"
+#~ "әдетті эл.пошта адресіне (Баптау мәзірі/Kmail-ді баптау/Іс-әлпеттері)."
+
+#~ msgid ""
+#~ "Enter a list comma-separated addresses to which an email will be sent "
+#~ "when the reminder triggers"
+#~ msgstr ""
+#~ "Үтірмен бөліктеп. салуының жіберетін эл.пошта адрестерінің тізімін "
+#~ "келтіріңіз"
+
+#~ msgid "&Message:"
+#~ msgstr "&Хабарламасы:"
+
+#~ msgid "Specify text of an email message to send when the reminder triggers"
+#~ msgstr "Еске салуының жіберетін эл.поштаның мәтінің келтіріңіз."
+
+#~ msgid ""
+#~ "Enter any text you desire for the email message that will be sent when "
+#~ "the alarm triggers."
+#~ msgstr ""
+#~ "Еске салуының жіберетін эл.поштаның кез-келген қалаған мәтінің  "
+#~ "келтіріңіз."
+
+#, fuzzy
+#~| msgid "Execute a script"
+#~ msgctxt "Alarm action"
+#~ msgid "Execute a script"
+#~ msgstr "Скриптті орындау"
+
+#~ msgid "Run application / script"
+#~ msgstr "Бағдарламаны / скриптты жегу"
+
+#~ msgid "&Application / Script:"
+#~ msgstr "&Бағдарлама / скрипт:"
+
+#~ msgid ""
+#~ "Specify a file containing the application to run when the reminder "
+#~ "triggers"
+#~ msgstr "Еске салуының жегетін бағдарламасының файлын келтіріңіз"
+
+#~ msgid ""
+#~ "Use the adjacent file browser to help you find the file you want to use "
+#~ "when running an application when the reminder triggers."
+#~ msgstr ""
+#~ "Еске салуының жегетін бағдарлама файлын табу үшін қасындағы файл шолғышын "
+#~ "пайдаланыңыз."
+
+#~ msgid "*|All files"
+#~ msgstr "*|Бүкіл файлдар"
+
+#~ msgid "Ar&guments:"
+#~ msgstr "Ар&гументтері:"
+
+#~ msgid ""
+#~ "Specify arguments to pass to the application when the reminder triggers"
+#~ msgstr ""
+#~ "Еске салуының жегетін бағдарламасына тапсырылатын аргументтерін келтіріңіз"
+
+#~ msgid ""
+#~ "Enter the application arguments to use when running an application when "
+#~ "the reminder triggers."
+#~ msgstr ""
+#~ "Еске салуының жегетін бағдарламасының жегу параметрлерін келтіріңіз."
+
+#~ msgctxt "@info"
+#~ msgid "Please specify a title."
+#~ msgstr "Атауын келтіріңіз."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the title"
+#~ msgstr "Атау"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Sets the Title of this event or to-do."
+#~ msgstr "Оқиғаның не іс жоспарының атауын беру."
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "T&itle:"
+#~ msgctxt "@label"
+#~ msgid "&Title:"
+#~ msgstr "А&тауы:"
+
+#~ msgctxt "@label"
+#~ msgid "Categories:"
+#~ msgstr "Санаттары:"
+
+#~ msgid "Click to add a new category"
+#~ msgstr "Жаңа санатты қосу үшін түртіңіз"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgctxt "@title:window"
+#~ msgid "Select Categories"
+#~ msgstr "Санатын таңдау"
+
+#, fuzzy
+#~| msgid "Edit Categories"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Categories"
+#~ msgstr "Санатты өзгерту"
+
+#~ msgid "Apply changes and close"
+#~ msgstr "Өзгерістерді іске асырып, жабу"
+
+#~ msgid ""
+#~ "When clicking <b>Ok</b>, the settings will be handed over to the program "
+#~ "and the dialog will be closed."
+#~ msgstr ""
+#~ "<b>ОК</b> дегенді басқан соң, параметрлер бағдарламаға тапсырылып, диалог "
+#~ "жабылады."
+
+#~ msgid "Cancel changes and close"
+#~ msgstr "Өзгерітерден айнып жабу"
+
+#~ msgid ""
+#~ "When clicking <b>Cancel</b>, the settings will be discarded and the "
+#~ "dialog will be closed."
+#~ msgstr ""
+#~ "<b>Cancel</b> дегенді басқан соң, параметр өзгерістері ысырылып, диалог "
+#~ "жабылады."
+
+#~ msgid ""
+#~ "When clicking <b>Help</b>, a separate KHelpCenter window will open "
+#~ "providing more information about the settings."
+#~ msgstr ""
+#~ "<b>Help</b> дегенді басқан соң, баптау туралы қосымша мәлімет беретін "
+#~ "бөлек KHelpCenter терезесі ашылады."
+
+#~ msgid "New category"
+#~ msgstr "Жаңа санат"
+
+#~ msgid "New subcategory"
+#~ msgstr "Жаңа санат тармағы"
+
+#~ msgid "Select Categories"
+#~ msgstr "Санатын таңдау"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgid "Select categories"
+#~ msgstr "Санатын таңдау"
+
+#, fuzzy
+#~| msgid "Add the entry to the category list"
+#~ msgid "Use this list to choose categories."
+#~ msgstr "Санат тізіміне жаңа аталымын қосу"
+
+#~ msgid "Category"
+#~ msgstr "Санат"
+
+#~ msgid "Edit Categories"
+#~ msgstr "Санатты өзгерту"
+
+#~ msgid "New category entry"
+#~ msgstr "Жаңа санаты"
+
+#~ msgid "Type in any text you want to use as a new category or sub-category."
+#~ msgstr "Жаңа санат не сатат тармағының атауын беріңіз."
+
+#~ msgid "Add the entry to the category list"
+#~ msgstr "Санат тізіміне жаңа аталымын қосу"
+
+#~ msgid "Click this button to insert the entry into the category list."
+#~ msgstr "Санат тізіміне жаңа аталымын қосу үшін осы батырманы басыңыз."
+
+#~ msgid "A&dd"
+#~ msgstr "Қ&осу"
+
+#~ msgid "Add the entry as a subcategory of the selected category"
+#~ msgstr "Таңдалған санатқа жаңа тармағын қосу"
+
+#~ msgid ""
+#~ "Click this button to insert the entry as a subcategory of the currently "
+#~ "selected category."
+#~ msgstr "Таңдалған санатқа жаңа тармағын қосу үшін осы батырманы басыңыз."
+
+#~ msgid "Add &Subcategory"
+#~ msgstr "Санат &тармағын қосу"
+
+#~ msgid "Remove the selected category"
+#~ msgstr "Таңдалған санатын өшіру"
+
+#~ msgid ""
+#~ "Click this button to remove the selected category from the category list."
+#~ msgstr "Таңдалған санатты тізімінен кетіру үшін осыны басыңыз."
+
+#~ msgid "Category list"
+#~ msgstr "Санат тізімі"
+
+#~ msgid ""
+#~ "This is a list of all the categories available. You can create as many "
+#~ "sub-categories as you want here."
+#~ msgstr ""
+#~ "Бұл бар санаттар тізімі. Қалаған санат тармақтарын осында құруға болады."
+
+#~ msgid "Default Category"
+#~ msgstr "Әдетті санаты"
+
+#, fuzzy
+#~| msgid "Select Categories"
+#~ msgid "Select incidence categories"
+#~ msgstr "Санатын таңдау"
+
+#, fuzzy
+#~| msgid "Use this selector to choose the time between repeating reminders."
+#~ msgid "Use this list to choose incidence categories."
+#~ msgstr "Еске салуларының қайталау аралық уақытын осымен таңдаңыз."
+
+#~ msgid "&Clear Selection"
+#~ msgstr "&Таңдаудан айну"
+
+#~ msgid "&Edit Categories..."
+#~ msgstr "&Санатты өзгерту..."
+
+#~ msgctxt "The reminder is set to X days before/after the event"
+#~ msgid "days"
+#~ msgstr "күн"
+
+#~ msgctxt "@action:button Configures selected reminder"
+#~ msgid "Configure"
+#~ msgstr "Баптау"
+
+#~ msgctxt "@info"
+#~ msgid "%1 already exists. Do you want to overwrite it?"
+#~ msgstr "%1 деген бар екен. Үстінен жаза берейік пе?"
+
+#~ msgid "audio/x-wav audio/x-mp3 application/ogg"
+#~ msgstr "audio/x-wav audio/x-mp3 application/ogg"
+
+#~ msgctxt "@label Start date/time of the event or todo"
+#~ msgid "&Start:"
+#~ msgstr "&Басталуы:"
+
+#~ msgid "Overwrite"
+#~ msgstr "Үстінен жазу"
+
+#~ msgid "Remove"
+#~ msgstr "Өшіру"
+
+#~ msgid "Creates a new event"
+#~ msgstr "Жаңа оқиғаны жазып алады"
+
+#~ msgid "Creates a new todo"
+#~ msgstr "Жаңа іс жоспарды құрады"
+
+#~ msgid "Creates a new journal"
+#~ msgstr "Жаңа күнделікті құрады"
+
+#~ msgid ""
+#~ "Loads an existing item, or returns without doing anything when the item "
+#~ "is not an event or todo."
+#~ msgstr "Бар аталымды жүктеп, ол оқиға не іс жоспары болмапса, жәй қайтады."
+
+#~ msgctxt "@label end date/time for an event or to-do"
+#~ msgid "&End:"
+#~ msgstr "&Аяқталуы:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Set the description in plain text or rich text."
+#~ msgstr "Түсініктемесін жәй не пішімделген мәтінсмен келтіріңіз."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Sets the description for this event, to-do or journal. This will be "
+#~ "displayed in a reminder if one is set, as well as in a tooltip when you "
+#~ "hover over the event."
+#~ msgstr ""
+#~ "Осы оқиға, іс жоспары не күнделіктің түсініктемесін орнату. Бұл мәтін "
+#~ "еске салу орнатылса - еске салуда және оқиға жазуының үстінен тышқанның "
+#~ "меңзері өткенде көрсетіледі."
+
+#~ msgid "KOrganizer"
+#~ msgstr "KOrganizer"
+
+#~ msgid "KDE application to run the KOrganizer incidenceeditor."
+#~ msgstr "KOrganizer оқиғалар редакторы болып жегетін KDE бағдарламасы."
+
+#~ msgid "(C) 2010 Bertjan Broeksema"
+#~ msgstr "(C) 2010 Bertjan Broeksema"
+
+#~ msgid "Run the KOrganizer incidenceeditor ng."
+#~ msgstr "KOrganizer жаңа оқиға жазу редакторын жегу."
+
+#~ msgid "Bertjan Broeksema"
+#~ msgstr "Bertjan Broeksema"
+
+#~ msgid "Author"
+#~ msgstr "Авторы"
+
+#~ msgctxt "@label Start date/time of the event or task"
+#~ msgid "Start:"
+#~ msgstr "Басталуы:"
+
+#~ msgctxt "@label End date/time of the task or event"
+#~ msgid "End:"
+#~ msgstr "Аяқталуы:"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "All Day"
+#~ msgstr "Толық күн"
+
+#~ msgctxt "@label:slider completed percentage of a task"
+#~ msgid "completed"
+#~ msgstr "біткен"
+
+#~ msgctxt "@label:listbox Priority of the task"
+#~ msgid "Priority:"
+#~ msgstr "Маңыздылығы:"
+
+#~ msgctxt "@item:inlistbox No priority specified for a task"
+#~ msgid "unspecified"
+#~ msgstr "белгіленбеген"
+
+#~ msgctxt "@item:inlistbox highest priority for a task"
+#~ msgid "1 (highest)"
+#~ msgstr "1 (ең жоғары)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgctxt "@item:inlistbox medium priority for a task"
+#~ msgid "5 (medium)"
+#~ msgstr "5 (орташа)"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "6"
+#~ msgstr "6"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "7"
+#~ msgstr "7"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "8"
+#~ msgstr "8"
+
+#~ msgctxt "@item:inlistbox lowest priority for a task"
+#~ msgid "9 (lowest)"
+#~ msgstr "9 (ең төмені)"
+
+#~ msgctxt ""
+#~ "@label Task specific line in the dialog containing progress and priority"
+#~ msgid "Progress:"
+#~ msgstr "Барысы:"
+
+#~ msgid ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#~ msgstr ""
+#~ "<a href=\\\"hide\\\"><font color='blue'>Пішідемделген мәтін &gt;&gt;</"
+#~ "font></a>"
+
+#~ msgctxt ""
+#~ "Opens a selection dialog for selecting categories of an event or task"
+#~ msgid "Select"
+#~ msgstr "Таңдау"
+
+#~ msgid "Access:"
+#~ msgstr "Рұқсаттары:"
+
+#~ msgid "Organizer:"
+#~ msgstr "Ұйымдастырушы:"
+
+#~ msgid "Participants:"
+#~ msgstr "Жиналғандары:"
+
+#~ msgid "X time conflicts"
+#~ msgstr "X уақыт қайшылық"
+
+#~ msgid "Solve..."
+#~ msgstr "Шешу..."
+
+#~ msgctxt "Select attendees from addressbook"
+#~ msgid "Select..."
+#~ msgstr "Таңдау..."
+
+#~ msgid "Add"
+#~ msgstr "Қосу"
+
+#~ msgid "Configure"
+#~ msgstr "Баптау"
+
+#~ msgid "Disable"
+#~ msgstr "Болмасын"
+
+#~ msgid "Repeat never"
+#~ msgstr "Ешқашанда"
+
+#~ msgid "Repeat daily"
+#~ msgstr "Күн сайын"
+
+#~ msgid "Repeat weekly"
+#~ msgstr "Апта сайын"
+
+#~ msgid "Repeat monthly"
+#~ msgstr "Ай сайын"
+
+#~ msgid "Repeat yearly"
+#~ msgstr "Жыл сайын"
+
+#~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
+#~ msgid "every"
+#~ msgstr "әрбір"
+
+#~ msgid "Ends never"
+#~ msgstr "ешқашан бітпейтін"
+
+#~ msgid "Ends on"
+#~ msgstr "бітетін кезі"
+
+#~ msgid "Ends after"
+#~ msgstr "мынадан кейін бітіру"
+
+#~ msgid "MM.dd.yyyy"
+#~ msgstr "dd.mm.yyyy"
+
+#~ msgid "Exceptions:"
+#~ msgstr "Болмайтын кездері:"
+
+#~ msgid "dd.MM.yyyy"
+#~ msgstr "dd.mm.yyyy"
+
+#~ msgid "Time"
+#~ msgstr "Уақыт"
+
+#~ msgid "&How often:"
+#~ msgstr "&Жиілігі:"
+
+#~ msgid "&Interval:"
+#~ msgstr "&Аралығы:"
+
+#~ msgid "&Repeating:"
+#~ msgstr "&Кайталануы:"
+
+#~ msgid "Type"
+#~ msgstr "Түрі"
+
+#~ msgid "Display optional text when the reminder is triggered"
+#~ msgstr "Еске салу кезде қалаған мәтінді көрсету"
+
+#~ msgid ""
+#~ "Check this option if you want to display optional text in a popup notice "
+#~ "when the reminder triggers."
+#~ msgstr ""
+#~ "Еске салу кезде қалаған мәтін қалқып шығып көрсетілсін десеңіз - белісін "
+#~ "қойыңыз."
+
+#~ msgid "&Display"
+#~ msgstr "&Көрсету"
+
+#~ msgid "Play a sound when the reminder is triggered"
+#~ msgstr "Еске салу кезде дыбысты шығару"
+
+#~ msgid ""
+#~ "Check this option if you want to play a sound when the reminder triggers."
+#~ msgstr "Еске салу кезде дыбыс шығарылсын десеңіз - белісін қойыңыз."
+
+#~ msgid "&Sound"
+#~ msgstr "&Дыбыс"
+
+#~ msgid "Run an application or script when the reminder is triggered"
+#~ msgstr "Еске салу кезде бағдарлама не скриптті орындау"
+
+#~ msgid ""
+#~ "Check this option if you want to run an application (or script) when the "
+#~ "reminder triggers."
+#~ msgstr ""
+#~ "Еске салу кезде бір бағдарлама (не скрипт) жегілсін десеңіз - белісін "
+#~ "қойыңыз."
+
+#~ msgid "Application / script"
+#~ msgstr "Бағдарлама / скрипт"
+
+#~ msgid "Send email when the reminder is triggered"
+#~ msgstr "Еске салу кезде эл.поштаны жіберу"
+
+#~ msgid ""
+#~ "Check this option if you want to send an email message when the reminder "
+#~ "triggers."
+#~ msgstr "Еске салу кезде эл.пошта жіберілсін десеңіз - белісін қойыңыз."
+
+#~ msgid "Display &text:"
+#~ msgstr "Көрсететін &жазуы:"
+
+#~ msgid "Sound &file:"
+#~ msgstr "Дыбыс &файлы:"
+
+#~ msgid "&Text of the message:"
+#~ msgstr "Хабарлама &жазуы:"
+
+#~ msgid "Remove the currently selected reminder"
+#~ msgstr "Таңдалған еске салуды өшіру"
+
+#~ msgid ""
+#~ "Click this button if you want to remove the currently selected reminder. "
+#~ "Be careful with this option as there is no way to undo this operation."
+#~ msgstr ""
+#~ "Таңдалған еске салуды өшіру үшін осы батырманы басыңыз. Байқаңыз, істеген "
+#~ "амалдан айнуға мүмкіндік болмайды."
+
+#~ msgid "Create a new reminder using the settings specified below"
+#~ msgstr "Төменде келтірілген параметрлерімен жаңа еске салуды құру"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "specified below. You can continue to change the settings as needed."
+#~ msgstr ""
+#~ "Төменде келтірілген параметрлерімен жаңа еске салуды құру үшін осыны "
+#~ "басыңыз. Керек болса, параметрлерін қазір өзгертуге болады."
+
+#~ msgctxt "Add a new alarm to the alarm list"
+#~ msgid "&Add"
+#~ msgstr "Қ&осу"
+
+#~ msgid "Create a new reminder from the currently selected reminder"
+#~ msgstr "Таңдалған еске салудың негізінде жаңасын құру"
+
+#~ msgid ""
+#~ "Click this button if you want to create a new reminder using the settings "
+#~ "stored in the currently selected reminder. You can continue to change the "
+#~ "settings as needed."
+#~ msgstr ""
+#~ "Таңдалған еске салудың параметрлерін қайталап, жаңа еске салуды құру үшін "
+#~ "осыны басыңыз. Керек болса, параметрлерін қазір өзгертуге болады."
+
+#~ msgid "D&uplicate"
+#~ msgstr "&Қосарлау"
+
+#~ msgid "The list of reminders for this event or to-do"
+#~ msgstr "Осы оқиға не іс жоспарының еске салулар тізімі"
+
+#~ msgid ""
+#~ "This area displays a list of all the reminders you have specified for "
+#~ "this event or to-do."
+#~ msgstr ""
+#~ "Бұл панелінде осы оқиға не іс жоспарының еске салулар тізіміңіз "
+#~ "көрсетіледі."
+
+#~ msgid "Offset"
+#~ msgstr "Шегінісі"
+
+#~ msgid "Repeat"
+#~ msgstr "Қайталау"
+
+#, fuzzy
+#~| msgid "Type"
+#~ msgctxt "Type of resource (vCard attribute)"
+#~ msgid "cuType"
+#~ msgstr "Түрі"
+
+#, fuzzy
+#~| msgid "Send email"
+#~ msgctxt "attendee email"
+#~ msgid "email"
+#~ msgstr "Эл.поштаны жіберу"
+
+#~ msgctxt "@label Day of the week name, example: Monday,"
+#~ msgid "%1,"
+#~ msgstr "%1,"
+
+#~ msgctxt ""
+#~ "@label A time period duration. It is preceded/followed (based on the "
+#~ "orientation) by the name of the week, see the message above. example: 12 "
+#~ "June, 8:00am to 9:30am"
+#~ msgid "%1 %2, %3 to %4"
+#~ msgstr "%1 %2, %3 - %4"
+
+#~ msgctxt ""
+#~ "@label A time period duration. KLocale is used to format the components. "
+#~ "example: Monday, 12 June, 8:00am to 9:30am"
+#~ msgid "%1, %2 %3, %4 to %5"
+#~ msgstr "%1, %2 %3, %4 - %5"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Free Period"
+#~ msgstr "Бос кезі"
+
+#~ msgctxt "@info:tooltip period duration"
+#~ msgid "Duration:"
+#~ msgstr "Ұзақтығы:"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sairan@computer.org"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Select Categories"
+#~ msgstr "Санаттарын таңдау"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Select a template and "
+#~ "click <span style=\" font-weight:600;\">Apply</span> to apply it to this "
+#~ "item. Click <span style=\" font-weight:600;\">New</span> to create a new "
+#~ "template based on the current item settings.</p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Үлгіні осыған қолдану "
+#~ "үшін, үлгіні таңдап <span style=\" font-weight:600;\">Қолдану</span> "
+#~ "дегенді басыңыз. Бар параметрлерді қолданып жаңа үлгіні құру үшін <span "
+#~ "style=\" font-weight:600;\">Жаңа</span> дегенді басыңыз. </p></body></"
+#~ "html>"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Categories..."
+#~ msgstr "&Санаттар..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Manage categories for this item"
+#~ msgstr "Осының санаттарын басқару"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Push this button to show a dialog that helps you manage your categories."
+#~ msgstr "Осы батырманы санаттарын басқаратын диалогын шығарыңыз."
+
+#~ msgctxt "@option:check"
+#~ msgid "Takes the whole day"
+#~ msgstr "Бүкіл күнге созылмақ"
+
+#~ msgctxt "@option:check The event or task takes the whole day"
+#~ msgid "Whole day"
+#~ msgstr "Толық күн"
+
+#~ msgctxt "@label There are no scheduling conflicts."
+#~ msgid "No conflicts"
+#~ msgstr "Қайшылық жоқ"
