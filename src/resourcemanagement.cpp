@@ -29,7 +29,10 @@
 #include <QWindow>
 
 using namespace IncidenceEditorNG;
-
+namespace
+{
+static const char myResourceManagementConfigGroupName[] = "ResourceManagement";
+}
 class FreebusyViewCalendar : public EventViews::ViewCalendar
 {
 public:
@@ -150,14 +153,14 @@ void ResourceManagement::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myResourceManagementConfigGroupName);
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ResourceManagement::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ResourceManagement");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myResourceManagementConfigGroupName);
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

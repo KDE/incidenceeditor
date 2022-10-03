@@ -51,7 +51,10 @@
 #include <QWindow>
 
 using namespace IncidenceEditorNG;
-
+namespace
+{
+static const char myIncidenceDialogConfigGroupName[] = "IncidenceDialog";
+}
 namespace IncidenceEditorNG
 {
 enum Tabs { GeneralTab = 0, AttendeesTab, ResourcesTab, AlarmsTab, RecurrenceTab, AttachmentsTab };
@@ -704,7 +707,7 @@ IncidenceDialog::~IncidenceDialog()
 
 void IncidenceDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myIncidenceDialogConfigGroupName);
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -712,7 +715,7 @@ void IncidenceDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 500));
-    KConfigGroup group(KSharedConfig::openStateConfig(), "IncidenceDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myIncidenceDialogConfigGroupName);
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
