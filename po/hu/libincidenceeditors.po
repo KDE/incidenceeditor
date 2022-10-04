@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2014-09-13 00:11+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -852,102 +852,102 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Formázott szöveg letiltása"
 
-#: incidencedialog.cpp:210
+#: incidencedialog.cpp:213
 #, kde-format
 msgid "Select a valid collection first."
 msgstr ""
 
-#: incidencedialog.cpp:233
+#: incidencedialog.cpp:236
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Emlékeztető (%1)"
 
-#: incidencedialog.cpp:235
+#: incidencedialog.cpp:238
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Emlékeztető"
 
-#: incidencedialog.cpp:243
+#: incidencedialog.cpp:246
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Is&métlődés"
 
-#: incidencedialog.cpp:253
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (N)"
 
-#: incidencedialog.cpp:256
+#: incidencedialog.cpp:259
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (7)"
 
-#: incidencedialog.cpp:259
+#: incidencedialog.cpp:262
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (H)"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:265
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (É)"
 
-#: incidencedialog.cpp:265
+#: incidencedialog.cpp:268
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (E)"
 
-#: incidencedialog.cpp:299
+#: incidencedialog.cpp:302
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "A(z) „%1” sablon nem található."
 
-#: incidencedialog.cpp:305
+#: incidencedialog.cpp:308
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Hiba a(z) „%1” sablonfájl betöltése közben."
 
-#: incidencedialog.cpp:311
+#: incidencedialog.cpp:314
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "A sablon nem tartalmaz érvényes eseményt."
 
-#: incidencedialog.cpp:410
+#: incidencedialog.cpp:413
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "Mellé&kletek (%1)"
 
-#: incidencedialog.cpp:412
+#: incidencedialog.cpp:415
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Mellé&kletek"
 
-#: incidencedialog.cpp:419
+#: incidencedialog.cpp:422
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "Részt&vevők (%1)"
 
-#: incidencedialog.cpp:421
+#: incidencedialog.cpp:424
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "Részt&vevők"
 
-#: incidencedialog.cpp:428
+#: incidencedialog.cpp:431
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to modify attendees of an event or todo"
 #| msgid "&Attendees (%1)"
@@ -955,13 +955,13 @@ msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "Részt&vevők (%1)"
 
-#: incidencedialog.cpp:430
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr ""
 
-#: incidencedialog.cpp:452
+#: incidencedialog.cpp:455
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -973,13 +973,13 @@ msgstr ""
 "\n"
 " Ok: %1"
 
-#: incidencedialog.cpp:458
+#: incidencedialog.cpp:461
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr ""
 
-#: incidencedialog.cpp:480
+#: incidencedialog.cpp:483
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -990,21 +990,21 @@ msgid ""
 "%1</resource>?</para>"
 msgstr ""
 
-#: incidencedialog.cpp:488
+#: incidencedialog.cpp:491
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
 msgstr "Alapértelmezett kategória"
 
-#: incidencedialog.cpp:489
+#: incidencedialog.cpp:492
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Alapértelmezett kategória"
 
-#: incidencedialog.cpp:490
+#: incidencedialog.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1012,37 +1012,37 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Ne küldjön"
 
-#: incidencedialog.cpp:670
+#: incidencedialog.cpp:673
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Jelenlegi változtatások mentése"
 
-#: incidencedialog.cpp:671
+#: incidencedialog.cpp:674
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "A módosítások elmentése, a párbeszédablak bezárása"
 
-#: incidencedialog.cpp:672
+#: incidencedialog.cpp:675
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Változtatások eldobása és a párbeszédablak bezárása"
 
-#: incidencedialog.cpp:676
+#: incidencedialog.cpp:679
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates..."
 msgstr "&Sablonok…"
 
-#: incidencedialog.cpp:678
+#: incidencedialog.cpp:681
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Az elem sablonjainak kezelése"
 
-#: incidencedialog.cpp:680
+#: incidencedialog.cpp:683
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1051,25 +1051,25 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 
-#: incidencedialog.cpp:777 incidencedialog.cpp:798 incidencedialog.cpp:814
+#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Biztosan megszakítja?"
 
-#: incidencedialog.cpp:778 incidencedialog.cpp:799 incidencedialog.cpp:815
+#: incidencedialog.cpp:781 incidencedialog.cpp:802 incidencedialog.cpp:818
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer jóváhagyás"
 
-#: incidencedialog.cpp:779 incidencedialog.cpp:800 incidencedialog.cpp:816
+#: incidencedialog.cpp:782 incidencedialog.cpp:803 incidencedialog.cpp:819
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#: incidencedialog.cpp:783 incidencedialog.cpp:804 incidencedialog.cpp:820
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1407,14 +1407,14 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Nem lehet kapcsolódni az e-mail szolgáltatáshoz"
 
-#: resourcemanagement.cpp:93
+#: resourcemanagement.cpp:96
 #, fuzzy, kde-format
 #| msgid "Template Management"
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Sablonkezelés"
 
-#: resourcemanagement.cpp:98
+#: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
