@@ -582,7 +582,7 @@ msgstr "C&ancel·la"
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
-msgstr "&Obri"
+msgstr "O&bri"
 
 #: incidenceattachment.cpp:481
 #, kde-format
