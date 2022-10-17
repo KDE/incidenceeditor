@@ -41,6 +41,7 @@
 
 #include <KMessageBox>
 #include <KSharedConfig>
+#include <kwidgetsaddons_version.h>
 
 #include <KWindowConfig>
 #include <QCloseEvent>
@@ -455,12 +456,20 @@ void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction, c
                                       "Unable to store the incidence in the calendar. Try again?\n\n "
                                       "Reason: %1",
                                       errorMessage);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int answer = KMessageBox::warningTwoActions(q,
+#else
         const int answer = KMessageBox::warningYesNo(q,
-                                                     message,
-                                                     QString(),
-                                                     KGuiItem(i18nc("@action:button", "Retry"), QStringLiteral("dialog-ok")),
-                                                     KStandardGuiItem::cancel());
+#endif
+                                                          message,
+                                                          QString(),
+                                                          KGuiItem(i18nc("@action:button", "Retry"), QStringLiteral("dialog-ok")),
+                                                          KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        retry = (answer == KMessageBox::ButtonCode::PrimaryAction);
+#else
         retry = (answer == KMessageBox::Yes);
+#endif
     }
 
     if (retry) {
@@ -486,13 +495,21 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
                                        "<para>Would you like to set your default events calendar to "
                                        "<resource>%1</resource>?</para>",
                                        collectionName);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int answer = KMessageBox::questionTwoActions(q,
+#else
         const int answer = KMessageBox::questionYesNo(q,
-                                                      message,
-                                                      i18nc("@title:window", "Set Default Calendar?"),
-                                                      KGuiItem(i18nc("@action:button", "Set As Default"), QStringLiteral("dialog-ok")),
-                                                      KGuiItem(i18nc("@action:button", "Do Not Set"), QStringLiteral("dialog-cancel")),
-                                                      QStringLiteral("setDefaultCalendarCollection"));
+#endif
+                                                           message,
+                                                           i18nc("@title:window", "Set Default Calendar?"),
+                                                           KGuiItem(i18nc("@action:button", "Set As Default"), QStringLiteral("dialog-ok")),
+                                                           KGuiItem(i18nc("@action:button", "Do Not Set"), QStringLiteral("dialog-cancel")),
+                                                           QStringLiteral("setDefaultCalendarCollection"));
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (answer == KMessageBox::Yes) {
+#endif
             CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
         }
     }
@@ -776,12 +793,20 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
         d->mItemManager->save();
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::Cancel) == button) {
         if (d->isDirty()
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            && KMessageBox::questionTwoActions(this,
+#else
             && KMessageBox::questionYesNo(this,
-                                          i18nc("@info", "Do you really want to cancel?"),
-                                          i18nc("@title:window", "KOrganizer Confirmation"),
-                                          KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                          KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#endif
+                                               i18nc("@info", "Do you really want to cancel?"),
+                                               i18nc("@title:window", "KOrganizer Confirmation"),
+                                               KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                               KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 == KMessageBox::Yes) {
+#endif
             QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
             QDialog::reject(); // No pending changes, just close the dialog.
@@ -797,12 +822,20 @@ void IncidenceDialog::reject()
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        && KMessageBox::questionTwoActions(this,
+#else
         && KMessageBox::questionYesNo(this,
-                                      i18nc("@info", "Do you really want to cancel?"),
-                                      i18nc("@title:window", "KOrganizer Confirmation"),
-                                      KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                      KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#endif
+                                           i18nc("@info", "Do you really want to cancel?"),
+                                           i18nc("@title:window", "KOrganizer Confirmation"),
+                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            == KMessageBox::ButtonCode::PrimaryAction) {
+#else
             == KMessageBox::Yes) {
+#endif
         QDialog::reject(); // Discard current changes
     } else if (!d->isDirty()) {
         QDialog::reject(); // No pending changes, just close the dialog.
@@ -813,12 +846,20 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
     Q_D(IncidenceDialog);
     if (d->isDirty()
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        && KMessageBox::questionTwoActions(this,
+#else
         && KMessageBox::questionYesNo(this,
-                                      i18nc("@info", "Do you really want to cancel?"),
-                                      i18nc("@title:window", "KOrganizer Confirmation"),
-                                      KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                      KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#endif
+                                           i18nc("@info", "Do you really want to cancel?"),
+                                           i18nc("@title:window", "KOrganizer Confirmation"),
+                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            == KMessageBox::ButtonCode::PrimaryAction) {
+#else
             == KMessageBox::Yes) {
+#endif
         QDialog::reject(); // Discard current changes
         QDialog::closeEvent(event);
     } else if (!d->isDirty()) {

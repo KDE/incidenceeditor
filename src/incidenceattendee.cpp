@@ -36,6 +36,7 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QTreeView>
+#include <kwidgetsaddons_version.h>
 
 using namespace IncidenceEditorNG;
 
@@ -199,14 +200,19 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
             continue;
         }
         if (KEmailAddress::isValidAddress(attendee.email())) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::warningTwoActions(nullptr,
+#else
             if (KMessageBox::warningYesNo(nullptr,
-                                          i18nc("@info",
-                                                "%1 does not look like a valid email address. "
-                                                "Are you sure you want to invite this participant?",
-                                                attendee.email()),
-                                          i18nc("@title:window", "Invalid Email Address"),
-                                          KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
-                                          KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
+
+#endif
+                                               i18nc("@info",
+                                                     "%1 does not look like a valid email address. "
+                                                     "Are you sure you want to invite this participant?",
+                                                     attendee.email()),
+                                               i18nc("@title:window", "Invalid Email Address"),
+                                               KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
+                                               KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
                 != KMessageBox::Yes) {
                 skip = true;
             }
@@ -774,19 +780,27 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
 
     int answer;
     if (currentOrganizerAttendee > -1) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        answer = KMessageBox::questionTwoActions(mParentWidget,
+#else
         answer = KMessageBox::questionYesNo(mParentWidget,
-                                            i18nc("@option",
-                                                  "You are changing the organizer of this event. "
-                                                  "Since the organizer is also attending this event, would you "
-                                                  "like to change the corresponding attendee as well?"),
-                                            QString(),
-                                            KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
-                                            KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
+#endif
+                                                 i18nc("@option",
+                                                       "You are changing the organizer of this event. "
+                                                       "Since the organizer is also attending this event, would you "
+                                                       "like to change the corresponding attendee as well?"),
+                                                 QString(),
+                                                 KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
+                                                 KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
     } else {
         answer = KMessageBox::Yes;
     }
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
     if (answer == KMessageBox::Yes) {
+#endif
         if (currentOrganizerAttendee > -1) {
             mDataModel->removeRows(currentOrganizerAttendee, 1);
         }

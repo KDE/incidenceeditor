@@ -36,6 +36,7 @@
 #include <QMimeData>
 #include <QMimeDatabase>
 #include <QMimeType>
+#include <kwidgetsaddons_version.h>
 
 using namespace IncidenceEditorNG;
 
@@ -188,13 +189,22 @@ void IncidenceAttachment::removeSelectedAttachments()
 
     QString labelsStr = labels.join(QLatin1String("<nl/>"));
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (KMessageBox::questionTwoActions(nullptr,
+#else
     if (KMessageBox::questionYesNo(nullptr,
-                                   xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
-                                   i18nc("@title:window", "Remove Attachments?"),
-                                   KStandardGuiItem::remove(),
-                                   KStandardGuiItem::cancel(),
-                                   QStringLiteral("calendarRemoveAttachments"))
+
+#endif
+                                        xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
+                                        i18nc("@title:window", "Remove Attachments?"),
+                                        KStandardGuiItem::remove(),
+                                        KStandardGuiItem::cancel(),
+                                        QStringLiteral("calendarRemoveAttachments"))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        != KMessageBox::ButtonCode::PrimaryAction) {
+#else
         != KMessageBox::Yes) {
+#endif
         return;
     }
 
