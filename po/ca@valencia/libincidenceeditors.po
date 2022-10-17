@@ -1008,8 +1008,8 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 "Premeu este botó per a mostrar un diàleg que vos ajudarà a gestionar un joc "
-"de plantilles. Les plantilles poden fer més fàcil i ràpid crear nous "
-"elements posant els vostres valors predeterminats a l'editor automàticament."
+"de plantilles. Les plantilles poden fer més fàcil i ràpid crear elements "
+"nous posant els vostres valors predeterminats a l'editor automàticament."
 
 #: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
 #, kde-format
@@ -2521,7 +2521,7 @@ msgstr "Hora d'acabament més tardana:"
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr "Marqueu els dies de la setmana que s'hagen d'incloure en la busca."
+msgstr "Marqueu els dies de la setmana que s'inclouran en la busca."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2544,7 +2544,7 @@ msgstr "Dies de la setmana permesos:"
 #: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
 #, kde-format
 msgid "Check the roles to include in the search."
-msgstr "Marqueu els rols que s'hagen d'incloure en la busca."
+msgstr "Marqueu els rols que s'inclouran en la busca."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2637,7 +2637,7 @@ msgid ""
 "creating new calendar items."
 msgstr ""
 "Esta és una llista de les plantilles a les quals podeu accedir per a crear "
-"nous elements del calendari."
+"elements nous del calendari."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:56
@@ -2654,8 +2654,8 @@ msgid ""
 "future."
 msgstr ""
 "Cliqueu este botó per a crear una plantilla nova basada en la configuració "
-"actual en l'editor. Podeu utilitzar esta plantilla per a afegir nous "
-"elements ràpidament en un futur."
+"actual en l'editor. Podeu utilitzar esta plantilla per a afegir elements "
+"nous ràpidament en un futur."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
