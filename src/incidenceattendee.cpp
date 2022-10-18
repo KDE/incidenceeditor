@@ -213,7 +213,11 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
                                                i18nc("@title:window", "Invalid Email Address"),
                                                KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
                                                KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                != KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 != KMessageBox::Yes) {
+#endif
                 skip = true;
             }
         }
@@ -793,7 +797,11 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
                                                  KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
                                                  KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
     } else {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        answer = KMessageBox::ButtonCode::PrimaryAction;
+#else
         answer = KMessageBox::Yes;
+#endif
     }
 
 #if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
