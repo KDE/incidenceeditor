@@ -6,7 +6,7 @@
 #include "ktimezonecomboboxtest.h"
 #include "../src/ktimezonecombobox.h"
 
-#include "qtest.h"
+#include <QTest>
 
 #include <QTimeZone>
 
