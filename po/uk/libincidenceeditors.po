@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-10-19 00:46+0000\n"
 "PO-Revision-Date: 2021-11-06 05:57+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -656,13 +656,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Не запрошувати"
 
-#: incidenceattendee.cpp:438
+#: incidenceattendee.cpp:442
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Вкажіть учасників"
 
-#: incidenceattendee.cpp:618
+#: incidenceattendee.cpp:622
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -672,7 +672,7 @@ msgstr[1] "%1 конфлікти"
 msgstr[2] "%1 конфліктів"
 msgstr[3] "%1 конфлікт"
 
-#: incidenceattendee.cpp:789
+#: incidenceattendee.cpp:793
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -683,13 +683,13 @@ msgstr ""
 "Ви змінюєте організатора цієї події. Оскільки організатор також присутній на "
 "цій події, чи не бажаєте ви також змінити параметри відповідного учасника?"
 
-#: incidenceattendee.cpp:793
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Змінити учасника"
 
-#: incidenceattendee.cpp:794
+#: incidenceattendee.cpp:798
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-10-19 00:46+0000\n"
 "PO-Revision-Date: 2020-01-05 19:14+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -644,14 +644,14 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Non enviar"
 
-#: incidenceattendee.cpp:438
+#: incidenceattendee.cpp:442
 #, fuzzy, kde-format
 #| msgid "Select Attendees"
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Seleccionar os asistentes"
 
-#: incidenceattendee.cpp:618
+#: incidenceattendee.cpp:622
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -659,7 +659,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 conflito"
 msgstr[1] "%1 conflitos"
 
-#: incidenceattendee.cpp:789
+#: incidenceattendee.cpp:793
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -670,14 +670,14 @@ msgstr ""
 "Está a cambiar o organizador deste evento. Dado que o organizador tamén "
 "asiste ao evento, quere cambiar tamén o asistente correspondente?"
 
-#: incidenceattendee.cpp:793
+#: incidenceattendee.cpp:797
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Asistente"
 
-#: incidenceattendee.cpp:794
+#: incidenceattendee.cpp:798
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"

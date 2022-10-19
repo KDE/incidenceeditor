@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-10-19 00:46+0000\n"
 "PO-Revision-Date: 2020-11-17 19:50+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -635,13 +635,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Send ikke"
 
-#: incidenceattendee.cpp:438
+#: incidenceattendee.cpp:442
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vælg deltagere"
 
-#: incidenceattendee.cpp:618
+#: incidenceattendee.cpp:622
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -649,7 +649,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikter"
 
-#: incidenceattendee.cpp:789
+#: incidenceattendee.cpp:793
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -660,7 +660,7 @@ msgstr ""
 "Du er ved at ændre organisator for denne begivenhed. Vil du også ændre den "
 "tilsvarende deltager, da organisatoren også deltager i begivenheden?"
 
-#: incidenceattendee.cpp:793
+#: incidenceattendee.cpp:797
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "One attendee"
@@ -669,7 +669,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "1 deltager"
 
-#: incidenceattendee.cpp:794
+#: incidenceattendee.cpp:798
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "No Changes"

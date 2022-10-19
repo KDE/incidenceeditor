@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-10-19 00:46+0000\n"
 "PO-Revision-Date: 2018-01-31 14:57+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -672,14 +672,14 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "لا تُرسل بريدًا"
 
-#: incidenceattendee.cpp:438
+#: incidenceattendee.cpp:442
 #, fuzzy, kde-format
 #| msgid "Select Attendees"
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "حدّد الحضور"
 
-#: incidenceattendee.cpp:618
+#: incidenceattendee.cpp:622
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -691,7 +691,7 @@ msgstr[3] "%1 تضاربات"
 msgstr[4] "%1 تضاربًا"
 msgstr[5] "%1 تضارب"
 
-#: incidenceattendee.cpp:789
+#: incidenceattendee.cpp:793
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -702,7 +702,7 @@ msgstr ""
 "أنت تغيّر منظّم هذا الحدث. بما أنّ المنظّم سيحضر الحدث أيضًا، أتريد تغيير الحاضر "
 "المقابل أيضًا؟"
 
-#: incidenceattendee.cpp:793
+#: incidenceattendee.cpp:797
 #, fuzzy, kde-format
 #| msgctxt "@title:tab attendees of this event or to-do"
 #| msgid "Attendees"
@@ -710,7 +710,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "الحضور"
 
-#: incidenceattendee.cpp:794
+#: incidenceattendee.cpp:798
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
