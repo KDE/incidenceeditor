@@ -2619,9 +2619,9 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
-"Seleccioneu una plantilla i feu clic a <i>Aplica</i> per a aplicar-la a este "
-"element. Feu clic a <i>Nova</i> per a crear una plantilla nova basada en les "
-"preferències de l'element actual."
+"Seleccioneu una plantilla i feu clic en <i>Aplica</i> per a aplicar-la a "
+"este element. Feu clic en <i>Nova</i> per a crear una plantilla nova basada "
+"en les preferències de l'element actual."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
