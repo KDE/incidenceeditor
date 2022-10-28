@@ -2,32 +2,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2018-01-31 14:57+0300\n"
-"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
-"Language-Team: Arabic <doc@arabeyes.org>\n"
+"PO-Revision-Date: 2022-10-27 12:51+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: alarmdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create a new reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
 msgstr "أنشئ تذكيرًا جديدًا"
 
 #: alarmdialog.cpp:67
-#, fuzzy, kde-format
-#| msgid "Edit existing reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "حرّر التّذكير الحاليّ"
@@ -157,8 +156,7 @@ msgstr[4] "%1 يومًا قبل الاستحقاق"
 msgstr[5] "%1 يوم قبل الاستحقاق"
 
 #: attachmenteditdialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Edit Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "حرّر المرفق"
@@ -348,8 +346,7 @@ msgid "End:"
 msgstr "النّهاية:"
 
 #: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
 msgstr "حرّر مكان متفرّغ/مشغول"
@@ -360,18 +357,16 @@ msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
 msgstr "مكان معلومات متفرّغ/مشغول لِ‍ %1 ‏<placeholder>%2</placeholder>:"
 
 #: freebusyurldialog.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Enter the name or email address of the attendee."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "أدخِل اسم أو عنوان بريد الحاضر."
+msgstr "أدخِل موقع معلومات متفرغ/مشغول للحاضر."
 
 #: freebusyurldialog.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
-msgstr ""
+msgstr "أدخل موقع المعلومات."
 
 #: incidencealarm.cpp:250
 #, kde-format
@@ -662,19 +657,16 @@ msgstr "عنوان البريد الإلكترونيّ غير صالح"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "ادعُ"
 
 #: incidenceattendee.cpp:215
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "لا تُرسل بريدًا"
+msgstr "لا تدع"
 
 #: incidenceattendee.cpp:442
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "حدّد الحضور"
@@ -703,20 +695,16 @@ msgstr ""
 "المقابل أيضًا؟"
 
 #: incidenceattendee.cpp:797
-#, fuzzy, kde-format
-#| msgctxt "@title:tab attendees of this event or to-do"
-#| msgid "Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "الحضور"
+msgstr "غيّر الحضور"
 
 #: incidenceattendee.cpp:798
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "لا تُرسل بريدًا"
+msgstr "لا تغير"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -776,36 +764,28 @@ msgid "Ending Time"
 msgstr "وقت الانتهاء"
 
 #: incidencedatetime.cpp:848
-#, fuzzy, kde-format
-#| msgctxt "Alarm action"
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "التّذكير غير صالح."
+msgstr "تاريخ بدء غير صالح."
 
 #: incidencedatetime.cpp:853
-#, fuzzy, kde-format
-#| msgctxt "Alarm action"
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "التّذكير غير صالح."
+msgstr "وقت بدء غير صالح."
 
 #: incidencedatetime.cpp:861
-#, fuzzy, kde-format
-#| msgctxt "Alarm action"
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "التّذكير غير صالح."
+msgstr "تاريخ نهاية غير صالح."
 
 #: incidencedatetime.cpp:866
-#, fuzzy, kde-format
-#| msgctxt "Alarm action"
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "التّذكير غير صالح."
+msgstr "وقت نهاية غير صالح."
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -846,17 +826,13 @@ msgid "invalid@email.address"
 msgstr "invalid@email.address"
 
 #: incidencedescription.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@action Enable or disable rich text editting"
-#| msgid "Enable rich text"
+#, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Enable rich text"
 msgstr "فعّل النّصّ الغنيّ"
 
 #: incidencedescription.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@action Enable or disable rich text editting"
-#| msgid "Disable rich text"
+#, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "عطّل النّصّ الغنيّ"
@@ -984,7 +960,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "أعد المحاولة"
 
 #: incidencedialog.cpp:492
 #, kde-kuit-format
@@ -996,28 +972,28 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
+"<para> لم تقم بتعيين تقويم مبدئي لأحداثك حتى الآن. </para> <para> سيجعل "
+"إعداد تقويم المبدئي إنشاء أحداث جديدة أسرع وأسهل مع فرصة أقل لأرشفتها في "
+"المجلد الخطأ. </para> <para> هل ترغب في تعيين <resource>%1</resource> كتقويم "
+"الأحداث المبدئي الخاصة بك؟ </para>"
 
 #: incidencedialog.cpp:504
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "الفئة المبدئيّة"
+msgstr "أأجعله التقويم المبدئي؟"
 
 #: incidencedialog.cpp:505
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "الفئة المبدئيّة"
+msgstr "اجعله المبدئي"
 
 #: incidencedialog.cpp:506
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "لا تُرسل بريدًا"
+msgstr "لا تعيّن"
 
 #: incidencedialog.cpp:690
 #, kde-format
@@ -1077,15 +1053,13 @@ msgstr "تأكيد «منظّمك»"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "ألغ التحرير"
 
 #: incidencedialog.cpp:804 incidencedialog.cpp:833 incidencedialog.cpp:857
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "لا تُرسل بريدًا"
+msgstr "لا تُلغ"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1095,10 +1069,9 @@ msgstr "طريقة مرفقات البريد الافتراضيّة"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
-#, fuzzy, kde-format
-#| msgid "The default way of attaching dropped emails to an event"
+#, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
-msgstr "الطّريقة المبدئيّة في إرفاق البريد التي يُفلت على الأحداث"
+msgstr "اختر الطّريقة المبدئيّة في إرفاق البريد لحدث ما"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:14
@@ -1155,11 +1128,10 @@ msgid "The incidence's start date is invalid."
 msgstr "تاريخ بدء الحدوث غير صالح."
 
 #: incidencerecurrence.cpp:465
-#, fuzzy, kde-format
-#| msgid "The incidence's start date is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
-msgstr "تاريخ بدء الحدوث غير صالح."
+msgstr "تاريخ نهاية الحدوث غير صالح."
 
 #: incidencerecurrence.cpp:508
 #, kde-format
@@ -1308,7 +1280,7 @@ msgstr[5] "كلّ"
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr ""
+msgstr "فضلاً أدخل ملخص."
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
@@ -1352,15 +1324,13 @@ msgstr "حرّر البريد"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
-msgstr ""
+msgstr "خيارات لحاضر معين"
 
 #: individualmaildialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Provide a location for the attachment file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
-msgstr "أدخِل مكان ملفّ المرفق"
+msgstr "اختر خيار لهذا الحاضر."
 
 #: individualmaildialog.cpp:111
 #, kde-format
@@ -1435,8 +1405,7 @@ msgid "Cannot connect to email service"
 msgstr "تعذّر الاتّصال بخدمة البريد الإلكترونيّ"
 
 #: resourcemanagement.cpp:96
-#, fuzzy, kde-format
-#| msgid "Resource Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "إدارة الموارد"
@@ -1448,8 +1417,7 @@ msgid "Book resource"
 msgstr "احجز المورد"
 
 #: schedulingdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Scheduling"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "الجدولة"
@@ -1471,8 +1439,7 @@ msgid "to %1"
 msgstr "حتّى %1"
 
 #: templatemanagementdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "أدِر قوالب %1"
@@ -1689,18 +1656,15 @@ msgstr "الفعل:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Select the alarm type"
-msgstr "اضبط تاريخ البدء"
+msgstr "اختر نوع التنبيه"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr "استخدم مربّع الأعداد هذا لتحديد الوقت بين كلّ تذكير والآخر."
+msgstr "استخدم هذا المحدد لاختيار نوع المنبه لكل التنبيهات."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
@@ -1847,14 +1811,13 @@ msgstr "النّوع:"
 #: ui/dialogdesktop.ui:20
 #, kde-format
 msgid "A message on this incidence item"
-msgstr ""
+msgstr "رسالة حول هذا الحدوث"
 
 #. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:23
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this message to correct the item parameters."
-msgstr "استخدم مربّع الأعداد هذا لتحديد الوقت بين كلّ تذكير والآخر."
+msgstr "استخدم هذه الرسالة لتصحيح معلمات العنصر."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
@@ -1901,12 +1864,10 @@ msgstr "ارفض"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "اضبط تاريخ البدء"
+msgstr "ضع ملخص"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1916,16 +1877,14 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
-msgstr ""
+msgstr "يحدد معلومات موجزة ستعرض في العديد من الأماكن في واجهه المستخدم."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:147
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "الملخّص:"
+msgstr "ال&ملخّص:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:188
@@ -2099,13 +2058,10 @@ msgstr "اختر منطقة هذا الحدث الزّمنيّة. سيؤثّر �
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:503
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "<a href=\"hide\"><font color='blue'>&lt;&lt; Time zones</font></a>"
+#, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr ""
-"<a href=\"hide\"><font color='blue'>&lt;&lt; المناطق الزّمنيّة</font></a>"
+msgstr "<a href=\"hide\">&lt;&lt; المناطق الزّمنيّة</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:540
@@ -2168,20 +2124,17 @@ msgstr "النّفاذ:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
 #: ui/dialogdesktop.ui:678
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\"><font color='blue'>النّصّ الغنيّ &gt;&gt;</font></a>"
+msgstr "<a href=\\\"hide\\\">النّصّ الغنيّ  &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:709
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "الوسوم:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:730
@@ -2283,8 +2236,7 @@ msgstr "الموارد"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:937
-#, fuzzy, kde-format
-#| msgid "Book resource"
+#, kde-format
 msgid "Book Resource"
 msgstr "احجز المورد"
 
@@ -2421,27 +2373,21 @@ msgstr "ينتهي في:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1397
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr "أبدًا"
+msgstr "البتة"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1402
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "في"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1407
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "بعد"
@@ -2544,11 +2490,9 @@ msgstr "أزِل"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Enter the search term"
-msgstr "اضبط تاريخ البدء"
+msgstr "أدخِل مصطلح البحث"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:42
@@ -2556,6 +2500,8 @@ msgstr "اضبط تاريخ البدء"
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
 msgstr ""
+"استخدم مربع النص هذا لإدخال بعض الكلمات الرئيسية للمورد الذي تريد العثور "
+"عليه."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
@@ -2633,17 +2579,15 @@ msgstr "الأدوار الإلزاميّة:"
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the location"
+#, kde-format
 msgid "Select the search option"
-msgstr "اضبط المكان"
+msgstr "حدد خيار البحث"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
 #, kde-format
 msgid "Use these tabs to choose the search option."
-msgstr ""
+msgstr "استعمل هذه الألسنة لاختيار خيار البحث."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
@@ -2892,20 +2836,16 @@ msgstr ""
 "نقر هذا الزّرّ سيُعيد تحميل بيانات متفرّغ/مشغول لكلّ الحضور من الخواديم المقابلة."
 
 #: visualfreebusywidget.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
-msgstr "يعرض حالة متفرّغ/مشغول لكلّ الحضور"
+msgstr "يعرض قائمة شجرية لجميع البيانات"
 
 #: visualfreebusywidget.cpp:200
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
-msgstr "يعرض حالة متفرّغ/مشغول لكلّ الحضور"
+msgstr "يعرض قائمة شجرية لجميع البيانات"
 
 #: visualfreebusywidget.cpp:206
 #, kde-format
