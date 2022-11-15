@@ -36,7 +36,6 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QTreeView>
-#include <kwidgetsaddons_version.h>
 
 using namespace IncidenceEditorNG;
 
@@ -200,12 +199,7 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
             continue;
         }
         if (KEmailAddress::isValidAddress(attendee.email())) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (KMessageBox::warningTwoActions(nullptr,
-#else
-            if (KMessageBox::warningYesNo(nullptr,
-
-#endif
                                                i18nc("@info",
                                                      "%1 does not look like a valid email address. "
                                                      "Are you sure you want to invite this participant?",
@@ -213,11 +207,7 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
                                                i18nc("@title:window", "Invalid Email Address"),
                                                KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
                                                KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 != KMessageBox::ButtonCode::PrimaryAction) {
-#else
-                != KMessageBox::Yes) {
-#endif
                 skip = true;
             }
         }
@@ -784,11 +774,7 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
 
     int answer;
     if (currentOrganizerAttendee > -1) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         answer = KMessageBox::questionTwoActions(mParentWidget,
-#else
-        answer = KMessageBox::questionYesNo(mParentWidget,
-#endif
                                                  i18nc("@option",
                                                        "You are changing the organizer of this event. "
                                                        "Since the organizer is also attending this event, would you "
@@ -797,18 +783,10 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
                                                  KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
                                                  KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
     } else {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         answer = KMessageBox::ButtonCode::PrimaryAction;
-#else
-        answer = KMessageBox::Yes;
-#endif
     }
 
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-    if (answer == KMessageBox::Yes) {
-#endif
         if (currentOrganizerAttendee > -1) {
             mDataModel->removeRows(currentOrganizerAttendee, 1);
         }

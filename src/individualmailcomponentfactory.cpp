@@ -11,7 +11,6 @@
 #include <CalendarSupport/KCalPrefs>
 
 #include <KMessageBox>
-#include <kwidgetsaddons_version.h>
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
@@ -157,35 +156,19 @@ void IndividualMailITIPHandlerDialogDelegate::openDialog(const QString &question
     switch (action) {
     case ActionSendMessage:
         Q_EMIT setUpdate(mIncidence, attendees);
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         Q_EMIT dialogClosed(KMessageBox::ButtonCode::PrimaryAction, mMethod, mIncidence);
-#else
-        Q_EMIT dialogClosed(KMessageBox::Yes, mMethod, mIncidence);
-#endif
         break;
     case ActionDontSendMessage:
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         Q_EMIT dialogClosed(KMessageBox::ButtonCode::SecondaryAction, mMethod, mIncidence);
-#else
-        Q_EMIT dialogClosed(KMessageBox::No, mMethod, mIncidence);
-#endif
         break;
     default:
         switch (CalendarSupport::KCalPrefs::instance()->sendPolicy()) {
         case (CalendarSupport::KCalPrefs::InvitationPolicySend):
             Q_EMIT setUpdate(mIncidence, attendees);
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             Q_EMIT dialogClosed(KMessageBox::ButtonCode::PrimaryAction, mMethod, mIncidence);
-#else
-            Q_EMIT dialogClosed(KMessageBox::Yes, mMethod, mIncidence);
-#endif
             break;
         case (CalendarSupport::KCalPrefs::InvitationPolicyDontSend):
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             Q_EMIT dialogClosed(KMessageBox::ButtonCode::SecondaryAction, mMethod, mIncidence);
-#else
-            Q_EMIT dialogClosed(KMessageBox::No, mMethod, mIncidence);
-#endif
             break;
         case (CalendarSupport::KCalPrefs::InvitationPolicyAsk):
         default:
@@ -247,17 +230,9 @@ void IndividualMailITIPHandlerDialogDelegate::onDialogClosed(int result)
     if (result == QDialogButtonBox::Yes) {
         Q_EMIT setEdit(mIncidence, mDialog->editAttendees());
         Q_EMIT setUpdate(mIncidence, mDialog->updateAttendees());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         Q_EMIT dialogClosed(KMessageBox::ButtonCode::PrimaryAction, mMethod, mIncidence);
-#else
-        Q_EMIT dialogClosed(KMessageBox::Yes, mMethod, mIncidence);
-#endif
     } else {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         Q_EMIT dialogClosed(KMessageBox::ButtonCode::SecondaryAction, mMethod, mIncidence);
-#else
-        Q_EMIT dialogClosed(KMessageBox::No, mMethod, mIncidence);
-#endif
     }
 }
 
