@@ -88,7 +88,7 @@ configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-
 ########### Targets ###########
 
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.100.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.101.0)
 
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
