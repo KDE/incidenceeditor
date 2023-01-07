@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012, 2013.
-# Stelios <sstavra@gmail.com>, 2012, 2021.
+# Stelios <sstavra@gmail.com>, 2012, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:47+0000\n"
-"PO-Revision-Date: 2021-09-09 16:40+0300\n"
+"PO-Revision-Date: 2023-01-06 17:02+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -630,15 +630,13 @@ msgstr "Μη έγκυρη διεύθυνση ηλ. αλληλογραφίας"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "Πρόσκληση"
 
 #: incidenceattendee.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "Να μην αποσταλεί"
+msgstr "Να μη γίνει πρόσκληση"
 
 #: incidenceattendee.cpp:432
 #, kde-format
@@ -667,19 +665,16 @@ msgstr ""
 "συμμετέχοντα;"
 
 #: incidenceattendee.cpp:783
-#, fuzzy, kde-format
-#| msgid "Attendee"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "Συμμετέχων"
+msgstr "Αλλαγή συμμετέχοντος"
 
 #: incidenceattendee.cpp:784
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "Να μην αποσταλεί"
+msgstr "Να μη γίνει αλλαγή"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -742,7 +737,7 @@ msgstr "Ώρα λήξης"
 #, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "Μη έγκυρη ηmερομηνία έναρξης."
+msgstr "Μη έγκυρη ημερομηνία έναρξης."
 
 #: incidencedatetime.cpp:853
 #, kde-format
@@ -936,7 +931,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "Επανάληψη"
 
 #: incidencedialog.cpp:483
 #, kde-kuit-format
@@ -948,7 +943,7 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
-"<para>Δεν έχετε ρυθμίσει ακόμη ένα προλαθορισμένο ημερολόγιο για τα γεγονότα "
+"<para>Δεν έχετε ρυθμίσει ακόμη ένα προκαθορισμένο ημερολόγιο για τα γεγονότα "
 "σας.</para><para>Με τη ρύθμιση ενός προκαθορισμένου ημερολογίου η δημιουργία "
 "των νέων γεγονότων θα γίνει ταχύτερη και ευκολότερη με μικρότερη πιθανότητα "
 "να εντάσσονται σε λάθος φάκελο.</para><para>Θέλετε να ρυθμίσετε το "
@@ -961,20 +956,16 @@ msgid "Set Default Calendar?"
 msgstr "Να ρυθμιστεί το προκαθορισμένο ημερολόγιο;"
 
 #: incidencedialog.cpp:492
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Να ρυθμιστεί το προκαθορισμένο ημερολόγιο;"
+msgstr "Να ρυθμιστεί ως προκαθορισμένο"
 
 #: incidencedialog.cpp:493
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "Να μην αποσταλεί"
+msgstr "Να μη ρυθμιστεί"
 
 #: incidencedialog.cpp:673
 #, kde-format
@@ -1035,15 +1026,13 @@ msgstr "KOrganizer επιβεβαίωση"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Ακύρωση επεξεργασίας"
 
 #: incidencedialog.cpp:783 incidencedialog.cpp:804 incidencedialog.cpp:820
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Να μην αποσταλεί"
+msgstr "Να μην ακυρωθεί"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
