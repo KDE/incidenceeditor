@@ -3,13 +3,13 @@
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-11-24 17:00+0300\n"
+"PO-Revision-Date: 2023-01-10 21:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -1015,7 +1015,7 @@ msgstr "İptal etmek istediğinizden emin misiniz?"
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "KOrganizer Onayı"
+msgstr "K Organizatör Onayı"
 
 #: incidencedialog.cpp:803 incidencedialog.cpp:832 incidencedialog.cpp:856
 #, kde-format
@@ -2066,7 +2066,7 @@ msgid ""
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
 "Bu etkinliğin veya yapılacak işin erişiminin gizli olup olmadığını belirler. "
-"Şimdilik KOrganizer'ın bu seçeneği kullanmadığını, bu nedenle kısıtlama "
+"Şimdilik K Organizatör'ün bu seçeneği kullanmadığını, bu nedenle kısıtlama "
 "uygulamaları grup yazılımı sunucuna bağlı olacağını unutmayın. Bu, özel veya "
 "kişisel olarak işaretlenen etkinlik veya yapılacak işlerin, diğer kişilere "
 "de görülebilir olma ihtimali demektir."
@@ -2124,9 +2124,9 @@ msgid ""
 "and from your address book."
 msgstr ""
 "Yapılacaklar veya etkinliğin düzenleyicisine karşılık gelen kimliği ayarlar. "
-"Kimlikler KOrganizer yapılandırmasının 'Kişisel' bölümünden ayarlanabilir. "
-"Buna ek olarak kimlikler, KMail ayarlarınızdan ve adres defterinizden "
-"toplanır."
+"Kimlikler K Organizatör yapılandırmasının 'Kişisel' bölümünden "
+"ayarlanabilir. Buna ek olarak kimlikler, K Posta ayarlarınızdan ve adres "
+"defterinizden toplanır."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:812
