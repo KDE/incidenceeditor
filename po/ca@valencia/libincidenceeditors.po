@@ -26,13 +26,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
-msgstr "Creació d'un recordatori nou"
+msgstr "Creeu un recordatori nou"
 
 #: alarmdialog.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
-msgstr "Edició d'un recordatori existent"
+msgstr "Editeu un recordatori existent"
 
 #: alarmdialog.cpp:192
 #, kde-format
@@ -138,7 +138,7 @@ msgstr[1] "%1 dies abans del venciment"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "Edició de l'adjunt"
+msgstr "Editeu l'adjunt"
 
 #: attachmenteditdialog.cpp:57
 #, kde-format
@@ -330,7 +330,7 @@ msgstr "Acaba:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
-msgstr "Edició de la ubicació de lliure/ocupat"
+msgstr "Editeu la ubicació de lliure/ocupat"
 
 #: freebusyurldialog.cpp:63
 #, kde-kuit-format
@@ -644,7 +644,7 @@ msgstr "No l'invites"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Selecció dels assistents"
+msgstr "Seleccioneu els assistents"
 
 #: incidenceattendee.cpp:612
 #, kde-format
@@ -1392,7 +1392,7 @@ msgstr "a les %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
-msgstr "Gestió de les plantilles %1"
+msgstr "Gestioneu les plantilles %1"
 
 #: templatemanagementdialog.cpp:83
 #, kde-format
@@ -2609,7 +2609,7 @@ msgstr "a les 10:00am"
 #: ui/template_management_dialog_base.ui:14
 #, kde-format
 msgid "Template Management"
-msgstr "Gestió de les plantilles"
+msgstr "Gestioneu les plantilles"
 
 #. i18n: ectx: property (text), widget (QLabel, m_introLabel)
 #: ui/template_management_dialog_base.ui:26
