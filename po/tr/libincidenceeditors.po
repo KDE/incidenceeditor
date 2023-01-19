@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:47+0000\n"
-"PO-Revision-Date: 2023-01-10 21:14+0300\n"
+"PO-Revision-Date: 2023-01-18 22:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -1704,10 +1704,10 @@ msgid ""
 "often or may be moved (or removed) from their current location."
 msgstr ""
 "Bu seçeneği işaretlemek; ekin boyutuna bağlı olarak fazla yer kaplayabilecek "
-"ek dosyasını takviminizde saklayacaktır. Bu seçenek işaretli değilse, sadece "
-"ekin kaydedileceği konumu işaretleyen bir bağlantı olacaktır. Geçerli "
-"konumlarından taşınabilecek (veya silinebilecek) veya çok sık değişen ekler "
-"için bir bağlantı kullanmayın."
+"ek dosyasını takviminizde saklayacaktır. Bu seçenek işaretli değilse, "
+"yalnızca ekin kaydedileceği konumu işaretleyen bir bağlantı olacaktır. "
+"Geçerli konumlarından taşınabilecek (veya silinebilecek) veya çok sık "
+"değişen ekler için bir bağlantı kullanmayın."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
@@ -2052,7 +2052,7 @@ msgstr "Genel"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
-msgstr "Gizlilik seviyesini belirle"
+msgstr "Gizlilik düzeyini belirle"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
@@ -2507,7 +2507,7 @@ msgstr "Aramada dahil etmek üzere hafta günlerini işaretle."
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
-"Boş zaman aralığı aramasında sadece seçili iş günleri dahil edilecektir."
+"Boş zaman aralığı aramasında yalnızca seçili iş günleri dahil edilecektir."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
@@ -2530,8 +2530,8 @@ msgid ""
 "Only the participants with the checked roles will be considered in the free "
 "time slot search."
 msgstr ""
-"Boş zaman aralığı aramasında sadece seçili görevlerdeki katılımcılar dikkate "
-"alınacaktır."
+"Boş zaman aralığı aramasında yalnızca seçili görevlerdeki katılımcılar "
+"dikkate alınacaktır."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/schedulingdialog.ui:124
@@ -2693,7 +2693,7 @@ msgstr "Ölçeklendir"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
-msgstr "Gantt grafik yakınlaştırma seviyesini ayarla"
+msgstr "Gantt grafik yakınlaştırma düzeyini ayarla"
 
 #: visualfreebusywidget.cpp:145
 #, kde-kuit-format
