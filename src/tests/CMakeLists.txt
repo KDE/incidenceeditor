@@ -7,7 +7,7 @@ add_executable(kincidenceeditor main.cpp)
 target_link_libraries(kincidenceeditor
     KF5::AkonadiCalendar
     KF5::AkonadiCore
-    KF5::CalendarCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::CalendarUtils
     KF5::IncidenceEditor
     KF5::CalendarSupport

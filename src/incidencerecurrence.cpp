@@ -903,7 +903,7 @@ void IncidenceRecurrence::setExceptionDates(const KCalendarCore::DateList &dates
     }
 }
 
-void IncidenceRecurrence::setExceptionDateTimes(const KCalCore::DateTimeList &dateTimes)
+void IncidenceRecurrence::setExceptionDateTimes(const KCalendarCore::DateTimeList &dateTimes)
 {
     mUi->mExceptionList->clear();
     mExceptionDates.clear();

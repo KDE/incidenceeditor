@@ -146,7 +146,7 @@ target_link_libraries(KF5IncidenceEditor
 PUBLIC
   KF5::AkonadiCalendar
   KF5::AkonadiMime
-  KF5::CalendarCore
+  KF${KF_MAJOR_VERSION}::CalendarCore
   KF5::CalendarUtils
   KF5::MailTransportAkonadi
   KF5::CalendarSupport      # For KCalPrefs
@@ -154,16 +154,16 @@ PUBLIC
 PRIVATE
   KGantt              # For FreeBusy Editor
   KF5::PimTextEdit
-  KF5::Codecs
+  KF${KF_MAJOR_VERSION}::Codecs
   KF5::Ldap
   KF5::AkonadiWidgets
-  KF5::IconThemes
-  KF5::Completion
-  KF5::KIOWidgets
-  KF5::TextWidgets
-  KF5::WidgetsAddons
-  KF5::XmlGui
-  KF5::Contacts
+  KF${KF_MAJOR_VERSION}::IconThemes
+  KF${KF_MAJOR_VERSION}::Completion
+  KF${KF_MAJOR_VERSION}::KIOWidgets
+  KF${KF_MAJOR_VERSION}::TextWidgets
+  KF${KF_MAJOR_VERSION}::WidgetsAddons
+  KF${KF_MAJOR_VERSION}::XmlGui
+  KF${KF_MAJOR_VERSION}::Contacts
   KF5::Libkdepim
   KF5::PimCommonAkonadi
 )

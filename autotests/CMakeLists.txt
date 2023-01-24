@@ -16,7 +16,7 @@ macro(IE_UNIT_TESTS)
       KF5::AkonadiCore
       ${grant_lib}
       KF5::CalendarUtils
-      KF5::CalendarCore
+      KF${KF_MAJOR_VERSION}::CalendarCore
       KF5::IncidenceEditor
       KF5::Libkdepim
     )
@@ -26,7 +26,7 @@ endmacro()
 macro(IE_EXECUTABLE_TESTS)
   foreach(_testname ${ARGN})
     add_executable(${_testname} NOGUI TEST ${_testname}.cpp ${_testname}.h)
-    target_link_libraries(${_testname} KF5::CalendarCore Qt::Test KF5::IncidenceEditor Qt::Widgets)
+    target_link_libraries(${_testname} KF${KF_MAJOR_VERSION}::CalendarCore Qt::Test KF5::IncidenceEditor Qt::Widgets)
   endforeach()
 endmacro()
 
@@ -41,10 +41,10 @@ add_test(NAME ktimezonecomboboxtest COMMAND ktimezonecomboboxtest)
 ecm_mark_as_test(ktimezonecomboboxtest)
 
 target_link_libraries(ktimezonecomboboxtest
-  KF5::CalendarCore
+  KF${KF_MAJOR_VERSION}::CalendarCore
   Qt::Test
   KF5::IncidenceEditor
-  KF5::Completion
+  KF${KF_MAJOR_VERSION}::Completion
 )
 
 add_executable(testindividualmaildialog testindividualmaildialog.cpp)
@@ -52,11 +52,11 @@ ecm_mark_nongui_executable(testindividualmaildialog)
 add_test(NAME testindividualmaildialog COMMAND testindividualmaildialog)
 ecm_mark_as_test(testindividualmaildialog)
 target_link_libraries(testindividualmaildialog
-  KF5::CalendarCore
+  KF${KF_MAJOR_VERSION}::CalendarCore
   Qt::Test
   Qt::Widgets
-  KF5::WidgetsAddons
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::WidgetsAddons
+  KF${KF_MAJOR_VERSION}::I18n
   KF5::IncidenceEditor
 )
 
@@ -67,9 +67,9 @@ add_akonadi_isolated_test(
   LINK_LIBRARIES Qt::Test
   Qt::Widgets
   KF5::AkonadiWidgets
-  KF5::Completion
+  KF${KF_MAJOR_VERSION}::Completion
   KF5::IncidenceEditor
   KF5::PimTextEdit
   KF5::Libkdepim
-  KF5::WidgetsAddons
+  KF${KF_MAJOR_VERSION}::WidgetsAddons
 )
