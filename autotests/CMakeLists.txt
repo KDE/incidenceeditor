@@ -17,7 +17,7 @@ macro(IE_UNIT_TESTS)
       ${grant_lib}
       KF5::CalendarUtils
       KF${KF_MAJOR_VERSION}::CalendarCore
-      KF5::IncidenceEditor
+      KPim${KF_MAJOR_VERSION}::IncidenceEditor
       KF5::Libkdepim
     )
   endforeach()
@@ -43,7 +43,7 @@ ecm_mark_as_test(ktimezonecomboboxtest)
 target_link_libraries(ktimezonecomboboxtest
   KF${KF_MAJOR_VERSION}::CalendarCore
   Qt::Test
-  KF5::IncidenceEditor
+  KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KF${KF_MAJOR_VERSION}::Completion
 )
 
@@ -57,7 +57,7 @@ target_link_libraries(testindividualmaildialog
   Qt::Widgets
   KF${KF_MAJOR_VERSION}::WidgetsAddons
   KF${KF_MAJOR_VERSION}::I18n
-  KF5::IncidenceEditor
+  KPim${KF_MAJOR_VERSION}::IncidenceEditor
 )
 
 # The IncidenceCategories subeditor of the dialog starts Akonadi running, so
@@ -68,7 +68,7 @@ add_akonadi_isolated_test(
   Qt::Widgets
   KF5::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::Completion
-  KF5::IncidenceEditor
+  KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KF5::PimTextEdit
   KF5::Libkdepim
   KF${KF_MAJOR_VERSION}::WidgetsAddons

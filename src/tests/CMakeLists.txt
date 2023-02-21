@@ -9,7 +9,7 @@ target_link_libraries(kincidenceeditor
     KF5::AkonadiCore
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::CalendarUtils
-    KF5::IncidenceEditor
+    KPim${KF_MAJOR_VERSION}::IncidenceEditor
     KF5::CalendarSupport
     )
 

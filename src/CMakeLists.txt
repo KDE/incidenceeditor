@@ -1,9 +1,11 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
-add_library(KF5IncidenceEditor)
-add_library(KF5::IncidenceEditor ALIAS KF5IncidenceEditor)
-target_sources(KF5IncidenceEditor PRIVATE
+add_library(KPim${KF_MAJOR_VERSION}IncidenceEditor)
+add_library(KPim${KF_MAJOR_VERSION}::IncidenceEditor ALIAS KPim${KF_MAJOR_VERSION}IncidenceEditor)
+add_library(KF5::IncidenceEditor ALIAS KPim${KF_MAJOR_VERSION}IncidenceEditor)
+
+target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
   attachmenteditdialog.cpp
   attachmenticonview.cpp
   attendeedata.cpp
@@ -111,15 +113,15 @@ target_sources(KF5IncidenceEditor PRIVATE
   attendeeline.h
 )
 
-ecm_qt_declare_logging_category(KF5IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
         OLD_CATEGORY_NAMES log_incidenceeditor
         DESCRIPTION "incidenceeditor (incidenceeditor)" EXPORT INCIDENCEEDITOR)
 
-kconfig_add_kcfg_files(KF5IncidenceEditor globalsettings_incidenceeditor.kcfgc)
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}IncidenceEditor globalsettings_incidenceeditor.kcfgc)
 
 ### Build the desktop version
 
-target_sources(KF5IncidenceEditor PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
   templatemanagementdialog.cpp
   incidencedialogfactory.cpp
   incidencedialog.cpp
@@ -127,7 +129,7 @@ target_sources(KF5IncidenceEditor PRIVATE
   incidenceeditor.qrc
 )
 
-ki18n_wrap_ui(KF5IncidenceEditor
+ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}IncidenceEditor
   ui/template_management_dialog_base.ui
   ui/dialogdesktop.ui
   ui/alarmdialog.ui
@@ -137,12 +139,12 @@ ki18n_wrap_ui(KF5IncidenceEditor
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5IncidenceEditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}IncidenceEditor PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KF5IncidenceEditor BASE_NAME incidenceeditor)
+generate_export_header(KPim${KF_MAJOR_VERSION}IncidenceEditor BASE_NAME incidenceeditor)
 
 
-target_link_libraries(KF5IncidenceEditor
+target_link_libraries(KPim${KF_MAJOR_VERSION}IncidenceEditor
 PUBLIC
   KF5::AkonadiCalendar
   KF5::AkonadiMime
@@ -167,18 +169,18 @@ PRIVATE
   KF5::Libkdepim
   KF5::PimCommonAkonadi
 )
-target_include_directories(KF5IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/>")
-target_include_directories(KF5IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
+target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/>")
+target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
 
-set_target_properties(KF5IncidenceEditor PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}IncidenceEditor PROPERTIES
     VERSION ${INCIDENCEEDITOR_VERSION}
     SOVERSION ${INCIDENCEEDITOR_SOVERSION}
     EXPORT_NAME IncidenceEditor
 )
 
 install(TARGETS
-    KF5IncidenceEditor
-    EXPORT KF5IncidenceEditorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS} 
+    KPim${KF_MAJOR_VERSION}IncidenceEditor
+    EXPORT KPim${KF_MAJOR_VERSION}IncidenceEditorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
@@ -196,13 +198,13 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
 )
 
 ecm_generate_pri_file(BASE_NAME IncidenceEditor
-    LIB_NAME KF5IncidenceEditor
-    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils KMailTransport CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor
+    LIB_NAME KPim${KF_MAJOR_VERSION}IncidenceEditor
+    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils KMailTransport CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor
 )
 
 install(FILES
     ${IncidenceEditor_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/IncidenceEditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/IncidenceEditor
     COMPONENT Devel
 )
 
@@ -210,7 +212,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/globalsettings_incidenceeditor.h
     ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_export.h
     ${IncidenceEditor_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/IncidenceEditor/incidenceeditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/incidenceeditor
     COMPONENT Devel
 )
 install(FILES
@@ -226,9 +228,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5IncidenceEditor_QCH
+        KPim${KF_MAJOR_VERSION}IncidenceEditor_QCH
         NAME KIncidenceEditor
-        BASE_NAME KF5IncidenceEditor
+        BASE_NAME KPim${KF_MAJOR_VERSION}IncidenceEditor
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
