@@ -6,7 +6,7 @@ add_executable(resourcemanagement_gui resourcemanagment_gui.cpp)
 target_link_libraries(resourcemanagement_gui
   Qt::Core
   Qt::Gui
-  KF5::Mime
+  KPim${KF_MAJOR_VERSION}::Mime
   KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KF5::Libkdepim
   KF5::Ldap
