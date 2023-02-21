@@ -149,7 +149,7 @@ PUBLIC
   KF5::AkonadiCalendar
   KF5::AkonadiMime
   KF${KF_MAJOR_VERSION}::CalendarCore
-  KF5::CalendarUtils
+  KPim${KF_MAJOR_VERSION}::CalendarUtils
   KF5::MailTransportAkonadi
   KF5::CalendarSupport      # For KCalPrefs
   KF5::EventViews
@@ -166,7 +166,7 @@ PRIVATE
   KF${KF_MAJOR_VERSION}::WidgetsAddons
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::Contacts
-  KF5::Libkdepim
+  KPim${KF_MAJOR_VERSION}::Libkdepim
   KF5::PimCommonAkonadi
 )
 target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/>")

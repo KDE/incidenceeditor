@@ -8,7 +8,7 @@ target_link_libraries(resourcemanagement_gui
   Qt::Gui
   KPim${KF_MAJOR_VERSION}::Mime
   KPim${KF_MAJOR_VERSION}::IncidenceEditor
-  KF5::Libkdepim
+  KPim${KF_MAJOR_VERSION}::Libkdepim
   KF5::Ldap
 )
 

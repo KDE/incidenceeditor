@@ -15,10 +15,10 @@ macro(IE_UNIT_TESTS)
       Qt::Test
       KF5::AkonadiCore
       ${grant_lib}
-      KF5::CalendarUtils
+      KPim${KF_MAJOR_VERSION}::CalendarUtils
       KF${KF_MAJOR_VERSION}::CalendarCore
       KPim${KF_MAJOR_VERSION}::IncidenceEditor
-      KF5::Libkdepim
+      KPim${KF_MAJOR_VERSION}::Libkdepim
     )
   endforeach()
 endmacro()
@@ -70,6 +70,6 @@ add_akonadi_isolated_test(
   KF${KF_MAJOR_VERSION}::Completion
   KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KF5::PimTextEdit
-  KF5::Libkdepim
+  KPim${KF_MAJOR_VERSION}::Libkdepim
   KF${KF_MAJOR_VERSION}::WidgetsAddons
 )
