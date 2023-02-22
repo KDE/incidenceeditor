@@ -158,7 +158,7 @@ install(FILES
 )
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}IncidenceEditorConfigVersion.cmake"
-    RENAME "KF5TnefConfigVersion.cmake"
+    RENAME "KF5IncidenceEditorConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
     COMPONENT Devel
 )
