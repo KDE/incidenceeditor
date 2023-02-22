@@ -157,7 +157,7 @@ PRIVATE
   KGantt              # For FreeBusy Editor
   KF5::PimTextEdit
   KF${KF_MAJOR_VERSION}::Codecs
-  KF5::Ldap
+  KPim${KF_MAJOR_VERSION}::Ldap
   KF5::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::IconThemes
   KF${KF_MAJOR_VERSION}::Completion

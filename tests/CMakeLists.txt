@@ -9,7 +9,7 @@ target_link_libraries(resourcemanagement_gui
   KPim${KF_MAJOR_VERSION}::Mime
   KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KPim${KF_MAJOR_VERSION}::Libkdepim
-  KF5::Ldap
+  KPim${KF_MAJOR_VERSION}::Ldap
 )
 
 add_executable(individualmaildialog_test individualmaildialog_test.cpp)
