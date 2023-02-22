@@ -146,13 +146,13 @@ generate_export_header(KPim${KF_MAJOR_VERSION}IncidenceEditor BASE_NAME incidenc
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}IncidenceEditor
 PUBLIC
-  KF5::AkonadiCalendar
-  KF5::AkonadiMime
+  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
+  KPim${KF_MAJOR_VERSION}::AkonadiMime
   KF${KF_MAJOR_VERSION}::CalendarCore
   KPim${KF_MAJOR_VERSION}::CalendarUtils
-  KF5::MailTransportAkonadi
-  KF5::CalendarSupport      # For KCalPrefs
-  KF5::EventViews
+  KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+  KPim${KF_MAJOR_VERSION}::CalendarSupport      # For KCalPrefs
+  KPim${KF_MAJOR_VERSION}::EventViews
 PRIVATE
   KGantt              # For FreeBusy Editor
   KF5::PimTextEdit
