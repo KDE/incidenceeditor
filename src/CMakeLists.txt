@@ -155,7 +155,7 @@ PUBLIC
   KPim${KF_MAJOR_VERSION}::EventViews
 PRIVATE
   KGantt              # For FreeBusy Editor
-  KF5::PimTextEdit
+  KPim${KF_MAJOR_VERSION}::PimTextEdit
   KF${KF_MAJOR_VERSION}::Codecs
   KPim${KF_MAJOR_VERSION}::Ldap
   KF5::AkonadiWidgets
