@@ -13,7 +13,7 @@ macro(IE_UNIT_TESTS)
     ecm_mark_as_test(${_testname})
     target_link_libraries(${_testname}
       Qt::Test
-      KF5::AkonadiCore
+      KPim${KF_MAJOR_VERSION}::AkonadiCore
       ${grant_lib}
       KPim${KF_MAJOR_VERSION}::CalendarUtils
       KF${KF_MAJOR_VERSION}::CalendarCore
@@ -66,7 +66,7 @@ add_akonadi_isolated_test(
   SOURCE incidencedatetimetest.cpp
   LINK_LIBRARIES Qt::Test
   Qt::Widgets
-  KF5::AkonadiWidgets
+  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::Completion
   KPim${KF_MAJOR_VERSION}::IncidenceEditor
   KPim${KF_MAJOR_VERSION}::PimTextEdit

@@ -158,7 +158,7 @@ PRIVATE
   KPim${KF_MAJOR_VERSION}::PimTextEdit
   KF${KF_MAJOR_VERSION}::Codecs
   KPim${KF_MAJOR_VERSION}::Ldap
-  KF5::AkonadiWidgets
+  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
   KF${KF_MAJOR_VERSION}::IconThemes
   KF${KF_MAJOR_VERSION}::Completion
   KF${KF_MAJOR_VERSION}::KIOWidgets
