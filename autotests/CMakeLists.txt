@@ -26,7 +26,7 @@ endmacro()
 macro(IE_EXECUTABLE_TESTS)
   foreach(_testname ${ARGN})
     add_executable(${_testname} NOGUI TEST ${_testname}.cpp ${_testname}.h)
-    target_link_libraries(${_testname} KF${KF_MAJOR_VERSION}::CalendarCore Qt::Test KF5::IncidenceEditor Qt::Widgets)
+    target_link_libraries(${_testname} KF${KF_MAJOR_VERSION}::CalendarCore Qt::Test KPim${KF_MAJOR_VERSION}::IncidenceEditor Qt::Widgets)
   endforeach()
 endmacro()
 
