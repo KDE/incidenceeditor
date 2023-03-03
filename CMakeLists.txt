@@ -86,6 +86,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
 )
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
+option(BUILD_WITH_COMPAT_LIBS "Generate compat cmake file (Set at false will allow to co-install lib)" ON)
 
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
 configure_file(config-enterprise.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )
@@ -140,6 +141,7 @@ if (BUILD_TESTING)
    add_subdirectory(tests)
 endif()
 
+if (BUILD_WITH_COMPAT_LIBS)
 ##
 # TODO: Backwards compatiblity. Remove in next major version
 ##
@@ -167,6 +169,7 @@ install(EXPORT KPim${KF_MAJOR_VERSION}IncidenceEditorTargets
     FILE KPim${KF_MAJOR_VERSION}IncidenceEditorTargets.cmake
     NAMESPACE KF5::
 )
+endif()
 
 if (BUILD_QCH)
     ecm_install_qch_export(
