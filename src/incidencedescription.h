@@ -39,9 +39,6 @@ public:
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     Q_REQUIRED_RESULT bool isDirty() const override;
 
-    // For debugging purposes
-    Q_REQUIRED_RESULT bool richTextEnabled() const;
-
     void printDebugInfo() const override;
 
 private:
