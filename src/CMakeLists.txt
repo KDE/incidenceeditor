@@ -3,7 +3,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
 add_library(KPim${KF_MAJOR_VERSION}IncidenceEditor)
 add_library(KPim${KF_MAJOR_VERSION}::IncidenceEditor ALIAS KPim${KF_MAJOR_VERSION}IncidenceEditor)
-add_library(KF5::IncidenceEditor ALIAS KPim${KF_MAJOR_VERSION}IncidenceEditor)
 
 target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
   attachmenteditdialog.cpp
