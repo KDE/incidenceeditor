@@ -166,7 +166,7 @@ PRIVATE
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::Contacts
   KPim${KF_MAJOR_VERSION}::Libkdepim
-  KF5::PimCommonAkonadi
+  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
 )
 target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/>")
 target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
