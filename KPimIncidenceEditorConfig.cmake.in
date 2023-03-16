@@ -9,14 +9,5 @@ find_dependency(KF@KF_MAJOR_VERSION@CalendarCore "@KF_MIN_VERSION@")
 find_dependency(KPim@KF_MAJOR_VERSION@MailTransport "@KMAILTRANSPORT_LIB_VERSION@")
 find_dependency(KPim@KF_MAJOR_VERSION@Mime "@KMIME_LIB_VERSION@")
 
-if (@INCIDENTEDITOR_KF5_COMPAT@)
-    message(WARNING "\n"
-                    "************* DEPRECATION WARNING *************\n"
-		    "Using find_package(KF5IncidenceEditor) and KF5::IncidenceEditor targets is deprecated. "
-                    "Please use find_package(KPim@KF_MAJOR_VERSION@IncidenceEditor) and KPim@KF_MAJOR_VERSION@::IncidenceEditor instead. This backwards "
-                    "compatibility will be removed in the next major version.\n"
-                    "***********************************************\n")
-endif()
-
 include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@IncidenceEditorTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@
