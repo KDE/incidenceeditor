@@ -103,9 +103,22 @@ if (USE_UNITY_CMAKE_SUPPORT)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
+if(BUILD_TESTING)
+  add_definitions(-DBUILD_TESTING)
+endif()
+add_subdirectory(src)
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}IncidenceEditor")
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim${KF_MAJOR_VERSION}IncidenceEditor_QCH
+        FILE KPim${KF_MAJOR_VERSION}IncidenceEditorQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}IncidenceEditorQchTargets.cmake\")")
+endif()
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KPimIncidenceEditorConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}IncidenceEditorConfig.cmake"
@@ -127,25 +140,11 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/ COMPONENT Devel
 )
 
-if(BUILD_TESTING)
-  add_definitions(-DBUILD_TESTING)
-endif()
-add_subdirectory(src)
 if (BUILD_TESTING)
    find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 
    add_subdirectory(autotests)
    add_subdirectory(tests)
-endif()
-
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}IncidenceEditor_QCH
-        FILE KPim${KF_MAJOR_VERSION}IncidenceEditorQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}IncidenceEditorQchTargets.cmake\")")
 endif()
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
