@@ -94,7 +94,7 @@ private:
     Q_DECLARE_PRIVATE(IncidenceDialog)
     Q_DISABLE_COPY(IncidenceDialog)
 
-    void writeConfig();
-    void readConfig();
+    INCIDENCEEDITOR_NO_EXPORT void writeConfig();
+    INCIDENCEEDITOR_NO_EXPORT void readConfig();
 };
 }

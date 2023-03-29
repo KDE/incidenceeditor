@@ -147,7 +147,7 @@ private:
       that participant. In other words, the returned slot does not have to
       be free for everybody else.
     */
-    int tryDate(QDateTime &tryFrom, QDateTime &tryTo);
+    INCIDENCEEDITOR_NO_EXPORT int tryDate(QDateTime &tryFrom, QDateTime &tryTo);
 
     /**
       Checks whether the slot specified by (tryFrom, tryTo) is available
@@ -156,16 +156,16 @@ private:
       possible slot for this participant (not necessarily a slot that is
       available for all participants).
     */
-    bool tryDate(const KCalendarCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
+    INCIDENCEEDITOR_NO_EXPORT bool tryDate(const KCalendarCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
 
     /**
      * Checks whether the supplied attendee passes the
      * current mandatory role constraint.
      * @return true if the attendee is of one of the mandatory roles, false if not
      */
-    bool matchesRoleConstraint(const KCalendarCore::Attendee &attendee);
+    INCIDENCEEDITOR_NO_EXPORT bool matchesRoleConstraint(const KCalendarCore::Attendee &attendee);
 
-    void calculateConflicts();
+    INCIDENCEEDITOR_NO_EXPORT void calculateConflicts();
 
     KCalendarCore::Period mTimeframeConstraint; //!< the datetime range for outside of which
     // free slots won't be searched.

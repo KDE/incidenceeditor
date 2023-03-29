@@ -55,23 +55,23 @@ private:
     /* A new searchString is entered
      *
      */
-    void slotStartSearch(const QString &);
+    INCIDENCEEDITOR_NO_EXPORT void slotStartSearch(const QString &);
 
     /* A detail view is requested
      *
      */
-    void slotShowDetails(const QModelIndex &current);
+    INCIDENCEEDITOR_NO_EXPORT void slotShowDetails(const QModelIndex &current);
 
     /**
      * The Owner search is done
      */
-    void slotOwnerSearchFinished();
+    INCIDENCEEDITOR_NO_EXPORT void slotOwnerSearchFinished();
 
-    void slotLayoutChanged();
+    INCIDENCEEDITOR_NO_EXPORT void slotLayoutChanged();
 
 private:
-    void readConfig();
-    void writeConfig();
+    INCIDENCEEDITOR_NO_EXPORT void readConfig();
+    INCIDENCEEDITOR_NO_EXPORT void writeConfig();
     CalendarSupport::FreeBusyItemModel *mModel = nullptr;
     CalendarSupport::FreeBusyCalendar mFreebusyCalendar;
     ResourceItem::Ptr mOwnerItem;
