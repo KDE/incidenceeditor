@@ -23,7 +23,7 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::
                                                      const KCalendarCore::Attendee::List &update,
                                                      const KCalendarCore::Attendee::List &edit,
                                                      QObject *parent)
-    : MailTransport::MessageQueueJob(parent)
+    : Akonadi::MessageQueueJob(parent)
     , mUpdate(update)
     , mEdit(edit)
     , mIdentity(identity)
@@ -78,7 +78,7 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
     msg->cc()->fromUnicodeString(messageCc.join(QLatin1String(", ")), "utf-8");
     msg->assemble();
 
-    mQueueJob = new MailTransport::MessageQueueJob(this);
+    mQueueJob = new Akonadi::MessageQueueJob(this);
     mQueueJob->setMessage(msg);
     mQueueJob->transportAttribute().setTransportId(mIdentity.isNull() ? transportAttribute().transportId() : mIdentity.transport().toInt());
     mQueueJob->addressAttribute().setFrom(addressAttribute().from());
@@ -87,18 +87,18 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
     mQueueJob->addressAttribute().setBcc(addressAttribute().bcc());
 
     if (mIdentity.disabledFcc()) {
-        mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+        mQueueJob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::Delete);
     } else {
         const Akonadi::Collection sentCollection(mIdentity.fcc().toLongLong());
         if (sentCollection.isValid()) {
-            mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToCollection);
+            mQueueJob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::MoveToCollection);
             mQueueJob->sentBehaviourAttribute().setMoveToCollection(sentCollection);
         } else {
-            mQueueJob->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::MoveToDefaultSentCollection);
+            mQueueJob->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::MoveToDefaultSentCollection);
         }
     }
 
-    connect(mQueueJob, &MailTransport::MessageQueueJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
+    connect(mQueueJob, &Akonadi::MessageQueueJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
     mQueueJob->start();
 }
 
@@ -242,9 +242,9 @@ IndividualMailComponentFactory::IndividualMailComponentFactory(QObject *parent)
 {
 }
 
-MailTransport::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                                                                      const KIdentityManagement::Identity &identity,
-                                                                                      QObject *parent)
+Akonadi::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
+                                                                                const KIdentityManagement::Identity &identity,
+                                                                                QObject *parent)
 {
     return new IndividualMessageQueueJob(identity, mUpdate.take(incidence->uid()), mEdit.take(incidence->uid()), parent);
 }

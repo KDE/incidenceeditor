@@ -149,7 +149,6 @@ PUBLIC
   KPim${KF_MAJOR_VERSION}::AkonadiMime
   KF${KF_MAJOR_VERSION}::CalendarCore
   KPim${KF_MAJOR_VERSION}::CalendarUtils
-  KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
   KPim${KF_MAJOR_VERSION}::CalendarSupport      # For KCalPrefs
   KPim${KF_MAJOR_VERSION}::EventViews
 PRIVATE
@@ -198,7 +197,7 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
 
 ecm_generate_pri_file(BASE_NAME IncidenceEditor
     LIB_NAME KPim${KF_MAJOR_VERSION}IncidenceEditor
-    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils KMailTransport CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor
+    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor
 )
 
 install(FILES

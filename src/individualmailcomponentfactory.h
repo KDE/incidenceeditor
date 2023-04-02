@@ -9,14 +9,14 @@
 #include "incidenceeditor_export.h"
 
 #include <Akonadi/IncidenceChanger>
+#include <Akonadi/MessageQueueJob>
 #include <KIdentityManagement/Identity>
-#include <MailTransportAkonadi/MessageQueueJob>
 namespace IncidenceEditorNG
 {
 class OpenComposerJob;
 class IndividualMailDialog;
 
-class IndividualMessageQueueJob : public MailTransport::MessageQueueJob
+class IndividualMessageQueueJob : public Akonadi::MessageQueueJob
 {
     Q_OBJECT
 public:
@@ -34,7 +34,7 @@ private:
     KCalendarCore::Attendee::List mUpdate;
     KCalendarCore::Attendee::List mEdit;
     KIdentityManagement::Identity mIdentity;
-    MailTransport::MessageQueueJob *mQueueJob = nullptr;
+    Akonadi::MessageQueueJob *mQueueJob = nullptr;
     OpenComposerJob *mComposerJob = nullptr;
 };
 
@@ -81,7 +81,7 @@ class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::IT
     Q_OBJECT
 public:
     explicit IndividualMailComponentFactory(QObject *parent = nullptr);
-    MailTransport::MessageQueueJob *
+    Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent) override;
 
     Akonadi::ITIPHandlerDialogDelegate *
