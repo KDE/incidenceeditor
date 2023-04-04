@@ -9,7 +9,7 @@ deprecated: false
 release: false
 libraries:
  - qmake: IncidenceEditor
-   cmake: "KF5::IncidenceEditor"
-cmakename: KF5IncidenceEditor
+   cmake: "KPim6::IncidenceEditor"
+cmakename: KPim6IncidenceEditor
 group: kdepim
 public_lib: true

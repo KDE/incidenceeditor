@@ -5,12 +5,12 @@ set(testincidenceeditor_SRCS main.cpp)
 add_executable(kincidenceeditor main.cpp)
 
 target_link_libraries(kincidenceeditor
-    KPim${KF_MAJOR_VERSION}::AkonadiCalendar
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KPim${KF_MAJOR_VERSION}::IncidenceEditor
-    KPim${KF_MAJOR_VERSION}::CalendarSupport
+    KPim6::AkonadiCalendar
+    KPim6::AkonadiCore
+    KF6::CalendarCore
+    KPim6::CalendarUtils
+    KPim6::IncidenceEditor
+    KPim6::CalendarSupport
     )
 
 install(TARGETS kincidenceeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

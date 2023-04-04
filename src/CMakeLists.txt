@@ -1,10 +1,10 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
-add_library(KPim${KF_MAJOR_VERSION}IncidenceEditor)
-add_library(KPim${KF_MAJOR_VERSION}::IncidenceEditor ALIAS KPim${KF_MAJOR_VERSION}IncidenceEditor)
+add_library(KPim6IncidenceEditor)
+add_library(KPim6::IncidenceEditor ALIAS KPim6IncidenceEditor)
 
-target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
+target_sources(KPim6IncidenceEditor PRIVATE
   attachmenteditdialog.cpp
   attachmenticonview.cpp
   attendeedata.cpp
@@ -112,15 +112,15 @@ target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
   attendeeline.h
 )
 
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
+ecm_qt_declare_logging_category(KPim6IncidenceEditor HEADER incidenceeditor_debug.h IDENTIFIER INCIDENCEEDITOR_LOG CATEGORY_NAME org.kde.pim.incidenceeditor
         OLD_CATEGORY_NAMES log_incidenceeditor
         DESCRIPTION "incidenceeditor (incidenceeditor)" EXPORT INCIDENCEEDITOR)
 
-kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}IncidenceEditor globalsettings_incidenceeditor.kcfgc)
+kconfig_add_kcfg_files(KPim6IncidenceEditor globalsettings_incidenceeditor.kcfgc)
 
 ### Build the desktop version
 
-target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
+target_sources(KPim6IncidenceEditor PRIVATE
   templatemanagementdialog.cpp
   incidencedialogfactory.cpp
   incidencedialog.cpp
@@ -128,7 +128,7 @@ target_sources(KPim${KF_MAJOR_VERSION}IncidenceEditor PRIVATE
   incidenceeditor.qrc
 )
 
-ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}IncidenceEditor
+ki18n_wrap_ui(KPim6IncidenceEditor
   ui/template_management_dialog_base.ui
   ui/dialogdesktop.ui
   ui/alarmdialog.ui
@@ -138,47 +138,47 @@ ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}IncidenceEditor
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}IncidenceEditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6IncidenceEditor PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim${KF_MAJOR_VERSION}IncidenceEditor BASE_NAME incidenceeditor)
+generate_export_header(KPim6IncidenceEditor BASE_NAME incidenceeditor)
 
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}IncidenceEditor
+target_link_libraries(KPim6IncidenceEditor
 PUBLIC
-  KPim${KF_MAJOR_VERSION}::AkonadiCalendar
-  KPim${KF_MAJOR_VERSION}::AkonadiMime
-  KF${KF_MAJOR_VERSION}::CalendarCore
-  KPim${KF_MAJOR_VERSION}::CalendarUtils
-  KPim${KF_MAJOR_VERSION}::CalendarSupport      # For KCalPrefs
-  KPim${KF_MAJOR_VERSION}::EventViews
+  KPim6::AkonadiCalendar
+  KPim6::AkonadiMime
+  KF6::CalendarCore
+  KPim6::CalendarUtils
+  KPim6::CalendarSupport      # For KCalPrefs
+  KPim6::EventViews
 PRIVATE
   KGantt              # For FreeBusy Editor
-  KPim${KF_MAJOR_VERSION}::PimTextEdit
-  KF${KF_MAJOR_VERSION}::Codecs
-  KPim${KF_MAJOR_VERSION}::Ldap
-  KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-  KF${KF_MAJOR_VERSION}::IconThemes
-  KF${KF_MAJOR_VERSION}::Completion
-  KF${KF_MAJOR_VERSION}::KIOWidgets
-  KF${KF_MAJOR_VERSION}::TextWidgets
-  KF${KF_MAJOR_VERSION}::WidgetsAddons
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KF${KF_MAJOR_VERSION}::Contacts
-  KPim${KF_MAJOR_VERSION}::Libkdepim
-  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
+  KPim6::PimTextEdit
+  KF6::Codecs
+  KPim6::Ldap
+  KPim6::AkonadiWidgets
+  KF6::IconThemes
+  KF6::Completion
+  KF6::KIOWidgets
+  KF6::TextWidgets
+  KF6::WidgetsAddons
+  KF6::XmlGui
+  KF6::Contacts
+  KPim6::Libkdepim
+  KPim6::PimCommonAkonadi
 )
-target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/>")
-target_include_directories(KPim${KF_MAJOR_VERSION}IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
+target_include_directories(KPim6IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/>")
+target_include_directories(KPim6IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")
 
-set_target_properties(KPim${KF_MAJOR_VERSION}IncidenceEditor PROPERTIES
+set_target_properties(KPim6IncidenceEditor PROPERTIES
     VERSION ${INCIDENCEEDITOR_VERSION}
     SOVERSION ${INCIDENCEEDITOR_SOVERSION}
     EXPORT_NAME IncidenceEditor
 )
 
 install(TARGETS
-    KPim${KF_MAJOR_VERSION}IncidenceEditor
-    EXPORT KPim${KF_MAJOR_VERSION}IncidenceEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6IncidenceEditor
+    EXPORT KPim6IncidenceEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
@@ -196,13 +196,13 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
 )
 
 ecm_generate_pri_file(BASE_NAME IncidenceEditor
-    LIB_NAME KPim${KF_MAJOR_VERSION}IncidenceEditor
-    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor
+    LIB_NAME KPim6IncidenceEditor
+    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor
 )
 
 install(FILES
     ${IncidenceEditor_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/IncidenceEditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/IncidenceEditor
     COMPONENT Devel
 )
 
@@ -210,7 +210,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/globalsettings_incidenceeditor.h
     ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_export.h
     ${IncidenceEditor_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/IncidenceEditor/incidenceeditor
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/incidenceeditor
     COMPONENT Devel
 )
 install(FILES
@@ -226,9 +226,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}IncidenceEditor_QCH
+        KPim6IncidenceEditor_QCH
         NAME KIncidenceEditor
-        BASE_NAME KPim${KF_MAJOR_VERSION}IncidenceEditor
+        BASE_NAME KPim6IncidenceEditor
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -236,9 +236,9 @@ if (BUILD_QCH)
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
-            Qt${QT_MAJOR_VERSION}Gui_QCH
-            Qt${QT_MAJOR_VERSION}Widgets_QCH
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
