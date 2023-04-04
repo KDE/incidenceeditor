@@ -48,7 +48,7 @@ protected:
 private:
     void slotActionTriggered();
     QMenu *mMenu = nullptr;
-    QVector<QPair<QString, QIcon>> mList;
+    QList<QPair<QString, QIcon>> mList;
     int mCurrentIndex = -1;
 };
 

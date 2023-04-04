@@ -42,7 +42,7 @@ class IncidenceDefaultsPrivate
 public:
     /// Members
     KCalendarCore::Attachment::List mAttachments;
-    QVector<KCalendarCore::Attendee> mAttendees;
+    QList<KCalendarCore::Attendee> mAttendees;
     QStringList mEmails;
     QString mGroupWareDomain;
     KCalendarCore::Incidence::Ptr mRelatedIncidence;

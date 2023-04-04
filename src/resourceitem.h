@@ -11,10 +11,10 @@
 
 #include <KLDAP/LdapObject>
 
+#include <QList>
 #include <QSharedPointer>
 #include <QStringList>
 #include <QVariant>
-#include <QVector>
 
 namespace IncidenceEditorNG
 {
@@ -46,7 +46,7 @@ public:
 
 private:
     QList<ResourceItem::Ptr> childItems;
-    QVector<QVariant> itemData;
+    QList<QVariant> itemData;
     ResourceItem::Ptr parentItem;
 
 Q_SIGNALS:

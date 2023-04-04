@@ -9,7 +9,7 @@
 
 #include <KLocalizedString>
 
-#include <QVector>
+#include <QList>
 
 using namespace IncidenceEditorNG;
 
@@ -23,7 +23,7 @@ public:
 
     void fillComboBox();
     KTimeZoneComboBox *const mParent;
-    QVector<QByteArray> mZones;
+    QList<QByteArray> mZones;
 };
 
 void KTimeZoneComboBoxPrivate::fillComboBox()

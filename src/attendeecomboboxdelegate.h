@@ -52,7 +52,7 @@ private Q_SLOTS:
 
 private:
     /** all entries to choose from */
-    QVector<QPair<QIcon, QString>> mEntries;
+    QList<QPair<QIcon, QString>> mEntries;
     QString mToolTip;
     QString mWhatsThis;
     /**fallback index */

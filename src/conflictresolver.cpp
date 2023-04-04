@@ -271,7 +271,7 @@ void ConflictResolver::findAllFreeSlots()
     qCDebug(INCIDENCEEDITOR_LOG) << "num attendees: " << number_attendees;
     // this is a 2 dimensional array where the rows are attendees
     // and the columns are 0 or 1 denoting free or busy respectively.
-    QVector<QVector<int>> fbTable;
+    QList<QList<int>> fbTable;
 
     // Explanation of the following loop:
     // iterate: through each attendee
@@ -288,7 +288,7 @@ void ConflictResolver::findAllFreeSlots()
     for (const KCalendarCore::FreeBusy::Ptr &currentFB : std::as_const(filteredFBItems)) {
         Q_ASSERT(currentFB); // sanity check
         const KCalendarCore::Period::List busyPeriods = currentFB->busyPeriods();
-        QVector<int> fbArray(range);
+        QList<int> fbArray(range);
         fbArray.fill(0); // initialize to zero
         for (const auto &period : busyPeriods) {
             if (period.end() >= begin && period.start() <= end) {
@@ -331,7 +331,7 @@ void ConflictResolver::findAllFreeSlots()
 
     // Now, create another array to represent the allowed weekdays constraints
     // All days which are not allowed, will be marked as busy
-    QVector<int> fbArray(range);
+    QList<int> fbArray(range);
     fbArray.fill(0); // initialize to zero
     for (int slot = 0; slot < fbArray.size(); ++slot) {
         const QDateTime dateTime = begin.addSecs(slot * mSlotResolutionSeconds);
@@ -344,7 +344,7 @@ void ConflictResolver::findAllFreeSlots()
 
     // Create the composite array that will hold the sums for
     // each 15 minute timeslot
-    QVector<int> summed(range);
+    QList<int> summed(range);
     summed.fill(0); // initialize to zero
 
     // Sum the columns of the table
