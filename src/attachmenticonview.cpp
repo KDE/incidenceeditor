@@ -186,11 +186,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     return mTempFile;
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> items) const // clazy:exclude=function-args-by-ref
-#else
 QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> &items) const // clazy:exclude=function-args-by-ref
-#endif
 {
     // create a list of the URL:s that we want to drag
     QList<QUrl> urls;
