@@ -16,18 +16,3 @@ Dependencies:
     'pim/kmime' : '@same'
     'pim/libkdepim' : '@same'
     'pim/pimcommon' : '@same'
-
-- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6', 'macOS/Qt6']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'frameworks/kcalendarcore' : '@latest-kf6'
-    'graphics/kdiagram' : '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-mime' : '@latest-kf6'
-    'pim/calendarsupport' : '@latest-kf6'
-    'pim/eventviews' : '@latest-kf6'
-    'pim/kcalutils' : '@latest-kf6'
-    'pim/kldap' : '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
-    'pim/libkdepim' : '@latest-kf6'
-    'pim/pimcommon' : '@latest-kf6'
