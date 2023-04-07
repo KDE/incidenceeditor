@@ -6,24 +6,24 @@
  */
 #include "resourceitem.h"
 
-#include <KLDAP/LdapServer>
+#include <KLDAPCore/LdapServer>
 
 using namespace IncidenceEditorNG;
 
-ResourceItem::ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
+ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs, const KLDAPWidgets::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
     : parentItem(parent)
     , dn(dn)
     , mAttrs(attrs)
     , mLdapClient(0, this)
 {
     if (!dn.isEmpty()) {
-        KLDAP::LdapServer server = ldapClient.server();
+        KLDAPCore::LdapServer server = ldapClient.server();
 
-        server.setScope(KLDAP::LdapUrl::Base);
+        server.setScope(KLDAPCore::LdapUrl::Base);
         server.setBaseDn(dn);
         mLdapClient.setServer(server);
 
-        connect(&mLdapClient, &KLDAP::LdapClient::result, this, &ResourceItem::slotLDAPResult);
+        connect(&mLdapClient, &KLDAPWidgets::LdapClient::result, this, &ResourceItem::slotLDAPResult);
 
         mAttrs << QStringLiteral("uniqueMember");
         mLdapClient.setAttributes(attrs);
@@ -114,7 +114,7 @@ const QStringList &ResourceItem::attributes() const
     return mAttrs;
 }
 
-const KLDAP::LdapObject &ResourceItem::ldapObject() const
+const KLDAPCore::LdapObject &ResourceItem::ldapObject() const
 {
     return mLdapObject;
 }
@@ -124,17 +124,17 @@ void ResourceItem::startSearch()
     mLdapClient.startQuery(QStringLiteral("objectclass=*"));
 }
 
-void ResourceItem::setLdapObject(const KLDAP::LdapObject &obj)
+void ResourceItem::setLdapObject(const KLDAPCore::LdapObject &obj)
 {
     slotLDAPResult(mLdapClient, obj);
 }
 
-const KLDAP::LdapClient &ResourceItem::ldapClient() const
+const KLDAPWidgets::LdapClient &ResourceItem::ldapClient() const
 {
     return mLdapClient;
 }
 
-void ResourceItem::slotLDAPResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
+void ResourceItem::slotLDAPResult(const KLDAPWidgets::LdapClient &client, const KLDAPCore::LdapObject &obj)
 {
     Q_UNUSED(client)
     mLdapObject = obj;

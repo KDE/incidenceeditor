@@ -182,7 +182,7 @@ void ResourceManagement::slotShowDetails(const QModelIndex &current)
     showDetails(item->ldapObject(), item->ldapClient());
 }
 
-void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::LdapClient &client)
+void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLDAPWidgets::LdapClient &client)
 {
     // Clean up formDetails
     QLayoutItem *child = nullptr;
@@ -201,7 +201,7 @@ void ResourceManagement::showDetails(const KLDAP::LdapObject &obj, const KLDAP::
             QStringList attrs;
             attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("mobile") << QStringLiteral("telephoneNumber")
                   << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
-            mOwnerItem = ResourceItem::Ptr(new ResourceItem(KLDAP::LdapDN(QString::fromUtf8(it.value().at(0))), attrs, client));
+            mOwnerItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(QString::fromUtf8(it.value().at(0))), attrs, client));
             connect(mOwnerItem.data(), &ResourceItem::searchFinished, this, &ResourceManagement::slotOwnerSearchFinished);
             mOwnerItem->startSearch();
             continue;
@@ -241,8 +241,8 @@ void ResourceManagement::slotOwnerSearchFinished()
     }
     mUi->groupOwner->setHidden(false);
 
-    const KLDAP::LdapObject &obj = mOwnerItem->ldapObject();
-    const KLDAP::LdapAttrMap &ldapAttrMap = obj.attributes();
+    const KLDAPCore::LdapObject &obj = mOwnerItem->ldapObject();
+    const KLDAPCore::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
         if (key == QLatin1String("objectClass") || key == QLatin1String("owner") || key == QLatin1String("givenname") || key == QLatin1String("sn")) {

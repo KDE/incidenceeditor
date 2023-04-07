@@ -9,7 +9,7 @@ target_link_libraries(resourcemanagement_gui
   KPim6::Mime
   KPim6::IncidenceEditor
   KPim6::Libkdepim
-  KPim6::Ldap
+  KPim6::LdapWidgets
 )
 
 add_executable(individualmaildialog_test individualmaildialog_test.cpp)

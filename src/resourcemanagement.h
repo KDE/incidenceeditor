@@ -8,7 +8,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KLDAP/LdapClient>
+#include <KLDAPWidgets/LdapClient>
 
 #include "resourceitem.h"
 #include <CalendarSupport/FreeBusyCalendar>
@@ -47,7 +47,7 @@ private:
     /* Shows the details of a resource
      *
      */
-    void showDetails(const KLDAP::LdapObject &, const KLDAP::LdapClient &client);
+    void showDetails(const KLDAPCore::LdapObject &, const KLDAPWidgets::LdapClient &client);
 
     QItemSelectionModel *selectionModel = nullptr;
 

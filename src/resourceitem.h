@@ -7,9 +7,9 @@
 
 #pragma once
 
-#include <KLDAP/LdapClient>
+#include <KLDAPWidgets/LdapClient>
 
-#include <KLDAP/LdapObject>
+#include <KLDAPCore/LdapObject>
 
 #include <QList>
 #include <QSharedPointer>
@@ -31,7 +31,10 @@ public:
     */
     using Ptr = QSharedPointer<ResourceItem>;
 
-    ResourceItem(const KLDAP::LdapDN &dn, const QStringList &attrs, const KLDAP::LdapClient &ldapClient, const ResourceItem::Ptr &parent = ResourceItem::Ptr());
+    ResourceItem(const KLDAPCore::LdapDN &dn,
+                 const QStringList &attrs,
+                 const KLDAPWidgets::LdapClient &ldapClient,
+                 const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem() override;
 
     Q_REQUIRED_RESULT ResourceItem::Ptr child(int number);
@@ -61,19 +64,19 @@ public:
     /* Returns the ldapObject, that is used as data source.
      *
      */
-    const KLDAP::LdapObject &ldapObject() const;
+    const KLDAPCore::LdapObject &ldapObject() const;
 
     /* Set the ldapObject, either directly via this function
      * or use startSearch to request the ldapServer for the ldapObject
      * with the dn specified via the constructor.
      *
      */
-    void setLdapObject(const KLDAP::LdapObject &);
+    void setLdapObject(const KLDAPCore::LdapObject &);
 
     /* The used ldapClient.
      *
      */
-    const KLDAP::LdapClient &ldapClient() const;
+    const KLDAPWidgets::LdapClient &ldapClient() const;
 
     /* Start querying the ldapServer for a object that name is dn
      *
@@ -84,12 +87,12 @@ private:
     /* data source
      *
      */
-    KLDAP::LdapObject mLdapObject;
+    KLDAPCore::LdapObject mLdapObject;
 
     /* dn of the ldapObject
      *
      */
-    const KLDAP::LdapDN dn;
+    const KLDAPCore::LdapDN dn;
 
     /* Attributes of the ldapObject to request and the header of the Item
      *
@@ -99,13 +102,13 @@ private:
     /* ldapClient to request
      *
      */
-    KLDAP::LdapClient mLdapClient;
+    KLDAPWidgets::LdapClient mLdapClient;
 
 private:
     /* Answer of the LdapServer for the given dn
      *
      */
-    void slotLDAPResult(const KLDAP::LdapClient &, const KLDAP::LdapObject &);
+    void slotLDAPResult(const KLDAPWidgets::LdapClient &, const KLDAPCore::LdapObject &);
 };
 }
 
