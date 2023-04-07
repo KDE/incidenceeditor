@@ -15,7 +15,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 
-include(GenerateExportHeader)
+include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
@@ -76,7 +76,7 @@ find_package(KPim6Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_version.h"
+                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/incidenceeditor_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6IncidenceEditorConfigVersion.cmake"
                         SOVERSION 6
 )
@@ -133,7 +133,7 @@ install(EXPORT KPim6IncidenceEditorTargets DESTINATION "${CMAKECONFIG_INSTALL_DI
     FILE KPim6IncidenceEditorTargets.cmake NAMESPACE KPim6::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/incidenceeditor_version.h
+   ${CMAKE_CURRENT_BINARY_DIR}/src/incidenceeditor_version.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/ COMPONENT Devel
 )
 
