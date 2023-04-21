@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:47+0000\n"
-"PO-Revision-Date: 2023-03-23 14:37+0300\n"
+"PO-Revision-Date: 2023-04-20 15:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -1446,7 +1446,7 @@ msgid ""
 "set in the combobox immediately adjacent."
 msgstr ""
 "Bu döndürme kutusu, anımsatıcı tetikleme süresini ayarlamanıza izin verir. "
-"Zaman birimi, yanındaki sayı kutusuna hemen uygulanacaktır."
+"Zaman birimi, yanındaki çoklu kutuya hemen uygulanacaktır."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:72
@@ -1461,8 +1461,8 @@ msgid ""
 "This combobox allows you to set the units for the reminder trigger time. The "
 "trigger time value is set in the spinbox immediately adjacent."
 msgstr ""
-"Bu kutu, anımsatıcı tetikleme süresi için birim belirlemenize izin verir. "
-"Tetikleme zaman değeri, yanındaki döndürme kutusuna hemen uygulanır."
+"Bu çoklu kutu, anımsatıcı tetikleme süresi için birim belirlemenize izin "
+"verir. Tetikleme zaman değeri, yanındaki döndürme kutusuna hemen uygulanır."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:79
@@ -1499,8 +1499,8 @@ msgid ""
 "Use this combobox to specify if you want the reminder to trigger before or "
 "after the start or end time."
 msgstr ""
-"Bu alanı; anımsatıcının, başlama veya bitiş sürelerinden önce veya sonra "
-"tetiklenmesini istediğinizde bunu belirlemek için kullanın."
+"Bu çoklu kutuyu; anımsatıcının, başlama veya bitiş sürelerinden önce veya "
+"sonra tetiklenmesini istediğinizde bunu belirlemek için kullanın."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:104
