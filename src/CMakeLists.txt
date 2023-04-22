@@ -180,7 +180,7 @@ set_target_properties(KPim${KF_MAJOR_VERSION}IncidenceEditor PROPERTIES
 
 install(TARGETS
     KPim${KF_MAJOR_VERSION}IncidenceEditor
-    EXPORT KPim${KF_MAJOR_VERSION}IncidenceEditorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KPim${KF_MAJOR_VERSION}IncidenceEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
