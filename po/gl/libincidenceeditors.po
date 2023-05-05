@@ -3,14 +3,14 @@
 # Xosé <xosecalvo@gmail.com>, 2011, 2012, 2013, 2014.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:47+0000\n"
-"PO-Revision-Date: 2020-01-05 19:14+0100\n"
+"PO-Revision-Date: 2023-05-02 22:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,18 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: alarmdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create a new reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
 msgstr "Crear unha lembranza nova"
 
 #: alarmdialog.cpp:67
-#, fuzzy, kde-format
-#| msgid "Edit existing reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Editar unha lembranza existente"
@@ -135,8 +133,7 @@ msgstr[0] "%1 día antes de que venza"
 msgstr[1] "%1 días antes de que venza"
 
 #: attachmenteditdialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Edit Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Editar o anexo"
@@ -328,8 +325,7 @@ msgid "End:"
 msgstr "Fin:"
 
 #: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
 msgstr "Editar o lugar de dispoñibilidade"
@@ -634,19 +630,16 @@ msgstr "O enderezo de correo electrónico é incorrecto"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "Convidar"
 
 #: incidenceattendee.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "Non enviar"
+msgstr "Non convidar"
 
 #: incidenceattendee.cpp:432
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Seleccionar os asistentes"
@@ -671,19 +664,16 @@ msgstr ""
 "asiste ao evento, quere cambiar tamén o asistente correspondente?"
 
 #: incidenceattendee.cpp:783
-#, fuzzy, kde-format
-#| msgid "Attendee"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "Asistente"
+msgstr "Cambiar a persoa asistente"
 
 #: incidenceattendee.cpp:784
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "Non enviar"
+msgstr "Non cambiar"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -743,36 +733,28 @@ msgid "Ending Time"
 msgstr "Hora de finalización"
 
 #: incidencedatetime.cpp:848
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid start date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "A data e hora de inicio son incorrectas."
+msgstr "A data de inicio é incorrecta."
 
 #: incidencedatetime.cpp:853
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid start date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "A data e hora de inicio son incorrectas."
+msgstr "A hora de inicio é incorrecta."
 
 #: incidencedatetime.cpp:861
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid end date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "A data e hora de fin son incorrectas."
+msgstr "A data de fin é incorrecta."
 
 #: incidencedatetime.cpp:866
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid end date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "A data e hora de fin son incorrectas."
+msgstr "A hora de fin é incorrecta."
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -947,7 +929,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "Intentar de novo"
 
 #: incidencedialog.cpp:483
 #, kde-kuit-format
@@ -959,28 +941,28 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
+"<para>Aínda non definiu o calendario predeterminado para os seus eventos.</"
+"para><para>Definir un calendario predeterminado axiliza a creación de novos "
+"eventos e evita gardalos no cartafol incorrecto.</para><para>Quere facer "
+"<resource>%1</resource> o calendario predeterminado?</para>"
 
 #: incidencedialog.cpp:491
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "Categoría predeterminada"
+msgstr "Quere definir o calendario predeterminado?"
 
 #: incidencedialog.cpp:492
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Categoría predeterminada"
+msgstr "Facer predeterminado"
 
 #: incidencedialog.cpp:493
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "Non enviar"
+msgstr "Non facer predeterminado"
 
 #: incidencedialog.cpp:673
 #, kde-format
@@ -1041,15 +1023,13 @@ msgstr "Confirmación de KOrganizer"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Cancelar a edición"
 
 #: incidencedialog.cpp:783 incidencedialog.cpp:804 incidencedialog.cpp:820
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Non enviar"
+msgstr "Non cancelar a edición"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1119,11 +1099,10 @@ msgid "The incidence's start date is invalid."
 msgstr "A data de inicio da incidencia é incorrecta."
 
 #: incidencerecurrence.cpp:465
-#, fuzzy, kde-format
-#| msgid "The incidence's start date is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
-msgstr "A data de inicio da incidencia é incorrecta."
+msgstr "A data de fin da repetición é incorrecta."
 
 #: incidencerecurrence.cpp:508
 #, kde-format
@@ -1245,7 +1224,7 @@ msgstr[1] "a cada"
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr ""
+msgstr "Escriba un resumo."
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
@@ -1370,8 +1349,7 @@ msgid "Cannot connect to email service"
 msgstr "Non se pode conectar co servizo de correo"
 
 #: resourcemanagement.cpp:96
-#, fuzzy, kde-format
-#| msgid "Resource Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Xestión de recursos"
@@ -1383,8 +1361,7 @@ msgid "Book resource"
 msgstr "Reservar o recurso"
 
 #: schedulingdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Scheduling"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "Programación"
@@ -1406,8 +1383,7 @@ msgid "to %1"
 msgstr "a %1"
 
 #: templatemanagementdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Xestionar %1 modelos"
@@ -1846,12 +1822,10 @@ msgstr "Rexeitar"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "Estabeleza a data de comezo"
+msgstr "Definir o resumo"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1862,15 +1836,15 @@ msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
 msgstr ""
+"Define información breve que se mostrará en moitas partes da interface de "
+"persoa usuaria."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:147
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "Resumo:"
+msgstr "&Resumo:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:188
@@ -2086,7 +2060,7 @@ msgstr "Xeral"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
-msgstr "Axustar o nivel de secretismo"
+msgstr "Axustar o nivel de segredo"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
@@ -2124,7 +2098,7 @@ msgstr "<a href=\\\"hide\\\">Texto con formato &gt;&gt;</a>"
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "Etiquetas:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:730
@@ -2367,27 +2341,21 @@ msgstr "Remata:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1397
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
 msgstr "nunca"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1402
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "o"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1407
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "despois de"
