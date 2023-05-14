@@ -1799,7 +1799,7 @@ msgstr "الحجم:"
 #: ui/attachmenteditdialog.ui:166
 #, kde-format
 msgid "0 KB"
-msgstr "٠ ك.بايت"
+msgstr "0 ك.بايت"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/attachmenteditdialog.ui:183
@@ -1940,63 +1940,63 @@ msgstr "غير محدّدة"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
-msgstr "١ (عالية)"
+msgstr "1 (عالية)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:308
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
-msgstr "٢"
+msgstr "2"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:313
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
-msgstr "٣"
+msgstr "3"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:318
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
-msgstr "٤"
+msgstr "4"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:323
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
-msgstr "٥ (متوسّطة)"
+msgstr "5 (متوسّطة)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:328
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
-msgstr "٦"
+msgstr "6"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:333
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
-msgstr "٧"
+msgstr "7"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:338
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
-msgstr "٨"
+msgstr "8"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:343
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
-msgstr "٩ (منخفضة)"
+msgstr "9 (منخفضة)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:362
@@ -2611,13 +2611,13 @@ msgstr "انقل الموعد إلى:"
 #: ui/schedulingdialog.ui:228
 #, kde-format
 msgid "Monday, 12th June"
-msgstr "الإثنين، ١٢ يونيو"
+msgstr "الإثنين، 12 يونيو"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr "حتّى ١٠:٠٠ ص"
+msgstr "حتّى 10:00 ص"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
