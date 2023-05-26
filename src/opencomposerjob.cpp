@@ -18,7 +18,7 @@ OpenComposerJob::OpenComposerJob(QObject *parent,
                                  const QString &cc,
                                  const QString &bcc,
                                  const KMime::Message::Ptr &message,
-                                 const KIdentityManagement::Identity &identity)
+                                 const KIdentityManagementCore::Identity &identity)
     : KJob(parent)
     , mTo(to)
     , mCc(cc)

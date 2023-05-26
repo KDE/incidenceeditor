@@ -8,7 +8,7 @@
 
 #include <KMime/Message>
 
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 #include <KJob>
 
 namespace IncidenceEditorNG
@@ -24,7 +24,7 @@ public:
                              const QString &cc,
                              const QString &bcc,
                              const KMime::Message::Ptr &message,
-                             const KIdentityManagement::Identity &identity);
+                             const KIdentityManagementCore::Identity &identity);
     ~OpenComposerJob() override;
 
     void start() override;
@@ -34,6 +34,6 @@ private:
     QString mError;
     const QString mTo, mCc, mBcc;
     const KMime::Message::Ptr mMessage;
-    const KIdentityManagement::Identity mIdentity;
+    const KIdentityManagementCore::Identity mIdentity;
 };
 }

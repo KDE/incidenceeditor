@@ -19,7 +19,7 @@ using namespace IncidenceEditorNG;
 
 // IndividualMessageQueueJob
 
-IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagement::Identity &identity,
+IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagementCore::Identity &identity,
                                                      const KCalendarCore::Attendee::List &update,
                                                      const KCalendarCore::Attendee::List &edit,
                                                      QObject *parent)
@@ -243,7 +243,7 @@ IndividualMailComponentFactory::IndividualMailComponentFactory(QObject *parent)
 }
 
 Akonadi::MessageQueueJob *IndividualMailComponentFactory::createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence,
-                                                                                const KIdentityManagement::Identity &identity,
+                                                                                const KIdentityManagementCore::Identity &identity,
                                                                                 QObject *parent)
 {
     return new IndividualMessageQueueJob(identity, mUpdate.take(incidence->uid()), mEdit.take(incidence->uid()), parent);

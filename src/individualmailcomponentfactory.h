@@ -10,7 +10,7 @@
 
 #include <Akonadi/IncidenceChanger>
 #include <Akonadi/MessageQueueJob>
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 namespace IncidenceEditorNG
 {
 class OpenComposerJob;
@@ -20,7 +20,7 @@ class IndividualMessageQueueJob : public Akonadi::MessageQueueJob
 {
     Q_OBJECT
 public:
-    explicit IndividualMessageQueueJob(const KIdentityManagement::Identity &identity,
+    explicit IndividualMessageQueueJob(const KIdentityManagementCore::Identity &identity,
                                        const KCalendarCore::Attendee::List &update,
                                        const KCalendarCore::Attendee::List &edit,
                                        QObject *parent);
@@ -33,7 +33,7 @@ private:
     void handleJobFinished(KJob *job);
     KCalendarCore::Attendee::List mUpdate;
     KCalendarCore::Attendee::List mEdit;
-    KIdentityManagement::Identity mIdentity;
+    KIdentityManagementCore::Identity mIdentity;
     Akonadi::MessageQueueJob *mQueueJob = nullptr;
     OpenComposerJob *mComposerJob = nullptr;
 };
@@ -82,7 +82,7 @@ class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::IT
 public:
     explicit IndividualMailComponentFactory(QObject *parent = nullptr);
     Akonadi::MessageQueueJob *
-    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagement::Identity &identity, QObject *parent) override;
+    createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, QObject *parent) override;
 
     Akonadi::ITIPHandlerDialogDelegate *
     createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent) override;
