@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -78,7 +78,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 minute before start"
 msgid_plural "%1 minutes before start"
 msgstr[0] ""
-msgstr[1] ""
 
 #: alarmpresets.cpp:87
 #, kde-format
@@ -86,7 +85,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 hour before start"
 msgid_plural "%1 hours before start"
 msgstr[0] ""
-msgstr[1] ""
 
 #: alarmpresets.cpp:89
 #, kde-format
@@ -94,7 +92,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 day before start"
 msgid_plural "%1 days before start"
 msgstr[0] ""
-msgstr[1] ""
 
 #: alarmpresets.cpp:103
 #, kde-format
@@ -108,7 +105,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 minute before due"
 msgid_plural "%1 minutes before due"
 msgstr[0] ""
-msgstr[1] ""
 
 #: alarmpresets.cpp:107
 #, kde-format
@@ -116,7 +112,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 hour before due"
 msgid_plural "%1 hours before due"
 msgstr[0] ""
-msgstr[1] ""
 
 #: alarmpresets.cpp:109
 #, kde-format
@@ -124,7 +119,6 @@ msgctxt "@item:inlistbox"
 msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] ""
-msgstr[1] ""
 
 #: attachmenteditdialog.cpp:38
 #, kde-format
@@ -371,7 +365,6 @@ msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencealarm.cpp:287
 #, kde-format
@@ -379,7 +372,6 @@ msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencealarm.cpp:290
 #, kde-format
@@ -387,7 +379,6 @@ msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencealarm.cpp:295
 #, kde-format
@@ -631,7 +622,6 @@ msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidenceattendee.cpp:779
 #, kde-format
@@ -1137,7 +1127,6 @@ msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
 msgid_plural "occurrences"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencerecurrence.cpp:602
 #, kde-format
@@ -1145,7 +1134,6 @@ msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencerecurrence.cpp:606
 #, kde-format
@@ -1153,7 +1141,6 @@ msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencerecurrence.cpp:610
 #, kde-format
@@ -1161,7 +1148,6 @@ msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencerecurrence.cpp:614
 #, kde-format
@@ -1169,7 +1155,6 @@ msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencerecurrence.cpp:622
 #, kde-format
@@ -1179,7 +1164,6 @@ msgctxt ""
 msgid "every"
 msgid_plural "every"
 msgstr[0] ""
-msgstr[1] ""
 
 #: incidencewhatwhere.cpp:70
 #, kde-format
