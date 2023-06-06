@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:47+0000\n"
-"PO-Revision-Date: 2023-05-02 22:01+0200\n"
+"PO-Revision-Date: 2023-06-05 13:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -2586,7 +2586,7 @@ msgstr "O luns, 12 de xuño"
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr "ás 10:00am"
+msgstr "ás 10:00 a. m."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
@@ -2619,8 +2619,8 @@ msgid ""
 "This is a list of all the templates you have currently accessible for "
 "creating new calendar items."
 msgstr ""
-"Esta é unha lista dos modelos aos que ten acceso actualmente para crear "
-"elementos de calendario novos."
+"Esta é unha lista dos modelos aos que ten acceso para crear elementos de "
+"calendario novos."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:56
