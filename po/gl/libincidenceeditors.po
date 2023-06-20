@@ -366,7 +366,7 @@ msgstr "Activar"
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
-msgstr "Mostrar un diálogo"
+msgstr "Amosar un diálogo"
 
 #: incidencealarm.cpp:273
 #, kde-format
@@ -1002,7 +1002,7 @@ msgid ""
 "Templates can make creating new items easier and faster by putting your "
 "favorite default values into the editor automatically."
 msgstr ""
-"Prema este botón para mostrar un diálogo que lle axude a xestionar un "
+"Prema este botón para amosar un diálogo que lle axude a xestionar un "
 "conxunto de modelos. Os modelos poden facilitar e acelerar a creación de "
 "novos elementos novos ao colocar automaticamente no editor os seus valores "
 "predeterminados favoritos."
@@ -1504,8 +1504,8 @@ msgid ""
 "Use this combobox to specify if you want the reminder to trigger before or "
 "after the start or end time."
 msgstr ""
-"Empregue este menú para especificar se quere que a lembranza se active antes "
-"ou despois do momento de inicio ou remate."
+"Use este menú para especificar se quere que a lembranza se active antes ou "
+"despois do momento de inicio ou remate."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:104
@@ -1563,8 +1563,8 @@ msgid ""
 "Use this selector to choose how many times you want the recurring reminder "
 "to repeat."
 msgstr ""
-"Empregue este selector para escoller as veces que quere que se repita a "
-"lembranza repetitiva."
+"Use este selector para escoller as veces que quere que se repita a lembranza "
+"repetitiva."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
@@ -1582,8 +1582,7 @@ msgstr "Seleccione o tempo entre as repeticións da lembranza"
 #: ui/alarmdialog.ui:185
 #, kde-format
 msgid "Use this selector to choose the time between repeating reminders."
-msgstr ""
-"Empregue este selector para escoller o tempo entre lembranzas repetidas."
+msgstr "Use este selector para escoller o tempo entre lembranzas repetidas."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:188
@@ -1621,7 +1620,7 @@ msgstr "Use este selector para escoller o tipo de alarma para as lembranzas."
 #: ui/alarmdialog.ui:235
 #, kde-format
 msgid "Display text"
-msgstr "Mostrar un texto"
+msgstr "Amosar un texto"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:240
@@ -1711,9 +1710,9 @@ msgid ""
 msgstr ""
 "Ao marcar esta opción, o anexo almacénase dentro do calendario, o cal pode "
 "ocupar moito espazo, dependendo do tamaño do anexo. Se non se selecciona "
-"esta opción, só se almacena unha ligazón que apunta ao anexo. Non empregue "
-"unha ligazón cos anexos que cambien con frecuencia ou que se poidan mover "
-"(ou retirar) de onde estean almacenados."
+"esta opción, só se almacena unha ligazón que apunta ao anexo. Non use unha "
+"ligazón cos anexos que cambien con frecuencia ou que se poidan mover (ou "
+"retirar) de onde estean almacenados."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
@@ -1743,8 +1742,8 @@ msgid ""
 "Enter the path to the attachment file or use the file browser by pressing "
 "the adjacent button"
 msgstr ""
-"Insira a ruta ao ficheiro do anexo ou empregue un navegador de ficheiros "
-"premendo o botón que está ao carón"
+"Insira a ruta ao ficheiro do anexo ou use un navegador de ficheiros premendo "
+"o botón que está ao carón"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/attachmenteditdialog.ui:159
@@ -1836,7 +1835,7 @@ msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
 msgstr ""
-"Define información breve que se mostrará en moitas partes da interface de "
+"Define información breve que se amosará en moitas partes da interface de "
 "persoa usuaria."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -1858,14 +1857,14 @@ msgstr "&Lugar:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
-msgstr "Estabelecer o lugar"
+msgstr "Definir o lugar"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
-msgstr "Estabelece o lugar no que se celebra o evento ou tarefa."
+msgstr "Define o lugar no que se celebra o evento ou tarefa."
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
 #: ui/dialogdesktop.ui:227
@@ -1994,21 +1993,21 @@ msgstr "&Inicio:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the start date"
-msgstr "Estabeleza a data de comezo"
+msgstr "Defina a data de comezo"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:453
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
-msgstr "Estabelece a data de inicio desta tarefa."
+msgstr "Define a data de inicio desta tarefa."
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
 #: ui/dialogdesktop.ui:469
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
-msgstr "Estabelece a hora de inicio desta tarefa."
+msgstr "Define a hora de inicio desta tarefa."
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
@@ -2038,14 +2037,14 @@ msgstr "Fi&n:"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
-msgstr "Estabelece a data límite desta tarefa."
+msgstr "Define a data límite desta tarefa."
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
 #: ui/dialogdesktop.ui:584
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
-msgstr "Estabelece a hora límite desta tarefa."
+msgstr "Define a hora límite desta tarefa."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
 #: ui/dialogdesktop.ui:636
@@ -2073,7 +2072,7 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
-"Estabelece se o acceso a este evento ou tarefa está restrinxido. Lembre que "
+"Define se o acceso a este evento ou tarefa está restrinxido. Lembre que "
 "KOrganizer non permite na actualidade o uso desta opción, así que a "
 "realización das restricións dependerá do servidor de traballo en grupo. Isto "
 "quere dicir que os eventos ou tarefas marcados como privados ou "
@@ -2119,7 +2118,7 @@ msgstr "Organizador da reunión:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
-msgstr "Estabeleza a identidade do organizador"
+msgstr "Defina a identidade do organizador"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:780
@@ -2131,10 +2130,10 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
-"Estabelece a identidade correspondente ao organizador desta tarefa ou "
-"evento. As identidades poden definirse na sección «Persoal» da configuración "
-"de KOrganizer. Ademais, as identidades recóllense da configuración de KMail "
-"e do caderno de enderezos."
+"Define a identidade correspondente ao organizador desta tarefa ou evento. As "
+"identidades poden definirse na sección «Persoal» da configuración de "
+"KOrganizer. Ademais, as identidades recóllense da configuración de KMail e "
+"do caderno de enderezos."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:812
@@ -2637,7 +2636,7 @@ msgid ""
 "future."
 msgstr ""
 "Prema este botón para crear no editor un modelo novo baseado na "
-"configuración actual. Pode empregar este modelo para engadir rapidamente "
+"configuración actual. Pode usar este modelo para engadir rapidamente "
 "elementos novos no futuro."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
