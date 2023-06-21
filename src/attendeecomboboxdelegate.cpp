@@ -159,3 +159,5 @@ bool AttendeeComboBoxDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
     }
     return QStyledItemDelegate::helpEvent(event, view, option, index);
 }
+
+#include "moc_attendeecomboboxdelegate.cpp"

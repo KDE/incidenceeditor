@@ -113,3 +113,5 @@ void IndividualMailDialog::updateButtonState()
         detailsButton->setText(i18nc("@action:button show list of attendees", "Individual mailsettings >>"));
     }
 }
+
+#include "moc_individualmaildialog.cpp"

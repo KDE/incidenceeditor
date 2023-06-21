@@ -942,3 +942,5 @@ int IncidenceAttendee::rowOfAttendee(const QString &uid) const
     });
     return std::distance(attendees.begin(), it);
 }
+
+#include "moc_incidenceattendee.cpp"

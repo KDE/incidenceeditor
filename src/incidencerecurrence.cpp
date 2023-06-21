@@ -1008,3 +1008,5 @@ QDate IncidenceRecurrence::currentDate() const
 {
     return mDateTime->startDate();
 }
+
+#include "moc_incidencerecurrence.cpp"

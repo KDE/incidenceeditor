@@ -469,3 +469,5 @@ CalendarSupport::FreeBusyItemModel *ConflictResolver::model() const
 {
     return mFBModel;
 }
+
+#include "moc_conflictresolver.cpp"

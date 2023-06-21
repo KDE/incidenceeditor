@@ -269,3 +269,5 @@ void IndividualMailComponentFactory::onSetUpdate(const KCalendarCore::Incidence:
 {
     mUpdate[incidence->uid()] = update;
 }
+
+#include "moc_individualmailcomponentfactory.cpp"

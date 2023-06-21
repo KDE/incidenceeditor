@@ -97,3 +97,5 @@ bool AttendeeLineEditDelegate::helpEvent(QHelpEvent *event, QAbstractItemView *v
     }
     return QStyledItemDelegate::helpEvent(event, view, option, index);
 }
+
+#include "moc_attendeelineeditdelegate.cpp"

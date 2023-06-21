@@ -81,3 +81,5 @@ void IncidenceWhatWhere::validate()
         mUi->mSummaryEdit->setFocus();
     }
 }
+
+#include "moc_incidencewhatwhere.cpp"

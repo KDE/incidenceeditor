@@ -302,3 +302,5 @@ void VisualFreeBusyWidget::slotZoomToTime()
 void VisualFreeBusyWidget::splitterMoved()
 {
 }
+
+#include "moc_visualfreebusywidget.cpp"

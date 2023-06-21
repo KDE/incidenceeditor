@@ -587,3 +587,5 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
         }
     }
 }
+
+#include "moc_incidenceattachment.cpp"

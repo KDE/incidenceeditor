@@ -182,3 +182,5 @@ void TemplateManagementDialog::slotOk()
     }
     accept();
 }
+
+#include "moc_templatemanagementdialog.cpp"

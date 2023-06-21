@@ -134,3 +134,5 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
     mUi->mTagWidget->setSelection(selectedTags);
     mUi->mTagWidget->blockSignals(false);
 }
+
+#include "moc_incidencecategories.cpp"

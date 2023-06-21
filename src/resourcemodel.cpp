@@ -224,3 +224,5 @@ void ResourceModel::slotLDAPSearchData(const KLDAPWidgets::LdapResultObject::Lis
         }
     }
 }
+
+#include "moc_resourcemodel.cpp"

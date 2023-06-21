@@ -103,3 +103,5 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     delete ganttModel;
     delete modelTest;
 }
+
+#include "moc_testfreebusyganttproxymodel.cpp"

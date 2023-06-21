@@ -285,3 +285,5 @@ void ConflictResolverTest::testPeriodEndsAtSametimeAsTimeframe()
 }
 
 QTEST_MAIN(ConflictResolverTest)
+
+#include "moc_conflictresolvertest.cpp"

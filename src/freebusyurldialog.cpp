@@ -88,3 +88,5 @@ void FreeBusyUrlWidget::saveConfig()
     KConfig config(freeBusyUrlStore());
     config.group(mAttendee->email()).writeEntry("url", url);
 }
+
+#include "moc_freebusyurldialog.cpp"

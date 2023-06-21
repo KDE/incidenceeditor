@@ -78,3 +78,5 @@ void OpenComposerJob::start()
     }
     emitResult();
 }
+
+#include "moc_opencomposerjob.cpp"

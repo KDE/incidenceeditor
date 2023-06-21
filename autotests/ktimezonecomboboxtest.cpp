@@ -107,3 +107,5 @@ void KTimeZoneComboBoxTest::test_convenience()
     QVERIFY(!combo.isFloating());
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());
 }
+
+#include "moc_ktimezonecomboboxtest.cpp"

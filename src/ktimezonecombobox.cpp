@@ -142,3 +142,5 @@ bool KTimeZoneComboBox::isFloating() const
 {
     return currentIndex() == 1;
 }
+
+#include "moc_ktimezonecombobox.cpp"

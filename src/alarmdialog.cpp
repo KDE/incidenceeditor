@@ -236,3 +236,5 @@ void AlarmDialog::setWhen(When when)
     Q_ASSERT(when <= mUi->mBeforeAfter->count());
     mUi->mBeforeAfter->setCurrentIndex(when);
 }
+
+#include "moc_alarmdialog.cpp"

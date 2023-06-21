@@ -376,3 +376,5 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
         }
     }
 }
+
+#include "moc_incidencealarm.cpp"

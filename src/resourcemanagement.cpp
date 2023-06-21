@@ -265,3 +265,5 @@ void ResourceManagement::slotDateChanged(const QDate &start, const QDate &end)
     }
     mAgendaView->showDates(start, end);
 }
+
+#include "moc_resourcemanagement.cpp"

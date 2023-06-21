@@ -201,3 +201,5 @@ QTime SchedulingDialog::selectedStartTime() const
 {
     return mSelectedTime;
 }
+
+#include "moc_schedulingdialog.cpp"

@@ -62,3 +62,5 @@ bool IncidenceSecrecy::isDirty() const
 
     return false;
 }
+
+#include "moc_incidencesecrecy.cpp"

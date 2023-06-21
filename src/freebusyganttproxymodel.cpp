@@ -86,3 +86,5 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod 
     toolTip += QStringLiteral("</qt>");
     return toolTip;
 }
+
+#include "moc_freebusyganttproxymodel.cpp"

@@ -291,3 +291,5 @@ bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex
 
     return !(cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room);
 }
+
+#include "moc_attendeetablemodel.cpp"

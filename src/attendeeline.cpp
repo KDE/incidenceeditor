@@ -372,3 +372,5 @@ bool AttendeeLine::canDeleteLineEdit() const
 {
     return mEdit->canDeleteLineEdit();
 }
+
+#include "moc_attendeeline.cpp"

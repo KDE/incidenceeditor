@@ -147,3 +147,5 @@ void ResourceItem::slotLDAPResult(const KLDAPWidgets::LdapClient &client, const 
     }
     Q_EMIT searchFinished();
 }
+
+#include "moc_resourceitem.cpp"

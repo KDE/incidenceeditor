@@ -24,3 +24,5 @@ IncidenceEditorSettings *IncidenceEditorSettings::self()
 IncidenceEditorSettings::IncidenceEditorSettings() = default;
 
 IncidenceEditorSettings::~IncidenceEditorSettings() = default;
+
+#include "moc_incidenceeditorsettings.cpp"

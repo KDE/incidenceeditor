@@ -255,3 +255,5 @@ void AttachmentIconView::keyPressEvent(QKeyEvent *event)
     }
     QListWidget::keyPressEvent(event);
 }
+
+#include "moc_attachmenticonview.cpp"

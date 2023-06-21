@@ -189,3 +189,5 @@ void IncidenceDescription::printDebugInfo() const
         qCDebug(INCIDENCEEDITOR_LOG) << "Incidence is invalid";
     }
 }
+
+#include "moc_incidencedescription.cpp"

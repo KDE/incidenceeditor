@@ -169,3 +169,5 @@ void AttachmentEditDialog::urlChanged(const QUrl &url)
     mUi->mTypeLabel->setText(mMimeType.comment());
     mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()));
 }
+
+#include "moc_attachmenteditdialog.cpp"

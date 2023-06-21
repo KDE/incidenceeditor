@@ -137,3 +137,5 @@ void CombinedIncidenceEditor::save(Akonadi::Item &item)
         editor->save(item);
     }
 }
+
+#include "moc_combinedincidenceeditor.cpp"

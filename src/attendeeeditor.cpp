@@ -85,3 +85,5 @@ void AttendeeEditor::setActions(AttendeeLine::AttendeeActions actions)
         att->setActions(actions);
     }
 }
+
+#include "moc_attendeeeditor.cpp"

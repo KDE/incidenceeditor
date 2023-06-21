@@ -85,3 +85,5 @@ void KWeekdayCheckCombo::setDays(const QBitArray &days, const QBitArray &disable
     }
     setCheckedItems(checkedDays);
 }
+
+#include "moc_kweekdaycheckcombo.cpp"

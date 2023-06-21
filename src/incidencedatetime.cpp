@@ -930,3 +930,5 @@ void IncidenceDateTime::setTimeZoneLabelEnabled(bool enable)
 {
     mUi->mTimeZoneLabel->setVisible(enable);
 }
+
+#include "moc_incidencedatetime.cpp"
