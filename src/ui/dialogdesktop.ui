@@ -94,8 +94,7 @@
            <string comment="@action:button Accept an invitation">Accept</string>
           </property>
           <property name="icon">
-           <iconset theme="dialog-ok">
-            <normaloff>.</normaloff>.</iconset>
+		  <iconset theme="dialog-ok"/>
           </property>
          </widget>
         </item>
@@ -105,8 +104,8 @@
            <string comment="@action:button decline an invitation">Decline</string>
           </property>
           <property name="icon">
-           <iconset theme="dialog-cancel">
-            <normaloff>.</normaloff>.</iconset>
+		  <iconset theme="dialog-cancel"/>
+            
           </property>
          </widget>
         </item>
@@ -873,8 +872,8 @@
               <string comment="@action:button">Select Attendees...</string>
              </property>
              <property name="icon">
-              <iconset theme="select">
-               <normaloff>.</normaloff>.</iconset>
+		     <iconset theme="select"/>
+               
              </property>
             </widget>
            </item>
@@ -966,8 +965,8 @@
               <string>Find Resources...</string>
              </property>
              <property name="icon">
-              <iconset theme="search">
-               <normaloff>.</normaloff>.</iconset>
+		     <iconset theme="search"/>
+               
              </property>
             </widget>
            </item>
@@ -1015,8 +1014,8 @@
             <string comment="@action:button Adds an reminder">Add</string>
            </property>
            <property name="icon">
-            <iconset theme="list-add">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="list-add"/>
+             
            </property>
           </widget>
          </item>
@@ -1046,8 +1045,8 @@
             <string comment="@action:button create a new reminder">New</string>
            </property>
            <property name="icon">
-            <iconset theme="entry-new">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="entry-new"/>
+             
            </property>
           </widget>
          </item>
@@ -1057,8 +1056,8 @@
             <string comment="@action:button modify the selected reminder">Modify</string>
            </property>
            <property name="icon">
-            <iconset theme="entry-edit">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="entry-edit"/>
+             
            </property>
           </widget>
          </item>
@@ -1075,8 +1074,8 @@
             <string comment="@action:button removes selected reminders">Remove</string>
            </property>
            <property name="icon">
-            <iconset theme="list-remove">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="list-remove"/>
+             
            </property>
           </widget>
          </item>
@@ -1561,8 +1560,8 @@
               <string comment="@action:button adds an exception on the recurrence">Add</string>
              </property>
              <property name="icon">
-              <iconset theme="list-add">
-               <normaloff>.</normaloff>.</iconset>
+		     <iconset theme="list-add"/>
+               
              </property>
             </widget>
            </item>
@@ -1615,8 +1614,8 @@
               <string comment="@action:button removes an exception">Remove</string>
              </property>
              <property name="icon">
-              <iconset theme="list-remove">
-               <normaloff>.</normaloff>.</iconset>
+		     <iconset theme="list-remove"/>
+               
              </property>
             </widget>
            </item>
@@ -1670,8 +1669,8 @@
             <string comment="@action:button adds an attachment">Add</string>
            </property>
            <property name="icon">
-            <iconset theme="list-add">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="list-add"/>
+             
            </property>
           </widget>
          </item>
@@ -1696,8 +1695,8 @@
             <string comment="@action:button remove an attachment">Remove</string>
            </property>
            <property name="icon">
-            <iconset theme="list-remove">
-             <normaloff>.</normaloff>.</iconset>
+		   <iconset theme="list-remove"/>
+             
            </property>
           </widget>
          </item>
