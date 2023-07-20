@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2023-07-20 00:49+0000\n"
 "PO-Revision-Date: 2022-03-31 20:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1823,7 +1823,7 @@ msgid "Accept"
 msgstr "Accepta"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
-#: ui/dialogdesktop.ui:105
+#: ui/dialogdesktop.ui:104
 #, kde-format
 msgctxt "@action:button decline an invitation"
 msgid "Decline"
@@ -1831,7 +1831,7 @@ msgstr "Declina"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:138 ui/dialogdesktop.ui:166
+#: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
@@ -1839,7 +1839,7 @@ msgstr "Estableix el resum"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:141 ui/dialogdesktop.ui:169
+#: ui/dialogdesktop.ui:140 ui/dialogdesktop.ui:168
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1850,126 +1850,126 @@ msgstr ""
 "interfície d'usuari."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/dialogdesktop.ui:147
+#: ui/dialogdesktop.ui:146
 #, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
 msgstr "Res&um:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
-#: ui/dialogdesktop.ui:188
+#: ui/dialogdesktop.ui:187
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
 msgstr "&Ubicació:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:207
+#: ui/dialogdesktop.ui:206
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
 msgstr "Estableix la ubicació"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:210
+#: ui/dialogdesktop.ui:209
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
 msgstr "Estableix el lloc on es durà a terme l'esdeveniment o tasca pendent."
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
-#: ui/dialogdesktop.ui:227
+#: ui/dialogdesktop.ui:226
 #, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
 msgstr "Compleció:"
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
-#: ui/dialogdesktop.ui:280
+#: ui/dialogdesktop.ui:279
 #, kde-format
 msgctxt "@label:slider Showed after the to-do percentage completed slider"
 msgid "completed"
 msgstr "completada"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ui/dialogdesktop.ui:287
+#: ui/dialogdesktop.ui:286
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
 msgstr "Prioritat:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:298
+#: ui/dialogdesktop.ui:297
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "unspecified"
 msgstr "sense especificar"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:303
+#: ui/dialogdesktop.ui:302
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
 msgstr "1 (la més alta)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:308
+#: ui/dialogdesktop.ui:307
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
 msgstr "2"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:313
+#: ui/dialogdesktop.ui:312
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
 msgstr "3"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:318
+#: ui/dialogdesktop.ui:317
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
 msgstr "4"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:323
+#: ui/dialogdesktop.ui:322
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
 msgstr "5 (mitjana)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:328
+#: ui/dialogdesktop.ui:327
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
 msgstr "6"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:333
+#: ui/dialogdesktop.ui:332
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
 msgstr "7"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:338
+#: ui/dialogdesktop.ui:337
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
 msgstr "8"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:343
+#: ui/dialogdesktop.ui:342
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
 msgstr "9 (la més baixa)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:362
+#: ui/dialogdesktop.ui:361
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1979,42 +1979,42 @@ msgstr ""
 "un horari associat."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:365
+#: ui/dialogdesktop.ui:364
 #, kde-format
 msgctxt "@option:check"
 msgid "All Day"
 msgstr "Tot el dia"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
-#: ui/dialogdesktop.ui:391
+#: ui/dialogdesktop.ui:390
 #, kde-format
 msgctxt "@option:check"
 msgid "Blocks me for other events"
 msgstr "Bloqueja'm per a altres esdeveniments"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
-#: ui/dialogdesktop.ui:422
+#: ui/dialogdesktop.ui:421
 #, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
 msgstr "&Comença:"
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:450
+#: ui/dialogdesktop.ui:449
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the start date"
 msgstr "Estableix la data d'inici"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:453
+#: ui/dialogdesktop.ui:452
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
 msgstr "Estableix la data d'inici per a aquesta tasca pendent"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
-#: ui/dialogdesktop.ui:469
+#: ui/dialogdesktop.ui:468
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
@@ -2022,7 +2022,7 @@ msgstr "Estableix l'hora d'inici per a aquesta tasca pendent."
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
-#: ui/dialogdesktop.ui:485 ui/dialogdesktop.ui:600
+#: ui/dialogdesktop.ui:484 ui/dialogdesktop.ui:599
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
@@ -2031,35 +2031,35 @@ msgstr ""
 "repeticions"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
-#: ui/dialogdesktop.ui:503
+#: ui/dialogdesktop.ui:502
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
 msgstr "<a href=\"hide\">&lt;&lt; Zones horàries</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
-#: ui/dialogdesktop.ui:540
+#: ui/dialogdesktop.ui:539
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
 msgstr "&Acaba:"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
-#: ui/dialogdesktop.ui:568
+#: ui/dialogdesktop.ui:567
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
 msgstr "Estableix la data de venciment per a aquesta tasca pendent."
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
-#: ui/dialogdesktop.ui:584
+#: ui/dialogdesktop.ui:583
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
 msgstr "Estableix l'hora de venciment per a aquesta tasca pendent."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
-#: ui/dialogdesktop.ui:636
+#: ui/dialogdesktop.ui:635
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
@@ -2067,7 +2067,7 @@ msgstr "General"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:651 ui/dialogdesktop.ui:716
+#: ui/dialogdesktop.ui:650 ui/dialogdesktop.ui:715
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
@@ -2075,7 +2075,7 @@ msgstr "Estableix el nivell de privadesa"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:654 ui/dialogdesktop.ui:719
+#: ui/dialogdesktop.ui:653 ui/dialogdesktop.ui:718
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2091,49 +2091,49 @@ msgstr ""
 "marcades com a privades o confidencials podrien ser visibles per als altres."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
-#: ui/dialogdesktop.ui:657
+#: ui/dialogdesktop.ui:656
 #, kde-format
 msgctxt "@label:listbox sets the privacy option of the event or to-do"
 msgid "Access:"
 msgstr "Accés:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
-#: ui/dialogdesktop.ui:678
+#: ui/dialogdesktop.ui:677
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
 msgstr "<a href=\\\"hide\\\">Text enriquit &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
-#: ui/dialogdesktop.ui:709
+#: ui/dialogdesktop.ui:708
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
 msgstr "Etiquetes:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
-#: ui/dialogdesktop.ui:730
+#: ui/dialogdesktop.ui:729
 #, kde-format
 msgctxt "@title:tab attendees of this event or to-do"
 msgid "Attendees"
 msgstr "Assistents"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ui/dialogdesktop.ui:736
+#: ui/dialogdesktop.ui:735
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
 msgstr "Organitzador de la reunió:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:777
+#: ui/dialogdesktop.ui:776
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
 msgstr "Estableix la identitat de l'organitzador"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:780
+#: ui/dialogdesktop.ui:779
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2148,21 +2148,21 @@ msgstr ""
 "l'arranjament del KMail i des de la llibreta d'adreces."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ui/dialogdesktop.ui:812
+#: ui/dialogdesktop.ui:811
 #, kde-format
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
 msgstr "Participants:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:831
+#: ui/dialogdesktop.ui:830
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
 msgstr "Planifica la reunió amb els seus assistents."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:834
+#: ui/dialogdesktop.ui:833
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2173,205 +2173,205 @@ msgstr ""
 "temps que sigui possible per a tots els assistents."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:837
+#: ui/dialogdesktop.ui:836
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule..."
 msgstr "Planifica..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
-#: ui/dialogdesktop.ui:860
+#: ui/dialogdesktop.ui:859
 #, kde-format
 msgid "Substitute with group members"
 msgstr "Substitueix pels membres del grup"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:867
+#: ui/dialogdesktop.ui:866
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
 msgstr "Seleccioneu els assistents des de la llibreta d'adreces."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:870
+#: ui/dialogdesktop.ui:869
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
 msgstr "Obre la llibreta d'adreces, permetent-vos seleccionar nous assistents."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:873
+#: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees..."
 msgstr "Selecciona els assistents..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
-#: ui/dialogdesktop.ui:897
+#: ui/dialogdesktop.ui:896
 #, kde-format
 msgid "Resources"
 msgstr "Recursos"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
-#: ui/dialogdesktop.ui:937
+#: ui/dialogdesktop.ui:936
 #, kde-format
 msgid "Book Resource"
 msgstr "Reserva de recurs"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
-#: ui/dialogdesktop.ui:966
+#: ui/dialogdesktop.ui:965
 #, kde-format
 msgid "Find Resources..."
 msgstr "Cerca un recurs..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
-#: ui/dialogdesktop.ui:980
+#: ui/dialogdesktop.ui:979
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
 msgstr "Recordatori"
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
-#: ui/dialogdesktop.ui:992
+#: ui/dialogdesktop.ui:991
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
 msgstr "Afegeix un recordatori per omissió:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
-#: ui/dialogdesktop.ui:1015
+#: ui/dialogdesktop.ui:1014
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
 msgstr "Afegeix"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: ui/dialogdesktop.ui:1046
+#: ui/dialogdesktop.ui:1045
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "Nou"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: ui/dialogdesktop.ui:1057
+#: ui/dialogdesktop.ui:1056
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
 msgstr "Modifica"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: ui/dialogdesktop.ui:1068
+#: ui/dialogdesktop.ui:1067
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
 msgstr "Desactiva"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
-#: ui/dialogdesktop.ui:1075
+#: ui/dialogdesktop.ui:1074
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
 msgstr "Elimina"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
-#: ui/dialogdesktop.ui:1100
+#: ui/dialogdesktop.ui:1099
 #, kde-format
 msgctxt "@title:tab"
 msgid "Recurrence"
 msgstr "Recurrència"
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
-#: ui/dialogdesktop.ui:1112
+#: ui/dialogdesktop.ui:1111
 #, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
 msgstr "Repeticions:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1131
+#: ui/dialogdesktop.ui:1130
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
 msgstr "Mai"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1136
+#: ui/dialogdesktop.ui:1135
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Daily"
 msgstr "Diàriament"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1141
+#: ui/dialogdesktop.ui:1140
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
 msgstr "Setmanalment"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1146
+#: ui/dialogdesktop.ui:1145
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
 msgstr "Mensualment"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1151
+#: ui/dialogdesktop.ui:1150
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Yearly"
 msgstr "Anualment"
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
-#: ui/dialogdesktop.ui:1165
+#: ui/dialogdesktop.ui:1164
 #, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
 msgstr "cada"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
-#: ui/dialogdesktop.ui:1197
+#: ui/dialogdesktop.ui:1196
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
 msgstr "dia/es"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
-#: ui/dialogdesktop.ui:1204
+#: ui/dialogdesktop.ui:1203
 #, kde-format
 msgid "This and future occurrences."
 msgstr "Aquesta i les ocurrències futures."
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
-#: ui/dialogdesktop.ui:1375
+#: ui/dialogdesktop.ui:1374
 #, kde-format
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
 msgstr "Acaba:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1397
+#: ui/dialogdesktop.ui:1396
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
 msgstr "Mai"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1402
+#: ui/dialogdesktop.ui:1401
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "A"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1407
+#: ui/dialogdesktop.ui:1406
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "Després"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
-#: ui/dialogdesktop.ui:1462
+#: ui/dialogdesktop.ui:1461
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
@@ -2380,56 +2380,56 @@ msgstr ""
 "repetir-se"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
-#: ui/dialogdesktop.ui:1517
+#: ui/dialogdesktop.ui:1516
 #, kde-format
 msgctxt "@label"
 msgid "occurrence(s)"
 msgstr "ocurrència/es"
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
-#: ui/dialogdesktop.ui:1536
+#: ui/dialogdesktop.ui:1535
 #, kde-format
 msgctxt "@label exceptions for the recurrence"
 msgid "Exceptions:"
 msgstr "Excepcions:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
-#: ui/dialogdesktop.ui:1561
+#: ui/dialogdesktop.ui:1560
 #, kde-format
 msgctxt "@action:button adds an exception on the recurrence"
 msgid "Add"
 msgstr "Afegeix"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
-#: ui/dialogdesktop.ui:1600
+#: ui/dialogdesktop.ui:1599
 #, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
 msgstr "a:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
-#: ui/dialogdesktop.ui:1615
+#: ui/dialogdesktop.ui:1614
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
 msgstr "Elimina"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
-#: ui/dialogdesktop.ui:1642
+#: ui/dialogdesktop.ui:1641
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
 msgstr "Adjunts"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1664
+#: ui/dialogdesktop.ui:1663
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr "Afegeix un adjunt"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1667
+#: ui/dialogdesktop.ui:1666
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2440,21 +2440,21 @@ msgstr ""
 "esdeveniment o tasca pendent com a enllaç o dades incloses."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1670
+#: ui/dialogdesktop.ui:1669
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
 msgstr "Afegeix"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1690
+#: ui/dialogdesktop.ui:1689
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr "Elimina l'adjunt seleccionat"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1693
+#: ui/dialogdesktop.ui:1692
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2464,7 +2464,7 @@ msgstr ""
 "tasca pendent."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1696
+#: ui/dialogdesktop.ui:1695
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
