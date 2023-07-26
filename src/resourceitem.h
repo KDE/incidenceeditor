@@ -113,6 +113,6 @@ private:
 }
 
 //@cond PRIVATE
-Q_DECLARE_TYPEINFO(IncidenceEditorNG::ResourceItem::Ptr, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(IncidenceEditorNG::ResourceItem::Ptr, Q_RELOCATABLE_TYPE);
 Q_DECLARE_METATYPE(IncidenceEditorNG::ResourceItem::Ptr)
 //@endcond
