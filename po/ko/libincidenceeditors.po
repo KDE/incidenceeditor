@@ -270,7 +270,7 @@ msgid ""
 "The item has been changed by another application.\n"
 "What should be done?"
 msgstr ""
-"다른 프로그램에서 항목을 변경했습니다.\n"
+"다른 앱에서 항목을 변경했습니다.\n"
 "무엇을 하시겠습니까?"
 
 #: editoritemmanager.cpp:229
