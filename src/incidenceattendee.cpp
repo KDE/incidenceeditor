@@ -440,7 +440,10 @@ void IncidenceAttendee::slotSelectAddresses()
                 bool rsvp = true;
 
                 int pos = 0;
-                KCalendarCore::Attendee newAt(selection.name(), selection.email(), rsvp, partStat, KCalendarCore::Attendee::ReqParticipant);
+                QString name;
+                QString email;
+                KEmailAddress::extractEmailAddressAndName(selection.email(), email, name);
+                KCalendarCore::Attendee newAt(selection.name(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant);
                 dataModel()->insertAttendee(pos, newAt);
 
                 mExpandGroupJobs.insert(job, newAt.uid());
@@ -719,7 +722,11 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
         partStat = KCalendarCore::Attendee::Accepted;
         rsvp = false;
     }
-    KCalendarCore::Attendee newAt(a.realName(), a.preferredEmail(), rsvp, partStat, KCalendarCore::Attendee::ReqParticipant, a.uid());
+    QString name;
+    QString email;
+    KEmailAddress::extractEmailAddressAndName(a.preferredEmail(), email, name);
+
+    KCalendarCore::Attendee newAt(a.realName(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant, a.uid());
     if (pos < 0) {
         pos = dataModel()->rowCount() - 1;
     }
