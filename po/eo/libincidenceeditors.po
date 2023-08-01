@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:49+0000\n"
+"POT-Creation-Date: 2023-08-01 00:47+0000\n"
 "PO-Revision-Date: 2023-03-20 22:31+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -627,7 +627,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr ""
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -635,7 +635,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -644,13 +644,13 @@ msgid ""
 "well?"
 msgstr ""
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr ""
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

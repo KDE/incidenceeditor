@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:49+0000\n"
+"POT-Creation-Date: 2023-08-01 00:47+0000\n"
 "PO-Revision-Date: 2022-07-29 20:22+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -645,7 +645,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Valitse osallistujat"
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -653,7 +653,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 ristiriita"
 msgstr[1] "%1 ristiriitaa"
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -664,13 +664,13 @@ msgstr ""
 "Olet vaihtamassa tapahtuman järjestäjää. Koska järjestäjäkin osallistuu "
 "tapahtumaan, haluatko vaihtaa myös vastaavaa osallistujaa?"
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Vaihda osallistuja"
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
