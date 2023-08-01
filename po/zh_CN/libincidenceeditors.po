@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2023-08-01 02:44+0000\n"
 "PO-Revision-Date: 2023-07-30 07:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -622,14 +622,14 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "选择参与者"
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 处冲突"
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -639,13 +639,13 @@ msgid ""
 msgstr ""
 "您正要更改此事件的组织者，而对方同时也是参与者，您想要同时更改参与者吗？"
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr ""
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

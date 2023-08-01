@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2023-08-01 02:44+0000\n"
 "PO-Revision-Date: 2015-01-09 11:55+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -688,7 +688,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Izaberi prisutne..."
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -697,7 +697,7 @@ msgstr[0] "%1 konflikta"
 msgstr[1] "%1 konflikata"
 msgstr[2] "%1 konflikta"
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -708,14 +708,14 @@ msgstr ""
 "Mijenjate organizatora ovog događaja. S obzirom da organizator prisustvuje "
 "događaju također, da li želite da promjenite odgovarajuće sudionike također?"
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Prisutni"
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
