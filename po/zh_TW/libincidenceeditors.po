@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:49+0000\n"
+"POT-Creation-Date: 2023-08-01 00:47+0000\n"
 "PO-Revision-Date: 2015-06-14 13:37+0800\n"
 "Last-Translator: Franklin\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -651,14 +651,14 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "選擇參加者..."
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 個衝突"
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -669,7 +669,7 @@ msgstr ""
 "您改變了此事件的發起者。既然他也是此事件的參加者，您也要順便變更相關的參加者"
 "嗎？"
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, fuzzy, kde-format
 #| msgctxt "@title:tab attendees of this event or to-do"
 #| msgid "Attendees"
@@ -677,7 +677,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "參加者"
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"

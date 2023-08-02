@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-20 00:49+0000\n"
+"POT-Creation-Date: 2023-08-01 00:47+0000\n"
 "PO-Revision-Date: 2021-11-06 09:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -639,7 +639,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Deelnemers selecteren"
 
-#: incidenceattendee.cpp:612
+#: incidenceattendee.cpp:615
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -647,7 +647,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "<b><span style=\"color:red\">Conflict</span></b><br/>"
 msgstr[1] "%1 conflicten"
 
-#: incidenceattendee.cpp:779
+#: incidenceattendee.cpp:786
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -658,13 +658,13 @@ msgstr ""
 "U staat op het punt de organisator van deze afspaak te wijzigen. Omdat hij "
 "ook deelneemt aan de afspaak: wilt u deze deelnemer ook wijzigen?"
 
-#: incidenceattendee.cpp:783
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Deelnemer wijzigen"
 
-#: incidenceattendee.cpp:784
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
