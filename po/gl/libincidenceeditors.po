@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-01 02:44+0000\n"
-"PO-Revision-Date: 2023-06-23 23:44+0200\n"
+"PO-Revision-Date: 2023-08-05 11:57+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -2129,10 +2129,10 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
-"Define a identidade correspondente ao organizador desta tarefa ou evento. As "
-"identidades poden definirse na sección «Persoal» da configuración de "
-"KOrganizer. Ademais, as identidades recóllense da configuración de KMail e "
-"do caderno de enderezos."
+"Define a identidade correspondente á persoa organizadora desta tarefa ou "
+"evento. As identidades poden definirse na sección «Persoal» da configuración "
+"de KOrganizer. Ademais, as identidades recóllense da configuración de KMail "
+"e da axenda de enderezos."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:812
@@ -2177,15 +2177,14 @@ msgstr "Substituír por membros do grupo"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
-msgstr "Escolla os asistentes no caderno de enderezos."
+msgstr "Seleccione asistentes na axenda de enderezos."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:870
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
-msgstr ""
-"Abre o caderno de enderezos, permitíndolle seleccionar novos asistentes nel."
+msgstr "Abre a axenda de enderezos para seleccionar máis asistentes."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:873
@@ -2756,7 +2755,7 @@ msgstr "Centrar no inicio"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
-msgstr "Centrar a gráfica de Gantt na data e hora de inicio deste evento."
+msgstr "Centrar o diagrama de Gantt na data e hora de inicio deste evento."
 
 #: visualfreebusywidget.cpp:164
 #, kde-format
@@ -2765,7 +2764,7 @@ msgid ""
 "Click this button to center the Gantt chart on the start time and day of "
 "this event."
 msgstr ""
-"Prema este botón para centrar a gráfica de Gantt na hora de inicio do día "
+"Prema este botón para centrar o diagrama de Gantt na hora de inicio do día "
 "deste evento."
 
 #: visualfreebusywidget.cpp:171
@@ -2801,7 +2800,7 @@ msgstr "Recargar"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
-msgstr "Recargar os datos de dispoñibilidade para todos os asistentes"
+msgstr "Recargar os datos de dispoñibilidade para todos os asistentes."
 
 #: visualfreebusywidget.cpp:188
 #, kde-format
@@ -2817,19 +2816,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
-msgstr "Amosa a lista de árbore de todos os datos"
+msgstr "Amosa a lista de árbore de todos os datos."
 
 #: visualfreebusywidget.cpp:200
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
-msgstr "Amosa a lista de árbore de todos os datos"
+msgstr "Amosa a lista de árbore de todos os datos."
 
 #: visualfreebusywidget.cpp:206
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
-msgstr "Amosa o estado de ocupación de todos os asistentes"
+msgstr "Amosa o estado de ocupación de todos os asistentes."
 
 #: visualfreebusywidget.cpp:208
 #, kde-format
