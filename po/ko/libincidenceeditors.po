@@ -884,13 +884,13 @@ msgstr "참석자(&A)"
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
-msgstr "자원(%1)(&R)"
+msgstr "리소스(%1)(&R)"
 
 #: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
-msgstr "자원(&R)"
+msgstr "리소스(&R)"
 
 #: incidencedialog.cpp:455
 #, kde-format
@@ -1323,13 +1323,13 @@ msgstr "이메일 서비스에 연결할 수 없음"
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "자원 관리"
+msgstr "리소스 관리"
 
 #: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
-msgstr "자원 예약"
+msgstr "리소스 예약"
 
 #: schedulingdialog.cpp:28
 #, kde-format
@@ -2148,19 +2148,19 @@ msgstr "참석자 선택..."
 #: ui/dialogdesktop.ui:896
 #, kde-format
 msgid "Resources"
-msgstr "자원"
+msgstr "리소스"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:936
 #, kde-format
 msgid "Book Resource"
-msgstr "자원 예약"
+msgstr "리소스 예약"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:965
 #, kde-format
 msgid "Find Resources..."
-msgstr "자원 검색..."
+msgstr "리소스 검색..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:979
@@ -2415,7 +2415,7 @@ msgstr "검색 항목 입력"
 #, kde-format
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
-msgstr "자원에서 검색할 키워드를 입력하십시오."
+msgstr "리소스에서 검색할 키워드를 입력하십시오."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
