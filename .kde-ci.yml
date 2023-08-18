@@ -16,3 +16,4 @@ Dependencies:
     'pim/kmime' : '@latest-kf6'
     'pim/libkdepim' : '@latest-kf6'
     'pim/pimcommon' : '@latest-kf6'
+    'pim/kpimtextedit' : '@latest-kf6'
