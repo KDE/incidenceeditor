@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2021-11-08 22:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -635,13 +635,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Non invita"
 
-#: incidenceattendee.cpp:432
+#: incidenceattendee.cpp:431
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Selige participantes"
 
-#: incidenceattendee.cpp:615
+#: incidenceattendee.cpp:614
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -649,7 +649,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 conflicto"
 msgstr[1] "%1 conflictos"
 
-#: incidenceattendee.cpp:786
+#: incidenceattendee.cpp:785
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -661,13 +661,13 @@ msgstr ""
 "anque participante a iste evento, tu anque vole modificar le correspondente "
 "participante?"
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Cambia Participante"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

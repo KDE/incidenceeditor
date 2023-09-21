@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-03-31 20:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -640,13 +640,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "No l'invitis"
 
-#: incidenceattendee.cpp:432
+#: incidenceattendee.cpp:431
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Selecció dels assistents"
 
-#: incidenceattendee.cpp:615
+#: incidenceattendee.cpp:614
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -654,7 +654,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 conflicte"
 msgstr[1] "%1 conflictes"
 
-#: incidenceattendee.cpp:786
+#: incidenceattendee.cpp:785
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -666,13 +666,13 @@ msgstr ""
 "també està assistint a aquest esdeveniment, voleu canviar la corresponent "
 "assistència també?"
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Canvia l'assistent"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
