@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2014-09-13 18:13+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -635,13 +635,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:432
+#: incidenceattendee.cpp:431
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr ""
 
-#: incidenceattendee.cpp:615
+#: incidenceattendee.cpp:614
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -649,7 +649,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikter"
 
-#: incidenceattendee.cpp:786
+#: incidenceattendee.cpp:785
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -660,13 +660,13 @@ msgstr ""
 "I denne hendelsen endrer du nå arrangør. Siden arrangøren også er deltaker, "
 "vil du endre den tilsvarende deltakeren også?"
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:789
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr ""
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -935,8 +935,8 @@ msgid ""
 "<para>You have not set a default calendar for your events yet.</"
 "para><para>Setting a default calendar will make creating new events faster "
 "and easier with less chance of filing them into the wrong folder.</"
-"para><para>Would you like to set your default events calendar to "
-"<resource>%1</resource>?</para>"
+"para><para>Would you like to set your default events calendar to <resource>"
+"%1</resource>?</para>"
 msgstr ""
 
 #: incidencedialog.cpp:491
