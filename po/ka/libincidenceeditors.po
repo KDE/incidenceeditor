@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-09-22 21:13+0200\n"
+"PO-Revision-Date: 2023-09-23 09:01+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1653,6 +1653,8 @@ msgid ""
 "Use the adjacent file browser to help you find the file you want to use when "
 "playing a sound when the reminder triggers."
 msgstr ""
+"გამოიყენეთ იქვე მდებარე ფაილის ბრაუზერი ფაილის საპოვნად, რომელიც გნებავთ "
+"დაუკრათ, როცა შემხსენებელი დატრიგერდება."
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:38
@@ -1729,6 +1731,8 @@ msgid ""
 "Enter the path to the attachment file or use the file browser by pressing "
 "the adjacent button"
 msgstr ""
+"შეიყვანეთ ბილიკი მისამაგრებელ ფაილამდე ან გამოიძახეთ ფაილის ბრაუზერი იქვე "
+"მდებარე ღილაკზე დაწოლით"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/attachmenteditdialog.ui:159
@@ -2132,6 +2136,8 @@ msgid ""
 "Opens the scheduling dialog, which will assist in picking a time slot that "
 "works for all attendees."
 msgstr ""
+"გახსნის დაგეგმვის ფანჯარას, რომელიც დაგეხმარებათ, აირჩიოთ დროის მონაკვეთი, "
+"რომელიც ყველა დამსწრისთვის მისაღებია."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
@@ -2159,6 +2165,8 @@ msgstr "აირჩიეთ დამსწრეები თქვენი 
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
 msgstr ""
+"გახსნის თქვენს მისამართების წიგნს და საშუალებას გაძლევთ, იქიდან ახალი "
+"დამსწრეები აირჩიოთ."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
@@ -2395,6 +2403,9 @@ msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
 msgstr ""
+"აჩვენებს ფანჯარას, რომელიც საშუალებას გაძლევთ აირჩიოთ ახალი მისამაგრებელი "
+"ფაილი ამ მოვლენაზე დასამატებლად ან გასაკეთებელი, ბმულის სახით, ან "
+"მონაცემები, ხაზშივე."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1669
@@ -2416,7 +2427,7 @@ msgstr "მონიშნული მიმაგრებული ფაი�
 msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
-msgstr ""
+msgstr "ამ მოვლენიდან ან გასაკეთებლად სიაში მონიშნული მიმაგრებების წაშლა."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1695
