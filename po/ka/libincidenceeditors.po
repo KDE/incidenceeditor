@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-09-23 09:01+0200\n"
+"PO-Revision-Date: 2023-09-24 05:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1702,6 +1702,12 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
+"ამ პარამეტრის ჩართვა მიმაგრებული ფაილის თქვენი კალენდრის შიგნით "
+"დამახსოვრებას გამოიწვევს, რასაც, მიმაგრებულ ფაილზე დამოკიდებულებით, საკმაო "
+"ადგილი, შეიძლება, დასჭირდეს. თუ ეს პარამეტრი ჩართული არაა, დამახსოვრებული "
+"იქნება მხოლოდ ბმული, რომელიც მიმაგრებულ ფაილზე მიუთითებს.  არ გამოიყენოთ "
+"ასეთი ბმული მიმაგრებული ფაილებისთვის, რომლებიც ხშირად იცვლება, ან შეიძლება "
+"გადაიტანონ(ან წაშალონ)."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
@@ -2060,6 +2066,11 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
+"დააყენებს, არის თუ არა ამ მოვლენაზე ან გასაკეთებელზე წვდომა შეზღუდული. "
+"გაითვალისწინეთ, რომ KOrganizer ამჟამად ამ პარამეტრს არ იყენებს, ასე რომ ამ "
+"შეზღუდვის განხოციელება groupware-ის სერვერზეა დამოკიდებული. ეს კი ნიშნავს, "
+"რომ მოვლენები ან გასაკეთებლები, რომლებიც კონფიდენციალურად მონიშნეთ, "
+"სხვებისთვის ჯერ კიდევ ხილული იყოს."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
@@ -2113,6 +2124,10 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
+"აყენებს ამ მოვლენის ან გასაკეთებლის ორგანიზატორის შესაბამის იდენტიფიკატორს. "
+"იდენტიფიკატორები შეგიძლიათ KOrganizer-ის მორგების 'პირად' სექციაში დააყენოთ. "
+"დამატებით, იდენტიფიკატორები თქვენი KMail-ის პარამეტრებიდან და თქვენი "
+"მისამართების წიგნიდანაც გროვდება."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:811
@@ -2584,6 +2599,9 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
+"აირჩიეთ ნიმუში და დააწკაპუნეთ <i>გადატარებას</i>, რომ ის ელემენტზე "
+"გადატარდეს. მიმდინარე ელემენტის პარამეტრებზე დამოკიდებულებითა ახალი ნიმუშს "
+"შესაქმნელად კი <i>ახალ</i> ღილაკზე დააწკაპუნეთ."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
@@ -2615,6 +2633,9 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
+"დააწკაპუნეთ ამ ღილაკზე ახალი ნიმუშის რედაქტორის მიმდინარე პარამეტრებიდან "
+"შესაქმნელად. ეს ნიმუში მომავალში ახალი ელემენტების სწრაფად დასამატებლად "
+"შეგიძლიათ, გამოიყენოთ."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
@@ -2635,6 +2656,8 @@ msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
 msgstr ""
+"ამ ღილაკზე დაწკაპუნება სამუდამოდ წაშლის მონიშნულ ნიმუშს მართული ნიმუშების "
+"თქვენი სიიდან."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:78
@@ -2655,6 +2678,8 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
+"ამ ღილაკზე დაწკაპუნება მონიშნული ნიმუშიდან პარამეტრებს თქვენს ამჟამად "
+"ჩასწორებად ელემენტზე გადაატარებს."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:91
@@ -2684,6 +2709,12 @@ msgid ""
 "few years,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"აირჩიეთ განტის გრაფიკის გადიდების დონე ერთ-ერთი შემდეგიდან:<nl/>'საათი' "
+"რამდენიმესაათიან დიაპაზონს გაჩვენებთ.<nl/>'დღე' რამდენიმედღიან დიაპაზონს "
+"გაჩვენებთ.<nl/>'კვირა' რამდენიმეთვიან დიაპაზონს გაჩვენებთ<nl/>და 'თვე' "
+"რამდენიმეწლიან დიაპაზონს გაჩვენებთ.<nl/>თუ დააყენებთ 'ავტომატურს', ის "
+"მიმდინარე მოვლენისთვის ან გასაკეთებლისთვის ყველაზე მეტად შესაფერის პარამეტრს "
+"აირჩევს."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
