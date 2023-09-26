@@ -92,7 +92,7 @@ void TemplateManagementDialog::slotAddTemplate()
     if (m_templates.contains(newTemplate)) {
         int rc = KMessageBox::warningContinueCancel(this,
                                                     i18n("A template with that name already exists, do you want to overwrite it?"),
-                                                    i18n("Duplicate Template Name"),
+                                                    i18nc("@title:window", "Duplicate Template Name"),
                                                     KStandardGuiItem::overwrite());
         if (rc == KMessageBox::Cancel) {
             QTimer::singleShot(0, this, &TemplateManagementDialog::slotAddTemplate);
@@ -127,7 +127,7 @@ void TemplateManagementDialog::slotRemoveTemplate()
 
     int rc = KMessageBox::warningContinueCancel(this,
                                                 i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
-                                                i18n("Remove Template"),
+                                                i18nc("@title:window", "Remove Template"),
                                                 KStandardGuiItem::remove());
 
     if (rc == KMessageBox::Cancel) {
