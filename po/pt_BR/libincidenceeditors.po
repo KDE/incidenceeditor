@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2021-11-09 10:41-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1412,7 +1412,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Já existe um modelo com este nome. Deseja sobrescrevê-lo?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicar o nome do modelo"
 
@@ -1422,7 +1424,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Tem certeza de que deseja remover o modelo <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Remover modelo"
 

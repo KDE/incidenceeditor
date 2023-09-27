@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1445,9 +1445,11 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr ""
+msgstr "Ainm an Teimpléid"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1455,7 +1457,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "An bhfuil tú cinnte gur mian leat teimpléad <b>%1</b> a bhaint?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Bain Teimpléad"
 

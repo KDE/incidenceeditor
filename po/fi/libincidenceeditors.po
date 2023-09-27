@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-07-29 20:22+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1413,7 +1413,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Saman niminen mallipohja on jo olemassa: haluatko korvata sen?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Toistuva mallipohjan nimi"
 
@@ -1423,7 +1425,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Haluatko varmasti poistaa mallipohjan <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Poista mallipohja"
 

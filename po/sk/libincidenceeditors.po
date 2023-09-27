@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1442,7 +1442,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Šablóna s rovnakým názvom už existuje, chcete ju prepísať?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplikovať názov šablóny"
 
@@ -1452,7 +1454,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Určite chcete odstrániť šablónu <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Odstrániť šablónu"
 

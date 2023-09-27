@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-07-27 09:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1407,7 +1407,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Шаблон с това име вече съществува, искате ли да го презапишете?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Дублиране на име на шаблон"
 
@@ -1417,7 +1419,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Наистина ли искате да премахнете шаблона <b> %1 </b>?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Премахване на шаблон"
 

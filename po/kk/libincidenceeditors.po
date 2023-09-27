@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -1460,7 +1460,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Осылай аталған үлгі бар екен, үстінен жаза берейік пе?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Үлгінің атауын қайталау"
 
@@ -1470,7 +1472,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<b>%1</b> деп аталған үлгіні шын өшірмексіз бе?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Үлгіні өшіру"
 

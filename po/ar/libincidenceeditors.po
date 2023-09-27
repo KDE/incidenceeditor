@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-10-27 12:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1465,7 +1465,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "هناك قالب بالاسم هذا بالفعل. أتريد الكتابة فوقه؟"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "اسم القالب متكرّر"
 
@@ -1475,7 +1477,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "أمتأكّد من إزالة القالب <b>%1</b>؟"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "إزالة القالب"
 

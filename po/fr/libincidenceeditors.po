@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2021-11-06 22:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -1419,7 +1419,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Un modèle portant ce nom existe déjà. Voulez-vous le remplacer ?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Nom de modèle en double"
 
@@ -1429,7 +1431,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Voulez-vous vraiment effacer le modèle <b>%1</b> ?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Effacer le modèle"
 

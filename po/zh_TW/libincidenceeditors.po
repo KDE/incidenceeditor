@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2015-06-14 13:37+0800\n"
 "Last-Translator: Franklin\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -1422,7 +1422,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "此樣本名稱已存在。要覆寫它嗎？"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "重覆的樣本名稱"
 
@@ -1432,7 +1434,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<qt>您確定要移除樣本<b>%1</b> 嗎？</qt>"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "移除樣本"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2021-11-11 23:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1380,7 +1380,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "이름이 같은 템플릿이 이미 존재합니다. 덮어쓰시겠습니까?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "중복된 템플릿 이름"
 
@@ -1390,7 +1392,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<b>%1</b> 템플릿을 삭제하시겠습니까?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "템플릿 삭제"
 

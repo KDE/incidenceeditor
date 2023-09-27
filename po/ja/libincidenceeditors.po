@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1355,6 +1355,7 @@ msgstr ""
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr ""
 
@@ -1365,6 +1366,7 @@ msgstr ""
 
 #: templatemanagementdialog.cpp:130
 #, kde-format
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr ""
 

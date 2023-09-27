@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2023-03-20 22:31+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -1373,6 +1373,7 @@ msgstr ""
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr ""
 
@@ -1382,7 +1383,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Forigi ŝablonon"
 

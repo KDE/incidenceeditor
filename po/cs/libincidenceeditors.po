@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2022-01-14 15:17+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1396,7 +1396,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Šablona zadaného jména již existuje. Přepsat?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplikovat jméno šablony"
 
@@ -1406,7 +1408,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<qt>Opravdu si přejete smazat šablonu <b>%1</b>?</qt>"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Odstranit šablonu"
 

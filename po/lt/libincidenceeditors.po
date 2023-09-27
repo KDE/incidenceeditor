@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1512,9 +1512,11 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Šablonas tokiu pavadinimu jau egzistuoja. Ar norite jį perrašyti?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr ""
+msgstr "Šablono pavadinimas"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1522,7 +1524,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Pašalinti šabloną"
 

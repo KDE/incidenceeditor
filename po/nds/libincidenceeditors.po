@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-27 01:41+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1481,7 +1481,9 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Dat gifft al en Vörlaag mit dissen Naam, wullt Du ehr överschrieven?"
 
 #: templatemanagementdialog.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Template Name"
+msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Dubbelt Vörlaagnaam"
 
@@ -1491,7 +1493,9 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Wullt Du de Vörlaag <b>%1</b> redig wegmaken?"
 
 #: templatemanagementdialog.cpp:130
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Template"
+msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Vörlaag wegmaken"
 
