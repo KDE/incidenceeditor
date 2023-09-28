@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2021-11-06 22:20+0100\n"
+"PO-Revision-Date: 2023-09-28 02:19+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -542,7 +542,7 @@ msgstr "Añadir adjunto"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Do you really want to remove these attachments?<nl/>%1"
-msgstr "¿Está seguro de que quiere eliminar esos adjuntos?<nl/>%1"
+msgstr "¿Seguro que quiere eliminar estos adjuntos?<nl/>%1"
 
 #: incidenceattachment.cpp:193
 #, kde-format
@@ -615,8 +615,8 @@ msgid ""
 "%1 does not look like a valid email address. Are you sure you want to invite "
 "this participant?"
 msgstr ""
-"%1 no parece ser una dirección de correo válida. ¿Seguro qué desea invitar a "
-"este participante?"
+"Parece que %1 no es una dirección de correo válida. ¿Seguro que desea "
+"invitar a este participante?"
 
 #: incidenceattendee.cpp:207
 #, kde-format
@@ -761,8 +761,8 @@ msgid ""
 "The event ends before it starts.\n"
 "Please correct dates and times."
 msgstr ""
-"El evento termina antes de iniciarse.\n"
-"Por favor, corrija la fecha y hora."
+"El evento termina antes empezar.\n"
+"Corrija las fechas y las horas."
 
 #: incidencedatetime.cpp:879
 #, kde-format
@@ -771,14 +771,14 @@ msgid ""
 "The to-do is due before it starts.\n"
 "Please correct dates and times."
 msgstr ""
-"La tarea pendiente termina antes de iniciarse.\n"
-"Por favor, corrija la fecha y hora."
+"La tarea pendiente termina antes empezar.\n"
+"Corrija las fechas y las horas."
 
 #: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
-msgstr "no se encontraron identidades (válidas)"
+msgstr "no se han encontrado identidades (válidas)"
 
 #: incidencedefaults.cpp:303
 #, kde-format
@@ -1003,8 +1003,8 @@ msgid ""
 msgstr ""
 "Pulse este botón para mostrar un diálogo que le ayude a gestionar un "
 "conjunto de plantillas. Las plantillas pueden facilitar y agilizar la "
-"creación de nuevos elementos poniendo los valores por omisión en el editor "
-"de forma automática."
+"creación de nuevos elementos poniendo los valores predeterminados en el "
+"editor de forma automática."
 
 #: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
 #, kde-format
@@ -1408,8 +1408,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Ya existe una plantilla con ese nombre. ¿Desea sobrescribirla?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicar el nombre de la plantilla"
@@ -1417,11 +1416,10 @@ msgstr "Duplicar el nombre de la plantilla"
 #: templatemanagementdialog.cpp:129
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
-msgstr "¿Está seguro de que desea eliminar la plantilla <b>%1</b>?"
+msgstr "¿Seguro que desea eliminar la plantilla <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Eliminar plantilla"
@@ -1795,7 +1793,7 @@ msgstr "Calen&dario:"
 #, kde-format
 msgctxt "@info"
 msgid "You are Invited, what do you want to do?"
-msgstr "Usted está invitado, ¿Qué quiere hacer?"
+msgstr "Usted está invitado. ¿Qué quiere hacer?"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:88

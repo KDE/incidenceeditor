@@ -8,14 +8,14 @@
 # Pino Toscano <toscano.pino@tiscali.it>, 2007.
 # Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008, 2009.
 # Leonardo Finetti <finex@finex.org>, 2008.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2021-11-24 00:21+0100\n"
+"PO-Revision-Date: 2023-09-27 17:48+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1417,8 +1417,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Un modello con questo nome esiste già. Vuoi sovrascriverlo?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplica il nome del modello"
@@ -1429,8 +1428,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Vuoi veramente rimuovere il modello <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Rimuovi modello"

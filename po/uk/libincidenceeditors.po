@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2021-11-06 05:57+0200\n"
+"PO-Revision-Date: 2023-09-27 08:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -889,7 +889,7 @@ msgstr "На вдається знайти шаблон «%1»."
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "Помилка завантаження шаблону «%1»."
+msgstr "Помилка завантаження шаблона «%1»."
 
 #: incidencedialog.cpp:314
 #, kde-format
@@ -1422,12 +1422,12 @@ msgstr "Керування шаблонами %1"
 #: templatemanagementdialog.cpp:83
 #, kde-format
 msgid "Template Name"
-msgstr "Назва шаблону"
+msgstr "Назва шаблона"
 
 #: templatemanagementdialog.cpp:84
 #, kde-format
 msgid "Please enter a name for the new template:"
-msgstr "Будь ласка, введіть назву нового шаблону:"
+msgstr "Будь ласка, введіть назву нового шаблона:"
 
 #: templatemanagementdialog.cpp:86
 #, kde-format
@@ -1440,11 +1440,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Шаблон з такою назвою вже існує. Перезаписати?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Здублювати назву шаблону"
+msgstr "Дублювання назви шаблона"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1452,8 +1451,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Ви дійсно хочете вилучити шаблон <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Вилучити шаблон"
@@ -2640,7 +2638,7 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
-"Виберіть запис шаблону і натисніть кнопку <i>Застосувати</i>, щоб "
+"Виберіть запис шаблона і натисніть кнопку <i>Застосувати</i>, щоб "
 "застосувати шаблон до цього запису. Натисніть кнопку <i>Створити</i>, щоб "
 "створити новий шаблон на основі поточних параметрів запису."
 
@@ -2710,7 +2708,7 @@ msgstr "Ви&лучити"
 #: ui/template_management_dialog_base.ui:85
 #, kde-format
 msgid "Apply the selected template settings"
-msgstr "Застосувати параметри вибраного шаблону"
+msgstr "Застосувати параметри вибраного шаблона"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:88
@@ -2719,7 +2717,7 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
-"Натискання цієї кнопки призведе до застосування параметрів вибраного шаблону "
+"Натискання цієї кнопки призведе до застосування параметрів вибраного шаблона "
 "до запису, який ви зараз редагуєте."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
