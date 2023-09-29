@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-09-24 05:14+0200\n"
+"PO-Revision-Date: 2023-09-28 05:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1404,11 +1404,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "ნიმუში ასეთი სახელით უკვე არსებობს. მართლა გნებავთ, თავზე გადააწეროთ?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "დუბლკატი ნიმუშის სახელი"
+msgstr "დუბლიკატი ნიმუშის სახელი"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1416,11 +1415,10 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "მართლა გნებავთ, წაშალოთ ნიმუში <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr "შაბლონის წაშლა"
+msgstr "ნიმუშის წაშლა"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
