@@ -200,11 +200,6 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
   PREFIX IncidenceEditor
 )
 
-ecm_generate_pri_file(BASE_NAME IncidenceEditor
-    LIB_NAME KPim6IncidenceEditor
-    DEPS "AkonadiCalendar AkonadiMime KCalendarCore CalendarUtils CalendarSupport EventViews" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor
-)
-
 install(FILES
     ${IncidenceEditor_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/IncidenceEditor
@@ -218,10 +213,6 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/incidenceeditor
     COMPONENT Devel
 )
-install(FILES
-    ${PRI_FILENAME}
-    DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
 
 
 ######
