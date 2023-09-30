@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Geoffray Levasseur <geoffray.levasseurbrandin@numericable.fr>, 2010, 2011, 2012, 2013, 2014.
 # Sébastien Renard <renard@kde.org>, 2012, 2013, 2014.
-# xavier <xavier.besnard@neuf.fr>, 2012, 2020, 2021.
+# SPDX-FileCopyrightText: 2012, 2020, 2021, 2023 xavier <xavier.besnard@neuf.fr>
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 #
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2021-11-06 22:41+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-09-28 08:02+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1419,11 +1419,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Un modèle portant ce nom existe déjà. Voulez-vous le remplacer ?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Nom de modèle en double"
+msgstr "Nom de modèle dupliqué"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1431,11 +1430,10 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Voulez-vous vraiment effacer le modèle <b>%1</b> ?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr "Effacer le modèle"
+msgstr "Supprimer le modèle"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

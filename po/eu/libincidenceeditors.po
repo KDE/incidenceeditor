@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-09-27 19:34+0200\n"
+"PO-Revision-Date: 2023-09-29 23:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -416,122 +416,122 @@ msgstr "(Errepikatze)"
 #: incidencealarm.cpp:305
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "%1 zeregina %3 hasi ondoren %2ra"
+msgstr "%1 zeregina hasi ondoren %2ra %3"
 
 #: incidencealarm.cpp:307
 #, kde-format
 msgid "%1 %2 after the event started %3"
-msgstr "%1 ekitaldia %3 hasi ondoren %2ra"
+msgstr "%1 ekitaldia hasi ondoren %2ra %3"
 
 #: incidencealarm.cpp:311
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "%1 zeregina %3 hasi aurretik %2ra"
+msgstr "%1 zeregina hasi aurretik %2ra %3"
 
 #: incidencealarm.cpp:313
 #, kde-format
 msgid "%1 %2 before the event starts %3"
-msgstr "%1 ekitaldia %3 hasi aurretik %2ra"
+msgstr "%1 ekitaldia hasi aurretik %2ra %3"
 
 #: incidencealarm.cpp:317
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
-msgstr "%1 zereginaren %3 epemuga ondoren %2ra"
+msgstr "%1 zereginaren epemuga ondoren %2ra %3"
 
 #: incidencealarm.cpp:319
 #, kde-format
 msgid "%1 %2 after the event ends %3"
-msgstr "%1 ekitaldia %3 amaitu ondoren %2ra"
+msgstr "%1 ekitaldia bukatu ondoren %2ra %3"
 
 #: incidencealarm.cpp:323
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
-msgstr "%1 zereginaren %3 epemuga aurretik %2ra"
+msgstr "%1 zereginaren epemuga aurretik %2ra %3"
 
 #: incidencealarm.cpp:325
 #, kde-format
 msgid "%1 %2 before the event ends %3"
-msgstr ""
+msgstr "%1 ekitaldia bukatu aurretik %2ra %3"
 
 #: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr ""
+msgstr "%1 zeregina hasi ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia hasi ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
-msgstr ""
+msgstr "%1 zeregina hasi aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia hasi aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
-msgstr ""
+msgstr "%1 zereginaren epemugaren ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia bukatu ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
-msgstr ""
+msgstr "%1 zereginaren epemuga aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia bukatu aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 when the to-do starts"
-msgstr ""
+msgstr "%1 zeregina hasten denean"
 
 #: incidencealarm.cpp:361
 #, kde-format
 msgid "%1 when the event starts"
-msgstr ""
+msgstr "%1 ekitaldia hasten denean"
 
 #: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 when the to-do is due"
-msgstr ""
+msgstr "%1 zereginaren epemugan"
 
 #: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 when the event ends"
-msgstr ""
+msgstr "%1 ekitaldia bukatzen denean"
 
 #: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
-msgstr ""
+msgstr "%1 zereginaren hasten denean (Ezgaituta)"
 
 #: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia hasten denean (Ezgaituta)"
 
 #: incidencealarm.cpp:373
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr ""
+msgstr "%1 zereginaren epemugan (Ezgaituta)"
 
 #: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
-msgstr ""
+msgstr "%1 ekitaldia bukatzen denean (Ezgaituta)"
 
 #: incidenceattachment.cpp:130
 #, kde-format
@@ -1099,13 +1099,13 @@ msgstr "Intzidentziaren amaiera-data baliogabea da."
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
-msgstr "%1(e)an"
+msgstr "%1a"
 
 #: incidencerecurrence.cpp:511
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
-msgstr "amaieratik %1. eguna"
+msgstr "azken aurreko %1. eguna"
 
 #: incidencerecurrence.cpp:514
 #, kde-format
@@ -1123,19 +1123,19 @@ msgstr "azken %1"
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
-msgstr ""
+msgstr "azken %2 aurreko %1."
 
 #: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
-msgstr ""
+msgstr "%2ren %1a"
 
 #: incidencerecurrence.cpp:541
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
-msgstr ""
+msgstr "%2aren azken aurreko %1. eguna"
 
 #: incidencerecurrence.cpp:544
 #, kde-format
@@ -1153,7 +1153,7 @@ msgstr "%2(e)ko azken %1"
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
-msgstr ""
+msgstr "%3ren azken %2 aurreko %1."
 
 #: incidencerecurrence.cpp:563
 #, kde-format
@@ -1536,9 +1536,11 @@ msgstr "Ezarri oroigarria errepikatzea"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:147
-#, fuzzy, kde-format
+#, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
-msgstr "Markatu hori, oroigarria aldizkako tarte batean "
+msgstr ""
+"Markatu hori, oroigarria aldian behingo tarte batean errepika dadin nahi "
+"baduzu."
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
@@ -1553,10 +1555,12 @@ msgid ""
 "Use this selector to choose how many times you want the recurring reminder "
 "to repeat."
 msgstr ""
+"Erabili hautatzaile hori, oroigarri errepikakorra zenbat aldiz errepikatzea "
+"nahi duzun aukeratzeko."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
-#, fuzzy, kde-format
+#, kde-format
 msgid " time(s)"
 msgstr " aldiz"
 
@@ -1571,6 +1575,7 @@ msgstr "Aukeratu oroigarri errepikapenen arteko denbora"
 #, kde-format
 msgid "Use this selector to choose the time between repeating reminders."
 msgstr ""
+"Erabili hautatzaile hori oroigarri errepikakorren arteko denbora hautatzeko."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:188
@@ -1581,10 +1586,10 @@ msgstr " Minutu"
 
 #. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:191
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "repeat every X minutes"
 msgid "every "
-msgstr "maiztasuna: "
+msgstr "maiztasuna:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/alarmdialog.ui:212
@@ -1634,7 +1639,7 @@ msgstr "Audio-fitxategia:"
 #: ui/alarmdialog.ui:309
 #, kde-format
 msgid "Specify a file containing a sound to play when the reminder triggers"
-msgstr ""
+msgstr "Zehaztu, oroigarria eragiten denean, jotzeko soinua duen fitxategi bat"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:312
@@ -1657,6 +1662,7 @@ msgstr "Eman izen bat eranskinari"
 msgctxt "@info:whatsthis"
 msgid "Type any string you desire here for the name of the attachment"
 msgstr ""
+"Tekleatu hemen, eranskinerako izen gisa erabili nahi duzun edozein kate"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:44
@@ -1719,6 +1725,8 @@ msgid ""
 "Enter the path to the attachment file or use the file browser by pressing "
 "the adjacent button"
 msgstr ""
+"Sartu eranskin fitxategirako bide-izena edo erabili fitxategi-arakatzailea "
+"ondoko botoiari klik eginez"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/attachmenteditdialog.ui:159
@@ -2281,10 +2289,10 @@ msgstr "Urtero"
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
 #: ui/dialogdesktop.ui:1164
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
-msgstr "Hainbestero:"
+msgstr "hainbestero,"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
 #: ui/dialogdesktop.ui:1196
@@ -2315,17 +2323,17 @@ msgstr "inoiz ez"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1401
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
-msgstr "Aktibatu"
+msgstr "noiz,"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1406
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
-msgstr "Hau iraganda:"
+msgstr "hau iraganda,"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
 #: ui/dialogdesktop.ui:1461
@@ -2357,10 +2365,10 @@ msgstr "Gehitu"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
 #: ui/dialogdesktop.ui:1599
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
-msgstr "Aktibatu"
+msgstr "noiz:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
 #: ui/dialogdesktop.ui:1614
@@ -2413,6 +2421,8 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
 msgstr ""
+"Goiko zerrendan hautatutako eranskina kentzen du ekitaldi edo zeregin "
+"horretatik."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1695
@@ -2433,6 +2443,8 @@ msgstr "Sartu bilaketa terminoa"
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
 msgstr ""
+"Erabili testu-lauki hori, aurkitu nahi duzun baliabidearen gako-hitzen bat "
+"sartzeko."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
@@ -2450,26 +2462,26 @@ msgstr "Jabea"
 #: ui/schedulingdialog.ui:14
 #, kde-format
 msgid "Schedule a time"
-msgstr ""
+msgstr "Programatu ordu bat"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/schedulingdialog.ui:39
 #, kde-format
 msgid "Earliest time to start:"
-msgstr ""
+msgstr "Hasteko ordu goiztiarrena:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/schedulingdialog.ui:59
 #, kde-format
 msgid "Latest time to end:"
-msgstr ""
+msgstr "Bukatzeko ordu berantiarrena:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr ""
+msgstr "Markatu bilaketan barneratu beharreko astegunak."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2478,19 +2490,21 @@ msgstr ""
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
+"Markatutako astegunak bakarrik barneratuko dira denbora libreko tarteak "
+"bilatzeko."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
 #, kde-format
 msgid "Allowed weekdays:"
-msgstr ""
+msgstr "Baimendutako astegunak:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
 #: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
 #, kde-format
 msgid "Check the roles to include in the search."
-msgstr ""
+msgstr "Markatu bilaketan barneratzeko eginkizunak."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2500,60 +2514,62 @@ msgid ""
 "Only the participants with the checked roles will be considered in the free "
 "time slot search."
 msgstr ""
+"Markatutako eginkizunak dituzten parte-hartzaileak bakarrik hartuko dira "
+"kontuan denbora libreko tarteak bilatzeko."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/schedulingdialog.ui:124
 #, kde-format
 msgid "Mandatory roles:"
-msgstr ""
+msgstr "Derrigorrezko eginkizunak:"
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
 #, kde-format
 msgid "Select the search option"
-msgstr ""
+msgstr "Hautatu bilaketa aukera"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
 #, kde-format
 msgid "Use these tabs to choose the search option."
-msgstr ""
+msgstr "Erabili fitxa horiek bilaketa aukera hautatzeko."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
 #, kde-format
 msgid "Automatic Search"
-msgstr ""
+msgstr "Bilaketa automatikoa"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
 #: ui/schedulingdialog.ui:199
 #, kde-format
 msgid "Visual Search"
-msgstr ""
+msgstr "Ikusizko bilaketa"
 
 #. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
 #: ui/schedulingdialog.ui:207
 #, kde-format
 msgid "Move your appointment to:"
-msgstr ""
+msgstr "Eraman zure hitzordua hona:"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
 #: ui/schedulingdialog.ui:228
 #, kde-format
 msgid "Monday, 12th June"
-msgstr ""
+msgstr "Astelehena, ekainaren 12a"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr ""
+msgstr "10:00etara AM"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
 #, kde-format
 msgid "Template Management"
-msgstr ""
+msgstr "Txantiloien kudeaketa"
 
 #. i18n: ectx: property (text), widget (QLabel, m_introLabel)
 #: ui/template_management_dialog_base.ui:26
@@ -2563,12 +2579,15 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
+"Aukeratu txantiloi bat eta <i>Aplikatu</i>n klik egin, elementu honi hura "
+"aplikatzeko. Egin klik <i>Berria</i>n, uneko elementu-ezarpenetan "
+"oinarritutako txantiloi berri bat sortzeko."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
 #, kde-format
 msgid "The list of managed templates"
-msgstr ""
+msgstr "Kudeatutako txantiloien zerrenda"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:45
@@ -2577,12 +2596,14 @@ msgid ""
 "This is a list of all the templates you have currently accessible for "
 "creating new calendar items."
 msgstr ""
+"Egutegi-elementu berriak sortzeko eskuragarri dauden txantiloi guztien "
+"zerrenda da hori."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:56
 #, kde-format
 msgid "Create a new template from the current settings"
-msgstr ""
+msgstr "Sortu txantiloi berri bat uneko ezarpenetatik"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:59
@@ -2592,6 +2613,9 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
+"Egin klik botoi horretan, editoreko ezarpenetan oinarritutako txantiloi "
+"berri bat sortzeko. Txantiloi hori erabil dezakezu, etorkizunean elementu "
+"berriak azkar gehitzeko."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
@@ -2603,7 +2627,7 @@ msgstr "&Berria..."
 #: ui/template_management_dialog_base.ui:72
 #, kde-format
 msgid "Remove the currently selected template"
-msgstr ""
+msgstr "Kendu hautatu dagoen txantiloia"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:75
@@ -2612,6 +2636,8 @@ msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
 msgstr ""
+"Botoi horretan klik egitean, hautatutako txantiloia, kudeatutako zure "
+"txantiloien zerrendatik behin betiko kenduko da."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:78
@@ -2623,7 +2649,7 @@ msgstr "&Kendu"
 #: ui/template_management_dialog_base.ui:85
 #, kde-format
 msgid "Apply the selected template settings"
-msgstr ""
+msgstr "Aplikatu hautatutako txantiloiaren ezarpenak"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:88
@@ -2632,6 +2658,8 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
+"Botoi horretan klik egitean, hautatutako txantiloiaren ezarpenak, editatzen "
+"ari zaren elementuari aplikatuko zaizkio."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:91
@@ -2649,7 +2677,7 @@ msgstr "Eskala: "
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
-msgstr ""
+msgstr "Ezarri Gantt diagramaren zoom-maila"
 
 #: visualfreebusywidget.cpp:145
 #, kde-kuit-format
@@ -2661,6 +2689,11 @@ msgid ""
 "few years,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"Aukeratu Gantt diagramaren zoom-maila ondoko hauetako baten artetik:<nl/"
+">'Ordua', zenbait orduko tartea erakusten du,<nl/>'Eguna', zenbait eguneko "
+"tartea erakusten du,<nl/>'Astea', zenbait hilabeteko tartea erakusten du,<nl/"
+">eta 'Hilabetea', zenbait urteko tartea erakusten du,<nl/>'Automatikoa'k "
+"berriz uneko ekitaldi edo zereginerako tarte egokiena aukeratzen du."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
