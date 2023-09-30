@@ -145,8 +145,8 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
                                      "Select the Gantt chart zoom level from one of the following:<nl/>"
                                      "'Hour' shows a range of several hours,<nl/>"
                                      "'Day' shows a range of a few days,<nl/>"
-                                     "'Week' shows a range of a few months,<nl/>"
-                                     "and 'Month' shows a range of a few years,<nl/>"
+                                     "'Week' shows a range of a few weeks,<nl/>"
+                                     "and 'Month' shows a range of a few months,<nl/>"
                                      "while 'Automatic' selects the range most "
                                      "appropriate for the current event or to-do."));
     mScaleCombo->addItem(i18nc("@item:inlistbox range in hours", "Hour"), QVariant::fromValue<int>(KGantt::DateTimeGrid::ScaleHour));
