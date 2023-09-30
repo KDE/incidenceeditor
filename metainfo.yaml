@@ -11,8 +11,7 @@ portingAid: false
 deprecated: false
 release: false
 libraries:
- - qmake: IncidenceEditor
-   cmake: "KPim6::IncidenceEditor"
+ - cmake: "KPim6::IncidenceEditor"
 cmakename: KPim6IncidenceEditor
 group: kdepim
 public_lib: true
