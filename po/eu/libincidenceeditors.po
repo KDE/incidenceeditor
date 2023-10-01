@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-27 01:41+0000\n"
-"PO-Revision-Date: 2023-09-29 23:02+0200\n"
+"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"PO-Revision-Date: 2023-09-30 08:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -941,6 +941,11 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
+"<para>Oraindik ez duzu zure ekitaldietarako egutegi lehenetsi bat ezarri.</"
+"para><para>Egutegi lehenetsi bat ezartzeak, ekitaldi berriak sortzea "
+"azkarrago eta errazago egingo du, haiek okerreko karpetan betetzeko aukerak "
+"murriztuz.</para><para>Zure ekitaldien egutegi lehenetsi gisa <resource>%1</"
+"resource> ezarri nahi zenuke?</para>"
 
 #: incidencedialog.cpp:491
 #, kde-format
@@ -998,6 +1003,10 @@ msgid ""
 "Templates can make creating new items easier and faster by putting your "
 "favorite default values into the editor automatically."
 msgstr ""
+"Sakatu botoi hori, txantiloi multzo bat kudeatzen lagunduko dizun "
+"elkarrizketa-koadro bat erakusteko. Txantiloiei esker, elementu berriak "
+"errazago eta azkarrago sortuko dituzu, zure balio lehenetsi gogokoenak "
+"automatikoki editorean ipiniz."
 
 #: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
 #, kde-format
@@ -1628,6 +1637,8 @@ msgid ""
 "Specify any text you desire to display in the popup notice when the reminder "
 "triggers."
 msgstr ""
+"Zehaztu, oroigarria eragiten denean, ohar gainerakorrean azaltzea nahi duzun "
+"edozein testu,"
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
 #: ui/alarmdialog.ui:296
@@ -1648,6 +1659,8 @@ msgid ""
 "Use the adjacent file browser to help you find the file you want to use when "
 "playing a sound when the reminder triggers."
 msgstr ""
+"Erabili alboko fitxategi-kudeatzailea, oroigarria eragiten denean, soinu bat "
+"jotzeko erabiltzea nahi duzun fitxategia bilatzen laguntzeko."
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:38
@@ -1696,6 +1709,11 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
+"Aukera hori markatuz gero, eranskina zure egutegiaren barruan gordeko da, "
+"eta horrek, eranskinaren neurriaren arabera, leku asko har dezake. Aukera "
+"hori markatzen ez bada, eranskinera bideratzen duen esteka bat bakarrik "
+"gordeko da. Ez erabili esteka bat, maiz aldatzen diren edo uneko kokalekutik "
+"mugitu (edo kendu) litezkeen eranskinekin."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
@@ -2054,6 +2072,12 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
+"Ekitaldi edo zeregin horretara sartzea murriztua dagoen ezartzen du. "
+"Mesedez, kontuan izan «KOrganizer»rek, egun, ez duela ezarpen hori "
+"erabiltzen, eta beraz, murrizketaren inplementazioa talde-laneko "
+"zerbitzariaren menpe egongo dela. Horrek esan nahi du, pribatu edo isilpeko "
+"gisa markatutako ekitaldiak edo zereginak besteentzako ikusgai egon "
+"litezkeela."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
@@ -2099,7 +2123,7 @@ msgstr "Ezarri antolatzailearen nortasuna"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:779
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets the identity corresponding to the organizer of this to-do or event. "
@@ -2107,8 +2131,10 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
-"Zeregin edo ekitaldi honen antolatzaileari dagokion nortasuna ezartzen du. "
-"Nortasunak"
+"Zeregin edo ekitaldi horren antolatzaileari dagokion nortasuna ezartzen du. "
+"Nortasunak, «KOrganizer»ren konfigurazioaren 'Pertsonala' atalean ezar "
+"daitezke. Gainera, nortasunak zure KMail ezarpenetatik eta zure helbide-"
+"liburutik jasotzen dira."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:811
@@ -2340,7 +2366,7 @@ msgstr "hau iraganda,"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
-msgstr ""
+msgstr "Ekitaldia edo zeregina errepikatzeari uzteko data"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
 #: ui/dialogdesktop.ui:1516
@@ -2399,6 +2425,8 @@ msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
 msgstr ""
+"Ekitaldi edo zeregin horretara, esteka gisa edo lerro barneko datuen gisa "
+"gehitzeko, eranskin bat aukeratzeko elkarrizketa-koadro bat erakusten du."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1669
@@ -2680,13 +2708,20 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Ezarri Gantt diagramaren zoom-maila"
 
 #: visualfreebusywidget.cpp:145
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
+#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
+#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
+#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
+#| "the current event or to-do."
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
 "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+">'Week' shows a range of a few weeks,<nl/>and 'Month' shows a range of a few "
+"months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
 "Aukeratu Gantt diagramaren zoom-maila ondoko hauetako baten artetik:<nl/"
