@@ -36,6 +36,9 @@ class EditorItemManager : public QObject
 {
     Q_OBJECT
 public:
+    enum ItipPrivacy { ItipPrivacyPlain = 0, ItipPrivacySign = 1, ItipPrivacyEncrypt = 2 };
+    Q_DECLARE_FLAGS(ItipPrivacyFlags, ItipPrivacy)
+
     /**
      * Creates an ItemEditor for a new Item.
      * Receives an option IncidenceChanger, so you can share the undo/redo stack with your
@@ -69,7 +72,7 @@ public:
      * Saves the new or modified item. This method does nothing when the
      * ui is not dirty.
      */
-    void save();
+    void save(ItipPrivacyFlags itipPrivacy = ItipPrivacyPlain);
 
     enum SaveAction {
         Create, /**< A new item was created */
@@ -160,3 +163,5 @@ public:
     virtual void reject(RejectReason reason, const QString &errorMessage = QString()) = 0;
 };
 }
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags)

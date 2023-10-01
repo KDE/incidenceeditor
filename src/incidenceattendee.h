@@ -96,6 +96,8 @@ private Q_SLOTS:
     void slotGroupSubstitutionAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void slotGroupSubstitutionLayoutChanged();
 
+    void slotUpdateCryptoPreferences();
+
 private:
     void updateGroupExpand();
 

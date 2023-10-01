@@ -171,6 +171,7 @@ PRIVATE
   KF6::Contacts
   KPim6::Libkdepim
   KPim6::PimCommonAkonadi
+  KPim6::IdentityManagementCore
 )
 target_include_directories(KPim6IncidenceEditor INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/>")
 target_include_directories(KPim6IncidenceEditor PUBLIC "$<BUILD_INTERFACE:${incidenceeditor_SOURCE_DIR}/src;${incidenceeditor_BINARY_DIR}/src;>")

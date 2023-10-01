@@ -14,6 +14,7 @@
 
 #include <QDateTime>
 #include <QStringList>
+#include <QVector>
 
 #include <memory>
 
@@ -31,6 +32,13 @@ class EditorConfigPrivate;
 class INCIDENCEEDITOR_EXPORT EditorConfig
 {
 public:
+    struct Organizer {
+        QString name;
+        QString email;
+        bool sign = false;
+        bool encrypt = false;
+    };
+
     EditorConfig();
     virtual ~EditorConfig();
 
@@ -52,7 +60,7 @@ public:
     Q_REQUIRED_RESULT virtual QStringList allEmails() const;
 
     /// Returns all email addresses together with the full username for the user.
-    Q_REQUIRED_RESULT virtual QStringList fullEmails() const;
+    Q_REQUIRED_RESULT virtual QVector<Organizer> allOrganizers() const;
 
     /// Show timezone selectors in the event and todo editor dialog.
     Q_REQUIRED_RESULT virtual bool showTimeZoneSelectorInIncidenceEditor() const;

@@ -8,6 +8,9 @@
 
 #include <CalendarSupport/KCalPrefs>
 
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
+
 using namespace IncidenceEditorNG;
 
 KOrganizerEditorConfig::KOrganizerEditorConfig()
@@ -42,9 +45,14 @@ QStringList KOrganizerEditorConfig::allEmails() const
     return CalendarSupport::KCalPrefs::instance()->allEmails();
 }
 
-QStringList KOrganizerEditorConfig::fullEmails() const
+QVector<EditorConfig::Organizer> KOrganizerEditorConfig::allOrganizers() const
 {
-    return CalendarSupport::KCalPrefs::instance()->fullEmails();
+    const auto *manager = KIdentityManagementCore::IdentityManager::self();
+    QVector<EditorConfig::Organizer> organizers;
+    std::transform(manager->begin(), manager->end(), std::back_inserter(organizers), [](const auto &identity) {
+        return EditorConfig::Organizer{identity.fullName(), identity.fullEmailAddr(), identity.pgpAutoSign(), identity.pgpAutoEncrypt()};
+    });
+    return organizers;
 }
 
 bool KOrganizerEditorConfig::showTimeZoneSelectorInIncidenceEditor() const

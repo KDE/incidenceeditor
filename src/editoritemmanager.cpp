@@ -29,6 +29,16 @@
 
 /// ItemEditorPrivate
 
+static void updateIncidenceChangerPrivacyFlags(Akonadi::IncidenceChanger *changer, IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags flags)
+{
+    using IncidenceEditorNG::EditorItemManager;
+    Akonadi::IncidenceChanger::InvitationPrivacyFlags privacyFlags;
+    privacyFlags.setFlag(Akonadi::IncidenceChanger::InvitationPrivacySign, (flags & EditorItemManager::ItipPrivacySign) == EditorItemManager::ItipPrivacySign);
+    privacyFlags.setFlag(Akonadi::IncidenceChanger::InvitationPrivacyEncrypt,
+                         (flags & EditorItemManager::ItipPrivacyEncrypt) == EditorItemManager::ItipPrivacyEncrypt);
+    changer->setInvitationPrivacy(privacyFlags);
+}
+
 namespace IncidenceEditorNG
 {
 class ItemEditorPrivate
@@ -298,7 +308,7 @@ void EditorItemManager::load(const Akonadi::Item &item)
     });
 }
 
-void EditorItemManager::save()
+void EditorItemManager::save(ItipPrivacyFlags itipPrivacy)
 {
     Q_D(ItemEditor);
 
@@ -314,6 +324,7 @@ void EditorItemManager::save()
     }
 
     d->mChanger->setGroupwareCommunication(CalendarSupport::KCalPrefs::instance()->useGroupwareCommunication());
+    updateIncidenceChangerPrivacyFlags(d->mChanger, itipPrivacy);
 
     Akonadi::Item updateItem = d->mItemUi->save(d->mItem);
     Q_ASSERT(updateItem.id() == d->mItem.id());

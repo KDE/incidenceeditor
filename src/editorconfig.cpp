@@ -88,10 +88,10 @@ QStringList EditorConfig::allEmails() const
     return mails;
 }
 
-QStringList EditorConfig::fullEmails() const
+QVector<EditorConfig::Organizer> EditorConfig::allOrganizers() const
 {
     if (EditorConfigPrivate::config != this) {
-        return EditorConfigPrivate::config->fullEmails();
+        return EditorConfigPrivate::config->allOrganizers();
     }
     return {};
 }

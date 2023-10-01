@@ -26,7 +26,7 @@ public:
     Q_REQUIRED_RESULT QString email() const override;
     Q_REQUIRED_RESULT bool thatIsMe(const QString &email) const override;
     Q_REQUIRED_RESULT QStringList allEmails() const override;
-    Q_REQUIRED_RESULT QStringList fullEmails() const override;
+    Q_REQUIRED_RESULT QVector<Organizer> allOrganizers() const override;
     Q_REQUIRED_RESULT bool showTimeZoneSelectorInIncidenceEditor() const override;
     Q_REQUIRED_RESULT QDateTime defaultDuration() const override;
     Q_REQUIRED_RESULT QDateTime startTime() const override;

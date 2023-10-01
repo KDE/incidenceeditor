@@ -54,6 +54,14 @@ using namespace IncidenceEditorNG;
 namespace
 {
 static const char myIncidenceDialogConfigGroupName[] = "IncidenceDialog";
+
+IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags toItemManagerFlags(bool sign, bool encrypt)
+{
+    IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags flags;
+    flags.setFlag(IncidenceEditorNG::EditorItemManager::ItipPrivacySign, sign);
+    flags.setFlag(IncidenceEditorNG::EditorItemManager::ItipPrivacyEncrypt, encrypt);
+    return flags;
+}
 }
 namespace IncidenceEditorNG
 {
@@ -762,7 +770,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
             d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
             d->mCloseOnSave = true;
             d->mInitiallyDirty = false;
-            d->mItemManager->save();
+            d->mItemManager->save(toItemManagerFlags(d->mUi->mSignItip->isChecked(), d->mUi->mEncryptItip->isChecked()));
         } else {
             close();
         }
@@ -773,7 +781,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
 
         d->mCloseOnSave = false;
         d->mInitiallyDirty = false;
-        d->mItemManager->save();
+        d->mItemManager->save(toItemManagerFlags(d->mUi->mSignItip->isChecked(), d->mUi->mEncryptItip->isChecked()));
     } else if (d->mUi->buttonBox->button(QDialogButtonBox::Cancel) == button) {
         if (d->isDirty()
             && KMessageBox::questionTwoActions(this,

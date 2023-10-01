@@ -12,6 +12,7 @@ Dependencies:
     'pim/calendarsupport' : '@same'
     'pim/eventviews' : '@same'
     'pim/kcalutils' : '@same'
+    'pim/kidentitymanagement' : '@same'
     'pim/kldap' : '@same'
     'pim/kmime' : '@same'
     'pim/libkdepim' : '@same'

@@ -37,6 +37,8 @@
 #include <QPointer>
 #include <QTreeView>
 
+Q_DECLARE_METATYPE(IncidenceEditorNG::EditorConfig::Organizer)
+
 using namespace IncidenceEditorNG;
 
 IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
@@ -91,6 +93,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mUi->mOrganizerStack->setCurrentIndex(0);
 
     fillOrganizerCombo();
+    slotUpdateCryptoPreferences();
     mUi->mSolveButton->setEnabled(false);
     mUi->mOrganizerLabel->setVisible(false);
 
@@ -107,6 +110,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
             this, &IncidenceAttendee::slotOrganizerChanged);
     */
     connect(mUi->mOrganizerCombo, &QComboBox::currentIndexChanged, this, &IncidenceAttendee::checkDirtyStatus);
+    connect(mUi->mOrganizerCombo, &QComboBox::currentIndexChanged, this, &IncidenceAttendee::slotUpdateCryptoPreferences);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
     connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceAttendee::slotEventDurationChanged);
@@ -308,14 +312,16 @@ void IncidenceAttendee::declineForMe()
 void IncidenceAttendee::fillOrganizerCombo()
 {
     mUi->mOrganizerCombo->clear();
-    const QStringList lst = IncidenceEditorNG::EditorConfig::instance()->fullEmails();
-    QStringList uniqueList;
-    for (QStringList::ConstIterator it = lst.begin(), end = lst.end(); it != end; ++it) {
-        if (!uniqueList.contains(*it)) {
-            uniqueList << *it;
+    const auto organizers = IncidenceEditorNG::EditorConfig::instance()->allOrganizers();
+    for (auto organizer = organizers.cbegin(), end = organizers.cend(); organizer != end; ++organizer) {
+        if (std::any_of(organizers.cbegin(), organizer, [organizer](const auto &pastOrg) {
+                return organizer->email == pastOrg.email && organizer->name == pastOrg.name;
+            })) {
+            continue;
         }
+
+        mUi->mOrganizerCombo->addItem(QStringLiteral("%1 <%2>").arg(organizer->name, organizer->email), QVariant::fromValue(*organizer));
     }
-    mUi->mOrganizerCombo->addItems(uniqueList);
 }
 
 void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &attendee)
@@ -948,6 +954,18 @@ int IncidenceAttendee::rowOfAttendee(const QString &uid) const
         return att.uid() == uid;
     });
     return std::distance(attendees.begin(), it);
+}
+
+void IncidenceAttendee::slotUpdateCryptoPreferences()
+{
+    const auto idx = mUi->mOrganizerCombo->currentIndex();
+    if (idx < 0) {
+        return;
+    }
+    const auto organizer = mUi->mOrganizerCombo->currentData().value<EditorConfig::Organizer>();
+
+    mUi->mSignItip->setChecked(organizer.sign);
+    mUi->mEncryptItip->setChecked(organizer.encrypt);
 }
 
 #include "moc_incidenceattendee.cpp"
