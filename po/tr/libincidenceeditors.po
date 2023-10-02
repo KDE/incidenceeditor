@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-09-27 12:57+0300\n"
+"PO-Revision-Date: 2023-10-01 12:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2698,14 +2698,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Gantt grafik yakınlaştırma düzeyini ayarla"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2715,9 +2708,9 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "Gantt grafik yakınlaştırma ayarını aşağıdakilerden biri olarak seçin:<nl/"
-">'Otomatik' geçerli etkinlik veya yapılacak iş için en uygun aralığı "
-"seçerken,<nl/>'Saat', birkaç saat aralığı,<nl/>'Gün' birkaç gün aralığı,<nl/"
-">'Hafta' birkaç ay aralığı,<nl/>ve  'Ay' birkaç yıl aralığı gösterir."
+">'Otomatik' geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
+"<nl/>'Saat', birkaç saatlik erimi,<nl/>'Gün' birkaç günlük erimi,<nl/"
+">'Hafta' birkaç haftalık erimi,<nl/>ve  'Ay' birkaç aylık erimi gösterir."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format

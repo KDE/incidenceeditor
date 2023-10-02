@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2011, 2012, 2013, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2020, 2021, 2023 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-09-27 10:24+0200\n"
+"PO-Revision-Date: 2023-10-01 21:15+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -2711,14 +2711,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Fixa le nivello de zoom de graphico de Gantt"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2729,9 +2722,10 @@ msgid ""
 msgstr ""
 "Selige le nivello de aggrandir le graphico de Gantt ab un del sequente:<nl/"
 ">'Hora' monstra un extension de multe horas,<nl/>'Die' monstra un extension "
-"de alcun dies,<nl/> 'Septimanas' monstra un extension de alcun menses,<nl/> "
-"e \"Menses' monstra un extension de alcun annos,<nl/> ma  'Automatic' selige "
-"le extension plus appropriate pro le evento o activitate currente."
+"de alcun dies,<nl/> 'Septimanas' monstra un extension de alcun septimanas,"
+"<nl/> e \"Menses' monstra un extension de alcun menses,<nl/> mentre  "
+"'Automatic' selige le extension plus appropriate pro le evento o activitate "
+"currente."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
