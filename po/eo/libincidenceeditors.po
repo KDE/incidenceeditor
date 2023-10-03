@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-01 01:55+0000\n"
-"PO-Revision-Date: 2023-09-30 07:48+0100\n"
+"PO-Revision-Date: 2023-10-02 09:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -2696,14 +2696,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Agordi la zomnivelon de Gantt-diagramo"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2714,9 +2707,9 @@ msgid ""
 msgstr ""
 "Elektu la zomnivelon de Gantt-diagramo el unu el la jenaj:<nl/>'Horo' "
 "montras intervalon de pluraj horoj,<nl/>'Tago' montras intervalon de kelkaj "
-"tagoj,<nl/>'Semajno' montras intervalo de kelkaj monatoj,<nl/>kaj 'Monato' "
-"montras intervalon de kelkaj jaroj,<nl/>dum 'Aŭtomata' elektas la intervalon "
-"plej taŭgan por la aktuala evento aŭ farendo."
+"tagoj,<nl/>'Semajno' montras intervalo de kelkaj semajntoj,<nl/>kaj 'Monato' "
+"montras intervalon de kelkaj monatoj,<nl/>dum 'Aŭtomata' elektas la "
+"intervalon plej taŭgan por la aktuala evento aŭ farendo."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
