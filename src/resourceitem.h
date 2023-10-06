@@ -37,15 +37,15 @@ public:
                  const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem() override;
 
-    Q_REQUIRED_RESULT ResourceItem::Ptr child(int number);
-    Q_REQUIRED_RESULT int childCount() const;
-    Q_REQUIRED_RESULT int columnCount() const;
-    Q_REQUIRED_RESULT QVariant data(int column) const;
-    Q_REQUIRED_RESULT QVariant data(const QString &column) const;
-    Q_REQUIRED_RESULT bool insertChild(int position, const ResourceItem::Ptr &item);
-    Q_REQUIRED_RESULT ResourceItem::Ptr parent();
-    Q_REQUIRED_RESULT bool removeChildren(int position, int count);
-    Q_REQUIRED_RESULT int childNumber() const;
+    [[nodiscard]] ResourceItem::Ptr child(int number);
+    [[nodiscard]] int childCount() const;
+    [[nodiscard]] int columnCount() const;
+    [[nodiscard]] QVariant data(int column) const;
+    [[nodiscard]] QVariant data(const QString &column) const;
+    [[nodiscard]] bool insertChild(int position, const ResourceItem::Ptr &item);
+    [[nodiscard]] ResourceItem::Ptr parent();
+    [[nodiscard]] bool removeChildren(int position, int count);
+    [[nodiscard]] int childNumber() const;
 
 private:
     QList<ResourceItem::Ptr> childItems;

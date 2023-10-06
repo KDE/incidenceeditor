@@ -30,9 +30,9 @@ public:
     /**
      * Returns the list of currently selected categories.
      */
-    Q_REQUIRED_RESULT QStringList categories() const;
+    [[nodiscard]] QStringList categories() const;
 
-    Q_REQUIRED_RESULT bool isDirty() const override;
+    [[nodiscard]] bool isDirty() const override;
     void printDebugInfo() const override;
 
 private:

@@ -33,7 +33,7 @@ public:
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
-    Q_REQUIRED_RESULT bool isDirty() const override;
+    [[nodiscard]] bool isDirty() const override;
 
     /**
      * Sets the active date for the editing session. This defaults to the current
@@ -42,24 +42,24 @@ public:
      */
     void setActiveDate(const QDate &activeDate);
 
-    Q_REQUIRED_RESULT QDate startDate() const; /// Returns the current start date.
-    Q_REQUIRED_RESULT QTime startTime() const; /// Returns the current start time.
-    Q_REQUIRED_RESULT QDate endDate() const; /// Returns the current end date.
-    Q_REQUIRED_RESULT QTime endTime() const; /// Returns the current endtime.
+    [[nodiscard]] QDate startDate() const; /// Returns the current start date.
+    [[nodiscard]] QTime startTime() const; /// Returns the current start time.
+    [[nodiscard]] QDate endDate() const; /// Returns the current end date.
+    [[nodiscard]] QTime endTime() const; /// Returns the current endtime.
 
     /// Created from the values in the widgets
-    Q_REQUIRED_RESULT QDateTime currentStartDateTime() const;
-    Q_REQUIRED_RESULT QDateTime currentEndDateTime() const;
+    [[nodiscard]] QDateTime currentStartDateTime() const;
+    [[nodiscard]] QDateTime currentEndDateTime() const;
 
     void setStartTime(const QTime &newTime);
     void setStartDate(const QDate &newDate);
 
-    Q_REQUIRED_RESULT bool startDateTimeEnabled() const;
-    Q_REQUIRED_RESULT bool endDateTimeEnabled() const;
+    [[nodiscard]] bool startDateTimeEnabled() const;
+    [[nodiscard]] bool endDateTimeEnabled() const;
 
     void focusInvalidField() override;
 
-    Q_REQUIRED_RESULT bool isValid() const override;
+    [[nodiscard]] bool isValid() const override;
     void printDebugInfo() const override;
 
 Q_SIGNALS:

@@ -51,8 +51,8 @@ public:
     bool mCleanupTemporaryFiles;
 
     /// Methods
-    Q_REQUIRED_RESULT KCalendarCore::Person organizerAsPerson() const;
-    Q_REQUIRED_RESULT KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
+    [[nodiscard]] KCalendarCore::Person organizerAsPerson() const;
+    [[nodiscard]] KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
 
     void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;
     void eventDefaults(const KCalendarCore::Event::Ptr &event) const;

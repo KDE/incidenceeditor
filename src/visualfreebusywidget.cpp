@@ -48,42 +48,42 @@ public:
         m_model = model;
     }
 
-    Q_REQUIRED_RESULT int headerHeight() const override
+    [[nodiscard]] int headerHeight() const override
     {
         return 2 * mRowHeight + 10;
     }
 
-    Q_REQUIRED_RESULT bool isRowVisible(const QModelIndex &) const override
+    [[nodiscard]] bool isRowVisible(const QModelIndex &) const override
     {
         return true;
     }
 
-    Q_REQUIRED_RESULT bool isRowExpanded(const QModelIndex &) const override
+    [[nodiscard]] bool isRowExpanded(const QModelIndex &) const override
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT KGantt::Span rowGeometry(const QModelIndex &idx) const override
+    [[nodiscard]] KGantt::Span rowGeometry(const QModelIndex &idx) const override
     {
         return KGantt::Span(idx.row() * mRowHeight, mRowHeight);
     }
 
-    Q_REQUIRED_RESULT int maximumItemHeight() const override
+    [[nodiscard]] int maximumItemHeight() const override
     {
         return mRowHeight / 2;
     }
 
-    Q_REQUIRED_RESULT int totalHeight() const override
+    [[nodiscard]] int totalHeight() const override
     {
         return m_model->rowCount() * mRowHeight;
     }
 
-    Q_REQUIRED_RESULT QModelIndex indexAt(int height) const override
+    [[nodiscard]] QModelIndex indexAt(int height) const override
     {
         return m_model->index(height / mRowHeight, 0);
     }
 
-    Q_REQUIRED_RESULT QModelIndex indexBelow(const QModelIndex &idx) const override
+    [[nodiscard]] QModelIndex indexBelow(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -91,7 +91,7 @@ public:
         return idx.model()->index(idx.row() + 1, idx.column(), idx.parent());
     }
 
-    Q_REQUIRED_RESULT QModelIndex indexAbove(const QModelIndex &idx) const override
+    [[nodiscard]] QModelIndex indexAbove(const QModelIndex &idx) const override
     {
         if (!idx.isValid()) {
             return QModelIndex();
@@ -116,7 +116,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QSize sizeHint() const override
+    [[nodiscard]] QSize sizeHint() const override
     {
         QSize s = QHeaderView::sizeHint();
         s.rheight() *= 2;

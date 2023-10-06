@@ -36,8 +36,8 @@ public:
                                   QWidget *parent = nullptr);
     ~IndividualMailDialog() override;
 
-    Q_REQUIRED_RESULT KCalendarCore::Attendee::List editAttendees() const;
-    Q_REQUIRED_RESULT KCalendarCore::Attendee::List updateAttendees() const;
+    [[nodiscard]] KCalendarCore::Attendee::List editAttendees() const;
+    [[nodiscard]] KCalendarCore::Attendee::List updateAttendees() const;
 
 private:
     void updateButtonState();

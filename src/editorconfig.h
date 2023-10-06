@@ -48,69 +48,69 @@ public:
     virtual KConfigSkeleton *config() const = 0;
 
     /// Return the own full name.
-    Q_REQUIRED_RESULT virtual QString fullName() const;
+    [[nodiscard]] virtual QString fullName() const;
 
     /// Return the own mail address.
-    Q_REQUIRED_RESULT virtual QString email() const;
+    [[nodiscard]] virtual QString email() const;
 
     /// Return true if the given email belongs to the user.
     virtual bool thatIsMe(const QString &email) const;
 
     /// Returns all email addresses for the user.
-    Q_REQUIRED_RESULT virtual QStringList allEmails() const;
+    [[nodiscard]] virtual QStringList allEmails() const;
 
     /// Returns all email addresses together with the full username for the user.
-    Q_REQUIRED_RESULT virtual QVector<Organizer> allOrganizers() const;
+    [[nodiscard]] virtual QVector<Organizer> allOrganizers() const;
 
     /// Show timezone selectors in the event and todo editor dialog.
-    Q_REQUIRED_RESULT virtual bool showTimeZoneSelectorInIncidenceEditor() const;
+    [[nodiscard]] virtual bool showTimeZoneSelectorInIncidenceEditor() const;
 
-    Q_REQUIRED_RESULT virtual QDateTime defaultDuration() const
+    [[nodiscard]] virtual QDateTime defaultDuration() const
     {
         return QDateTime(QDate(1752, 1, 1), QTime(2, 0));
     }
 
-    Q_REQUIRED_RESULT virtual QDateTime startTime() const
+    [[nodiscard]] virtual QDateTime startTime() const
     {
         return QDateTime(QDate(1752, 1, 1), QTime(10, 0));
     }
 
-    Q_REQUIRED_RESULT virtual bool defaultAudioFileReminders() const
+    [[nodiscard]] virtual bool defaultAudioFileReminders() const
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT virtual QUrl audioFilePath() const
+    [[nodiscard]] virtual QUrl audioFilePath() const
     {
         return {};
     }
 
-    Q_REQUIRED_RESULT virtual int reminderTime() const
+    [[nodiscard]] virtual int reminderTime() const
     {
         return 15;
     }
 
-    Q_REQUIRED_RESULT virtual int reminderTimeUnits() const
+    [[nodiscard]] virtual int reminderTimeUnits() const
     {
         return 0;
     }
 
-    Q_REQUIRED_RESULT virtual bool defaultTodoReminders() const
+    [[nodiscard]] virtual bool defaultTodoReminders() const
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT virtual bool defaultEventReminders() const
+    [[nodiscard]] virtual bool defaultEventReminders() const
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT virtual QStringList activeDesignerFields() const
+    [[nodiscard]] virtual QStringList activeDesignerFields() const
     {
         return {};
     }
 
-    Q_REQUIRED_RESULT virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);
+    [[nodiscard]] virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);
 
 private:
     std::unique_ptr<EditorConfigPrivate> const d;

@@ -30,7 +30,7 @@ public:
     void addItem(const QIcon &icon, const QString &text);
     void addItems(const QStringList &texts);
 
-    Q_REQUIRED_RESULT int currentIndex() const;
+    [[nodiscard]] int currentIndex() const;
 
 Q_SIGNALS:
     void rightPressed();

@@ -25,7 +25,7 @@ enum When { BeforeStart, BeforeEnd };
 /**
  * Returns the available presets.
  */
-Q_REQUIRED_RESULT QStringList availablePresets(When when = BeforeStart);
+[[nodiscard]] QStringList availablePresets(When when = BeforeStart);
 
 /**
  * Returns a recurrence preset for given name. The name <em>must</em> be one
@@ -33,24 +33,24 @@ Q_REQUIRED_RESULT QStringList availablePresets(When when = BeforeStart);
  *
  * Note: The caller takes ownership over the pointer.
  */
-Q_REQUIRED_RESULT KCalendarCore::Alarm::Ptr preset(When when, const QString &name);
+[[nodiscard]] KCalendarCore::Alarm::Ptr preset(When when, const QString &name);
 
 /**
  * Returns an Alarm configured accordingly to the default preset.
  *
  * Note: The caller takes ownership over the pointer.
  */
-Q_REQUIRED_RESULT KCalendarCore::Alarm::Ptr defaultAlarm(When when);
+[[nodiscard]] KCalendarCore::Alarm::Ptr defaultAlarm(When when);
 
 /**
  * Returns the index of the preset in availablePresets for the given recurrence,
  * or -1 if no preset is equal to the given recurrence.
  */
-Q_REQUIRED_RESULT int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm);
+[[nodiscard]] int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm);
 
 /**
    Returns the index of the default preset. ( Comes from KCalPrefs ).
  */
-Q_REQUIRED_RESULT int defaultPresetIndex();
+[[nodiscard]] int defaultPresetIndex();
 }
 }

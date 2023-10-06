@@ -42,12 +42,12 @@ public:
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
-    Q_REQUIRED_RESULT bool isDirty() const override;
-    Q_REQUIRED_RESULT bool isValid() const override;
+    [[nodiscard]] bool isDirty() const override;
+    [[nodiscard]] bool isValid() const override;
 
     void focusInvalidField() override;
 
-    Q_REQUIRED_RESULT RecurrenceType currentRecurrenceType() const;
+    [[nodiscard]] RecurrenceType currentRecurrenceType() const;
 
 Q_SIGNALS:
     void recurrenceChanged(IncidenceEditorNG::RecurrenceType type);

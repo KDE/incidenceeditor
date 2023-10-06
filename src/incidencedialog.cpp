@@ -85,7 +85,7 @@ public:
     IncidenceResource *mIeResource = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
-    Q_REQUIRED_RESULT QString typeToString(const int type) const;
+    [[nodiscard]] QString typeToString(const int type) const;
 
 public:
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
@@ -107,15 +107,15 @@ public:
     void setCalendarCollection(const Akonadi::Collection &collection);
 
     /// ItemEditorUi methods
-    Q_REQUIRED_RESULT bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const override;
+    [[nodiscard]] bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const override;
     void handleItemSaveFinish(EditorItemManager::SaveAction);
     void handleItemSaveFail(EditorItemManager::SaveAction, const QString &errorMessage);
-    Q_REQUIRED_RESULT bool hasSupportedPayload(const Akonadi::Item &item) const override;
-    Q_REQUIRED_RESULT bool isDirty() const override;
-    Q_REQUIRED_RESULT bool isValid() const override;
+    [[nodiscard]] bool hasSupportedPayload(const Akonadi::Item &item) const override;
+    [[nodiscard]] bool isDirty() const override;
+    [[nodiscard]] bool isValid() const override;
     void load(const Akonadi::Item &item) override;
     Akonadi::Item save(const Akonadi::Item &item) override;
-    Q_REQUIRED_RESULT Akonadi::Collection selectedCollection() const override;
+    [[nodiscard]] Akonadi::Collection selectedCollection() const override;
 
     void reject(RejectReason reason, const QString &errorMessage = QString()) override;
 };

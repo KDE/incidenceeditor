@@ -27,12 +27,12 @@ public:
 
     explicit AttendeeTableModel(QObject *parent = nullptr);
 
-    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override;
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
-    Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
     bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
@@ -41,13 +41,13 @@ public:
     bool insertAttendee(int position, const KCalendarCore::Attendee &attendee);
 
     void setAttendees(const KCalendarCore::Attendee::List &resources);
-    Q_REQUIRED_RESULT KCalendarCore::Attendee::List attendees() const;
+    [[nodiscard]] KCalendarCore::Attendee::List attendees() const;
 
     void setKeepEmpty(bool keepEmpty);
-    Q_REQUIRED_RESULT bool keepEmpty() const;
+    [[nodiscard]] bool keepEmpty() const;
 
     void setRemoveEmptyLines(bool removeEmptyLines);
-    Q_REQUIRED_RESULT bool removeEmptyLines() const;
+    [[nodiscard]] bool removeEmptyLines() const;
 
 private:
     void addEmptyAttendee();

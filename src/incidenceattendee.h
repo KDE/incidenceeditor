@@ -43,7 +43,7 @@ public:
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
-    Q_REQUIRED_RESULT bool isDirty() const override;
+    [[nodiscard]] bool isDirty() const override;
     void printDebugInfo() const override;
 
     AttendeeTableModel *dataModel() const;
@@ -52,7 +52,7 @@ public:
     AttendeeComboBoxDelegate *responseDelegate() const;
     AttendeeLineEditDelegate *attendeeDelegate() const;
 
-    Q_REQUIRED_RESULT int attendeeCount() const;
+    [[nodiscard]] int attendeeCount() const;
 
 Q_SIGNALS:
     void attendeeCountChanged(int);

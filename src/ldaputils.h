@@ -11,5 +11,5 @@
 
 namespace IncidenceEditorNG
 {
-Q_REQUIRED_RESULT QString translateLDAPAttributeForDisplay(const QString &attribute);
+[[nodiscard]] QString translateLDAPAttributeForDisplay(const QString &attribute);
 } // namespace IncidenceEditorNG

@@ -34,7 +34,7 @@ public:
     bool isDirty() const override;
 
     /** return the count of resources */
-    Q_REQUIRED_RESULT int resourceCount() const;
+    [[nodiscard]] int resourceCount() const;
 
 Q_SIGNALS:
     /** is emitted it the count of the resources is changed.

@@ -96,11 +96,11 @@ public:
      * TODO: See if this is always called when using IncidenceDefaults.
      * If yes, this should be done inside ctor.
      */
-    Q_REQUIRED_RESULT static IncidenceDefaults minimalIncidenceDefaults(bool cleanupAttachmentTempFiles = false);
+    [[nodiscard]] static IncidenceDefaults minimalIncidenceDefaults(bool cleanupAttachmentTempFiles = false);
 
     // Returns the e-mail address used for the organizer when we can't find anything useful
     // This is something like "invalid@invalid"
-    Q_REQUIRED_RESULT static QString invalidEmailAddress();
+    [[nodiscard]] static QString invalidEmailAddress();
 
 private:
     std::unique_ptr<IncidenceDefaultsPrivate> const d_ptr;

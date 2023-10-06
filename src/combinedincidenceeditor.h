@@ -36,8 +36,8 @@ public:
      * Returns whether or not the current values in the editor differ from the
      * initial values or if one of the combined editors is dirty.
      */
-    Q_REQUIRED_RESULT bool isDirty() const override;
-    Q_REQUIRED_RESULT bool isValid() const override;
+    [[nodiscard]] bool isDirty() const override;
+    [[nodiscard]] bool isValid() const override;
 
     /**
      * Loads all data from @param incidence into the combined editors. Note, if

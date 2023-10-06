@@ -56,7 +56,7 @@ public:
        Returns the last error, which is set in isValid() on error,
        and cleared on success.
     */
-    Q_REQUIRED_RESULT QString lastErrorString() const;
+    [[nodiscard]] QString lastErrorString() const;
 
     /**
      * Sets focus on the invalid field.
@@ -66,7 +66,7 @@ public:
     /**
      * Returns the type of the Incidence that is currently loaded.
      */
-    Q_REQUIRED_RESULT KCalendarCore::IncidenceBase::IncidenceType type() const;
+    [[nodiscard]] KCalendarCore::IncidenceBase::IncidenceType type() const;
 
     /** Convenience method to get a pointer for a specific const Incidence Type. */
     template<typename IncidenceT>

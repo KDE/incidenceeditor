@@ -22,21 +22,21 @@ public:
     ~KOrganizerEditorConfig() override;
 
     KConfigSkeleton *config() const override;
-    Q_REQUIRED_RESULT QString fullName() const override;
-    Q_REQUIRED_RESULT QString email() const override;
-    Q_REQUIRED_RESULT bool thatIsMe(const QString &email) const override;
-    Q_REQUIRED_RESULT QStringList allEmails() const override;
-    Q_REQUIRED_RESULT QVector<Organizer> allOrganizers() const override;
-    Q_REQUIRED_RESULT bool showTimeZoneSelectorInIncidenceEditor() const override;
-    Q_REQUIRED_RESULT QDateTime defaultDuration() const override;
-    Q_REQUIRED_RESULT QDateTime startTime() const override;
-    Q_REQUIRED_RESULT bool defaultAudioFileReminders() const override;
-    Q_REQUIRED_RESULT QUrl audioFilePath() const override;
-    Q_REQUIRED_RESULT int reminderTime() const override;
-    Q_REQUIRED_RESULT int reminderTimeUnits() const override;
-    Q_REQUIRED_RESULT bool defaultTodoReminders() const override;
-    Q_REQUIRED_RESULT bool defaultEventReminders() const override;
-    Q_REQUIRED_RESULT QStringList activeDesignerFields() const override;
-    Q_REQUIRED_RESULT QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type) override;
+    [[nodiscard]] QString fullName() const override;
+    [[nodiscard]] QString email() const override;
+    [[nodiscard]] bool thatIsMe(const QString &email) const override;
+    [[nodiscard]] QStringList allEmails() const override;
+    [[nodiscard]] QVector<Organizer> allOrganizers() const override;
+    [[nodiscard]] bool showTimeZoneSelectorInIncidenceEditor() const override;
+    [[nodiscard]] QDateTime defaultDuration() const override;
+    [[nodiscard]] QDateTime startTime() const override;
+    [[nodiscard]] bool defaultAudioFileReminders() const override;
+    [[nodiscard]] QUrl audioFilePath() const override;
+    [[nodiscard]] int reminderTime() const override;
+    [[nodiscard]] int reminderTimeUnits() const override;
+    [[nodiscard]] bool defaultTodoReminders() const override;
+    [[nodiscard]] bool defaultEventReminders() const override;
+    [[nodiscard]] QStringList activeDesignerFields() const override;
+    [[nodiscard]] QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type) override;
 };
 } // IncidenceEditors

@@ -35,11 +35,11 @@ public:
     }
 
     void clear() override;
-    Q_REQUIRED_RESULT bool isEmpty() const override;
+    [[nodiscard]] bool isEmpty() const override;
 
     /**
      * Return a copy of the attendee data
      */
-    Q_REQUIRED_RESULT KCalendarCore::Attendee attendee() const;
+    [[nodiscard]] KCalendarCore::Attendee attendee() const;
 };
 }

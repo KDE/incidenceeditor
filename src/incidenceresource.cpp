@@ -27,7 +27,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override
     {
         QVariant d;
         if (role == Qt::DisplayRole || role == Qt::EditRole) {

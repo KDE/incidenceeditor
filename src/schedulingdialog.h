@@ -29,8 +29,8 @@ public:
     explicit SchedulingDialog(QDate startDate, QTime startTime, int duration, ConflictResolver *resolver, QWidget *parent);
     ~SchedulingDialog() override;
 
-    Q_REQUIRED_RESULT QDate selectedStartDate() const;
-    Q_REQUIRED_RESULT QTime selectedStartTime() const;
+    [[nodiscard]] QDate selectedStartDate() const;
+    [[nodiscard]] QTime selectedStartTime() const;
 
 public Q_SLOTS:
     void slotUpdateIncidenceStartEnd(const QDateTime &startDateTime, const QDateTime &endDateTime);

@@ -73,12 +73,12 @@ public:
     /**
      * Return the time zone associated with the currently selected item.
      */
-    Q_REQUIRED_RESULT QTimeZone selectedTimeZone() const;
+    [[nodiscard]] QTimeZone selectedTimeZone() const;
 
     /**
      * Returns true if the selecting timezone is the floating time zone
      */
-    Q_REQUIRED_RESULT bool isFloating() const;
+    [[nodiscard]] bool isFloating() const;
 
 private:
     //@cond PRIVATE

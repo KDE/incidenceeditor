@@ -71,7 +71,7 @@ public:
     */
     void setInitiallyDirty(bool initiallyDirty);
 
-    Q_REQUIRED_RESULT Akonadi::Item item() const;
+    [[nodiscard]] Akonadi::Item item() const;
 
 Q_SIGNALS:
     /**

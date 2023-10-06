@@ -37,9 +37,9 @@ public:
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
-    Q_REQUIRED_RESULT bool isDirty() const override;
+    [[nodiscard]] bool isDirty() const override;
 
-    Q_REQUIRED_RESULT int attachmentCount() const;
+    [[nodiscard]] int attachmentCount() const;
 
 Q_SIGNALS:
     void attachmentCountChanged(int newCount);

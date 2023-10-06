@@ -38,7 +38,7 @@ public:
     explicit ResourceManagement(QWidget *parent = nullptr);
     ~ResourceManagement() override;
 
-    Q_REQUIRED_RESULT ResourceItem::Ptr selectedItem() const;
+    [[nodiscard]] ResourceItem::Ptr selectedItem() const;
 
 public Q_SLOTS:
     void slotDateChanged(const QDate &start, const QDate &end);
