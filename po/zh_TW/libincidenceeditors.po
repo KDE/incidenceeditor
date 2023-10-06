@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-01 01:55+0000\n"
+"POT-Creation-Date: 2023-10-06 01:41+0000\n"
 "PO-Revision-Date: 2015-06-14 13:37+0800\n"
 "Last-Translator: Franklin\n"
 "Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
@@ -147,13 +147,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "新增附件"
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:61
+#: attendeeline.cpp:147 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "要求回覆"
 
-#: attendeeline.cpp:148 incidenceattendee.cpp:62
+#: attendeeline.cpp:148 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -165,13 +165,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "輸入參加者的名稱或電子郵件地址。"
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:64
+#: attendeeline.cpp:153 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "編輯參加者目前的參加狀態。"
 
-#: attendeeline.cpp:155 incidenceattendee.cpp:66 schedulingdialog.cpp:97
+#: attendeeline.cpp:155 incidenceattendee.cpp:68 schedulingdialog.cpp:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -185,13 +185,13 @@ msgid ""
 "user if an email address is provided."
 msgstr "參加者的電子郵件地址或姓名。若有電子郵件地址則會發送邀請函過去。"
 
-#: attendeeline.cpp:163 incidenceattendee.cpp:68
+#: attendeeline.cpp:163 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "要求參加者回覆"
 
-#: attendeeline.cpp:165 incidenceattendee.cpp:70
+#: attendeeline.cpp:165 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -269,7 +269,7 @@ msgctxt "Attendee email"
 msgid "Email"
 msgstr "電子郵件"
 
-#: editoritemmanager.cpp:227
+#: editoritemmanager.cpp:237
 #, kde-format
 msgid ""
 "The item has been changed by another application.\n"
@@ -278,12 +278,12 @@ msgstr ""
 "此項目已被其它應用程式變更。\n"
 "現在打算怎麼辦？"
 
-#: editoritemmanager.cpp:229
+#: editoritemmanager.cpp:239
 #, kde-format
 msgid "Take over changes"
 msgstr "接收變更"
 
-#: editoritemmanager.cpp:230
+#: editoritemmanager.cpp:240
 #, kde-format
 msgid "Ignore and Overwrite changes"
 msgstr "忽略並覆寫變更"
@@ -615,7 +615,7 @@ msgid ""
 "or to-do."
 msgstr "顯示與目前事件或待辦事項相關的項目（檔案、郵件等等）。"
 
-#: incidenceattendee.cpp:204
+#: incidenceattendee.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -623,19 +623,19 @@ msgid ""
 "this participant?"
 msgstr "%1 看起來不像合法的電子郵件地址。您確定您要邀請這個參加者嗎？"
 
-#: incidenceattendee.cpp:207
+#: incidenceattendee.cpp:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "不合法的電子郵件地址"
 
-#: incidenceattendee.cpp:208
+#: incidenceattendee.cpp:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:209
+#: incidenceattendee.cpp:213
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -643,7 +643,7 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "不要傳送"
 
-#: incidenceattendee.cpp:431
+#: incidenceattendee.cpp:437
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select Attendees..."
@@ -651,14 +651,14 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "選擇參加者..."
 
-#: incidenceattendee.cpp:614
+#: incidenceattendee.cpp:620
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 個衝突"
 
-#: incidenceattendee.cpp:785
+#: incidenceattendee.cpp:791
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -669,7 +669,7 @@ msgstr ""
 "您改變了此事件的發起者。既然他也是此事件的參加者，您也要順便變更相關的參加者"
 "嗎？"
 
-#: incidenceattendee.cpp:789
+#: incidenceattendee.cpp:795
 #, fuzzy, kde-format
 #| msgctxt "@title:tab attendees of this event or to-do"
 #| msgid "Attendees"
@@ -677,7 +677,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "參加者"
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:796
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -816,114 +816,114 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "關閉 Rich Text"
 
-#: incidencedialog.cpp:213
+#: incidencedialog.cpp:221
 #, kde-format
 msgid "Select a valid collection first."
 msgstr "請先選擇一個合法的收藏。"
 
-#: incidencedialog.cpp:236
+#: incidencedialog.cpp:244
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "提醒（%1）"
 
-#: incidencedialog.cpp:238
+#: incidencedialog.cpp:246
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "提醒"
 
-#: incidencedialog.cpp:246
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "循環(&U)"
 
-#: incidencedialog.cpp:256
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr "(天)"
 
-#: incidencedialog.cpp:259
+#: incidencedialog.cpp:267
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr "(週)"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:270
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr "(月)"
 
-#: incidencedialog.cpp:265
+#: incidencedialog.cpp:273
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr "(年)"
 
-#: incidencedialog.cpp:268
+#: incidencedialog.cpp:276
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (例外)"
 
-#: incidencedialog.cpp:302
+#: incidencedialog.cpp:310
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "找不到樣本 %1。"
 
-#: incidencedialog.cpp:308
+#: incidencedialog.cpp:316
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "載入樣本檔案 %1 時發生錯誤。"
 
-#: incidencedialog.cpp:314
+#: incidencedialog.cpp:322
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "樣本未包含合法的事件。"
 
-#: incidencedialog.cpp:413
+#: incidencedialog.cpp:421
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "附加檔(%1)(&H)"
 
-#: incidencedialog.cpp:415
+#: incidencedialog.cpp:423
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "附加檔(&H)"
 
-#: incidencedialog.cpp:422
+#: incidencedialog.cpp:430
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "參加者(%1)(&A)"
 
-#: incidencedialog.cpp:424
+#: incidencedialog.cpp:432
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "參加者(&A)"
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:439
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "資源 (%1) (&R)"
 
-#: incidencedialog.cpp:433
+#: incidencedialog.cpp:441
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "資源(&R)"
 
-#: incidencedialog.cpp:455
+#: incidencedialog.cpp:463
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -935,13 +935,13 @@ msgstr ""
 "\n"
 "理由：%1"
 
-#: incidencedialog.cpp:461
+#: incidencedialog.cpp:469
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr ""
 
-#: incidencedialog.cpp:483
+#: incidencedialog.cpp:491
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -952,21 +952,21 @@ msgid ""
 "%1</resource>?</para>"
 msgstr ""
 
-#: incidencedialog.cpp:491
+#: incidencedialog.cpp:499
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
 msgstr "預設類別"
 
-#: incidencedialog.cpp:492
+#: incidencedialog.cpp:500
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "預設類別"
 
-#: incidencedialog.cpp:493
+#: incidencedialog.cpp:501
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -974,37 +974,37 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "不要傳送"
 
-#: incidencedialog.cpp:673
+#: incidencedialog.cpp:681
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "儲存目前的變更"
 
-#: incidencedialog.cpp:674
+#: incidencedialog.cpp:682
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "儲存變更並關閉對話框"
 
-#: incidencedialog.cpp:675
+#: incidencedialog.cpp:683
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "丟棄變更並關閉對話框"
 
-#: incidencedialog.cpp:679
+#: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates..."
 msgstr "樣本(&T)..."
 
-#: incidencedialog.cpp:681
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "管理此項目的樣本"
 
-#: incidencedialog.cpp:683
+#: incidencedialog.cpp:691
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1015,25 +1015,25 @@ msgstr ""
 "按下此鍵會顯示一個對話框，讓您管理樣本集。樣本可以自動將您常用的預設值放入編"
 "輯器內，讓您更快更容易建立新的項目。"
 
-#: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
+#: incidencedialog.cpp:788 incidencedialog.cpp:809 incidencedialog.cpp:825
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "您確定要取消嗎？"
 
-#: incidencedialog.cpp:781 incidencedialog.cpp:802 incidencedialog.cpp:818
+#: incidencedialog.cpp:789 incidencedialog.cpp:810 incidencedialog.cpp:826
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 確認"
 
-#: incidencedialog.cpp:782 incidencedialog.cpp:803 incidencedialog.cpp:819
+#: incidencedialog.cpp:790 incidencedialog.cpp:811 incidencedialog.cpp:827
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:783 incidencedialog.cpp:804 incidencedialog.cpp:820
+#: incidencedialog.cpp:791 incidencedialog.cpp:812 incidencedialog.cpp:828
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -2210,152 +2210,170 @@ msgctxt "@action:button"
 msgid "Select Attendees..."
 msgstr "選擇參加者..."
 
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: ui/dialogdesktop.ui:885
+#, kde-format
+msgid "Privacy:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
+#: ui/dialogdesktop.ui:897
+#, kde-format
+msgid "Sign Invitation Email"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
+#: ui/dialogdesktop.ui:907
+#, kde-format
+msgid "Encrypt Invitation Email"
+msgstr ""
+
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
-#: ui/dialogdesktop.ui:896
+#: ui/dialogdesktop.ui:930
 #, kde-format
 msgid "Resources"
 msgstr "資源"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
-#: ui/dialogdesktop.ui:936
+#: ui/dialogdesktop.ui:970
 #, fuzzy, kde-format
 #| msgid "Book resource"
 msgid "Book Resource"
 msgstr "書籍資源"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
-#: ui/dialogdesktop.ui:965
+#: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources..."
 msgstr "尋找資源..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
-#: ui/dialogdesktop.ui:979
+#: ui/dialogdesktop.ui:1013
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
 msgstr "提醒"
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
-#: ui/dialogdesktop.ui:991
+#: ui/dialogdesktop.ui:1025
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
 msgstr "新增預設提醒："
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
-#: ui/dialogdesktop.ui:1014
+#: ui/dialogdesktop.ui:1048
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
 msgstr "新增"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: ui/dialogdesktop.ui:1045
+#: ui/dialogdesktop.ui:1079
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "新增"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: ui/dialogdesktop.ui:1056
+#: ui/dialogdesktop.ui:1090
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: ui/dialogdesktop.ui:1067
+#: ui/dialogdesktop.ui:1101
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
 msgstr "關閉"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
-#: ui/dialogdesktop.ui:1074
+#: ui/dialogdesktop.ui:1108
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
 msgstr "移除"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
-#: ui/dialogdesktop.ui:1099
+#: ui/dialogdesktop.ui:1133
 #, kde-format
 msgctxt "@title:tab"
 msgid "Recurrence"
 msgstr "循環"
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
-#: ui/dialogdesktop.ui:1111
+#: ui/dialogdesktop.ui:1145
 #, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
 msgstr "重複："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1130
+#: ui/dialogdesktop.ui:1164
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
 msgstr "永不"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1135
+#: ui/dialogdesktop.ui:1169
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Daily"
 msgstr "每天"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1140
+#: ui/dialogdesktop.ui:1174
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
 msgstr "每週"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1145
+#: ui/dialogdesktop.ui:1179
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
 msgstr "每月"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
-#: ui/dialogdesktop.ui:1150
+#: ui/dialogdesktop.ui:1184
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Yearly"
 msgstr "每年"
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
-#: ui/dialogdesktop.ui:1164
+#: ui/dialogdesktop.ui:1198
 #, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
 msgstr "每"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
-#: ui/dialogdesktop.ui:1196
+#: ui/dialogdesktop.ui:1230
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
 msgstr "天"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
-#: ui/dialogdesktop.ui:1203
+#: ui/dialogdesktop.ui:1237
 #, kde-format
 msgid "This and future occurrences."
 msgstr "這一個與未來的事件。"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
-#: ui/dialogdesktop.ui:1374
+#: ui/dialogdesktop.ui:1408
 #, kde-format
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
 msgstr "結束："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1396
+#: ui/dialogdesktop.ui:1430
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox Speficies when a recurring events end"
 #| msgid "never"
@@ -2364,7 +2382,7 @@ msgid "never"
 msgstr "絕不"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1401
+#: ui/dialogdesktop.ui:1435
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox Speficies when a recurring events end"
 #| msgid "on"
@@ -2373,7 +2391,7 @@ msgid "on"
 msgstr "於："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
-#: ui/dialogdesktop.ui:1406
+#: ui/dialogdesktop.ui:1440
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox Speficies when a recurring events end"
 #| msgid "after"
@@ -2382,63 +2400,63 @@ msgid "after"
 msgstr "在此之後："
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
-#: ui/dialogdesktop.ui:1461
+#: ui/dialogdesktop.ui:1495
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
 msgstr "此事件或待辦事項結束日期。"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
-#: ui/dialogdesktop.ui:1516
+#: ui/dialogdesktop.ui:1550
 #, kde-format
 msgctxt "@label"
 msgid "occurrence(s)"
 msgstr "次發生"
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
-#: ui/dialogdesktop.ui:1535
+#: ui/dialogdesktop.ui:1569
 #, kde-format
 msgctxt "@label exceptions for the recurrence"
 msgid "Exceptions:"
 msgstr "例外："
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
-#: ui/dialogdesktop.ui:1560
+#: ui/dialogdesktop.ui:1594
 #, kde-format
 msgctxt "@action:button adds an exception on the recurrence"
 msgid "Add"
 msgstr "新增"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
-#: ui/dialogdesktop.ui:1599
+#: ui/dialogdesktop.ui:1633
 #, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
 msgstr "於："
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
-#: ui/dialogdesktop.ui:1614
+#: ui/dialogdesktop.ui:1648
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
 msgstr "移除"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
-#: ui/dialogdesktop.ui:1641
+#: ui/dialogdesktop.ui:1675
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
 msgstr "附加檔"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1663
+#: ui/dialogdesktop.ui:1697
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr "新增附件"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1666
+#: ui/dialogdesktop.ui:1700
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2447,21 +2465,21 @@ msgid ""
 msgstr "顯示對話框以選擇加入到此事件或待辦事項的附件或內含資料。"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1669
+#: ui/dialogdesktop.ui:1703
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
 msgstr "新增"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1689
+#: ui/dialogdesktop.ui:1723
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr "移除選取的附加檔"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1692
+#: ui/dialogdesktop.ui:1726
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2469,7 +2487,7 @@ msgid ""
 msgstr "從此事件或待辦事項移除上方清單所選取的附件。"
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1695
+#: ui/dialogdesktop.ui:1729
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
