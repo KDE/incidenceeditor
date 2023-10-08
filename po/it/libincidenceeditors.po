@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:41+0000\n"
-"PO-Revision-Date: 2023-09-27 17:48+0200\n"
+"PO-Revision-Date: 2023-10-08 01:11+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -2214,19 +2214,19 @@ msgstr "Seleziona partecipanti..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Riservatezza:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Firma il messaggio di invito"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Cifra il messaggio di invito"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2739,14 +2739,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Imposta il livello di ingrandimento del grafico di Gantt"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2757,9 +2750,10 @@ msgid ""
 msgstr ""
 "Imposta il livello di ingrandimento del diagramma di Gantt:<nl/> «Ore» "
 "mostra un intervallo di alcune ore,<nl/>«Giorni» mostra un intervallo di "
-"alcuni giorni, «Settimane» mostra un intervallo di alcuni mesi,<nl/>e «Mesi» "
-"mostra un intervallo di alcuni anni,<nl/>mentre «Automatico» seleziona "
-"l'intervallo più appropriato per l'evento o la cosa da fare attuale."
+"alcuni giorni, «Settimane» mostra un intervallo di alcune settimane,<nl/>e "
+"«Mesi» mostra un intervallo di alcuni mesi,<nl/>mentre «Automatico» "
+"seleziona l'intervallo più appropriato per l'evento o la cosa da fare "
+"attuale."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
