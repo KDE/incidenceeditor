@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2013, 2015, 2019, 2021.
+# Shinjo Park <kde@peremen.name>, 2013, 2015, 2019, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:41+0000\n"
-"PO-Revision-Date: 2021-11-11 23:38+0100\n"
+"PO-Revision-Date: 2023-10-08 22:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1380,8 +1380,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "이름이 같은 템플릿이 이미 존재합니다. 덮어쓰시겠습니까?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "중복된 템플릿 이름"
@@ -1392,8 +1391,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<b>%1</b> 템플릿을 삭제하시겠습니까?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "템플릿 삭제"
@@ -2152,19 +2150,19 @@ msgstr "참석자 선택..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "정보 보호:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "초대장 이메일 서명"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "초대장 이메일 암호화"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2663,14 +2661,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "간트 차트 확대/축소 수준 설정"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2680,8 +2671,8 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "간트 차트 확대/축소 수준을 다음 중에서 선택하십시오.<nl/>'시간'은 몇 시간 범"
-"위를 표시합니다.<nl/>'일'은 며칠 범위를 표시합니다.<nl/>'주'는 몇 달 범위를 "
-"표시합니다.<nl/>'달'은 몇 년 범위를 표시합니다.<nl/>'자동'은 현재 이벤트나 "
+"위를 표시합니다.<nl/>'일'은 며칠 범위를 표시합니다.<nl/>'주'는 몇 주 범위를 "
+"표시합니다.<nl/>'달'은 몇 개월 범위를 표시합니다.<nl/>'자동'은 현재 이벤트나 "
 "할 일에 따라서 범위를 표시합니다."
 
 #: visualfreebusywidget.cpp:152
