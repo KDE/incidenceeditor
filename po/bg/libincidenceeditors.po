@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:41+0000\n"
-"PO-Revision-Date: 2023-10-03 10:20+0200\n"
+"PO-Revision-Date: 2023-10-09 15:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -2201,19 +2201,19 @@ msgstr "Избиране на участници ..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Защита на личните данни:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Подписване на е–поща с покана"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Шифроване на е–поща с покана"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
