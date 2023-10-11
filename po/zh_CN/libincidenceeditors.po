@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:41+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/incidenceeditor/libincidenceeditors.pot\n"
-"X-Crowdin-File-ID: 3780\n"
+"X-Crowdin-File: /kf6-trunk/messages/incidenceeditor/libincidenceeditors.pot\n"
+"X-Crowdin-File-ID: 45255\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1372,8 +1372,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "已经存在该名称的模板，您是否想要覆盖？"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "复制模板名称"
@@ -1384,8 +1383,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "您真的想要删除模板 <b>%1</b>吗？"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "删除模板"
@@ -2639,14 +2637,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "设置甘特图的缩放级别"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2655,9 +2646,6 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
-"选择甘特图德缩放级别：<nl/>“小时”显示的是小时范围，<nl/>“天”显示的是天数范"
-"围，<nl/>“周”显示的是若干月的范围，<nl/>“月”则显示的是若干年的范围。<nl/>如果"
-"选择“自动”，图的范围会自动适应当前的事件或待办事项。"
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
