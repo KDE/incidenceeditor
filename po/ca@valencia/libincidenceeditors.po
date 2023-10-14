@@ -1724,7 +1724,7 @@ msgid ""
 msgstr ""
 "En marcar esta opció, l'adjunt s'emmagatzemarà dintre del calendari, cosa "
 "que pot requerir força espai depenent de la mida de l'adjunt. Si esta opció "
-"no està marcada, només s'emmagatzemarà un enllaç apuntant a l'adjunt. No "
+"no està marcada, només s'emmagatzemarà un enllaç apuntant cap a l'adjunt. No "
 "utilitzeu un enllaç per a adjunts que canvien sovint o que es poden moure (o "
 "eliminar) de la seua ubicació actual."
 
@@ -2611,7 +2611,7 @@ msgstr "Busca virtual"
 #: ui/schedulingdialog.ui:207
 #, kde-format
 msgid "Move your appointment to:"
-msgstr "Mou la cita a:"
+msgstr "Mou la cita cap a:"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
 #: ui/schedulingdialog.ui:228
