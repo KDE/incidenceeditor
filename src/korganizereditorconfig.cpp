@@ -45,10 +45,10 @@ QStringList KOrganizerEditorConfig::allEmails() const
     return CalendarSupport::KCalPrefs::instance()->allEmails();
 }
 
-QVector<EditorConfig::Organizer> KOrganizerEditorConfig::allOrganizers() const
+QList<EditorConfig::Organizer> KOrganizerEditorConfig::allOrganizers() const
 {
     const auto *manager = KIdentityManagementCore::IdentityManager::self();
-    QVector<EditorConfig::Organizer> organizers;
+    QList<EditorConfig::Organizer> organizers;
     std::transform(manager->begin(), manager->end(), std::back_inserter(organizers), [](const auto &identity) {
         return EditorConfig::Organizer{identity.fullName(), identity.fullEmailAddr(), identity.pgpAutoSign(), identity.pgpAutoEncrypt()};
     });

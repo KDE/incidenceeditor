@@ -26,7 +26,7 @@ public:
     [[nodiscard]] QString email() const override;
     [[nodiscard]] bool thatIsMe(const QString &email) const override;
     [[nodiscard]] QStringList allEmails() const override;
-    [[nodiscard]] QVector<Organizer> allOrganizers() const override;
+    [[nodiscard]] QList<Organizer> allOrganizers() const override;
     [[nodiscard]] bool showTimeZoneSelectorInIncidenceEditor() const override;
     [[nodiscard]] QDateTime defaultDuration() const override;
     [[nodiscard]] QDateTime startTime() const override;

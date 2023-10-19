@@ -13,8 +13,8 @@
 #include <QUrl>
 
 #include <QDateTime>
+#include <QList>
 #include <QStringList>
-#include <QVector>
 
 #include <memory>
 
@@ -60,7 +60,7 @@ public:
     [[nodiscard]] virtual QStringList allEmails() const;
 
     /// Returns all email addresses together with the full username for the user.
-    [[nodiscard]] virtual QVector<Organizer> allOrganizers() const;
+    [[nodiscard]] virtual QList<Organizer> allOrganizers() const;
 
     /// Show timezone selectors in the event and todo editor dialog.
     [[nodiscard]] virtual bool showTimeZoneSelectorInIncidenceEditor() const;
