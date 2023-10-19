@@ -1418,7 +1418,7 @@ msgstr "Nome de modelo duplicado"
 #: templatemanagementdialog.cpp:129
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
-msgstr "Está seguro de que quere retirar o modelo <b>%1</b>?"
+msgstr "Seguro que quere retirar o modelo <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
 #, kde-format
