@@ -83,9 +83,11 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     connect(mUi->mFindResourcesButton, &QPushButton::clicked, this, &IncidenceResource::findResources);
     connect(mUi->mBookResourceButton, &QPushButton::clicked, this, &IncidenceResource::bookResource);
     connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::layoutChanged);
+    connect(filterProxyModel, &ResourceFilterProxyModel::modelReset, this, &IncidenceResource::layoutChanged);
     connect(filterProxyModel, &ResourceFilterProxyModel::layoutChanged, this, &IncidenceResource::updateCount);
     connect(filterProxyModel, &ResourceFilterProxyModel::rowsInserted, this, &IncidenceResource::updateCount);
     connect(filterProxyModel, &ResourceFilterProxyModel::rowsRemoved, this, &IncidenceResource::updateCount);
+    connect(filterProxyModel, &ResourceFilterProxyModel::modelReset, this, &IncidenceResource::updateCount);
     // only update when FullName is changed
     connect(filterProxyModel, &ResourceFilterProxyModel::dataChanged, this, &IncidenceResource::updateCount);
 }

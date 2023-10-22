@@ -210,7 +210,7 @@ bool AttendeeTableModel::insertAttendee(int position, const KCalendarCore::Atten
 
 void AttendeeTableModel::setAttendees(const KCalendarCore::Attendee::List &attendees)
 {
-    Q_EMIT layoutAboutToBeChanged();
+    beginResetModel();
 
     mAttendeeList = attendees;
     mAttendeeAvailable.clear();
@@ -218,7 +218,7 @@ void AttendeeTableModel::setAttendees(const KCalendarCore::Attendee::List &atten
 
     addEmptyAttendee();
 
-    Q_EMIT layoutChanged();
+    endResetModel();
 }
 
 KCalendarCore::Attendee::List AttendeeTableModel::attendees() const

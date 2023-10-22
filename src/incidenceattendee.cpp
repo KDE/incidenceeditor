@@ -123,12 +123,14 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
 
     // conflict resolver (should show also resources)
     connect(mDataModel, &AttendeeTableModel::layoutChanged, this, &IncidenceAttendee::slotConflictResolverLayoutChanged);
+    connect(mDataModel, &AttendeeTableModel::modelReset, this, &IncidenceAttendee::slotConflictResolverLayoutChanged);
     connect(mDataModel, &AttendeeTableModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotConflictResolverAttendeeRemoved);
     connect(mDataModel, &AttendeeTableModel::rowsInserted, this, &IncidenceAttendee::slotConflictResolverAttendeeAdded);
     connect(mDataModel, &AttendeeTableModel::dataChanged, this, &IncidenceAttendee::slotConflictResolverAttendeeChanged);
 
     // Group substitution
     connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::modelReset, this, &IncidenceAttendee::slotGroupSubstitutionLayoutChanged);
     connect(filterProxyModel, &AttendeeFilterProxyModel::rowsAboutToBeRemoved, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved);
     connect(filterProxyModel, &AttendeeFilterProxyModel::rowsInserted, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeAdded);
     connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::slotGroupSubstitutionAttendeeChanged);
@@ -139,6 +141,8 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     connect(filterProxyModel, &AttendeeFilterProxyModel::dataChanged, this, &IncidenceAttendee::updateCount);
     connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::updateCount);
     connect(filterProxyModel, &AttendeeFilterProxyModel::layoutChanged, this, &IncidenceAttendee::filterLayoutChanged);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::modelReset, this, &IncidenceAttendee::updateCount);
+    connect(filterProxyModel, &AttendeeFilterProxyModel::modelReset, this, &IncidenceAttendee::filterLayoutChanged);
 }
 
 IncidenceAttendee::~IncidenceAttendee() = default;
