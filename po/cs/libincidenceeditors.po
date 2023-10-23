@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:44+0000\n"
+"POT-Creation-Date: 2023-10-23 02:27+0000\n"
 "PO-Revision-Date: 2022-01-14 15:17+0100\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -610,7 +610,7 @@ msgstr ""
 "Zobrazí seznam aktuálních položek (souborů, pošty, atd.), které byly "
 "přiřazeny k této události, či úkolu."
 
-#: incidenceattendee.cpp:204
+#: incidenceattendee.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -618,31 +618,31 @@ msgid ""
 "this participant?"
 msgstr ""
 
-#: incidenceattendee.cpp:207
+#: incidenceattendee.cpp:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Neplatná e-mailová adresa"
 
-#: incidenceattendee.cpp:208
+#: incidenceattendee.cpp:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "Pozvat"
 
-#: incidenceattendee.cpp:209
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Nezvat"
 
-#: incidenceattendee.cpp:432
+#: incidenceattendee.cpp:436
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrat účastníky"
 
-#: incidenceattendee.cpp:615
+#: incidenceattendee.cpp:619
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -651,7 +651,7 @@ msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikty"
 msgstr[2] "%1 konfliktů"
 
-#: incidenceattendee.cpp:786
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -660,13 +660,13 @@ msgid ""
 "well?"
 msgstr ""
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:794
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Změnit účastníka"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

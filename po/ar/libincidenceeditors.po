@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-01 02:44+0000\n"
+"POT-Creation-Date: 2023-10-23 02:27+0000\n"
 "PO-Revision-Date: 2022-10-27 12:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -639,7 +639,7 @@ msgid ""
 msgstr ""
 "عناصر العرض (الملفّات والبريد وغيرها) المرتبطة بهذا الحدث أو هذه المهمّة."
 
-#: incidenceattendee.cpp:204
+#: incidenceattendee.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -647,31 +647,31 @@ msgid ""
 "this participant?"
 msgstr "لا يبدو %1 وكأنّه عنوان بريد صالح. أمتأكّد من دعوة هذا المشارك؟"
 
-#: incidenceattendee.cpp:207
+#: incidenceattendee.cpp:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "عنوان البريد الإلكترونيّ غير صالح"
 
-#: incidenceattendee.cpp:208
+#: incidenceattendee.cpp:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "ادعُ"
 
-#: incidenceattendee.cpp:209
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "لا تدع"
 
-#: incidenceattendee.cpp:432
+#: incidenceattendee.cpp:436
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "حدّد الحضور"
 
-#: incidenceattendee.cpp:615
+#: incidenceattendee.cpp:619
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -683,7 +683,7 @@ msgstr[3] "%1 تضاربات"
 msgstr[4] "%1 تضاربًا"
 msgstr[5] "%1 تضارب"
 
-#: incidenceattendee.cpp:786
+#: incidenceattendee.cpp:790
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -694,13 +694,13 @@ msgstr ""
 "أنت تغيّر منظّم هذا الحدث. بما أنّ المنظّم سيحضر الحدث أيضًا، أتريد تغيير الحاضر "
 "المقابل أيضًا؟"
 
-#: incidenceattendee.cpp:790
+#: incidenceattendee.cpp:794
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "غيّر الحضور"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
