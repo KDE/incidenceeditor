@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:41+0000\n"
+"POT-Creation-Date: 2023-10-23 01:40+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -672,7 +672,7 @@ msgid ""
 "or to-do."
 msgstr ""
 
-#: incidenceattendee.cpp:208
+#: incidenceattendee.cpp:212
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -682,25 +682,25 @@ msgstr ""
 "%1 neatrodo kaip galiojantis el. pašto adresas. Ar esate tikra/s kad norite "
 "kviesti šį dalyvį?"
 
-#: incidenceattendee.cpp:211
+#: incidenceattendee.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Netinkamas el. pašto adresas"
 
-#: incidenceattendee.cpp:212
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:213
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:437
+#: incidenceattendee.cpp:441
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select Attendees..."
@@ -708,7 +708,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Parinkite dalyvius..."
 
-#: incidenceattendee.cpp:620
+#: incidenceattendee.cpp:624
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -718,7 +718,7 @@ msgstr[1] "%1 konfliktai"
 msgstr[2] "%1 konfliktų"
 msgstr[3] "%1 konfliktas"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -729,14 +729,14 @@ msgstr ""
 "Jūs keičiate įvykio organizatorių. Organizatorius yra kartu ir įvykio "
 "dalyvis, taigi, ar norėtumėte pakeisti ir atitinkamo dalyvio duomenis?"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:799
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Dalyvis"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

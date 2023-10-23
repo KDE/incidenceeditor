@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:41+0000\n"
+"POT-Creation-Date: 2023-10-23 01:40+0000\n"
 "PO-Revision-Date: 2023-10-06 05:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -608,7 +608,7 @@ msgstr ""
 "Bu etkinlik veya yapılacak işle ilişkilendirilmiş ögeleri (dosya, e-posta, "
 "vb.) gösterir."
 
-#: incidenceattendee.cpp:208
+#: incidenceattendee.cpp:212
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -618,31 +618,31 @@ msgstr ""
 "%1 geçerli bir e-posta adresi gibi görünmüyor. Bu katılımcıyı davet etmek "
 "istediğinizden emin misiniz?"
 
-#: incidenceattendee.cpp:211
+#: incidenceattendee.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Geçersiz E-Posta Adresi"
 
-#: incidenceattendee.cpp:212
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "Davet Et"
 
-#: incidenceattendee.cpp:213
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Davet Etme"
 
-#: incidenceattendee.cpp:437
+#: incidenceattendee.cpp:441
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Katılımcıları Seç"
 
-#: incidenceattendee.cpp:620
+#: incidenceattendee.cpp:624
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -650,7 +650,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 çakışma"
 msgstr[1] "%1 çakışma"
 
-#: incidenceattendee.cpp:791
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -661,13 +661,13 @@ msgstr ""
 "Bu etkinliğin düzenleyicisini değiştiriyorsunuz. Düzenleyici de etkinliğe "
 "katılacağından, ilgili katılımcıyı da düzenlemek ister misiniz?"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:799
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Katılımcıyı Değiştir"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
