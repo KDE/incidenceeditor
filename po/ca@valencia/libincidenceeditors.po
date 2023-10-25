@@ -1009,7 +1009,7 @@ msgid ""
 msgstr ""
 "Premeu este botó per a mostrar un diàleg que vos ajudarà a gestionar un joc "
 "de plantilles. Les plantilles poden fer més fàcil i ràpid crear elements "
-"nous posant els vostres valors predeterminats a l'editor automàticament."
+"nous posant automàticament els vostres valors predeterminats en l'editor."
 
 #: incidencedialog.cpp:780 incidencedialog.cpp:801 incidencedialog.cpp:817
 #, kde-format
