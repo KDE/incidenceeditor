@@ -1,166 +1,157 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
-# Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
-# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the incidenceeditor package.
 #
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2023-10-19 14:42+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2023-10-25 13:06+0200\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
-msgstr "Vytvořit novu připomínku"
+msgstr ""
 
 #: alarmdialog.cpp:67
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
-msgstr "Upravit existující připomínku"
+msgstr ""
 
 #: alarmdialog.cpp:192
 #, kde-format
 msgid "Before the to-do starts"
-msgstr "před započetím úkolu"
+msgstr ""
 
 #: alarmdialog.cpp:192
 #, kde-format
 msgid "After the to-do starts"
-msgstr "po započetí úkolu"
+msgstr ""
 
 #: alarmdialog.cpp:196
 #, kde-format
 msgid "Before the to-do is due"
-msgstr "před termínem úkolu"
+msgstr ""
 
 #: alarmdialog.cpp:196
 #, kde-format
 msgid "After the to-do is due"
-msgstr "po termínu úkolu"
+msgstr ""
 
 #: alarmdialog.cpp:200
 #, kde-format
 msgid "Before the event starts"
-msgstr "před započetím události"
+msgstr ""
 
 #: alarmdialog.cpp:200
 #, kde-format
 msgid "After the event starts"
-msgstr "po započetí události"
+msgstr ""
 
 #: alarmdialog.cpp:203
 #, kde-format
 msgid "Before the event ends"
-msgstr "před ukončením události"
+msgstr ""
 
 #: alarmdialog.cpp:203
 #, kde-format
 msgid "After the event ends"
-msgstr "po ukončení události"
+msgstr ""
 
 #: alarmpresets.cpp:83
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "At start"
-msgstr "Na začátku"
+msgstr ""
 
 #: alarmpresets.cpp:85
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 minute before start"
 msgid_plural "%1 minutes before start"
-msgstr[0] "%1 minuta před zahájením"
-msgstr[1] "%1 minuty před zahájením"
-msgstr[2] "%1 minut před zahájením"
+msgstr[0] ""
+msgstr[1] ""
 
 #: alarmpresets.cpp:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 hour before start"
 msgid_plural "%1 hours before start"
-msgstr[0] "%1 hodina před zahájením"
-msgstr[1] "%1 hodiny před zahájením"
-msgstr[2] "%1 hodin před zahájením"
+msgstr[0] ""
+msgstr[1] ""
 
 #: alarmpresets.cpp:89
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 day before start"
 msgid_plural "%1 days before start"
-msgstr[0] "%1 den před zahájením"
-msgstr[1] "%1 dny před zahájením"
-msgstr[2] "%1 dnů před zahájením"
+msgstr[0] ""
+msgstr[1] ""
 
 #: alarmpresets.cpp:103
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "When due"
-msgstr "Když nastal termín"
+msgstr ""
 
 #: alarmpresets.cpp:105
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 minute before due"
 msgid_plural "%1 minutes before due"
-msgstr[0] "%1 minuta před termínem"
-msgstr[1] "%1 minuty před termínem"
-msgstr[2] "%1 minut před termínem"
+msgstr[0] ""
+msgstr[1] ""
 
 #: alarmpresets.cpp:107
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 hour before due"
 msgid_plural "%1 hours before due"
-msgstr[0] "%1 hodina před termínem"
-msgstr[1] "%1 hodiny před termínem"
-msgstr[2] "%1 hodin před termínem"
+msgstr[0] ""
+msgstr[1] ""
 
 #: alarmpresets.cpp:109
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 day before due"
 msgid_plural "%1 days before due"
-msgstr[0] "%1 den před termínem"
-msgstr[1] "%1 dny před termínem"
-msgstr[2] "%1 dnů před termínem"
+msgstr[0] ""
+msgstr[1] ""
 
 #: attachmenteditdialog.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "Upravit přílohu"
+msgstr ""
 
 #: attachmenteditdialog.cpp:57
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr ""
 
 #: attachmenteditdialog.cpp:110
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
-msgstr "Nová příloha"
+msgstr ""
 
 #: attendeeline.cpp:147 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
-msgstr "Vyžádat odpověď"
+msgstr ""
 
 #: attendeeline.cpp:148 incidenceattendee.cpp:64
 #, kde-format
@@ -211,71 +202,71 @@ msgstr ""
 #: attendeetablemodel.cpp:64
 #, kde-format
 msgid "Free"
-msgstr "Volný"
+msgstr ""
 
 #: attendeetablemodel.cpp:66
 #, kde-format
 msgid "Busy"
-msgstr "Zaneprázdněn"
+msgstr ""
 
 #: attendeetablemodel.cpp:68
 #, kde-format
 msgid "Accepted"
-msgstr "Přijato"
+msgstr ""
 
 #: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
 #, kde-format
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr ""
 
 #: attendeetablemodel.cpp:151
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
-msgstr "Role"
+msgstr ""
 
 #: attendeetablemodel.cpp:153
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
-msgstr "Název"
+msgstr ""
 
 #: attendeetablemodel.cpp:155
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
-msgstr "Dostupné"
+msgstr ""
 
 #: attendeetablemodel.cpp:157
 #, kde-format
 msgctxt ""
 "Status of attendee in an incidence (accepted, declined, delegated, ...)"
 msgid "Status"
-msgstr "Stav"
+msgstr ""
 
 #: attendeetablemodel.cpp:159
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
-msgstr "Typ uživatele"
+msgstr ""
 
 #: attendeetablemodel.cpp:161
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
-msgstr "Odpověď"
+msgstr ""
 
 #: attendeetablemodel.cpp:163
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
-msgstr "Název"
+msgstr ""
 
 #: attendeetablemodel.cpp:165
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 #: editoritemmanager.cpp:237
 #, kde-format
@@ -287,42 +278,42 @@ msgstr ""
 #: editoritemmanager.cpp:239
 #, kde-format
 msgid "Take over changes"
-msgstr "Převzít změny"
+msgstr ""
 
 #: editoritemmanager.cpp:240
 #, kde-format
 msgid "Ignore and Overwrite changes"
-msgstr "Ignorovat a přepsat změny"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Free/Busy Period"
-msgstr "Období aktivity"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Summary:"
-msgstr "Shrnutí:"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Location:"
-msgstr "Umístění:"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:80
 #, kde-format
 msgctxt "@info:tooltip period start time"
 msgid "Start:"
-msgstr "Spustit:"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:83
 #, kde-format
 msgctxt "@info:tooltip period end time"
 msgid "End:"
-msgstr "Ukončit:"
+msgstr ""
 
 #: freebusyurldialog.cpp:28
 #, kde-format
@@ -333,7 +324,7 @@ msgstr ""
 #: freebusyurldialog.cpp:63
 #, kde-kuit-format
 msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "Umístění informací o aktivitě pro '%1' <placeholder>%2</placeholder>:"
+msgstr ""
 
 #: freebusyurldialog.cpp:67
 #, kde-format
@@ -351,64 +342,61 @@ msgstr ""
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
-msgstr "Zakázat"
+msgstr ""
 
 #: incidencealarm.cpp:252
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
-msgstr "Povolit"
+msgstr ""
 
 #: incidencealarm.cpp:270
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
-msgstr "Zobrazit dialog"
+msgstr ""
 
 #: incidencealarm.cpp:273
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
-msgstr "Přehrát zvukový soubor"
+msgstr ""
 
 #: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
-msgstr "Neplatná upomínka."
+msgstr ""
 
 #: incidencealarm.cpp:282
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "1 minuta"
-msgstr[1] "%1 minuty"
-msgstr[2] "%1 minut"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencealarm.cpp:287
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
-msgstr[0] "1 den"
-msgstr[1] "%1 dny"
-msgstr[2] "%1 dnů"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencealarm.cpp:290
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "1 hodina"
-msgstr[1] "%1 hodiny"
-msgstr[2] "%1 hodin"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencealarm.cpp:295
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
-msgstr "(Opakuje se)"
+msgstr ""
 
 #. i18n: These series of strings are used to show the user a description of
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
@@ -417,82 +405,82 @@ msgstr "(Opakuje se)"
 #: incidencealarm.cpp:305
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "%1 %2 po započetí úkolu %3"
+msgstr ""
 
 #: incidencealarm.cpp:307
 #, kde-format
 msgid "%1 %2 after the event started %3"
-msgstr "%1 %2 po započetí události %3"
+msgstr ""
 
 #: incidencealarm.cpp:311
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "%1 %2 před započetím úkolu %3"
+msgstr ""
 
 #: incidencealarm.cpp:313
 #, kde-format
 msgid "%1 %2 before the event starts %3"
-msgstr "%1 %2 před započetím události %3"
+msgstr ""
 
 #: incidencealarm.cpp:317
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
-msgstr "%1 %2 po termínu úkolu %3"
+msgstr ""
 
 #: incidencealarm.cpp:319
 #, kde-format
 msgid "%1 %2 after the event ends %3"
-msgstr "%1 %2 po ukončení události %3"
+msgstr ""
 
 #: incidencealarm.cpp:323
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
-msgstr "%1 %2 před termínem úkolu %3"
+msgstr ""
 
 #: incidencealarm.cpp:325
 #, kde-format
 msgid "%1 %2 before the event ends %3"
-msgstr "%1 %2 před ukončením události %3"
+msgstr ""
 
 #: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr "%1 %2 po započetí úkolu %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
-msgstr "%1 %2 po započetí události %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
-msgstr "%1 %2 před započetím úkolu %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
-msgstr "%1 %2 před započetím události %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
-msgstr "%1 %2 po termínu úkolu %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
-msgstr "%1 %2 po ukončení události %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
-msgstr "%1 %2 před termínem úkolu %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
-msgstr "%1 %2 před ukončením události %3 (Vypnuto)"
+msgstr ""
 
 #: incidencealarm.cpp:359
 #, kde-format
@@ -538,7 +526,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Add Attachment"
-msgstr "Přidat přílohu"
+msgstr ""
 
 #: incidenceattachment.cpp:192
 #, kde-kuit-format
@@ -550,55 +538,55 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Attachments?"
-msgstr "Odstranit přílohy?"
+msgstr ""
 
 #: incidenceattachment.cpp:231
 #, kde-format
 msgctxt "@title"
 msgid "Save Attachment"
-msgstr "Uložit přílohu"
+msgstr ""
 
 #: incidenceattachment.cpp:411
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
-msgstr "Od&kaz sem"
+msgstr ""
 
 #: incidenceattachment.cpp:421 incidenceattachment.cpp:424
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
-msgstr "&Kopírovat sem"
+msgstr ""
 
 #: incidenceattachment.cpp:428
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
-msgstr "&Zrušit"
+msgstr ""
 
 #: incidenceattachment.cpp:475
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
-msgstr "&Otevřít"
+msgstr ""
 
 #: incidenceattachment.cpp:481
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As..."
-msgstr "Uložit jako..."
+msgstr ""
 
 #: incidenceattachment.cpp:498
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
-msgstr "Odst&ranit"
+msgstr ""
 
 #: incidenceattachment.cpp:506
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties..."
-msgstr "&Vlastnosti..."
+msgstr "&Propiedaes…"
 
 #: incidenceattachment.cpp:517
 #, kde-format
@@ -607,8 +595,6 @@ msgid ""
 "Displays items (files, mail, etc.) that have been associated with this event "
 "or to-do."
 msgstr ""
-"Zobrazí seznam aktuálních položek (souborů, pošty, atd.), které byly "
-"přiřazeny k této události, či úkolu."
 
 #: incidenceattendee.cpp:212
 #, kde-format
@@ -622,34 +608,33 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
-msgstr "Neplatná e-mailová adresa"
+msgstr ""
 
 #: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr "Pozvat"
+msgstr ""
 
 #: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "Nezvat"
+msgstr ""
 
 #: incidenceattendee.cpp:441
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Vybrat účastníky"
+msgstr ""
 
 #: incidenceattendee.cpp:624
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
-msgstr[0] "%1 konflikt"
-msgstr[1] "%1 konflikty"
-msgstr[2] "%1 konfliktů"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidenceattendee.cpp:795
 #, kde-format
@@ -664,35 +649,35 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "Změnit účastníka"
+msgstr ""
 
 #: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "Neměnit"
+msgstr ""
 
 #: incidencedatetime.cpp:215
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
-msgstr "Časová pásma"
+msgstr ""
 
 #: incidencedatetime.cpp:617
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
-msgstr "Termín:"
+msgstr ""
 
 #: incidencedatetime.cpp:745 incidencedatetime.cpp:746
 #, kde-format
 msgid "Starts: %1"
-msgstr "Začíná: %1"
+msgstr ""
 
 #: incidencedatetime.cpp:748
 #, kde-format
 msgid "Starting Date"
-msgstr "Čas zahájení"
+msgstr ""
 
 #: incidencedatetime.cpp:749
 #, kde-format
@@ -707,17 +692,17 @@ msgstr ""
 #: incidencedatetime.cpp:761 incidencedatetime.cpp:762
 #, kde-format
 msgid "Ends: %1"
-msgstr "Končí: %1"
+msgstr ""
 
 #: incidencedatetime.cpp:766
 #, kde-format
 msgid "Due Date"
-msgstr "Datum dokončení"
+msgstr ""
 
 #: incidencedatetime.cpp:767
 #, kde-format
 msgid "Due Time"
-msgstr "K času"
+msgstr ""
 
 #: incidencedatetime.cpp:769
 #, kde-format
@@ -733,25 +718,25 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "Neplatný čas začátku."
+msgstr ""
 
 #: incidencedatetime.cpp:853
 #, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "Neplatný čas začátku."
+msgstr ""
 
 #: incidencedatetime.cpp:861
 #, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "Neplatný čas ukončení."
+msgstr ""
 
 #: incidencedatetime.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "Neplatný čas ukončení."
+msgstr ""
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -760,8 +745,6 @@ msgid ""
 "The event ends before it starts.\n"
 "Please correct dates and times."
 msgstr ""
-"Tato událost končí dřív než začíná.\n"
-"Prosím opravte datum a čas."
 
 #: incidencedatetime.cpp:879
 #, kde-format
@@ -781,19 +764,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
-msgstr "[Binární data]"
+msgstr ""
 
 #: incidencedefaults.cpp:436
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
-msgstr "neplatná@e-mailová.adresa"
+msgstr ""
 
 #: incidencedescription.cpp:99
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Enable rich text"
-msgstr "Povolit formátovaný text"
+msgstr ""
 
 #: incidencedescription.cpp:103
 #, kde-format
@@ -810,103 +793,103 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
-msgstr "Upomínka (%1)"
+msgstr ""
 
 #: incidencedialog.cpp:246
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
-msgstr "Upomínka"
+msgstr ""
 
 #: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
-msgstr "Opa&kování"
+msgstr ""
 
 #: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
-msgstr " (D)"
+msgstr ""
 
 #: incidencedialog.cpp:267
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
-msgstr " (T)"
+msgstr ""
 
 #: incidencedialog.cpp:270
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
-msgstr " (M)"
+msgstr ""
 
 #: incidencedialog.cpp:273
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
-msgstr " (R)"
+msgstr ""
 
 #: incidencedialog.cpp:276
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
-msgstr " (E)"
+msgstr ""
 
 #: incidencedialog.cpp:310
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
-msgstr "Nelze najít šablonu '%1'."
+msgstr ""
 
 #: incidencedialog.cpp:316
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "Chyba při načítání souboru se šablonou '%1'."
+msgstr ""
 
 #: incidencedialog.cpp:322
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
-msgstr "Šablona neobsahuje platnou událost."
+msgstr ""
 
 #: incidencedialog.cpp:421
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
-msgstr "Přílo&hy (%1)"
+msgstr ""
 
 #: incidencedialog.cpp:423
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
-msgstr "Přílo&hy"
+msgstr ""
 
 #: incidencedialog.cpp:430
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
-msgstr "Úč&astníci (%1)"
+msgstr ""
 
 #: incidencedialog.cpp:432
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
-msgstr "Úč&astníci"
+msgstr ""
 
 #: incidencedialog.cpp:439
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
-msgstr "Zd&roje (%1)"
+msgstr ""
 
 #: incidencedialog.cpp:441
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
-msgstr "Zd&roje"
+msgstr ""
 
 #: incidencedialog.cpp:463
 #, kde-format
@@ -921,7 +904,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr "Zkusit znovu"
+msgstr ""
 
 #: incidencedialog.cpp:491
 #, kde-kuit-format
@@ -938,49 +921,49 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "Nastavit výchozí kalendář?"
+msgstr ""
 
 #: incidencedialog.cpp:500
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Nastavit jako výchozí"
+msgstr ""
 
 #: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "Nenastavovat"
+msgstr ""
 
 #: incidencedialog.cpp:681
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
-msgstr "Uložit aktuální změny"
+msgstr ""
 
 #: incidencedialog.cpp:682
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
-msgstr "Uložit změny a zavřít dialogové okno"
+msgstr ""
 
 #: incidencedialog.cpp:683
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
-msgstr "Zrušit změny a zavřít"
+msgstr ""
 
 #: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates..."
-msgstr "Š&ablony..."
+msgstr ""
 
 #: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
-msgstr "Spravovat šablony pro tuto položku"
+msgstr ""
 
 #: incidencedialog.cpp:691
 #, kde-format
@@ -995,31 +978,31 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr "Přejete si opravdu zrušit?"
+msgstr ""
 
 #: incidencedialog.cpp:789 incidencedialog.cpp:810 incidencedialog.cpp:826
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "KOrganizer - potvrzení"
+msgstr ""
 
 #: incidencedialog.cpp:790 incidencedialog.cpp:811 incidencedialog.cpp:827
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr "Zrušit úpravy"
+msgstr ""
 
 #: incidencedialog.cpp:791 incidencedialog.cpp:812 incidencedialog.cpp:828
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Nerušit"
+msgstr ""
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "Výchozí metoda příloh emailů"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
@@ -1037,25 +1020,25 @@ msgstr ""
 #: incidenceeditor.kcfg:17
 #, kde-format
 msgid "Always ask"
-msgstr "Vždy se dotázat"
+msgstr ""
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:20
 #, kde-format
 msgid "Only attach link to message"
-msgstr "Pouze připojit odkaz na zprávu"
+msgstr ""
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:23
 #, kde-format
 msgid "Attach complete message"
-msgstr "Připojit celou zprávu"
+msgstr ""
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:26
 #, kde-format
 msgid "Attach message without attachments"
-msgstr "Připojit zprávu bez příloh"
+msgstr ""
 
 #: incidencerecurrence.cpp:128
 #, kde-format
@@ -1065,7 +1048,7 @@ msgctxt ""
 "(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
 "be substituted (1, 22, 123)."
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: incidencerecurrence.cpp:453
 #, kde-format
@@ -1083,13 +1066,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
-msgstr "Opakování a konečné datum jsou neplatné."
+msgstr ""
 
 #: incidencerecurrence.cpp:508
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
-msgstr "%1"
+msgstr ""
 
 #: incidencerecurrence.cpp:511
 #, kde-format
@@ -1101,13 +1084,13 @@ msgstr ""
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: incidencerecurrence.cpp:520
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
-msgstr "poslední %1"
+msgstr ""
 
 #: incidencerecurrence.cpp:522
 #, kde-format
@@ -1137,7 +1120,7 @@ msgstr ""
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
-msgstr "poslední %1 z %2"
+msgstr ""
 
 #: incidencerecurrence.cpp:556
 #, kde-format
@@ -1149,52 +1132,47 @@ msgstr ""
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
-msgstr "%1 den roku"
+msgstr ""
 
 #: incidencerecurrence.cpp:578
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
 msgid_plural "occurrences"
-msgstr[0] "výskyt"
-msgstr[1] "výskyty"
-msgstr[2] "výskytů"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencerecurrence.cpp:602
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
-msgstr[0] "týden"
-msgstr[1] "týdny"
-msgstr[2] "týdnů"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencerecurrence.cpp:606
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
-msgstr[0] "měsíc"
-msgstr[1] "měsíce"
-msgstr[2] "měsíců"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencerecurrence.cpp:610
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
-msgstr[0] "rok"
-msgstr[1] "roky"
-msgstr[2] "let"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencerecurrence.cpp:614
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
-msgstr[0] "den"
-msgstr[1] "dny"
-msgstr[2] "dnů"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencerecurrence.cpp:622
 #, kde-format
@@ -1203,41 +1181,40 @@ msgctxt ""
 "weeks, 'm' months, 'y' years"
 msgid "every"
 msgid_plural "every"
-msgstr[0] "každý"
-msgstr[1] "každé"
-msgstr[2] "každých"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencewhatwhere.cpp:70
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr "Prosím, zadejte shrnutí."
+msgstr ""
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr "Odeslat e-mail"
+msgstr ""
 
 #: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
 #: individualmailcomponentfactory.h:64
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
-msgstr "Neodesílat"
+msgstr ""
 
 #: individualmaildialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
-msgstr "E-mail skupinového plánování"
+msgstr ""
 
 #: individualmaildialog.cpp:34
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
-msgstr "Odeslat aktualizaci"
+msgstr ""
 
 #: individualmaildialog.cpp:35
 #, kde-format
@@ -1249,7 +1226,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
-msgstr "Upravit e-mail"
+msgstr ""
 
 #: individualmaildialog.cpp:37
 #, kde-format
@@ -1267,43 +1244,43 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
-msgstr "Vlastní nastavení pošty <<"
+msgstr ""
 
 #: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
-msgstr "Vlastní nastavení pošty >>"
+msgstr ""
 
 #: ldaputils.cpp:15
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
-msgstr "Obecné jméno"
+msgstr ""
 
 #: ldaputils.cpp:17
 #, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 #: ldaputils.cpp:19
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
-msgstr "Jméno"
+msgstr ""
 
 #: ldaputils.cpp:21
 #, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
-msgstr "Příjmení"
+msgstr ""
 
 #: ldaputils.cpp:23
 #, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
-msgstr "Organizace"
+msgstr ""
 
 #: ldaputils.cpp:25
 #, kde-format
@@ -1315,31 +1292,31 @@ msgstr ""
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
-msgstr "Popis"
+msgstr ""
 
 #: ldaputils.cpp:29
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
-msgstr "Telefon"
+msgstr ""
 
 #: ldaputils.cpp:31
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
-msgstr "Mobil"
+msgstr ""
 
 #: opencomposerjob.cpp:77
 #, kde-format
 msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
-msgstr "Nelze se připojit k e-mailové službě"
+msgstr ""
 
 #: resourcemanagement.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "Správa zdrojů"
+msgstr ""
 
 #: resourcemanagement.cpp:101
 #, kde-format
@@ -1351,7 +1328,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
-msgstr "Plánování"
+msgstr ""
 
 #: schedulingdialog.cpp:166
 #, kde-format
@@ -1359,7 +1336,7 @@ msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
 "Monday, 12 June"
 msgid "%1, %2 %3"
-msgstr "%1, %2 %3"
+msgstr ""
 
 #: schedulingdialog.cpp:187
 #, kde-format
@@ -1367,62 +1344,62 @@ msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
 "[timeedit] to 10:00am"
 msgid "to %1"
-msgstr "do %1"
+msgstr ""
 
 #: templatemanagementdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
-msgstr "Správa %1 šablon"
+msgstr ""
 
 #: templatemanagementdialog.cpp:83
 #, kde-format
 msgid "Template Name"
-msgstr "Název šablony"
+msgstr ""
 
 #: templatemanagementdialog.cpp:84
 #, kde-format
 msgid "Please enter a name for the new template:"
-msgstr "Zadejte prosím název pro novou šablonu:"
+msgstr ""
 
 #: templatemanagementdialog.cpp:86
 #, kde-format
 msgid "New %1 Template"
-msgstr "Nová šablona %1"
+msgstr ""
 
 #: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
-msgstr "Šablona zadaného jména již existuje. Přepsat?"
+msgstr ""
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Duplikovat název šablony"
+msgstr ""
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
-msgstr "<qt>Opravdu si přejete smazat šablonu <b>%1</b>?</qt>"
+msgstr ""
 
 #: templatemanagementdialog.cpp:130
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr "Odstranit šablonu"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
 #, kde-format
 msgid "Alarms"
-msgstr "Alarmy"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/alarmdialog.ui:32
 #, kde-format
 msgid "When:"
-msgstr "Když:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
 #: ui/alarmdialog.ui:47
@@ -1457,21 +1434,21 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in minutes"
 msgid "minute(s)"
-msgstr "minut(y)"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:84
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in hours"
 msgid "hour(s)"
-msgstr "hodin(y)"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:89
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in days"
 msgid "day(s)"
-msgstr "den(dnů)"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:97
@@ -1491,31 +1468,31 @@ msgstr ""
 #: ui/alarmdialog.ui:104
 #, kde-format
 msgid "before the event starts"
-msgstr "před započetím události"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:109
 #, kde-format
 msgid "after the event starts"
-msgstr "po započetí události"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:114
 #, kde-format
 msgid "before the event ends"
-msgstr "před ukončením události"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:119
 #, kde-format
 msgid "after the event ends"
-msgstr "po ukončení události"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/alarmdialog.ui:129
 #, kde-format
 msgid "Repeat:"
-msgstr "Opakovat:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:144
@@ -1547,7 +1524,7 @@ msgstr ""
 #: ui/alarmdialog.ui:166
 #, kde-format
 msgid " time(s)"
-msgstr " krát"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:182
@@ -1566,20 +1543,20 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox repeat interval expressed in minutes"
 msgid " Minute(s)"
-msgstr " minut(y)"
+msgstr ""
 
 #. i18n: ectx: property (prefix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:191
 #, kde-format
 msgctxt "repeat every X minutes"
 msgid "every "
-msgstr "každých"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/alarmdialog.ui:212
 #, kde-format
 msgid "What:"
-msgstr "Co:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
@@ -1597,13 +1574,13 @@ msgstr ""
 #: ui/alarmdialog.ui:235
 #, kde-format
 msgid "Display text"
-msgstr "Zobrazit text"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:240
 #, kde-format
 msgid "Play sound file"
-msgstr "Přehrát zvukový soubor"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
 #: ui/alarmdialog.ui:273
@@ -1617,7 +1594,7 @@ msgstr ""
 #: ui/alarmdialog.ui:296
 #, kde-format
 msgid "Audio File:"
-msgstr "Zvukový soubor"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:309
@@ -1638,7 +1615,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Give the attachment a name"
-msgstr "Pojmenovat přílohu"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:41
@@ -1652,14 +1629,14 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Attachment name"
-msgstr "Název přílohy"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
 #: ui/attachmenteditdialog.ui:65
 #, kde-format
 msgctxt "@label File type of attachment is unknown"
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
@@ -1685,13 +1662,13 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Store attachment inline"
-msgstr "Uložit přílohu na místě"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
 #, kde-format
 msgid "Location:"
-msgstr "Umístění:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
 #: ui/attachmenteditdialog.ui:133
@@ -1714,19 +1691,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Size:"
-msgstr "Velikost:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
 #: ui/attachmenteditdialog.ui:166
 #, kde-format
 msgid "0 KB"
-msgstr "0 KB"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/attachmenteditdialog.ui:183
 #, kde-format
 msgid "Type:"
-msgstr "Typ:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:20
@@ -1745,7 +1722,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox The calendar to which the todo or event must be added"
 msgid "Calen&dar:"
-msgstr "Kalen&dář:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/dialogdesktop.ui:81
@@ -1759,7 +1736,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Accept the invitation"
-msgstr "Přijmout pozvánku"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:91
@@ -1773,14 +1750,14 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Accept an invitation"
 msgid "Accept"
-msgstr "Přijmout"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
 #: ui/dialogdesktop.ui:104
 #, kde-format
 msgctxt "@action:button decline an invitation"
 msgid "Decline"
-msgstr "Odmítnout"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
@@ -1788,7 +1765,7 @@ msgstr "Odmítnout"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "Nastavte shrnutí"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1805,119 +1782,119 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "Shrn&utí:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:187
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
-msgstr "&Umístění:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:206
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
-msgstr "Nastavit umístění"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:209
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
-msgstr "Nastavuje, kde bude daná událost či úkol probíhat."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
 #: ui/dialogdesktop.ui:226
 #, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
-msgstr "Dokončení:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
 #: ui/dialogdesktop.ui:279
 #, kde-format
 msgctxt "@label:slider Showed after the to-do percentage completed slider"
 msgid "completed"
-msgstr "dokončeno"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: ui/dialogdesktop.ui:286
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
-msgstr "Priorita:"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:297
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "unspecified"
-msgstr "nezadáno"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:302
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
-msgstr "1 (nejvyšší)"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:307
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
-msgstr "2"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:312
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
-msgstr "3"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:317
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:322
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
-msgstr "5 (střední)"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:327
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:332
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
-msgstr "7"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:337
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:342
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
-msgstr "9 (nejnižší)"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:361
@@ -1926,14 +1903,13 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Set if this to-do's start and due dates have times associated with them."
 msgstr ""
-"Nastavuje, jestli je k tomuto úkolu přiřazen počáteční a koncový čas splnění."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:364
 #, kde-format
 msgctxt "@option:check"
 msgid "All Day"
-msgstr "Celý den"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
 #: ui/dialogdesktop.ui:390
@@ -1947,7 +1923,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
-msgstr "Počá&tek:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:449
@@ -1961,7 +1937,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
-msgstr "Nastavuje počáteční datum plnění tohoto úkolu."
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
 #: ui/dialogdesktop.ui:468
@@ -1983,35 +1959,35 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\">&lt;&lt; Časová pásma</a>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
-msgstr "Ko&nec:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
 #: ui/dialogdesktop.ui:567
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
-msgstr "Nastavuje datum splnění tohoto úkolu."
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
 #: ui/dialogdesktop.ui:583
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
-msgstr "Nastavuje čas splnění tohoto úkolu."
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
 #: ui/dialogdesktop.ui:635
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
-msgstr "Obecné"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
@@ -2019,7 +1995,7 @@ msgstr "Obecné"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
-msgstr "Nastavit úroveň utajení"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
@@ -2032,18 +2008,13 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
-"Nastavuje, jestli bude přístup k této události, či úkolu omezený. Vezměte "
-"prosím na vědomí, že program KOrganizer v současné době toto nastavení "
-"nepoužívá, tudíž je realizace veškerých omezení závislá na groupwarovém "
-"serveru. To znamená, že události a úkoly označené jako soukromé, či důvěrné "
-"mohou být viditelné i ostatními lidmi."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
 #, kde-format
 msgctxt "@label:listbox sets the privacy option of the event or to-do"
 msgid "Access:"
-msgstr "Přístup:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
 #: ui/dialogdesktop.ui:677
@@ -2057,28 +2028,28 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr "Značky:"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:729
 #, kde-format
 msgctxt "@title:tab attendees of this event or to-do"
 msgid "Attendees"
-msgstr "Účastníci"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/dialogdesktop.ui:735
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
-msgstr "Organizátor schůzek:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:776
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
-msgstr "Nastavit identitu organizátora"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:779
@@ -2090,16 +2061,13 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
-"Nastaví identitu odpovídající organizátorovi této události, resp. úkolu. "
-"Identity lze zadat v sekci 'Osobní' v nastavení programu KOrganizer. Navíc "
-"se identity získávají i z nastavení aplikace KMail a vašeho adresáře."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:811
 #, kde-format
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
-msgstr "Účastníci:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:830
@@ -2122,7 +2090,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule..."
-msgstr "Naplánovat..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2142,38 +2110,38 @@ msgstr ""
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
-msgstr "Otevře váš adresář, což vám umožní z něj vybrat nového účastníka."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees..."
-msgstr "Vybrat účastníky..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr "Soukromí:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr "Podepsat pozvánku pomocí e-mailu"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr "Šifrovat pozvánku pomocí e-mailu"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
 #, kde-format
 msgid "Resources"
-msgstr "Zdroje"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:970
@@ -2192,112 +2160,112 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
-msgstr "Upomínka"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
 #: ui/dialogdesktop.ui:1025
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
-msgstr "Přidat výchozí upomínku:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
 #: ui/dialogdesktop.ui:1048
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
-msgstr "Přidat"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #: ui/dialogdesktop.ui:1079
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
-msgstr "Nový"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
 #: ui/dialogdesktop.ui:1090
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
-msgstr "Změnit"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1101
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
-msgstr "Zakázat"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
 #: ui/dialogdesktop.ui:1108
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
 #: ui/dialogdesktop.ui:1133
 #, kde-format
 msgctxt "@title:tab"
 msgid "Recurrence"
-msgstr "Opakování"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
 #: ui/dialogdesktop.ui:1145
 #, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
-msgstr "Opakuje se:"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1164
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
-msgstr "Nikdy"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1169
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Daily"
-msgstr "Denně"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1174
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
-msgstr "Týdně"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1179
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
-msgstr "Měsíčně"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1184
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Yearly"
-msgstr "Ročně"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
 #: ui/dialogdesktop.ui:1198
 #, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
-msgstr "každý(ch)"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
 #: ui/dialogdesktop.ui:1230
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
-msgstr "den(dnů)"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
 #: ui/dialogdesktop.ui:1237
@@ -2310,84 +2278,84 @@ msgstr ""
 #, kde-format
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
-msgstr "Končí:"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr "nikdy"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
-msgstr "zapnuto"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1440
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
-msgstr "po"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mRecurrenceEndDate)
 #: ui/dialogdesktop.ui:1495
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
-msgstr "Datum, po kterém se má událost, či úkol přestat opakovat"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
 #: ui/dialogdesktop.ui:1550
 #, kde-format
 msgctxt "@label"
 msgid "occurrence(s)"
-msgstr "výskytech"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
 #: ui/dialogdesktop.ui:1569
 #, kde-format
 msgctxt "@label exceptions for the recurrence"
 msgid "Exceptions:"
-msgstr "Výjimky:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
 #: ui/dialogdesktop.ui:1594
 #, kde-format
 msgctxt "@action:button adds an exception on the recurrence"
 msgid "Add"
-msgstr "Přidat"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
 #: ui/dialogdesktop.ui:1633
 #, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
-msgstr "v:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
 #: ui/dialogdesktop.ui:1648
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
 #: ui/dialogdesktop.ui:1675
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
-msgstr "Přílohy"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1697
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
-msgstr "Přidat přílohu"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1700
@@ -2396,21 +2364,21 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
-msgstr "Zobrazí dialogové okno pro přidání přílohy k této události, či úkolu."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1703
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
-msgstr "Přidat"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1723
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
-msgstr "Odstranit vybranou přílohu"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1726
@@ -2419,15 +2387,13 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
 msgstr ""
-"Odstraní z této události, resp. úkolu přílohu, která byla vybrána z výše "
-"uvedeného seznamu."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1729
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
@@ -2446,19 +2412,19 @@ msgstr ""
 #: ui/resourcemanagement.ui:76
 #, kde-format
 msgid "Details"
-msgstr "Podrobnosti"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: ui/resourcemanagement.ui:94
 #, kde-format
 msgid "Owner"
-msgstr "Vlastník"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
 #: ui/schedulingdialog.ui:14
 #, kde-format
 msgid "Schedule a time"
-msgstr "Naplánovat čas"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/schedulingdialog.ui:39
@@ -2531,7 +2497,7 @@ msgstr ""
 #: ui/schedulingdialog.ui:164
 #, kde-format
 msgid "Automatic Search"
-msgstr "Automatické hledání"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
 #: ui/schedulingdialog.ui:199
@@ -2549,7 +2515,7 @@ msgstr ""
 #: ui/schedulingdialog.ui:228
 #, kde-format
 msgid "Monday, 12th June"
-msgstr "Pondělí, 12. června"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveEndTimeLabel)
 #: ui/schedulingdialog.ui:241
@@ -2561,7 +2527,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:14
 #, kde-format
 msgid "Template Management"
-msgstr "Správa šablon"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, m_introLabel)
 #: ui/template_management_dialog_base.ui:26
@@ -2605,7 +2571,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New..."
-msgstr "&Nový..."
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2625,7 +2591,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:78
 #, kde-format
 msgid "&Remove"
-msgstr "Odst&ranit"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:85
@@ -2645,13 +2611,13 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:91
 #, kde-format
 msgid "Apply"
-msgstr "Použít"
+msgstr ""
 
 #: visualfreebusywidget.cpp:139
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
-msgstr "Měřítko: "
+msgstr ""
 
 #: visualfreebusywidget.cpp:143
 #, kde-format
@@ -2674,43 +2640,43 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
-msgstr "Hodina"
+msgstr ""
 
 #: visualfreebusywidget.cpp:153
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
-msgstr "Den"
+msgstr ""
 
 #: visualfreebusywidget.cpp:154
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
-msgstr "Týden"
+msgstr ""
 
 #: visualfreebusywidget.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
-msgstr "Měsíc"
+msgstr ""
 
 #: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
-msgstr "Automaticky"
+msgstr ""
 
 #: visualfreebusywidget.cpp:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
-msgstr "Vycentrovat na začátek"
+msgstr ""
 
 #: visualfreebusywidget.cpp:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
-msgstr "Vycentruje Ganttův diagram podle začátečního data a času události"
+msgstr ""
 
 #: visualfreebusywidget.cpp:164
 #, kde-format
@@ -2724,13 +2690,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
-msgstr "Vybrat datum"
+msgstr ""
 
 #: visualfreebusywidget.cpp:173
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
-msgstr "Přesune událost na datum a čas, ve kterém mají všichni účastníci volno"
+msgstr ""
 
 #: visualfreebusywidget.cpp:176
 #, kde-format
@@ -2744,7 +2710,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
-msgstr "Znovu načíst"
+msgstr ""
 
 #: visualfreebusywidget.cpp:186
 #, kde-format
@@ -2776,7 +2742,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
-msgstr "Zobrazí stav aktivity všech účastníků"
+msgstr ""
 
 #: visualfreebusywidget.cpp:208
 #, kde-format
@@ -2786,5 +2752,3 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
-"Ukazuje informace o aktivitě všech účastníků. Dvojklik na jméno v seznamu "
-"účastníků vám umožní zadat umístění informací o aktivitě daného člověka."
