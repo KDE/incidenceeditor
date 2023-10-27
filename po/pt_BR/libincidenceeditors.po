@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2019.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2019, 2020, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2019, 2020, 2021, 2023.
 # Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010.
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 msgid ""
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2021-11-09 10:41-0300\n"
+"PO-Revision-Date: 2023-10-26 15:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1412,8 +1412,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Já existe um modelo com este nome. Deseja sobrescrevê-lo?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicar o nome do modelo"
@@ -1424,8 +1423,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Tem certeza de que deseja remover o modelo <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Remover modelo"
@@ -2208,19 +2206,19 @@ msgstr "Selecionar participantes..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Privacidade:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Assinar e-mail de convite"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Criptografar e-mail de convite"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2733,14 +2731,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Definir o nível de zoom do gráfico de Gantt"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2751,9 +2742,9 @@ msgid ""
 msgstr ""
 "Define o nível de zoom do gráfico de Gantt, de um dos seguintes:<nl/>'Hora' "
 "mostra um intervalo de várias horas,<nl/>'Dia' mostra um intervalo de alguns "
-"dias,<nl/>'Semana' mostra um intervalo de alguns meses,<nl/>e 'Mês' mostra "
-"um intervalo de alguns anos,<nl/>enquanto 'Automático' seleciona o intervalo "
-"mais apropriado para evento ou tarefa atual."
+"dias,<nl/>'Semana' mostra um intervalo de algumas semanas,<nl/>e 'Mês' "
+"mostra um intervalo de alguns meses,<nl/>enquanto 'Automático' seleciona o "
+"intervalo mais apropriado para evento ou tarefa atual."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
