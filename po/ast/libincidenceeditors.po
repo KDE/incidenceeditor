@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2023-10-25 13:06+0200\n"
+"PO-Revision-Date: 2023-11-01 22:44+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -242,7 +242,7 @@ msgstr ""
 msgctxt ""
 "Status of attendee in an incidence (accepted, declined, delegated, ...)"
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: attendeetablemodel.cpp:159
 #, kde-format
@@ -254,13 +254,13 @@ msgstr ""
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
-msgstr ""
+msgstr "Rempuesta"
 
 #: attendeetablemodel.cpp:163
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: attendeetablemodel.cpp:165
 #, kde-format
@@ -295,7 +295,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Summary:"
-msgstr ""
+msgstr "Resume:"
 
 #: freebusyganttproxymodel.cpp:76
 #, kde-format
@@ -373,24 +373,24 @@ msgstr ""
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 minutu"
+msgstr[1] "%1 minutos"
 
 #: incidencealarm.cpp:287
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 día"
+msgstr[1] "%1 díes"
 
 #: incidencealarm.cpp:290
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 hora"
+msgstr[1] "%1 hores"
 
 #: incidencealarm.cpp:295
 #, kde-format
@@ -580,7 +580,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
-msgstr ""
+msgstr "&Quitar"
 
 #: incidenceattachment.cpp:506
 #, kde-format
@@ -883,13 +883,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
-msgstr ""
+msgstr "&Recursos (%1)"
 
 #: incidencedialog.cpp:441
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
-msgstr ""
+msgstr "&Recursos"
 
 #: incidencedialog.cpp:463
 #, kde-format
@@ -1147,32 +1147,32 @@ msgstr[1] ""
 msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "selmana"
+msgstr[1] "selmanes"
 
 #: incidencerecurrence.cpp:606
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "mes"
+msgstr[1] "meses"
 
 #: incidencerecurrence.cpp:610
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "añu"
+msgstr[1] "años"
 
 #: incidencerecurrence.cpp:614
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "día"
+msgstr[1] "díes"
 
 #: incidencerecurrence.cpp:622
 #, kde-format
@@ -1188,7 +1188,7 @@ msgstr[1] ""
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr ""
+msgstr "Introduz un resume."
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
@@ -1292,19 +1292,19 @@ msgstr ""
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: ldaputils.cpp:29
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
-msgstr ""
+msgstr "Teléfonu"
 
 #: ldaputils.cpp:31
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
-msgstr ""
+msgstr "Móvil"
 
 #: opencomposerjob.cpp:77
 #, kde-format
@@ -1691,13 +1691,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Size:"
-msgstr ""
+msgstr "Tamañu:"
 
 #. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
 #: ui/attachmenteditdialog.ui:166
 #, kde-format
 msgid "0 KB"
-msgstr ""
+msgstr "0 KB"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/attachmenteditdialog.ui:183
