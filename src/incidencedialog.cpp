@@ -715,7 +715,7 @@ IncidenceDialog::~IncidenceDialog()
 
 void IncidenceDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myIncidenceDialogConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myIncidenceDialogConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -723,7 +723,7 @@ void IncidenceDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 500));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myIncidenceDialogConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myIncidenceDialogConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

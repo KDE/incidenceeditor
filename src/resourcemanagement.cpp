@@ -153,14 +153,14 @@ void ResourceManagement::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myResourceManagementConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myResourceManagementConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ResourceManagement::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myResourceManagementConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myResourceManagementConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
