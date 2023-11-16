@@ -1555,7 +1555,8 @@ msgstr "Establix la repetició del recordatori"
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
 msgstr ""
-"Marqueu-la si voleu que el recordatori es repetisca en un interval periòdic."
+"Seleccioneu-la si voleu que el recordatori es repetisca en un interval "
+"periòdic."
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
@@ -1720,11 +1721,11 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
-"En marcar esta opció, l'adjunt s'emmagatzemarà dintre del calendari, cosa "
-"que pot requerir força espai depenent de la mida de l'adjunt. Si esta opció "
-"no està marcada, només s'emmagatzemarà un enllaç apuntant cap a l'adjunt. No "
-"utilitzeu un enllaç per a adjunts que canvien sovint o que es poden moure (o "
-"eliminar) de la seua ubicació actual."
+"Quan se selecciona esta opció, l'adjunt s'emmagatzemarà dintre del "
+"calendari, cosa que pot requerir força espai depenent de la mida de "
+"l'adjunt. Si no se selecciona, només s'emmagatzemarà un enllaç apuntant cap "
+"a l'adjunt. No utilitzeu un enllaç per a adjunts que canvien sovint o que es "
+"poden moure (o eliminar) de la seua ubicació actual."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
