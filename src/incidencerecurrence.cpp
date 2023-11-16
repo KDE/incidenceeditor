@@ -896,7 +896,6 @@ void IncidenceRecurrence::setExceptionDates(const KCalendarCore::DateList &dates
 {
     mUi->mExceptionList->clear();
     mExceptionDates.clear();
-    KCalendarCore::DateList::ConstIterator dit;
     for (const auto &d : dates) {
         mUi->mExceptionList->addItem(QLocale().toString(d));
         mExceptionDates.append(d);
