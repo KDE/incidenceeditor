@@ -17,6 +17,7 @@
 #include <QAbstractItemModelTester>
 #include <QStandardPaths>
 #include <QTest>
+#include <QTimeZone>
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
 
 using namespace IncidenceEditorNG;
@@ -38,8 +39,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     QVERIFY(ganttModel->rowCount() == 0);
 
-    const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), Qt::UTC);
-    const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), Qt::UTC);
+    const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), QTimeZone::utc());
+    const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), QTimeZone::utc());
     KCalendarCore::Attendee a1(QStringLiteral("fred"), QStringLiteral("fred@example.com"));
     KCalendarCore::FreeBusy::Ptr fb1(new KCalendarCore::FreeBusy());
 
@@ -49,8 +50,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     CalendarSupport::FreeBusyItem::Ptr item1(new CalendarSupport::FreeBusyItem(a1, nullptr));
     item1->setFreeBusy(fb1);
 
-    const QDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), Qt::UTC);
-    const QDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), Qt::UTC);
+    const QDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), QTimeZone::utc());
+    const QDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), QTimeZone::utc());
     KCalendarCore::Attendee a2(QStringLiteral("joe"), QStringLiteral("joe@example.com"));
     KCalendarCore::FreeBusy::Ptr fb2(new KCalendarCore::FreeBusy());
 
