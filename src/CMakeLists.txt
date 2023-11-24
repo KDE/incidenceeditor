@@ -157,7 +157,7 @@ PUBLIC
   KPim6::CalendarSupport      # For KCalPrefs
   KPim6::EventViews
 PRIVATE
-  KGantt              # For FreeBusy Editor
+  KGantt6             # For FreeBusy Editor
   KPim6::PimTextEdit
   KF6::Codecs
   KPim6::LdapWidgets

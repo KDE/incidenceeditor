@@ -4,7 +4,7 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
-set(grant_lib KGantt)
+set(grant_lib KGantt6)
 
 macro(IE_UNIT_TESTS)
   foreach(_testname ${ARGN})
