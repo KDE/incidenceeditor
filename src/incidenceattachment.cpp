@@ -46,7 +46,7 @@ IncidenceAttachment::IncidenceAttachment(Ui::EventOrTodoDesktop *ui)
 {
     setupActions();
     setupAttachmentIconView();
-    setObjectName(QStringLiteral("IncidenceAttachment"));
+    setObjectName(QLatin1StringView("IncidenceAttachment"));
 
     connect(mUi->mAddButton, &QPushButton::clicked, this, &IncidenceAttachment::addAttachment);
     connect(mUi->mRemoveButton, &QPushButton::clicked, this, &IncidenceAttachment::removeSelectedAttachments);

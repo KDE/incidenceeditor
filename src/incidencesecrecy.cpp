@@ -15,7 +15,7 @@ using namespace IncidenceEditorNG;
 IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
 {
-    setObjectName(QStringLiteral("IncidenceSecrecy"));
+    setObjectName(QLatin1StringView("IncidenceSecrecy"));
     mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
     connect(mUi->mSecrecyCombo, &QComboBox::currentIndexChanged, this, &IncidenceSecrecy::checkDirtyStatus);
 }

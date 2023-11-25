@@ -21,7 +21,7 @@ using namespace IncidenceEditorNG;
 IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
 {
-    setObjectName(QStringLiteral("IncidenceCategories"));
+    setObjectName(QLatin1StringView("IncidenceCategories"));
 
     connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this, &IncidenceCategories::onSelectionChanged);
 }

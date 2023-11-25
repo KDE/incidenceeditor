@@ -65,7 +65,7 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
     , mTimezoneCombosWereVisibile(false)
 {
     setTimeZonesVisibility(false);
-    setObjectName(QStringLiteral("IncidenceDateTime"));
+    setObjectName(QLatin1StringView("IncidenceDateTime"));
 
     mUi->mTimeZoneLabel->setVisible(!mUi->mWholeDayCheck->isChecked());
     connect(mUi->mTimeZoneLabel, &QLabel::linkActivated, this, &IncidenceDateTime::toggleTimeZoneVisibility);

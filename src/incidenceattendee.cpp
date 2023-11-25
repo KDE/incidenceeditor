@@ -73,7 +73,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
                                           "attendee to request a response concerning "
                                           "attendance."));
 
-    setObjectName(QStringLiteral("IncidenceAttendee"));
+    setObjectName(QLatin1StringView("IncidenceAttendee"));
 
     auto filterProxyModel = new AttendeeFilterProxyModel(this);
     filterProxyModel->setDynamicSortFilter(true);

@@ -17,7 +17,7 @@ IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(nullptr)
     , mUi(ui)
 {
-    setObjectName(QStringLiteral("IncidenceWhatWhere"));
+    setObjectName(QLatin1StringView("IncidenceWhatWhere"));
     connect(mUi->mSummaryEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
     connect(mUi->mLocationEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
 }

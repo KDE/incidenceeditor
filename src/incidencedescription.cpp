@@ -33,7 +33,7 @@ IncidenceDescription::IncidenceDescription(Ui::EventOrTodoDesktop *ui)
     , mUi(ui)
     , d(new IncidenceDescriptionPrivate())
 {
-    setObjectName(QStringLiteral("IncidenceDescription"));
+    setObjectName(QLatin1StringView("IncidenceDescription"));
     mUi->mRichTextLabel->setContextMenuPolicy(Qt::NoContextMenu);
     setupToolBar();
     connect(mUi->mRichTextLabel, &QLabel::linkActivated, this, &IncidenceDescription::toggleRichTextDescription);

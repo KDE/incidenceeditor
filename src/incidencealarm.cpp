@@ -20,7 +20,7 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
     : mUi(ui)
     , mDateTime(dateTime)
 {
-    setObjectName(QStringLiteral("IncidenceAlarm"));
+    setObjectName(QLatin1StringView("IncidenceAlarm"));
 
     mUi->mAlarmPresetCombo->insertItems(0, AlarmPresets::availablePresets());
     mUi->mAlarmPresetCombo->setCurrentIndex(AlarmPresets::defaultPresetIndex());

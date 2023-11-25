@@ -45,7 +45,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     , d(new IncidenceCompletionPriorityPrivate(this))
 {
     Q_ASSERT(ui != nullptr);
-    setObjectName(QStringLiteral("IncidenceCompletionPriority"));
+    setObjectName(QLatin1StringView("IncidenceCompletionPriority"));
 
     d->mUi = ui;
 

@@ -46,7 +46,7 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     , mDateTime(dateTime)
     , resourceDialog(new ResourceManagement())
 {
-    setObjectName(QStringLiteral("IncidenceResource"));
+    setObjectName(QLatin1StringView("IncidenceResource"));
     connect(resourceDialog, &ResourceManagement::accepted, this, &IncidenceResource::dialogOkPressed);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceResource::slotDateChanged);

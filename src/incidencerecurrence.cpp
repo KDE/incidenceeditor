@@ -72,7 +72,7 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
     , mMonthlyInitialType(0)
     , mYearlyInitialType(0)
 {
-    setObjectName(QStringLiteral("IncidenceRecurrence"));
+    setObjectName(QLatin1StringView("IncidenceRecurrence"));
     // Set some sane defaults
     mUi->mRecurrenceTypeCombo->setCurrentIndex(RecurrenceTypeNone);
     mUi->mRecurrenceEndCombo->setCurrentIndex(RecurrenceEndNever);

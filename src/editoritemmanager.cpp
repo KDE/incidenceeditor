@@ -216,7 +216,7 @@ void ItemEditorPrivate::setupMonitor()
     // Q_Q(EditorItemManager);
     delete mItemMonitor;
     mItemMonitor = new Akonadi::Monitor;
-    mItemMonitor->setObjectName(QStringLiteral("EditorItemManagerMonitor"));
+    mItemMonitor->setObjectName(QLatin1StringView("EditorItemManagerMonitor"));
     mItemMonitor->ignoreSession(Akonadi::Session::defaultSession());
     mItemMonitor->itemFetchScope().fetchFullPayload();
     if (mItem.isValid()) {
