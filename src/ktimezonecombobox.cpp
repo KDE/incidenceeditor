@@ -132,7 +132,7 @@ void KTimeZoneComboBox::setFloating(bool floating, const QTimeZone &zone)
 void KTimeZoneComboBox::applyTimeZoneTo(QDateTime &dt) const
 {
     if (isFloating()) {
-        dt.setTimeSpec(Qt::LocalTime);
+        dt.setTimeZone(QTimeZone::LocalTime);
     } else {
         dt.setTimeZone(selectedTimeZone());
     }

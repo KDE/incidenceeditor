@@ -69,9 +69,9 @@ void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
     IncidenceEditorNG::KTimeZoneComboBox combo;
     QDateTime dt = QDateTime::currentDateTime();
 
-    combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), Qt::LocalTime));
+    combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::LocalTime));
     combo.applyTimeZoneTo(dt);
-    QCOMPARE(dt.timeSpec(), Qt::LocalTime);
+    QCOMPARE(dt.timeZone(), QTimeZone::LocalTime);
 
     combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone()));
     combo.applyTimeZoneTo(dt);
