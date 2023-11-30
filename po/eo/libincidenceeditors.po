@@ -1069,13 +1069,7 @@ msgid "Attach message without attachments"
 msgstr "Aldoni mesaĝon sen kunsendaĵoj"
 
 #: incidencerecurrence.cpp:128
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "In several of the messages below, an ordinal number is substituted into "
-#| "the ¦message. Translate this as \"0\" if English ordinal suffixes should "
-#| "be added ¦(1st, 22nd, 123rd); translate this as \"1\" if just the number "
-#| "itself should ¦be substituted (1, 22, 123)."
-#| msgid "0"
+#, kde-format
 msgctxt ""
 "In several of the messages below, an ordinal number is substituted into the "
 "message. Translate this as \"0\" if English ordinal suffixes should be added "
@@ -1211,12 +1205,7 @@ msgstr[0] "tagon"
 msgstr[1] "tagojn"
 
 #: incidencerecurrence.cpp:622
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
-#| "¦weeks, 'm' months, 'y' years"
-#| msgid "every"
-#| msgid_plural "every"
+#, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
 "weeks, 'm' months, 'y' years"
@@ -1372,11 +1361,7 @@ msgid "Scheduling"
 msgstr "Planado"
 
 #: schedulingdialog.cpp:166
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Day of week followed by day of the month, then the month. Example: "
-#| "¦Monday, 12 June"
-#| msgid "%1, %2 %3"
+#, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
 "Monday, 12 June"
@@ -1384,11 +1369,7 @@ msgid "%1, %2 %3"
 msgstr "%1, %2 %3"
 
 #: schedulingdialog.cpp:187
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This is a suffix following a time selecting widget. Example: "
-#| "¦[timeedit] to 10:00am"
-#| msgid "to %1"
+#, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
 "[timeedit] to 10:00am"
