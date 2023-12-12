@@ -1,20 +1,20 @@
 # translation of libincidenceeditors.po to Slovak
 # Richard Fric <Richard.Fric@kdemail.net>, 2010.
-# Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2017.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2017, 2023 Roman Paholík <wizzardsk@gmail.com>
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 02:27+0000\n"
-"PO-Revision-Date: 2019-08-05 12:35+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-11 18:09+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.07.90\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: alarmdialog.cpp:24
@@ -638,7 +638,7 @@ msgstr "Neplatná e-mailová adresa"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "Pozvať"
 
 #: incidenceattendee.cpp:213
 #, fuzzy, kde-format
@@ -649,8 +649,7 @@ msgid "Do Not Invite"
 msgstr "Neposielať"
 
 #: incidenceattendee.cpp:436
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrať účastníkov"
@@ -683,12 +682,10 @@ msgid "Change Attendee"
 msgstr "Účastník"
 
 #: incidenceattendee.cpp:795
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "Neposielať"
+msgstr "Nemeniť"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -756,12 +753,10 @@ msgid "Invalid start date."
 msgstr "Neplatný dátum a čas začiatku."
 
 #: incidencedatetime.cpp:853
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid start date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "Neplatný dátum a čas začiatku."
+msgstr "Neplatný čas začiatku."
 
 #: incidencedatetime.cpp:861
 #, fuzzy, kde-format
@@ -772,12 +767,10 @@ msgid "Invalid end date."
 msgstr "Neplatný dátum a čas ukončenia."
 
 #: incidencedatetime.cpp:866
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Invalid end date and time."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "Neplatný dátum a čas ukončenia."
+msgstr "Neplatný čas konca."
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -952,7 +945,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "Znovu"
 
 #: incidencedialog.cpp:483
 #, kde-kuit-format
@@ -973,19 +966,16 @@ msgid "Set Default Calendar?"
 msgstr "Predvolená kategória"
 
 #: incidencedialog.cpp:492
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Predvolená kategória"
+msgstr "Nastaviť ako predvolené"
 
 #: incidencedialog.cpp:493
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "Neposielať"
+msgstr "Nenastaviť"
 
 #: incidencedialog.cpp:673
 #, kde-format
@@ -1045,15 +1035,13 @@ msgstr "KOrganizer Potvrdenie"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Zrušiť editovanie"
 
 #: incidencedialog.cpp:783 incidencedialog.cpp:804 incidencedialog.cpp:820
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Neposielať"
+msgstr "Nerušiť"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1379,8 +1367,7 @@ msgid "Cannot connect to email service"
 msgstr "Nie je možné sa pripojiť k mailovej službe"
 
 #: resourcemanagement.cpp:96
-#, fuzzy, kde-format
-#| msgid "Resource Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Správa zdrojov"
@@ -1392,8 +1379,7 @@ msgid "Book resource"
 msgstr "Knižný zdroj"
 
 #: schedulingdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Scheduling"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "Plánovanie"
@@ -1419,7 +1405,7 @@ msgstr "do %1"
 #| msgid "Manage %1 Templates"
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
-msgstr "Spravovať šablóny %1"
+msgstr "Správa šablón"
 
 #: templatemanagementdialog.cpp:83
 #, kde-format
@@ -1867,9 +1853,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:147
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
 msgstr "Súhrn:"
@@ -2123,7 +2107,7 @@ msgstr "<a href=\\\"hide\\\">Formátovaný text &gt;&gt;</a>"
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "Značky:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:730
@@ -2367,27 +2351,21 @@ msgstr "Končí:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1397
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
 msgstr "nikdy"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1402
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "na"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1407
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "po"
