@@ -1480,7 +1480,7 @@ msgstr "horo(j)"
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in days"
 msgid "day(s)"
-msgstr "tago(j)"
+msgstr "tago(j)n"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:97
@@ -2306,14 +2306,14 @@ msgstr "Ĉiujare"
 #, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
-msgstr ""
+msgstr "ĉiujn"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
 #: ui/dialogdesktop.ui:1197
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
-msgstr "tago(j)"
+msgstr "tago(j)n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
 #: ui/dialogdesktop.ui:1204
