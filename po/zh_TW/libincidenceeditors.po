@@ -1,37 +1,36 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2015.
 #
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2015.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2010.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2015-06-14 13:37+0800\n"
-"Last-Translator: Franklin\n"
-"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-22 02:15+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.01.80\n"
 
 #: alarmdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create a new reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
-msgstr "建立新提醒器"
+msgstr "建立新提醒"
 
 #: alarmdialog.cpp:67
-#, fuzzy, kde-format
-#| msgid "Edit existing reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
-msgstr "編輯現有的提醒器"
+msgstr "編輯現有的提醒"
 
 #: alarmdialog.cpp:192
 #, kde-format
@@ -128,12 +127,10 @@ msgid_plural "%1 days before due"
 msgstr[0] "到期前 %1 天"
 
 #: attachmenteditdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Add Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "新增附件"
+msgstr "編輯附件"
 
 #: attachmenteditdialog.cpp:57
 #, kde-format
@@ -245,11 +242,10 @@ msgid "Status"
 msgstr "狀態"
 
 #: attendeetablemodel.cpp:159
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
-msgstr "類型"
+msgstr "使用者類型"
 
 #: attendeetablemodel.cpp:161
 #, kde-format
@@ -319,11 +315,10 @@ msgid "End:"
 msgstr "結束："
 
 #: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
-msgstr "編輯行程資訊（Free/Busy）位置"
+msgstr "編輯行程資訊位置"
 
 #: freebusyurldialog.cpp:63
 #, kde-kuit-format
@@ -331,18 +326,16 @@ msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
 msgstr "%1 <placeholder>%2</placeholder> 的行程資訊位置："
 
 #: freebusyurldialog.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Enter the name or email address of the attendee."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "輸入參加者的名稱或電子郵件地址。"
+msgstr "為參加者輸入行程資訊 (Free/Busy) 的位置"
 
 #: freebusyurldialog.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
-msgstr ""
+msgstr "輸入資訊的位置。"
 
 #: incidencealarm.cpp:250
 #, kde-format
@@ -372,7 +365,7 @@ msgstr "播放音效檔"
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
-msgstr "不合法的提醒器。"
+msgstr "無效的提醒。"
 
 #: incidencealarm.cpp:282
 #, kde-format
@@ -401,105 +394,94 @@ msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
 msgstr "（重複）"
 
+# 舉例：於待辦事項開始 1 小時後停止（重複）
+# （「停止」是我假設的動作）
+# %2 是「1 小時」等等，所以前面加空白後面不加；
+# %1 是動作的譯文，所以不加空白；%3 亦同。
+# -- 如月
 #. i18n: These series of strings are used to show the user a description of
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
 #: incidencealarm.cpp:305
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the to-do started %4"
+#, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "%1 %2 %3 於待辦事項開始後 %4"
+msgstr "於待辦事項開始 %2後%1%3"
 
 #: incidencealarm.cpp:307
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the event started %4"
+#, kde-format
 msgid "%1 %2 after the event started %3"
-msgstr "%1 %2 %3 於事件開始後 %4"
+msgstr "於事件開始 %2後%1%3"
 
 #: incidencealarm.cpp:311
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the to-do starts %4"
+#, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "%1 %2 %3 於待辦事項開始前 %4"
+msgstr "於待辦事項開始 %2前%1%3"
 
 #: incidencealarm.cpp:313
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event starts %4"
+#, kde-format
 msgid "%1 %2 before the event starts %3"
-msgstr "%1 %2 %3 於事件開始前 %4"
+msgstr "於事件開始 %2前%1%3"
 
 #: incidencealarm.cpp:317
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the to-do is due %4"
+#, kde-format
 msgid "%1 %2 after the to-do is due %3"
-msgstr "%1 %2 %3 於待辦事項到期後 %4"
+msgstr "於待辦事項到期 %2後%1%3"
 
 #: incidencealarm.cpp:319
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the event ends %4"
+#, kde-format
 msgid "%1 %2 after the event ends %3"
-msgstr "%1 %2 %3 於事件結束後 %4"
+msgstr "於事件結束 %2後%1%3"
 
 #: incidencealarm.cpp:323
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the to-do is due %4"
+#, kde-format
 msgid "%1 %2 before the to-do is due %3"
-msgstr "%1 %2 %3 於待辦事項到期前 %4"
+msgstr "於待辦事項到期 %2前%1%3"
 
 #: incidencealarm.cpp:325
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event ends %4"
+#, kde-format
 msgid "%1 %2 before the event ends %3"
-msgstr "%1 %2 %3 於事件結束前 %4"
+msgstr "於事件結束 %2前%1%3"
 
 #: incidencealarm.cpp:331
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the to-do started %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr "%1 %2 %3 於待辦事項開始後 %4 (已關閉)"
+msgstr "於待辦事項開始 %2後%1%3（已關閉）"
 
 #: incidencealarm.cpp:333
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the event started %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
-msgstr "%1 %2 %3 於事件開始後 %4 (已關閉)"
+msgstr "於事件開始 %2後%1%3（已關閉）"
 
 #: incidencealarm.cpp:337
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the to-do starts %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
-msgstr "%1 %2 %3 於待辦事項開始前 %4 (已關閉)"
+msgstr "於待辦事項開始 %2前%1%3（已關閉）"
 
 #: incidencealarm.cpp:339
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event starts %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
-msgstr "%1 %2 %3 於事件開始前 %4 (已關閉)"
+msgstr "於事件開始 %2前%1%3（已關閉）"
 
 #: incidencealarm.cpp:343
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the to-do is due %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
-msgstr "%1 %2 %3 於待辦事項到期後 %4 (已關閉)"
+msgstr "於待辦事項到期 %2後%1%3（已關閉）"
 
 #: incidencealarm.cpp:345
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 after the event ends %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
-msgstr "%1 %2 %3 於事件結束後 %4 (已關閉)"
+msgstr "於事件結束 %2後%1%3（已關閉）"
 
 #: incidencealarm.cpp:349
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the to-do is due %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
-msgstr "%1 %2 %3 於待辦事項到期前 %4 (已關閉)"
+msgstr "於待辦事項到期 %2前%1%3（已關閉）"
 
 #: incidencealarm.cpp:351
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event ends %4 (Disabled)"
+#, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
-msgstr "%1 %2 %3 於事件結束前 %4 (已關閉)"
+msgstr "於事件結束 %2前%1%3（已關閉）"
 
 #: incidencealarm.cpp:359
 #, kde-format
@@ -524,22 +506,22 @@ msgstr "%1 事件結束時"
 #: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
-msgstr "%1 待辦事項開始時 (已關閉)"
+msgstr "%1 待辦事項開始時 （已關閉）"
 
 #: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
-msgstr "%1 事件開始時 (已關閉)"
+msgstr "%1 事件開始時 （已關閉）"
 
 #: incidencealarm.cpp:373
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr "%1 待辦事項到期時 (已關閉)"
+msgstr "%1 待辦事項到期時 （已關閉）"
 
 #: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
-msgstr "%1 事件結束時 (已關閉)"
+msgstr "%1 事件結束時 （已關閉）"
 
 #: incidenceattachment.cpp:130
 #, kde-format
@@ -569,13 +551,13 @@ msgstr "儲存附件"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
-msgstr "連結於此(&L)"
+msgstr "連結到這裡(&L)"
 
 #: incidenceattachment.cpp:421 incidenceattachment.cpp:424
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
-msgstr "複製於此(&C)"
+msgstr "複製到這裡(&C)"
 
 #: incidenceattachment.cpp:428
 #, kde-format
@@ -621,35 +603,31 @@ msgctxt "@info"
 msgid ""
 "%1 does not look like a valid email address. Are you sure you want to invite "
 "this participant?"
-msgstr "%1 看起來不像合法的電子郵件地址。您確定您要邀請這個參加者嗎？"
+msgstr "%1 看起來不像是有效的電子郵件地址。您確定您要邀請這個參加者嗎？"
 
 #: incidenceattendee.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
-msgstr "不合法的電子郵件地址"
+msgstr "無效的電子郵件地址"
 
 #: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "邀請"
 
 #: incidenceattendee.cpp:217
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "不要傳送"
+msgstr "不要邀請"
 
 #: incidenceattendee.cpp:441
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select Attendees..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "選擇參加者..."
+msgstr "選擇參加者"
 
 #: incidenceattendee.cpp:624
 #, kde-format
@@ -670,20 +648,16 @@ msgstr ""
 "嗎？"
 
 #: incidenceattendee.cpp:799
-#, fuzzy, kde-format
-#| msgctxt "@title:tab attendees of this event or to-do"
-#| msgid "Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "參加者"
+msgstr "變更參加者"
 
 #: incidenceattendee.cpp:800
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "不要傳送"
+msgstr "不要變更"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -743,32 +717,28 @@ msgid "Ending Time"
 msgstr "結束時間"
 
 #: incidencedatetime.cpp:848
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "不合法的提醒器。"
+msgstr "無效的開始日期。"
 
 #: incidencedatetime.cpp:853
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "不合法的提醒器。"
+msgstr "無效的開始時間。"
 
 #: incidencedatetime.cpp:861
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "不合法的提醒器。"
+msgstr "無效的結束日期。"
 
 #: incidencedatetime.cpp:866
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "不合法的提醒器。"
+msgstr "無效的結束時間。"
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -790,7 +760,7 @@ msgstr "這個待辦事項在開始前就到期了。請更正日期和時間。
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
-msgstr "找不到（合法的）身份"
+msgstr "找不到（有效的）身份"
 
 #: incidencedefaults.cpp:303
 #, kde-format
@@ -819,7 +789,7 @@ msgstr "關閉 Rich Text"
 #: incidencedialog.cpp:221
 #, kde-format
 msgid "Select a valid collection first."
-msgstr "請先選擇一個合法的收藏。"
+msgstr "請先選擇一個有效的收藏。"
 
 #: incidencedialog.cpp:244
 #, kde-format
@@ -885,7 +855,7 @@ msgstr "載入樣本檔案 %1 時發生錯誤。"
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
-msgstr "樣本未包含合法的事件。"
+msgstr "樣本未包含有效的事件。"
 
 #: incidencedialog.cpp:421
 #, kde-format
@@ -939,7 +909,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "重試"
 
 #: incidencedialog.cpp:491
 #, kde-kuit-format
@@ -951,28 +921,27 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
+"<para>您尚未選取您的事件的預設行事曆。</para><para>設定一個預設行事曆會讓建立"
+"新事件更快、更簡單，也更不容易將它們加入錯誤的資料夾。</para><para>您是否要設"
+"定您的預設事件行事曆為 <resource>%1</resource>？</para>"
 
 #: incidencedialog.cpp:499
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "預設類別"
+msgstr "設定預設行事曆？"
 
 #: incidencedialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "預設類別"
+msgstr "設為預設"
 
 #: incidencedialog.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "不要傳送"
+msgstr "不要設定"
 
 #: incidencedialog.cpp:681
 #, kde-format
@@ -1031,15 +1000,13 @@ msgstr "KOrganizer 確認"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "取消編輯"
 
 #: incidencedialog.cpp:791 incidencedialog.cpp:812 incidencedialog.cpp:828
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "不要傳送"
+msgstr "不要取消"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1049,10 +1016,9 @@ msgstr "預設電子郵件附加方法"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
-#, fuzzy, kde-format
-#| msgid "The default way of attaching dropped emails to an event"
+#, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
-msgstr "將電子郵件附加到事件的預設方法"
+msgstr "選擇將電子郵件附加到事件的預設方法"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:14
@@ -1104,14 +1070,13 @@ msgstr "循環的事件或待辦事項必須至少一次。將調整循環參數
 #: incidencerecurrence.cpp:459
 #, kde-format
 msgid "The incidence's start date is invalid."
-msgstr "事件的開始日期不合法。"
+msgstr "事件的開始日期無效。"
 
 #: incidencerecurrence.cpp:465
-#, fuzzy, kde-format
-#| msgid "The incidence's start date is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
-msgstr "事件的開始日期不合法。"
+msgstr "事件的結束日期無效。"
 
 #: incidencerecurrence.cpp:508
 #, kde-format
@@ -1227,7 +1192,7 @@ msgstr[0] "每"
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr ""
+msgstr "請輸入摘要。"
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
@@ -1271,31 +1236,25 @@ msgstr "編輯電子郵件"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
-msgstr ""
+msgstr "這個參加者的選項。"
 
 #: individualmaildialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Provide a location for the attachment file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
-msgstr "請提供附檔所在位置"
+msgstr "為這個參加者選擇一個選項。"
 
 #: individualmaildialog.cpp:111
-#, fuzzy, kde-format
-#| msgctxt "@action:button show list of attendees"
-#| msgid "Individual mailsettings"
+#, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
-msgstr "個人郵件設定"
+msgstr "個人郵件設定 <<"
 
 #: individualmaildialog.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@action:button show list of attendees"
-#| msgid "Individual mailsettings"
+#, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
-msgstr "個人郵件設定"
+msgstr "個人郵件設定 >>"
 
 #: ldaputils.cpp:15
 #, kde-format
@@ -1358,25 +1317,22 @@ msgid "Cannot connect to email service"
 msgstr "無法連接到電子郵件服務"
 
 #: resourcemanagement.cpp:96
-#, fuzzy, kde-format
-#| msgid "resourcemanagement_Gui"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "resourcemanagement_Gui"
+msgstr "資源管理"
 
 #: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
-msgstr "書籍資源"
+msgstr "預訂資源"
 
 #: schedulingdialog.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
-msgstr "排程..."
+msgstr "排程.."
 
 #: schedulingdialog.cpp:166
 #, kde-format
@@ -1395,8 +1351,7 @@ msgid "to %1"
 msgstr "到 %1"
 
 #: templatemanagementdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "管理 %1 個樣本"
@@ -1422,8 +1377,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "此樣本名稱已存在。要覆寫它嗎？"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "重覆的樣本名稱"
@@ -1434,8 +1388,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<qt>您確定要移除樣本<b>%1</b> 嗎？</qt>"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "移除樣本"
@@ -1456,7 +1409,7 @@ msgstr "何時："
 #: ui/alarmdialog.ui:47
 #, kde-format
 msgid "Set the reminder trigger time"
-msgstr "設定提醒器觸發時間"
+msgstr "設定提醒觸發時間"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
 #: ui/alarmdialog.ui:50
@@ -1470,7 +1423,7 @@ msgstr "這個數字盒讓您設定提醒的觸發時間。時間單位可以在
 #: ui/alarmdialog.ui:72
 #, kde-format
 msgid "Select the reminder trigger time unit"
-msgstr "選擇提醒器觸發時間的單位"
+msgstr "選擇提醒觸發時間的單位"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:75
@@ -1479,7 +1432,7 @@ msgid ""
 "This combobox allows you to set the units for the reminder trigger time. The "
 "trigger time value is set in the spinbox immediately adjacent."
 msgstr ""
-"此下拉式選單讓您設定提醒器觸發時間的單位。觸發時間的值在旁邊的數字盒內設定。"
+"此下拉式選單讓您設定提醒觸發時間的單位。觸發時間的值在旁邊的數字盒內設定。"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:79
@@ -1550,19 +1503,19 @@ msgstr "重覆："
 #: ui/alarmdialog.ui:144
 #, kde-format
 msgid "Set the reminder to repeat"
-msgstr "設定讓提醒器重覆"
+msgstr "設定讓提醒重覆"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:147
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
-msgstr "勾選此選項，,讓提醒器在一定時間間隔重覆提醒。"
+msgstr "勾選此選項，,讓提醒在一定時間間隔重覆提醒。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
 #, kde-format
 msgid "Select how often the reminder should repeat"
-msgstr "選擇提醒器要多常重覆"
+msgstr "選擇提醒要多常重覆"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:163
@@ -1570,7 +1523,7 @@ msgstr "選擇提醒器要多常重覆"
 msgid ""
 "Use this selector to choose how many times you want the recurring reminder "
 "to repeat."
-msgstr "用此選擇器來選擇您要循環的提醒器重覆多少次。"
+msgstr "用此選擇器來選擇您要循環的提醒重覆多少次。"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
@@ -1582,13 +1535,13 @@ msgstr " 次"
 #: ui/alarmdialog.ui:182
 #, kde-format
 msgid "Select the time between reminder repeats"
-msgstr "選擇提醒器重覆的間隔時間"
+msgstr "選擇提醒重覆的間隔時間"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:185
 #, kde-format
 msgid "Use this selector to choose the time between repeating reminders."
-msgstr "使用此選擇器選擇提醒器重覆的時間間隔。"
+msgstr "使用此選擇器選擇提醒重覆的時間間隔。"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:188
@@ -1612,18 +1565,15 @@ msgstr "什麼："
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Select the alarm type"
-msgstr "設定開始日期"
+msgstr "選取鬧鐘類型"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr "使用此選擇器選擇提醒器重覆的時間間隔。"
+msgstr "使用此選擇器來選擇提醒的鬧鐘類型。"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
@@ -1643,7 +1593,7 @@ msgstr "播放音效檔"
 msgid ""
 "Specify any text you desire to display in the popup notice when the reminder "
 "triggers."
-msgstr "指定您在提醒器觸發時的彈出式視窗中要顯示的文字。"
+msgstr "指定您在提醒觸發時的彈出式視窗中要顯示的文字。"
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
 #: ui/alarmdialog.ui:296
@@ -1663,7 +1613,7 @@ msgstr "指定一個包含觸發提醒時要播放的音效檔案。"
 msgid ""
 "Use the adjacent file browser to help you find the file you want to use when "
 "playing a sound when the reminder triggers."
-msgstr "使用旁邊的檔案瀏覽器來尋找您在提醒器觸發時要播放的音效檔。"
+msgstr "使用旁邊的檔案瀏覽器來尋找您在提醒觸發時要播放的音效檔。"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:38
@@ -1767,24 +1717,20 @@ msgstr "類型："
 #: ui/dialogdesktop.ui:20
 #, kde-format
 msgid "A message on this incidence item"
-msgstr ""
+msgstr "這個事件項目上的訊息"
 
 #. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:23
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this message to correct the item parameters."
-msgstr "使用此選擇器選擇提醒器重覆的時間間隔。"
+msgstr "使用這個訊息來修正項目參數。"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox The calendar to which the todo or event must be added"
-#| msgid "Calendar:"
+#, kde-format
 msgctxt "@label:listbox The calendar to which the todo or event must be added"
 msgid "Calen&dar:"
-msgstr "行事曆："
+msgstr "行事曆(&D)："
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/dialogdesktop.ui:81
@@ -1824,12 +1770,10 @@ msgstr "婉拒"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "設定開始日期"
+msgstr "設定摘要"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1839,16 +1783,14 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
-msgstr ""
+msgstr "設定使用者介面多處會顯示的簡短資訊"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:146
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "摘要："
+msgstr "摘要(&Y)："
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:187
@@ -1986,12 +1928,10 @@ msgstr "會讓我無法參與其它事件"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
 #: ui/dialogdesktop.ui:421
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip period start time"
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
-msgstr "開始："
+msgstr "開始(&T)："
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:449
@@ -2024,19 +1964,17 @@ msgstr "選擇此事件的時區，它也會影響循環設定"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:502
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "<a href=\"hide\"><font color='blue'>&lt;&lt; Time zones</font></a>"
+#, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\"><font color='blue'>&lt;&lt; 時區</font></a>"
+msgstr "<a href=\"hide\">&lt;&lt; 時區</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
-msgstr ""
+msgstr "結束(&N)："
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
 #: ui/dialogdesktop.ui:567
@@ -2091,20 +2029,17 @@ msgstr "存取："
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
 #: ui/dialogdesktop.ui:677
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+msgstr "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:708
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "標籤："
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:729
@@ -2129,17 +2064,7 @@ msgstr "設定發起者身份"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:779
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Sets the identity corresponding to the organizer of this to-do or event. "
-#| "Identities can be set in the 'Personal' section of the KOrganizer "
-#| "configuration, or in the Personal'->'About Me'->'Password & User Account' "
-#| "section of the System Settings. In addition, identities are gathered from "
-#| "your KMail settings and from your address book. If you choose to set it "
-#| "globally for KDE in the System Settings, be sure to check 'Use email "
-#| "settings from System Settings' in the 'Personal' section of the "
-#| "KOrganizer configuration."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Sets the identity corresponding to the organizer of this to-do or event. "
@@ -2148,10 +2073,7 @@ msgid ""
 "and from your address book."
 msgstr ""
 "將身份設定為此待辦事件或事件的發起者。身份可以在 KOrganizer 設定中的「個人」"
-"區設定，或是在系統設定裡，「個人」─「關於我」─「密碼與帳號資訊」中設定。此"
-"外，也可以由您的 KMail 設定及您的通訊錄中收集身份。如果您決定要在系統設定中設"
-"定一個 KDE 通用的身份，請在 KOrganizer 設定中的「個人」區選擇「使用系統設定的"
-"電子郵件設定」。"
+"區設定。另外，也會從您的 KMail 設定及您的通訊錄中收集身份。"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:811
@@ -2214,19 +2136,19 @@ msgstr "選擇參加者..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "隱私："
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "簽署邀請郵件"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "加密邀請郵件"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2236,10 +2158,9 @@ msgstr "資源"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:970
-#, fuzzy, kde-format
-#| msgid "Book resource"
+#, kde-format
 msgid "Book Resource"
-msgstr "書籍資源"
+msgstr "預訂資源"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
@@ -2280,7 +2201,7 @@ msgstr "新增"
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
-msgstr ""
+msgstr "修改"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1101
@@ -2374,27 +2295,21 @@ msgstr "結束："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr "絕不"
+msgstr "永不"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "於："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1440
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "在此之後："
@@ -2495,18 +2410,16 @@ msgstr "移除"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Enter the search term"
-msgstr "設定開始日期"
+msgstr "輸入搜尋字串"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:42
 #, kde-format
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
-msgstr ""
+msgstr "用這個文字方塊來輸入要尋找的資源的關鍵字。"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
@@ -2583,17 +2496,15 @@ msgstr "必要角色："
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the location"
+#, kde-format
 msgid "Select the search option"
-msgstr "設定位置"
+msgstr "選擇搜尋項目"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
 #, kde-format
 msgid "Use these tabs to choose the search option."
-msgstr ""
+msgstr "用這些分頁來選取搜尋選項。"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
@@ -2732,14 +2643,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "設定甘特圖縮放等級"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2749,8 +2653,8 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "設定此甘特圖的放大等級。有以下的選擇：<nl/> 「時」以數小時為範圍，<nl/> "
-"「日」以數日為範圍，<nl/> 「週」以數個月為範圍，<nl/> 「月」以數年為範圍，"
-"<nl/> 「自動」則會自動選取目前事件或待辦事項最適合的時間範圍。"
+"「日」以數日為範圍，<nl/> 「週」以數週為範圍，<nl/> 「月」以數月為範圍，<nl/"
+"> 「自動」則會自動選取目前事件或待辦事項最適合的時間範圍。"
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
@@ -2843,20 +2747,16 @@ msgid ""
 msgstr "點擊此按鍵可以重新載入所有參加者的行程（Free/Busy）資料。"
 
 #: visualfreebusywidget.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
-msgstr "顯示所有參加者的行程（Free/Busy）資料。"
+msgstr "顯示所有資料的樹狀列表"
 
 #: visualfreebusywidget.cpp:200
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
-msgstr "顯示所有參加者的行程（Free/Busy）資料。"
+msgstr "顯示所有資料的樹狀列表"
 
 #: visualfreebusywidget.cpp:206
 #, kde-format
