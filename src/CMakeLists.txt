@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
-add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libincidenceeditors6\")
 add_library(KPim6IncidenceEditor)
 add_library(KPim6::IncidenceEditor ALIAS KPim6IncidenceEditor)
 
