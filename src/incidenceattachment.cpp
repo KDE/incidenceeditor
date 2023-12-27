@@ -17,7 +17,7 @@
 #include <KMime/Message>
 
 #include <KActionCollection>
-#include <KIO/Job>
+#include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
