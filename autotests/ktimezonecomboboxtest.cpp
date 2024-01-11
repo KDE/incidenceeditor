@@ -71,7 +71,7 @@ void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
 
     combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::LocalTime));
     combo.applyTimeZoneTo(dt);
-    QCOMPARE(dt.timeZone(), QTimeZone::LocalTime);
+    QCOMPARE(dt.timeZone(), QTimeZone("Asia/Tokyo"));
 
     combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone()));
     combo.applyTimeZoneTo(dt);
