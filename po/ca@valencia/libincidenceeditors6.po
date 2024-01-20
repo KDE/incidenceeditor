@@ -1457,8 +1457,8 @@ msgid ""
 "set in the combobox immediately adjacent."
 msgstr ""
 "Este botó de selecció de valors permet establir el temps del disparador del "
-"recordatori. La unitat de temps s'establix en el quadro combinat "
-"immediatament adjacent."
+"recordatori. La unitat de temps s'establix al quadro combinat immediatament "
+"adjacent."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:72
