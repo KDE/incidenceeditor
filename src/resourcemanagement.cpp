@@ -45,7 +45,7 @@ public:
 
     [[nodiscard]] bool isValid(const QString &incidenceIdentifier) const override
     {
-        return incidenceIdentifier.startsWith(QLatin1String("fb-"));
+        return incidenceIdentifier.startsWith(QLatin1StringView("fb-"));
     }
 
     [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
@@ -153,14 +153,14 @@ void ResourceManagement::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myResourceManagementConfigGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myResourceManagementConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ResourceManagement::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myResourceManagementConfigGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myResourceManagementConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
@@ -195,9 +195,9 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
     // Fill formDetails with data
     for (auto it = obj.attributes().cbegin(), end = obj.attributes().cbegin(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1String("objectClass") || key == QLatin1String("email")) {
+        if (key == QLatin1StringView("objectClass") || key == QLatin1String("email")) {
             continue;
-        } else if (key == QLatin1String("owner")) {
+        } else if (key == QLatin1StringView("owner")) {
             QStringList attrs;
             attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("mobile") << QStringLiteral("telephoneNumber")
                   << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
@@ -245,7 +245,7 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAPCore::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1String("objectClass") || key == QLatin1String("owner") || key == QLatin1String("givenname") || key == QLatin1String("sn")) {
+        if (key == QLatin1StringView("objectClass") || key == QLatin1String("owner") || key == QLatin1String("givenname") || key == QLatin1String("sn")) {
             continue;
         }
         QStringList list;

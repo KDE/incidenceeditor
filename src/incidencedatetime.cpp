@@ -127,7 +127,7 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
         return;
     }
 
-    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1String("true");
+    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1StringView("true");
     incidence->removeCustomProperty("kdepim", "isTemplate");
     const bool templateOverridesTimes = incidenceHasDefaultTimes(mLoadedIncidence);
 
@@ -409,7 +409,7 @@ void IncidenceDateTime::enableTimeEdits()
         mUi->mEndTimeEdit->setTime(QTime(1, 0));
     }
 
-    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains(QLatin1String("&lt;&lt;"));
+    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains(QLatin1StringView("&lt;&lt;"));
     setTimeZonesVisibility(!wholeDayChecked && mTimezoneCombosWereVisibile);
     mTimezoneCombosWereVisibile = currentlyVisible;
     if (!wholeDayChecked && !timeZonesAreLocal(currentStartDateTime(), currentEndDateTime())) {

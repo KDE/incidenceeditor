@@ -186,7 +186,7 @@ void IncidenceAttachment::removeSelectedAttachments()
         return;
     }
 
-    QString labelsStr = labels.join(QLatin1String("<nl/>"));
+    QString labelsStr = labels.join(QLatin1StringView("<nl/>"));
 
     if (KMessageBox::questionTwoActions(nullptr,
                                         xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
@@ -538,7 +538,7 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QStrin
     auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QString nlabel = label;
-    if (mimeType == QLatin1String("message/rfc822")) {
+    if (mimeType == QLatin1StringView("message/rfc822")) {
         // mail message. try to set the label from the mail Subject:
         KMime::Message msg;
         msg.setContent(data);
@@ -565,13 +565,13 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {
-            if (uri.startsWith(QLatin1String("uid:"))) {
+            if (uri.startsWith(QLatin1StringView("uid:"))) {
                 item->setMimeType(QStringLiteral("text/directory"));
-            } else if (uri.startsWith(QLatin1String("kmail:"))) {
+            } else if (uri.startsWith(QLatin1StringView("kmail:"))) {
                 item->setMimeType(QStringLiteral("message/rfc822"));
-            } else if (uri.startsWith(QLatin1String("urn:x-ical"))) {
+            } else if (uri.startsWith(QLatin1StringView("urn:x-ical"))) {
                 item->setMimeType(QStringLiteral("text/calendar"));
-            } else if (uri.startsWith(QLatin1String("news:"))) {
+            } else if (uri.startsWith(QLatin1StringView("news:"))) {
                 item->setMimeType(QStringLiteral("message/news"));
             } else {
                 QMimeDatabase db;

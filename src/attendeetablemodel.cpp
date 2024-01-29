@@ -174,7 +174,7 @@ bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &p
     beginInsertRows(parent, position, position + rows - 1);
 
     for (int row = 0; row < rows; ++row) {
-        KCalendarCore::Attendee attendee(QLatin1String(""), QLatin1String(""));
+        KCalendarCore::Attendee attendee(QLatin1StringView(""), QLatin1String(""));
         mAttendeeList.insert(position, attendee);
         mAttendeeAvailable.insert(mAttendeeAvailable.begin() + position, AvailableStatus{});
     }

@@ -74,8 +74,8 @@ void IndividualMessageQueueJob::start()
 void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc)
 {
     KMime::Message::Ptr msg(message());
-    msg->to()->fromUnicodeString(messageTo.join(QLatin1String(", ")), "utf-8");
-    msg->cc()->fromUnicodeString(messageCc.join(QLatin1String(", ")), "utf-8");
+    msg->to()->fromUnicodeString(messageTo.join(QLatin1StringView(", ")), "utf-8");
+    msg->cc()->fromUnicodeString(messageCc.join(QLatin1StringView(", ")), "utf-8");
     msg->assemble();
 
     mQueueJob = new Akonadi::MessageQueueJob(this);
@@ -104,7 +104,7 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
 
 void IndividualMessageQueueJob::startComposerJob(const QStringList &to, const QStringList &cc)
 {
-    mComposerJob = new OpenComposerJob(this, to.join(QLatin1String(", ")), cc.join(QLatin1String(", ")), QString(), message(), mIdentity);
+    mComposerJob = new OpenComposerJob(this, to.join(QLatin1StringView(", ")), cc.join(QLatin1String(", ")), QString(), message(), mIdentity);
     connect(mComposerJob, &OpenComposerJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
     mComposerJob->start();
 }

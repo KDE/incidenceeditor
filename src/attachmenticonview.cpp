@@ -170,7 +170,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     QStringList patterns = db.mimeTypeForName(mAttachment.mimeType()).globPatterns();
 
     if (!patterns.empty()) {
-        file = new QTemporaryFile(QDir::tempPath() + QLatin1String("/attachementview_XXXXX") + patterns.first().remove(QLatin1Char('*')));
+        file = new QTemporaryFile(QDir::tempPath() + QLatin1StringView("/attachementview_XXXXX") + patterns.first().remove(QLatin1Char('*')));
     } else {
         file = new QTemporaryFile();
     }
