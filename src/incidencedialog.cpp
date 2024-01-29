@@ -24,7 +24,7 @@
 #include "templatemanagementdialog.h"
 #include "ui_dialogdesktop.h"
 
-#include <incidenceeditorsettings.h>
+#include "incidenceeditorsettings.h"
 
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
