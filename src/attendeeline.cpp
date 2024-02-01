@@ -365,7 +365,7 @@ void AttendeeLine::aboutToBeDeleted()
         return;
     }
 
-    Q_EMIT changed(mData->attendee(), KCalendarCore::Attendee(QLatin1StringView(""), QLatin1String("")));
+    Q_EMIT changed(mData->attendee(), KCalendarCore::Attendee(QLatin1StringView(""), QLatin1StringView("")));
 }
 
 bool AttendeeLine::canDeleteLineEdit() const

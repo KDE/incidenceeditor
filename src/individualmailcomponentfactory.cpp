@@ -104,7 +104,7 @@ void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, cons
 
 void IndividualMessageQueueJob::startComposerJob(const QStringList &to, const QStringList &cc)
 {
-    mComposerJob = new OpenComposerJob(this, to.join(QLatin1StringView(", ")), cc.join(QLatin1String(", ")), QString(), message(), mIdentity);
+    mComposerJob = new OpenComposerJob(this, to.join(QLatin1StringView(", ")), cc.join(QLatin1StringView(", ")), QString(), message(), mIdentity);
     connect(mComposerJob, &OpenComposerJob::finished, this, &IndividualMessageQueueJob::handleJobFinished);
     mComposerJob->start();
 }

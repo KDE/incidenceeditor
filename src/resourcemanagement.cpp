@@ -195,7 +195,7 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
     // Fill formDetails with data
     for (auto it = obj.attributes().cbegin(), end = obj.attributes().cbegin(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1StringView("objectClass") || key == QLatin1String("email")) {
+        if (key == QLatin1StringView("objectClass") || key == QLatin1StringView("email")) {
             continue;
         } else if (key == QLatin1StringView("owner")) {
             QStringList attrs;
@@ -245,7 +245,8 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAPCore::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1StringView("objectClass") || key == QLatin1String("owner") || key == QLatin1String("givenname") || key == QLatin1String("sn")) {
+        if (key == QLatin1StringView("objectClass") || key == QLatin1StringView("owner") || key == QLatin1StringView("givenname")
+            || key == QLatin1StringView("sn")) {
             continue;
         }
         QStringList list;
