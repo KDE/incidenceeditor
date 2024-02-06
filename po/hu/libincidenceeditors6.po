@@ -3,31 +3,30 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2014.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2014-09-13 00:11+0200\n"
-"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"PO-Revision-Date: 2024-02-05 21:54+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: alarmdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create a new reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
 msgstr "Új emlékeztető létrehozása"
 
 #: alarmdialog.cpp:67
-#, fuzzy, kde-format
-#| msgid "Edit existing reminder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Meglévő emlékeztető szerkesztése"
@@ -133,12 +132,10 @@ msgstr[0] "%1 nappal a határidő előtt"
 msgstr[1] "%1 nappal a határidő előtt"
 
 #: attachmenteditdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Add Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "Melléklet hozzáadása"
+msgstr "Melléklet szerkesztése"
 
 #: attachmenteditdialog.cpp:57
 #, kde-format
@@ -211,24 +208,20 @@ msgstr ""
 #: attendeetablemodel.cpp:64
 #, kde-format
 msgid "Free"
-msgstr ""
+msgstr "Szabad"
 
 #: attendeetablemodel.cpp:66
 #, kde-format
 msgid "Busy"
-msgstr ""
+msgstr "Elfoglalt"
 
 #: attendeetablemodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button Accept an invitation"
-#| msgid "Accept"
+#, kde-format
 msgid "Accepted"
-msgstr "Elfogadás"
+msgstr "Elfogadva"
 
 #: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@label unknown mimetype"
-#| msgid "Unknown"
+#, kde-format
 msgid "Unknown"
 msgstr "Ismeretlen"
 
@@ -236,56 +229,50 @@ msgstr "Ismeretlen"
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
-msgstr ""
+msgstr "Szerep"
 
 #: attendeetablemodel.cpp:153
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: attendeetablemodel.cpp:155
-#, fuzzy, kde-format
-#| msgid "Disable"
+#, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
-msgstr "Letiltás"
+msgstr "Elérhető"
 
 #: attendeetablemodel.cpp:157
 #, kde-format
 msgctxt ""
 "Status of attendee in an incidence (accepted, declined, delegated, ...)"
 msgid "Status"
-msgstr ""
+msgstr "Állapot"
 
 #: attendeetablemodel.cpp:159
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
-msgstr "Típus"
+msgstr "Felhaszmálótípus"
 
 #: attendeetablemodel.cpp:161
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Request Response"
+#, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
-msgstr "Válasz kérése"
+msgstr "Válasz"
 
 #: attendeetablemodel.cpp:163
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: attendeetablemodel.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox ITIP Messages for one attendee"
-#| msgid "Edit mail"
+#, kde-format
 msgctxt "Attendee email"
 msgid "Email"
-msgstr "Levél szerkesztése"
+msgstr "E-mail"
 
 #: editoritemmanager.cpp:237
 #, kde-format
@@ -337,8 +324,7 @@ msgid "End:"
 msgstr "Befejezés:"
 
 #: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
 msgstr "Foglaltsági hely szerkesztése"
@@ -349,18 +335,16 @@ msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
 msgstr "A foglaltsági adatok helye - %1 <placeholder>%2</placeholder>:"
 
 #: freebusyurldialog.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Enter the name or email address of the attendee."
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Adja meg a résztvevő nevét vagy e-mail címét."
+msgstr "Adja meg a foglaltsági adatok helyét a résztvevőknek."
 
 #: freebusyurldialog.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
-msgstr ""
+msgstr "Adja meg az adatok helyét."
 
 #: incidencealarm.cpp:250
 #, kde-format
@@ -375,53 +359,46 @@ msgid "Enable"
 msgstr "Bekapcsolás"
 
 #: incidencealarm.cpp:270
-#, fuzzy, kde-format
-#| msgid "Display a dialog"
+#, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "Párbeszédablak megjelenítése"
 
 #: incidencealarm.cpp:273
-#, fuzzy, kde-format
-#| msgid "Play an audio file"
+#, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "Hangfájl lejátszása"
 
 #: incidencealarm.cpp:276
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "Érvénytelen emlékeztető."
 
 #: incidencealarm.cpp:282
-#, fuzzy, kde-format
-#| msgctxt "The reminder is set to X minutes before/after the event"
-#| msgid "minutes"
+#, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "perc"
-msgstr[1] "perc"
+msgstr[0] "1 perccel"
+msgstr[1] "%1 perccel"
 
 #: incidencealarm.cpp:287
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 nappal"
+msgstr[1] "%1 nappal"
 
 #: incidencealarm.cpp:290
-#, fuzzy, kde-format
-#| msgctxt "The reminder is set to X hours before/after the event"
-#| msgid "hours"
+#, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "óra"
-msgstr[1] "óra"
+msgstr[0] "1 órával"
+msgstr[1] "%1 órával"
 
 #: incidencealarm.cpp:295
 #, kde-format
@@ -434,105 +411,89 @@ msgstr "(Ismétlődés)"
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
 #: incidencealarm.cpp:305
-#, fuzzy, kde-format
-#| msgid "After the to-do starts"
+#, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "A feladat kezdete után"
+msgstr "%1 %2 a feladat kezdete után %3"
 
 #: incidencealarm.cpp:307
-#, fuzzy, kde-format
-#| msgid "after the event starts"
+#, kde-format
 msgid "%1 %2 after the event started %3"
-msgstr "az esemény kezdete után"
+msgstr "%1 %2 az esemény kezdete után %3"
 
 #: incidencealarm.cpp:311
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event starts %4"
+#, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "%1 %2 %3 Az esemény kezdete előtt %4"
+msgstr "%1 %2 a feladat kezdete előtt %3"
 
 #: incidencealarm.cpp:313
-#, fuzzy, kde-format
-#| msgid "%1 %2 %3 before the event starts %4"
+#, kde-format
 msgid "%1 %2 before the event starts %3"
-msgstr "%1 %2 %3 Az esemény kezdete előtt %4"
+msgstr "%1 %2 az esemény kezdete előtt %3"
 
 #: incidencealarm.cpp:317
-#, fuzzy, kde-format
-#| msgid "After the to-do is due"
+#, kde-format
 msgid "%1 %2 after the to-do is due %3"
-msgstr "A feladat határideje után"
+msgstr "%1 %2 a feladat határideje után %3"
 
 #: incidencealarm.cpp:319
-#, fuzzy, kde-format
-#| msgid "after the event ends"
+#, kde-format
 msgid "%1 %2 after the event ends %3"
-msgstr "az esemény befejezése után"
+msgstr "%1 %2 az esemény befejezése után %3"
 
 #: incidencealarm.cpp:323
-#, fuzzy, kde-format
-#| msgid "Before the to-do is due"
+#, kde-format
 msgid "%1 %2 before the to-do is due %3"
-msgstr "A feladat határideje előtt"
+msgstr "%1 %2 a feladat határideje előtt %3"
 
 #: incidencealarm.cpp:325
-#, fuzzy, kde-format
-#| msgid "before the event ends"
+#, kde-format
 msgid "%1 %2 before the event ends %3"
-msgstr "az esemény befejezése előtt"
+msgstr "%1 %2 az esemény befejezése előtt %3"
 
 #: incidencealarm.cpp:331
-#, fuzzy, kde-format
-#| msgid "%1 when the to-do starts (Disabled)"
+#, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr "%1, ha a tennivaló elkezdődik (letiltva)"
+msgstr "%1 %2 a feladat kezdete után %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:333
-#, fuzzy, kde-format
-#| msgid "%1 when the event starts (Disabled)"
+#, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
-msgstr "%1, ha az esemény elkezdődik (letiltva)"
+msgstr "%1 %2 az esemény kezdete után %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:337
-#, fuzzy, kde-format
-#| msgid "%1 when the to-do starts (Disabled)"
+#, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
-msgstr "%1, ha a tennivaló elkezdődik (letiltva)"
+msgstr "%1 %2 a feladat kezdete előtt %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:339
-#, fuzzy, kde-format
-#| msgid "%1 when the event starts (Disabled)"
+#, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
-msgstr "%1, ha az esemény elkezdődik (letiltva)"
+msgstr "%1 %2 az esemény kezdete előtt %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:343
-#, fuzzy, kde-format
-#| msgid "%1 when the to-do starts (Disabled)"
+#, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
-msgstr "%1, ha a tennivaló elkezdődik (letiltva)"
+msgstr "%1 %2 a feladat határideje után %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:345
-#, fuzzy, kde-format
-#| msgid "%1 when the event ends (Disabled)"
+#, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
-msgstr "%1, ha az esemény véget ér (letiltva)"
+msgstr "%1 %2 az esemény befejezése után %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:349
-#, fuzzy, kde-format
-#| msgid "%1 when the to-do starts (Disabled)"
+#, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
-msgstr "%1, ha a tennivaló elkezdődik (letiltva)"
+msgstr "%1 %2 a feladat határideje előtt %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:351
-#, fuzzy, kde-format
-#| msgid "%1 when the event ends (Disabled)"
+#, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
-msgstr "%1, ha az esemény véget ér (letiltva)"
+msgstr "%1 %2 az esemény kezdete előtt %3 (kikapcsolva)"
 
 #: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 when the to-do starts"
-msgstr "%1, ha a tennivaló elkezdődik"
+msgstr "%1, ha a feladat elkezdődik"
 
 #: incidencealarm.cpp:361
 #, kde-format
@@ -542,7 +503,7 @@ msgstr "%1, ha az esemény elkezdődik"
 #: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 when the to-do is due"
-msgstr ""
+msgstr "%1, a feladat határidejekor"
 
 #: incidencealarm.cpp:365
 #, kde-format
@@ -562,7 +523,7 @@ msgstr "%1, ha az esemény elkezdődik (letiltva)"
 #: incidencealarm.cpp:373
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr ""
+msgstr "%1, a feladat határidejekor (kikapcsolva)"
 
 #: incidencealarm.cpp:375
 #, kde-format
@@ -576,11 +537,10 @@ msgid "Add Attachment"
 msgstr "Melléklet hozzáadása"
 
 #: incidenceattachment.cpp:192
-#, fuzzy, kde-kuit-format
-#| msgid "Are you sure that you want to remove the template <b>%1</b>?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid "Do you really want to remove these attachments?<nl/>%1"
-msgstr "Biztosan törölni szeretné a(z) <b>%1</b> sablont?"
+msgstr "Biztosan törölni szeretné ezeket a mellékleteket?<nl/>%1"
 
 #: incidenceattachment.cpp:193
 #, kde-format
@@ -643,6 +603,8 @@ msgid ""
 "Displays items (files, mail, etc.) that have been associated with this event "
 "or to-do."
 msgstr ""
+"Megjeleníti az eseményhez vagy feladathoz társított elemeket (fájlok, e-"
+"mailek, stb)."
 
 #: incidenceattendee.cpp:212
 #, kde-format
@@ -663,23 +625,19 @@ msgstr "Érvénytelen e-mail cím"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "Meghívás"
 
 #: incidenceattendee.cpp:217
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr "Ne küldjön"
+msgstr "Ne hívja meg"
 
 #: incidenceattendee.cpp:441
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select Attendees..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Válasszon résztvevőket…"
+msgstr "Résztvevők kiválasztása"
 
 #: incidenceattendee.cpp:624
 #, kde-format
@@ -697,21 +655,20 @@ msgid ""
 "attending this event, would you like to change the corresponding attendee as "
 "well?"
 msgstr ""
+"Megváltoztatja az esemény szervezőjét. Mivel a szervező is részt vesz ezen "
+"az eseményen, szeretné a megfelelő résztvevőt is módosítani?"
 
 #: incidenceattendee.cpp:799
-#, fuzzy, kde-format
-#| msgid "Attendee"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "Résztvevő"
+msgstr "Résztvevő módosítása"
 
 #: incidenceattendee.cpp:800
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr "Ne küldjön"
+msgstr "Ne módosítsa"
 
 #: incidencedatetime.cpp:215
 #, kde-format
@@ -771,32 +728,28 @@ msgid "Ending Time"
 msgstr "Befejezési idő"
 
 #: incidencedatetime.cpp:848
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "Érvénytelen emlékeztető."
+msgstr "Érvénytelen kezdődátum."
 
 #: incidencedatetime.cpp:853
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "Érvénytelen emlékeztető."
+msgstr "Érvénytelen kezdési időpont."
 
 #: incidencedatetime.cpp:861
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "Érvénytelen emlékeztető."
+msgstr "Érvénytelen befejezési dátum."
 
 #: incidencedatetime.cpp:866
-#, fuzzy, kde-format
-#| msgid "Invalid Reminder."
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "Érvénytelen emlékeztető."
+msgstr "Érvénytelen befejezési időpont."
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -837,17 +790,13 @@ msgid "invalid@email.address"
 msgstr "érvénytelen@e_mail.cím"
 
 #: incidencedescription.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@action Enable or disable rich text editting"
-#| msgid "Enable rich text"
+#, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Enable rich text"
 msgstr "Formázott szöveg engedélyezése"
 
 #: incidencedescription.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@action Enable or disable rich text editting"
-#| msgid "Disable rich text"
+#, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Formázott szöveg letiltása"
@@ -855,7 +804,7 @@ msgstr "Formázott szöveg letiltása"
 #: incidencedialog.cpp:221
 #, kde-format
 msgid "Select a valid collection first."
-msgstr ""
+msgstr "Válasszon ki egy érvényes gyűjteményt először."
 
 #: incidencedialog.cpp:244
 #, kde-format
@@ -948,18 +897,16 @@ msgid "&Attendees"
 msgstr "Részt&vevők"
 
 #: incidencedialog.cpp:439
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to modify attendees of an event or todo"
-#| msgid "&Attendees (%1)"
+#, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
-msgstr "Részt&vevők (%1)"
+msgstr "E&rőforrások (%1)"
 
 #: incidencedialog.cpp:441
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
-msgstr ""
+msgstr "E&rőforrások"
 
 #: incidencedialog.cpp:463
 #, kde-format
@@ -977,7 +924,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "Újra"
 
 #: incidencedialog.cpp:491
 #, kde-kuit-format
@@ -989,28 +936,29 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
+"<para>Még nem állította be az esemény alapértelmezett naptárát.</"
+"para><para>Az alapértelmezett naptár beállítása gyorsabbá és egyszerűbbé "
+"teszi az új események létrehozását, és kisebb az esélye annak, hogy rossz "
+"mappába helyezi azokat.</para><para>Szeretné beállítani az alapértelmezett "
+"naptárat erre: <resource>%1</resource>?</para>"
 
 #: incidencedialog.cpp:499
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "Alapértelmezett kategória"
+msgstr "Alapértelmezett naptár beállítása?"
 
 #: incidencedialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Alapértelmezett kategória"
+msgstr "Beállítás alapértelmezettként"
 
 #: incidencedialog.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr "Ne küldjön"
+msgstr "Nem kell beállítani"
 
 #: incidencedialog.cpp:681
 #, kde-format
@@ -1050,6 +998,10 @@ msgid ""
 "Templates can make creating new items easier and faster by putting your "
 "favorite default values into the editor automatically."
 msgstr ""
+"A gomb megnyomásával megjelenik egy párbeszédablak, amely segít a sablonok "
+"kezelésében. A sablonok megkönnyíthetik és felgyorsíthatják az új elemek "
+"létrehozását azáltal, hogy automatikusan elhelyezik a kedvenc "
+"alapértelmezett értékeket a szerkesztőben."
 
 #: incidencedialog.cpp:788 incidencedialog.cpp:809 incidencedialog.cpp:825
 #, kde-format
@@ -1067,15 +1019,13 @@ msgstr "KOrganizer jóváhagyás"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
-msgstr ""
+msgstr "Szerkesztés megszakítása"
 
 #: incidencedialog.cpp:791 incidencedialog.cpp:812 incidencedialog.cpp:828
-#, fuzzy, kde-format
-#| msgctxt "@action:button dialog negative answer"
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Ne küldjön"
+msgstr "Ne szakítsa meg"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1085,10 +1035,9 @@ msgstr "Alapértelmezett csatolási mód"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
-#, fuzzy, kde-format
-#| msgid "The default way of attaching dropped emails to an event"
+#, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
-msgstr "Az eseményekre ejtett levelek csatolási módja"
+msgstr "Válassza ki az eseményekre ejtett levelek csatolási módját"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:14
@@ -1145,11 +1094,10 @@ msgid "The incidence's start date is invalid."
 msgstr "Az esemény kezdődátuma érvénytelen."
 
 #: incidencerecurrence.cpp:465
-#, fuzzy, kde-format
-#| msgid "The incidence's start date is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
-msgstr "Az esemény kezdődátuma érvénytelen."
+msgstr "Az ismétlődés befejezési dátuma érvénytelen."
 
 #: incidencerecurrence.cpp:508
 #, kde-format
@@ -1271,7 +1219,7 @@ msgstr[1] "minden"
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr ""
+msgstr "Adjon meg egy összegzést."
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
@@ -1315,91 +1263,79 @@ msgstr "Levél szerkesztése"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
-msgstr ""
+msgstr "Lehetőségek ennek a konkrét résztvevőnek."
 
 #: individualmaildialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Provide a location for the attachment file"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
-msgstr "Adjon meg egy helyet a mellékletnek"
+msgstr "Válasszon egy lehetőséget ennek a résztvevőnek."
 
 #: individualmaildialog.cpp:111
-#, fuzzy, kde-format
-#| msgctxt "@action:button show list of attendees"
-#| msgid "Individual mailsettings"
+#, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
-msgstr "Egyéni levélbeállítások"
+msgstr "Egyéni levélbeállítások <<"
 
 #: individualmaildialog.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@action:button show list of attendees"
-#| msgid "Individual mailsettings"
+#, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
-msgstr "Egyéni levélbeállítások"
+msgstr "Egyéni levélbeállítások >>"
 
 #: ldaputils.cpp:15
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
-msgstr ""
+msgstr "Általános név"
 
 #: ldaputils.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox ITIP Messages for one attendee"
-#| msgid "Edit mail"
+#, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
-msgstr "Levél szerkesztése"
+msgstr "E-mail"
 
 #: ldaputils.cpp:19
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
-msgstr ""
+msgstr "Keresztnév"
 
 #: ldaputils.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
+#, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
-msgstr "Kiszel Kristóf"
+msgstr "Vezetéknév"
 
 #: ldaputils.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "KOrganizer Confirmation"
+#, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
-msgstr "KOrganizer jóváhagyás"
+msgstr "Szervezet"
 
 #: ldaputils.cpp:25
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
-msgstr ""
+msgstr "Objektumosztály"
 
 #: ldaputils.cpp:27
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
-msgstr ""
+msgstr "Leírás"
 
 #: ldaputils.cpp:29
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
-msgstr ""
+msgstr "Telfonszám"
 
 #: ldaputils.cpp:31
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 #: opencomposerjob.cpp:77
 #, kde-format
@@ -1408,25 +1344,22 @@ msgid "Cannot connect to email service"
 msgstr "Nem lehet kapcsolódni az e-mail szolgáltatáshoz"
 
 #: resourcemanagement.cpp:96
-#, fuzzy, kde-format
-#| msgid "Template Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "Sablonkezelés"
+msgstr "Erőforrás-kezelés"
 
 #: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
-msgstr ""
+msgstr "Erőforrás foglalása"
 
 #: schedulingdialog.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
-msgstr "Ütemezés…"
+msgstr "Ütemezés"
 
 #: schedulingdialog.cpp:166
 #, kde-format
@@ -1445,8 +1378,7 @@ msgid "to %1"
 msgstr "eddig: %1"
 
 #: templatemanagementdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 sablonok kezelése"
@@ -1472,8 +1404,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Már létezik sablon ezzel a névvel, szeretné felülírni?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Sablonnév duplikálása"
@@ -1484,8 +1415,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Biztosan törölni szeretné a(z) <b>%1</b> sablont?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Sablon eltávolítása"
@@ -1669,18 +1599,15 @@ msgstr "Mi:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Select the alarm type"
-msgstr "Kezdődátum beállítása"
+msgstr "Válassza ki a riasztás típusát"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr "Használja ezt az emlékeztető ismétlései közti idő beállításához."
+msgstr "Használja ezt az emlékeztetők riasztásai típusának kiválasztásához."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
@@ -1826,24 +1753,20 @@ msgstr "Típus:"
 #: ui/dialogdesktop.ui:20
 #, kde-format
 msgid "A message on this incidence item"
-msgstr ""
+msgstr "Üzenet erről az eseményről"
 
 #. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:23
-#, fuzzy, kde-format
-#| msgid "Use this selector to choose the time between repeating reminders."
+#, kde-format
 msgid "Use this message to correct the item parameters."
-msgstr "Használja ezt az emlékeztető ismétlései közti idő beállításához."
+msgstr "Ezzel az üzenettel javíthatja az elem paramétereit."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox The calendar to which the todo or event must be added"
-#| msgid "Calendar:"
+#, kde-format
 msgctxt "@label:listbox The calendar to which the todo or event must be added"
 msgid "Calen&dar:"
-msgstr "Naptár:"
+msgstr "Na&ptár:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/dialogdesktop.ui:81
@@ -1883,12 +1806,10 @@ msgstr "Elutasítás"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "Kezdődátum beállítása"
+msgstr "Összegzés megadása"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1899,15 +1820,15 @@ msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
 msgstr ""
+"Itt adhat meg egy, a felhasználói felület számos helyén megjelenő rövid "
+"információt."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:146
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "Összegzés:"
+msgstr "Öss&zegzés:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:187
@@ -2047,12 +1968,10 @@ msgstr "Blokkoljon engem más eseményeknél"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
 #: ui/dialogdesktop.ui:421
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip period start time"
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
-msgstr "Kezdés:"
+msgstr "Ke&zdés:"
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:449
@@ -2086,19 +2005,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:502
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "<a href=\"hide\"><font color='blue'>&lt;&lt; Time zones</font></a>"
+#, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\"><font color='blue'>&lt;&lt; Időzónák</font></a>"
+msgstr "<a href=\"hide\">&lt;&lt; Időzónák</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
-msgstr ""
+msgstr "Befe&jezés:"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
 #: ui/dialogdesktop.ui:567
@@ -2140,6 +2057,11 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
+"Beállítja, hogy az eseményhez vagy tennivalóhoz való hozzáférés korlátozott-"
+"e. Kérjük, vegye figyelembe hogy a KOrganizer jelenleg nem használja ezt a "
+"beállítást, így a korlátozások megvalósítása a csoportszoftver-kiszolgálótól "
+"függ. Ez azt jelenti, hogy a privátként vagy bizalmasként megjelölt "
+"események vagy tennivalók mások számára is láthatóak lehetnek."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
@@ -2150,20 +2072,17 @@ msgstr "Hozzáférés:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
 #: ui/dialogdesktop.ui:677
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+msgstr "<a href=\\\"hide\\\">Formázott szöveg &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:708
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "Címkék:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:729
@@ -2196,6 +2115,10 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
+"Megadja a feladat vagy esemény szervezőjének megfelelő azonosítót. Az "
+"azonosítók a KOrganizer „Személyes” részében állíthatók be. Ezenkívül az "
+"azonosítók a KMail beállításaiból és a címjegyzékből is összegyűjtésre "
+"kerülnek."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/dialogdesktop.ui:811
@@ -2209,7 +2132,7 @@ msgstr "Résztvevők:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
-msgstr ""
+msgstr "Ütemezze a találkozót a résztvevőkkel."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:833
@@ -2219,6 +2142,8 @@ msgid ""
 "Opens the scheduling dialog, which will assist in picking a time slot that "
 "works for all attendees."
 msgstr ""
+"Megnyitja az ütemezési párbeszédablakot, amely segít kiválasztani egy olyan "
+"idősávot, amely minden résztvevő számára megfelelő."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
@@ -2231,7 +2156,7 @@ msgstr "Ütemezés…"
 #: ui/dialogdesktop.ui:859
 #, kde-format
 msgid "Substitute with group members"
-msgstr ""
+msgstr "Helyettesítés csoporttagokkal"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:866
@@ -2258,37 +2183,37 @@ msgstr "Válasszon résztvevőket…"
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Adatvédelem:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Meghívó aláírása"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Meghívó titkosítása"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
 #, kde-format
 msgid "Resources"
-msgstr ""
+msgstr "Erőforrások"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:970
 #, kde-format
 msgid "Book Resource"
-msgstr ""
+msgstr "Erőforrás foglalása"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources..."
-msgstr ""
+msgstr "Erőforrások keresése…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2313,9 +2238,7 @@ msgstr "Hozzáadás"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #: ui/dialogdesktop.ui:1079
-#, fuzzy, kde-format
-#| msgctxt "@action:button Create a new reminder"
-#| msgid "New"
+#, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "Új"
@@ -2325,7 +2248,7 @@ msgstr "Új"
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
-msgstr ""
+msgstr "Módosítás"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1101
@@ -2419,27 +2342,21 @@ msgstr "Befejeződés:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
 msgstr "soha"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "ekkor:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1440
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "után"
@@ -2450,6 +2367,7 @@ msgstr "után"
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
 msgstr ""
+"Az a dátum, amely után az eseménynek vagy a feladatnak nem kell ismétlődnie"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
 #: ui/dialogdesktop.ui:1550
@@ -2508,6 +2426,9 @@ msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
 msgstr ""
+"Megjelenít egy párbeszédablakot, amely az adott eseményhez vagy feladathoz "
+"hozzáadandó melléklet kiválasztására szolgál hivatkozásként vagy beágyazott "
+"adatként."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1703
@@ -2542,11 +2463,9 @@ msgstr "Eltávolítás"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Enter the search term"
-msgstr "Kezdődátum beállítása"
+msgstr "Adja meg a keresendő szöveget"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:42
@@ -2554,18 +2473,20 @@ msgstr "Kezdődátum beállítása"
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
 msgstr ""
+"Használja ezt a szövegmezőt kulcsszavak beírására a keresni kívánt "
+"erőforráshoz."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Részletek"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: ui/resourcemanagement.ui:94
 #, kde-format
 msgid "Owner"
-msgstr ""
+msgstr "Tulajdonos"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
 #: ui/schedulingdialog.ui:14
@@ -2590,7 +2511,7 @@ msgstr "Legkésőbbi befejezési idő:"
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr ""
+msgstr "Jelölje be a keresésbe bevonni kívánt hétköznapokat."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2598,7 +2519,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
-msgstr ""
+msgstr "Csak a bejelölt hétköznapokon történik a szabad idősávok keresése."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
@@ -2611,7 +2532,7 @@ msgstr "Engedélyezett hétköznapok:"
 #: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
 #, kde-format
 msgid "Check the roles to include in the search."
-msgstr ""
+msgstr "Jelölje be a keresésbe bevonni kívánt szerepeket."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2621,6 +2542,8 @@ msgid ""
 "Only the participants with the checked roles will be considered in the free "
 "time slot search."
 msgstr ""
+"Csak a bejelölt szerepekkel rendelkező résztvevők lesznek figyelembe véve a "
+"szabad idősávok keresésénél."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/schedulingdialog.ui:124
@@ -2630,17 +2553,15 @@ msgstr "Kötelező szerepek:"
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the location"
+#, kde-format
 msgid "Select the search option"
-msgstr "Hely beállítása"
+msgstr "Válassza ki a keresési beállításokat"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
 #, kde-format
 msgid "Use these tabs to choose the search option."
-msgstr ""
+msgstr "Ezen a lapon választhatja ki a keresési beállításokat."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
@@ -2686,6 +2607,9 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
+"Válasszon egy sablont és kattintson az <i>Alkalmazás</i> gombra, hogy erre "
+"az elemre alkalmazza. Kattintson az <i>Új</i> gombra új sablon "
+"létrehozásához a jelenlegi elem beállításai alapján."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
@@ -2700,6 +2624,8 @@ msgid ""
 "This is a list of all the templates you have currently accessible for "
 "creating new calendar items."
 msgstr ""
+"Ez az összes olyan sablon listája, amely jelenleg elérhető új naptárelemek "
+"létrehozásához."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:56
@@ -2715,6 +2641,9 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
+"Kattintson erre a gombra új sablon létrehozásához a szerkesztő jelenlegi "
+"beállításai alapján. Ezt a sablont használhatja a jövőben új elemek gyors "
+"hozzáadásához."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
@@ -2735,6 +2664,8 @@ msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
 msgstr ""
+"Erre a gombra kattintva véglegesen törölheti a kiválasztott sablont a kezelt "
+"sablonok listájából."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:78
@@ -2786,6 +2717,11 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"Válassza ki a Gantt-diagram nagyítási szintjét az alábbiak közül:<nl/>az "
+"„Óra” egy több órás,<nl/>a „Nap” egy néhány napos,<nl/>a „Hét” egy néhány "
+"hetes,<nl/>a „Hónap” pedig egy néhány hónapos tartományt mutat,<nl/>míg az "
+"„Automatikus” kiválasztja a legmegfelelőbbet a jelenlegi eseményhez vagy "
+"feladathoz."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
@@ -2821,13 +2757,14 @@ msgstr "Automatikus"
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
-msgstr ""
+msgstr "Kezdés közepére igazítás"
 
 #: visualfreebusywidget.cpp:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
 msgstr ""
+"Az esemény kezdési dátuma és időpontja lesz a Gantt-diagram középpontja"
 
 #: visualfreebusywidget.cpp:164
 #, kde-format
@@ -2836,6 +2773,8 @@ msgid ""
 "Click this button to center the Gantt chart on the start time and day of "
 "this event."
 msgstr ""
+"Kattintson erre a gombra a Gantt-diagram igazításához az esemény kezdési "
+"dátumát és időpontját középpontként használva."
 
 #: visualfreebusywidget.cpp:171
 #, kde-format
@@ -2848,6 +2787,8 @@ msgstr "Dátum kijelölése"
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr ""
+"Esemény áthelyezése egy olyan dátumra és időpontra, amikor minden résztvevő "
+"elérhető"
 
 #: visualfreebusywidget.cpp:176
 #, kde-format
@@ -2856,6 +2797,9 @@ msgid ""
 "Click this button to move the event to a date and time when all the "
 "attendees have time available in their Free/Busy lists."
 msgstr ""
+"Kattintson erre a gombra az esemény áthelyezéséhez egy olyan dátumra és "
+"időpontra, amikor minden résztvevőnek van szabad ideje a foglaltsági "
+"listájában."
 
 #: visualfreebusywidget.cpp:185
 #, kde-format
@@ -2867,7 +2811,7 @@ msgstr "Újratöltés"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
-msgstr ""
+msgstr "A résztvevők foglaltsági adatainak újratöltése"
 
 #: visualfreebusywidget.cpp:188
 #, kde-format
@@ -2876,22 +2820,20 @@ msgid ""
 "Pressing this button will cause the Free/Busy data for all attendees to be "
 "reloaded from their corresponding servers."
 msgstr ""
+"Ha megnyomja ezt a gombot, az összes résztvevő foglaltsági adatai újra be "
+"lesznek töltve a megfelelő kiszolgálóikról."
 
 #: visualfreebusywidget.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
-msgstr "Megjeleníti az összes résztvevő szabad/foglalt állapotát"
+msgstr "Megjeleníti az összes adat fa-listáját"
 
 #: visualfreebusywidget.cpp:200
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Free/Busy status of all attendees"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
-msgstr "Megjeleníti az összes résztvevő szabad/foglalt állapotát"
+msgstr "Megjeleníti az összes adat fa-listáját"
 
 #: visualfreebusywidget.cpp:206
 #, kde-format
@@ -2907,6 +2849,9 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
+"Megjeleníti az összes résztvevő szabad/foglalt állapotát. Duplán kattintva "
+"egy részvevő bejegyzésére a listában megadhatja a foglaltsági információi "
+"helyét."
 
 #, fuzzy
 #~| msgid "Send an email"
