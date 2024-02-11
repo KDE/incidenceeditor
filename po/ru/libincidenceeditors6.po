@@ -4,23 +4,23 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015, 2016.
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020.
+# SPDX-FileCopyrightText: 2018, 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2022-01-28 11:14+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2024-02-10 13:18+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1464,11 +1464,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Шаблон с таким именем уже существует, заменить его?"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Скопировать имя шаблона"
+msgstr "Копирование имени шаблона"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1476,8 +1475,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Удалить шаблон <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Удаление шаблона"
@@ -2260,19 +2258,19 @@ msgstr "Выбрать участников..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Конфиденциальность:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Отправлять электронное письмо с приглашением"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Шифровать письмо с приглашением"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2782,14 +2780,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Установите уровень масштаба диаграммы Ганта"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2801,8 +2792,8 @@ msgstr ""
 "Выберите один из следующих уровней масштаба диаграммы Ганта:<nl/>«час» "
 "показывает диапазон в несколько часов,<nl/>«день» показывает диапазон в "
 "несколько дней,<nl/>«неделя» - диапазон в несколько месяцев,<nl/>«месяц» - "
-"диапазон в несколько лет,<nl/>а «автоматически» выбирает наиболее подходящий "
-"диапазон для текущего события или задачи."
+"диапазон в несколько месяцев,<nl/>а «автоматически» выбирает наиболее "
+"подходящий диапазон для текущего события или задачи."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
