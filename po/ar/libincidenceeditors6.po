@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2022-10-27 12:51+0400\n"
+"PO-Revision-Date: 2024-02-10 21:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1465,8 +1465,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "هناك قالب بالاسم هذا بالفعل. أتريد الكتابة فوقه؟"
 
 #: templatemanagementdialog.cpp:95
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "اسم القالب متكرّر"
@@ -1477,11 +1476,10 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "أمتأكّد من إزالة القالب <b>%1</b>؟"
 
 #: templatemanagementdialog.cpp:130
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr "إزالة القالب"
+msgstr "أزل القالب"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -2236,19 +2234,19 @@ msgstr "حدّد الحضور..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "الخصوصية:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "وقّع بريد الدعوة"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "عمّي بريد الدعوة"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2750,14 +2748,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "اضبط مستوى تكبير رسم ”غانت“ البيانيّ"
 
 #: visualfreebusywidget.cpp:145
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2767,9 +2758,9 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "اختر مستوى تكبير رسم ”غانت“ البيانيّ من أحد الآتي:<nl/>يعرض ’ساعة‘ مدًى مؤلّفًا "
-"من عدّة أيّام،<nl/>و يعرض ’أسبوع‘ مدًى مؤلّفًا من عدّة أسابيع،<nl/>ويعرض ’شهر‘ مدًى "
-"مؤلّفًا من عدّة سنوات،<nl/>بينما يختار ’آليّ‘ أكثر مدًى ملائم للحدث أو المهمّة "
-"الحاليّة."
+"من عدّة ساعات،<nl/>و يعرض ’يوم‘ مدًى مؤلّفًا من عدّة أيام،<nl/>ويعرض ’أسبوع‘ مدًى "
+"مؤلّفًا من عدّة أسابيع،<nl/>ويعرض ’شهر‘ مدًى مؤلّفًا من عدّة شهور،<nl/>بينما يختار "
+"’آليّ‘ أكثر مدًى ملائم للحدث أو المهمّة الحاليّة."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
