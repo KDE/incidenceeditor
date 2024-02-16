@@ -40,7 +40,7 @@ public:
     [[nodiscard]] KCalendarCore::Attendee::List updateAttendees() const;
 
 private:
-    void updateButtonState();
+    INCIDENCEEDITOR_NO_EXPORT void updateButtonState();
 
     std::vector<std::pair<KCalendarCore::Attendee, QComboBox *>> mAttendeeDecision;
     QDialogButtonBox *m_buttons = nullptr;

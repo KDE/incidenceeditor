@@ -76,18 +76,18 @@ private:
      * Return the day in the month/year on which the event recurs, starting at the
      * beginning/end. Both return a positive number.
      */
-    short dayOfMonthFromStart() const;
-    short dayOfMonthFromEnd() const;
-    short dayOfYearFromStart() const; // We don't need from end for year
-    int duration() const;
+    [[nodiscard]] short dayOfMonthFromStart() const;
+    [[nodiscard]] short dayOfMonthFromEnd() const;
+    [[nodiscard]] short dayOfYearFromStart() const; // We don't need from end for year
+    [[nodiscard]] int duration() const;
 
     /** Returns the week number (1-5) of the month in which the start date occurs. */
-    short monthWeekFromStart() const;
-    short monthWeekFromEnd() const;
+    [[nodiscard]] short monthWeekFromStart() const;
+    [[nodiscard]] short monthWeekFromEnd() const;
 
     /** DO NOT USE THIS METHOD DIRECTLY
         use subsOrdinal() instead for i18n * */
-    QString numberToString(int number) const;
+    [[nodiscard]] QString numberToString(int number) const;
     void selectMonthlyItem(KCalendarCore::Recurrence *recurrence, ushort recurenceType);
     void selectYearlyItem(KCalendarCore::Recurrence *recurrence, ushort recurenceType);
     void setDefaults();
@@ -97,7 +97,7 @@ private:
     void setFrequency(int freq);
     void toggleRecurrenceWidgets(int enable);
     /** Returns an array with the weekday on which the event occurs set to 1 */
-    QBitArray weekday() const;
+    [[nodiscard]] QBitArray weekday() const;
 
     /**
      * Return how many times the weekday represented by @param date occurs in
@@ -105,7 +105,7 @@ private:
      */
     int weekdayCountForMonth(const QDate &date) const;
 
-    QDate currentDate() const;
+    [[nodiscard]] QDate currentDate() const;
 
 private:
     Ui::EventOrTodoDesktop *const mUi;

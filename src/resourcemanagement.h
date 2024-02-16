@@ -47,7 +47,7 @@ private:
     /* Shows the details of a resource
      *
      */
-    void showDetails(const KLDAPCore::LdapObject &, const KLDAPWidgets::LdapClient &client);
+    INCIDENCEEDITOR_NO_EXPORT void showDetails(const KLDAPCore::LdapObject &, const KLDAPWidgets::LdapClient &client);
 
     QItemSelectionModel *selectionModel = nullptr;
 
