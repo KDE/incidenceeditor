@@ -57,11 +57,14 @@ enum {
 static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, const KCalendarCore::DateList &exDates)
 {
     KCalendarCore::DateTimeList dts;
-    QDateTime dt = r->startDateTime();
+    const auto incidenceTz = r->startDateTime().timeZone();
+    QDateTime dt = r->startDateTime().toLocalTime();
     dts.reserve(exDates.count());
+    // The exDates are always in local timezone, but the recurrence might be ocurring on a diffrent day
+    // in the incidence original timezone, so make sure to convert the date
     for (const auto &e : exDates) {
         dt.setDate(e);
-        dts.append(dt);
+        dts.append(dt.toTimeZone(incidenceTz));
     }
     r->setExDateTimes(dts);
 }
@@ -405,7 +408,7 @@ bool IncidenceRecurrence::isDirty() const
     } else {
         KCalendarCore::DateList dates;
         for (const auto &dt : recurrence->exDateTimes()) {
-            dates.append(dt.date());
+            dates.append(dt.toLocalTime().date());
         }
         if (mExceptionDates != dates) {
             return true;
@@ -907,8 +910,9 @@ void IncidenceRecurrence::setExceptionDateTimes(const KCalendarCore::DateTimeLis
     mUi->mExceptionList->clear();
     mExceptionDates.clear();
     for (const auto &dt : dateTimes) {
-        mUi->mExceptionList->addItem(QLocale().toString(dt.date()));
-        mExceptionDates.append(dt.date());
+        const auto date = dt.toLocalTime().date();
+        mUi->mExceptionList->addItem(QLocale().toString(date));
+        mExceptionDates.append(date);
     }
 }
 
