@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrej Vernekar <andrej.vernekar@gmail.com>, 2012.
-# Jure Repinc <jlp@holodeck1.com>, 2012, 2013.
+# SPDX-FileCopyrightText: 2012, 2013, 2024 Jure Repinc <jlp@holodeck1.com>
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2017, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2019, 2020, 2021.
 msgid ""
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2023-10-06 09:22+0200\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"PO-Revision-Date: 2024-02-27 00:12+0100\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -85,29 +85,29 @@ msgstr "Na začetku"
 msgctxt "@item:inlistbox"
 msgid "%1 minute before start"
 msgid_plural "%1 minutes before start"
-msgstr[0] "%1 minuto pred začetkom"
-msgstr[1] "%1 minuti pred začetkom"
-msgstr[2] "%1 minute pred začetkom"
-msgstr[3] "%1 minut pred začetkom"
+msgstr[0] "%1 minut pred začetkom"
+msgstr[1] "%1 minuto pred začetkom"
+msgstr[2] "%1 minuti pred začetkom"
+msgstr[3] "%1 minute pred začetkom"
 
 #: alarmpresets.cpp:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 hour before start"
 msgid_plural "%1 hours before start"
-msgstr[0] "%1 uro pred začetkom"
-msgstr[1] "%1 uri pred začetkom"
-msgstr[2] "%1 ure pred začetkom"
-msgstr[3] "%1 ur pred začetkom"
+msgstr[0] "%1 ur pred začetkom"
+msgstr[1] "%1 uro pred začetkom"
+msgstr[2] "%1 uri pred začetkom"
+msgstr[3] "%1 ure pred začetkom"
 
 #: alarmpresets.cpp:89
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 day before start"
 msgid_plural "%1 days before start"
-msgstr[0] "%1 dan pred začetkom"
-msgstr[1] "%1 dneva pred začetkom"
-msgstr[2] "%1 dneve pred začetkom"
+msgstr[0] "%1 dni pred začetkom"
+msgstr[1] "%1 dan pred začetkom"
+msgstr[2] "%1 dneva pred začetkom"
 msgstr[3] "%1 dni pred začetkom"
 
 #: alarmpresets.cpp:103
@@ -121,29 +121,29 @@ msgstr "Ob zapadlosti"
 msgctxt "@item:inlistbox"
 msgid "%1 minute before due"
 msgid_plural "%1 minutes before due"
-msgstr[0] "%1 minuta pred zapadlostjo"
-msgstr[1] "%1 minuti pred zapadlostjo"
-msgstr[2] "%1 minute pred zapadlostjo"
-msgstr[3] "%1 minut pred zapadlostjo"
+msgstr[0] "%1 minut pred zapadlostjo"
+msgstr[1] "%1 minuta pred zapadlostjo"
+msgstr[2] "%1 minuti pred zapadlostjo"
+msgstr[3] "%1 minute pred zapadlostjo"
 
 #: alarmpresets.cpp:107
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 hour before due"
 msgid_plural "%1 hours before due"
-msgstr[0] "%1 ura pred zapadlostjo"
-msgstr[1] "%1 uri pred zapadlostjo"
-msgstr[2] "%1 ure pred zapadlostjo"
-msgstr[3] "%1 ur pred zapadlostjo"
+msgstr[0] "%1 ur pred zapadlostjo"
+msgstr[1] "%1 ura pred zapadlostjo"
+msgstr[2] "%1 uri pred zapadlostjo"
+msgstr[3] "%1 ure pred zapadlostjo"
 
 #: alarmpresets.cpp:109
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 day before due"
 msgid_plural "%1 days before due"
-msgstr[0] "%1 dan pred zapadlostjo"
-msgstr[1] "%1 dneva pred zapadlostjo"
-msgstr[2] "%1 dnevi pred zapadlostjo"
+msgstr[0] "%1 dni pred zapadlostjo"
+msgstr[1] "%1 dan pred zapadlostjo"
+msgstr[2] "%1 dneva pred zapadlostjo"
 msgstr[3] "%1 dni pred zapadlostjo"
 
 #: attachmenteditdialog.cpp:38
@@ -397,19 +397,19 @@ msgstr "Neveljaven opomnik."
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minuta"
-msgstr[1] "%1 minuti"
-msgstr[2] "%1 minute"
-msgstr[3] "%1 minut"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuto"
+msgstr[2] "%1 minuti"
+msgstr[3] "%1 minute"
 
 #: incidencealarm.cpp:287
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
-msgstr[0] "%1 dan"
-msgstr[1] "%1 dneva"
-msgstr[2] "%1 dnevi"
+msgstr[0] "%1 dni"
+msgstr[1] "%1 dan"
+msgstr[2] "%1 dneva"
 msgstr[3] "%1 dni"
 
 #: incidencealarm.cpp:290
@@ -417,10 +417,10 @@ msgstr[3] "%1 dni"
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ura"
-msgstr[1] "%1 uri"
-msgstr[2] "%1 ure"
-msgstr[3] "%1 ur"
+msgstr[0] "%1 ur"
+msgstr[1] "%1 uro"
+msgstr[2] "%1 uri"
+msgstr[3] "%1 ure"
 
 #: incidencealarm.cpp:295
 #, kde-format
@@ -604,7 +604,7 @@ msgstr "&Odpri"
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As..."
-msgstr "Shrani kot ..."
+msgstr "Shrani kot …"
 
 #: incidenceattachment.cpp:498
 #, kde-format
@@ -616,7 +616,7 @@ msgstr "Odst&rani"
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties..."
-msgstr "Lastnosti..."
+msgstr "&Lastnosti …"
 
 #: incidenceattachment.cpp:517
 #, kde-format
@@ -667,10 +667,10 @@ msgstr "Izberite udeležence"
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
-msgstr[0] "%1 spor"
-msgstr[1] "%1 spora"
-msgstr[2] "%1 spori"
-msgstr[3] "%1 sporov"
+msgstr[0] "%1 sporov"
+msgstr[1] "%1 spor"
+msgstr[2] "%1 spora"
+msgstr[3] "%1 spori"
 
 #: incidenceattendee.cpp:795
 #, kde-format
@@ -883,13 +883,13 @@ msgstr " (I)"
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
-msgstr "Predloge '%1' ni mogoče najti."
+msgstr "Predloge »%1« ni mogoče najti."
 
 #: incidencedialog.cpp:316
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "Napaka med nalaganjem datoteke predloge '%1'."
+msgstr "Napaka med nalaganjem datoteke predloge »%1«."
 
 #: incidencedialog.cpp:322
 #, kde-format
@@ -1007,7 +1007,7 @@ msgstr "Zavrzi spremembe in zapri pogovorno okno"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates..."
-msgstr "Predloge..."
+msgstr "&Predloge …"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -1196,8 +1196,8 @@ msgstr "%1. dne v letu"
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
 msgid_plural "occurrences"
-msgstr[0] "pojavitvi"
-msgstr[1] "pojavitvah"
+msgstr[0] "pojavitvah"
+msgstr[1] "pojavitvi"
 msgstr[2] "pojavitvah"
 msgstr[3] "pojavitvah"
 
@@ -1206,39 +1206,39 @@ msgstr[3] "pojavitvah"
 msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
-msgstr[0] "teden"
-msgstr[1] "tedna"
-msgstr[2] "tedne"
-msgstr[3] "tednov"
+msgstr[0] "tednov"
+msgstr[1] "teden"
+msgstr[2] "tedna"
+msgstr[3] "tedne"
 
 #: incidencerecurrence.cpp:606
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
-msgstr[0] "mesec"
-msgstr[1] "meseca"
-msgstr[2] "mesece"
-msgstr[3] "mesecev"
+msgstr[0] "mesecev"
+msgstr[1] "mesec"
+msgstr[2] "meseca"
+msgstr[3] "mesece"
 
 #: incidencerecurrence.cpp:610
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
-msgstr[0] "leta"
-msgstr[1] "leti"
-msgstr[2] "leta"
-msgstr[3] "let"
+msgstr[0] "let"
+msgstr[1] "leto"
+msgstr[2] "leti"
+msgstr[3] "leta"
 
 #: incidencerecurrence.cpp:614
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
-msgstr[0] "dan"
-msgstr[1] "dneva"
-msgstr[2] "dneve"
+msgstr[0] "dni"
+msgstr[1] "dan"
+msgstr[2] "dneva"
 msgstr[3] "dni"
 
 #: incidencerecurrence.cpp:622
@@ -1248,10 +1248,10 @@ msgctxt ""
 "weeks, 'm' months, 'y' years"
 msgid "every"
 msgid_plural "every"
-msgstr[0] "vsak"
-msgstr[1] "vsaka"
-msgstr[2] "vsake"
-msgstr[3] "vsakih"
+msgstr[0] "vsakih"
+msgstr[1] "vsak"
+msgstr[2] "vsaka"
+msgstr[3] "vsake"
 
 #: incidencewhatwhere.cpp:70
 #, kde-format
@@ -2187,7 +2187,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule..."
-msgstr "Razporedi..."
+msgstr "Razporedi …"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2214,7 +2214,7 @@ msgstr "Odpre imenik in vam iz njega omogoča izbrati nove udeležence."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees..."
-msgstr "Izberi udeležence..."
+msgstr "Izbor udeležencev …"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2250,7 +2250,7 @@ msgstr "Rezerviraj vir"
 #: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources..."
-msgstr "Najdi vire..."
+msgstr "Najdi vire …"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2681,7 +2681,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New..."
-msgstr "&Nova..."
+msgstr "&Nova …"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2749,11 +2749,11 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
-"Izberite eno izmed naslednjih stopenj približanja Ganntovega diagrama:<nl/"
-">'Ura' prikazuje obdobje nekaj ur,<nl/>'Dan' prikazuje obdobje nekaj dni,<nl/"
-">'Teden' prikazuje obdobje nekaj mesecev in<nl/>'Mesec' prikazuje obdobje "
-"nekaj let.<nl/>'Samodejno' izbere najprimernejše obdobje za trenutni dogodek "
-"ali opravilo."
+"Izberite eno izmed naslednjih stopenj približanja Ganttograma:<nl/>»Ura« "
+"prikazuje obdobje nekaj ur,<nl/>»Dan« prikazuje obdobje nekaj dni,<nl/"
+">»Teden« prikazuje obdobje nekaj tednov in<nl/>»Mesec« prikazuje obdobje "
+"nekaj mesecev.<nl/>»Samodejno« izbere najprimernejše obdobje za trenutni "
+"dogodek ali opravilo."
 
 #: visualfreebusywidget.cpp:152
 #, kde-format
