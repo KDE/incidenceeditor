@@ -43,8 +43,6 @@ public:
 
 private:
     void fillCombo();
-
-private:
     Ui::AlarmDialog *const mUi;
     const KCalendarCore::Incidence::IncidenceType mIncidenceType;
     bool mAllowBeginReminders = true;

@@ -45,12 +45,10 @@ public:
 public Q_SLOTS:
     bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index) override;
 
-private Q_SLOTS:
+private:
     void doCloseEditor(QWidget *editor);
     void rightPressed();
     void leftPressed();
-
-private:
     /** all entries to choose from */
     QList<QPair<QIcon, QString>> mEntries;
     QString mToolTip;

@@ -63,7 +63,7 @@ public Q_SLOTS:
     void acceptForMe();
     void declineForMe();
 
-private Q_SLOTS:
+private:
     // checks if row is a group,  that can/should be expanded
     void checkIfExpansionIsNeeded(const KCalendarCore::Attendee &attendee);
 
@@ -98,7 +98,6 @@ private Q_SLOTS:
 
     void slotUpdateCryptoPreferences();
 
-private:
     void updateGroupExpand();
 
     void insertAddresses(const KContacts::Addressee::List &list);

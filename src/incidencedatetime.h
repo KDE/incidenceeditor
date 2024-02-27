@@ -77,7 +77,7 @@ Q_SIGNALS:
     void endDateChanged(const QDate &newDate);
     void endTimeChanged(const QTime &newTime);
 
-private Q_SLOTS: /// General
+private: /// General
     void setTimeZonesVisibility(bool visible);
     void toggleTimeZoneVisibility();
     void updateStartTime(const QTime &newTime);
@@ -87,12 +87,10 @@ private Q_SLOTS: /// General
     void updateStartToolTips();
     void updateEndToolTips();
 
-private Q_SLOTS: /// Todo specific
     void enableStartEdit(bool enable);
     void enableEndEdit(bool enable);
     void enableTimeEdits();
 
-private:
     bool isDirty(const KCalendarCore::Todo::Ptr &todo) const;
     bool isDirty(const KCalendarCore::Event::Ptr &event) const;
     bool isDirty(const KCalendarCore::Journal::Ptr &journal) const;

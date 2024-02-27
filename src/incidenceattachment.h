@@ -60,8 +60,6 @@ private:
     void slotItemRenamed(QListWidgetItem *item);
     void slotSelectionChanged();
     void downloadComplete(KJob *);
-
-private:
     //     void addAttachment( KCalendarCore::Attachment *attachment );
     void addDataAttachment(const QByteArray &data, const QString &mimeType = QString(), const QString &label = QString());
     void addUriAttachment(const QString &uri, const QString &mimeType = QString(), const QString &label = QString(), bool inLine = false);

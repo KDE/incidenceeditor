@@ -51,7 +51,6 @@ private:
 
     QItemSelectionModel *selectionModel = nullptr;
 
-private:
     /* A new searchString is entered
      *
      */
@@ -69,7 +68,6 @@ private:
 
     INCIDENCEEDITOR_NO_EXPORT void slotLayoutChanged();
 
-private:
     INCIDENCEEDITOR_NO_EXPORT void readConfig();
     INCIDENCEEDITOR_NO_EXPORT void writeConfig();
     CalendarSupport::FreeBusyItemModel *mModel = nullptr;
