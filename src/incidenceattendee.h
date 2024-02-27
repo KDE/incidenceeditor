@@ -105,7 +105,7 @@ private:
     void changeStatusForMe(KCalendarCore::Attendee::PartStat);
 
     /** Returns if I was the organizer of the loaded event */
-    bool iAmOrganizer() const;
+    [[nodiscard]] bool iAmOrganizer() const;
 
     /** Reads values from a KContacts::Addressee and inserts a new Attendee
      * item into the listview with those items. Used when adding attendees

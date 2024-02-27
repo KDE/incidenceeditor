@@ -42,9 +42,8 @@ private:
     void toggleCurrentAlarm();
     void updateAlarmList();
     void updateButtons();
-    QString stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm);
+    [[nodiscard]] QString stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm);
 
-private:
     Ui::EventOrTodoDesktop *const mUi;
 
     KCalendarCore::Alarm::List mAlarms;

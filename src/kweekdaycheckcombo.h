@@ -51,6 +51,6 @@ public:
      * Returns the index of the weekday represented by the
      * QDate object.
      */
-    int weekdayIndex(const QDate &date) const;
+    [[nodiscard]] int weekdayIndex(const QDate &date) const;
 };
 }

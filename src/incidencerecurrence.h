@@ -71,7 +71,7 @@ private:
     */
     void writeToIncidence(const KCalendarCore::Incidence::Ptr &incidence) const;
 
-    KLocalizedString subsOrdinal(const KLocalizedString &text, int number) const;
+    [[nodiscard]] KLocalizedString subsOrdinal(const KLocalizedString &text, int number) const;
     /**
      * Return the day in the month/year on which the event recurs, starting at the
      * beginning/end. Both return a positive number.
@@ -103,7 +103,7 @@ private:
      * Return how many times the weekday represented by @param date occurs in
      * the month of @param date.
      */
-    int weekdayCountForMonth(const QDate &date) const;
+    [[nodiscard]] int weekdayCountForMonth(const QDate &date) const;
 
     [[nodiscard]] QDate currentDate() const;
 

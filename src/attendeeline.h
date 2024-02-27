@@ -79,12 +79,12 @@ public:
     ~AttendeeLine() override = default;
 
     void activate() override;
-    bool isActive() const override;
+    [[nodiscard]] bool isActive() const override;
 
-    bool isEmpty() const override;
+    [[nodiscard]] bool isEmpty() const override;
     void clear() override;
 
-    bool isModified() const override;
+    [[nodiscard]] bool isModified() const override;
     void clearModified() override;
 
     KPIM::MultiplyingLineData::Ptr data() const override;
