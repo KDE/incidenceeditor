@@ -100,11 +100,6 @@ bool KOrganizerEditorConfig::defaultEventReminders() const
     return CalendarSupport::KCalPrefs::instance()->defaultEventReminders();
 }
 
-QStringList KOrganizerEditorConfig::activeDesignerFields() const
-{
-    return CalendarSupport::KCalPrefs::instance()->activeDesignerFields();
-}
-
 QStringList &KOrganizerEditorConfig::templates(KCalendarCore::IncidenceBase::IncidenceType type)
 {
     if (type == KCalendarCore::IncidenceBase::TypeEvent) {

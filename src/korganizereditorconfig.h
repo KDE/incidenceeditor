@@ -36,7 +36,6 @@ public:
     [[nodiscard]] int reminderTimeUnits() const override;
     [[nodiscard]] bool defaultTodoReminders() const override;
     [[nodiscard]] bool defaultEventReminders() const override;
-    [[nodiscard]] QStringList activeDesignerFields() const override;
     [[nodiscard]] QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type) override;
 };
 } // IncidenceEditors

@@ -105,11 +105,6 @@ public:
         return false;
     }
 
-    [[nodiscard]] virtual QStringList activeDesignerFields() const
-    {
-        return {};
-    }
-
     [[nodiscard]] virtual QStringList &templates(KCalendarCore::IncidenceBase::IncidenceType type);
 
 private:
