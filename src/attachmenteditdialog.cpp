@@ -12,6 +12,7 @@
 #include "attachmenticonview.h"
 #include "config-enterprise.h"
 #include "ui_attachmenteditdialog.h"
+#include <KFormat>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
@@ -68,7 +69,9 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     } else {
         mUi->mInlineCheck->setEnabled(true);
         mUi->mStackedWidget->setCurrentIndex(1);
-        mUi->mSizeLabel->setText(QStringLiteral("%1 (%2)").arg(KIO::convertSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
+        KFormat format;
+        mUi->mSizeLabel->setText(
+            QStringLiteral("%1 (%2)").arg(format.formatByteSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
     }
 
     connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this, &AttachmentEditDialog::inlineChanged);
