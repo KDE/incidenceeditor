@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2024-03-09 04:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -124,19 +124,19 @@ msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] "结束前 %1 天"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "编辑附件"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "未知"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

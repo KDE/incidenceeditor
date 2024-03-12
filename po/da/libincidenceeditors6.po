@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2020-11-17 19:50+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -129,19 +129,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 dag før forfaldstidspunkt"
 msgstr[1] "%1 dage før forfaldstidspunkt"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Redigér bilag"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

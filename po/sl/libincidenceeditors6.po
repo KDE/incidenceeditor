@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2024-02-27 00:12+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -146,19 +146,19 @@ msgstr[1] "%1 dan pred zapadlostjo"
 msgstr[2] "%1 dneva pred zapadlostjo"
 msgstr[3] "%1 dni pred zapadlostjo"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Uredi prilogo"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Neznana"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

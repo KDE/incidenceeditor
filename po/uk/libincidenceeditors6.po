@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2023-10-06 08:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -144,19 +144,19 @@ msgstr[1] "за %1 дні до часу призначення"
 msgstr[2] "за %1 днів до часу призначення"
 msgstr[3] "за день до часу призначення"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Зміна долучення"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Невідомий"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

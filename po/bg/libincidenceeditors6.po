@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2023-10-09 15:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -129,19 +129,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 ден преди срока"
 msgstr[1] "%1 дни преди срока"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Редактиране на прикачен файл"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Неизвестен"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

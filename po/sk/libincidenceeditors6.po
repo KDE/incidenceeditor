@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-22 00:37+0000\n"
+"POT-Creation-Date: 2024-03-12 00:38+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -137,20 +137,20 @@ msgstr[0] "%1 deň pred termínom"
 msgstr[1] "%1 dni pred termínom"
 msgstr[2] "%1 dní pred termínom"
 
-#: attachmenteditdialog.cpp:38
+#: attachmenteditdialog.cpp:39
 #, fuzzy, kde-format
 #| msgid "Edit Attachment"
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Upraviť prílohu"
 
-#: attachmenteditdialog.cpp:57
+#: attachmenteditdialog.cpp:58
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: attachmenteditdialog.cpp:110
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
