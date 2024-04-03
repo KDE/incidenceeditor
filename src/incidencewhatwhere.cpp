@@ -6,6 +6,8 @@
 */
 
 #include "incidencewhatwhere.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_dialogdesktop.h"
 
 #include "incidenceeditor_debug.h"
@@ -17,7 +19,7 @@ IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(nullptr)
     , mUi(ui)
 {
-    setObjectName(QLatin1StringView("IncidenceWhatWhere"));
+    setObjectName("IncidenceWhatWhere"_L1);
     connect(mUi->mSummaryEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
     connect(mUi->mLocationEdit, &QLineEdit::textChanged, this, &IncidenceWhatWhere::checkDirtyStatus);
 }

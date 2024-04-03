@@ -6,6 +6,8 @@
 */
 
 #include "incidencealarm.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "alarmdialog.h"
 #include "alarmpresets.h"
 #include "incidencedatetime.h"
@@ -20,7 +22,7 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
     : mUi(ui)
     , mDateTime(dateTime)
 {
-    setObjectName(QLatin1StringView("IncidenceAlarm"));
+    setObjectName("IncidenceAlarm"_L1);
 
     mUi->mAlarmPresetCombo->insertItems(0, AlarmPresets::availablePresets());
     mUi->mAlarmPresetCombo->setCurrentIndex(AlarmPresets::defaultPresetIndex());

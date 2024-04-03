@@ -6,6 +6,7 @@
 */
 
 #include "templatemanagementdialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -34,13 +35,13 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TemplateManagementDialog::reject);
-    setObjectName(QLatin1StringView("template_management_dialog"));
+    setObjectName("template_management_dialog"_L1);
     connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &TemplateManagementDialog::slotHelp);
     auto widget = new QWidget(this);
     mainLayout->addWidget(widget);
     mainLayout->addWidget(buttonBox);
 
-    widget->setObjectName(QLatin1StringView("template_management_dialog_base"));
+    widget->setObjectName("template_management_dialog_base"_L1);
     m_base.setupUi(widget);
 
     m_base.m_listBox->addItems(m_templates);

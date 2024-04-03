@@ -6,6 +6,8 @@
 */
 
 #include "incidenceattachment.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "attachmenteditdialog.h"
 #include "attachmenticonview.h"
 #include "ui_dialogdesktop.h"
@@ -46,7 +48,7 @@ IncidenceAttachment::IncidenceAttachment(Ui::EventOrTodoDesktop *ui)
 {
     setupActions();
     setupAttachmentIconView();
-    setObjectName(QLatin1StringView("IncidenceAttachment"));
+    setObjectName("IncidenceAttachment"_L1);
 
     connect(mUi->mAddButton, &QPushButton::clicked, this, &IncidenceAttachment::addAttachment);
     connect(mUi->mRemoveButton, &QPushButton::clicked, this, &IncidenceAttachment::removeSelectedAttachments);
@@ -186,7 +188,7 @@ void IncidenceAttachment::removeSelectedAttachments()
         return;
     }
 
-    QString labelsStr = labels.join(QLatin1StringView("<nl/>"));
+    QString labelsStr = labels.join("<nl/>"_L1);
 
     if (KMessageBox::questionTwoActions(nullptr,
                                         xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
@@ -538,7 +540,7 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QStrin
     auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
     QString nlabel = label;
-    if (mimeType == QLatin1StringView("message/rfc822")) {
+    if (mimeType == "message/rfc822"_L1) {
         // mail message. try to set the label from the mail Subject:
         KMime::Message msg;
         msg.setContent(data);
@@ -565,13 +567,13 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
         item->setUri(uri);
         item->setLabel(label);
         if (mimeType.isEmpty()) {
-            if (uri.startsWith(QLatin1StringView("uid:"))) {
+            if (uri.startsWith("uid:"_L1)) {
                 item->setMimeType(QStringLiteral("text/directory"));
-            } else if (uri.startsWith(QLatin1StringView("kmail:"))) {
+            } else if (uri.startsWith("kmail:"_L1)) {
                 item->setMimeType(QStringLiteral("message/rfc822"));
-            } else if (uri.startsWith(QLatin1StringView("urn:x-ical"))) {
+            } else if (uri.startsWith("urn:x-ical"_L1)) {
                 item->setMimeType(QStringLiteral("text/calendar"));
-            } else if (uri.startsWith(QLatin1StringView("news:"))) {
+            } else if (uri.startsWith("news:"_L1)) {
                 item->setMimeType(QStringLiteral("message/news"));
             } else {
                 QMimeDatabase db;

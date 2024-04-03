@@ -6,6 +6,8 @@
 */
 
 #include "incidencedescription.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_dialogdesktop.h"
 #include <KPIMTextEdit/RichTextComposer>
 
@@ -33,7 +35,7 @@ IncidenceDescription::IncidenceDescription(Ui::EventOrTodoDesktop *ui)
     , mUi(ui)
     , d(new IncidenceDescriptionPrivate())
 {
-    setObjectName(QLatin1StringView("IncidenceDescription"));
+    setObjectName("IncidenceDescription"_L1);
     mUi->mRichTextLabel->setContextMenuPolicy(Qt::NoContextMenu);
     setupToolBar();
     connect(mUi->mRichTextLabel, &QLabel::linkActivated, this, &IncidenceDescription::toggleRichTextDescription);

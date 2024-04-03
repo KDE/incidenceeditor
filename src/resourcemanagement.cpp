@@ -29,6 +29,7 @@
 #include <QWindow>
 
 using namespace IncidenceEditorNG;
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 static const char myResourceManagementConfigGroupName[] = "ResourceManagement";
@@ -45,7 +46,7 @@ public:
 
     [[nodiscard]] bool isValid(const QString &incidenceIdentifier) const override
     {
-        return incidenceIdentifier.startsWith(QLatin1StringView("fb-"));
+        return incidenceIdentifier.startsWith("fb-"_L1);
     }
 
     [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
@@ -195,9 +196,9 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
     // Fill formDetails with data
     for (auto it = obj.attributes().cbegin(), end = obj.attributes().cbegin(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1StringView("objectClass") || key == QLatin1StringView("email")) {
+        if (key == "objectClass"_L1 || key == "email"_L1) {
             continue;
-        } else if (key == QLatin1StringView("owner")) {
+        } else if (key == "owner"_L1) {
             QStringList attrs;
             attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("mobile") << QStringLiteral("telephoneNumber")
                   << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
@@ -245,8 +246,7 @@ void ResourceManagement::slotOwnerSearchFinished()
     const KLDAPCore::LdapAttrMap &ldapAttrMap = obj.attributes();
     for (auto it = ldapAttrMap.cbegin(), end = ldapAttrMap.cend(); it != end; ++it) {
         const QString &key = it.key();
-        if (key == QLatin1StringView("objectClass") || key == QLatin1StringView("owner") || key == QLatin1StringView("givenname")
-            || key == QLatin1StringView("sn")) {
+        if (key == QLatin1StringView("objectClass") || key == "owner"_L1 || key == "givenname"_L1 || key == "sn"_L1) {
             continue;
         }
         QStringList list;

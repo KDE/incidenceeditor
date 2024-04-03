@@ -6,6 +6,8 @@
 */
 
 #include "incidencesecrecy.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_dialogdesktop.h"
 
 #include <KCalUtils/Stringify>
@@ -15,7 +17,7 @@ using namespace IncidenceEditorNG;
 IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
 {
-    setObjectName(QLatin1StringView("IncidenceSecrecy"));
+    setObjectName("IncidenceSecrecy"_L1);
     mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
     connect(mUi->mSecrecyCombo, &QComboBox::currentIndexChanged, this, &IncidenceSecrecy::checkDirtyStatus);
 }

@@ -6,6 +6,8 @@
 */
 
 #include "editoritemmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "individualmailcomponentfactory.h"
 
 #include <CalendarSupport/KCalPrefs>
@@ -216,7 +218,7 @@ void ItemEditorPrivate::setupMonitor()
     // Q_Q(EditorItemManager);
     delete mItemMonitor;
     mItemMonitor = new Akonadi::Monitor;
-    mItemMonitor->setObjectName(QLatin1StringView("EditorItemManagerMonitor"));
+    mItemMonitor->setObjectName("EditorItemManagerMonitor"_L1);
     mItemMonitor->ignoreSession(Akonadi::Session::defaultSession());
     mItemMonitor->itemFetchScope().fetchFullPayload();
     if (mItem.isValid()) {

@@ -6,6 +6,8 @@
 */
 
 #include "incidencedatetime.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
 
@@ -65,7 +67,7 @@ IncidenceDateTime::IncidenceDateTime(Ui::EventOrTodoDesktop *ui)
     , mTimezoneCombosWereVisibile(false)
 {
     setTimeZonesVisibility(false);
-    setObjectName(QLatin1StringView("IncidenceDateTime"));
+    setObjectName("IncidenceDateTime"_L1);
 
     mUi->mTimeZoneLabel->setVisible(!mUi->mWholeDayCheck->isChecked());
     connect(mUi->mTimeZoneLabel, &QLabel::linkActivated, this, &IncidenceDateTime::toggleTimeZoneVisibility);
@@ -127,7 +129,7 @@ void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
         return;
     }
 
-    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == QLatin1StringView("true");
+    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == "true"_L1;
     incidence->removeCustomProperty("kdepim", "isTemplate");
     const bool templateOverridesTimes = incidenceHasDefaultTimes(mLoadedIncidence);
 
@@ -409,7 +411,7 @@ void IncidenceDateTime::enableTimeEdits()
         mUi->mEndTimeEdit->setTime(QTime(1, 0));
     }
 
-    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains(QLatin1StringView("&lt;&lt;"));
+    const bool currentlyVisible = mUi->mTimeZoneLabel->text().contains("&lt;&lt;"_L1);
     setTimeZonesVisibility(!wholeDayChecked && mTimezoneCombosWereVisibile);
     mTimezoneCombosWereVisibile = currentlyVisible;
     if (!wholeDayChecked && !timeZonesAreLocal(currentStartDateTime(), currentEndDateTime())) {

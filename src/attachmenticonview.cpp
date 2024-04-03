@@ -25,7 +25,7 @@
 #include <QKeyEvent>
 #include <QMimeData>
 #include <QMimeDatabase>
-
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 AttachmentIconItem::AttachmentIconItem(const KCalendarCore::Attachment &att, QListWidget *parent)
@@ -170,7 +170,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     QStringList patterns = db.mimeTypeForName(mAttachment.mimeType()).globPatterns();
 
     if (!patterns.empty()) {
-        file = new QTemporaryFile(QDir::tempPath() + QLatin1StringView("/attachementview_XXXXX") + patterns.first().remove(QLatin1Char('*')));
+        file = new QTemporaryFile(QDir::tempPath() + "/attachementview_XXXXX"_L1 + patterns.first().remove(QLatin1Char('*')));
     } else {
         file = new QTemporaryFile();
     }

@@ -11,6 +11,8 @@
 */
 
 #include "incidenceattendee.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "attendeecomboboxdelegate.h"
 #include "attendeeeditor.h"
 #include "attendeelineeditdelegate.h"
@@ -73,7 +75,7 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
                                           "attendee to request a response concerning "
                                           "attendance."));
 
-    setObjectName(QLatin1StringView("IncidenceAttendee"));
+    setObjectName("IncidenceAttendee"_L1);
 
     auto filterProxyModel = new AttendeeFilterProxyModel(this);
     filterProxyModel->setDynamicSortFilter(true);

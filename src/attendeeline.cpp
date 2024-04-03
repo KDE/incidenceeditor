@@ -21,7 +21,7 @@
 #include <QMenu>
 
 using namespace IncidenceEditorNG;
-
+using namespace Qt::Literals::StringLiterals;
 using TextIconPair = QPair<QString, QIcon>;
 
 AttendeeComboBox::AttendeeComboBox(QWidget *parent)
@@ -365,7 +365,7 @@ void AttendeeLine::aboutToBeDeleted()
         return;
     }
 
-    Q_EMIT changed(mData->attendee(), KCalendarCore::Attendee(QLatin1StringView(""), QLatin1StringView("")));
+    Q_EMIT changed(mData->attendee(), KCalendarCore::Attendee(""_L1, ""_L1));
 }
 
 bool AttendeeLine::canDeleteLineEdit() const

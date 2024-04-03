@@ -6,6 +6,8 @@
 */
 
 #include "incidencerecurrence.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidencedatetime.h"
 #include "ui_dialogdesktop.h"
 
@@ -75,7 +77,7 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
     , mMonthlyInitialType(0)
     , mYearlyInitialType(0)
 {
-    setObjectName(QLatin1StringView("IncidenceRecurrence"));
+    setObjectName("IncidenceRecurrence"_L1);
     // Set some sane defaults
     mUi->mRecurrenceTypeCombo->setCurrentIndex(RecurrenceTypeNone);
     mUi->mRecurrenceEndCombo->setCurrentIndex(RecurrenceEndNever);

@@ -6,6 +6,7 @@
 */
 
 #include "incidencecategories.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
@@ -21,7 +22,7 @@ using namespace IncidenceEditorNG;
 IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
 {
-    setObjectName(QLatin1StringView("IncidenceCategories"));
+    setObjectName("IncidenceCategories"_L1);
 
     connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this, &IncidenceCategories::onSelectionChanged);
 }

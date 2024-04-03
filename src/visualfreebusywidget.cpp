@@ -6,6 +6,8 @@
 */
 
 #include "visualfreebusywidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "freebusyganttproxymodel.h"
 #include <CalendarSupport/FreeBusyItemModel>
 
@@ -202,7 +204,7 @@ VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *m
     mLeftView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     mLeftView->setContextMenuPolicy(Qt::CustomContextMenu);
     mGanttGraphicsView = new KGantt::GraphicsView(this);
-    mGanttGraphicsView->setObjectName(QLatin1StringView("mGanttGraphicsView"));
+    mGanttGraphicsView->setObjectName("mGanttGraphicsView"_L1);
     mGanttGraphicsView->setToolTip(i18nc("@info:tooltip", "Shows the Free/Busy status of all attendees"));
     mGanttGraphicsView->setWhatsThis(i18nc("@info:whatsthis",
                                            "Shows the Free/Busy status of all attendees. "

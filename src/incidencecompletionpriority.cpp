@@ -6,6 +6,8 @@
 */
 
 #include "incidencecompletionpriority.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_dialogdesktop.h"
 
 #include <KCalendarCore/Todo>
@@ -45,7 +47,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     , d(new IncidenceCompletionPriorityPrivate(this))
 {
     Q_ASSERT(ui != nullptr);
-    setObjectName(QLatin1StringView("IncidenceCompletionPriority"));
+    setObjectName("IncidenceCompletionPriority"_L1);
 
     d->mUi = ui;
 

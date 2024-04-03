@@ -5,6 +5,8 @@
  */
 
 #include "incidenceresource.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "attendeecomboboxdelegate.h"
 #include "attendeelineeditdelegate.h"
 #include "incidencedatetime.h"
@@ -46,7 +48,7 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     , mDateTime(dateTime)
     , resourceDialog(new ResourceManagement())
 {
-    setObjectName(QLatin1StringView("IncidenceResource"));
+    setObjectName("IncidenceResource"_L1);
     connect(resourceDialog, &ResourceManagement::accepted, this, &IncidenceResource::dialogOkPressed);
 
     connect(mDateTime, &IncidenceDateTime::startDateChanged, this, &IncidenceResource::slotDateChanged);
