@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-23 01:40+0000\n"
-"PO-Revision-Date: 2024-03-30 19:38\n"
+"PO-Revision-Date: 2024-04-01 14:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -905,7 +905,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "重试"
 
 #: incidencedialog.cpp:491
 #, kde-kuit-format
@@ -931,13 +931,13 @@ msgstr "设定默认日历？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr ""
+msgstr "设为默认"
 
 #: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr ""
+msgstr "不设置"
 
 #: incidencedialog.cpp:681
 #, kde-format
@@ -2131,7 +2131,7 @@ msgstr "选择参与者..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "隐私设置"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
