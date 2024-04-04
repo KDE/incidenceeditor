@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 00:38+0000\n"
+"POT-Creation-Date: 2024-04-04 00:38+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -143,13 +143,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr ""
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:63
+#: attendeeline.cpp:147 incidenceattendee.cpp:65
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr ""
 
-#: attendeeline.cpp:148 incidenceattendee.cpp:64
+#: attendeeline.cpp:148 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -161,13 +161,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:66
+#: attendeeline.cpp:153 incidenceattendee.cpp:68
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:155 incidenceattendee.cpp:68 schedulingdialog.cpp:97
+#: attendeeline.cpp:155 incidenceattendee.cpp:70 schedulingdialog.cpp:97
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -181,13 +181,13 @@ msgid ""
 "user if an email address is provided."
 msgstr ""
 
-#: attendeeline.cpp:163 incidenceattendee.cpp:70
+#: attendeeline.cpp:163 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr ""
 
-#: attendeeline.cpp:165 incidenceattendee.cpp:72
+#: attendeeline.cpp:165 incidenceattendee.cpp:74
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -271,19 +271,19 @@ msgctxt "Attendee email"
 msgid "Email"
 msgstr "ئېلخەتتىن بىرنى يوللا"
 
-#: editoritemmanager.cpp:237
+#: editoritemmanager.cpp:239
 #, kde-format
 msgid ""
 "The item has been changed by another application.\n"
 "What should be done?"
 msgstr ""
 
-#: editoritemmanager.cpp:239
+#: editoritemmanager.cpp:241
 #, kde-format
 msgid "Take over changes"
 msgstr "ئۆزگىرىشلەرنى ئىشلەت"
 
-#: editoritemmanager.cpp:240
+#: editoritemmanager.cpp:242
 #, kde-format
 msgid "Ignore and Overwrite changes"
 msgstr ""
@@ -341,31 +341,31 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr ""
 
-#: incidencealarm.cpp:250
+#: incidencealarm.cpp:252
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "چەكلە"
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:254
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "قوزغات"
 
-#: incidencealarm.cpp:270
+#: incidencealarm.cpp:272
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr ""
 
-#: incidencealarm.cpp:273
+#: incidencealarm.cpp:275
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr ""
 
-#: incidencealarm.cpp:276
+#: incidencealarm.cpp:278
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 #| msgid "Reminder"
@@ -373,7 +373,7 @@ msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "ئەسكەرتكۈچ"
 
-#: incidencealarm.cpp:282
+#: incidencealarm.cpp:284
 #, fuzzy, kde-format
 #| msgctxt "The reminder is set to X minutes before/after the event"
 #| msgid "minutes"
@@ -382,14 +382,14 @@ msgid "1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "مىنۇت"
 
-#: incidencealarm.cpp:287
+#: incidencealarm.cpp:289
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] ""
 
-#: incidencealarm.cpp:290
+#: incidencealarm.cpp:292
 #, fuzzy, kde-format
 #| msgctxt "The reminder is set to X hours before/after the event"
 #| msgid "hours"
@@ -398,7 +398,7 @@ msgid "1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "سائەت"
 
-#: incidencealarm.cpp:295
+#: incidencealarm.cpp:297
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -408,133 +408,133 @@ msgstr ""
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:305
+#: incidencealarm.cpp:307
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
 msgstr ""
 
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:309
 #, kde-format
 msgid "%1 %2 after the event started %3"
 msgstr ""
 
-#: incidencealarm.cpp:311
+#: incidencealarm.cpp:313
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
 msgstr ""
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:315
 #, kde-format
 msgid "%1 %2 before the event starts %3"
 msgstr ""
 
-#: incidencealarm.cpp:317
+#: incidencealarm.cpp:319
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
 msgstr ""
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:321
 #, kde-format
 msgid "%1 %2 after the event ends %3"
 msgstr ""
 
-#: incidencealarm.cpp:323
+#: incidencealarm.cpp:325
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
 msgstr ""
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:327
 #, kde-format
 msgid "%1 %2 before the event ends %3"
 msgstr ""
 
-#: incidencealarm.cpp:331
+#: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:335
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:337
+#: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:341
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:343
+#: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:347
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:349
+#: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:353
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:359
+#: incidencealarm.cpp:361
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr ""
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 when the event starts"
 msgstr ""
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr ""
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:367
 #, kde-format
 msgid "%1 when the event ends"
 msgstr ""
 
-#: incidencealarm.cpp:369
+#: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:373
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr ""
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:377
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr ""
 
-#: incidenceattachment.cpp:130
+#: incidenceattachment.cpp:132
 #, kde-format
 msgctxt "@title"
 msgid "Add Attachment"
 msgstr "قوشۇلما قوش"
 
-#: incidenceattachment.cpp:192
+#: incidenceattachment.cpp:194
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Do you really want to cancel?"
@@ -542,61 +542,61 @@ msgctxt "@info"
 msgid "Do you really want to remove these attachments?<nl/>%1"
 msgstr "راستلا ۋاز كېچەمسىز؟"
 
-#: incidenceattachment.cpp:193
+#: incidenceattachment.cpp:195
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Attachments?"
 msgstr ""
 
-#: incidenceattachment.cpp:231
+#: incidenceattachment.cpp:233
 #, kde-format
 msgctxt "@title"
 msgid "Save Attachment"
 msgstr "قوشۇلمىنى ساقلا"
 
-#: incidenceattachment.cpp:411
+#: incidenceattachment.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr ""
 
-#: incidenceattachment.cpp:421 incidenceattachment.cpp:424
+#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "بۇ جايغا كۆچۈر(&C)"
 
-#: incidenceattachment.cpp:428
+#: incidenceattachment.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "ۋاز كەچ(&A)"
 
-#: incidenceattachment.cpp:475
+#: incidenceattachment.cpp:477
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "ئاچ(&O)"
 
-#: incidenceattachment.cpp:481
+#: incidenceattachment.cpp:483
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As..."
 msgstr "باشقا ئاتتا ساقلا…"
 
-#: incidenceattachment.cpp:498
+#: incidenceattachment.cpp:500
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "چىقىرىۋەت(&R)"
 
-#: incidenceattachment.cpp:506
+#: incidenceattachment.cpp:508
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties..."
 msgstr "خاسلىق(&P)…"
 
-#: incidenceattachment.cpp:517
+#: incidenceattachment.cpp:519
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -604,7 +604,7 @@ msgid ""
 "or to-do."
 msgstr ""
 
-#: incidenceattendee.cpp:212
+#: incidenceattendee.cpp:214
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -612,25 +612,25 @@ msgid ""
 "this participant?"
 msgstr ""
 
-#: incidenceattendee.cpp:215
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "ئىناۋەتسىز ئېلخەت ئادرېسى"
 
-#: incidenceattendee.cpp:216
+#: incidenceattendee.cpp:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:441
+#: incidenceattendee.cpp:443
 #, fuzzy, kde-format
 #| msgctxt "@title:tab attendees of this event or to-do"
 #| msgid "Attendees"
@@ -638,14 +638,14 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "قاتناشقۇچىلار"
 
-#: incidenceattendee.cpp:624
+#: incidenceattendee.cpp:626
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 توقۇنۇش"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -654,77 +654,77 @@ msgid ""
 "well?"
 msgstr ""
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "قاتناشقۇچى"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr ""
 
-#: incidencedatetime.cpp:215
+#: incidencedatetime.cpp:217
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr ""
 
-#: incidencedatetime.cpp:617
+#: incidencedatetime.cpp:619
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "قەرەلى:"
 
-#: incidencedatetime.cpp:745 incidencedatetime.cpp:746
+#: incidencedatetime.cpp:747 incidencedatetime.cpp:748
 #, kde-format
 msgid "Starts: %1"
 msgstr ""
 
-#: incidencedatetime.cpp:748
+#: incidencedatetime.cpp:750
 #, kde-format
 msgid "Starting Date"
 msgstr ""
 
-#: incidencedatetime.cpp:749
+#: incidencedatetime.cpp:751
 #, kde-format
 msgid "Starting Time"
 msgstr ""
 
-#: incidencedatetime.cpp:758 incidencedatetime.cpp:759
+#: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, kde-format
 msgid "Due on: %1"
 msgstr ""
 
-#: incidencedatetime.cpp:761 incidencedatetime.cpp:762
+#: incidencedatetime.cpp:763 incidencedatetime.cpp:764
 #, kde-format
 msgid "Ends: %1"
 msgstr ""
 
-#: incidencedatetime.cpp:766
+#: incidencedatetime.cpp:768
 #, kde-format
 msgid "Due Date"
 msgstr "مۆھلىتى(چېسلا)"
 
-#: incidencedatetime.cpp:767
+#: incidencedatetime.cpp:769
 #, kde-format
 msgid "Due Time"
 msgstr ""
 
-#: incidencedatetime.cpp:769
+#: incidencedatetime.cpp:771
 #, kde-format
 msgid "Ending Date"
 msgstr ""
 
-#: incidencedatetime.cpp:770
+#: incidencedatetime.cpp:772
 #, kde-format
 msgid "Ending Time"
 msgstr ""
 
-#: incidencedatetime.cpp:848
+#: incidencedatetime.cpp:850
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 #| msgid "Reminder"
@@ -732,7 +732,7 @@ msgctxt "@info"
 msgid "Invalid start date."
 msgstr "ئەسكەرتكۈچ"
 
-#: incidencedatetime.cpp:853
+#: incidencedatetime.cpp:855
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 #| msgid "Reminder"
@@ -740,7 +740,7 @@ msgctxt "@info"
 msgid "Invalid start time."
 msgstr "ئەسكەرتكۈچ"
 
-#: incidencedatetime.cpp:861
+#: incidencedatetime.cpp:863
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 #| msgid "Reminder"
@@ -748,7 +748,7 @@ msgctxt "@info"
 msgid "Invalid end date."
 msgstr "ئەسكەرتكۈچ"
 
-#: incidencedatetime.cpp:866
+#: incidencedatetime.cpp:868
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 #| msgid "Reminder"
@@ -756,7 +756,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "ئەسكەرتكۈچ"
 
-#: incidencedatetime.cpp:875
+#: incidencedatetime.cpp:877
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -764,7 +764,7 @@ msgid ""
 "Please correct dates and times."
 msgstr ""
 
-#: incidencedatetime.cpp:879
+#: incidencedatetime.cpp:881
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -790,13 +790,13 @@ msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
 msgstr ""
 
-#: incidencedescription.cpp:99
+#: incidencedescription.cpp:101
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Enable rich text"
 msgstr ""
 
-#: incidencedescription.cpp:103
+#: incidencedescription.cpp:105
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
@@ -1059,7 +1059,7 @@ msgstr "پۈتكۈل ئۇچۇرنى قوش"
 msgid "Attach message without attachments"
 msgstr "قوشۇلمىنى قوشماي ئۇچۇرنىلا قوش"
 
-#: incidencerecurrence.cpp:131
+#: incidencerecurrence.cpp:133
 #, kde-format
 msgctxt ""
 "In several of the messages below, an ordinal number is substituted into the "
@@ -1069,126 +1069,126 @@ msgctxt ""
 msgid "0"
 msgstr "0"
 
-#: incidencerecurrence.cpp:456
+#: incidencerecurrence.cpp:458
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
 "parameters."
 msgstr ""
 
-#: incidencerecurrence.cpp:462
+#: incidencerecurrence.cpp:464
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr ""
 
-#: incidencerecurrence.cpp:468
+#: incidencerecurrence.cpp:470
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr ""
 
-#: incidencerecurrence.cpp:511
+#: incidencerecurrence.cpp:513
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr ""
 
-#: incidencerecurrence.cpp:514
+#: incidencerecurrence.cpp:516
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr ""
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:519
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr ""
 
-#: incidencerecurrence.cpp:523
+#: incidencerecurrence.cpp:525
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr ""
 
-#: incidencerecurrence.cpp:525
+#: incidencerecurrence.cpp:527
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr ""
 
-#: incidencerecurrence.cpp:541
+#: incidencerecurrence.cpp:543
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr ""
 
-#: incidencerecurrence.cpp:544
+#: incidencerecurrence.cpp:546
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr ""
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:549
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr ""
 
-#: incidencerecurrence.cpp:554
+#: incidencerecurrence.cpp:556
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr ""
 
-#: incidencerecurrence.cpp:559
+#: incidencerecurrence.cpp:561
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr ""
 
-#: incidencerecurrence.cpp:566
+#: incidencerecurrence.cpp:568
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr ""
 
-#: incidencerecurrence.cpp:581
+#: incidencerecurrence.cpp:583
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
 msgid_plural "occurrences"
 msgstr[0] "كۆرۈلۈشى"
 
-#: incidencerecurrence.cpp:605
+#: incidencerecurrence.cpp:607
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] "ھەپتە"
 
-#: incidencerecurrence.cpp:609
+#: incidencerecurrence.cpp:611
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
 msgstr[0] "ئاي"
 
-#: incidencerecurrence.cpp:613
+#: incidencerecurrence.cpp:615
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
 msgstr[0] "يىل"
 
-#: incidencerecurrence.cpp:617
+#: incidencerecurrence.cpp:619
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
 msgstr[0] "كۈن"
 
-#: incidencerecurrence.cpp:625
+#: incidencerecurrence.cpp:627
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
@@ -1197,7 +1197,7 @@ msgid "every"
 msgid_plural "every"
 msgstr[0] "ھەر"
 
-#: incidencewhatwhere.cpp:70
+#: incidencewhatwhere.cpp:72
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
@@ -1266,26 +1266,26 @@ msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
 msgstr ""
 
-#: ldaputils.cpp:15
+#: ldaputils.cpp:17
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
 msgstr ""
 
-#: ldaputils.cpp:17
+#: ldaputils.cpp:19
 #, fuzzy, kde-format
 #| msgid "Send an email"
 msgctxt "ldap attribute mail"
 msgid "Email"
 msgstr "ئېلخەتتىن بىرنى يوللا"
 
-#: ldaputils.cpp:19
+#: ldaputils.cpp:21
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
 msgstr ""
 
-#: ldaputils.cpp:21
+#: ldaputils.cpp:23
 #, fuzzy, kde-format
 #| msgctxt "NAME OF TRANSLATORS"
 #| msgid "Your names"
@@ -1293,32 +1293,32 @@ msgctxt "ldap attribute sn"
 msgid "Surname"
 msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
 
-#: ldaputils.cpp:23
+#: ldaputils.cpp:25
 #, fuzzy, kde-format
 #| msgid "Organizer:"
 msgctxt "ldap attribute ou"
 msgid "Organization"
 msgstr "تەشكىللىگۈچى:"
 
-#: ldaputils.cpp:25
+#: ldaputils.cpp:27
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
 msgstr ""
 
-#: ldaputils.cpp:27
+#: ldaputils.cpp:29
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
 msgstr ""
 
-#: ldaputils.cpp:29
+#: ldaputils.cpp:31
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
 msgstr ""
 
-#: ldaputils.cpp:31
+#: ldaputils.cpp:33
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
@@ -1330,14 +1330,14 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr ""
 
-#: resourcemanagement.cpp:96
+#: resourcemanagement.cpp:97
 #, fuzzy, kde-format
 #| msgid "Template Management"
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "قېلىپ باشقۇر"
 
-#: resourcemanagement.cpp:101
+#: resourcemanagement.cpp:102
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -1365,45 +1365,45 @@ msgctxt ""
 msgid "to %1"
 msgstr ""
 
-#: templatemanagementdialog.cpp:30
+#: templatemanagementdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr ""
 
-#: templatemanagementdialog.cpp:83
+#: templatemanagementdialog.cpp:84
 #, kde-format
 msgid "Template Name"
 msgstr "قېلىپ ئاتى"
 
-#: templatemanagementdialog.cpp:84
+#: templatemanagementdialog.cpp:85
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr ""
 
-#: templatemanagementdialog.cpp:86
+#: templatemanagementdialog.cpp:87
 #, kde-format
 msgid "New %1 Template"
 msgstr ""
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, fuzzy, kde-format
 #| msgid "Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "قېلىپ ئاتى"
 
-#: templatemanagementdialog.cpp:129
+#: templatemanagementdialog.cpp:130
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:130
+#: templatemanagementdialog.cpp:131
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
@@ -2657,19 +2657,19 @@ msgstr ""
 msgid "Apply"
 msgstr "قوللان"
 
-#: visualfreebusywidget.cpp:139
+#: visualfreebusywidget.cpp:141
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
 msgstr "نىسبىتى: "
 
-#: visualfreebusywidget.cpp:143
+#: visualfreebusywidget.cpp:145
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
 msgstr ""
 
-#: visualfreebusywidget.cpp:145
+#: visualfreebusywidget.cpp:147
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2680,49 +2680,49 @@ msgid ""
 "current event or to-do."
 msgstr ""
 
-#: visualfreebusywidget.cpp:152
+#: visualfreebusywidget.cpp:154
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
 msgstr "سائەت"
 
-#: visualfreebusywidget.cpp:153
+#: visualfreebusywidget.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
 msgstr "كۈن"
 
-#: visualfreebusywidget.cpp:154
+#: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
 msgstr "ھەپتە"
 
-#: visualfreebusywidget.cpp:155
+#: visualfreebusywidget.cpp:157
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
 msgstr "ئاي"
 
-#: visualfreebusywidget.cpp:156
+#: visualfreebusywidget.cpp:158
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
 msgstr "ئاپتوماتىك"
 
-#: visualfreebusywidget.cpp:161
+#: visualfreebusywidget.cpp:163
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
 msgstr ""
 
-#: visualfreebusywidget.cpp:162
+#: visualfreebusywidget.cpp:164
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
 msgstr ""
 
-#: visualfreebusywidget.cpp:164
+#: visualfreebusywidget.cpp:166
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2730,19 +2730,19 @@ msgid ""
 "this event."
 msgstr ""
 
-#: visualfreebusywidget.cpp:171
+#: visualfreebusywidget.cpp:173
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
 msgstr ""
 
-#: visualfreebusywidget.cpp:173
+#: visualfreebusywidget.cpp:175
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr ""
 
-#: visualfreebusywidget.cpp:176
+#: visualfreebusywidget.cpp:178
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2750,19 +2750,19 @@ msgid ""
 "attendees have time available in their Free/Busy lists."
 msgstr ""
 
-#: visualfreebusywidget.cpp:185
+#: visualfreebusywidget.cpp:187
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
 msgstr "قايتا يۈكلە"
 
-#: visualfreebusywidget.cpp:186
+#: visualfreebusywidget.cpp:188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
 msgstr ""
 
-#: visualfreebusywidget.cpp:188
+#: visualfreebusywidget.cpp:190
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2770,25 +2770,25 @@ msgid ""
 "reloaded from their corresponding servers."
 msgstr ""
 
-#: visualfreebusywidget.cpp:199
+#: visualfreebusywidget.cpp:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
 msgstr ""
 
-#: visualfreebusywidget.cpp:200
+#: visualfreebusywidget.cpp:202
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
 msgstr ""
 
-#: visualfreebusywidget.cpp:206
+#: visualfreebusywidget.cpp:208
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
 msgstr ""
 
-#: visualfreebusywidget.cpp:208
+#: visualfreebusywidget.cpp:210
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
