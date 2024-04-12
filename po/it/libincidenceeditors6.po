@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-04-12 00:38+0000\n"
 "PO-Revision-Date: 2023-10-08 01:11+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -149,7 +149,7 @@ msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:117
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -1082,7 +1082,7 @@ msgstr "Allega il messaggio completo"
 msgid "Attach message without attachments"
 msgstr "Allega il messaggio senza allegati"
 
-#: incidencerecurrence.cpp:133
+#: incidencerecurrence.cpp:138
 #, kde-format
 msgctxt ""
 "In several of the messages below, an ordinal number is substituted into the "
@@ -1092,7 +1092,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:458
+#: incidencerecurrence.cpp:463
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1101,84 +1101,84 @@ msgstr ""
 "Un evento o una cosa da fare ricorrenti devono avvenire almeno una volta. "
 "Correggere i parametri di ricorrenza."
 
-#: incidencerecurrence.cpp:464
+#: incidencerecurrence.cpp:469
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "La data d'inizio dell'occorrenza non è valida."
 
-#: incidencerecurrence.cpp:470
+#: incidencerecurrence.cpp:475
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "La data di fine della ricorrenza non è valida."
 
-#: incidencerecurrence.cpp:513
+#: incidencerecurrence.cpp:518
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "il %1"
 
-#: incidencerecurrence.cpp:516
+#: incidencerecurrence.cpp:521
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "il %1 giorno prima dell'ultimo"
 
-#: incidencerecurrence.cpp:519
+#: incidencerecurrence.cpp:524
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "il %1 %2"
 
-#: incidencerecurrence.cpp:525
+#: incidencerecurrence.cpp:530
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "L'ultimo %1"
 
-#: incidencerecurrence.cpp:527
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "il %1 giorno per l'ultimo %2"
 
-#: incidencerecurrence.cpp:543
+#: incidencerecurrence.cpp:548
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "il %1 di %2"
 
-#: incidencerecurrence.cpp:546
+#: incidencerecurrence.cpp:551
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "il %1 per l'ultimo giorno di %2"
 
-#: incidencerecurrence.cpp:549
+#: incidencerecurrence.cpp:554
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "il %1 %2 di %3"
 
-#: incidencerecurrence.cpp:556
+#: incidencerecurrence.cpp:561
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "l'ultimo %1 di %2"
 
-#: incidencerecurrence.cpp:561
+#: incidencerecurrence.cpp:566
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "il %1 giorno per l'ultimo %2 di %3"
 
-#: incidencerecurrence.cpp:568
+#: incidencerecurrence.cpp:573
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "il %1 giorno dell'anno"
 
-#: incidencerecurrence.cpp:583
+#: incidencerecurrence.cpp:588
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1186,7 +1186,7 @@ msgid_plural "occurrences"
 msgstr[0] "occorrenza"
 msgstr[1] "occorrenze"
 
-#: incidencerecurrence.cpp:607
+#: incidencerecurrence.cpp:612
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1194,7 +1194,7 @@ msgid_plural "weeks"
 msgstr[0] "settimana"
 msgstr[1] "settimane"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1202,7 +1202,7 @@ msgid_plural "months"
 msgstr[0] "mese"
 msgstr[1] "mesi"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:620
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1210,7 +1210,7 @@ msgid_plural "years"
 msgstr[0] "anno"
 msgstr[1] "anni"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:624
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1218,7 +1218,7 @@ msgid_plural "days"
 msgstr[0] "giorno"
 msgstr[1] "giorni"
 
-#: incidencerecurrence.cpp:627
+#: incidencerecurrence.cpp:632
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "

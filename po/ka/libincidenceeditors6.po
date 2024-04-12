@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:38+0000\n"
+"POT-Creation-Date: 2024-04-12 00:38+0000\n"
 "PO-Revision-Date: 2023-10-07 05:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -142,7 +142,7 @@ msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:117
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -1069,7 +1069,7 @@ msgstr "მთლიანი შეტყობინების მიმა�
 msgid "Attach message without attachments"
 msgstr "მიმაგრების გარეშე მყოფი შეტყობინებების მიმაგრება"
 
-#: incidencerecurrence.cpp:133
+#: incidencerecurrence.cpp:138
 #, kde-format
 msgctxt ""
 "In several of the messages below, an ordinal number is substituted into the "
@@ -1079,7 +1079,7 @@ msgctxt ""
 msgid "0"
 msgstr "0"
 
-#: incidencerecurrence.cpp:458
+#: incidencerecurrence.cpp:463
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1088,84 +1088,84 @@ msgstr ""
 "განმეორებადი მოვლენა ან დაგეგმილი, სულ ცოტა, ერთხელ უნდა ხდებოდეს. მოირგეთ "
 "გამეორების პარამეტრები."
 
-#: incidencerecurrence.cpp:464
+#: incidencerecurrence.cpp:469
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "ინციდენტის დაწყების თარიღი არასწორია."
 
-#: incidencerecurrence.cpp:470
+#: incidencerecurrence.cpp:475
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "გამეორების დასრულების თარიღი არასწორია."
 
-#: incidencerecurrence.cpp:513
+#: incidencerecurrence.cpp:518
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1"
 
-#: incidencerecurrence.cpp:516
+#: incidencerecurrence.cpp:521
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "%1 ბოლო დღემდე"
 
-#: incidencerecurrence.cpp:519
+#: incidencerecurrence.cpp:524
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:525
+#: incidencerecurrence.cpp:530
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "ბოლო %1"
 
-#: incidencerecurrence.cpp:527
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1 ბოლო %2-მდე"
 
-#: incidencerecurrence.cpp:543
+#: incidencerecurrence.cpp:548
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 %2-ის"
 
-#: incidencerecurrence.cpp:546
+#: incidencerecurrence.cpp:551
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%1-დან %2-ის ბოლო დღემე"
 
-#: incidencerecurrence.cpp:549
+#: incidencerecurrence.cpp:554
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%1 %2 %3-ის"
 
-#: incidencerecurrence.cpp:556
+#: incidencerecurrence.cpp:561
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "%2-ის ბოლო %1"
 
-#: incidencerecurrence.cpp:561
+#: incidencerecurrence.cpp:566
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%1 %3-ის ბოლო %2-მდე "
 
-#: incidencerecurrence.cpp:568
+#: incidencerecurrence.cpp:573
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "წელიწადის %1-ე დღე"
 
-#: incidencerecurrence.cpp:583
+#: incidencerecurrence.cpp:588
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1173,7 +1173,7 @@ msgid_plural "occurrences"
 msgstr[0] "შემთხვევა"
 msgstr[1] "შემთხვევა"
 
-#: incidencerecurrence.cpp:607
+#: incidencerecurrence.cpp:612
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1181,7 +1181,7 @@ msgid_plural "weeks"
 msgstr[0] "კვირა"
 msgstr[1] "კვირა"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1189,7 +1189,7 @@ msgid_plural "months"
 msgstr[0] "თვე"
 msgstr[1] "თვე"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:620
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1197,7 +1197,7 @@ msgid_plural "years"
 msgstr[0] "წელი"
 msgstr[1] "წელი"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:624
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1205,7 +1205,7 @@ msgid_plural "days"
 msgstr[0] "დღე"
 msgstr[1] "დღე"
 
-#: incidencerecurrence.cpp:627
+#: incidencerecurrence.cpp:632
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
