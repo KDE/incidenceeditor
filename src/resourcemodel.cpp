@@ -16,7 +16,7 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     : QAbstractItemModel(parent)
 {
     this->mHeaders = headers;
-    mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPWidgets::LdapClient(0)));
+    mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPCore::LdapClient(0)));
     const QStringList attrs = QStringList() << KLDAPWidgets::LdapClientSearch::defaultAttributes() << QStringLiteral("uniqueMember");
     mLdapSearchCollections = new KLDAPWidgets::LdapClientSearch(attrs, this);
     mLdapSearch = new KLDAPWidgets::LdapClientSearch(headers, this);

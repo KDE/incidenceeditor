@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <KLDAPWidgets/LdapClient>
+#include <KLDAPCore/LdapClient>
 
 #include <KLDAPCore/LdapObject>
 
@@ -33,7 +33,7 @@ public:
 
     ResourceItem(const KLDAPCore::LdapDN &dn,
                  const QStringList &attrs,
-                 const KLDAPWidgets::LdapClient &ldapClient,
+                 const KLDAPCore::LdapClient &ldapClient,
                  const ResourceItem::Ptr &parent = ResourceItem::Ptr());
     ~ResourceItem() override;
 
@@ -76,7 +76,7 @@ public:
     /* The used ldapClient.
      *
      */
-    const KLDAPWidgets::LdapClient &ldapClient() const;
+    const KLDAPCore::LdapClient &ldapClient() const;
 
     /* Start querying the ldapServer for a object that name is dn
      *
@@ -102,13 +102,13 @@ private:
     /* ldapClient to request
      *
      */
-    KLDAPWidgets::LdapClient mLdapClient;
+    KLDAPCore::LdapClient mLdapClient;
 
 private:
     /* Answer of the LdapServer for the given dn
      *
      */
-    void slotLDAPResult(const KLDAPWidgets::LdapClient &, const KLDAPCore::LdapObject &);
+    void slotLDAPResult(const KLDAPCore::LdapClient &, const KLDAPCore::LdapObject &);
 };
 }
 

@@ -183,7 +183,7 @@ void ResourceManagement::slotShowDetails(const QModelIndex &current)
     showDetails(item->ldapObject(), item->ldapClient());
 }
 
-void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLDAPWidgets::LdapClient &client)
+void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLDAPCore::LdapClient &client)
 {
     // Clean up formDetails
     QLayoutItem *child = nullptr;

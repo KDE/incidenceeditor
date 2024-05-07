@@ -10,7 +10,7 @@
 
 using namespace IncidenceEditorNG;
 
-ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs, const KLDAPWidgets::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
+ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs, const KLDAPCore::LdapClient &ldapClient, const ResourceItem::Ptr &parent)
     : parentItem(parent)
     , dn(dn)
     , mAttrs(attrs)
@@ -23,7 +23,7 @@ ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs
         server.setBaseDn(dn);
         mLdapClient.setServer(server);
 
-        connect(&mLdapClient, &KLDAPWidgets::LdapClient::result, this, &ResourceItem::slotLDAPResult);
+        connect(&mLdapClient, &KLDAPCore::LdapClient::result, this, &ResourceItem::slotLDAPResult);
 
         mAttrs << QStringLiteral("uniqueMember");
         mLdapClient.setAttributes(attrs);
@@ -129,12 +129,12 @@ void ResourceItem::setLdapObject(const KLDAPCore::LdapObject &obj)
     slotLDAPResult(mLdapClient, obj);
 }
 
-const KLDAPWidgets::LdapClient &ResourceItem::ldapClient() const
+const KLDAPCore::LdapClient &ResourceItem::ldapClient() const
 {
     return mLdapClient;
 }
 
-void ResourceItem::slotLDAPResult(const KLDAPWidgets::LdapClient &client, const KLDAPCore::LdapObject &obj)
+void ResourceItem::slotLDAPResult(const KLDAPCore::LdapClient &client, const KLDAPCore::LdapObject &obj)
 {
     Q_UNUSED(client)
     mLdapObject = obj;
