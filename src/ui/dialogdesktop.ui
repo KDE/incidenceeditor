@@ -833,7 +833,7 @@
               <string comment="@info:whatsthis">Opens the scheduling dialog, which will assist in picking a time slot that works for all attendees.</string>
              </property>
              <property name="text">
-              <string comment="@action:button">Schedule...</string>
+              <string comment="@action:button">Schedule…</string>
              </property>
             </widget>
            </item>
@@ -869,7 +869,7 @@
               <string comment="@info:whatsthis">Opens your address book, allowing you to select new attendees from it.</string>
              </property>
              <property name="text">
-              <string comment="@action:button">Select Attendees...</string>
+              <string comment="@action:button">Select Attendees…</string>
              </property>
              <property name="icon">
 		     <iconset theme="select"/>
@@ -996,7 +996,7 @@
            <item>
             <widget class="QPushButton" name="mFindResourcesButton">
              <property name="text">
-              <string>Find Resources...</string>
+              <string>Find Resources…</string>
              </property>
              <property name="icon">
 		     <iconset theme="search"/>

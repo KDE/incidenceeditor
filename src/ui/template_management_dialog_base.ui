@@ -59,7 +59,7 @@
           <string>Click on this button to create a new template based on the current settings in the editor. You can use this template to quickly add new items in the future.</string>
          </property>
          <property name="text">
-          <string>&amp;New...</string>
+          <string>&amp;New…</string>
          </property>
         </widget>
        </item>

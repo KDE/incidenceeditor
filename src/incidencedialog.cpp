@@ -684,7 +684,7 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *pa
     d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
     auto defaultButton = d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults);
-    defaultButton->setText(i18nc("@action:button", "&Templates..."));
+    defaultButton->setText(i18nc("@action:button", "&Templates…"));
     defaultButton->setIcon(QIcon::fromTheme(QStringLiteral("project-development-new-template")));
     defaultButton->setToolTip(i18nc("@info:tooltip", "Manage templates for this item"));
     defaultButton->setWhatsThis(i18nc("@info:whatsthis",

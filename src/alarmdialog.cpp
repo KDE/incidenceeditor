@@ -77,7 +77,7 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
         // TODO: Also allow alarms at fixed times, not relative to start/end
         offset = alarm->startOffset().asSeconds();
     }
-    // Negative offset means before the start/end...
+    // Negative offset means before the start/end…
     if (offset < 0) {
         offset = -offset;
     } else {

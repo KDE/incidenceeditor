@@ -154,7 +154,7 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
         case Available:
             return i18nc("Is attendee available for incidence", "Available");
         case Status:
-            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, ...)", "Status");
+            return i18nc("Status of attendee in an incidence (accepted, declined, delegated, …)", "Status");
         case CuType:
             return i18nc("Type of calendar user (vCard attribute)", "User Type");
         case Response:

@@ -479,8 +479,7 @@ void IncidenceAttachment::setupActions()
     ac->addAction(QStringLiteral("view"), mOpenAction);
     mPopupMenu->addAction(mOpenAction);
 
-    mSaveAsAction =
-        new QAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18nc("@action:inmenu save the attachment to a file", "Save As..."), this);
+    mSaveAsAction = new QAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18nc("@action:inmenu save the attachment to a file", "Save As…"), this);
     connect(mSaveAsAction, &QAction::triggered, this, &IncidenceAttachment::saveSelectedAttachments);
     mPopupMenu->addAction(mSaveAsAction);
     mPopupMenu->addSeparator();
@@ -505,7 +504,7 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addSeparator();
 
     mEditAction = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")),
-                              i18nc("@action:inmenu show a dialog used to edit the attachment", "&Properties..."),
+                              i18nc("@action:inmenu show a dialog used to edit the attachment", "&Properties…"),
                               this);
     connect(mEditAction, &QAction::triggered, this, &IncidenceAttachment::editSelectedAttachments);
     ac->addAction(QStringLiteral("edit"), mEditAction);
