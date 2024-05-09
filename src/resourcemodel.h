@@ -9,7 +9,7 @@
 
 #include "resourceitem.h"
 
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 
 #include <QAbstractItemModel>
 #include <QModelIndex>
@@ -63,12 +63,12 @@ private:
     /* Search for collections of resources
      *
      */
-    KLDAPWidgets::LdapClientSearch *mLdapSearchCollections = nullptr;
+    KLDAPCore::LdapClientSearch *mLdapSearchCollections = nullptr;
 
     /* Search for matching resources
      *
      */
-    KLDAPWidgets::LdapClientSearch *mLdapSearch = nullptr;
+    KLDAPCore::LdapClientSearch *mLdapSearch = nullptr;
 
     /* Map from dn of resource -> collectionItem
      * A Resource can be part of different collection, so a QMuliMap is needed
@@ -100,11 +100,11 @@ private:
     /* Slot for founded collections
      *
      */
-    void slotLDAPCollectionData(const KLDAPWidgets::LdapResultObject::List &);
+    void slotLDAPCollectionData(const KLDAPCore::LdapResultObject::List &);
 
     /* Slot for matching resources
      *
      */
-    void slotLDAPSearchData(const KLDAPWidgets::LdapResultObject::List &);
+    void slotLDAPSearchData(const KLDAPCore::LdapResultObject::List &);
 };
 }

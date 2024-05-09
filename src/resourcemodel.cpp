@@ -17,9 +17,9 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
 {
     this->mHeaders = headers;
     mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPCore::LdapClient(0)));
-    const QStringList attrs = QStringList() << KLDAPWidgets::LdapClientSearch::defaultAttributes() << QStringLiteral("uniqueMember");
-    mLdapSearchCollections = new KLDAPWidgets::LdapClientSearch(attrs, this);
-    mLdapSearch = new KLDAPWidgets::LdapClientSearch(headers, this);
+    const QStringList attrs = QStringList() << KLDAPCore::LdapClientSearch::defaultAttributes() << QStringLiteral("uniqueMember");
+    mLdapSearchCollections = new KLDAPCore::LdapClientSearch(attrs, this);
+    mLdapSearch = new KLDAPCore::LdapClientSearch(headers, this);
 
     mLdapSearchCollections->setFilter(
         QStringLiteral("&(ou=Resources,*)(objectClass=kolabGroupOfUniqueNames)(objectclass=groupofurls)(!(objectclass=nstombstone))(mail=*)"
@@ -29,11 +29,11 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
                        "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
 
     connect(mLdapSearchCollections,
-            qOverload<const KLDAPWidgets::LdapResultObject::List &>(&KLDAPWidgets::LdapClientSearch ::searchData),
+            qOverload<const KLDAPCore::LdapResultObject::List &>(&KLDAPCore::LdapClientSearch ::searchData),
             this,
             &ResourceModel::slotLDAPCollectionData);
     connect(mLdapSearch,
-            qOverload<const KLDAPWidgets::LdapResultObject::List &>(&KLDAPWidgets::LdapClientSearch::searchData),
+            qOverload<const KLDAPCore::LdapResultObject::List &>(&KLDAPCore::LdapClientSearch::searchData),
             this,
             &ResourceModel::slotLDAPSearchData);
 
@@ -172,7 +172,7 @@ void ResourceModel::startSearch()
     }
 }
 
-void ResourceModel::slotLDAPCollectionData(const KLDAPWidgets::LdapResultObject::List &results)
+void ResourceModel::slotLDAPCollectionData(const KLDAPCore::LdapResultObject::List &results)
 {
     Q_EMIT layoutAboutToBeChanged();
 
@@ -182,7 +182,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAPWidgets::LdapResultObject:
 
     // qDebug() <<  "Found ldapCollections";
 
-    for (const KLDAPWidgets::LdapResultObject &result : std::as_const(results)) {
+    for (const KLDAPCore::LdapResultObject &result : std::as_const(results)) {
         ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
@@ -201,9 +201,9 @@ void ResourceModel::slotLDAPCollectionData(const KLDAPWidgets::LdapResultObject:
     startSearch();
 }
 
-void ResourceModel::slotLDAPSearchData(const KLDAPWidgets::LdapResultObject::List &results)
+void ResourceModel::slotLDAPSearchData(const KLDAPCore::LdapResultObject::List &results)
 {
-    for (const KLDAPWidgets::LdapResultObject &result : std::as_const(results)) {
+    for (const KLDAPCore::LdapResultObject &result : std::as_const(results)) {
         // Add the found items to all collections, where it is member
         QList<ResourceItem::Ptr> parents = mLdapCollectionsMap.values(result.object.dn().toString());
         if (parents.isEmpty()) {
