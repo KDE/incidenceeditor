@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -249,9 +249,11 @@ msgid "Available"
 msgstr "Dostupný"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Stav"
 
@@ -590,25 +592,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Otvoriť"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Uložiť ako..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "O&dstrániť"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Vlastnosti..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1006,9 +1012,11 @@ msgid "Discard changes and close dialog"
 msgstr "Zahodiť zmeny a zavrieť dialóg"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "Ša&blóny..."
 
 #: incidencedialog.cpp:689
@@ -2193,9 +2201,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Rozvrh..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2221,10 +2231,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Vybrať účastníkov..."
+msgid "Select Attendees…"
+msgstr "Vybrať účastníkov"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2258,8 +2269,9 @@ msgstr "Knižný zdroj"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Nájsť zdroje..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2699,8 +2711,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
-msgstr "&Nový..."
+msgid "&New…"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2906,6 +2918,13 @@ msgstr ""
 "Zobrazí stav voľný/zaneprázdnený pre všetkých účastníkov. Dvojklikom na "
 "položku účastníka v zozname môžete zadať umiestnenie ich informácií voľný/"
 "zaneprázdnený."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Vybrať účastníkov..."
+
+#~ msgid "&New..."
+#~ msgstr "&Nový..."
 
 #~ msgctxt "Alarm action"
 #~ msgid "Send an email"

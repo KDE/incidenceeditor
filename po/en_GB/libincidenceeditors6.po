@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2022-01-01 15:40+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -246,9 +246,11 @@ msgid "Available"
 msgstr "Available"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Status"
 
@@ -581,25 +583,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Open"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Save As..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Remove"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Properties..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -984,9 +990,11 @@ msgid "Discard changes and close dialog"
 msgstr "Discard changes and close dialogue"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "&Templates..."
 
 #: incidencedialog.cpp:689
@@ -2156,9 +2164,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Schedule..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2183,10 +2193,12 @@ msgstr "Opens your address book, allowing you to select new attendees from it."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Select Attendees..."
+msgid "Select Attendees…"
+msgstr "Select Attendees"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2220,8 +2232,9 @@ msgstr "Book Resource"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Find Resources..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2652,9 +2665,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
-#, kde-format
-msgid "&New..."
-msgstr "&New..."
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "&New…"
+msgstr "&New"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2860,6 +2874,13 @@ msgstr ""
 "Shows the Free/Busy status of all attendees. Double-clicking on an "
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Select Attendees..."
+
+#~ msgid "&New..."
+#~ msgstr "&New..."
 
 #~ msgctxt "Alarm action"
 #~ msgid "Send an email"
@@ -8793,9 +8814,6 @@ msgstr ""
 
 #~ msgid "R&emove"
 #~ msgstr "R&emove"
-
-#~ msgid "&New"
-#~ msgstr "&New"
 
 #~ msgid "Filter Details"
 #~ msgstr "Filter Details"

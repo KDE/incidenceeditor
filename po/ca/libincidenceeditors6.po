@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-10-06 10:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -247,9 +247,11 @@ msgid "Available"
 msgstr "Disponible"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Estat"
 
@@ -584,25 +586,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Obre"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Desa com a..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Elimina"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Propietats..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -988,9 +994,11 @@ msgid "Discard changes and close dialog"
 msgstr "Descarta els canvis i tanca el diàleg"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "&Plantilles..."
 
 #: incidencedialog.cpp:689
@@ -2176,9 +2184,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Planifica..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2203,10 +2213,12 @@ msgstr "Obre la llibreta d'adreces, permetent-vos seleccionar nous assistents."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Selecciona els assistents..."
+msgid "Select Attendees…"
+msgstr "Selecció dels assistents"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2240,8 +2252,9 @@ msgstr "Reserva de recurs"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Cerca un recurs..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2679,8 +2692,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
-msgstr "&Nova..."
+msgid "&New…"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2882,3 +2895,10 @@ msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer clic doble "
 "sobre una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seva informació de lliure/ocupat."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Selecciona els assistents..."
+
+#~ msgid "&New..."
+#~ msgstr "&Nova..."

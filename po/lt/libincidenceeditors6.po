@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -280,8 +280,7 @@ msgstr "Išjungti"
 
 #: attendeetablemodel.cpp:157
 #, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr ""
 
@@ -646,25 +645,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Atverti"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Įrašyti kaip..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Pašalinti"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Savybės..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1060,7 +1063,7 @@ msgstr "Atšaukti pakeitimus ir uždaryti dialogą"
 #| msgctxt "@action:button"
 #| msgid "Manage &Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "Tvarkyti šablonus..."
 
 #: incidencedialog.cpp:689
@@ -2272,7 +2275,7 @@ msgstr ""
 #| msgctxt "@action:button"
 #| msgid "Reschedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Perplanuoti..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2297,9 +2300,11 @@ msgstr "Atveria jūsų adresų knygutę ir leidžia pasirinkti iš jos dalyvius.
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Select Attendees..."
 msgctxt "@action:button"
-msgid "Select Attendees..."
+msgid "Select Attendees…"
 msgstr "Parinkite dalyvius..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -2335,7 +2340,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
 #, kde-format
-msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2774,8 +2779,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
-msgstr "&Naujas..."
+msgid "&New…"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2964,6 +2969,13 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Parinkite dalyvius..."
+
+#~ msgid "&New..."
+#~ msgstr "&Naujas..."
 
 #, fuzzy
 #~| msgid "Send an email"

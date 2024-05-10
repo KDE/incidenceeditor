@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-10-07 05:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -243,9 +243,11 @@ msgid "Available"
 msgstr "ხელმისაწვდომი"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "მდგომარეობა"
 
@@ -579,25 +581,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&გახსნა"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "შენახვა, როგორც..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&წაშლა"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&თვისებები..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -980,9 +986,11 @@ msgid "Discard changes and close dialog"
 msgstr "ცვლილებების მოცილება და ფანჯრის დახურვა"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "&შაბლონები..."
 
 #: incidencedialog.cpp:689
@@ -2158,9 +2166,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "დაგეგმავა..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2187,10 +2197,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "აირჩიეთ დამსწრეები..."
+msgid "Select Attendees…"
+msgstr "აირჩიეთ დამსწრეები"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2224,8 +2236,9 @@ msgstr "რესურსის დარეზერვება"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "რესურსების პოვნა..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2660,8 +2673,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
-msgstr "&ახალი..."
+msgid "&New…"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2861,3 +2874,10 @@ msgstr ""
 "ყველა დამსწრის თავისუფალი/დაკავებულობის სტატუსის ჩვენება. დამსრის ჩანაწერზე "
 "ორმაგი-წკაპი სიაში საშუალებას მოგცემთ, მათი თავისუფალი/დაკავებულობის "
 "ინფორმაციის მდებარეობა მიუთითოთ."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "აირჩიეთ დამსწრეები..."
+
+#~ msgid "&New..."
+#~ msgstr "&ახალი..."

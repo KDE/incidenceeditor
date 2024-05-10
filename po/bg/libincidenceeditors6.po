@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2023-10-09 15:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -242,9 +242,11 @@ msgid "Available"
 msgstr "Наличен"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Статус"
 
@@ -579,25 +581,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Отваряне"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Запазване като..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Премахване"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Свойства..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -981,9 +987,11 @@ msgid "Discard changes and close dialog"
 msgstr "Отхвърляне на промените и затваряне на диалоговия прозорец"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "&Шаблони..."
 
 #: incidencedialog.cpp:689
@@ -2163,9 +2171,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "График ..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2192,10 +2202,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Избиране на участници ..."
+msgid "Select Attendees…"
+msgstr "Избор на участници"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2229,8 +2241,9 @@ msgstr "Книжен ресурс"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Намиране на ресурси ..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2665,8 +2678,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
-msgstr "&Нов..."
+msgid "&New…"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2868,3 +2881,10 @@ msgstr ""
 "Показва състоянието на заетост на всички участници. Двойното щракване върху "
 "записа на участник в списъка ще ви позволи да въведете местоположението на "
 "информацията за заетост."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Избиране на участници ..."
+
+#~ msgid "&New..."
+#~ msgstr "&Нов..."

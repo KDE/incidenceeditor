@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2021-11-06 14:32+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -244,9 +244,11 @@ msgid "Available"
 msgstr "Tillgänglig"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Status"
 
@@ -579,25 +581,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "Ö&ppna"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Spara som..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Ta bort"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "&Egenskaper..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -981,9 +987,11 @@ msgid "Discard changes and close dialog"
 msgstr "Kasta ändringar och stäng dialogrutan"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "&Mallar..."
 
 #: incidencedialog.cpp:689
@@ -2157,9 +2165,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Schema..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2184,10 +2194,12 @@ msgstr "Öppnar adressboken, och låter dig välja nya deltagare från den."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Välj deltagare..."
+msgid "Select Attendees…"
+msgstr "Välj deltagare"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2221,8 +2233,9 @@ msgstr "Boka resurs"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Sök resurser..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2656,9 +2669,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
-#, kde-format
-msgid "&New..."
-msgstr "&Ny..."
+#, fuzzy, kde-format
+#| msgctxt "@action:button new attendee"
+#| msgid "&New"
+msgid "&New…"
+msgstr "&Ny"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2866,6 +2881,13 @@ msgstr ""
 "Visar ledig-upptagen status för alla deltagare. Genom att dubbelklicka på en "
 "deltagares post i listan får du möjlighet att skriva in platsen för deras "
 "ledig-upptagen information."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Välj deltagare..."
+
+#~ msgid "&New..."
+#~ msgstr "&Ny..."
 
 #~ msgctxt "Alarm action"
 #~ msgid "Send an email"
@@ -3975,10 +3997,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Redigerar om e-post ska skickas till deltagaren som markerats i listan "
 #~ "ovan för att begära ett svar angående deltagande."
-
-#~ msgctxt "@action:button new attendee"
-#~ msgid "&New"
-#~ msgstr "&Ny"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Add an attendee"

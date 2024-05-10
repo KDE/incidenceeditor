@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2010-05-08 12:40-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -230,8 +230,7 @@ msgstr ""
 
 #: attendeetablemodel.cpp:157
 #, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr ""
 
@@ -558,25 +557,25 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr ""
 
-#: incidenceattachment.cpp:483
+#: incidenceattachment.cpp:482
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr ""
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr ""
 
-#: incidenceattachment.cpp:508
+#: incidenceattachment.cpp:507
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr ""
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -943,7 +942,7 @@ msgstr ""
 #: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr ""
 
 #: incidencedialog.cpp:689
@@ -2070,7 +2069,7 @@ msgstr ""
 #: ui/dialogdesktop.ui:836
 #, kde-format
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2097,7 +2096,7 @@ msgstr ""
 #: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@action:button"
-msgid "Select Attendees..."
+msgid "Select Attendees…"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
@@ -2133,7 +2132,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
 #, kde-format
-msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2551,7 +2550,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
-msgid "&New..."
+msgid "&New…"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)

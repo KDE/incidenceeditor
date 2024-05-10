@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:38+0000\n"
+"POT-Creation-Date: 2024-05-10 00:38+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -242,9 +242,11 @@ msgid "Available"
 msgstr "Saadaval"
 
 #: attendeetablemodel.cpp:157
-#, kde-format
-msgctxt ""
-"Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
+#| msgid "Status"
+msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Olek"
 
@@ -576,25 +578,29 @@ msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Ava"
 
-#: incidenceattachment.cpp:483
-#, kde-format
+#: incidenceattachment.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu save the attachment to a file"
+#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
-msgid "Save As..."
+msgid "Save As…"
 msgstr "Salvesta kui..."
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:499
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Eemalda"
 
-#: incidenceattachment.cpp:508
-#, kde-format
+#: incidenceattachment.cpp:507
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
+#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
-msgid "&Properties..."
+msgid "&Properties…"
 msgstr "O&madused..."
 
-#: incidenceattachment.cpp:519
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -997,9 +1003,11 @@ msgid "Discard changes and close dialog"
 msgstr "Unusta muudatused ja sulge dialoog"
 
 #: incidencedialog.cpp:687
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Templates..."
 msgctxt "@action:button"
-msgid "&Templates..."
+msgid "&Templates…"
 msgstr "Malli&d..."
 
 #: incidencedialog.cpp:689
@@ -2171,9 +2179,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Schedule..."
 msgctxt "@action:button"
-msgid "Schedule..."
+msgid "Schedule…"
 msgstr "Muuda aega..."
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2198,10 +2208,12 @@ msgstr "Avab aadressiraamatu, kust saab valida uusi osalejaid."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Attendees"
 msgctxt "@action:button"
-msgid "Select Attendees..."
-msgstr "Vali osalejad..."
+msgid "Select Attendees…"
+msgstr "Osalejate valimine"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2235,8 +2247,9 @@ msgstr "Broneeri ressurss"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, kde-format
-msgid "Find Resources..."
+#, fuzzy, kde-format
+#| msgid "Find Resources..."
+msgid "Find Resources…"
 msgstr "Otsi ressursse..."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
@@ -2669,9 +2682,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
-#, kde-format
-msgid "&New..."
-msgstr "&Uus..."
+#, fuzzy, kde-format
+#| msgctxt "@action:button new attendee"
+#| msgid "&New"
+msgid "&New…"
+msgstr "&Uus"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2875,6 +2890,13 @@ msgid ""
 msgstr ""
 "Näitab kõigi osalejate vaba/hõivatud infot. Topeltklõps osaleja nimel lubab "
 "sisestada tema vaba/hõivatud info asukoha."
+
+#~ msgctxt "@action:button"
+#~ msgid "Select Attendees..."
+#~ msgstr "Vali osalejad..."
+
+#~ msgid "&New..."
+#~ msgstr "&Uus..."
 
 #~ msgctxt "Alarm action"
 #~ msgid "Send an email"
@@ -3947,10 +3969,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Võimaldab muuta seda, kas nimekirjas valitud osalejalt oodatakse "
 #~ "osalemise kohta vastust või mitte."
-
-#~ msgctxt "@action:button new attendee"
-#~ msgid "&New"
-#~ msgstr "&Uus"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Add an attendee"
