@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2023-11-12 16:39+0100\n"
+"PO-Revision-Date: 2024-05-10 09:14+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -242,10 +242,7 @@ msgid "Available"
 msgstr "Disponebla"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Statuso"
@@ -580,12 +577,10 @@ msgid "&Open"
 msgstr "&Malfermi"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Konservi kiel..."
+msgstr "Konservi Kiel…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -594,12 +589,10 @@ msgid "&Remove"
 msgstr "Fo&rigi"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Proprecoj..."
+msgstr "&Proprecoj…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -985,12 +978,10 @@ msgid "Discard changes and close dialog"
 msgstr "Forĵeti ŝanĝojn kaj fermi dialogon"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "Ŝa&blonoj..."
+msgstr "Ŝa&blonoj…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2161,12 +2152,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Horaro..."
+msgstr "Horaro…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2192,12 +2181,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Elekti Ĉeestantojn"
+msgstr "Elekti Ĉeestantojn…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2231,10 +2218,9 @@ msgstr "Libro-Rimedo"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "Trovi Rimedojn..."
+msgstr "Trovi Rimedojn…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2668,7 +2654,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "&Nova…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2867,10 +2853,3 @@ msgstr ""
 "Montras la staton de Libera/Okupita de ĉiuj partoprenantoj. Duobla klako sur "
 "la enskribo de ĉeestanto en la listo permesos al vi enigi la lokon de ilia "
 "Libera/Okupita Informo."
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Elekti partoprenantojn..."
-
-#~ msgid "&New..."
-#~ msgstr "&Nova..."

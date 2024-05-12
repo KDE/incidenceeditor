@@ -233,10 +233,7 @@ msgid "Available"
 msgstr "可用"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "状态"
@@ -567,12 +564,10 @@ msgid "&Open"
 msgstr "打开(&O)"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "另存为..."
+msgstr "另存为…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -581,12 +576,10 @@ msgid "&Remove"
 msgstr "删除(&R)"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "属性(&P)..."
+msgstr "属性(&P)…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -614,13 +607,13 @@ msgstr "无效的电子邮件地址"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "邀请"
 
 #: incidenceattendee.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr ""
+msgstr "不邀请"
 
 #: incidenceattendee.cpp:443
 #, kde-format
@@ -649,13 +642,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr ""
+msgstr "更改参与者"
 
 #: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr ""
+msgstr "不更改"
 
 #: incidencedatetime.cpp:217
 #, kde-format
@@ -964,12 +957,10 @@ msgid "Discard changes and close dialog"
 msgstr "丢弃更改并关闭对话框"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "模板(&T)..."
+msgstr "模板(&T)…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2103,12 +2094,10 @@ msgstr "打开日程安排对话框，并帮助您选择所有参与者都有空
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "日程..."
+msgstr "日程…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2132,12 +2121,10 @@ msgstr "打开您的地址簿，允许您从中选择新的参与者。"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "选择参与者"
+msgstr "选择参与者…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2149,13 +2136,13 @@ msgstr "隐私设置"
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "签名邀请电子邮件"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "加密邀请电子邮件"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2171,10 +2158,9 @@ msgstr "预订资源"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "查找资源..."
+msgstr "查找资源…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2596,7 +2582,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "新建(&N)…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2660,6 +2646,9 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"从下面的一段选择甘特图缩放级别：<nl/>“小时”显示数小时的范围。<nl/>'Day' 显示"
+"几天的范围。<nl/>'每周' 显示几周的范围,<nl/>和 '月' 显示几个月的范围.<nl/>"
+"在“自动”时选择最适合当前事件或待办事项的范围。"
 
 #: visualfreebusywidget.cpp:154
 #, kde-format
@@ -2779,10 +2768,3 @@ msgid ""
 msgstr ""
 "显示所有参与者的忙/闲状态。双击一名列表中的参与者将允许您输入他们的忙/闲信息"
 "字段。"
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "选择参与者..."
-
-#~ msgid "&New..."
-#~ msgstr "新建(&N)..."

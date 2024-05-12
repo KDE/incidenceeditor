@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 16:49+0300\n"
+"PO-Revision-Date: 2024-05-10 13:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -246,10 +246,7 @@ msgid "Available"
 msgstr "Kullanılabilir"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Durum"
@@ -583,12 +580,10 @@ msgid "&Open"
 msgstr "&Aç"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Farklı Kaydet..."
+msgstr "Farklı Kaydet…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -597,12 +592,10 @@ msgid "&Remove"
 msgstr "&Kaldır"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Özellikler..."
+msgstr "&Özellikler…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -867,13 +860,13 @@ msgstr " (H)"
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
-msgstr "'%1' şablonu bulunamadı."
+msgstr "“%1” şablonu bulunamadı."
 
 #: incidencedialog.cpp:316
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "'%1' şablon dosyası yüklenirken hata."
+msgstr "“%1” şablon dosyası yüklenirken hata."
 
 #: incidencedialog.cpp:322
 #, kde-format
@@ -988,12 +981,10 @@ msgid "Discard changes and close dialog"
 msgstr "Değişiklikleri iptal et ve diyaloğu kapat"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Şablonlar..."
+msgstr "&Şablonlar…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2077,10 +2068,10 @@ msgid ""
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
 "Bu etkinliğin veya yapılacak işin erişiminin gizli olup olmadığını belirler. "
-"Şimdilik K Organizatör'ün bu seçeneği kullanmadığını, bu nedenle kısıtlama "
+"Şimdilik K Organizatör’ün bu seçeneği kullanmadığını, bu nedenle kısıtlama "
 "uygulamaları grup yazılımı sunucuna bağlı olacağını unutmayın. Bu, özel veya "
 "kişisel olarak işaretlenen etkinlik veya yapılacak işlerin, diğer kişilere "
-"de görülebilir olma ihtimali demektir."
+"de görülebilir olma olasılığı demektir."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
@@ -2135,7 +2126,7 @@ msgid ""
 "and from your address book."
 msgstr ""
 "Yapılacaklar veya etkinliğin düzenleyicisine karşılık gelen kimliği ayarlar. "
-"Kimlikler K Organizatör yapılandırmasının 'Kişisel' bölümünden "
+"Kimlikler K Organizatör yapılandırmasının ‘Kişisel’ bölümünden "
 "ayarlanabilir. Buna ek olarak kimlikler, K Posta ayarlarınızdan ve adres "
 "defterinizden toplanır."
 
@@ -2166,12 +2157,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Zamanla..."
+msgstr "Planla…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2195,12 +2184,10 @@ msgstr "Katılımcıları seçmenizi sağlayan adres defterinizi açar."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Katılımcıları Seç"
+msgstr "Katılımcıları Seç…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2234,10 +2221,9 @@ msgstr "Kitap Özkaynağı"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "Kaynakları Bul..."
+msgstr "Özaynaklar Bul…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2613,7 +2599,7 @@ msgstr "12 Haziran Pazartesi"
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr "saat 10:00’e"
+msgstr "saat 10:00’a"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
@@ -2671,7 +2657,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "&Yeni…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2740,9 +2726,9 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "Gantt grafik yakınlaştırma ayarını aşağıdakilerden biri olarak seçin:<nl/"
-">'Otomatik' geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
-"<nl/>'Saat', birkaç saatlik erimi,<nl/>'Gün' birkaç günlük erimi,<nl/"
-">'Hafta' birkaç haftalık erimi,<nl/>ve  'Ay' birkaç aylık erimi gösterir."
+">‘Otomatik’ geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
+"<nl/>‘Saat’, birkaç saatlik erimi,<nl/>‘Gün’ birkaç günlük erimi,<nl/"
+">‘Hafta’ birkaç haftalık erimi,<nl/>ve ‘Ay’ birkaç aylık erimi gösterir."
 
 #: visualfreebusywidget.cpp:154
 #, kde-format
