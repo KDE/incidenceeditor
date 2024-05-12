@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 16:49+0300\n"
+"PO-Revision-Date: 2024-05-10 13:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -861,13 +861,13 @@ msgstr " (H)"
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
-msgstr "'%1' şablonu bulunamadı."
+msgstr "“%1” şablonu bulunamadı."
 
 #: incidencedialog.cpp:316
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "'%1' şablon dosyası yüklenirken hata."
+msgstr "“%1” şablon dosyası yüklenirken hata."
 
 #: incidencedialog.cpp:322
 #, kde-format
@@ -2069,10 +2069,10 @@ msgid ""
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
 "Bu etkinliğin veya yapılacak işin erişiminin gizli olup olmadığını belirler. "
-"Şimdilik K Organizatör'ün bu seçeneği kullanmadığını, bu nedenle kısıtlama "
+"Şimdilik K Organizatör’ün bu seçeneği kullanmadığını, bu nedenle kısıtlama "
 "uygulamaları grup yazılımı sunucuna bağlı olacağını unutmayın. Bu, özel veya "
 "kişisel olarak işaretlenen etkinlik veya yapılacak işlerin, diğer kişilere "
-"de görülebilir olma ihtimali demektir."
+"de görülebilir olma olasılığı demektir."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
 #: ui/dialogdesktop.ui:656
@@ -2127,7 +2127,7 @@ msgid ""
 "and from your address book."
 msgstr ""
 "Yapılacaklar veya etkinliğin düzenleyicisine karşılık gelen kimliği ayarlar. "
-"Kimlikler K Organizatör yapılandırmasının 'Kişisel' bölümünden "
+"Kimlikler K Organizatör yapılandırmasının ‘Kişisel’ bölümünden "
 "ayarlanabilir. Buna ek olarak kimlikler, K Posta ayarlarınızdan ve adres "
 "defterinizden toplanır."
 
@@ -2600,7 +2600,7 @@ msgstr "12 Haziran Pazartesi"
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr "saat 10:00’e"
+msgstr "saat 10:00’a"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
@@ -2727,9 +2727,9 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "Gantt grafik yakınlaştırma ayarını aşağıdakilerden biri olarak seçin:<nl/"
-">'Otomatik' geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
-"<nl/>'Saat', birkaç saatlik erimi,<nl/>'Gün' birkaç günlük erimi,<nl/"
-">'Hafta' birkaç haftalık erimi,<nl/>ve  'Ay' birkaç aylık erimi gösterir."
+">‘Otomatik’ geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
+"<nl/>‘Saat’, birkaç saatlik erimi,<nl/>‘Gün’ birkaç günlük erimi,<nl/"
+">‘Hafta’ birkaç haftalık erimi,<nl/>ve ‘Ay’ birkaç aylık erimi gösterir."
 
 #: visualfreebusywidget.cpp:154
 #, kde-format

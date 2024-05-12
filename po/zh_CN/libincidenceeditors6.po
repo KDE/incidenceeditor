@@ -608,13 +608,13 @@ msgstr "无效的电子邮件地址"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "邀请"
 
 #: incidenceattendee.cpp:219
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
-msgstr ""
+msgstr "不邀请"
 
 #: incidenceattendee.cpp:443
 #, kde-format
@@ -643,13 +643,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr ""
+msgstr "更改参与者"
 
 #: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
-msgstr ""
+msgstr "不更改"
 
 #: incidencedatetime.cpp:217
 #, kde-format
@@ -2137,13 +2137,13 @@ msgstr "隐私设置"
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "签名邀请电子邮件"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "加密邀请电子邮件"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2647,6 +2647,9 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"从下面的一段选择甘特图缩放级别：<nl/>“小时”显示数小时的范围。<nl/>'Day' 显示"
+"几天的范围。<nl/>'每周' 显示几周的范围,<nl/>和 '月' 显示几个月的范围.<nl/>"
+"在“自动”时选择最适合当前事件或待办事项的范围。"
 
 #: visualfreebusywidget.cpp:154
 #, kde-format

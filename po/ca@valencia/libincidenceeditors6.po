@@ -588,7 +588,7 @@ msgstr "O&bri"
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As..."
-msgstr "Anomena i guarda..."
+msgstr "Anomena i guarda…"
 
 #: incidenceattachment.cpp:500
 #, kde-format
@@ -600,7 +600,7 @@ msgstr "&Elimina"
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties..."
-msgstr "&Propietats..."
+msgstr "&Propietats…"
 
 #: incidenceattachment.cpp:519
 #, kde-format
@@ -991,7 +991,7 @@ msgstr "Descarta els canvis i tanca el diàleg"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates..."
-msgstr "&Plantilles..."
+msgstr "&Plantilles…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -1021,7 +1021,7 @@ msgstr "Segur que voleu cancel·lar?"
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
-msgstr "Confirmació de KOrganizer"
+msgstr "Confirmeu KOrganizer"
 
 #: incidencedialog.cpp:790 incidencedialog.cpp:811 incidencedialog.cpp:827
 #, kde-format
@@ -1457,8 +1457,8 @@ msgid ""
 "set in the combobox immediately adjacent."
 msgstr ""
 "Este botó de selecció de valors permet establir el temps del disparador del "
-"recordatori. La unitat de temps s'establix al quadro combinat immediatament "
-"adjacent."
+"recordatori. La unitat de temps s'establix en el quadro combinat "
+"immediatament adjacent."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:72
@@ -1557,8 +1557,7 @@ msgstr "Establix la repetició del recordatori"
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
 msgstr ""
-"Seleccioneu-la si voleu que el recordatori es repetisca en un interval "
-"periòdic."
+"Marqueu-la si voleu que el recordatori es repetisca en un interval periòdic."
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
@@ -1723,11 +1722,11 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
-"Quan se selecciona esta opció, l'adjunt s'emmagatzemarà dintre del "
-"calendari, cosa que pot requerir força espai depenent de la mida de "
-"l'adjunt. Si no se selecciona, només s'emmagatzemarà un enllaç apuntant cap "
-"a l'adjunt. No utilitzeu un enllaç per a adjunts que canvien sovint o que es "
-"poden moure (o eliminar) de la seua ubicació actual."
+"Quan es marca esta opció, l'adjunt s'emmagatzemarà dintre del calendari, "
+"cosa que pot requerir força espai depenent de la mida de l'adjunt. Si no es "
+"marca esta opció, només s'emmagatzemarà un enllaç apuntant cap a l'adjunt. "
+"No utilitzeu un enllaç per a adjunts que canvien sovint o que es poden moure "
+"(o eliminar) de la seua ubicació actual."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
@@ -2181,7 +2180,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule..."
-msgstr "Planifica..."
+msgstr "Planifica…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2208,7 +2207,7 @@ msgstr "Obri la llibreta d'adreces, permetent-vos seleccionar nous assistents."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees..."
-msgstr "Selecciona els assistents..."
+msgstr "Selecciona els assistents…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2244,7 +2243,7 @@ msgstr "Reserva de recurs"
 #: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources..."
-msgstr "Busca un recurs..."
+msgstr "Busca un recurs…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2682,7 +2681,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New..."
-msgstr "&Nova..."
+msgstr "&Nova…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
