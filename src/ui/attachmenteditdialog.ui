@@ -28,7 +28,7 @@
      <item>
       <widget class="QLabel" name="mIcon">
        <property name="text">
-        <string comment="KDE::DoNotExtract">TextLabel</string>
+        <string notr="true">TextLabel</string>
        </property>
       </widget>
      </item>
