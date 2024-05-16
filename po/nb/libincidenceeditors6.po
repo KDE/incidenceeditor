@@ -2862,6 +2862,3 @@ msgstr ""
 "Viser alle deltakeres ledig/opptatt-status. Du kan taste inn adressen til "
 "deres ledig/opptatt-informasjon ved å dobbeltklikke på deltakerens oppføring "
 "i lista."
-
-#~ msgid "&New..."
-#~ msgstr "&Ny …"
