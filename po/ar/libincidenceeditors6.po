@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:38+0000\n"
-"PO-Revision-Date: 2024-02-10 21:27+0400\n"
+"PO-Revision-Date: 2024-05-16 11:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -266,10 +266,7 @@ msgid "Available"
 msgstr "متوفّر"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "الحالة"
@@ -615,12 +612,10 @@ msgid "&Open"
 msgstr "ا&فتح"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "احفظ كَ‍..."
+msgstr "احفظ كَ‍…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -629,12 +624,10 @@ msgid "&Remove"
 msgstr "أ&زل"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&خصائص..."
+msgstr "&خصائص…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -1020,12 +1013,10 @@ msgid "Discard changes and close dialog"
 msgstr "أهمل التّغييرات وأغلق الحواريّ"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "ال&قوالب..."
+msgstr "ال&قوالب…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2206,12 +2197,10 @@ msgstr "يفتح حواريّ الجدولة، حيث سيساعدك في انت
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "جدوِل..."
+msgstr "جدوِل…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2235,12 +2224,10 @@ msgstr "يفتح دفتر العناوين ويتيح لك تحديد الحضو
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "حدّد الحضور"
+msgstr "حدّد الحضور…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2274,10 +2261,9 @@ msgstr "احجز المورد"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "اعثر على موارد..."
+msgstr "اعثر على موارد…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2705,7 +2691,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "ج&ديد…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
