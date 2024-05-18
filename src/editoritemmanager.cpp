@@ -238,8 +238,8 @@ void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteA
         dlg->setInformativeText(
             i18n("The item has been changed by another application.\n"
                  "What should be done?"));
-        dlg->addButton(i18n("Take over changes"), QMessageBox::AcceptRole);
-        dlg->addButton(i18n("Ignore and Overwrite changes"), QMessageBox::RejectRole);
+        dlg->addButton(i18nc("@action:button", "Take over changes"), QMessageBox::AcceptRole);
+        dlg->addButton(i18nc("@action:button", "Ignore and Overwrite changes"), QMessageBox::RejectRole);
 
         if (dlg->exec() == QMessageBox::AcceptRole) {
             auto job = new Akonadi::ItemFetchJob(mItem);
