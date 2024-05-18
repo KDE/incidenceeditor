@@ -1,15 +1,15 @@
 # Translation of libincidenceeditors into esperanto.
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2010.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:38+0000\n"
-"PO-Revision-Date: 2023-11-12 16:39+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-10 09:14+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -1482,7 +1482,7 @@ msgstr "horo(j)"
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in days"
 msgid "day(s)"
-msgstr "tago(j)"
+msgstr "tago(j)n"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:97
