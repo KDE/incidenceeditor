@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-19 00:38+0000\n"
 "PO-Revision-Date: 2023-12-21 16:15+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -294,12 +294,16 @@ msgstr ""
 "Was soll getan werden?"
 
 #: editoritemmanager.cpp:241
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Take over changes"
+msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Änderungen übernehmen"
 
 #: editoritemmanager.cpp:242
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignore and Overwrite changes"
+msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorieren und Änderungen überschreiben"
 

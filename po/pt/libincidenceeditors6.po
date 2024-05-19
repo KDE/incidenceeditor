@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-19 00:38+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -326,12 +326,16 @@ msgstr ""
 "O que deseja fazer?"
 
 #: editoritemmanager.cpp:241
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Take over changes"
+msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Sobrepor as alterações"
 
 #: editoritemmanager.cpp:242
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignore and Overwrite changes"
+msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorar e sobrepor as alterações"
 

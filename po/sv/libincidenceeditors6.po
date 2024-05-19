@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-19 00:38+0000\n"
 "PO-Revision-Date: 2021-11-06 14:32+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -286,12 +286,16 @@ msgstr ""
 "Vad ska göras?"
 
 #: editoritemmanager.cpp:241
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Take over changes"
+msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Överta ändringar"
 
 #: editoritemmanager.cpp:242
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ignore and Overwrite changes"
+msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorera och skriv över ändringar"
 

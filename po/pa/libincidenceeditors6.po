@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:38+0000\n"
+"POT-Creation-Date: 2024-05-19 00:38+0000\n"
 "PO-Revision-Date: 2010-12-26 08:44+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -279,12 +279,16 @@ msgid ""
 msgstr ""
 
 #: editoritemmanager.cpp:241
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Save current changes"
+msgctxt "@action:button"
 msgid "Take over changes"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਬਦਲਾਅ ਸੰਭਾਲੋ"
 
 #: editoritemmanager.cpp:242
 #, kde-format
+msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr ""
 
