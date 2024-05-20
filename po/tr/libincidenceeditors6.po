@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-19 00:38+0000\n"
-"PO-Revision-Date: 2024-05-10 13:38+0300\n"
+"PO-Revision-Date: 2024-05-19 22:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -285,18 +285,16 @@ msgstr ""
 "Ne yapılmalı?"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Değişiklikleri devral"
+msgstr "Değişiklikleri Devral"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Yok say ve üzerine yaz"
+msgstr "Yok Say ve Üzerine Yaz"
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
@@ -1083,7 +1081,7 @@ msgctxt ""
 "(1st, 22nd, 123rd); translate this as \"1\" if just the number itself should "
 "be substituted (1, 22, 123)."
 msgid "0"
-msgstr "0"
+msgstr "1"
 
 #: incidencerecurrence.cpp:463
 #, kde-format
@@ -2022,7 +2020,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\">&lt;&lt; Zaman dilimleri</a>"
+msgstr "<a href=\"hide\">&lt;&lt; Zaman Dilimleri</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
@@ -2089,7 +2087,7 @@ msgstr "Erişim"
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\">Zengin metin&gt;&gt;</a>"
+msgstr "<a href=\\\"hide\\\">Zengin Metin&gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:708

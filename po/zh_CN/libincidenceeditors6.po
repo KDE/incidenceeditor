@@ -272,18 +272,16 @@ msgstr ""
 "该怎么办？"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "应用更改"
+msgstr ""
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "忽略并覆盖更改"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
