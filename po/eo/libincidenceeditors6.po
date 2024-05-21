@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-19 00:38+0000\n"
-"PO-Revision-Date: 2024-05-10 09:14+0100\n"
+"PO-Revision-Date: 2024-05-20 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -281,15 +281,13 @@ msgstr ""
 "Kion fari?"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Alpreni ŝanĝojn"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignori kaj Anstataŭigi ŝanĝojn"
@@ -1265,7 +1263,7 @@ msgstr "Redakti poŝton"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
-msgstr "Opcioj por ĉi tiu aparta partoprenanto."
+msgstr "Elektebloj por ĉi tiu aparta partoprenanto."
 
 #: individualmaildialog.cpp:38
 #, kde-format
@@ -1704,9 +1702,9 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
-"Markante ĉi tiun opcion igos la aldonaĵon konserviĝi en via kalendaro, kio "
-"povas preni multe da spaco depende de la grandeco de la aldonaĵo. Se ĉi tiu "
-"opcio ne estas markita, tiam nur ligilo montranta al la aldonaĵo estos "
+"Markante ĉi tiun elekteblon igos la aldonaĵon konserviĝi en via kalendaro, "
+"kio povas preni multe da spaco depende de la grandeco de la aldonaĵo. Se ĉi "
+"tiu opcio ne estas markita, tiam nur ligilo montranta al la aldonaĵo estos "
 "konservita. Ne uzu ligilon por aldonaĵoj kiuj ofte ŝanĝiĝas aŭ povas esti "
 "movitaj (aŭ forigitaj) de sia nuna loko."
 

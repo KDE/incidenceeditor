@@ -284,18 +284,16 @@ msgid ""
 msgstr ""
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Převzít změny"
+msgstr ""
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ignorovat a přepsat změny"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
