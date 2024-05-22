@@ -744,11 +744,11 @@ void IncidenceDateTime::updateStartToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr = KCalUtils::IncidenceFormatter::dateTimeToString(currentStartDateTime(), mUi->mWholeDayCheck->isChecked(), false);
-        mUi->mStartDateEdit->setToolTip(i18n("Starts: %1", datetimeStr));
-        mUi->mStartTimeEdit->setToolTip(i18n("Starts: %1", datetimeStr));
+        mUi->mStartDateEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
+        mUi->mStartTimeEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
     } else {
-        mUi->mStartDateEdit->setToolTip(i18n("Starting Date"));
-        mUi->mStartTimeEdit->setToolTip(i18n("Starting Time"));
+        mUi->mStartDateEdit->setToolTip(i18nc("@info:tooltip", "Starting Date"));
+        mUi->mStartTimeEdit->setToolTip(i18nc("@info:tooltip", "Starting Time"));
     }
 }
 
@@ -757,19 +757,19 @@ void IncidenceDateTime::updateEndToolTips()
     if (mUi->mStartCheck->isChecked()) {
         QString datetimeStr = KCalUtils::IncidenceFormatter::dateTimeToString(currentEndDateTime(), mUi->mWholeDayCheck->isChecked(), false);
         if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
-            mUi->mEndDateEdit->setToolTip(i18n("Due on: %1", datetimeStr));
-            mUi->mEndTimeEdit->setToolTip(i18n("Due on: %1", datetimeStr));
+            mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));
+            mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));
         } else {
-            mUi->mEndDateEdit->setToolTip(i18n("Ends: %1", datetimeStr));
-            mUi->mEndTimeEdit->setToolTip(i18n("Ends: %1", datetimeStr));
+            mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Ends: %1", datetimeStr));
+            mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Ends: %1", datetimeStr));
         }
     } else {
         if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
-            mUi->mEndDateEdit->setToolTip(i18n("Due Date"));
-            mUi->mEndTimeEdit->setToolTip(i18n("Due Time"));
+            mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Due Date"));
+            mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Due Time"));
         } else {
-            mUi->mEndDateEdit->setToolTip(i18n("Ending Date"));
-            mUi->mEndTimeEdit->setToolTip(i18n("Ending Time"));
+            mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Ending Date"));
+            mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Ending Time"));
         }
     }
 }
