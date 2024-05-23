@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-19 16:33+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -687,47 +687,65 @@ msgid "Due:"
 msgstr "Vencimiento:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Starts: %1"
+msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Inicio: %1"
 
 #: incidencedatetime.cpp:750
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Starting Date"
+msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Fecha de inicio"
 
 #: incidencedatetime.cpp:751
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Starting Time"
+msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Hora de inicio"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Due on: %1"
+msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Vence en %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ends: %1"
+msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Termina: %1"
 
 #: incidencedatetime.cpp:768
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Due Date"
+msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Fecha de vencimiento"
 
 #: incidencedatetime.cpp:769
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Due Time"
+msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Hora de vencimiento"
 
 #: incidencedatetime.cpp:771
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ending Date"
+msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Fecha de finalización"
 
 #: incidencedatetime.cpp:772
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Ending Time"
+msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Hora de finalización"
 

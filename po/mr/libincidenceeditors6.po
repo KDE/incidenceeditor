@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2013-03-26 10:24+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -693,47 +693,59 @@ msgid "Due:"
 msgstr "अपेक्षित :"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip period start time"
+#| msgid "Start:"
+msgctxt "@info:tooltip"
 msgid "Starts: %1"
-msgstr ""
+msgstr "सुरु करा :"
 
 #: incidencedatetime.cpp:750
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr ""
 
 #: incidencedatetime.cpp:751
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr ""
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:768
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr ""
 
 #: incidencedatetime.cpp:769
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Time"
+msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr ""
+msgstr "वेळ"
 
 #: incidencedatetime.cpp:771
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr ""
 
 #: incidencedatetime.cpp:772
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr ""
 
@@ -2983,9 +2995,6 @@ msgstr ""
 
 #~ msgid "dd.MM.yyyy"
 #~ msgstr "dd.MM.yyyy"
-
-#~ msgid "Time"
-#~ msgstr "वेळ"
 
 #~ msgid "&Interval:"
 #~ msgstr "मध्यांतर (&I):"
