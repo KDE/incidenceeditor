@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-10 16:45+0900\n"
+"PO-Revision-Date: 2024-05-23 16:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -274,15 +274,13 @@ msgstr ""
 "現在打算怎麼辦？"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "接收變更"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "忽略並覆寫變更"
@@ -675,64 +673,55 @@ msgid "Due:"
 msgstr "到期日："
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "開始於：%1"
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "開始日期"
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "開始時間"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, fuzzy, kde-format
-#| msgid "Due on: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "到期於：%1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "結束於：%1"
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "到期日期"
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "到期時間"
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Ending Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "結束日期"
 
 #: incidencedatetime.cpp:772
-#, fuzzy, kde-format
-#| msgid "Ending Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "結束時間"
