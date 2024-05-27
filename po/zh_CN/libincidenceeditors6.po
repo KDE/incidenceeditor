@@ -666,47 +666,47 @@ msgstr "到期："
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
 #, kde-format
 msgid "Starts: %1"
-msgstr "开始：%1"
+msgstr ""
 
 #: incidencedatetime.cpp:750
 #, kde-format
 msgid "Starting Date"
-msgstr "起始日期"
+msgstr ""
 
 #: incidencedatetime.cpp:751
 #, kde-format
 msgid "Starting Time"
-msgstr "起始时间"
+msgstr ""
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, kde-format
 msgid "Due on: %1"
-msgstr "到期：%1"
+msgstr ""
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
 #, kde-format
 msgid "Ends: %1"
-msgstr "结束：%1"
+msgstr ""
 
 #: incidencedatetime.cpp:768
 #, kde-format
 msgid "Due Date"
-msgstr "到期日期"
+msgstr ""
 
 #: incidencedatetime.cpp:769
 #, kde-format
 msgid "Due Time"
-msgstr "到期时间"
+msgstr ""
 
 #: incidencedatetime.cpp:771
 #, kde-format
 msgid "Ending Date"
-msgstr "结束日期"
+msgstr ""
 
 #: incidencedatetime.cpp:772
 #, kde-format
 msgid "Ending Time"
-msgstr "结束时间"
+msgstr ""
 
 #: incidencedatetime.cpp:850
 #, kde-format
