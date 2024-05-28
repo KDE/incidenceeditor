@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Stefan Winter <swinter@kde.org>, 2002, 2003, 2004, 2005, 2006, 2007.
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2005.
 # Stephan Johach <hunsum@gmx.de>, 2003, 2004, 2005, 2006.
@@ -9,23 +10,22 @@
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Bjoern Ricks <bjoern.ricks@intevation.de>, 2011.
 # Torbjörn Klatt <torbjoern@torbjoern-klatt.de>, 2011.
-# Frank Steinmetzger <dev@felsenfleischer.de>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Frank Steinmetzger <dev@felsenfleischer.de>
 # Intevation GmbH, 2010.
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-12-21 16:15+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-05-07 23:15+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1150,67 +1150,67 @@ msgstr "Das Enddatum des Ereignisses ist ungültig."
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
-msgstr "der %1."
+msgstr "%1."
 
 #: incidencerecurrence.cpp:521
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
-msgstr "der %1. vor dem letzten Tag"
+msgstr "%1.-letzten Tag"
 
 #: incidencerecurrence.cpp:524
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
-msgstr "der %1. %2"
+msgstr "%1. %2"
 
 #: incidencerecurrence.cpp:530
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
-msgstr "der letzte %1"
+msgstr "letzten %1"
 
 #: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
-msgstr "der %1. vor dem letzten %2"
+msgstr "%1.-letzten %2"
 
 #: incidencerecurrence.cpp:548
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
-msgstr "der %1. %2"
+msgstr "%1. %2"
 
 #: incidencerecurrence.cpp:551
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
-msgstr "der %1. vor dem letzten Tag im %2"
+msgstr "%1.-letzten Tag im %2"
 
 #: incidencerecurrence.cpp:554
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
-msgstr "der %1. %2 im %3"
+msgstr "%1. %2 im %3"
 
 #: incidencerecurrence.cpp:561
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
-msgstr "der letzte %1 im %2"
+msgstr "letzten %1 im %2"
 
 #: incidencerecurrence.cpp:566
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
-msgstr "der %1. vor dem letzten %2 im %3 "
+msgstr "%1.-letzten %2 im %3 "
 
 #: incidencerecurrence.cpp:573
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
-msgstr "der %1. Tag des Jahres"
+msgstr "%1. Tag des Jahres"
 
 #: incidencerecurrence.cpp:588
 #, kde-format
