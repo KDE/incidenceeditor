@@ -686,25 +686,22 @@ msgid "Due:"
 msgstr "Termín:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
-msgstr "Začíná: %1"
+msgstr ""
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
-msgstr "Čas zahájení"
+msgstr ""
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
-msgstr "Čas zahájení"
+msgstr ""
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, kde-format
@@ -713,32 +710,28 @@ msgid "Due on: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
-msgstr "Končí: %1"
+msgstr ""
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
-msgstr "Datum dokončení"
+msgstr ""
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr "K času"
+msgstr ""
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
-msgstr "Čas zahájení"
+msgstr ""
 
 #: incidencedatetime.cpp:772
 #, kde-format
