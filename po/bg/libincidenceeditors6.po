@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-27 14:23+0200\n"
+"PO-Revision-Date: 2024-05-30 19:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -2034,7 +2034,7 @@ msgstr "Изберете часовата зона за това събитие.
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\"> &lt; & lt; Часови зони </a>"
+msgstr "<a href=\"hide\"> &lt; &lt; Часови зони </a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
@@ -2101,7 +2101,7 @@ msgstr "Достъп:"
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\"> Форматиран текст &gt; & gt; </a>"
+msgstr "<a href=\\\"hide\\\">Форматиран текст &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:708
@@ -2878,10 +2878,3 @@ msgstr ""
 "Показва състоянието на заетост на всички участници. Двойното щракване върху "
 "записа на участник в списъка ще ви позволи да въведете местоположението на "
 "информацията за заетост."
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Избиране на участници ..."
-
-#~ msgid "&New..."
-#~ msgstr "&Нов..."
