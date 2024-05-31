@@ -5,21 +5,21 @@
 # Jonathan Riddell <kde-en-gb@jriddell.org>, 2003.
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2004, 2005, 2009, 2010, 2011.
 # David Jarvie <djarvie@kde.org>, 2009.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:38+0000\n"
-"PO-Revision-Date: 2022-01-01 15:40+0000\n"
+"PO-Revision-Date: 2024-05-30 19:51+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1408,8 +1408,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "A template with that name already exists, do you want to overwrite it?"
 
 #: templatemanagementdialog.cpp:96
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicate Template Name"
@@ -1420,8 +1419,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Are you sure that you want to remove the template <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:131
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Remove Template"
@@ -2192,19 +2190,19 @@ msgstr "Select Attendees..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Privacy:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Sign Invitation Email"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Encrypt Invitation Email"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2713,14 +2711,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Set the Gantt chart zoom level"
 
 #: visualfreebusywidget.cpp:147
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2731,8 +2722,8 @@ msgid ""
 msgstr ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
 "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-"few years,<nl/>while 'Automatic' selects the range most appropriate for the "
+">'Week' shows a range of a few weeks,<nl/>and 'Month' shows a range of a few "
+"months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 
 #: visualfreebusywidget.cpp:154
