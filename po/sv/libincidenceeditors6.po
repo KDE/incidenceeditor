@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2010.
+# SPDX-FileCopyrightText: 2010, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 # Stefan Asserhall <stefan.asserhall@bredband.net>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Arve Eriksson <031299870@telia.com>, 2011.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:38+0000\n"
-"PO-Revision-Date: 2021-11-06 14:32+0100\n"
+"PO-Revision-Date: 2024-06-08 15:34+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -398,7 +398,7 @@ msgstr[1] "%1 dagar"
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "1 timme"
+msgstr[0] "1 timma"
 msgstr[1] "%1 timmar"
 
 #: incidencealarm.cpp:297
@@ -1406,8 +1406,7 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "En mall med det namnet finns redan. Vill du skriva över den?"
 
 #: templatemanagementdialog.cpp:96
-#, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicerat mallnamn"
@@ -1418,8 +1417,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Vill du verkligen ta bort mallen <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:131
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Ta bort mall"
@@ -2193,19 +2191,19 @@ msgstr "Välj deltagare..."
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "Integritet:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr ""
+msgstr "Signera e-post med inbjudan"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr ""
+msgstr "Kryptera e-post med inbjudan"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2717,14 +2715,7 @@ msgid "Set the Gantt chart zoom level"
 msgstr "Ställer in zoomnivån i Gantt-diagrammet"
 
 #: visualfreebusywidget.cpp:147
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
+#, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
@@ -2733,11 +2724,11 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
-"Ställer in zoomnivån i Gantt-diagrammet från en av följande:<nl/>'Timme' "
+"Ställer in zoomnivån i Gantt-diagrammet från en av följande:<nl/>'Timma' "
 "visar ett intervall på flera timmar,<nl/>'Dag' visar ett intervall på några "
-"dagar,<nl/>'Vecka' visar ett intervall på några månader,<nl/>och 'Månad' "
-"visar ett intervall på några år,<nl/>medan 'Automatisk' väljer intervallet "
-"som är mest lämpat för den aktuella händelsen eller uppgiften."
+"dagar,<nl/>'Vecka' visar ett intervall på några veckor,<nl/>och 'Månad' "
+"visar ett intervall på några månader,<nl/>medan 'Automatisk' väljer "
+"intervallet som är mest lämpat för den aktuella händelsen eller uppgiften."
 
 #: visualfreebusywidget.cpp:154
 #, kde-format
