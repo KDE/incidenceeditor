@@ -21,7 +21,7 @@
 #include <QCommandLineOption>
 #include <QCommandLineParser>
 
-#include <iostream>
+#include "kincidenceeditor_debug.h"
 
 using namespace IncidenceEditorNG;
 
@@ -59,17 +59,17 @@ int main(int argc, char **argv)
     }
 
     if (parser.isSet(QStringLiteral("new-event"))) {
-        std::cout << "Creating new event..." << std::endl;
+        qCDebug(KINCIDENCEEDITOR_LOG) << "Creating new event...";
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
         defaults.setDefaults(event);
         item.setPayload<KCalendarCore::Event::Ptr>(event);
     } else if (parser.isSet(QStringLiteral("new-todo"))) {
-        std::cout << "Creating new todo..." << std::endl;
+        qCDebug(KINCIDENCEEDITOR_LOG) << "Creating new todo...";
         KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         defaults.setDefaults(todo);
         item.setPayload<KCalendarCore::Todo::Ptr>(todo);
     } else if (parser.isSet(QStringLiteral("new-journal"))) {
-        std::cout << "Creating new journal..." << std::endl;
+        qCDebug(KINCIDENCEEDITOR_LOG) << "Creating new journal...";
         KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
         defaults.setDefaults(journal);
         item.setPayload<KCalendarCore::Journal::Ptr>(journal);
@@ -77,15 +77,15 @@ int main(int argc, char **argv)
         bool ok = false;
         qint64 id = parser.value(QStringLiteral("item")).toLongLong(&ok);
         if (!ok) {
-            std::cerr << "Invalid akonadi item id given." << std::endl;
+            qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid akonadi item id given.";
             return 1;
         }
 
         item.setId(id);
-        std::cout << "Trying to load Akonadi Item " << QString::number(id).toLatin1().data();
-        std::cout << "..." << std::endl;
+        qCDebug(KINCIDENCEEDITOR_LOG) << "Trying to load Akonadi Item " << QString::number(id).toLatin1().data();
+        qCDebug(KINCIDENCEEDITOR_LOG) << "...";
     } else {
-        std::cerr << "Invalid usage." << std::endl << std::endl;
+        qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid usage." << Qt::endl;
         return 1;
     }
 
