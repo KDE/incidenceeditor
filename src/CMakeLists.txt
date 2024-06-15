@@ -45,7 +45,6 @@ target_sources(KPim6IncidenceEditor PRIVATE
   freebusyganttproxymodel.cpp
   conflictresolver.cpp
   schedulingdialog.cpp
-  groupwareuidelegate.cpp
 
   incidencedefaults.cpp
   editorconfig.cpp
@@ -90,7 +89,6 @@ target_sources(KPim6IncidenceEditor PRIVATE
   incidencesecrecy.h
   combinedincidenceeditor.h
   incidencedatetime.h
-  groupwareuidelegate.h
   incidencerecurrence.h
   attendeetablemodel.h
   incidenceresource.h
@@ -194,7 +192,6 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
   IncidenceEditorSettings
   IncidenceDefaults
   IndividualMailComponentFactory
-  GroupwareUiDelegate
   EditorItemManager
   IncidenceEditor-Ng
   REQUIRED_HEADERS IncidenceEditor_HEADERS

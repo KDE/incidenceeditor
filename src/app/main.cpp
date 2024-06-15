@@ -14,12 +14,15 @@
 #include <akonadi/calendarsettings.h>
 
 #include <KCalendarCore/Event>
+#include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
 
 #include <QApplication>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+
+#include <iostream>
 
 #include "kincidenceeditor_debug.h"
 
@@ -37,6 +40,7 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringLiteral("new-event"), QStringLiteral("Creates a new event")));
     parser.addOption(QCommandLineOption(QStringLiteral("new-todo"), QStringLiteral("Creates a new todo")));
     parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), QStringLiteral("Creates a new journal")));
+    parser.addOption(QCommandLineOption(QStringLiteral("stdio"), QStringLiteral("Read/Write ical from stdin and stdio.")));
     parser.addOption(QCommandLineOption(QStringLiteral("item"),
                                         QStringLiteral("Loads an existing item, or returns without doing anything "
                                                        "when the item is not an event or todo."),
@@ -58,7 +62,31 @@ int main(int argc, char **argv)
         defaults.setGroupWareDomain(QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
     }
 
-    if (parser.isSet(QStringLiteral("new-event"))) {
+    QString stdinData;
+
+    // This is used in Akonadi Calendar ITIPHandler, do not delete
+    if (parser.isSet(QStringLiteral("stdio"))) {
+        QTextStream qtin(stdin);
+        stdinData = qtin.readAll();
+        if (!stdinData.isEmpty()) {
+            KCalendarCore::ICalFormat format;
+            KCalendarCore::Incidence::Ptr incidence = format.fromString(stdinData);
+            if (incidence.isNull()) {
+                qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid input data.";
+                return 1;
+            }
+            if (incidence->type() == KCalendarCore::IncidenceBase::TypeTodo) {
+                item.setPayload<KCalendarCore::Todo::Ptr>(incidence.dynamicCast<KCalendarCore::Todo>());
+            } else if (incidence->type() == KCalendarCore::IncidenceBase::TypeEvent) {
+                item.setPayload<KCalendarCore::Event::Ptr>(incidence.dynamicCast<KCalendarCore::Event>());
+            } else if (incidence->type() == KCalendarCore::IncidenceBase::TypeJournal) {
+                item.setPayload<KCalendarCore::Journal::Ptr>(incidence.dynamicCast<KCalendarCore::Journal>());
+            }
+        } else {
+            qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid usage. No stdin.";
+            return 1;
+        }
+    } else if (parser.isSet(QStringLiteral("new-event"))) {
         qCDebug(KINCIDENCEEDITOR_LOG) << "Creating new event...";
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
         defaults.setDefaults(event);
@@ -82,10 +110,9 @@ int main(int argc, char **argv)
         }
 
         item.setId(id);
-        qCDebug(KINCIDENCEEDITOR_LOG) << "Trying to load Akonadi Item " << QString::number(id).toLatin1().data();
-        qCDebug(KINCIDENCEEDITOR_LOG) << "...";
+        qCDebug(KINCIDENCEEDITOR_LOG) << "Trying to load Akonadi Item " << id << "...";
     } else {
-        qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid usage." << Qt::endl;
+        qCWarning(KINCIDENCEEDITOR_LOG) << "Invalid usage.";
         return 1;
     }
 
@@ -100,6 +127,20 @@ int main(int argc, char **argv)
     }
 
     dialog->load(item); // The dialog will show up once the item is loaded.
+    if (!stdinData.isEmpty()) {
+        QObject::connect(dialog, &IncidenceDialog::incidenceCreated, dialog, [](const Akonadi::Item &item) {
+            KCalendarCore::ICalFormat format;
+            KCalendarCore::Incidence::Ptr incidence;
+            if (item.hasPayload<KCalendarCore::Journal::Ptr>()) {
+                incidence = item.payload<KCalendarCore::Journal::Ptr>();
+            } else if (item.hasPayload<KCalendarCore::Todo::Ptr>()) {
+                incidence = item.payload<KCalendarCore::Todo::Ptr>();
+            } else if (item.hasPayload<KCalendarCore::Event::Ptr>()) {
+                incidence = item.payload<KCalendarCore::Event::Ptr>();
+            }
+            std::cout << format.toString(incidence).toStdString();
+        });
+    }
 
     return app.exec();
 }
