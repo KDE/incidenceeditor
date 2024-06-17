@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:38+0000\n"
-"PO-Revision-Date: 2022-05-03 21:03+0530\n"
+"PO-Revision-Date: 2024-06-16 19:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1028,7 +1028,7 @@ msgstr "ரத்து செய்யாதே"
 #: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr ""
+msgstr "இயல்பிருப்பு அஞ்சல் இணைப்பு முறை"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
@@ -1046,25 +1046,25 @@ msgstr ""
 #: incidenceeditor.kcfg:17
 #, kde-format
 msgid "Always ask"
-msgstr ""
+msgstr "எப்போதும் கேள்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:20
 #, kde-format
 msgid "Only attach link to message"
-msgstr ""
+msgstr "அஞ்சலுக்கான இணைப்பை மட்டும் சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:23
 #, kde-format
 msgid "Attach complete message"
-msgstr ""
+msgstr "முழு அஞ்சலை சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:26
 #, kde-format
 msgid "Attach message without attachments"
-msgstr ""
+msgstr "உடனிணைப்புகள் இல்லாமல் அஞ்சலை சேர்"
 
 #: incidencerecurrence.cpp:138
 #, kde-format
@@ -1393,7 +1393,7 @@ msgstr ""
 #: templatemanagementdialog.cpp:87
 #, kde-format
 msgid "New %1 Template"
-msgstr ""
+msgstr "புதிய %1 வார்ப்புரு"
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
