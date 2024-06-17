@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-19 17:53+0530\n"
+"PO-Revision-Date: 2024-06-16 19:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -682,64 +682,55 @@ msgid "Due:"
 msgstr "உரிய நேரம்:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "துவங்குவது: %1"
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "தொடங்கும் தேதி"
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "தொடங்கும் நேரம்"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, fuzzy, kde-format
-#| msgid "Due on: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "உரிய நேரம்: %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "முடிவது: %1"
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "உரிய தேதி"
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "உரிய நேரம்"
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Ending Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "முடியும் தேதி"
 
 #: incidencedatetime.cpp:772
-#, fuzzy, kde-format
-#| msgid "Ending Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "முடியும் நேரம்"
@@ -1047,7 +1038,7 @@ msgstr "ரத்து செய்யாதே"
 #: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr ""
+msgstr "இயல்பிருப்பு அஞ்சல் இணைப்பு முறை"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
@@ -1065,25 +1056,25 @@ msgstr ""
 #: incidenceeditor.kcfg:17
 #, kde-format
 msgid "Always ask"
-msgstr ""
+msgstr "எப்போதும் கேள்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:20
 #, kde-format
 msgid "Only attach link to message"
-msgstr ""
+msgstr "அஞ்சலுக்கான இணைப்பை மட்டும் சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:23
 #, kde-format
 msgid "Attach complete message"
-msgstr ""
+msgstr "முழு அஞ்சலை சேர்"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:26
 #, kde-format
 msgid "Attach message without attachments"
-msgstr ""
+msgstr "உடனிணைப்புகள் இல்லாமல் அஞ்சலை சேர்"
 
 #: incidencerecurrence.cpp:138
 #, kde-format
@@ -1412,7 +1403,7 @@ msgstr ""
 #: templatemanagementdialog.cpp:87
 #, kde-format
 msgid "New %1 Template"
-msgstr ""
+msgstr "புதிய %1 வார்ப்புரு"
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
