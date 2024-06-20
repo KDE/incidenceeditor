@@ -137,7 +137,7 @@ ki18n_wrap_ui(KPim6IncidenceEditor
   ui/resourcemanagement.ui
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6IncidenceEditor PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6IncidenceEditor
@@ -217,11 +217,11 @@ install(FILES
 
 
 ######
-if (BUILD_TESTING)
+if(BUILD_TESTING)
    add_subdirectory(tests)
 endif()
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6IncidenceEditor_QCH
         NAME KIncidenceEditor
@@ -243,7 +243,7 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()
 
 ecm_qt_install_logging_categories(EXPORT INCIDENCEEDITOR FILE incidenceeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})

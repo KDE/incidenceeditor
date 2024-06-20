@@ -19,7 +19,7 @@ macro(IE_UNIT_TESTS)
       KF6::CalendarCore
       KPim6::IncidenceEditor
       KPim6::Libkdepim
-    )
+)
   endforeach()
 endmacro()
 

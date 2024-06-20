@@ -11,6 +11,6 @@ target_link_libraries(kincidenceeditor
     KPim6::CalendarUtils
     KPim6::IncidenceEditor
     KPim6::CalendarSupport
-    )
+)
 
 #install(TARGETS kincidenceeditor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

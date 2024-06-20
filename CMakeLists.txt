@@ -87,7 +87,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
-configure_file(config-enterprise.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h )
+configure_file(config-enterprise.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h)
 
 ########### Targets ###########
 
@@ -99,7 +99,7 @@ ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.4.0)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
@@ -111,13 +111,13 @@ add_subdirectory(src)
 
 ########### CMake Config Files ###########
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6IncidenceEditor")
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6IncidenceEditor_QCH
         FILE KPim6IncidenceEditorQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
-    )
+)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6IncidenceEditorQchTargets.cmake\")")
 endif()
 configure_package_config_file(
@@ -141,7 +141,7 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/ COMPONENT Devel
 )
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
    find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 
    add_subdirectory(autotests)
