@@ -1,20 +1,20 @@
 # translation of korganizer.po to
 # Version: $Revision$
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # translated by Krzysztof Jasiutowicz <kpjas@priv.onet.pl>
-# contains his updates from 26.01.1999
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2002, 2005, 2006.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004.
 # Mikolaj Machowski <mikmach@wp.pl>, 2004, 2005, 2007, 2008, 2009, 2010.
 # Robert Gomulka <rgom@o2.pl>, 2006.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2010, 2013.
 # Artur Chłond <eugenewolfe@o2.pl>, 2010.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2023.
+# contains his updates from 26.01.1999
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-10-07 07:33+0200\n"
+"PO-Revision-Date: 2024-06-22 09:12+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -23,6 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -254,10 +255,7 @@ msgid "Available"
 msgstr "Dostępny"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Stan"
@@ -296,18 +294,16 @@ msgstr ""
 "Co powinno zostać zrobione?"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Zastąp zmiany"
+msgstr "Przyjmij zmiany"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ignoruj i nadpisz zmiany"
+msgstr "Pomiń i zastąp zmiany"
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
@@ -600,12 +596,10 @@ msgid "&Open"
 msgstr "&Otwórz"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Zapisz jako..."
+msgstr "Zapisz jako…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -614,12 +608,10 @@ msgid "&Remove"
 msgstr "&Usuń"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Właściwości..."
+msgstr "&Właściwości…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -710,64 +702,55 @@ msgid "Due:"
 msgstr "Zakończenie:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Zaczyna się: %1"
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Data rozpoczęcia"
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Czas rozpoczęcia"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, fuzzy, kde-format
-#| msgid "Due on: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Termin na: %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Kończy się: %1"
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Data zakończenia"
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Czas zakończenia"
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Ending Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Data końca"
 
 #: incidencedatetime.cpp:772
-#, fuzzy, kde-format
-#| msgid "Ending Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Czas końca"
@@ -1024,12 +1007,10 @@ msgid "Discard changes and close dialog"
 msgstr "Porzuć zmiany i zamknij okno"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Wzorce..."
+msgstr "&Wzorce…"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2203,12 +2184,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Zaplanuj..."
+msgstr "Zaplanuj…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2232,12 +2211,10 @@ msgstr "Otwiera książkę adresową co pozwala wybrać z niej nowych uczestnik�
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Wybierz uczestników"
+msgstr "Wybierz uczestników…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2249,13 +2226,13 @@ msgstr "Prywatność:"
 #: ui/dialogdesktop.ui:897
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr "Podpisz wiadomość zaproszeniową"
+msgstr "Podpisz wiadomość zapraszającą"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:907
 #, kde-format
 msgid "Encrypt Invitation Email"
-msgstr "Zaszyfruj wiadomość zaproszeniową"
+msgstr "Zaszyfruj wiadomość zapraszającą"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
 #: ui/dialogdesktop.ui:930
@@ -2271,10 +2248,9 @@ msgstr "Zasób książki"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "Znajdź zasoby..."
+msgstr "Poszukaj zasobów…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2708,10 +2684,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
-#, fuzzy, kde-format
-#| msgid "&New"
+#, kde-format
 msgid "&New…"
-msgstr "&Nowy"
+msgstr "&Nowy…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
