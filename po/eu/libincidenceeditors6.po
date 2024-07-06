@@ -1,16 +1,16 @@
 # Translation for libincidenceeditors.po to Euskara/Basque (eu).
-# Copyright (C) 2023 file is copyright:
+# Copyright (C) 2023-2024 file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-10-06 06:45+0200\n"
+"PO-Revision-Date: 2024-07-05 12:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -245,10 +245,7 @@ msgid "Available"
 msgstr "Erabilgarri"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Egoera"
@@ -287,15 +284,13 @@ msgstr ""
 "Zer egin beharko litzateke?"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Aldaketak jaso"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ezikusi eta aldaketak gainidatzi"
@@ -588,9 +583,7 @@ msgid "&Open"
 msgstr "&Ireki"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Gorde honela..."
@@ -602,9 +595,7 @@ msgid "&Remove"
 msgstr "&Kendu"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Propietateak..."
@@ -698,64 +689,55 @@ msgid "Due:"
 msgstr "Epe-muga:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Hasiera: %1"
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Hasierako data"
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Hasierako ordua"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, fuzzy, kde-format
-#| msgid "Due on: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Epemuga: %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
-msgstr "Amaitu: %1"
+msgstr "Bukatu: %1"
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Muga-eguna"
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Muga-ordua"
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Ending Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Bukaerako data"
 
 #: incidencedatetime.cpp:772
-#, fuzzy, kde-format
-#| msgid "Ending Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Bukaerako ordua"
@@ -1012,9 +994,7 @@ msgid "Discard changes and close dialog"
 msgstr "Baztertu aldaketak eta itxi elkarrizketa-koadroa"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&Txantiloiak..."
@@ -2193,9 +2173,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
 msgstr "Antolatu..."
@@ -2224,12 +2202,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Hautatu parte-hartzaileak"
+msgstr "Hautatu parte-hartzaileak..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2263,8 +2239,7 @@ msgstr "Erreserbatu baliabidea"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
 msgstr "Bilatu baliabideak..."
 
@@ -2702,7 +2677,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "&Berria…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
