@@ -74,8 +74,8 @@ void IndividualMessageQueueJob::start()
 void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc)
 {
     KMime::Message::Ptr msg(message());
-    msg->to()->fromUnicodeString(messageTo.join(QLatin1StringView(", ")), "utf-8");
-    msg->cc()->fromUnicodeString(messageCc.join(QLatin1StringView(", ")), "utf-8");
+    msg->to()->fromUnicodeString(messageTo.join(QLatin1StringView(", ")));
+    msg->cc()->fromUnicodeString(messageCc.join(QLatin1StringView(", ")));
     msg->assemble();
 
     mQueueJob = new Akonadi::MessageQueueJob(this);
