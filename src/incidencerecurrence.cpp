@@ -117,11 +117,7 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
     connect(mUi->mEndDurationEdit, &QSpinBox::valueChanged, this, &IncidenceRecurrence::checkDirtyStatus);
     connect(mUi->mRecurrenceEndDate, &KDateComboBox::dateChanged, this, &IncidenceRecurrence::checkDirtyStatus);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
-    connect(mUi->mThisAndFutureCheck, &QCheckBox::stateChanged, this, &IncidenceRecurrence::checkDirtyStatus);
-#else
     connect(mUi->mThisAndFutureCheck, &QCheckBox::checkStateChanged, this, &IncidenceRecurrence::checkDirtyStatus);
-#endif
 }
 
 // this method must be at the top of this file in order to ensure

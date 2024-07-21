@@ -74,11 +74,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
             QStringLiteral("%1 (%2)").arg(format.formatByteSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
     }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
-    connect(mUi->mInlineCheck, &QCheckBox::stateChanged, this, &AttachmentEditDialog::inlineChanged);
-#else
     connect(mUi->mInlineCheck, &QCheckBox::checkStateChanged, this, &AttachmentEditDialog::inlineChanged);
-#endif
     connect(mUi->mURLRequester,
             &KUrlRequester::urlSelected,
             this,
