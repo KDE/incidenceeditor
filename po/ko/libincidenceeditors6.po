@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-07-22 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 22:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -135,7 +135,7 @@ msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: attachmenteditdialog.cpp:117
+#: attachmenteditdialog.cpp:113
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -1081,7 +1081,7 @@ msgstr "전체 메시지 첨부"
 msgid "Attach message without attachments"
 msgstr "첨부 없이 메시지 첨부"
 
-#: incidencerecurrence.cpp:138
+#: incidencerecurrence.cpp:134
 #, kde-format
 msgctxt ""
 "In several of the messages below, an ordinal number is substituted into the "
@@ -1091,7 +1091,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:463
+#: incidencerecurrence.cpp:459
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1100,119 +1100,119 @@ msgstr ""
 "반복되는 이벤트나 할 일은 최소 한 번은 일어나야 합니다. 반복 인자를 조정하십"
 "시오."
 
-#: incidencerecurrence.cpp:469
+#: incidencerecurrence.cpp:465
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "반복 항목의 시작 날짜가 잘못되었습니다."
 
-#: incidencerecurrence.cpp:475
+#: incidencerecurrence.cpp:471
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "반복 항목의 종료 날짜가 잘못되었습니다."
 
-#: incidencerecurrence.cpp:518
+#: incidencerecurrence.cpp:514
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1일"
 
-#: incidencerecurrence.cpp:521
+#: incidencerecurrence.cpp:517
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "마지막 날 %1일 전"
 
-#: incidencerecurrence.cpp:524
+#: incidencerecurrence.cpp:520
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1번째 %2"
 
-#: incidencerecurrence.cpp:530
+#: incidencerecurrence.cpp:526
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "마지막 %1"
 
-#: incidencerecurrence.cpp:532
+#: incidencerecurrence.cpp:528
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1번째부터 마지막 %2까지"
 
-#: incidencerecurrence.cpp:548
+#: incidencerecurrence.cpp:544
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%2 %1일"
 
-#: incidencerecurrence.cpp:551
+#: incidencerecurrence.cpp:547
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%2 마지막 날 %1일 전"
 
-#: incidencerecurrence.cpp:554
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%3 %1번째 %2"
 
-#: incidencerecurrence.cpp:561
+#: incidencerecurrence.cpp:557
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "%2 마지막 %1"
 
-#: incidencerecurrence.cpp:566
+#: incidencerecurrence.cpp:562
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%3 %1번째부터 마지막 %2까지"
 
-#: incidencerecurrence.cpp:573
+#: incidencerecurrence.cpp:569
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "연도의 제%1일"
 
-#: incidencerecurrence.cpp:588
+#: incidencerecurrence.cpp:584
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
 msgid_plural "occurrences"
 msgstr[0] "회 반복"
 
-#: incidencerecurrence.cpp:612
+#: incidencerecurrence.cpp:608
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
 msgid_plural "weeks"
 msgstr[0] "주"
 
-#: incidencerecurrence.cpp:616
+#: incidencerecurrence.cpp:612
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
 msgid_plural "months"
 msgstr[0] "개월"
 
-#: incidencerecurrence.cpp:620
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
 msgid_plural "years"
 msgstr[0] "년"
 
-#: incidencerecurrence.cpp:624
+#: incidencerecurrence.cpp:620
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
 msgid_plural "days"
 msgstr[0] "일"
 
-#: incidencerecurrence.cpp:632
+#: incidencerecurrence.cpp:628
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
