@@ -2892,10 +2892,3 @@ msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer clic doble "
 "sobre una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seva informació de lliure/ocupat."
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Selecciona els assistents..."
-
-#~ msgid "&New..."
-#~ msgstr "&Nova..."
