@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-22 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 16:24+0900\n"
+"PO-Revision-Date: 2024-07-23 21:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1390,7 +1390,7 @@ msgstr "此樣本名稱已存在。要覆寫它嗎？"
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "重覆的樣本名稱"
+msgstr "重複的樣本名稱"
 
 #: templatemanagementdialog.cpp:130
 #, kde-format
@@ -1507,25 +1507,25 @@ msgstr "事件結束後"
 #: ui/alarmdialog.ui:129
 #, kde-format
 msgid "Repeat:"
-msgstr "重覆："
+msgstr "重複："
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:144
 #, kde-format
 msgid "Set the reminder to repeat"
-msgstr "設定讓提醒重覆"
+msgstr "設定讓提醒重複"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:147
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
-msgstr "勾選此選項，,讓提醒在一定時間間隔重覆提醒。"
+msgstr "勾選此選項，,讓提醒在一定時間間隔重複提醒。"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
 #, kde-format
 msgid "Select how often the reminder should repeat"
-msgstr "選擇提醒要多常重覆"
+msgstr "選擇提醒要多常重複"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:163
@@ -1533,7 +1533,7 @@ msgstr "選擇提醒要多常重覆"
 msgid ""
 "Use this selector to choose how many times you want the recurring reminder "
 "to repeat."
-msgstr "用此選擇器來選擇您要循環的提醒重覆多少次。"
+msgstr "用此選擇器來選擇您要循環的提醒重複多少次。"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
@@ -1545,13 +1545,13 @@ msgstr " 次"
 #: ui/alarmdialog.ui:182
 #, kde-format
 msgid "Select the time between reminder repeats"
-msgstr "選擇提醒重覆的間隔時間"
+msgstr "選擇提醒重複的間隔時間"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:185
 #, kde-format
 msgid "Use this selector to choose the time between repeating reminders."
-msgstr "使用此選擇器選擇提醒重覆的時間間隔。"
+msgstr "使用此選擇器選擇提醒重複的時間間隔。"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:188
