@@ -60,7 +60,7 @@ void OpenComposerJob::start()
         QByteArray attachCharset = attachment->contentType()->charset();
 
         QByteArray attachParamAttr = "method";
-        QString attachParamValue = attachment->contentType()->parameter(QStringLiteral("method"));
+        QString attachParamValue = attachment->contentType()->parameter("method");
         QByteArray attachData = attachment->encodedBody();
 
         messages << mTo << mCc << mBcc << subject << body << attachName << attachCte << attachData << attachType << attachSubType << attachParamAttr
