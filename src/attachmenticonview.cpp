@@ -16,11 +16,11 @@
 #include "attachmenticonview.h"
 
 #include <KIconLoader>
+#include <KIconUtils>
 #include <KUrlMimeData>
 #include <QDir>
 #include <QTemporaryFile>
 
-#include <KIconEngine>
 #include <QDrag>
 #include <QKeyEvent>
 #include <QMimeData>
@@ -106,20 +106,21 @@ bool AttachmentIconItem::isBinary() const
     return mAttachment.isBinary();
 }
 
-QPixmap AttachmentIconItem::icon() const
+QIcon AttachmentIconItem::icon() const
 {
     QMimeDatabase db;
     return icon(db.mimeTypeForName(mAttachment.mimeType()), mAttachment.uri(), mAttachment.isBinary());
 }
 
-QPixmap AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
+QIcon AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
 {
     const QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
         overlays << QStringLiteral("emblem-link");
     }
-    return QIcon(new KIconEngine(iconStr, KIconLoader::global(), overlays)).pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
+
+    return KIconUtils::addOverlays(QIcon::fromTheme(iconStr), overlays);
 }
 
 void AttachmentIconItem::readAttachment()
@@ -230,10 +231,10 @@ void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 #ifndef QT_NO_DRAGANDDROP
     QPixmap pixmap;
     if (selectedItems().size() > 1) {
-        pixmap = KIconLoader::global()->loadIcon(QStringLiteral("mail-attachment"), KIconLoader::Desktop);
+        pixmap = QIcon::fromTheme(QStringLiteral("mail-attachment")).pixmap(64);
     }
     if (pixmap.isNull()) {
-        pixmap = static_cast<AttachmentIconItem *>(currentItem())->icon();
+        pixmap = static_cast<AttachmentIconItem *>(currentItem())->icon().pixmap(64);
     }
 
     const QPoint hotspot(pixmap.width() / 2, pixmap.height() / 2);

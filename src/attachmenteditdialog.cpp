@@ -14,6 +14,7 @@
 #include "ui_attachmenteditdialog.h"
 #include <KFormat>
 #include <KIO/StoredTransferJob>
+#include <KIconLoader>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <QDialogButtonBox>
@@ -52,7 +53,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
 
     mUi->setupUi(page);
     mUi->mLabelEdit->setText(item->label().isEmpty() ? item->uri() : item->label());
-    mUi->mIcon->setPixmap(item->icon());
+    mUi->mIcon->setPixmap(item->icon().pixmap(KIconLoader::SizeSmallMedium));
     mUi->mInlineCheck->setChecked(item->isBinary());
 
     const QString typecomment = item->mimeType().isEmpty() ? i18nc("@label unknown mimetype", "Unknown") : mMimeType.comment();
@@ -170,7 +171,7 @@ void AttachmentEditDialog::urlChanged(const QUrl &url)
     QMimeDatabase db;
     mMimeType = db.mimeTypeForUrl(url);
     mUi->mTypeLabel->setText(mMimeType.comment());
-    mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()));
+    mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()).pixmap(KIconLoader::SizeSmallMedium));
 }
 
 #include "moc_attachmenteditdialog.cpp"

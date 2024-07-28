@@ -169,6 +169,7 @@ PRIVATE
   KF6::WidgetsAddons
   KF6::XmlGui
   KF6::Contacts
+  KF6::GuiAddons
   KPim6::Libkdepim
   KPim6::PimCommonAkonadi
   KPim6::IdentityManagementCore
