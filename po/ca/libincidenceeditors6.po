@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-05-19 08:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -134,19 +134,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 dia abans del venciment"
 msgstr[1] "%1 dies abans del venciment"
 
-#: attachmenteditdialog.cpp:39
+#: attachmenteditdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Edició de l'adjunt"
 
-#: attachmenteditdialog.cpp:58
+#: attachmenteditdialog.cpp:59
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:114
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

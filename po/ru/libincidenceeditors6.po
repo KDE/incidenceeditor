@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-02-07 10:52+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -149,19 +149,19 @@ msgstr[1] "за %1 дня до окончания"
 msgstr[2] "за %1 дней до окончания"
 msgstr[3] "за %1 день до окончания"
 
-#: attachmenteditdialog.cpp:39
+#: attachmenteditdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Редактирование вложения"
 
-#: attachmenteditdialog.cpp:58
+#: attachmenteditdialog.cpp:59
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "неизвестно"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:114
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

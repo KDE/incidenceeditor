@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2024-05-23 08:41+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -132,19 +132,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 día antes de que venza"
 msgstr[1] "%1 días antes de que venza"
 
-#: attachmenteditdialog.cpp:39
+#: attachmenteditdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Editar o anexo"
 
-#: attachmenteditdialog.cpp:58
+#: attachmenteditdialog.cpp:59
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Descoñecido"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:114
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

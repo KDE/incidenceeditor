@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-29 00:40+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -138,7 +138,7 @@ msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] "Бітуіне %1 күн қалды"
 
-#: attachmenteditdialog.cpp:39
+#: attachmenteditdialog.cpp:40
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Add Attachment"
@@ -146,13 +146,13 @@ msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Тіркеме қосу"
 
-#: attachmenteditdialog.cpp:58
+#: attachmenteditdialog.cpp:59
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Беймәлім"
 
-#: attachmenteditdialog.cpp:113
+#: attachmenteditdialog.cpp:114
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
