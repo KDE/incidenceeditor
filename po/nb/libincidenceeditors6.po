@@ -284,14 +284,12 @@ msgstr ""
 
 #: editoritemmanager.cpp:241
 #, fuzzy, kde-format
-#| msgid "Take over changes"
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Ta over endringer"
 
 #: editoritemmanager.cpp:242
 #, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
 msgstr "Ignorer og overskriv endringer"
@@ -584,8 +582,6 @@ msgstr "&Åpne"
 
 #: incidenceattachment.cpp:482
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Lagre som …"
@@ -598,8 +594,6 @@ msgstr "&Fjern"
 
 #: incidenceattachment.cpp:507
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Egenskaper …"
@@ -693,63 +687,54 @@ msgstr "Forfall:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
 #, fuzzy, kde-format
-#| msgid "Starts: %1"
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Starter: %1"
 
 #: incidencedatetime.cpp:750
 #, fuzzy, kde-format
-#| msgid "Starting Date"
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Startdato:"
 
 #: incidencedatetime.cpp:751
 #, fuzzy, kde-format
-#| msgid "Starting Time"
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Starttid"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, fuzzy, kde-format
-#| msgid "Due on: %1"
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Forfall: %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
 #, fuzzy, kde-format
-#| msgid "Ends: %1"
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Slutter: %1"
 
 #: incidencedatetime.cpp:768
 #, fuzzy, kde-format
-#| msgid "Due Date"
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Forfallsdato"
 
 #: incidencedatetime.cpp:769
 #, fuzzy, kde-format
-#| msgid "Due Time"
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Klokkeslett for forfall"
 
 #: incidencedatetime.cpp:771
 #, fuzzy, kde-format
-#| msgid "Ending Date"
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Sluttdato:"
 
 #: incidencedatetime.cpp:772
 #, fuzzy, kde-format
-#| msgid "Ending Time"
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Slutt-tid"
@@ -1002,8 +987,6 @@ msgstr "Forkast alle endringer og lukk dialogen"
 
 #: incidencedialog.cpp:687
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&Maler …"
@@ -1429,7 +1412,6 @@ msgstr "En mal med det navnet finnes fra før. Vil du overskrive den?"
 
 #: templatemanagementdialog.cpp:96
 #, fuzzy, kde-format
-#| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Lag to eksemplarer av malnavn"
@@ -1441,7 +1423,6 @@ msgstr "Er du sikker på at du vil slette malen  <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:131
 #, fuzzy, kde-format
-#| msgid "Remove Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Fjern mal"
@@ -2173,8 +2154,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
 msgctxt "@action:button"
 msgid "Schedule…"
 msgstr "Planlegg …"
@@ -2202,8 +2181,6 @@ msgstr "Åpner adresseboka, så du kan velge nye deltakere fra den."
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Select Attendees..."
 msgctxt "@action:button"
 msgid "Select Attendees…"
 msgstr "Velg deltakere …"
@@ -2241,7 +2218,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
 #, fuzzy, kde-format
-#| msgid "Resources"
 msgid "Find Resources…"
 msgstr "Ressurser"
 
@@ -2735,13 +2711,6 @@ msgstr "Sett forstørringsnivået for Gantt-diagrammet"
 
 #: visualfreebusywidget.cpp:147
 #, fuzzy, kde-kuit-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
-#| "shows a range of several hours,<nl/>'Day' shows a range of a few days,<nl/"
-#| ">'Week' shows a range of a few months,<nl/>and 'Month' shows a range of a "
-#| "few years,<nl/>while 'Automatic' selects the range most appropriate for "
-#| "the current event or to-do."
 msgctxt "@info:whatsthis"
 msgid ""
 "Select the Gantt chart zoom level from one of the following:<nl/>'Hour' "
