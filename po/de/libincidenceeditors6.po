@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Stefan Winter <swinter@kde.org>, 2002, 2003, 2004, 2005, 2006, 2007.
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2005.
 # Stephan Johach <hunsum@gmx.de>, 2003, 2004, 2005, 2006.
@@ -17,15 +17,15 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-29 00:40+0000\n"
-"PO-Revision-Date: 2024-05-07 23:15+0200\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2024-08-20 20:16+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -252,10 +252,7 @@ msgid "Available"
 msgstr "Verfügbar"
 
 #: attendeetablemodel.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
-#| msgid "Status"
+#, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Status"
@@ -294,18 +291,16 @@ msgstr ""
 "Was soll getan werden?"
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
 msgstr "Änderungen übernehmen"
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ignorieren und Änderungen überschreiben"
+msgstr "Änderungen ignorieren und überschreiben"
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
@@ -595,12 +590,10 @@ msgid "&Open"
 msgstr "Öff&nen"
 
 #: incidenceattachment.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Speichern unter ..."
+msgstr "Speichern unter …"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -609,12 +602,10 @@ msgid "&Remove"
 msgstr "&Entfernen"
 
 #: incidenceattachment.cpp:507
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Eigenschaften ..."
+msgstr "&Eigenschaften …"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -705,64 +696,55 @@ msgid "Due:"
 msgstr "Fällig:"
 
 #: incidencedatetime.cpp:747 incidencedatetime.cpp:748
-#, fuzzy, kde-format
-#| msgid "Starts: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Beginnt: %1"
 
 #: incidencedatetime.cpp:750
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Anfangsdatum"
 
 #: incidencedatetime.cpp:751
-#, fuzzy, kde-format
-#| msgid "Starting Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Anfangszeit"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
-#, fuzzy, kde-format
-#| msgid "Due on: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Fällig am: %1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
-#, fuzzy, kde-format
-#| msgid "Ends: %1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Endet: %1"
 
 #: incidencedatetime.cpp:768
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Fälligkeitsdatum"
 
 #: incidencedatetime.cpp:769
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Fälligkeitszeit"
 
 #: incidencedatetime.cpp:771
-#, fuzzy, kde-format
-#| msgid "Ending Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Enddatum"
 
 #: incidencedatetime.cpp:772
-#, fuzzy, kde-format
-#| msgid "Ending Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Endzeit"
@@ -1020,12 +1002,10 @@ msgid "Discard changes and close dialog"
 msgstr "Änderungen verwerfen und Dialog schließen"
 
 #: incidencedialog.cpp:687
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Vorlagen ..."
+msgstr "&Vorlagen …"
 
 #: incidencedialog.cpp:689
 #, kde-format
@@ -2210,12 +2190,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:836
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Schedule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Zeitplanung ..."
+msgstr "Zeitplanung …"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2240,12 +2218,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Teilnehmer auswählen"
+msgstr "Teilnehmer auswählen …"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2279,10 +2255,9 @@ msgstr "Ressource belegen"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:999
-#, fuzzy, kde-format
-#| msgid "Find Resources..."
+#, kde-format
 msgid "Find Resources…"
-msgstr "Ressourcen suchen ..."
+msgstr "Ressourcen suchen …"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2720,10 +2695,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
-#, fuzzy, kde-format
-#| msgid "&New"
+#, kde-format
 msgid "&New…"
-msgstr "&Neu"
+msgstr "&Neu …"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
