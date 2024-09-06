@@ -14,7 +14,7 @@
 # Intevation GmbH, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: libincidenceeditors\n"
+"Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-08-20 20:16+0200\n"
