@@ -73,7 +73,6 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     auto attendeeDelegate = new AttendeeLineEditDelegate(this);
 
     auto filterProxyModel = new ResourceFilterProxyModel(this);
-    filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(dataModel);
 
     mUi->mResourcesTable->setModel(filterProxyModel);

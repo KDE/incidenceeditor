@@ -78,7 +78,6 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     setObjectName("IncidenceAttendee"_L1);
 
     auto filterProxyModel = new AttendeeFilterProxyModel(this);
-    filterProxyModel->setDynamicSortFilter(true);
     filterProxyModel->setSourceModel(mDataModel);
 
     connect(mUi->mGroupSubstitution, &QPushButton::clicked, this, &IncidenceAttendee::slotGroupSubstitutionPressed);
