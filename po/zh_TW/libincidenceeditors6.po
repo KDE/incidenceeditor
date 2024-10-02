@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-07-23 21:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -598,7 +598,7 @@ msgid ""
 "or to-do."
 msgstr "顯示與目前事件或待辦事項相關的項目（檔案、郵件等等）。"
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -606,38 +606,38 @@ msgid ""
 "this participant?"
 msgstr "%1 看起來不像是有效的電子郵件地址。您確定您要邀請這個參加者嗎？"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "無效的電子郵件地址"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "邀請"
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "不要邀請"
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:442
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "選擇參加者"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:625
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 個衝突"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -648,13 +648,13 @@ msgstr ""
 "您改變了此事件的發起者。既然他也是此事件的參加者，您也要順便變更相關的參加者"
 "嗎？"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "變更參加者"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

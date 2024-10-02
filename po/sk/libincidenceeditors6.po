@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -628,7 +628,7 @@ msgstr ""
 "Zobrazí položky (súbory, poštu atď.) ktoré boli prepojené s touto udalosťou "
 "alebo úlohou."
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -638,19 +638,19 @@ msgstr ""
 "%1 nevyzerá ako platná e-mailová adresa. Určite chcete pozvať tohto "
 "účastníka?"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Neplatná e-mailová adresa"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:218
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -658,14 +658,14 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Neposielať"
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:442
 #, fuzzy, kde-format
 #| msgid "Select Attendees"
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrať účastníkov"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:625
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -674,7 +674,7 @@ msgstr[0] "Konflikt"
 msgstr[1] "%1 konfliktov"
 msgstr[2] "%1 konfliktov"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -685,14 +685,14 @@ msgstr ""
 "Meníte organizátora tejto udalosti. Keďže aj organizátor je účastníkom tejto "
 "udalosti, chcete zmeniť aj korešpondujúceho účastníka?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Účastník"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -654,7 +654,7 @@ msgstr ""
 "Wiest Elementen (Dateien, Nettbreven, usw.), de Du dit Begeefnis oder disse "
 "Opgaav bileggt hest"
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -664,19 +664,19 @@ msgstr ""
 "As't lett is \"%1\" as Nettpostadress leeg. Büst Du seker, dat Du dissen "
 "Deelnehmer inladen wullt?"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Leeg Nettpostadress"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:218
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -684,7 +684,7 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Nich loosstüern"
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:442
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select Attendees..."
@@ -692,7 +692,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Deelnehmers utsöken…"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:625
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -700,7 +700,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 Konflikt"
 msgstr[1] "%1 Konflikten"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -711,14 +711,14 @@ msgstr ""
 "Du wullt den Utrichter vun dit Begeefnis ännern. He nimmt dor ok an deel. "
 "Wullt Du ok den tohören Deelnehmer ännern?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Deelnehmer"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"

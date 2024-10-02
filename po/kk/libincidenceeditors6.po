@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -651,7 +651,7 @@ msgid ""
 msgstr ""
 "Оы оқиға не іс жоспарымен байланысты аталымдарды (файл, хат, т.б.) көрсетеді."
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -661,25 +661,25 @@ msgstr ""
 "%1 деген дұрыс эл.пошта адресі емес сияқты. Бұндайды қатысуға шын "
 "шақырғаныңыз келе ме?"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Жарамсыз эл.пошта адресі"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:218
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:442
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select Attendees..."
@@ -687,14 +687,14 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Қатысушыларды таңдау…"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:625
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 қайшылық"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -705,14 +705,14 @@ msgstr ""
 "Сіз оқиғаның ұйымдастырушысын өзгертіп жатырсыз. Ол да оқиғаның қатысушысы "
 "болғандықтан, қатысушының параметрлерін өзгертпейсіз бе?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Қатысушысы"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

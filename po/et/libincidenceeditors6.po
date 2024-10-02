@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-29 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -614,7 +614,7 @@ msgstr ""
 "Näitab aktiivsete elementide (failid, kirjad jne.) nimekirja, mis on seotud "
 "antud sündmuse või ülesandega."
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:213
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -624,19 +624,19 @@ msgstr ""
 "%1 ei paista olevat korrektne e-posti aadress. Kas oled ikka kindel, et "
 "soovid selle osaleja kutsuda?"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Vigane e-posti aadress"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:217
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:218
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -644,13 +644,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Ära saada"
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:442
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Osalejate valimine"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:625
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -658,7 +658,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikti"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -669,7 +669,7 @@ msgstr ""
 "Kavatsed muuta selle sündmuse korraldajat, kes samuti sellel osaleb. Kas "
 "soovid siis muuta ka tema osalemist?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "One attendee"
@@ -678,7 +678,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "1 osaleja"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "No Changes"
