@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-02 00:40+0000\n"
-"PO-Revision-Date: 2024-05-23 13:58+0300\n"
+"PO-Revision-Date: 2024-10-25 18:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:24
@@ -1288,13 +1288,13 @@ msgstr "Bu katılımcı için bir seçenek seçin."
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
-msgstr "Kişisel e-posta ayarları <<"
+msgstr "Kişisel E-posta Ayarları ≪"
 
 #: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
-msgstr "Kişisel e-posta ayarları >>"
+msgstr "Kişisel E-posta Ayarları ≫"
 
 #: ldaputils.cpp:17
 #, kde-format
@@ -2137,7 +2137,7 @@ msgid ""
 "and from your address book."
 msgstr ""
 "Yapılacaklar veya etkinliğin düzenleyicisine karşılık gelen kimliği ayarlar. "
-"Kimlikler K Organizatör yapılandırmasının ‘Kişisel’ bölümünden "
+"Kimlikler K Organizatör yapılandırmasının “Kişisel” bölümünden "
 "ayarlanabilir. Buna ek olarak kimlikler, K Posta ayarlarınızdan ve adres "
 "defterinizden toplanır."
 
@@ -2586,7 +2586,7 @@ msgstr "Arama seçeneğini seçmek için bu sekmeleri kullanın."
 #: ui/schedulingdialog.ui:164
 #, kde-format
 msgid "Automatic Search"
-msgstr "Otomatik Arama"
+msgstr "Kendiliğinden Arama"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
 #: ui/schedulingdialog.ui:199
@@ -2737,9 +2737,9 @@ msgid ""
 "current event or to-do."
 msgstr ""
 "Gantt grafik yakınlaştırma ayarını aşağıdakilerden biri olarak seçin:<nl/"
-">‘Otomatik’ geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
-"<nl/>‘Saat’, birkaç saatlik erimi,<nl/>‘Gün’ birkaç günlük erimi,<nl/"
-">‘Hafta’ birkaç haftalık erimi,<nl/>ve ‘Ay’ birkaç aylık erimi gösterir."
+">“Otomatik” geçerli etkinlik veya yapılacak iş için en uygun erimi seçerken,"
+"<nl/>“Saat”, birkaç saatlik erimi,<nl/>“Gün” birkaç günlük erimi,<nl/"
+">“Hafta” birkaç haftalık erimi,<nl/>ve “Ay” birkaç aylık erimi gösterir."
 
 #: visualfreebusywidget.cpp:154
 #, kde-format
@@ -2769,7 +2769,7 @@ msgstr "Ay"
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
-msgstr "Otomatik"
+msgstr "Kendiliğinden"
 
 #: visualfreebusywidget.cpp:163
 #, kde-format
