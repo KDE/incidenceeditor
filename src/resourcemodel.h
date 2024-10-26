@@ -25,7 +25,10 @@ public:
     /* Copied from https://doc.qt.io/qt-5/qtwidgets-itemviews-editabletreemodel-example.html:
      * Editable Tree Model Example
      */
-    enum Roles { Resource = Qt::UserRole, FullName };
+    enum Roles {
+        Resource = Qt::UserRole,
+        FullName
+    };
 
     explicit ResourceModel(const QStringList &headers, QObject *parent = nullptr);
     ~ResourceModel() override;

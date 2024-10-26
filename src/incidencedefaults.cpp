@@ -35,7 +35,9 @@ using namespace KCalendarCore;
 
 namespace IncidenceEditorNG
 {
-enum { UNSPECIFED_PRIORITY = 0 };
+enum {
+    UNSPECIFED_PRIORITY = 0
+};
 
 class IncidenceDefaultsPrivate
 {

@@ -73,7 +73,10 @@ class AttendeeLine : public KPIM::MultiplyingLine
 {
     Q_OBJECT
 public:
-    enum AttendeeActions { EventActions, TodoActions };
+    enum AttendeeActions {
+        EventActions,
+        TodoActions
+    };
 
     explicit AttendeeLine(QWidget *parent);
     ~AttendeeLine() override = default;

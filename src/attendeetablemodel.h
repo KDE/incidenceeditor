@@ -19,11 +19,28 @@ class AttendeeTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    enum Roles { AttendeeRole = Qt::UserRole };
+    enum Roles {
+        AttendeeRole = Qt::UserRole
+    };
 
-    enum Columns { CuType, Role, FullName, Name, Email, Available, Status, Response };
+    enum Columns {
+        CuType,
+        Role,
+        FullName,
+        Name,
+        Email,
+        Available,
+        Status,
+        Response
+    };
 
-    enum AvailableStatus { Unknown, Free, Accepted, Busy, Tentative };
+    enum AvailableStatus {
+        Unknown,
+        Free,
+        Accepted,
+        Busy,
+        Tentative
+    };
 
     explicit AttendeeTableModel(QObject *parent = nullptr);
 

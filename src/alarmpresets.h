@@ -20,7 +20,10 @@ enum {
 
 namespace AlarmPresets
 {
-enum When { BeforeStart, BeforeEnd };
+enum When {
+    BeforeStart,
+    BeforeEnd
+};
 
 /**
  * Returns the available presets.

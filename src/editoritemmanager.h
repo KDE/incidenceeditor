@@ -36,7 +36,11 @@ class EditorItemManager : public QObject
 {
     Q_OBJECT
 public:
-    enum ItipPrivacy { ItipPrivacyPlain = 0, ItipPrivacySign = 1, ItipPrivacyEncrypt = 2 };
+    enum ItipPrivacy {
+        ItipPrivacyPlain = 0,
+        ItipPrivacySign = 1,
+        ItipPrivacyEncrypt = 2
+    };
     Q_DECLARE_FLAGS(ItipPrivacyFlags, ItipPrivacy)
 
     /**

@@ -65,7 +65,14 @@ IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags toItemManagerFlags(bool s
 }
 namespace IncidenceEditorNG
 {
-enum Tabs { GeneralTab = 0, AttendeesTab, ResourcesTab, AlarmsTab, RecurrenceTab, AttachmentsTab };
+enum Tabs {
+    GeneralTab = 0,
+    AttendeesTab,
+    ResourcesTab,
+    AlarmsTab,
+    RecurrenceTab,
+    AttachmentsTab
+};
 
 class IncidenceDialogPrivate : public ItemEditorUi
 {
