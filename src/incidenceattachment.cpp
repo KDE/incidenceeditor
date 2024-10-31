@@ -485,13 +485,13 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addSeparator();
 
 #ifndef QT_NO_CLIPBOARD
-    mCopyAction = KStandardAction::copy(this, &IncidenceAttachment::copyToClipboard, ac);
+    mCopyAction = KStandardActions::copy(this, &IncidenceAttachment::copyToClipboard, ac);
     mPopupMenu->addAction(mCopyAction);
 
-    mCutAction = KStandardAction::cut(this, &IncidenceAttachment::cutToClipboard, ac);
+    mCutAction = KStandardActions::cut(this, &IncidenceAttachment::cutToClipboard, ac);
     mPopupMenu->addAction(mCutAction);
 
-    QAction *action = KStandardAction::paste(this, &IncidenceAttachment::pasteFromClipboard, ac);
+    QAction *action = KStandardActions::paste(this, &IncidenceAttachment::pasteFromClipboard, ac);
     mPopupMenu->addAction(action);
     mPopupMenu->addSeparator();
 #endif
