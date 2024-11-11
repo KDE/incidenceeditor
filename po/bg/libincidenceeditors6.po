@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 19:45+0200\n"
+"PO-Revision-Date: 2024-11-10 14:29+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -811,7 +811,7 @@ msgstr "Активиране на форматиран текст"
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
-msgstr "Деактивиране на форматирен текст"
+msgstr "Деактивиране на форматиран текст"
 
 #: incidencedialog.cpp:228
 #, kde-format
@@ -950,7 +950,7 @@ msgid ""
 msgstr ""
 "<para>Все още не сте задали календар по подразбиране за вашите събития.</"
 "para><para>Задаването на календар по подразбиране ще направи създаването на "
-"нови събития по -бързои по -лесно, с по -малък шанс да ги подадете в грешна "
+"нови събития по -бързо и по -лесно, с по -малък шанс да ги подадете в грешна "
 "папка.</para><para>Искате ли да зададете календара си за събития по "
 "подразбиране <resource>%1</resource>?</para>"
 
