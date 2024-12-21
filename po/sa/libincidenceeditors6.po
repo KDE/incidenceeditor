@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:40+0000\n"
-"PO-Revision-Date: 2024-12-14 02:08+0530\n"
+"PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -403,7 +403,7 @@ msgstr[1] "%1 घण्टा"
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
-msgstr "(पुनरावृत्तिः) २."
+msgstr "(पुनरावृत्तिः)"
 
 #. i18n: These series of strings are used to show the user a description of
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
@@ -837,7 +837,7 @@ msgstr "Rec&urrence इति"
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
-msgstr " (घ) ९."
+msgstr " (घ)"
 
 #: incidencedialog.cpp:274
 #, kde-format
@@ -849,7 +849,7 @@ msgstr " (इत्यस्मिन्‌)"
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
-msgstr " (म) ९."
+msgstr " (म)"
 
 #: incidencedialog.cpp:280
 #, kde-format
@@ -1491,7 +1491,7 @@ msgstr "घण्टानः)"
 #, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in days"
 msgid "day(s)"
-msgstr "दिवस(दिनम्) २."
+msgstr "दिवस(दिनम्)"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:97
@@ -1571,7 +1571,7 @@ msgstr ""
 #: ui/alarmdialog.ui:166
 #, kde-format
 msgid " time(s)"
-msgstr " काल(समयः) २."
+msgstr " काल(समयः)"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:182
@@ -1641,7 +1641,7 @@ msgstr "स्मारकं प्रवर्तते सति भवन्
 #: ui/alarmdialog.ui:296
 #, kde-format
 msgid "Audio File:"
-msgstr "श्रव्यसञ्चिका : १."
+msgstr "श्रव्यसञ्चिका :"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:309
@@ -1864,7 +1864,7 @@ msgstr "यत्र आयोजनं वा कर्तव्यं वा �
 #, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
-msgstr "समापनम् : १."
+msgstr "समापनम् :"
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
 #: ui/dialogdesktop.ui:279
@@ -1892,7 +1892,7 @@ msgstr "अनिर्दिष्टम्"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
-msgstr "१ (उच्चतमः) २."
+msgstr "१ (उच्चतमः)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:307
@@ -1920,7 +1920,7 @@ msgstr "४"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
-msgstr "५ (मध्यम) २."
+msgstr "५ (मध्यम)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:327
@@ -1948,7 +1948,7 @@ msgstr "८"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
-msgstr "९ (अधमतम) २."
+msgstr "९ (अधमतम)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:361
@@ -2101,7 +2101,7 @@ msgstr "उपस्थिताः"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
-msgstr "सभा आयोजकः : १."
+msgstr "सभा आयोजकः :"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:776
@@ -2129,7 +2129,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
-msgstr "प्रतिभागिनः : १."
+msgstr "प्रतिभागिनः :"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:830
@@ -2280,7 +2280,7 @@ msgstr "पुनरावृत्तिः"
 #, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
-msgstr "पुनरावृत्तिः : १."
+msgstr "पुनरावृत्तिः :"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1164
@@ -2329,7 +2329,7 @@ msgstr "प्रत्येकं"
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
-msgstr "दिवस(दिनम्) २."
+msgstr "दिवस(दिनम्)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
 #: ui/dialogdesktop.ui:1237
@@ -2342,7 +2342,7 @@ msgstr "एतत् भविष्यत्घटनाश्च।"
 #, kde-format
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
-msgstr "समाप्तः भवति : १."
+msgstr "समाप्तः भवति :"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
@@ -2377,14 +2377,14 @@ msgstr "यस्याः अनन्तरं घटना वा कर्�
 #, kde-format
 msgctxt "@label"
 msgid "occurrence(s)"
-msgstr "घटना(s) ९."
+msgstr "घटना(s)"
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
 #: ui/dialogdesktop.ui:1569
 #, kde-format
 msgctxt "@label exceptions for the recurrence"
 msgid "Exceptions:"
-msgstr "अपवादाः : १."
+msgstr "अपवादाः :"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
 #: ui/dialogdesktop.ui:1594
@@ -2498,13 +2498,13 @@ msgstr "एकं समयं निर्धारयन्तु"
 #: ui/schedulingdialog.ui:39
 #, kde-format
 msgid "Earliest time to start:"
-msgstr "आरम्भस्य प्रारम्भिकः समयः : १."
+msgstr "आरम्भस्य प्रारम्भिकः समयः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/schedulingdialog.ui:59
 #, kde-format
 msgid "Latest time to end:"
-msgstr "समाप्तिपर्यन्तं नवीनतमः समयः : १."
+msgstr "समाप्तिपर्यन्तं नवीनतमः समयः :"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2525,7 +2525,7 @@ msgstr "केवलं चेक् कृतानि सप्ताहदि
 #: ui/schedulingdialog.ui:92
 #, kde-format
 msgid "Allowed weekdays:"
-msgstr "सप्ताहस्य अनुमतदिनानि : १."
+msgstr "सप्ताहस्य अनुमतदिनानि :"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2547,7 +2547,7 @@ msgstr "केवलं चेक्ड् भूमिकाभिः सह �
 #: ui/schedulingdialog.ui:124
 #, kde-format
 msgid "Mandatory roles:"
-msgstr "अनिवार्य भूमिकाः : १."
+msgstr "अनिवार्य भूमिकाः :"
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
