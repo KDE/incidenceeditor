@@ -275,13 +275,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr ""
+msgstr "应用更改"
 
 #: editoritemmanager.cpp:242
 #, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr ""
+msgstr "忽略并覆盖更改"
 
 #: freebusyganttproxymodel.cpp:68
 #, kde-format
@@ -668,55 +668,55 @@ msgstr "到期："
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
-msgstr ""
+msgstr "始于：%1"
 
 #: incidencedatetime.cpp:750
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
-msgstr ""
+msgstr "起始日期"
 
 #: incidencedatetime.cpp:751
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
-msgstr ""
+msgstr "起始时间"
 
 #: incidencedatetime.cpp:760 incidencedatetime.cpp:761
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
-msgstr ""
+msgstr "截止至：%1"
 
 #: incidencedatetime.cpp:763 incidencedatetime.cpp:764
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
-msgstr ""
+msgstr "结束于：%1"
 
 #: incidencedatetime.cpp:768
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
-msgstr ""
+msgstr "截止日期"
 
 #: incidencedatetime.cpp:769
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr ""
+msgstr "截止时间"
 
 #: incidencedatetime.cpp:771
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
-msgstr ""
+msgstr "结束日期"
 
 #: incidencedatetime.cpp:772
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
-msgstr ""
+msgstr "结束时间"
 
 #: incidencedatetime.cpp:850
 #, kde-format
