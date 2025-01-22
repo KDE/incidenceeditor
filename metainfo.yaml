@@ -1,4 +1,3 @@
-maintainer: 
 description: Incidenceeditor library
 tier: 3
 type: functional
@@ -9,9 +8,8 @@ platforms:
     - name: macOS
 portingAid: false
 deprecated: false
-release: false
 libraries:
- - cmake: "KPim6::IncidenceEditor"
+    - cmake: "KPim6::IncidenceEditor"
 cmakename: KPim6IncidenceEditor
 group: kdepim
 public_lib: true
