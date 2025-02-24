@@ -47,6 +47,7 @@ QStringList KOrganizerEditorConfig::allEmails() const
 
 QList<EditorConfig::Organizer> KOrganizerEditorConfig::allOrganizers() const
 {
+    // TODO add activities support here too
     const auto *manager = KIdentityManagementCore::IdentityManager::self();
     QList<EditorConfig::Organizer> organizers;
     std::transform(manager->begin(), manager->end(), std::back_inserter(organizers), [](const auto &identity) {
