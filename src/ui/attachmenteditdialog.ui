@@ -69,20 +69,20 @@
    <item row="4" column="0" colspan="2">
     <widget class="QCheckBox" name="mInlineCheck">
      <property name="toolTip">
-      <string comment="@info:tooltip">Store the attachment file inside the calendar</string>
+      <string comment="@info:tooltip">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Store a copy of the attachment file inside the calendar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="whatsThis">
       <string comment="@info:whatsthis">Checking this option will cause the attachment to be stored inside your calendar, which can take a lot of space depending on the size of the attachment. If this option is not checked, then only a link pointing to the attachment will be stored.  Do not use a link for attachments that change often or may be moved (or removed) from their current location.</string>
      </property>
      <property name="text">
-      <string comment="@option:check">Store attachment inline</string>
+      <string comment="@option:check">Store a copy of the attachment in the calendar </string>
      </property>
     </widget>
    </item>
    <item row="6" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -123,7 +123,7 @@
           <string>Location:</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -183,7 +183,7 @@
       <string>Type:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
     </widget>
    </item>
@@ -191,15 +191,15 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QWidget</extends>
+   <header>kurlrequester.h</header>
+  </customwidget>
+  <customwidget>
    <class>KSeparator</class>
    <extends>QFrame</extends>
    <header>kseparator.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KUrlRequester</class>
-   <extends>QWidget</extends>
-   <header>kurlrequester.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
