@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2010-09-24 16:28+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -1711,7 +1711,9 @@ msgstr "अज्ञात"
 #: ui/attachmenteditdialog.ui:72
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1732,7 +1734,7 @@ msgstr ""
 #| msgctxt "@title"
 #| msgid "Save Attachment"
 msgctxt "@option:check"
-msgid "Store attachment inline"
+msgid "Store a copy of the attachment in the calendar "
 msgstr "संलग्नक सहेजू"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)

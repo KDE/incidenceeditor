@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -1679,9 +1679,13 @@ msgstr "अज्ञात"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr "अनुलग्नक फ़ाइल को कैलेंडर के अंदर संग्रहीत करें"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1703,10 +1707,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
-msgid "Store attachment inline"
-msgstr "अनुलग्नक को इनलाइन संग्रहित करें"
+msgid "Store a copy of the attachment in the calendar "
+msgstr "अनुलग्नक फ़ाइल को कैलेंडर के अंदर संग्रहीत करें"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2829,3 +2835,7 @@ msgid ""
 msgstr ""
 "सभी उपस्थित लोगों की खाली/व्यस्त स्थिति दिखाता है। सूची में किसी उपस्थित व्यक्ति की "
 "प्रविष्टि पर डबल-क्लिक करने से आप उनकी खाली/व्यस्त जानकारी का स्थान दर्ज कर सकेंगे।"
+
+#~ msgctxt "@option:check"
+#~ msgid "Store attachment inline"
+#~ msgstr "अनुलग्नक को इनलाइन संग्रहित करें"

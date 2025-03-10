@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1707,9 +1707,13 @@ msgstr "Άγνωστο"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr "Αποθήκευση συνημμένου μέσα στο ημερολόγιο"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1732,10 +1736,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
-msgid "Store attachment inline"
-msgstr "Αποθήκευση του συνημμένου εμβόλιμα"
+msgid "Store a copy of the attachment in the calendar "
+msgstr "Αποθήκευση συνημμένου μέσα στο ημερολόγιο"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2898,6 +2904,10 @@ msgstr ""
 "Εμφανίζει την κατάσταση διαθεσιμότητας για όλους τους συμμετέχοντες. "
 "Κάνοντας διπλό κλικ σε ένα συμμετέχοντα στη λίστα θα σας επιτρέψει την "
 "εισαγωγή της τοποθεσίας των πληροφοριών διαθεσιμότητας."
+
+#~ msgctxt "@option:check"
+#~ msgid "Store attachment inline"
+#~ msgstr "Αποθήκευση του συνημμένου εμβόλιμα"
 
 #~ msgctxt "@action:button"
 #~ msgid "Select Attendees..."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2024-11-14 09:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -1760,9 +1760,13 @@ msgstr "Неизвестно"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr "Сохранить файл вложения внутри календаря"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1784,10 +1788,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
-msgid "Store attachment inline"
-msgstr "Сохранить вложение в календаре"
+msgid "Store a copy of the attachment in the calendar "
+msgstr "Сохранить файл вложения внутри календаря"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2926,6 +2932,10 @@ msgid ""
 msgstr ""
 "Показывает статус занятости всех участников. Двойной щелчок на участнике "
 "позволит ввести расположение информации о занятом времени."
+
+#~ msgctxt "@option:check"
+#~ msgid "Store attachment inline"
+#~ msgstr "Сохранить вложение в календаре"
 
 #~ msgctxt "@action:button"
 #~ msgid "Select Attendees..."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2014-09-13 18:13+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -1689,9 +1689,13 @@ msgstr "Ukjent"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr "Lagre vedlegg inni kalenderen"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1713,10 +1717,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
-msgid "Store attachment inline"
-msgstr "Lagre vedlegg inni teksten"
+msgid "Store a copy of the attachment in the calendar "
+msgstr "Lagre vedlegg inni kalenderen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2853,3 +2859,7 @@ msgstr ""
 "Viser alle deltakeres ledig/opptatt-status. Du kan taste inn adressen til "
 "deres ledig/opptatt-informasjon ved å dobbeltklikke på deltakerens oppføring "
 "i lista."
+
+#~ msgctxt "@option:check"
+#~ msgid "Store attachment inline"
+#~ msgstr "Lagre vedlegg inni teksten"

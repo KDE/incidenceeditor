@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-10 00:42+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1689,9 +1689,13 @@ msgstr "अज्ञात"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr "संलग्नसञ्चिकां पञ्चाङ्गस्य अन्तः संग्रहयन्तु"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1712,10 +1716,12 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
-msgid "Store attachment inline"
-msgstr "संलग्नकं inline संग्रहयन्तु"
+msgid "Store a copy of the attachment in the calendar "
+msgstr "संलग्नसञ्चिकां पञ्चाङ्गस्य अन्तः संग्रहयन्तु"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2840,3 +2846,7 @@ msgid ""
 msgstr ""
 "सर्वेषां उपस्थितानां Free/Busy इति स्थितिं दर्शयति। सूचीयां उपस्थितस्य प्रविष्टौ द्विवारं "
 "क्लिक् करणेन तेषां निःशुल्क/व्यस्तसूचनायाः स्थानं प्रविष्टुं शक्यते।"
+
+#~ msgctxt "@option:check"
+#~ msgid "Store attachment inline"
+#~ msgstr "संलग्नकं inline संग्रहयन्तु"
