@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for libincidenceeditors6.po package.
+# Copyright (C) 2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the incidenceeditor package.
 #
-# Javier Vinal <fjvinal@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:42+0000\n"
-"PO-Revision-Date: 2024-05-23 17:14+0200\n"
+"PO-Revision-Date: 2025-03-10 12:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -585,7 +586,7 @@ msgstr "A&brir"
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Guardar como..."
+msgstr "Guardar como…"
 
 #: incidenceattachment.cpp:499
 #, kde-format
@@ -597,7 +598,7 @@ msgstr "Elimina&r"
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Propiedades..."
+msgstr "&Propiedades…"
 
 #: incidenceattachment.cpp:518
 #, kde-format
@@ -995,7 +996,7 @@ msgstr "Deshacer cambios y cerrar diálogo"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "Plan&tillas..."
+msgstr "Plan&tillas…"
 
 #: incidencedialog.cpp:696
 #, kde-format
@@ -1707,14 +1708,14 @@ msgstr "Desconocido"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "Almacenar el archivo adjunto dentro del calendario"
+msgstr ""
+"<html><head/><body><p>Guardar una copia del archivo adjunto dentro del "
+"calendario</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1735,12 +1736,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Almacenar el archivo adjunto dentro del calendario"
+msgstr "Guardar una copia del archivo adjunto dentro del calendario"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2186,7 +2185,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Planificar..."
+msgstr "Planificar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2215,7 +2214,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Seleccionar asistentes..."
+msgstr "Seleccionar asistentes…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2251,7 +2250,7 @@ msgstr "Recurso de libro"
 #: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources…"
-msgstr "Buscar recursos..."
+msgstr "Buscar recursos…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
@@ -2689,7 +2688,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr "&Nueva..."
+msgstr "&Nueva…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
