@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:40+0000\n"
+"POT-Creation-Date: 2025-03-11 02:35+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1748,7 +1748,9 @@ msgstr "Anaithnid"
 #: ui/attachmenteditdialog.ui:72
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Store the attachment file inside the calendar"
+msgid ""
+"<html><head/><body><p>Store a copy of the attachment file inside the "
+"calendar</p></body></html>"
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
@@ -1769,7 +1771,7 @@ msgstr ""
 #| msgctxt "@info:tooltip"
 #| msgid "Give the attachment a name"
 msgctxt "@option:check"
-msgid "Store attachment inline"
+msgid "Store a copy of the attachment in the calendar "
 msgstr "Cuir ainm ar an iatán"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
