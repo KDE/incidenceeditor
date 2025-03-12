@@ -1747,7 +1747,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Emmagatzema una còpia de l'adjunt al calendari"
+msgstr "Emmagatzema una còpia de l'adjunt dins del calendari"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123

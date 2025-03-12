@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:42+0000\n"
-"PO-Revision-Date: 2024-05-24 16:23+0200\n"
+"PO-Revision-Date: 2025-03-11 03:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1698,14 +1698,14 @@ msgstr "უცნობი"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "მიმაგრებული ფაილის კალენდრის შიგნით დანახსოვრება"
+msgstr ""
+"<html><head/><body><p>მიმაგრებული ფაილის დამახსოვრება კალენდრის შიგნით</p></"
+"body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1727,12 +1727,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "მიმაგრებული ფაილის კალენდრის შიგნით დანახსოვრება"
+msgstr "მიმაგრებული ფაილის ასლის დამახსოვრება კალენდარში "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
