@@ -1,23 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 02:35+0000\n"
-"PO-Revision-Date: 2024-05-25 16:51+0400\n"
+"PO-Revision-Date: 2025-03-13 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1750,14 +1751,13 @@ msgstr "مجهول"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "خزّن ملفّ المرفق في التّقويم"
+msgstr ""
+"<html><head/><body><p>خزّن نسخة من ملفّ المرفق في التّقويم</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1777,12 +1777,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "خزّن ملفّ المرفق في التّقويم"
+msgstr "خزّن نسخة من المرفق في التّقويم "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
