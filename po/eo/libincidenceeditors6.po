@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:42+0000\n"
-"PO-Revision-Date: 2024-05-23 05:51+0100\n"
+"PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1695,14 +1695,14 @@ msgstr "Nekonata"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "Konservi la aldonan dosieron en la kalendaro"
+msgstr ""
+"<html><head/><body><p>Konservi kopion de la aldonita dosiero ene de la "
+"kalendaro</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1723,12 +1723,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Konservi la aldonan dosieron en la kalendaro"
+msgstr "Konservi kopion de la aldona dosiero en la kalendaro"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -2870,7 +2868,3 @@ msgstr ""
 "Montras la staton de Libera/Okupita de ĉiuj partoprenantoj. Duobla klako sur "
 "la enskribo de ĉeestanto en la listo permesos al vi enigi la lokon de ilia "
 "Libera/Okupita Informo."
-
-#~ msgctxt "@option:check"
-#~ msgid "Store attachment inline"
-#~ msgstr "Konservi aldonaĵon enlinie"
