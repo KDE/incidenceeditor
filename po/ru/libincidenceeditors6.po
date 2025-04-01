@@ -5,13 +5,13 @@
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2018, 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
-# SPDX-FileCopyrightText: 2022, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:42+0000\n"
-"PO-Revision-Date: 2024-11-14 09:49+0300\n"
+"PO-Revision-Date: 2025-03-31 15:01+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -1760,14 +1760,14 @@ msgstr "Неизвестно"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "Сохранить файл вложения внутри календаря"
+msgstr ""
+"<html><head/><body><p>Сохранить файл вложения внутри календаря</p></body></"
+"html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1788,12 +1788,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Сохранить файл вложения внутри календаря"
+msgstr "Сохранить файл вложения в календаре "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
