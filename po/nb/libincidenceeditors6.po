@@ -1690,8 +1690,6 @@ msgstr "Ukjent"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
 #, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
@@ -1718,8 +1716,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
 #, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
 msgstr "Lagre vedlegg inni kalenderen"
