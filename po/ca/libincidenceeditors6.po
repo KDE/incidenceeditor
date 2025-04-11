@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-10 00:42+0000\n"
-"PO-Revision-Date: 2025-03-10 09:36+0100\n"
+"PO-Revision-Date: 2025-04-10 10:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -2554,7 +2554,7 @@ msgstr "Hora d'acabament més tardana:"
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr "Marqueu els dies de la setmana a incloure en la cerca."
+msgstr "Marqueu els dies entre setmana a incloure en la cerca."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2563,14 +2563,14 @@ msgstr "Marqueu els dies de la setmana a incloure en la cerca."
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
-"Només s'inclouran els dies de la setmana marcats en la cerca d'un espai de "
+"Només s'inclouran els dies entre setmana marcats en la cerca d'un espai de "
 "temps lliure."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
 #, kde-format
 msgid "Allowed weekdays:"
-msgstr "Dies de la setmana permesos:"
+msgstr "Dies entre setmana permesos:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
