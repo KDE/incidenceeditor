@@ -55,7 +55,7 @@ public:
     Akonadi::Monitor *mItemMonitor = nullptr;
     ItemEditorUi *mItemUi = nullptr;
     bool mIsCounterProposal = false;
-    EditorItemManager::SaveAction currentAction;
+    EditorItemManager::SaveAction currentAction{EditorItemManager::None};
     Akonadi::IncidenceChanger *mChanger = nullptr;
 
 public:
@@ -74,7 +74,7 @@ public:
 
 ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq)
     : q_ptr(qq)
-    , currentAction(EditorItemManager::None)
+
 {
     mFetchScope.fetchFullPayload();
     mFetchScope.setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
