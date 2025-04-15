@@ -29,7 +29,7 @@ Q_GLOBAL_STATIC(QList<KCalendarCore::Alarm::Ptr>, sBeforeEndPresets)
 static int sDefaultPresetIndex = 0;
 static int sDefaultAlarmOffset = 0; // We must save it, so we can detect that config changed.
 
-int configuredReminderTimeInMinutes()
+static int configuredReminderTimeInMinutes()
 {
     QList<int> units;
     units << 1 << 60 << (24 * 60);
@@ -43,7 +43,7 @@ int configuredReminderTimeInMinutes()
     return reminderTimeToUse * units[unitsToUse];
 }
 
-void initPresets(AlarmPresets::When when)
+static void initPresets(AlarmPresets::When when)
 {
     QList<int> hardcodedPresets;
     hardcodedPresets << 0 // at start/due
@@ -114,7 +114,7 @@ void initPresets(AlarmPresets::When when)
     }
 }
 
-void checkInitNeeded(When when)
+static void checkInitNeeded(When when)
 {
     const int currentAlarmOffset = configuredReminderTimeInMinutes();
     const bool configChanged = currentAlarmOffset != sDefaultAlarmOffset;
