@@ -143,7 +143,7 @@ IndividualMailITIPHandlerDialogDelegate::IndividualMailITIPHandlerDialogDelegate
                                                                                  KCalendarCore::iTIPMethod method,
                                                                                  QWidget *parent)
     : Akonadi::ITIPHandlerDialogDelegate(incidence, method, parent)
-    , mDialog(nullptr)
+
 {
 }
 

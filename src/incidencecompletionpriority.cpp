@@ -43,8 +43,7 @@ void IncidenceCompletionPriorityPrivate::sliderValueChanged(int value)
 }
 
 IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop *ui)
-    : IncidenceEditor()
-    , d(new IncidenceCompletionPriorityPrivate(this))
+    : d(new IncidenceCompletionPriorityPrivate(this))
 {
     Q_ASSERT(ui != nullptr);
     setObjectName("IncidenceCompletionPriority"_L1);

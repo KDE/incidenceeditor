@@ -14,7 +14,7 @@
 using namespace IncidenceEditorNG;
 
 KOrganizerEditorConfig::KOrganizerEditorConfig()
-    : EditorConfig()
+
 {
 }
 
