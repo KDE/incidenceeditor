@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2014.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 02:35+0000\n"
-"PO-Revision-Date: 2024-07-31 22:05+0200\n"
+"PO-Revision-Date: 2025-04-27 22:25+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: alarmdialog.cpp:24
 #, kde-format
@@ -1689,14 +1689,14 @@ msgstr "Ismeretlen"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr "A melléklet tárolása a naptáron belül"
+msgstr ""
+"<html><head/><body><p>A melléklet másolatának tárolása a naptáron belül</p></"
+"body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1717,12 +1717,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Store the attachment file inside the calendar"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "A melléklet tárolása a naptáron belül"
+msgstr "A melléklet másolatának tárolása a naptáron belül "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
