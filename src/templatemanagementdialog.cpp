@@ -8,13 +8,15 @@
 #include "templatemanagementdialog.h"
 using namespace Qt::Literals::StringLiterals;
 
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KSharedConfig>
 #include <KStandardGuiItem>
-#include <QInputDialog>
 
 #include <QDesktopServices>
 #include <QDialogButtonBox>
+#include <QInputDialog>
 #include <QPushButton>
 #include <QTimer>
 #include <QUrlQuery>
@@ -54,9 +56,17 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     connect(m_base.m_listBox, &QListWidget::itemSelectionChanged, this, &TemplateManagementDialog::slotItemSelected);
     connect(m_base.m_listBox, &QListWidget::itemDoubleClicked, this, &TemplateManagementDialog::slotApplyTemplate);
     connect(okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotOk);
+    // save dialog size on 'OK'
+    connect(okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotSaveSize);
 
     m_base.m_buttonRemove->setEnabled(false);
     m_base.m_buttonApply->setEnabled(false);
+
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView("IncidenceDialog"));
+    const QSize size = group.readEntry("TemplateDialogSize", QSize(500, 400));
+    if (size.isValid()) {
+        resize(size);
+    }
 }
 
 void TemplateManagementDialog::slotHelp()
@@ -182,6 +192,13 @@ void TemplateManagementDialog::slotOk()
         Q_EMIT templatesChanged(m_templates);
     }
     accept();
+}
+
+void TemplateManagementDialog::slotSaveSize()
+{
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView("IncidenceDialog"));
+    group.writeEntry("TemplateDialogSize", size());
+    group.sync();
 }
 
 #include "moc_templatemanagementdialog.cpp"

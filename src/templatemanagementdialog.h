@@ -42,6 +42,7 @@ protected Q_SLOTS:
     void slotRemoveTemplate();
     void slotApplyTemplate();
     void slotOk();
+    void slotSaveSize();
 
 private:
     void slotHelp();
