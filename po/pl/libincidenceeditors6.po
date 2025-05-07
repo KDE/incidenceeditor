@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-07 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 10:44+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -1411,44 +1411,44 @@ msgctxt ""
 msgid "to %1"
 msgstr "do %1"
 
-#: templatemanagementdialog.cpp:31
+#: templatemanagementdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Zarządzaj wzorcami %1"
 
-#: templatemanagementdialog.cpp:84
+#: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "Template Name"
 msgstr "Nazwa wzorca"
 
-#: templatemanagementdialog.cpp:85
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Proszę podać nazwę dla nowego wzorca:"
 
-#: templatemanagementdialog.cpp:87
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nowy %1 wzorzec"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Wzorzec o tej nazwie już istnieje. Czy go zastąpić?"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Nazwa wzorca powtarza się"
 
-#: templatemanagementdialog.cpp:130
+#: templatemanagementdialog.cpp:140
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Czy na pewno chcesz usunąć wzorzec <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:131
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"

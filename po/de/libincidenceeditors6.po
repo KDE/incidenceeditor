@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-07 00:43+0000\n"
 "PO-Revision-Date: 2024-08-20 20:16+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1404,46 +1404,46 @@ msgctxt ""
 msgid "to %1"
 msgstr "bis %1"
 
-#: templatemanagementdialog.cpp:31
+#: templatemanagementdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1-Vorlagen verwalten"
 
-#: templatemanagementdialog.cpp:84
+#: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "Template Name"
 msgstr "Name der Vorlage"
 
-#: templatemanagementdialog.cpp:85
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Bitte geben Sie einen Namen für die neue Vorlage ein:"
 
-#: templatemanagementdialog.cpp:87
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "New %1 Template"
 msgstr "Neue „%1“-Vorlage"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 "Eine Vorlage mit diesem Namen existiert bereits. Möchten Sie sie "
 "überschreiben?"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Doppelt vorhandener Name"
 
-#: templatemanagementdialog.cpp:130
+#: templatemanagementdialog.cpp:140
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Möchten Sie die Vorlage <b>%1</b> wirklich löschen?"
 
-#: templatemanagementdialog.cpp:131
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
