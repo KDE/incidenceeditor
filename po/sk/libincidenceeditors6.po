@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-11 02:35+0000\n"
+"POT-Creation-Date: 2025-05-07 02:35+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1444,46 +1444,46 @@ msgctxt ""
 msgid "to %1"
 msgstr "do %1"
 
-#: templatemanagementdialog.cpp:31
+#: templatemanagementdialog.cpp:33
 #, fuzzy, kde-format
 #| msgid "Manage %1 Templates"
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Spravovať šablóny %1"
 
-#: templatemanagementdialog.cpp:84
+#: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "Template Name"
 msgstr "Meno šablóny"
 
-#: templatemanagementdialog.cpp:85
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Prosím zadajte názov pre novú šablónu:"
 
-#: templatemanagementdialog.cpp:87
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nová šablóna %1"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Šablóna s rovnakým názvom už existuje, chcete ju prepísať?"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:106
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplikovať názov šablóny"
 
-#: templatemanagementdialog.cpp:130
+#: templatemanagementdialog.cpp:140
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Určite chcete odstrániť šablónu <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:131
+#: templatemanagementdialog.cpp:141
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"

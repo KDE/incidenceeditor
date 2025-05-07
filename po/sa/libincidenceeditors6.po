@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-11 02:35+0000\n"
+"POT-Creation-Date: 2025-05-07 02:35+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1385,44 +1385,44 @@ msgctxt ""
 msgid "to %1"
 msgstr "%1 पर्यन्तम्"
 
-#: templatemanagementdialog.cpp:31
+#: templatemanagementdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 टेम्पलेट् प्रबन्धयन्तु"
 
-#: templatemanagementdialog.cpp:84
+#: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "Template Name"
 msgstr "टेम्पलेट नाम"
 
-#: templatemanagementdialog.cpp:85
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "कृपया नूतनसाचायाः नाम प्रविष्टं कुर्वन्तु:"
 
-#: templatemanagementdialog.cpp:87
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "New %1 Template"
 msgstr "नवीन %1 टेम्पलेट"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "तत्नाम्नः एकः टेम्पलेट् पूर्वमेव अस्ति, किं भवन्तः तस्य अधिलेखनं कर्तुम् इच्छन्ति?"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "डुप्लिकेट टेम्पलेट नाम"
 
-#: templatemanagementdialog.cpp:130
+#: templatemanagementdialog.cpp:140
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "किं भवान् निश्चिन्तः अस्ति यत् भवान् <b>%1</b> टेम्पलेट् अपसारयितुम् इच्छति ?"
 
-#: templatemanagementdialog.cpp:131
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
