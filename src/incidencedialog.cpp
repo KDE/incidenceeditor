@@ -183,9 +183,10 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mEditor->combine(mIeResource);
 
     // Set the default collection
-    const qint64 colId = CalendarSupport::KCalPrefs::instance()->defaultCalendarId();
-    const Akonadi::Collection col(colId);
-    setCalendarCollection(col);
+    const Akonadi::Collection col(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    if (col.isValid()) {
+        setCalendarCollection(col);
+    }
 
     q->connect(mEditor, &CombinedIncidenceEditor::showMessage, q, [this](const QString &reason, KMessageWidget::MessageType msgType) {
         showMessage(reason, msgType);
@@ -491,8 +492,8 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
-    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) && (mCalSelector->count() > 1)
-        && (CalendarSupport::KCalPrefs::instance()->defaultCalendarId() == -1)) {
+    const Akonadi::Collection defaultCollection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) && (mCalSelector->count() > 1) && !defaultCollection.isValid()) {
         const QString collectionName = mCalSelector->currentText();
         const QString message = xi18nc("@info",
                                        "<para>You have not set a default calendar for your events yet.</para>"
