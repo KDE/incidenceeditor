@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:43+0000\n"
+"POT-Creation-Date: 2025-05-16 00:42+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -843,114 +843,114 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Vormindatud teksti keelamine"
 
-#: incidencedialog.cpp:228
+#: incidencedialog.cpp:229
 #, kde-format
 msgid "Select a valid collection first."
 msgstr "Vali kõigepealt korrektne kogu."
 
-#: incidencedialog.cpp:251
+#: incidencedialog.cpp:252
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Meeldetuletus (%1)"
 
-#: incidencedialog.cpp:253
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Meeldetuletus"
 
-#: incidencedialog.cpp:261
+#: incidencedialog.cpp:262
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Kord&us"
 
-#: incidencedialog.cpp:271
+#: incidencedialog.cpp:272
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (P)"
 
-#: incidencedialog.cpp:274
+#: incidencedialog.cpp:275
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (N)"
 
-#: incidencedialog.cpp:277
+#: incidencedialog.cpp:278
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (K)"
 
-#: incidencedialog.cpp:280
+#: incidencedialog.cpp:281
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (A)"
 
-#: incidencedialog.cpp:283
+#: incidencedialog.cpp:284
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (E)"
 
-#: incidencedialog.cpp:317
+#: incidencedialog.cpp:318
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Malli '%1' ei leitud."
 
-#: incidencedialog.cpp:323
+#: incidencedialog.cpp:324
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Malli '%1' laadimisel tekkis viga."
 
-#: incidencedialog.cpp:329
+#: incidencedialog.cpp:330
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Mall ei sisalda ühtegi korrektset sündmust."
 
-#: incidencedialog.cpp:428
+#: incidencedialog.cpp:429
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "&Manused (%1)"
 
-#: incidencedialog.cpp:430
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "&Manused"
 
-#: incidencedialog.cpp:437
+#: incidencedialog.cpp:438
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "Osale&jad (%1)"
 
-#: incidencedialog.cpp:439
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "Osale&jad"
 
-#: incidencedialog.cpp:446
+#: incidencedialog.cpp:447
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "&Ressursid (%1)"
 
-#: incidencedialog.cpp:448
+#: incidencedialog.cpp:449
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "&Ressursid"
 
-#: incidencedialog.cpp:470
+#: incidencedialog.cpp:471
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -962,13 +962,13 @@ msgstr ""
 " \n"
 " Põhjus: %1"
 
-#: incidencedialog.cpp:476
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr ""
 
-#: incidencedialog.cpp:498
+#: incidencedialog.cpp:499
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -984,13 +984,13 @@ msgstr ""
 "para><para>Kas luua ressursile <resource>%1</resource>  vaikimisi sündmuste "
 "kalender?</para>"
 
-#: incidencedialog.cpp:506
+#: incidencedialog.cpp:507
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
 msgstr "Kas määrata vaikimisi kalender?"
 
-#: incidencedialog.cpp:507
+#: incidencedialog.cpp:508
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Set Default Calendar?"
@@ -998,7 +998,7 @@ msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Kas määrata vaikimisi kalender?"
 
-#: incidencedialog.cpp:508
+#: incidencedialog.cpp:509
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1006,25 +1006,25 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Ära saada"
 
-#: incidencedialog.cpp:688
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Salvestab aktiivsed muudatused"
 
-#: incidencedialog.cpp:689
+#: incidencedialog.cpp:690
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Unusta muudatused ja sulge dialoog"
 
-#: incidencedialog.cpp:690
+#: incidencedialog.cpp:691
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Unusta muudatused ja sulge dialoog"
 
-#: incidencedialog.cpp:694
+#: incidencedialog.cpp:695
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Templates..."
@@ -1032,13 +1032,13 @@ msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Malli&d..."
 
-#: incidencedialog.cpp:696
+#: incidencedialog.cpp:697
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Selle elemendi mallide haldamine"
 
-#: incidencedialog.cpp:698
+#: incidencedialog.cpp:699
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1050,25 +1050,25 @@ msgstr ""
 "muuta uute elementide loomise hõlpsamaks ja kiiremaks, asetades automaatselt "
 "redaktorisse sulle vajalikud väärtused."
 
-#: incidencedialog.cpp:795 incidencedialog.cpp:816 incidencedialog.cpp:832
+#: incidencedialog.cpp:796 incidencedialog.cpp:817 incidencedialog.cpp:833
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Kas tõesti loobuda?"
 
-#: incidencedialog.cpp:796 incidencedialog.cpp:817 incidencedialog.cpp:833
+#: incidencedialog.cpp:797 incidencedialog.cpp:818 incidencedialog.cpp:834
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizeri kinnitus"
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:818 incidencedialog.cpp:834
+#: incidencedialog.cpp:798 incidencedialog.cpp:819 incidencedialog.cpp:835
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:819 incidencedialog.cpp:835
+#: incidencedialog.cpp:799 incidencedialog.cpp:820 incidencedialog.cpp:836
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
