@@ -1056,7 +1056,7 @@ msgstr "Mètode predeterminat d'adjunció del correu"
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
 msgstr ""
-"Escolliu la forma predeterminada d'adjuntar els correus arrossegats a un "
+"Trieu la forma predeterminada d'adjuntar els correus arrossegats a un "
 "esdeveniment"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
@@ -1830,7 +1830,7 @@ msgstr "Accepta la invitació"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to accept the invitation."
-msgstr "Cliqueu este botó per a acceptar la invitació."
+msgstr "Cliqueu damunt d'este botó per a acceptar la invitació."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:94
@@ -2653,9 +2653,9 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
-"Seleccioneu una plantilla i feu clic en <i>Aplica</i> per a aplicar-la a "
-"este element. Feu clic en <i>Nova</i> per a crear una plantilla nova basada "
-"en les preferències de l'element actual."
+"Seleccioneu una plantilla i cliqueu damunt <i>Aplica</i> per a aplicar-la a "
+"este element. Cliqueu damunt <i>Nova</i> per a crear una plantilla nova "
+"basada en les preferències de l'element actual."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
@@ -2687,9 +2687,9 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
-"Cliqueu este botó per a crear una plantilla nova basada en la configuració "
-"actual en l'editor. Podeu utilitzar esta plantilla per a afegir elements "
-"nous ràpidament en un futur."
+"Cliqueu damunt d'este botó per a crear una plantilla nova basada en la "
+"configuració actual en l'editor. Podeu utilitzar esta plantilla per a afegir "
+"elements nous ràpidament en un futur."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
@@ -2710,8 +2710,8 @@ msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
 msgstr ""
-"En clicar este botó s'eliminarà permanentment la plantilla seleccionada de "
-"la llista de plantilles gestionades."
+"Quan es clique damunt d'este botó, s'eliminarà permanentment la plantilla "
+"seleccionada de la llista de plantilles gestionades."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:78
@@ -2732,8 +2732,8 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
-"En clicar este botó s'aplicarà la configuració de la plantilla seleccionada "
-"a l'element que esteu editant."
+"Quan es clique damunt d'este botó, s'aplicarà la configuració de la "
+"plantilla seleccionada a l'element que esteu editant."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:91
@@ -2818,8 +2818,8 @@ msgid ""
 "Click this button to center the Gantt chart on the start time and day of "
 "this event."
 msgstr ""
-"Cliqueu este botó per a centrar el diagrama de Gantt a l'hora d'inici i el "
-"dia de l'esdeveniment."
+"Cliqueu damunt d'este botó per a centrar el diagrama de Gantt a l'hora "
+"d'inici i el dia de l'esdeveniment."
 
 #: visualfreebusywidget.cpp:173
 #, kde-format
@@ -2842,9 +2842,9 @@ msgid ""
 "Click this button to move the event to a date and time when all the "
 "attendees have time available in their Free/Busy lists."
 msgstr ""
-"Cliqueu este botó per a moure l'esdeveniment a una data i hora en la qual "
-"tots els assistents tinguen temps disponible a les seues llistes de lliure/"
-"ocupat."
+"Cliqueu damunt d'este botó per a moure l'esdeveniment a una data i hora en "
+"la qual tots els assistents tinguen temps disponible a les seues llistes de "
+"lliure/ocupat."
 
 #: visualfreebusywidget.cpp:187
 #, kde-format
@@ -2895,5 +2895,5 @@ msgid ""
 "Free/Busy Information."
 msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer doble clic "
-"damunt d'una entrada d'un assistent en la llista us permetrà introduir la "
+"damunt d'una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seua informació de lliure/ocupat."
