@@ -320,12 +320,14 @@ void IncidenceAttendee::fillOrganizerCombo()
     const auto organizers = IncidenceEditorNG::EditorConfig::instance()->allOrganizers();
     for (auto organizer = organizers.cbegin(), end = organizers.cend(); organizer != end; ++organizer) {
         if (std::any_of(organizers.cbegin(), organizer, [organizer](const auto &pastOrg) {
-                return organizer->email == pastOrg.email && organizer->name == pastOrg.name;
+                return organizer->fullEmail == pastOrg.fullEmail && organizer->name == pastOrg.name;
             })) {
             continue;
         }
-
-        mUi->mOrganizerCombo->addItem(QStringLiteral("%1 <%2>").arg(organizer->name, organizer->email), QVariant::fromValue(*organizer));
+        // Organizer struct is {name, fullEMail, signed, encrypt}
+        // meaning we need to convert fullEMail into a base email, ie. strip the attendee name
+        const QString &email = KEmailAddress::extractEmailAddress(organizer->fullEmail);
+        mUi->mOrganizerCombo->addItem(QStringLiteral("%1 <%2>").arg(organizer->name, email), QVariant::fromValue(*organizer));
     }
 }
 

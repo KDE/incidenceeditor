@@ -34,7 +34,7 @@ class INCIDENCEEDITOR_EXPORT EditorConfig
 public:
     struct Organizer {
         QString name;
-        QString email;
+        QString fullEmail;
         bool sign = false;
         bool encrypt = false;
     };
