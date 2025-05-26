@@ -12,7 +12,7 @@
 #include "incidenceeditor_debug.h"
 
 #include <CalendarSupport/KCalPrefs>
-#include <akonadi/calendarsettings.h> //krazy:exclude=camelcase this is a generated file
+#include <akonadi/calendarsettings.h>
 
 #include <KContacts/Addressee>
 

@@ -233,7 +233,7 @@ void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteA
 {
     Q_Q(EditorItemManager);
     if (mItemUi->containsPayloadIdentifiers(partIdentifiers)) {
-        QPointer<QMessageBox> dlg = new QMessageBox; // krazy:exclude=qclasses
+        QPointer<QMessageBox> dlg = new QMessageBox;
         dlg->setIcon(QMessageBox::Question);
         dlg->setInformativeText(
             i18n("The item has been changed by another application.\n"
