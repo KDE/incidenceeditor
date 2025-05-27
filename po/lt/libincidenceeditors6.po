@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:42+0000\n"
+"POT-Creation-Date: 2025-05-27 00:42+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -707,7 +707,7 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:444
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Select Attendees..."
@@ -715,7 +715,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Parinkite dalyvius..."
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -725,7 +725,7 @@ msgstr[1] "%1 konfliktai"
 msgstr[2] "%1 konfliktų"
 msgstr[3] "%1 konfliktas"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:798
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -736,14 +736,14 @@ msgstr ""
 "Jūs keičiate įvykio organizatorių. Organizatorius yra kartu ir įvykio "
 "dalyvis, taigi, ar norėtumėte pakeisti ir atitinkamo dalyvio duomenis?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:802
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Dalyvis"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:803
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
