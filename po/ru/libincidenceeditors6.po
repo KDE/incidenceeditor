@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 02:42+0000\n"
+"POT-Creation-Date: 2025-05-27 02:35+0000\n"
 "PO-Revision-Date: 2025-03-31 15:01+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -666,13 +666,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Не приглашать"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:444
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Выбор участников"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -682,7 +682,7 @@ msgstr[1] "%1 конфликта"
 msgstr[2] "%1 конфликтов"
 msgstr[3] "%1 конфликт"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:798
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -693,13 +693,13 @@ msgstr ""
 "Изменён организатор события. Организатор также является участником события, "
 "изменить соответствующего участника?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Изменить участника"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:803
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

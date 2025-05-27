@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 02:42+0000\n"
+"POT-Creation-Date: 2025-05-27 02:35+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -644,13 +644,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Ära saada"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:444
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Osalejate valimine"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -658,7 +658,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikti"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:798
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -669,7 +669,7 @@ msgstr ""
 "Kavatsed muuta selle sündmuse korraldajat, kes samuti sellel osaleb. Kas "
 "soovid siis muuta ka tema osalemist?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:802
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "One attendee"
@@ -678,7 +678,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "1 osaleja"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:803
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "No Changes"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 02:42+0000\n"
+"POT-Creation-Date: 2025-05-27 02:35+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -640,13 +640,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Να μη γίνει πρόσκληση"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:444
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Επιλογή συμμετεχόντων"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -654,7 +654,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 σύγκρουση"
 msgstr[1] "%1 συγκρούσεις"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:798
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -666,13 +666,13 @@ msgstr ""
 "συμμετέχει στο γεγονός αυτό, επιθυμείτε την τροποποίηση και του αντίστοιχου "
 "συμμετέχοντα;"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Αλλαγή συμμετέχοντος"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:803
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
