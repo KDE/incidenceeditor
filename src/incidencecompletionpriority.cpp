@@ -82,14 +82,12 @@ void IncidenceCompletionPriority::load(const KCalendarCore::Incidence::Ptr &inci
     d->mUi->mTaskSeparator->show();
 
     d->mOrigPercentCompleted = todo->percentComplete();
-    d->mUi->mCompletionSlider->blockSignals(true);
+    const QSignalBlocker sliderBlocker(d->mUi->mCompletionSlider);
     d->mUi->mCompletionSlider->setValue(todo->percentComplete());
     d->sliderValueChanged(d->mUi->mCompletionSlider->value());
-    d->mUi->mCompletionSlider->blockSignals(false);
 
-    d->mUi->mPriorityCombo->blockSignals(true);
+    const QSignalBlocker comboBlocker(d->mUi->mPriorityCombo);
     d->mUi->mPriorityCombo->setCurrentIndex(todo->priority());
-    d->mUi->mPriorityCombo->blockSignals(false);
 
     mWasDirty = false;
 }
