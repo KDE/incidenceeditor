@@ -79,9 +79,8 @@ void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidenc
     for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
-        editor->blockSignals(true);
+        const QSignalBlocker blocker(editor);
         editor->load(incidence);
-        editor->blockSignals(false);
 
         if (editor->isDirty()) {
             // We are going to crash due to assert. Print some useful info before crashing.
@@ -104,9 +103,8 @@ void CombinedIncidenceEditor::load(const Akonadi::Item &item)
     for (IncidenceEditor *editor : std::as_const(mCombinedEditors)) {
         // load() may fire dirtyStatusChanged(), reset mDirtyEditorCount to make sure
         // we don't end up with an invalid dirty count.
-        editor->blockSignals(true);
+        const QSignalBlocker blocker(editor);
         editor->load(item);
-        editor->blockSignals(false);
 
         if (editor->isDirty()) {
             // We are going to crash due to assert. Print some useful info before crashing.

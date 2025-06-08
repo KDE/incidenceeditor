@@ -59,9 +59,8 @@ void IncidenceCategories::load(const Akonadi::Item &item)
             }
         }
         createMissingCategories();
-        mUi->mTagWidget->blockSignals(true);
+        const QSignalBlocker blocker(mUi->mTagWidget);
         mUi->mTagWidget->setSelection(selectedTags);
-        mUi->mTagWidget->blockSignals(false);
     }
 }
 
@@ -131,9 +130,10 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
 
     // If the created tag was one of the instance's missing categories,
     // adding it to the widget doesn't make it dirty.
-    mUi->mTagWidget->blockSignals(count > 0);
+    if (count > 0) {
+        const QSignalBlocker blocker(mUi->mTagWidget);
+    }
     mUi->mTagWidget->setSelection(selectedTags);
-    mUi->mTagWidget->blockSignals(false);
 }
 
 #include "moc_incidencecategories.cpp"

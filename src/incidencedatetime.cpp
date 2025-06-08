@@ -778,9 +778,8 @@ void IncidenceDateTime::setTimes(const QDateTime &start, const QDateTime &end)
 {
     // like setDateTimes(), but it set only the start/end time, not the date
     // it is used while applying a template to an event.
-    mUi->mStartTimeEdit->blockSignals(true);
+    const QSignalBlocker blocker(mUi->mStartTimeEdit);
     mUi->mStartTimeEdit->setTime(start.time());
-    mUi->mStartTimeEdit->blockSignals(false);
 
     mUi->mEndTimeEdit->setTime(end.time());
 
