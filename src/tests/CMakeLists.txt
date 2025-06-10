@@ -4,7 +4,8 @@ set(testincidenceeditor_SRCS main.cpp)
 
 add_executable(kincidenceeditor main.cpp)
 
-target_link_libraries(kincidenceeditor
+target_link_libraries(
+    kincidenceeditor
     KPim6::AkonadiCalendar
     KPim6::AkonadiCore
     KF6::CalendarCore

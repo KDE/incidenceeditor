@@ -62,7 +62,7 @@ static void setExDateTimesFromExDates(KCalendarCore::Recurrence *r, const KCalen
     const auto incidenceTz = r->startDateTime().timeZone();
     QDateTime dt = r->startDateTime().toLocalTime();
     dts.reserve(exDates.count());
-    // The exDates are always in local timezone, but the recurrence might be ocurring on a diffrent day
+    // The exDates are always in local timezone, but the recurrence might be occurring on a different day
     // in the incidence original timezone, so make sure to convert the date
     for (const auto &e : exDates) {
         dt.setDate(e);
