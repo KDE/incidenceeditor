@@ -21,7 +21,6 @@ IncidenceEditor::~IncidenceEditor() = default;
 void IncidenceEditor::checkDirtyStatus()
 {
     if (!mLoadedIncidence) {
-        qCDebug(INCIDENCEEDITOR_LOG) << "checkDirtyStatus called on an invalid incidence";
         return;
     }
 
