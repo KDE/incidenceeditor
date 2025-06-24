@@ -6,6 +6,7 @@
 */
 
 #include "ktimezonecombobox.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -46,7 +47,7 @@ void KTimeZoneComboBoxPrivate::fillComboBox()
 
     // Put translated zones into the combobox
     for (const auto &z : std::as_const(mZones)) {
-        mParent->addItem(i18n(z.constData()).replace(QLatin1Char('_'), QLatin1Char(' ')));
+        mParent->addItem(i18n(z.constData()).replace(u'_', u' '));
     }
 }
 

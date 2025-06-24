@@ -7,6 +7,8 @@
 */
 
 #include "incidencedialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "combinedincidenceeditor.h"
 #include "editorconfig.h"
 #include "incidencealarm.h"
@@ -295,13 +297,13 @@ QString IncidenceDialogPrivate::typeToString(const int type) const
     // Do not translate.
     switch (type) {
     case KCalendarCore::Incidence::TypeEvent:
-        return QStringLiteral("Event");
+        return u"Event"_s;
     case KCalendarCore::Incidence::TypeTodo:
-        return QStringLiteral("Todo");
+        return u"Todo"_s;
     case KCalendarCore::Incidence::TypeJournal:
-        return QStringLiteral("Journal");
+        return u"Journal"_s;
     default:
-        return QStringLiteral("Unknown");
+        return u"Unknown"_s;
     }
 }
 
@@ -311,8 +313,8 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 
     KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
-    const QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                    QStringLiteral("/korganizer/templates/") + typeToString(mEditor->type()) + QLatin1Char('/') + templateName);
+    const QString fileName =
+        QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"/korganizer/templates/"_s + typeToString(mEditor->type()) + u'/' + templateName);
 
     if (fileName.isEmpty()) {
         KMessageBox::error(q, i18nc("@info", "Unable to find template '%1'.", templateName));
@@ -336,7 +338,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
     newInc->setUid(KCalendarCore::CalFormat::createUniqueId());
 
     // We add a custom property so that some fields aren't loaded, dates for example
-    newInc->setCustomProperty(QByteArray("kdepim"), "isTemplate", QStringLiteral("true"));
+    newInc->setCustomProperty(QByteArray("kdepim"), "isTemplate", u"true"_s);
     mEditor->load(newInc);
     newInc->removeCustomProperty(QByteArray(), "isTemplate");
 }
@@ -392,8 +394,8 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
         Q_ASSERT_X(false, "saveTemplate", "Fix your program");
     }
 
-    QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/templates/")
-        + typeToString(mEditor->type()) + QLatin1Char('/');
+    QString fileName =
+        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/templates/"_s + typeToString(mEditor->type()) + u'/';
     QDir().mkpath(fileName);
     fileName += templateName;
 
@@ -406,8 +408,8 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
     // I find this somewhat broken. templates() returns a reference, maybe it should
     // be changed by adding a setTemplates method.
     const QStringList origTemplates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
-    const QString defaultPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("korganizer/templates/")
-        + typeToString(mEditor->type()) + QLatin1Char('/');
+    const QString defaultPath =
+        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"korganizer/templates/"_s + typeToString(mEditor->type()) + u'/';
     QDir().mkpath(defaultPath);
     for (const QString &tmpl : origTemplates) {
         if (!templateNames.contains(tmpl)) {
@@ -471,11 +473,8 @@ void IncidenceDialogPrivate::handleItemSaveFail(EditorItemManager::SaveAction, c
                                       "Unable to store the incidence in the calendar. Try again?\n\n "
                                       "Reason: %1",
                                       errorMessage);
-        const int answer = KMessageBox::warningTwoActions(q,
-                                                          message,
-                                                          QString(),
-                                                          KGuiItem(i18nc("@action:button", "Retry"), QStringLiteral("dialog-ok")),
-                                                          KStandardGuiItem::cancel());
+        const int answer =
+            KMessageBox::warningTwoActions(q, message, QString(), KGuiItem(i18nc("@action:button", "Retry"), u"dialog-ok"_s), KStandardGuiItem::cancel());
         retry = (answer == KMessageBox::ButtonCode::PrimaryAction);
     }
 
@@ -505,9 +504,9 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
         const int answer = KMessageBox::questionTwoActions(q,
                                                            message,
                                                            i18nc("@title:window", "Set Default Calendar?"),
-                                                           KGuiItem(i18nc("@action:button", "Set As Default"), QStringLiteral("dialog-ok")),
-                                                           KGuiItem(i18nc("@action:button", "Do Not Set"), QStringLiteral("dialog-cancel")),
-                                                           QStringLiteral("setDefaultCalendarCollection"));
+                                                           KGuiItem(i18nc("@action:button", "Set As Default"), u"dialog-ok"_s),
+                                                           KGuiItem(i18nc("@action:button", "Do Not Set"), u"dialog-cancel"_s),
+                                                           u"setDefaultCalendarCollection"_s);
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
             CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
         }
@@ -610,11 +609,11 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
     }
 
     if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
-        q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-calendar-tasks")));
+        q->setWindowIcon(QIcon::fromTheme(u"view-calendar-tasks"_s));
     } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
-        q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-calendar-day")));
+        q->setWindowIcon(QIcon::fromTheme(u"view-calendar-day"_s));
     } else if (mEditor->type() == KCalendarCore::Incidence::TypeJournal) {
-        q->setWindowIcon(QIcon::fromTheme(QStringLiteral("view-pim-journal")));
+        q->setWindowIcon(QIcon::fromTheme(u"view-pim-journal"_s));
     }
 
     // Initialize tab's titles
@@ -693,7 +692,7 @@ IncidenceDialog::IncidenceDialog(Akonadi::IncidenceChanger *changer, QWidget *pa
 
     auto defaultButton = d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults);
     defaultButton->setText(i18nc("@action:button", "&Templates…"));
-    defaultButton->setIcon(QIcon::fromTheme(QStringLiteral("project-development-new-template")));
+    defaultButton->setIcon(QIcon::fromTheme(u"project-development-new-template"_s));
     defaultButton->setToolTip(i18nc("@info:tooltip", "Manage templates for this item"));
     defaultButton->setWhatsThis(i18nc("@info:whatsthis",
                                       "Push this button to show a dialog that helps "
@@ -795,8 +794,8 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
             && KMessageBox::questionTwoActions(this,
                                                i18nc("@info", "Do you really want to cancel?"),
                                                i18nc("@title:window", "KOrganizer Confirmation"),
-                                               KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                               KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+                                               KGuiItem(i18nc("@action:button", "Cancel Editing"), u"dialog-ok"_s),
+                                               KGuiItem(i18nc("@action:button", "Do Not Cancel"), u"dialog-cancel"_s))
                 == KMessageBox::ButtonCode::PrimaryAction) {
             QDialog::reject(); // Discard current changes
         } else if (!d->isDirty()) {
@@ -816,8 +815,8 @@ void IncidenceDialog::reject()
         && KMessageBox::questionTwoActions(this,
                                            i18nc("@info", "Do you really want to cancel?"),
                                            i18nc("@title:window", "KOrganizer Confirmation"),
-                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), u"dialog-ok"_s),
+                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), u"dialog-cancel"_s))
             == KMessageBox::ButtonCode::PrimaryAction) {
         QDialog::reject(); // Discard current changes
     } else if (!d->isDirty()) {
@@ -832,8 +831,8 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
         && KMessageBox::questionTwoActions(this,
                                            i18nc("@info", "Do you really want to cancel?"),
                                            i18nc("@title:window", "KOrganizer Confirmation"),
-                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
-                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")))
+                                           KGuiItem(i18nc("@action:button", "Cancel Editing"), u"dialog-ok"_s),
+                                           KGuiItem(i18nc("@action:button", "Do Not Cancel"), u"dialog-cancel"_s))
             == KMessageBox::ButtonCode::PrimaryAction) {
         QDialog::reject(); // Discard current changes
         QDialog::closeEvent(event);

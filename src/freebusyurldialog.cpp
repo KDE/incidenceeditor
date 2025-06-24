@@ -5,6 +5,7 @@
 */
 
 #include "freebusyurldialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLineEdit>
 #include <KLocalizedString>
@@ -73,7 +74,7 @@ FreeBusyUrlWidget::~FreeBusyUrlWidget() = default;
 
 static QString freeBusyUrlStore()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/korganizer/freebusyurls");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/freebusyurls"_s;
 }
 
 void FreeBusyUrlWidget::loadConfig()

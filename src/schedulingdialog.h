@@ -8,6 +8,7 @@
 #pragma once
 
 #include "ui_schedulingdialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QDateTime>
 #include <QDialog>

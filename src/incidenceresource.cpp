@@ -55,7 +55,7 @@ IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDat
     connect(mDateTime, &IncidenceDateTime::endDateChanged, this, &IncidenceResource::slotDateChanged);
 
     QStringList attrs;
-    attrs << QStringLiteral("cn") << QStringLiteral("mail");
+    attrs << u"cn"_s << u"mail"_s;
 
     completer = new QCompleter(this);
     auto model = new ResourceModel(attrs, this);
@@ -143,8 +143,8 @@ void IncidenceResource::dialogOkPressed()
 {
     ResourceItem::Ptr item = resourceDialog->selectedItem();
     if (item) {
-        const QString name = QString::fromLatin1(item->ldapObject().value(QStringLiteral("cn")));
-        const QString email = QString::fromLatin1(item->ldapObject().value(QStringLiteral("mail")));
+        const QString name = QString::fromLatin1(item->ldapObject().value(u"cn"_s));
+        const QString email = QString::fromLatin1(item->ldapObject().value(u"mail"_s));
         KCalendarCore::Attendee attendee(name, email);
         attendee.setCuType(KCalendarCore::Attendee::Resource);
         dataModel->insertAttendee(dataModel->rowCount(), attendee);

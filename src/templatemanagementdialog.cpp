@@ -71,9 +71,9 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
 
 void TemplateManagementDialog::slotHelp()
 {
-    QUrl url = QUrl(QStringLiteral("help:/")).resolved(QUrl(QStringLiteral("korganizer/entering-data.html")));
+    QUrl url = QUrl(u"help:/"_s).resolved(QUrl(u"korganizer/entering-data.html"_s));
     QUrlQuery query(url);
-    query.addQueryItem(QStringLiteral("anchor"), QStringLiteral("entering-data-events-template-buttons"));
+    query.addQueryItem(u"anchor"_s, u"entering-data-events-template-buttons"_s);
     url.setQuery(query);
     // launch khelpcenter, or a browser for URIs not handled by khelpcenter
     QDesktopServices::openUrl(url);

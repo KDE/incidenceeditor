@@ -195,7 +195,7 @@ void IncidenceAttachment::removeSelectedAttachments()
                                         i18nc("@title:window", "Remove Attachments?"),
                                         KStandardGuiItem::remove(),
                                         KStandardGuiItem::cancel(),
-                                        QStringLiteral("calendarRemoveAttachments"))
+                                        u"calendarRemoveAttachments"_s)
         != KMessageBox::ButtonCode::PrimaryAction) {
         return;
     }
@@ -380,7 +380,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         labels.reserve(addressees.count());
         const KContacts::Addressee::List::ConstIterator end(addressees.constEnd());
         for (KContacts::Addressee::List::ConstIterator it = addressees.constBegin(); it != end; ++it) {
-            urls.append(QUrl(QStringLiteral("uid:") + (*it).uid()));
+            urls.append(QUrl(u"uid:"_s + (*it).uid()));
             // there is some weirdness about realName(), hence fromUtf8
             labels.append(QString::fromUtf8((*it).realName().toLatin1()));
         }
@@ -391,14 +391,14 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         // QT5
         // urls = QList<QUrl>::fromMimeData( mimeData, &metadata );
         probablyWeHaveUris = true;
-        labels = metadata[QStringLiteral("labels")].split(QLatin1Char(':'), Qt::SkipEmptyParts);
+        labels = metadata[u"labels"_s].split(u':', Qt::SkipEmptyParts);
         const QStringList::Iterator end(labels.end());
         for (QStringList::Iterator it = labels.begin(); it != end; ++it) {
             *it = QUrl::fromPercentEncoding((*it).toLatin1());
         }
     } else if (mimeData->hasText()) {
         const QString text = mimeData->text();
-        QStringList lst = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+        QStringList lst = text.split(u'\n', Qt::SkipEmptyParts);
         urls.reserve(lst.count());
         QStringList::ConstIterator end(lst.constEnd());
         for (QStringList::ConstIterator it = lst.constBegin(); it != end; ++it) {
@@ -410,7 +410,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     QAction *linkAction = nullptr;
     QAction *cancelAction = nullptr;
     if (probablyWeHaveUris) {
-        linkAction = menu.addAction(QIcon::fromTheme(QStringLiteral("insert-link")), i18nc("@action:inmenu", "&Link here"));
+        linkAction = menu.addAction(QIcon::fromTheme(u"insert-link"_s), i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
         bool weCanCopy = true;
         QList<QUrl>::ConstIterator end(urls.constEnd());
@@ -420,14 +420,14 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
             }
         }
         if (weCanCopy) {
-            menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:inmenu", "&Copy here"));
+            menu.addAction(QIcon::fromTheme(u"edit-copy"_s), i18nc("@action:inmenu", "&Copy here"));
         }
     } else {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:inmenu", "&Copy here"));
+        menu.addAction(QIcon::fromTheme(u"edit-copy"_s), i18nc("@action:inmenu", "&Copy here"));
     }
 
     menu.addSeparator();
-    cancelAction = menu.addAction(QIcon::fromTheme(QStringLiteral("process-stop")), i18nc("@action:inmenu", "C&ancel"));
+    cancelAction = menu.addAction(QIcon::fromTheme(u"process-stop"_s), i18nc("@action:inmenu", "C&ancel"));
 
     QByteArray data;
     QString mimeType;
@@ -474,12 +474,12 @@ void IncidenceAttachment::setupActions()
     auto ac = new KActionCollection(this);
     //  ac->addAssociatedWidget( this );
 
-    mOpenAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), i18nc("@action:inmenu open the attachment in a viewer", "&Open"), this);
+    mOpenAction = new QAction(QIcon::fromTheme(u"document-open"_s), i18nc("@action:inmenu open the attachment in a viewer", "&Open"), this);
     connect(mOpenAction, &QAction::triggered, this, &IncidenceAttachment::showSelectedAttachments);
-    ac->addAction(QStringLiteral("view"), mOpenAction);
+    ac->addAction(u"view"_s, mOpenAction);
     mPopupMenu->addAction(mOpenAction);
 
-    mSaveAsAction = new QAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18nc("@action:inmenu save the attachment to a file", "Save As…"), this);
+    mSaveAsAction = new QAction(QIcon::fromTheme(u"document-save-as"_s), i18nc("@action:inmenu save the attachment to a file", "Save As…"), this);
     connect(mSaveAsAction, &QAction::triggered, this, &IncidenceAttachment::saveSelectedAttachments);
     mPopupMenu->addAction(mSaveAsAction);
     mPopupMenu->addSeparator();
@@ -496,18 +496,17 @@ void IncidenceAttachment::setupActions()
     mPopupMenu->addSeparator();
 #endif
 
-    mDeleteAction = new QAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu remove the attachment", "&Remove"), this);
+    mDeleteAction = new QAction(QIcon::fromTheme(u"list-remove"_s), i18nc("@action:inmenu remove the attachment", "&Remove"), this);
     connect(mDeleteAction, &QAction::triggered, this, &IncidenceAttachment::removeSelectedAttachments);
-    ac->addAction(QStringLiteral("remove"), mDeleteAction);
+    ac->addAction(u"remove"_s, mDeleteAction);
     mDeleteAction->setShortcut(Qt::Key_Delete);
     mPopupMenu->addAction(mDeleteAction);
     mPopupMenu->addSeparator();
 
-    mEditAction = new QAction(QIcon::fromTheme(QStringLiteral("document-properties")),
-                              i18nc("@action:inmenu show a dialog used to edit the attachment", "&Properties…"),
-                              this);
+    mEditAction =
+        new QAction(QIcon::fromTheme(u"document-properties"_s), i18nc("@action:inmenu show a dialog used to edit the attachment", "&Properties…"), this);
     connect(mEditAction, &QAction::triggered, this, &IncidenceAttachment::editSelectedAttachments);
-    ac->addAction(QStringLiteral("edit"), mEditAction);
+    ac->addAction(u"edit"_s, mEditAction);
     mPopupMenu->addAction(mEditAction);
 }
 
@@ -567,13 +566,13 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
         item->setLabel(label);
         if (mimeType.isEmpty()) {
             if (uri.startsWith("uid:"_L1)) {
-                item->setMimeType(QStringLiteral("text/directory"));
+                item->setMimeType(u"text/directory"_s);
             } else if (uri.startsWith("kmail:"_L1)) {
-                item->setMimeType(QStringLiteral("message/rfc822"));
+                item->setMimeType(u"message/rfc822"_s);
             } else if (uri.startsWith("urn:x-ical"_L1)) {
-                item->setMimeType(QStringLiteral("text/calendar"));
+                item->setMimeType(u"text/calendar"_s);
             } else if (uri.startsWith("news:"_L1)) {
-                item->setMimeType(QStringLiteral("message/news"));
+                item->setMimeType(u"message/news"_s);
             } else {
                 QMimeDatabase db;
                 item->setMimeType(db.mimeTypeForUrl(QUrl(uri)).name());

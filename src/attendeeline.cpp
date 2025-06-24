@@ -138,14 +138,13 @@ AttendeeLine::AttendeeLine(QWidget *parent)
 
     QBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
-    mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
-                        KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-observer")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
+    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
+    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
+    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
+    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
-    mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-request-response")), i18nc("@item:inlistbox", "Request Response"));
-    mResponseCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")), i18nc("@item:inlistbox", "Request No Response"));
+    mResponseCombo->addItem(QIcon::fromTheme(u"meeting-participant-request-response"_s), i18nc("@item:inlistbox", "Request Response"));
+    mResponseCombo->addItem(QIcon::fromTheme(u"meeting-participant-no-response"_s), i18nc("@item:inlistbox", "Request No Response"));
 
     mEdit->setToolTip(i18nc("@info:tooltip", "Enter the name or email address of the attendee."));
     mEdit->setClearButtonEnabled(true);

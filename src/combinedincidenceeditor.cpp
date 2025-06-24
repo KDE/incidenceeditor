@@ -6,6 +6,7 @@
 */
 
 #include "combinedincidenceeditor.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_debug.h"
 
@@ -86,7 +87,7 @@ void CombinedIncidenceEditor::load(const KCalendarCore::Incidence::Ptr &incidenc
         if (editor->isDirty()) {
             // We are going to crash due to assert. Print some useful info before crashing.
             qCWarning(INCIDENCEEDITOR_LOG) << "Faulty editor was " << editor->objectName();
-            qCWarning(INCIDENCEEDITOR_LOG) << "Incidence " << (incidence ? incidence->uid() : QStringLiteral("null"));
+            qCWarning(INCIDENCEEDITOR_LOG) << "Incidence " << (incidence ? incidence->uid() : u"null"_s);
 
             editor->printDebugInfo();
 

@@ -5,6 +5,7 @@
  */
 
 #include "opencomposerjob.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
@@ -68,9 +69,9 @@ void OpenComposerJob::start()
     }
 
     // with D-Bus autostart, this will start kmail if it's not running yet
-    QDBusInterface kmailObj(QStringLiteral("org.kde.kmail"), QStringLiteral("/KMail"), QStringLiteral("org.kde.kmail.kmail"));
+    QDBusInterface kmailObj(u"org.kde.kmail"_s, u"/KMail"_s, QStringLiteral("org.kde.kmail.kmail"));
 
-    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, QStringLiteral("openComposer"), messages);
+    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, u"openComposer"_s, messages);
 
     if (!composerDbusPath.isValid()) {
         setError(KJob::UserDefinedError);

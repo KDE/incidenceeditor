@@ -8,6 +8,8 @@
 */
 
 #include "conflictresolver.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidenceeditor_debug.h"
 #include <CalendarSupport/FreeBusyItemModel>
 

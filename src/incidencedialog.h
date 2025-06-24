@@ -8,6 +8,8 @@
 #pragma once
 
 #include "editoritemmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidenceeditor_export.h"
 
 #include <QDate>

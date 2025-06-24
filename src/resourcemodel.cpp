@@ -11,13 +11,13 @@
 #include <QDebug>
 
 using namespace IncidenceEditorNG;
-
+using namespace Qt::Literals::StringLiterals;
 ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     : QAbstractItemModel(parent)
 {
     this->mHeaders = headers;
     mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPCore::LdapClient(0)));
-    const QStringList attrs = QStringList() << KLDAPCore::LdapClientSearch::defaultAttributes() << QStringLiteral("uniqueMember");
+    const QStringList attrs = QStringList() << KLDAPCore::LdapClientSearch::defaultAttributes() << u"uniqueMember"_s;
     mLdapSearchCollections = new KLDAPCore::LdapClientSearch(attrs, this);
     mLdapSearch = new KLDAPCore::LdapClientSearch(headers, this);
 
@@ -37,7 +37,7 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
             this,
             &ResourceModel::slotLDAPSearchData);
 
-    mLdapSearchCollections->startSearch(QStringLiteral("*"));
+    mLdapSearchCollections->startSearch(u"*"_s);
 }
 
 ResourceModel::~ResourceModel() = default;
@@ -60,7 +60,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(p->child(index.row()));
     } else if (role == FullName) {
         ResourceItem *item = getItem(index);
-        return KEmailAddress::normalizedAddress(item->data(QStringLiteral("cn")).toString(), item->data(QStringLiteral("mail")).toString());
+        return KEmailAddress::normalizedAddress(item->data(u"cn"_s).toString(), item->data(u"mail"_s).toString());
     }
 
     return {};
@@ -166,9 +166,9 @@ void ResourceModel::startSearch()
     }
 
     if (mSearchString.isEmpty()) {
-        mLdapSearch->startSearch(QStringLiteral("*"));
+        mLdapSearch->startSearch(u"*"_s);
     } else {
-        mLdapSearch->startSearch(QLatin1Char('*') + mSearchString + QLatin1Char('*'));
+        mLdapSearch->startSearch(u'*' + mSearchString + u'*');
     }
 }
 
@@ -190,7 +190,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAPCore::LdapResultObject::Li
         mLdapCollections.insert(item);
 
         // Resources in a collection add this link into ldapCollectionsMap
-        const auto members = result.object.attributes()[QStringLiteral("uniqueMember")];
+        const auto members = result.object.attributes()[u"uniqueMember"_s];
         for (const QByteArray &member : members) {
             mLdapCollectionsMap.insert(QString::fromLatin1(member), item);
         }

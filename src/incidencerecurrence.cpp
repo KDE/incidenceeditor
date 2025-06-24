@@ -132,7 +132,7 @@ KLocalizedString IncidenceRecurrence::subsOrdinal(const KLocalizedString &text, 
         "translate this as \"1\" if just the number itself "
         "should be substituted (1, 22, 123).",
         "0");
-    if (q == QLatin1Char('0')) {
+    if (q == u'0') {
         const QString ordinal = numberToString(number);
         return text.subs(ordinal);
     } else {
@@ -606,19 +606,19 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
     switch (currentIndex) {
     case 2:
         labelFreq = i18ncp("repeat every N >weeks<", "week", "weeks", frequency);
-        freqKey = QLatin1Char('w');
+        freqKey = u'w';
         break;
     case 3:
         labelFreq = i18ncp("repeat every N >months<", "month", "months", frequency);
-        freqKey = QLatin1Char('m');
+        freqKey = u'm';
         break;
     case 4:
         labelFreq = i18ncp("repeat every N >years<", "year", "years", frequency);
-        freqKey = QLatin1Char('y');
+        freqKey = u'y';
         break;
     default:
         labelFreq = i18ncp("repeat every N >days<", "day", "days", frequency);
-        freqKey = QLatin1Char('d');
+        freqKey = u'd';
     }
 
     const QString labelEvery = ki18ncp(
@@ -628,7 +628,7 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
                                    "every",
                                    "every")
                                    .subs(frequency)
-                                   .inContext(QStringLiteral("type"), freqKey)
+                                   .inContext(u"type"_s, freqKey)
                                    .toString();
     mUi->mFrequencyLabel->setText(labelEvery);
     mUi->mRecurrenceRuleLabel->setText(labelFreq);
@@ -747,16 +747,7 @@ QString IncidenceRecurrence::numberToString(int number) const
     // The code in here was adapted from an article by Johnathan Wood, see:
     // http://www.blackbeltcoder.com/Articles/strings/converting-numbers-to-ordinal-strings
 
-    static QString _numSuffixes[] = {QStringLiteral("th"),
-                                     QStringLiteral("st"),
-                                     QStringLiteral("nd"),
-                                     QStringLiteral("rd"),
-                                     QStringLiteral("th"),
-                                     QStringLiteral("th"),
-                                     QStringLiteral("th"),
-                                     QStringLiteral("th"),
-                                     QStringLiteral("th"),
-                                     QStringLiteral("th")};
+    static QString _numSuffixes[] = {u"th"_s, u"st"_s, u"nd"_s, u"rd"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s};
 
     int i = (number % 100);
     int j = (i > 10 && i < 20) ? 0 : (number % 10);

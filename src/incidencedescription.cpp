@@ -99,11 +99,11 @@ void IncidenceDescription::enableRichTextDescription(bool enable)
     d->mRichTextEnabled = enable;
 
     QString rt(i18nc("@action Enable or disable rich text editing", "Enable rich text"));
-    QString placeholder(QStringLiteral("<a href=\"show\">%1 &gt;&gt;</a>"));
+    QString placeholder(u"<a href=\"show\">%1 &gt;&gt;</a>"_s);
 
     if (enable) {
         rt = i18nc("@action Enable or disable rich text editing", "Disable rich text");
-        placeholder = QStringLiteral("<a href=\"show\">&lt;&lt; %1</a>");
+        placeholder = u"<a href=\"show\">&lt;&lt; %1</a>"_s;
         mUi->mDescriptionEdit->richTextComposer()->activateRichText();
         d->mRealOriginalDescriptionEditContents = mUi->mDescriptionEdit->richTextComposer()->toHtml();
     } else {
@@ -131,32 +131,32 @@ void IncidenceDescription::setupToolBar()
 
     auto mEditToolBar = new KToolBar(mUi->mEditToolBarPlaceHolder);
     mEditToolBar->setToolButtonStyle(Qt::ToolButtonIconOnly);
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_bold")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_italic")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_underline")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_strikeout")));
+    mEditToolBar->addAction(collection->action(u"format_text_bold"_s));
+    mEditToolBar->addAction(collection->action(u"format_text_italic"_s));
+    mEditToolBar->addAction(collection->action(u"format_text_underline"_s));
+    mEditToolBar->addAction(collection->action(u"format_text_strikeout"_s));
     mEditToolBar->addSeparator();
 
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_font_family")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_font_size")));
+    mEditToolBar->addAction(collection->action(u"format_font_family"_s));
+    mEditToolBar->addAction(collection->action(u"format_font_size"_s));
     mEditToolBar->addSeparator();
 
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_foreground_color")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_text_background_color")));
+    mEditToolBar->addAction(collection->action(u"format_text_foreground_color"_s));
+    mEditToolBar->addAction(collection->action(u"format_text_background_color"_s));
     mEditToolBar->addSeparator();
 
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_list_style")));
+    mEditToolBar->addAction(collection->action(u"format_list_style"_s));
     mEditToolBar->addSeparator();
 
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_align_left")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_align_center")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_align_right")));
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_align_justify")));
+    mEditToolBar->addAction(collection->action(u"format_align_left"_s));
+    mEditToolBar->addAction(collection->action(u"format_align_center"_s));
+    mEditToolBar->addAction(collection->action(u"format_align_right"_s));
+    mEditToolBar->addAction(collection->action(u"format_align_justify"_s));
     mEditToolBar->addSeparator();
 
-    mEditToolBar->addAction(collection->action(QStringLiteral("format_painter")));
+    mEditToolBar->addAction(collection->action(u"format_painter"_s));
     mEditToolBar->addSeparator();
-    mEditToolBar->addAction(collection->action(QStringLiteral("manage_link")));
+    mEditToolBar->addAction(collection->action(u"manage_link"_s));
     mUi->mDescriptionEdit->richTextComposer()->setEnableActions(false);
 
     auto layout = new QGridLayout(mUi->mEditToolBarPlaceHolder);

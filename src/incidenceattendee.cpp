@@ -54,16 +54,14 @@ IncidenceAttendee::IncidenceAttendee(QWidget *parent, IncidenceDateTime *dateTim
     mDataModel = new AttendeeTableModel(this);
     mDataModel->setKeepEmpty(true);
     mDataModel->setRemoveEmptyLines(true);
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-participant.png")),
-                           KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-participant-optional.png")),
+    mRoleDelegate->addItem(QIcon::fromTheme(u":/meeting-participant.png"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
+    mRoleDelegate->addItem(QIcon::fromTheme(u":/meeting-participant-optional.png"_s),
                            KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-observer.png")),
-                           KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRoleDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/meeting-chair.png")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
+    mRoleDelegate->addItem(QIcon::fromTheme(u":/meeting-observer.png"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
+    mRoleDelegate->addItem(QIcon::fromTheme(u":/meeting-chair.png"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
-    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-request-response")), i18nc("@item:inlistbox", "Request Response"));
-    mResponseDelegate->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-no-response")), i18nc("@item:inlistbox", "Request No Response"));
+    mResponseDelegate->addItem(QIcon::fromTheme(u"meeting-participant-request-response"_s), i18nc("@item:inlistbox", "Request Response"));
+    mResponseDelegate->addItem(QIcon::fromTheme(u"meeting-participant-no-response"_s), i18nc("@item:inlistbox", "Request No Response"));
 
     mStateDelegate->setWhatsThis(i18nc("@info:whatsthis", "Edits the current attendance status of the attendee."));
 
@@ -214,8 +212,8 @@ void IncidenceAttendee::save(const KCalendarCore::Incidence::Ptr &incidence)
                                                      "Are you sure you want to invite this participant?",
                                                      attendee.email()),
                                                i18nc("@title:window", "Invalid Email Address"),
-                                               KGuiItem(i18nc("@action:button", "Invite"), QStringLiteral("dialog-ok")),
-                                               KGuiItem(i18nc("@action:button", "Do Not Invite"), QStringLiteral("dialog-cancel")))
+                                               KGuiItem(i18nc("@action:button", "Invite"), u"dialog-ok"_s),
+                                               KGuiItem(i18nc("@action:button", "Do Not Invite"), u"dialog-cancel"_s))
                 != KMessageBox::ButtonCode::PrimaryAction) {
                 skip = true;
             }
@@ -327,7 +325,7 @@ void IncidenceAttendee::fillOrganizerCombo()
         // Organizer struct is {name, fullEMail, signed, encrypt}
         // meaning we need to convert fullEMail into a base email, ie. strip the attendee name
         const QString &email = KEmailAddress::extractEmailAddress(organizer->fullEmail);
-        mUi->mOrganizerCombo->addItem(QStringLiteral("%1 <%2>").arg(organizer->name, email), QVariant::fromValue(*organizer));
+        mUi->mOrganizerCombo->addItem(u"%1 <%2>"_s.arg(organizer->name, email), QVariant::fromValue(*organizer));
     }
 }
 
@@ -431,7 +429,7 @@ void IncidenceAttendee::insertAddresses(const KContacts::Addressee::List &list)
 void IncidenceAttendee::slotSelectAddresses()
 {
     QPointer<Akonadi::AbstractEmailAddressSelectionDialog> dialog;
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/akonadi/emailaddressselectionldapdialogplugin"));
+    const KPluginMetaData editWidgetPlugin(u"pim6/akonadi/emailaddressselectionldapdialogplugin"_s);
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin, mParentWidget);
     if (result) {
@@ -799,8 +797,8 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
                                                        "Since the organizer is also attending this event, would you "
                                                        "like to change the corresponding attendee as well?"),
                                                  QString(),
-                                                 KGuiItem(i18nc("@action:button", "Change Attendee"), QStringLiteral("dialog-ok")),
-                                                 KGuiItem(i18nc("@action:button", "Do Not Change"), QStringLiteral("dialog-cancel")));
+                                                 KGuiItem(i18nc("@action:button", "Change Attendee"), u"dialog-ok"_s),
+                                                 KGuiItem(i18nc("@action:button", "Do Not Change"), u"dialog-cancel"_s));
     } else {
         answer = KMessageBox::ButtonCode::PrimaryAction;
     }
@@ -888,19 +886,19 @@ void IncidenceAttendee::setActions(KCalendarCore::Incidence::IncidenceType actio
 {
     mStateDelegate->clear();
     if (actions == KCalendarCore::Incidence::TypeEvent) {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-attention.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-accepted.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-reject.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-attempt.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-delegate.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
     } else {
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attention.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-accepted.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-reject.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-attempt.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-delegate.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-complete.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
-        mStateDelegate->addItem(QIcon::fromTheme(QStringLiteral(":/task-ongoing.png")), KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-attention.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::NeedsAction));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-accepted.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Accepted));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-reject.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Declined));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-attempt.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Tentative));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-delegate.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Delegated));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-complete.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::Completed));
+        mStateDelegate->addItem(QIcon::fromTheme(u":/task-ongoing.png"_s), KCalUtils::Stringify::attendeeStatus(AttendeeData::InProcess));
     }
 }
 

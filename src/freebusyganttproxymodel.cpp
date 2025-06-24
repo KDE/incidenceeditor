@@ -6,6 +6,8 @@
 */
 
 #include "freebusyganttproxymodel.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <CalendarSupport/FreeBusyItemModel>
 
 #include <KCalendarCore/FreeBusyPeriod>
@@ -64,26 +66,26 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
 
 QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod &period) const
 {
-    QString toolTip = QStringLiteral("<qt>");
+    QString toolTip = u"<qt>"_s;
     toolTip += QLatin1StringView("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QLatin1StringView("</b>");
-    toolTip += QStringLiteral("<hr>");
+    toolTip += u"<hr>"_s;
     if (!period.summary().isEmpty()) {
-        toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1StringView("</i>") + QStringLiteral("&nbsp;");
+        toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1StringView("</i>") + u"&nbsp;"_s;
         toolTip += period.summary();
-        toolTip += QStringLiteral("<br>");
+        toolTip += u"<br>"_s;
     }
     if (!period.location().isEmpty()) {
-        toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1StringView("</i>") + QStringLiteral("&nbsp;");
+        toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1StringView("</i>") + u"&nbsp;"_s;
         toolTip += period.location();
-        toolTip += QStringLiteral("<br>");
+        toolTip += u"<br>"_s;
     }
-    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period start time", "Start:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
+    toolTip += u"<i>"_s + i18nc("@info:tooltip period start time", "Start:") + u"</i>"_s + QStringLiteral("&nbsp;");
     toolTip += QLocale().toString(period.start().toLocalTime(), QLocale::ShortFormat);
-    toolTip += QStringLiteral("<br>");
-    toolTip += QStringLiteral("<i>") + i18nc("@info:tooltip period end time", "End:") + QStringLiteral("</i>") + QStringLiteral("&nbsp;");
+    toolTip += u"<br>"_s;
+    toolTip += u"<i>"_s + i18nc("@info:tooltip period end time", "End:") + u"</i>"_s + QStringLiteral("&nbsp;");
     toolTip += QLocale().toString(period.end().toLocalTime(), QLocale::ShortFormat);
-    toolTip += QStringLiteral("<br>");
-    toolTip += QStringLiteral("</qt>");
+    toolTip += u"<br>"_s;
+    toolTip += u"</qt>"_s;
     return toolTip;
 }
 

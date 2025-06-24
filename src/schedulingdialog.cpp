@@ -6,6 +6,8 @@
 */
 
 #include "schedulingdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "conflictresolver.h"
 #include "visualfreebusywidget.h"
 #include <CalendarSupport/FreePeriodModel>
@@ -88,11 +90,10 @@ void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTim
 void SchedulingDialog::fillCombos()
 {
     // Note: we depend on the following order
-    mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-participant-optional")),
-                         KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-observer")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(QStringLiteral("meeting-chair")), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
+    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
+    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
+    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
+    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
 
     mRolesCombo->setWhatsThis(i18nc("@info:whatsthis", "Edits the role of the attendee."));
 

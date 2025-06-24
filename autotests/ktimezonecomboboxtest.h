@@ -6,6 +6,7 @@
 #pragma once
 
 #include <QObject>
+using namespace Qt::Literals::StringLiterals;
 
 class KTimeZoneComboBoxTest : public QObject
 {

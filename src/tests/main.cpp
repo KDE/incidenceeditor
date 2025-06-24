@@ -6,6 +6,8 @@
 */
 
 #include "incidencedefaults.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "incidencedialog.h"
 #include "korganizereditorconfig.h"
 
@@ -28,19 +30,19 @@ using namespace IncidenceEditorNG;
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    QCoreApplication::setApplicationName(QStringLiteral("IncidenceEditorNGApp"));
-    QCoreApplication::setApplicationVersion(QStringLiteral("0.1"));
+    QCoreApplication::setApplicationName(u"IncidenceEditorNGApp"_s);
+    QCoreApplication::setApplicationVersion(u"0.1"_s);
 
     QCommandLineParser parser;
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addOption(QCommandLineOption(QStringLiteral("new-event"), QStringLiteral("Creates a new event")));
-    parser.addOption(QCommandLineOption(QStringLiteral("new-todo"), QStringLiteral("Creates a new todo")));
-    parser.addOption(QCommandLineOption(QStringLiteral("new-journal"), QStringLiteral("Creates a new journal")));
-    parser.addOption(QCommandLineOption(QStringLiteral("item"),
+    parser.addOption(QCommandLineOption(u"new-event"_s, u"Creates a new event"_s));
+    parser.addOption(QCommandLineOption(u"new-todo"_s, u"Creates a new todo"_s));
+    parser.addOption(QCommandLineOption(u"new-journal"_s, u"Creates a new journal"_s));
+    parser.addOption(QCommandLineOption(u"item"_s,
                                         QStringLiteral("Loads an existing item, or returns without doing anything "
                                                        "when the item is not an event or todo."),
-                                        QStringLiteral("id")));
+                                        u"id"_s));
     parser.process(app);
 
     Akonadi::Item item(-1);
@@ -58,24 +60,24 @@ int main(int argc, char **argv)
         defaults.setGroupWareDomain(QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
     }
 
-    if (parser.isSet(QStringLiteral("new-event"))) {
+    if (parser.isSet(u"new-event"_s)) {
         std::cout << "Creating new event..." << std::endl;
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
         defaults.setDefaults(event);
         item.setPayload<KCalendarCore::Event::Ptr>(event);
-    } else if (parser.isSet(QStringLiteral("new-todo"))) {
+    } else if (parser.isSet(u"new-todo"_s)) {
         std::cout << "Creating new todo..." << std::endl;
         KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         defaults.setDefaults(todo);
         item.setPayload<KCalendarCore::Todo::Ptr>(todo);
-    } else if (parser.isSet(QStringLiteral("new-journal"))) {
+    } else if (parser.isSet(u"new-journal"_s)) {
         std::cout << "Creating new journal..." << std::endl;
         KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
         defaults.setDefaults(journal);
         item.setPayload<KCalendarCore::Journal::Ptr>(journal);
-    } else if (parser.isSet(QStringLiteral("item"))) {
+    } else if (parser.isSet(u"item"_s)) {
         bool ok = false;
-        qint64 id = parser.value(QStringLiteral("item")).toLongLong(&ok);
+        qint64 id = parser.value(u"item"_s).toLongLong(&ok);
         if (!ok) {
             std::cerr << "Invalid akonadi item id given." << std::endl;
             return 1;

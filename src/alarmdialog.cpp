@@ -6,6 +6,8 @@
 */
 
 #include "alarmdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "editorconfig.h"
 #include "ui_alarmdialog.h"
 
@@ -44,7 +46,7 @@ AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, 
     }
 
     mUi->mOffsetUnit->setCurrentIndex(defaultReminderUnits);
-    mUi->mSoundFile->setMimeTypeFilters({QStringLiteral("audio/x-wav"), QStringLiteral("audio/x-mp3"), QStringLiteral("application/ogg")});
+    mUi->mSoundFile->setMimeTypeFilters({u"audio/x-wav"_s, u"audio/x-mp3"_s, QStringLiteral("application/ogg")});
 
     if (IncidenceEditorNG::EditorConfig::instance()->defaultAudioFileReminders()) {
         mUi->mSoundFile->setUrl(IncidenceEditorNG::EditorConfig::instance()->audioFilePath());

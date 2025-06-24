@@ -16,7 +16,7 @@
 #include <QWidget>
 
 using namespace IncidenceEditorNG;
-
+using namespace Qt::Literals::StringLiterals;
 void ConflictResolverTest::insertAttendees()
 {
     for (const CalendarSupport::FreeBusyItem::Ptr &item : std::as_const(attendees)) {
@@ -26,7 +26,7 @@ void ConflictResolverTest::insertAttendees()
 
 void ConflictResolverTest::addAttendee(const QString &email, const KCalendarCore::FreeBusy::Ptr &fb, KCalendarCore::Attendee::Role role)
 {
-    QString name = QStringLiteral("attendee %1").arg(attendees.count());
+    QString name = u"attendee %1"_s.arg(attendees.count());
     CalendarSupport::FreeBusyItem::Ptr item(
         new CalendarSupport::FreeBusyItem(KCalendarCore::Attendee(name, email, false, KCalendarCore::Attendee::Accepted, role), nullptr));
     item->setFreeBusy(KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(*fb.data())));
@@ -56,7 +56,7 @@ void ConflictResolverTest::cleanup()
 void ConflictResolverTest::simpleTest()
 {
     KCalendarCore::Period meeting(end.addSecs(-3 * 60 * 60), KCalendarCore::Duration(2 * 60 * 60));
-    addAttendee(QStringLiteral("albert@einstein.net"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting)));
+    addAttendee(u"albert@einstein.net"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting)));
 
     insertAttendees();
 
@@ -85,11 +85,9 @@ void ConflictResolverTest::stillPrettySimpleTest()
     KCalendarCore::Period meeting1(base, KCalendarCore::Duration(2 * 60 * 60));
     KCalendarCore::Period meeting2(base.addSecs(60 * 60), KCalendarCore::Duration(2 * 60 * 60));
     KCalendarCore::Period meeting3(end.addSecs(-3 * 60 * 60), KCalendarCore::Duration(2 * 60 * 60));
-    addAttendee(QStringLiteral("john.f@kennedy.com"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting1 << meeting3)));
-    addAttendee(QStringLiteral("elvis@rock.com"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting2 << meeting3)));
-    addAttendee(QStringLiteral("albert@einstein.net"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting3)));
+    addAttendee(u"john.f@kennedy.com"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting1 << meeting3)));
+    addAttendee(u"elvis@rock.com"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting2 << meeting3)));
+    addAttendee(u"albert@einstein.net"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << meeting3)));
 
     insertAttendees();
 
@@ -151,24 +149,24 @@ void ConflictResolverTest::akademy2010()
     //  for ( int i = 1; i < 80; ++i ) {
     // adds 80 people (adds the same 8 people 10 times)
     addAttendee(
-        QStringLiteral("akademyattendee1@email.com"),
+        u"akademyattendee1@email.com"_s,
         KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << keynote << oviStore << wikimedia << direction)));
     addAttendee(
-        QStringLiteral("akademyattendee2@email.com"),
+        u"akademyattendee2@email.com"_s,
         KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << keynote << commAsService << highlights << pimp)));
-    addAttendee(QStringLiteral("akademyattendee3@email.com"),
+    addAttendee(u"akademyattendee3@email.com"_s,
                 KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << kdeForums << styles << pimp << plasma)));
-    addAttendee(QStringLiteral("akademyattendee4@email.com"),
+    addAttendee(u"akademyattendee4@email.com"_s,
                 KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << keynote << oviStore << pimp << blurr)));
-    addAttendee(QStringLiteral("akademyattendee5@email.com"),
+    addAttendee(u"akademyattendee5@email.com"_s,
                 KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << keynote << oviStore << highlights << avalanche)));
-    addAttendee(QStringLiteral("akademyattendee6@email.com"),
+    addAttendee(u"akademyattendee6@email.com"_s,
                 KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << keynote << commAsService << highlights)));
-    addAttendee(QStringLiteral("akademyattendee7@email.com"),
+    addAttendee(u"akademyattendee7@email.com"_s,
                 KCalendarCore::FreeBusy::Ptr(
                     new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << kdeForums << styles << avalanche << pimp << plasma)));
     addAttendee(
-        QStringLiteral("akademyattendee8@email.com"),
+        u"akademyattendee8@email.com"_s,
         KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << opening << keynote << oviStore << wikimedia << blurr)));
     //  }
 
@@ -199,9 +197,8 @@ void ConflictResolverTest::testPeriodIsLargerThenTimeframe()
 
     KCalendarCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
-    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
+    addAttendee(u"kdabtest1@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
+    addAttendee(u"kdabtest2@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
 
     insertAttendees();
     resolver->setEarliestDateTime(base);
@@ -221,9 +218,8 @@ void ConflictResolverTest::testPeriodBeginsBeforeTimeframeBegins()
 
     KCalendarCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
-    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
+    addAttendee(u"kdabtest1@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
+    addAttendee(u"kdabtest2@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
 
     insertAttendees();
     resolver->setEarliestDateTime(base);
@@ -246,9 +242,8 @@ void ConflictResolverTest::testPeriodEndsAfterTimeframeEnds()
 
     KCalendarCore::Period testEvent(_time(8, 00), _time(9, 45));
 
-    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
-    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
+    addAttendee(u"kdabtest1@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
+    addAttendee(u"kdabtest2@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
 
     insertAttendees();
     resolver->setEarliestDateTime(base);
@@ -272,9 +267,8 @@ void ConflictResolverTest::testPeriodEndsAtSametimeAsTimeframe()
 
     KCalendarCore::Period testEvent(_time(5, 45), _time(8, 45));
 
-    addAttendee(QStringLiteral("kdabtest1@demo.kolab.org"),
-                KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
-    addAttendee(QStringLiteral("kdabtest2@demo.kolab.org"), KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
+    addAttendee(u"kdabtest1@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List() << testEvent)));
+    addAttendee(u"kdabtest2@demo.kolab.org"_s, KCalendarCore::FreeBusy::Ptr(new KCalendarCore::FreeBusy(KCalendarCore::Period::List())));
 
     insertAttendees();
     resolver->setEarliestDateTime(base);

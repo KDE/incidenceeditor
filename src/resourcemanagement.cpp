@@ -52,13 +52,13 @@ public:
     [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         Q_UNUSED(incidence)
-        return QStringLiteral("Freebusy");
+        return u"Freebusy"_s;
     }
 
     [[nodiscard]] QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         bool ok = false;
-        int status = incidence->customProperty(QStringLiteral("FREEBUSY").toLatin1(), QStringLiteral("STATUS").toLatin1()).toInt(&ok);
+        int status = incidence->customProperty(u"FREEBUSY"_s.toLatin1(), u"STATUS"_s.toLatin1()).toInt(&ok);
 
         if (!ok) {
             return {85, 85, 85};
@@ -126,8 +126,8 @@ ResourceManagement::ResourceManagement(QWidget *parent)
     mUi->resourceCalender->addWidget(mAgendaView);
 
     QStringList attrs;
-    attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn")
-          << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
+    attrs << u"cn"_s << u"mail"_s << QStringLiteral("owner") << QStringLiteral("givenname") << QStringLiteral("sn") << u"kolabDescAttribute"_s
+          << u"description"_s;
     auto resourcemodel = new ResourceModel(attrs, this);
     mUi->treeResults->setModel(resourcemodel);
 
@@ -200,8 +200,7 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
             continue;
         } else if (key == "owner"_L1) {
             QStringList attrs;
-            attrs << QStringLiteral("cn") << QStringLiteral("mail") << QStringLiteral("mobile") << QStringLiteral("telephoneNumber")
-                  << QStringLiteral("kolabDescAttribute") << QStringLiteral("description");
+            attrs << u"cn"_s << u"mail"_s << QStringLiteral("mobile") << QStringLiteral("telephoneNumber") << u"kolabDescAttribute"_s << u"description"_s;
             mOwnerItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(QString::fromUtf8(it.value().at(0))), attrs, client));
             connect(mOwnerItem.data(), &ResourceItem::searchFinished, this, &ResourceManagement::slotOwnerSearchFinished);
             mOwnerItem->startSearch();
@@ -213,11 +212,11 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
         for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
+        mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(u'\n')));
     }
 
-    QString name = QString::fromUtf8(obj.attributes().value(QStringLiteral("cn"))[0]);
-    QString email = QString::fromUtf8(obj.attributes().value(QStringLiteral("mail"))[0]);
+    QString name = QString::fromUtf8(obj.attributes().value(u"cn"_s)[0]);
+    QString email = QString::fromUtf8(obj.attributes().value(u"mail"_s)[0]);
     KCalendarCore::Attendee attendee(name, email);
     CalendarSupport::FreeBusyItem::Ptr freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
@@ -255,7 +254,7 @@ void ResourceManagement::slotOwnerSearchFinished()
         for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
         }
-        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(QLatin1Char('\n'))));
+        mUi->formOwner->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(u'\n')));
     }
 }
 

@@ -5,6 +5,7 @@
  */
 
 #include "individualmaildialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KGuiItem>
 #include <KLocalizedString>
@@ -66,7 +67,7 @@ IndividualMailDialog::IndividualMailDialog(const QString &question,
         done(QDialogButtonBox::No);
     });
     auto detailsButton = m_buttons->button(QDialogButtonBox::Help);
-    detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
+    detailsButton->setIcon(QIcon::fromTheme(u"help-about"_s));
     connect(detailsButton, &QPushButton::clicked, this, [this]() {
         m_detailsWidget->setVisible(!m_detailsWidget->isVisible());
         updateButtonState();

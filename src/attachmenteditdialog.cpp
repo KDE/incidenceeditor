@@ -9,6 +9,8 @@
 */
 
 #include "attachmenteditdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "attachmenticonview.h"
 #include "config-enterprise.h"
 #include "ui_attachmenteditdialog.h"
@@ -71,8 +73,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
         mUi->mInlineCheck->setEnabled(true);
         mUi->mStackedWidget->setCurrentIndex(1);
         KFormat format;
-        mUi->mSizeLabel->setText(
-            QStringLiteral("%1 (%2)").arg(format.formatByteSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
+        mUi->mSizeLabel->setText(u"%1 (%2)"_s.arg(format.formatByteSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
     }
 
     connect(mUi->mInlineCheck, &QCheckBox::checkStateChanged, this, &AttachmentEditDialog::inlineChanged);

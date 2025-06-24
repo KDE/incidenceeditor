@@ -117,7 +117,7 @@ QIcon AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bo
     const QString iconStr = mimeType.iconName();
     QStringList overlays;
     if (!uri.isEmpty() && !binary) {
-        overlays << QStringLiteral("emblem-link");
+        overlays << u"emblem-link"_s;
     }
 
     return KIconUtils::addOverlays(QIcon::fromTheme(iconStr), overlays);
@@ -171,7 +171,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     QStringList patterns = db.mimeTypeForName(mAttachment.mimeType()).globPatterns();
 
     if (!patterns.empty()) {
-        file = new QTemporaryFile(QDir::tempPath() + "/attachementview_XXXXX"_L1 + patterns.first().remove(QLatin1Char('*')));
+        file = new QTemporaryFile(QDir::tempPath() + "/attachementview_XXXXX"_L1 + patterns.first().remove(u'*'));
     } else {
         file = new QTemporaryFile();
     }
@@ -212,7 +212,7 @@ QMimeData *AttachmentIconView::mimeData(const QList<QListWidgetItem *> &items) c
     }
 
     QMap<QString, QString> metadata;
-    metadata[QStringLiteral("labels")] = labels.join(QLatin1Char(':'));
+    metadata[u"labels"_s] = labels.join(u':');
 
     auto mimeData = new QMimeData;
     mimeData->setUrls(urls);
@@ -231,7 +231,7 @@ void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
 #ifndef QT_NO_DRAGANDDROP
     QPixmap pixmap;
     if (selectedItems().size() > 1) {
-        pixmap = QIcon::fromTheme(QStringLiteral("mail-attachment")).pixmap(64);
+        pixmap = QIcon::fromTheme(u"mail-attachment"_s).pixmap(64);
     }
     if (pixmap.isNull()) {
         pixmap = static_cast<AttachmentIconItem *>(currentItem())->icon().pixmap(64);

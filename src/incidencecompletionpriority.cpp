@@ -38,7 +38,7 @@ void IncidenceCompletionPriorityPrivate::sliderValueChanged(int value)
         mOrigPercentCompleted = -1;
     }
 
-    mUi->mCompletedLabel->setText(QStringLiteral("%1%").arg(value));
+    mUi->mCompletedLabel->setText(u"%1%"_s.arg(value));
     q->checkDirtyStatus();
 }
 
@@ -54,7 +54,7 @@ IncidenceCompletionPriority::IncidenceCompletionPriority(Ui::EventOrTodoDesktop 
     d->mUi->mCompletionPriorityWidget->hide();
     d->mUi->mTaskLabel->hide();
     const QFontMetrics metrics(d->mUi->mCompletedLabel->font());
-    d->mUi->mCompletedLabel->setMinimumWidth(metrics.boundingRect(QStringLiteral("100%")).width());
+    d->mUi->mCompletedLabel->setMinimumWidth(metrics.boundingRect(u"100%"_s).width());
     d->mUi->mTaskSeparator->hide();
 
     connect(d->mUi->mCompletionSlider, &QSlider::valueChanged, this, [this](int val) {

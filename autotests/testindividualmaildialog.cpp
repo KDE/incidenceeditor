@@ -13,7 +13,7 @@ SPDX-License-Identifier: LGPL-2.0-or-later
 #include <QTest>
 
 using namespace IncidenceEditorNG;
-
+using namespace Qt::Literals::StringLiterals;
 class TestIndividualMailDialog : public QObject
 {
     Q_OBJECT
@@ -21,16 +21,16 @@ private Q_SLOTS:
     void testDialog()
     {
         KCalendarCore::Attendee::List attendees;
-        KGuiItem buttonYes = KGuiItem(QStringLiteral("Send Email"));
-        KGuiItem buttonNo = KGuiItem(QStringLiteral("Do not send"));
+        KGuiItem buttonYes = KGuiItem(u"Send Email"_s);
+        KGuiItem buttonNo = KGuiItem(u"Do not send"_s);
 
-        KCalendarCore::Attendee attendee1(QStringLiteral("test1"), QStringLiteral("test1@example.com"));
-        KCalendarCore::Attendee attendee2(QStringLiteral("test2"), QStringLiteral("test2@example.com"));
-        KCalendarCore::Attendee attendee3(QStringLiteral("test3"), QStringLiteral("test3@example.com"));
+        KCalendarCore::Attendee attendee1(u"test1"_s, QStringLiteral("test1@example.com"));
+        KCalendarCore::Attendee attendee2(u"test2"_s, QStringLiteral("test2@example.com"));
+        KCalendarCore::Attendee attendee3(u"test3"_s, QStringLiteral("test3@example.com"));
 
         attendees << attendee1 << attendee2 << attendee3;
 
-        IndividualMailDialog dialog(QStringLiteral("title"), attendees, buttonYes, buttonNo, nullptr);
+        IndividualMailDialog dialog(u"title"_s, attendees, buttonYes, buttonNo, nullptr);
 
         QCOMPARE(dialog.editAttendees().count(), 0);
         QCOMPARE(dialog.updateAttendees().count(), 3);

@@ -34,23 +34,23 @@ public:
     IncidenceDateTimeTest()
     {
         mDialog = new IncidenceDialog();
-        mAllDay = mDialog->findChild<QCheckBox *>(QStringLiteral("mWholeDayCheck"));
+        mAllDay = mDialog->findChild<QCheckBox *>(u"mWholeDayCheck"_s);
         QVERIFY2(mAllDay, "Couldn't find the 'All Day' checkbox.");
-        mStartCheck = mDialog->findChild<QCheckBox *>(QStringLiteral("mStartCheck"));
+        mStartCheck = mDialog->findChild<QCheckBox *>(u"mStartCheck"_s);
         QVERIFY2(mStartCheck, "Couldn't find the 'Start' checkbox.");
-        mEndCheck = mDialog->findChild<QCheckBox *>(QStringLiteral("mEndCheck"));
+        mEndCheck = mDialog->findChild<QCheckBox *>(u"mEndCheck"_s);
         QVERIFY2(mEndCheck, "Couldn't find the 'End' checkbox.");
-        mStartDate = mDialog->findChild<KDateComboBox *>(QStringLiteral("mStartDateEdit"));
+        mStartDate = mDialog->findChild<KDateComboBox *>(u"mStartDateEdit"_s);
         QVERIFY2(mStartDate, "Couldn't find start date field.");
-        mStartTime = mDialog->findChild<KTimeComboBox *>(QStringLiteral("mStartTimeEdit"));
+        mStartTime = mDialog->findChild<KTimeComboBox *>(u"mStartTimeEdit"_s);
         QVERIFY2(mStartTime, "Couldn't find start time field.");
-        mStartZone = mDialog->findChild<KTimeZoneComboBox *>(QStringLiteral("mTimeZoneComboStart"));
+        mStartZone = mDialog->findChild<KTimeZoneComboBox *>(u"mTimeZoneComboStart"_s);
         QVERIFY2(mStartZone, "Couldn't find start time zone field.");
-        mEndDate = mDialog->findChild<KDateComboBox *>(QStringLiteral("mEndDateEdit"));
+        mEndDate = mDialog->findChild<KDateComboBox *>(u"mEndDateEdit"_s);
         QVERIFY2(mEndDate, "Couldn't find end date field.");
-        mEndTime = mDialog->findChild<KTimeComboBox *>(QStringLiteral("mEndTimeEdit"));
+        mEndTime = mDialog->findChild<KTimeComboBox *>(u"mEndTimeEdit"_s);
         QVERIFY2(mEndTime, "Couldn't find end time field.");
-        mEndZone = mDialog->findChild<KTimeZoneComboBox *>(QStringLiteral("mTimeZoneComboEnd"));
+        mEndZone = mDialog->findChild<KTimeZoneComboBox *>(u"mTimeZoneComboEnd"_s);
         QVERIFY2(mEndZone, "Couldn't find end time zone field.");
         mEditor = mDialog->findChild<IncidenceEditor *>();
         QVERIFY2(mEditor, "Couldn't find the combined editor.");
@@ -75,7 +75,7 @@ private Q_SLOTS:
 
         // Put the dialog into a known, valid state.
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
-        event->setSummary(QStringLiteral("e"));
+        event->setSummary(u"e"_s);
         event->setDtStart(dt);
         event->setDtEnd(dt);
         event->setAllDay(false);
@@ -85,32 +85,32 @@ private Q_SLOTS:
         QVERIFY(mEditor->isValid());
 
         auto validDate = mStartDate->currentText();
-        auto invalidDate = mStartDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
+        auto invalidDate = mStartDate->currentText().replace(u"11"_s, QStringLiteral("31"));
         mStartDate->setCurrentText(invalidDate);
-        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start date ").append(invalidDate)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(u"Didn't detect invalid start date "_s.append(invalidDate)));
         mStartDate->setCurrentText(validDate);
-        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(u" considered invalid."_s)));
 
         auto validTime = mStartTime->currentText();
-        auto invalidTime = mStartTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
+        auto invalidTime = mStartTime->currentText().replace(u"11"_s, QStringLiteral("61"));
         mStartTime->setCurrentText(invalidTime);
-        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid start time ").append(invalidTime)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(u"Didn't detect invalid start time "_s.append(invalidTime)));
         mStartTime->setCurrentText(validTime);
-        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(u" considered invalid."_s)));
 
         validDate = mEndDate->currentText();
-        invalidDate = mEndDate->currentText().replace(QStringLiteral("11"), QStringLiteral("31"));
+        invalidDate = mEndDate->currentText().replace(u"11"_s, QStringLiteral("31"));
         mEndDate->setCurrentText(invalidDate);
-        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end date ").append(invalidDate)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(u"Didn't detect invalid end date "_s.append(invalidDate)));
         mEndDate->setCurrentText(validDate);
-        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validDate.append(u" considered invalid."_s)));
 
         validTime = mEndTime->currentText();
-        invalidTime = mEndTime->currentText().replace(QStringLiteral("11"), QStringLiteral("61"));
+        invalidTime = mEndTime->currentText().replace(u"11"_s, QStringLiteral("61"));
         mEndTime->setCurrentText(invalidTime);
-        QVERIFY2(!mEditor->isValid(), qPrintable(QStringLiteral("Didn't detect invalid end time ").append(invalidTime)));
+        QVERIFY2(!mEditor->isValid(), qPrintable(u"Didn't detect invalid end time "_s.append(invalidTime)));
         mEndTime->setCurrentText(validTime);
-        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(QStringLiteral(" considered invalid."))));
+        QVERIFY2(mEditor->isValid(), qPrintable(validTime.append(u" considered invalid."_s)));
     }
 
     void testEventTimeOrdering()
@@ -125,7 +125,7 @@ private Q_SLOTS:
 
         // Put the dialog into a known, valid state.
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
-        event->setSummary(QStringLiteral("e"));
+        event->setSummary(u"e"_s);
         event->setDtStart(dt);
         event->setDtEnd(dt);
         event->setAllDay(false);

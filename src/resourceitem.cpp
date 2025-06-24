@@ -5,6 +5,7 @@
  *
  */
 #include "resourceitem.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KLDAPCore/LdapServer>
 
@@ -25,7 +26,7 @@ ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs
 
         connect(&mLdapClient, &KLDAPCore::LdapClient::result, this, &ResourceItem::slotLDAPResult);
 
-        mAttrs << QStringLiteral("uniqueMember");
+        mAttrs << u"uniqueMember"_s;
         mLdapClient.setAttributes(attrs);
     } else {
         itemData.reserve(mAttrs.count());
@@ -121,7 +122,7 @@ const KLDAPCore::LdapObject &ResourceItem::ldapObject() const
 
 void ResourceItem::startSearch()
 {
-    mLdapClient.startQuery(QStringLiteral("objectclass=*"));
+    mLdapClient.startQuery(u"objectclass=*"_s);
 }
 
 void ResourceItem::setLdapObject(const KLDAPCore::LdapObject &obj)

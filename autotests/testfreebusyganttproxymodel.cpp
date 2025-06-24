@@ -21,7 +21,7 @@
 QTEST_MAIN(FreeBusyGanttProxyModelTest)
 
 using namespace IncidenceEditorNG;
-
+using namespace Qt::Literals::StringLiterals;
 void FreeBusyGanttProxyModelTest::initTestCase()
 {
     qputenv("TZ", "UTC");
@@ -41,7 +41,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), QTimeZone::utc());
     const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), QTimeZone::utc());
-    KCalendarCore::Attendee a1(QStringLiteral("fred"), QStringLiteral("fred@example.com"));
+    KCalendarCore::Attendee a1(u"fred"_s, QStringLiteral("fred@example.com"));
     KCalendarCore::FreeBusy::Ptr fb1(new KCalendarCore::FreeBusy());
 
     fb1->addPeriod(dt1, KCalendarCore::Duration(60 * 60));
@@ -52,7 +52,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     const QDateTime dt3(QDate(2010, 8, 25), QTime(7, 0, 0), QTimeZone::utc());
     const QDateTime dt4(QDate(2010, 8, 25), QTime(16, 0, 0), QTimeZone::utc());
-    KCalendarCore::Attendee a2(QStringLiteral("joe"), QStringLiteral("joe@example.com"));
+    KCalendarCore::Attendee a2(u"joe"_s, QStringLiteral("joe@example.com"));
     KCalendarCore::FreeBusy::Ptr fb2(new KCalendarCore::FreeBusy());
 
     fb2->addPeriod(dt3, KCalendarCore::Duration(60 * 60));
