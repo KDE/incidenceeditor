@@ -39,7 +39,7 @@ public:
     void saveConfig();
 
 private:
-    KLineEdit *const mUrlEdit;
+    KLineEdit *mUrlEdit = nullptr;
     AttendeeData::Ptr mAttendee;
 };
 }
