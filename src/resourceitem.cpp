@@ -75,8 +75,10 @@ QVariant ResourceItem::data(int column) const
 
 QVariant ResourceItem::data(const QString &column) const
 {
-    if (!mLdapObject.attributes()[column].isEmpty()) {
-        return QString::fromUtf8(mLdapObject.attributes()[column][0]);
+    const auto ldapAttributes = mLdapObject.attributes();
+    const auto &attribute = ldapAttributes.value(column);
+    if (!attribute.isEmpty()) {
+        return QString::fromUtf8(attribute[0]);
     }
     return {};
 }
@@ -139,9 +141,11 @@ void ResourceItem::slotLDAPResult(const KLDAPCore::LdapClient &client, const KLD
 {
     Q_UNUSED(client)
     mLdapObject = obj;
+    const auto ldapAttributes = mLdapObject.attributes();
     for (const QString &header : std::as_const(mAttrs)) {
-        if (!obj.attributes()[header].isEmpty()) {
-            itemData << QString::fromUtf8(obj.attributes()[header][0]);
+        const auto &attribute = ldapAttributes.value(header);
+        if (!attribute.isEmpty()) {
+            itemData << QString::fromUtf8(attribute[0]);
         } else {
             itemData << QString();
         }
