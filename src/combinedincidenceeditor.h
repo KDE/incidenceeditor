@@ -5,6 +5,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// clazy:excludeall=const-signal-or-slot
+
 #pragma once
 
 #include "incidenceeditor-ng.h"
