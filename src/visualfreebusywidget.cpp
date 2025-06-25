@@ -36,7 +36,6 @@ namespace IncidenceEditorNG
 class RowController : public KGantt::AbstractRowController
 {
 private:
-    static const int ROW_HEIGHT;
     QPointer<QAbstractItemModel> m_model;
 
 public:
