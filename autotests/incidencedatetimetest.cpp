@@ -65,7 +65,6 @@ private Q_SLOTS:
 
     void testEventTimeValidation()
     {
-        QLocale currentLocale;
         QLocale::setDefault(QLocale::c());
 
         const QDate date{2022, 04, 11};
