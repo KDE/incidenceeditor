@@ -5,6 +5,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+// clazy:excludeall=overloaded-signal
+
 #pragma once
 
 #include <Libkdepim/MultiplyingLine>
