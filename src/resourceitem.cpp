@@ -52,8 +52,8 @@ int ResourceItem::childNumber() const
 {
     if (parentItem) {
         int i = 0;
-        for (const ResourceItem::Ptr &child : std::as_const(parentItem->childItems)) {
-            if (child == this) {
+        for (const ResourceItem::Ptr &item : std::as_const(parentItem->childItems)) {
+            if (item == this) {
                 return i;
             }
             i++;

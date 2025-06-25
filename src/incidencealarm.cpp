@@ -172,10 +172,10 @@ void IncidenceAlarm::newAlarm()
     dialog->setAllowEndReminders(mDateTime->endDateTimeEnabled());
 
     if (dialog->exec() == QDialog::Accepted) {
-        KCalendarCore::Alarm::Ptr newAlarm(new KCalendarCore::Alarm(nullptr));
-        dialog->save(newAlarm);
-        newAlarm->setEnabled(true);
-        mAlarms.append(newAlarm);
+        KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+        dialog->save(alarm);
+        alarm->setEnabled(true);
+        mAlarms.append(alarm);
         updateAlarmList();
         checkDirtyStatus();
     }

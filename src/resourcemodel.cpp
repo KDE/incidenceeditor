@@ -210,16 +210,16 @@ void ResourceModel::slotLDAPSearchData(const KLDAPCore::LdapResultObject::List &
             parents << mRootItem;
         }
 
-        for (const ResourceItem::Ptr &parent : std::as_const(parents)) {
-            ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, parent));
+        for (const ResourceItem::Ptr &p : std::as_const(parents)) {
+            ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, p));
             item->setLdapObject(result.object);
 
             QModelIndex parentIndex;
-            if (parent != mRootItem) {
-                parentIndex = index(parent->childNumber(), 0, parentIndex);
+            if (p != mRootItem) {
+                parentIndex = index(p->childNumber(), 0, parentIndex);
             }
-            beginInsertRows(parentIndex, parent->childCount(), parent->childCount());
-            (void)parent->insertChild(parent->childCount(), item);
+            beginInsertRows(parentIndex, p->childCount(), p->childCount());
+            (void)p->insertChild(p->childCount(), item);
             endInsertRows();
         }
     }

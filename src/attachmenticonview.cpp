@@ -130,13 +130,13 @@ void AttachmentIconItem::readAttachment()
 
     QMimeDatabase db;
     if (mAttachment.mimeType().isEmpty() || !(db.mimeTypeForName(mAttachment.mimeType()).isValid())) {
-        QMimeType mimeType;
+        QMimeType attachmentMimeType;
         if (mAttachment.isUri()) {
-            mimeType = db.mimeTypeForUrl(QUrl(mAttachment.uri()));
+            attachmentMimeType = db.mimeTypeForUrl(QUrl(mAttachment.uri()));
         } else {
-            mimeType = db.mimeTypeForData(mAttachment.decodedData());
+            attachmentMimeType = db.mimeTypeForData(mAttachment.decodedData());
         }
-        mAttachment.setMimeType(mimeType.name());
+        mAttachment.setMimeType(attachmentMimeType.name());
     }
 
     setIcon(icon());
