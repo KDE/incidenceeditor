@@ -347,7 +347,7 @@ void IncidenceDialogPrivate::manageTemplates()
 {
     Q_Q(IncidenceDialog);
 
-    QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
+    const QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
 
     QPointer<IncidenceEditorNG::TemplateManagementDialog> dialog(
         new IncidenceEditorNG::TemplateManagementDialog(q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
@@ -810,6 +810,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
 
 void IncidenceDialog::reject()
 {
+    /* cppcheck-suppress constVariablePointer */
     Q_D(IncidenceDialog);
     if (d->isDirty()
         && KMessageBox::questionTwoActions(this,
@@ -826,6 +827,7 @@ void IncidenceDialog::reject()
 
 void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
+    /* cppcheck-suppress constVariablePointer */
     Q_D(IncidenceDialog);
     if (d->isDirty()
         && KMessageBox::questionTwoActions(this,

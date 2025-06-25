@@ -407,8 +407,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
     }
     QMenu menu;
-    QAction *linkAction = nullptr;
-    QAction *cancelAction = nullptr;
+    const QAction *linkAction = nullptr;
+    const QAction *cancelAction = nullptr;
     if (probablyWeHaveUris) {
         linkAction = menu.addAction(QIcon::fromTheme(u"insert-link"_s), i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
@@ -443,7 +443,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         }
     }
 
-    QAction *ret = menu.exec(QCursor::pos());
+    const QAction *ret = menu.exec(QCursor::pos());
     if (linkAction == ret) {
         QStringList::ConstIterator jt = labels.constBegin();
         const QList<QUrl>::ConstIterator jtEnd = urls.constEnd();

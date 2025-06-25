@@ -135,7 +135,7 @@ bool ResourceModel::removeRows(int position, int rows, const QModelIndex &parent
 
 int ResourceModel::rowCount(const QModelIndex &parent) const
 {
-    ResourceItem *parentItem = getItem(parent);
+    const ResourceItem *parentItem = getItem(parent);
 
     return parentItem->childCount();
 }

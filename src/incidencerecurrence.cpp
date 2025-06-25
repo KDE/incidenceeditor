@@ -748,6 +748,7 @@ QString IncidenceRecurrence::numberToString(int number) const
     // The code in here was adapted from an article by Johnathan Wood, see:
     // http://www.blackbeltcoder.com/Articles/strings/converting-numbers-to-ordinal-strings
 
+    /* cppcheck-suppress constVariable */
     static QString _numSuffixes[] = {u"th"_s, u"st"_s, u"nd"_s, u"rd"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s};
 
     int i = (number % 100);
