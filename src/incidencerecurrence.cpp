@@ -962,6 +962,7 @@ QBitArray IncidenceRecurrence::weekday() const
 
 int IncidenceRecurrence::weekdayCountForMonth(const QDate &date) const
 {
+    /* cppcheck-suppress assertWithSideEffect */
     Q_ASSERT(date.isValid());
     // This methods returns how often the weekday specified by @param date occurs
     // in the month represented by @param date.
