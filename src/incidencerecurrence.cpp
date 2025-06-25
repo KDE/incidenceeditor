@@ -410,7 +410,8 @@ bool IncidenceRecurrence::isDirty() const
         }
     } else {
         KCalendarCore::DateList dates;
-        for (const auto &dt : recurrence->exDateTimes()) {
+        const auto exDts = recurrence->exDateTimes();
+        for (const auto &dt : exDts) {
             dates.append(dt.toLocalTime().date());
         }
         if (mExceptionDates != dates) {
