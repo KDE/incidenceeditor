@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-26 00:43+0000\n"
 "PO-Revision-Date: 2025-03-13 11:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1124,7 +1124,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:459
+#: incidencerecurrence.cpp:460
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1133,31 +1133,31 @@ msgstr ""
 "يجب أن يحدث الحدث أو المهمّة التّكراريّة مرّة واحدة على الأقلّ. اضبط معاملات "
 "التّكرار."
 
-#: incidencerecurrence.cpp:465
+#: incidencerecurrence.cpp:466
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "تاريخ بدء الحدوث غير صالح."
 
-#: incidencerecurrence.cpp:471
+#: incidencerecurrence.cpp:472
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "تاريخ نهاية الحدوث غير صالح."
 
-#: incidencerecurrence.cpp:514
+#: incidencerecurrence.cpp:515
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "اليوم ال‍ %1 من الشّهر"
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:518
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "اليوم ال‍ %1 من آخر الشّهر"
 
 # الأربعاء ال‍ 1
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:521
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
@@ -1165,55 +1165,55 @@ msgstr "%2 ال‍ %1"
 
 # %1 تُرجع "الإثنين/الثلاثاء/الأربعاء"
 # لا يمكن أن نضعها "آخر إثنين" (أفضل من الحالية)
-#: incidencerecurrence.cpp:526
+#: incidencerecurrence.cpp:527
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "%1 الأخير"
 
-#: incidencerecurrence.cpp:528
+#: incidencerecurrence.cpp:529
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "اليوم ال‍ %1 من آخر %2"
 
-#: incidencerecurrence.cpp:544
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:548
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "اليوم ال‍ %1 من آخر يوم من شهر %2"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:551
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%2 ال‍ %1 من %3"
 
-#: incidencerecurrence.cpp:557
+#: incidencerecurrence.cpp:558
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "%1 الأخير من %2"
 
-#: incidencerecurrence.cpp:562
+#: incidencerecurrence.cpp:563
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "اليوم ال‍ %1 من آخر %2 من %3 "
 
-#: incidencerecurrence.cpp:569
+#: incidencerecurrence.cpp:570
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "اليوم ال‍ %1 من السّنة"
 
-#: incidencerecurrence.cpp:584
+#: incidencerecurrence.cpp:585
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1225,7 +1225,7 @@ msgstr[3] "حدوثات"
 msgstr[4] "حدوثًا"
 msgstr[5] "حدوث"
 
-#: incidencerecurrence.cpp:608
+#: incidencerecurrence.cpp:609
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1237,7 +1237,7 @@ msgstr[3] "أسابيع"
 msgstr[4] "أسبوعًا"
 msgstr[5] "أسبوع"
 
-#: incidencerecurrence.cpp:612
+#: incidencerecurrence.cpp:613
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1249,7 +1249,7 @@ msgstr[3] "أشهر"
 msgstr[4] "شهرًا"
 msgstr[5] "شهر"
 
-#: incidencerecurrence.cpp:616
+#: incidencerecurrence.cpp:617
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1261,7 +1261,7 @@ msgstr[3] "سنوات"
 msgstr[4] "سنة"
 msgstr[5] "سنة"
 
-#: incidencerecurrence.cpp:620
+#: incidencerecurrence.cpp:621
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1273,7 +1273,7 @@ msgstr[3] "أيّام"
 msgstr[4] "يومًا"
 msgstr[5] "يوم"
 
-#: incidencerecurrence.cpp:628
+#: incidencerecurrence.cpp:629
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
@@ -2749,19 +2749,19 @@ msgstr ""
 msgid "Apply"
 msgstr "طبّق"
 
-#: visualfreebusywidget.cpp:141
+#: visualfreebusywidget.cpp:140
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
 msgstr "المقياس: "
 
-#: visualfreebusywidget.cpp:145
+#: visualfreebusywidget.cpp:144
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
 msgstr "اضبط مستوى تكبير رسم ”غانت“ البيانيّ"
 
-#: visualfreebusywidget.cpp:147
+#: visualfreebusywidget.cpp:146
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2776,49 +2776,49 @@ msgstr ""
 "مؤلّفًا من عدّة أسابيع،<nl/>ويعرض ’شهر‘ مدًى مؤلّفًا من عدّة شهور،<nl/>بينما يختار "
 "’آليّ‘ أكثر مدًى ملائم للحدث أو المهمّة الحاليّة."
 
-#: visualfreebusywidget.cpp:154
+#: visualfreebusywidget.cpp:153
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
 msgstr "ساعة"
 
-#: visualfreebusywidget.cpp:155
+#: visualfreebusywidget.cpp:154
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
 msgstr "يوم"
 
-#: visualfreebusywidget.cpp:156
+#: visualfreebusywidget.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
 msgstr "أسبوع"
 
-#: visualfreebusywidget.cpp:157
+#: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
 msgstr "شهر"
 
-#: visualfreebusywidget.cpp:158
+#: visualfreebusywidget.cpp:157
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
 msgstr "آليّ"
 
-#: visualfreebusywidget.cpp:163
+#: visualfreebusywidget.cpp:162
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
 msgstr "وسّط عند البدء"
 
-#: visualfreebusywidget.cpp:164
+#: visualfreebusywidget.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
 msgstr "وسّط رسم ”غانت“ البيانيّ عند تاريخ ووقت بداية الحدث"
 
-#: visualfreebusywidget.cpp:166
+#: visualfreebusywidget.cpp:165
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2826,19 +2826,19 @@ msgid ""
 "this event."
 msgstr "انقر هذا الزّرّ لتوسيط رسم ”غانت“ البيانيّ على وقت بداية هذا الحدث ويومه."
 
-#: visualfreebusywidget.cpp:173
+#: visualfreebusywidget.cpp:172
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
 msgstr "انتقِ تاريخًا"
 
-#: visualfreebusywidget.cpp:175
+#: visualfreebusywidget.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr "انقل الحدث إلى تاريخ ووقت يكون فيه كلّ الحضور متوفّرين"
 
-#: visualfreebusywidget.cpp:178
+#: visualfreebusywidget.cpp:177
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2848,19 +2848,19 @@ msgstr ""
 "انقر هذا الزّرّ لنقل الحدث إلى تاريخ ووقت يكون فيه كلّ الحضور متوفّرين في قائمة "
 "متفرّغ/مشغول لكلّ حاضر."
 
-#: visualfreebusywidget.cpp:187
+#: visualfreebusywidget.cpp:186
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
 msgstr "أعِد التّحميل"
 
-#: visualfreebusywidget.cpp:188
+#: visualfreebusywidget.cpp:187
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
 msgstr "أعِد تحميل بيانات متفرّغ/مشغول لكلّ الحضور"
 
-#: visualfreebusywidget.cpp:190
+#: visualfreebusywidget.cpp:189
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2869,25 +2869,25 @@ msgid ""
 msgstr ""
 "نقر هذا الزّرّ سيُعيد تحميل بيانات متفرّغ/مشغول لكلّ الحضور من الخواديم المقابلة."
 
-#: visualfreebusywidget.cpp:201
+#: visualfreebusywidget.cpp:200
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
 msgstr "يعرض قائمة شجرية لجميع البيانات"
 
-#: visualfreebusywidget.cpp:202
+#: visualfreebusywidget.cpp:201
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
 msgstr "يعرض قائمة شجرية لجميع البيانات"
 
-#: visualfreebusywidget.cpp:208
+#: visualfreebusywidget.cpp:207
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
 msgstr "يعرض حالة متفرّغ/مشغول لكلّ الحضور"
 
-#: visualfreebusywidget.cpp:210
+#: visualfreebusywidget.cpp:209
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

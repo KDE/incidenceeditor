@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-26 00:43+0000\n"
 "PO-Revision-Date: 2025-03-10 14:17+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1113,7 +1113,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:459
+#: incidencerecurrence.cpp:460
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1122,84 +1122,84 @@ msgstr ""
 "Повторювана подія або завдання мають відбутися хоча б один раз. Виправте "
 "параметри повторення відповідно."
 
-#: incidencerecurrence.cpp:465
+#: incidencerecurrence.cpp:466
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "Дата початку події є некоректною."
 
-#: incidencerecurrence.cpp:471
+#: incidencerecurrence.cpp:472
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "Кінцева дата повторень є некоректною."
 
-#: incidencerecurrence.cpp:514
+#: incidencerecurrence.cpp:515
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1"
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:518
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "%1 до останнього дня"
 
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:521
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:526
+#: incidencerecurrence.cpp:527
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "останній день %1"
 
-#: incidencerecurrence.cpp:528
+#: incidencerecurrence.cpp:529
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1 до останнього %2"
 
-#: incidencerecurrence.cpp:544
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:548
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%1 до останнього дня місяця %2"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:551
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%1 %2 %3"
 
-#: incidencerecurrence.cpp:557
+#: incidencerecurrence.cpp:558
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "останній %1 місяця %2"
 
-#: incidencerecurrence.cpp:562
+#: incidencerecurrence.cpp:563
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%1 до останнього дня %2 місяця %3 "
 
-#: incidencerecurrence.cpp:569
+#: incidencerecurrence.cpp:570
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "%1 день року"
 
-#: incidencerecurrence.cpp:584
+#: incidencerecurrence.cpp:585
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1209,7 +1209,7 @@ msgstr[1] "повторення"
 msgstr[2] "повторень"
 msgstr[3] "повторення"
 
-#: incidencerecurrence.cpp:608
+#: incidencerecurrence.cpp:609
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1219,7 +1219,7 @@ msgstr[1] "тижні"
 msgstr[2] "тижнів"
 msgstr[3] "тиждень"
 
-#: incidencerecurrence.cpp:612
+#: incidencerecurrence.cpp:613
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1229,7 +1229,7 @@ msgstr[1] "місяці"
 msgstr[2] "місяців"
 msgstr[3] "місяць"
 
-#: incidencerecurrence.cpp:616
+#: incidencerecurrence.cpp:617
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1239,7 +1239,7 @@ msgstr[1] "роки"
 msgstr[2] "років"
 msgstr[3] "рік"
 
-#: incidencerecurrence.cpp:620
+#: incidencerecurrence.cpp:621
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1249,7 +1249,7 @@ msgstr[1] "дні"
 msgstr[2] "днів"
 msgstr[3] "день"
 
-#: incidencerecurrence.cpp:628
+#: incidencerecurrence.cpp:629
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
@@ -2758,19 +2758,19 @@ msgstr ""
 msgid "Apply"
 msgstr "Застосувати"
 
-#: visualfreebusywidget.cpp:141
+#: visualfreebusywidget.cpp:140
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
 msgstr "Масштаб: "
 
-#: visualfreebusywidget.cpp:145
+#: visualfreebusywidget.cpp:144
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
 msgstr "Встановити масштаб діаграми Ґанта"
 
-#: visualfreebusywidget.cpp:147
+#: visualfreebusywidget.cpp:146
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2786,49 +2786,49 @@ msgstr ""
 "проміжок у декілька місяців,<nl/>«Автоматично» вибирає проміжок, який "
 "найбільш відповідає поточній події або завданню."
 
-#: visualfreebusywidget.cpp:154
+#: visualfreebusywidget.cpp:153
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
 msgstr "Година"
 
-#: visualfreebusywidget.cpp:155
+#: visualfreebusywidget.cpp:154
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
 msgstr "День"
 
-#: visualfreebusywidget.cpp:156
+#: visualfreebusywidget.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
 msgstr "Тиждень"
 
-#: visualfreebusywidget.cpp:157
+#: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
 msgstr "Місяць"
 
-#: visualfreebusywidget.cpp:158
+#: visualfreebusywidget.cpp:157
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: visualfreebusywidget.cpp:163
+#: visualfreebusywidget.cpp:162
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
 msgstr "Центрувати на початку"
 
-#: visualfreebusywidget.cpp:164
+#: visualfreebusywidget.cpp:163
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
 msgstr "Центрувати діаграму Ґанта за датою і часом початку цієї події"
 
-#: visualfreebusywidget.cpp:166
+#: visualfreebusywidget.cpp:165
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2838,19 +2838,19 @@ msgstr ""
 "Натисніть цю кнопку, щоб діаграму Ґанта було центровано за часом і днем "
 "початку цієї події."
 
-#: visualfreebusywidget.cpp:173
+#: visualfreebusywidget.cpp:172
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
 msgstr "Вибрати дату"
 
-#: visualfreebusywidget.cpp:175
+#: visualfreebusywidget.cpp:174
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr "Пересунути подію на дату й час, коли всі учасники мають вільний час."
 
-#: visualfreebusywidget.cpp:178
+#: visualfreebusywidget.cpp:177
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2860,13 +2860,13 @@ msgstr ""
 "Натисніть цю кнопку, щоб пересунути подію на дату і час, коли всі учасники "
 "будуть вільними на основі списків вільності/зайнятості."
 
-#: visualfreebusywidget.cpp:187
+#: visualfreebusywidget.cpp:186
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
 msgstr "Перезавантажити"
 
-#: visualfreebusywidget.cpp:188
+#: visualfreebusywidget.cpp:187
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
@@ -2874,7 +2874,7 @@ msgstr ""
 "Перезавантажити з відповідних серверів дані про вільний/зайнятий час для "
 "всіх учасників."
 
-#: visualfreebusywidget.cpp:190
+#: visualfreebusywidget.cpp:189
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2884,25 +2884,25 @@ msgstr ""
 "Натискання цієї кнопки призведе до перезавантаження даних про вільний/"
 "зайнятий час для всіх учасників з відповідних серверів."
 
-#: visualfreebusywidget.cpp:201
+#: visualfreebusywidget.cpp:200
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
 msgstr "Показує ієрархічний список усіх даних"
 
-#: visualfreebusywidget.cpp:202
+#: visualfreebusywidget.cpp:201
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
 msgstr "Показує ієрархічний список усіх даних"
 
-#: visualfreebusywidget.cpp:208
+#: visualfreebusywidget.cpp:207
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
 msgstr "Показує стан Вільний/Зайнятий всіх учасників"
 
-#: visualfreebusywidget.cpp:210
+#: visualfreebusywidget.cpp:209
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
