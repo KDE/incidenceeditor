@@ -88,8 +88,7 @@ void AlarmDialog::load(const KCalendarCore::Alarm::Ptr &alarm)
     mUi->mBeforeAfter->setCurrentIndex(beforeafterpos);
 
     offset = offset / 60; // make minutes
-    int useoffset = offset;
-
+    int useoffset;
     if (offset % (24 * 60) == 0 && offset > 0) { // divides evenly into days?
         useoffset = offset / (24 * 60);
         mUi->mOffsetUnit->setCurrentIndex(2);
