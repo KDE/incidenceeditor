@@ -17,7 +17,7 @@ using namespace IncidenceEditorNG;
 class IncidenceEditorNG::KTimeZoneComboBoxPrivate
 {
 public:
-    KTimeZoneComboBoxPrivate(KTimeZoneComboBox *parent)
+    explicit KTimeZoneComboBoxPrivate(KTimeZoneComboBox *parent)
         : mParent(parent)
     {
     }
