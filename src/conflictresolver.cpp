@@ -390,9 +390,7 @@ void ConflictResolver::findAllFreeSlots()
                 // push the free block onto the list
                 mAvailableSlots << KCalendarCore::Period(freeBegin, freeEnd);
                 free_count = 0;
-                if (!free_found) {
-                    free_found = true;
-                }
+                free_found = true;
             }
         }
     }
