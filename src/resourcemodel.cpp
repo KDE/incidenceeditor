@@ -14,9 +14,9 @@ using namespace IncidenceEditorNG;
 using namespace Qt::Literals::StringLiterals;
 ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
     : QAbstractItemModel(parent)
+    , mRootItem(ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPCore::LdapClient(0))))
 {
     this->mHeaders = headers;
-    mRootItem = ResourceItem::Ptr(new ResourceItem(KLDAPCore::LdapDN(), headers, KLDAPCore::LdapClient(0)));
     const QStringList attrs = QStringList() << KLDAPCore::LdapClientSearch::defaultAttributes() << u"uniqueMember"_s;
     mLdapSearchCollections = new KLDAPCore::LdapClientSearch(attrs, this);
     mLdapSearch = new KLDAPCore::LdapClientSearch(headers, this);
