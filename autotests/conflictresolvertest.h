@@ -39,7 +39,7 @@ private:
     void
     addAttendee(const QString &email, const KCalendarCore::FreeBusy::Ptr &fb, KCalendarCore::Attendee::Role role = KCalendarCore::Attendee::ReqParticipant);
     QList<CalendarSupport::FreeBusyItem::Ptr> attendees;
-    QWidget *parent;
-    IncidenceEditorNG::ConflictResolver *resolver;
+    QWidget *parent = nullptr;
+    IncidenceEditorNG::ConflictResolver *resolver = nullptr;
     QDateTime base, end;
 };
