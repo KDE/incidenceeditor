@@ -39,6 +39,7 @@ public:
     void saveConfig();
 
 private:
+    /* cppcheck-suppress unsafeClassCanLeak */
     KLineEdit *const mUrlEdit;
     AttendeeData::Ptr mAttendee;
 };
