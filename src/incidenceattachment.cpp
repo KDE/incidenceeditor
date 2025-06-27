@@ -131,6 +131,7 @@ void IncidenceAttachment::addAttachment()
     QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
     dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
     auto dialogResult = dialog->exec();
+    /* cppcheck-suppress knownConditionTrueFalse */
     if (!that) {
         return;
     }
