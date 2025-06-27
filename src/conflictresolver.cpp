@@ -365,6 +365,7 @@ void ConflictResolver::findAllFreeSlots()
         if (summed[i] == 0) {
             ++free_count;
         }
+        /* cppcheck-suppress knownConditionTrueFalse */
         if (summed[i] != 0 || (i == (range - 1) && summed[i] == 0)) {
             // current slot is not free, so push the previous free blocks
             // OR we are in the last slot and it is free
