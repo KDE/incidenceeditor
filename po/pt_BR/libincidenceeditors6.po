@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-26 00:43+0000\n"
+"POT-Creation-Date: 2025-06-27 00:43+0000\n"
 "PO-Revision-Date: 2025-02-06 07:59-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -34,42 +34,42 @@ msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Editar um lembrete existente"
 
-#: alarmdialog.cpp:194
+#: alarmdialog.cpp:193
 #, kde-format
 msgid "Before the to-do starts"
 msgstr "Antes do início da tarefa"
 
-#: alarmdialog.cpp:194
+#: alarmdialog.cpp:193
 #, kde-format
 msgid "After the to-do starts"
 msgstr "Após o início da tarefa"
 
-#: alarmdialog.cpp:198
+#: alarmdialog.cpp:197
 #, kde-format
 msgid "Before the to-do is due"
 msgstr "Antes do término da tarefa"
 
-#: alarmdialog.cpp:198
+#: alarmdialog.cpp:197
 #, kde-format
 msgid "After the to-do is due"
 msgstr "Após o término da tarefa"
 
-#: alarmdialog.cpp:202
+#: alarmdialog.cpp:201
 #, kde-format
 msgid "Before the event starts"
 msgstr "Antes do início do evento"
 
-#: alarmdialog.cpp:202
+#: alarmdialog.cpp:201
 #, kde-format
 msgid "After the event starts"
 msgstr "Após o início do evento"
 
-#: alarmdialog.cpp:205
+#: alarmdialog.cpp:204
 #, kde-format
 msgid "Before the event ends"
 msgstr "Antes do fim do evento"
 
-#: alarmdialog.cpp:205
+#: alarmdialog.cpp:204
 #, kde-format
 msgid "After the event ends"
 msgstr "Após o fim do evento"
@@ -1019,25 +1019,25 @@ msgstr ""
 "conjunto de modelos. Os modelos podem criar novos itens de maneira rápida e "
 "fácil, colocando os seus valores padrão favoritos automaticamente no editor."
 
-#: incidencedialog.cpp:795 incidencedialog.cpp:816 incidencedialog.cpp:832
+#: incidencedialog.cpp:795 incidencedialog.cpp:817 incidencedialog.cpp:834
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Deseja realmente cancelar?"
 
-#: incidencedialog.cpp:796 incidencedialog.cpp:817 incidencedialog.cpp:833
+#: incidencedialog.cpp:796 incidencedialog.cpp:818 incidencedialog.cpp:835
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Confirmação do KOrganizer"
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:818 incidencedialog.cpp:834
+#: incidencedialog.cpp:797 incidencedialog.cpp:819 incidencedialog.cpp:836
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Cancelar edição"
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:819 incidencedialog.cpp:835
+#: incidencedialog.cpp:798 incidencedialog.cpp:820 incidencedialog.cpp:837
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
