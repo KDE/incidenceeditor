@@ -88,10 +88,11 @@ void KTimeZoneComboBox::selectTimeZone(const QTimeZone &zone)
 
 void KTimeZoneComboBox::selectTimeZoneFor(const QDateTime &dateTime)
 {
-    if (dateTime.timeSpec() == Qt::LocalTime)
+    if (dateTime.timeSpec() == Qt::LocalTime) {
         setCurrentIndex(1); // Floating
-    else
+    } else {
         selectTimeZone(dateTime.timeZone());
+    }
 }
 
 QTimeZone KTimeZoneComboBox::selectedTimeZone() const

@@ -384,18 +384,20 @@ void IncidenceDateTime::enableTimeEdits()
     if (mUi->mStartCheck->isChecked()) {
         mUi->mStartTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboStart->setEnabled(!wholeDayChecked);
-        if (wholeDayChecked)
+        if (wholeDayChecked) {
             mUi->mTimeZoneComboStart->setFloating(true);
-        else
+        } else {
             mUi->mTimeZoneComboStart->selectTimeZoneFor(mInitialStartDT);
+        }
     }
     if (mUi->mEndCheck->isChecked()) {
         mUi->mEndTimeEdit->setEnabled(!wholeDayChecked);
         mUi->mTimeZoneComboEnd->setEnabled(!wholeDayChecked);
-        if (wholeDayChecked)
+        if (wholeDayChecked) {
             mUi->mTimeZoneComboEnd->setFloating(true);
-        else
+        } else {
             mUi->mTimeZoneComboEnd->selectTimeZoneFor(mInitialEndDT);
+        }
     }
 
     /**
