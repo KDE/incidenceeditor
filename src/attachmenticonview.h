@@ -55,7 +55,7 @@ public:
 
     [[nodiscard]] KCalendarCore::Attachment attachment() const;
     [[nodiscard]] QString uri() const;
-    [[nodiscard]] QString savedUri() const;
+    [[nodiscard]] const QString &savedUri() const;
     void setUri(const QString &uri);
 
     using QListWidgetItem::setData;
