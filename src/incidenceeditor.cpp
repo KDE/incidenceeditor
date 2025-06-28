@@ -41,7 +41,7 @@ bool IncidenceEditor::isValid() const
     return true;
 }
 
-QString IncidenceEditor::lastErrorString() const
+QString &IncidenceEditor::lastErrorString() const
 {
     return mLastErrorString;
 }

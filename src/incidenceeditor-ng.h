@@ -56,7 +56,7 @@ public:
        Returns the last error, which is set in isValid() on error,
        and cleared on success.
     */
-    [[nodiscard]] QString lastErrorString() const;
+    [[nodiscard]] QString &lastErrorString() const;
 
     /**
      * Sets focus on the invalid field.

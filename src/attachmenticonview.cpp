@@ -58,7 +58,7 @@ const QString AttachmentIconItem::uri() const
     return mAttachment.uri();
 }
 
-const QString AttachmentIconItem::savedUri() const
+const QString &AttachmentIconItem::savedUri() const
 {
     return mSaveUri;
 }
