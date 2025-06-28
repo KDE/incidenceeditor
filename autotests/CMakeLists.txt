@@ -8,7 +8,11 @@ set(grant_lib KGantt6)
 
 macro(IE_UNIT_TESTS)
     foreach(_testname ${ARGN})
-        add_executable(${_testname} ${_testname}.cpp ${_testname}.h)
+        add_executable(
+            ${_testname}
+            ${_testname}.cpp
+            ${_testname}.h
+        )
         add_test(NAME ${_testname} COMMAND ${_testname})
         ecm_mark_as_test(${_testname})
         target_link_libraries(
@@ -26,7 +30,13 @@ endmacro()
 
 macro(IE_EXECUTABLE_TESTS)
     foreach(_testname ${ARGN})
-        add_executable(${_testname} NOGUI TEST ${_testname}.cpp ${_testname}.h)
+        add_executable(
+            ${_testname}
+            NOGUI
+            TEST
+            ${_testname}.cpp
+            ${_testname}.h
+        )
         target_link_libraries(
             ${_testname}
             KF6::CalendarCore

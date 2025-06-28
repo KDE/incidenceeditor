@@ -132,7 +132,12 @@ ki18n_wrap_ui(KPim6IncidenceEditor
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6IncidenceEditor PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6IncidenceEditor
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6IncidenceEditor
     BASE_NAME incidenceeditor
@@ -182,16 +187,15 @@ target_include_directories(
 set_target_properties(
     KPim6IncidenceEditor
     PROPERTIES
-        VERSION ${INCIDENCEEDITOR_VERSION}
-        SOVERSION ${INCIDENCEEDITOR_SOVERSION}
-        EXPORT_NAME IncidenceEditor
+        VERSION
+            ${INCIDENCEEDITOR_VERSION}
+        SOVERSION
+            ${INCIDENCEEDITOR_SOVERSION}
+        EXPORT_NAME
+            IncidenceEditor
 )
 
-install(
-    TARGETS KPim6IncidenceEditor
-    EXPORT KPim6IncidenceEditorTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6IncidenceEditor EXPORT KPim6IncidenceEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
   HEADER_NAMES
@@ -208,7 +212,8 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
 )
 
 install(
-    FILES ${IncidenceEditor_CamelCase_HEADERS}
+    FILES
+        ${IncidenceEditor_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/IncidenceEditor
     COMPONENT Devel
 )

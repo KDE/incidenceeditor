@@ -49,11 +49,7 @@ include(ECMFeatureSummary)
 include(ECMAddTests)
 include(ECMCheckOutboundLicense)
 include(ECMAddQch)
-option(
-    BUILD_QCH
-    "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-    OFF
-)
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(
     QCH
     ${BUILD_QCH}
@@ -91,38 +87,18 @@ find_package(KF6TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
-find_package(
-    KPim6CalendarSupport
-    ${CALENDARSUPPORT_LIB_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6EventViews ${EVENTVIEW_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6CalendarUtils ${CALENDARUTILS_LIB_VERSION} CONFIG REQUIRED)
-find_package(
-    KPim6AkonadiCalendar
-    ${AKONADICALENDAR_LIB_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KPim6AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiMime ${AKONADI_MIMELIB_VERSION} CONFIG REQUIRED)
-find_package(
-    KPim6CalendarSupport
-    ${CALENDARSUPPORT_LIB_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6CalendarUtils ${CALENDARUTILS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6TextEdit ${PIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
-find_package(
-    KPim6IdentityManagementCore
-    ${IDENTITYMANAGEMENT_LIB_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KPim6IdentityManagementCore ${IDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/incidenceeditor_version.h"
@@ -137,21 +113,14 @@ option(
 )
 
 # config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
-configure_file(
-    config-enterprise.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h
-)
+configure_file(config-enterprise.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h)
 
 ########### Targets ###########
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.15.0)
 
-option(
-    USE_UNITY_CMAKE_SUPPORT
-    "Use UNITY cmake support (speedup compile time)"
-    OFF
-)
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)
@@ -165,9 +134,7 @@ endif()
 add_subdirectory(src)
 
 ########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR
-    "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6IncidenceEditor"
-)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6IncidenceEditor")
 if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6IncidenceEditor_QCH
@@ -175,9 +142,7 @@ if(BUILD_QCH)
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS
-        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6IncidenceEditorQchTargets.cmake\")"
-    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6IncidenceEditorQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimIncidenceEditorConfig.cmake.in"
@@ -201,7 +166,8 @@ install(
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/src/incidenceeditor_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/src/incidenceeditor_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/IncidenceEditor/
     COMPONENT Devel
 )
@@ -218,5 +184,9 @@ if(DEFINED kde_configure_git_pre_commit_hook)
 endif()
 ki18n_install(po)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-file(GLOB_RECURSE ALL_SOURCE_FILES src/*.cpp src/*.h)
+file(
+    GLOB_RECURSE ALL_SOURCE_FILES
+    src/*.cpp
+    src/*.h
+)
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})
