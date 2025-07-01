@@ -456,7 +456,6 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
             QList<QUrl>::ConstIterator end = urls.constEnd();
             for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
                 KIO::Job *job = KIO::storedGet(*it);
-                // TODO verify if slot exist !
                 connect(job, &KIO::Job::result, this, &IncidenceAttachment::downloadComplete);
             }
         } else { // we take anything
@@ -528,11 +527,6 @@ void IncidenceAttachment::setupAttachmentIconView()
     layout->addWidget(mAttachmentView);
     QWidget::setTabOrder(mUi->mAddButton, mAttachmentView);
 }
-
-// void IncidenceAttachmentEditor::addAttachment( KCalendarCore::Attachment *attachment )
-// {
-//   new AttachmentIconItem( attachment, mAttachmentView );
-// }
 
 void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QString &mimeType, const QString &label)
 {
