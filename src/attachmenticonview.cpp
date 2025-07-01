@@ -269,6 +269,7 @@ QStringList AttachmentIconView::mimeTypes() const
 
 bool AttachmentIconView::dropMimeData(int index, const QMimeData *data, Qt::DropAction action)
 {
+    Q_UNUSED(index);
     if (action == Qt::IgnoreAction) {
         return true;
     }
