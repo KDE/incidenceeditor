@@ -111,7 +111,7 @@ private:
     bool timeZonesAreLocal(const QDateTime &start, const QDateTime &end);
 
 private:
-    Ui::EventOrTodoDesktop *mUi = nullptr;
+    Ui::EventOrTodoDesktop *const mUi;
 
     QDate mActiveDate;
     /**

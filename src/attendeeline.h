@@ -119,12 +119,12 @@ private:
     void dataFromFields();
     void fieldsFromData();
 
-    AttendeeComboBox *mRoleCombo = nullptr;
-    AttendeeComboBox *mStateCombo = nullptr;
-    AttendeeComboBox *mResponseCombo = nullptr;
-    AttendeeLineEdit *mEdit = nullptr;
+    AttendeeComboBox *const mRoleCombo;
+    AttendeeComboBox *const mStateCombo;
+    AttendeeComboBox *const mResponseCombo;
+    AttendeeLineEdit *const mEdit;
     QSharedPointer<AttendeeData> mData;
     QString mUid;
-    bool mModified;
+    bool mModified = false;
 };
 }

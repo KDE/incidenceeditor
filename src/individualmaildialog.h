@@ -43,7 +43,7 @@ private:
     INCIDENCEEDITOR_NO_EXPORT void updateButtonState();
 
     std::vector<std::pair<KCalendarCore::Attendee, QComboBox *>> mAttendeeDecision;
-    QDialogButtonBox *m_buttons = nullptr;
+    QDialogButtonBox *const m_buttons;
     QWidget *m_detailsWidget = nullptr;
 };
 }

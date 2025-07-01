@@ -124,15 +124,15 @@ private:
     QWidget *mParentWidget = nullptr;
     ConflictResolver *mConflictResolver = nullptr;
 
-    IncidenceDateTime *mDateTime = nullptr;
+    IncidenceDateTime *const mDateTime;
     QString mOrganizer;
 
     /** used dataModel to rely on*/
     AttendeeTableModel *mDataModel = nullptr;
     AttendeeLineEditDelegate *mAttendeeDelegate = nullptr;
     AttendeeComboBoxDelegate *const mStateDelegate;
-    AttendeeComboBoxDelegate *mRoleDelegate = nullptr;
-    AttendeeComboBoxDelegate *mResponseDelegate = nullptr;
+    AttendeeComboBoxDelegate *const mRoleDelegate;
+    AttendeeComboBoxDelegate *const mResponseDelegate;
 
     // the QString is Attendee::uid here
     QMap<QString, KContacts::ContactGroup> mGroupList;

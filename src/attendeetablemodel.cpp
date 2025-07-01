@@ -67,7 +67,6 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
                 case Accepted:
                     return i18n("Accepted");
                 case Unknown:
-                    return i18n("Unknown");
                 default:
                     return i18n("Unknown");
                 }

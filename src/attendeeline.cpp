@@ -39,7 +39,7 @@ void AttendeeComboBox::addItem(const QIcon &icon, const QString &text)
     if (mCurrentIndex == -1) {
         setCurrentIndex(0);
     }
-    int index = mList.size() - 1;
+    const int index = mList.size() - 1;
     QAction *act = menu()->addAction(icon, text, this, &AttendeeComboBox::slotActionTriggered);
     act->setData(index);
 }
@@ -132,7 +132,6 @@ AttendeeLine::AttendeeLine(QWidget *parent)
     , mResponseCombo(new AttendeeComboBox(this))
     , mEdit(new AttendeeLineEdit(this))
     , mData(new AttendeeData(QString(), QString()))
-    , mModified(false)
 {
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 

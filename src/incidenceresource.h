@@ -57,9 +57,9 @@ private:
     QCompleter *completer = nullptr;
 
     /** used dataModel to rely on*/
-    AttendeeTableModel *dataModel = nullptr;
-    IncidenceDateTime *mDateTime = nullptr;
+    AttendeeTableModel *const dataModel;
+    IncidenceDateTime *const mDateTime;
 
-    ResourceManagement *resourceDialog = nullptr;
+    ResourceManagement *const resourceDialog;
 };
 }
