@@ -389,8 +389,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     } else if (mimeData->hasUrls()) {
         QMap<QString, QString> metadata;
 
-        // QT5
-        // urls = QList<QUrl>::fromMimeData( mimeData, &metadata );
+        urls = mimeData->urls();
         probablyWeHaveUris = true;
         labels = metadata[u"labels"_s].split(u':', Qt::SkipEmptyParts);
         const QStringList::Iterator end(labels.end());
@@ -464,9 +463,15 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     }
 }
 
-void IncidenceAttachment::downloadComplete(KJob *)
+void IncidenceAttachment::downloadComplete(KJob *job)
 {
-    // TODO
+    const KIO::StoredTransferJob *kioJob = qobject_cast<KIO::StoredTransferJob *>(job);
+
+    if (kioJob->error() == 0) {
+        addDataAttachment(kioJob->data(), QStringLiteral("text/uri"), kioJob->url().fileName());
+    } else {
+        KMessageBox::error(nullptr, kioJob->errorString());
+    }
 }
 
 void IncidenceAttachment::setupActions()
@@ -521,6 +526,7 @@ void IncidenceAttachment::setupAttachmentIconView()
     connect(mAttachmentView, &AttachmentIconView::itemChanged, this, &IncidenceAttachment::slotItemRenamed);
     connect(mAttachmentView, &AttachmentIconView::itemSelectionChanged, this, &IncidenceAttachment::slotSelectionChanged);
     connect(mAttachmentView, &AttachmentIconView::customContextMenuRequested, this, &IncidenceAttachment::showContextMenu);
+    connect(mAttachmentView, &AttachmentIconView::dropMimeDataRequested, this, &IncidenceAttachment::handlePasteOrDrop);
 
     auto layout = new QGridLayout(mUi->mAttachmentViewPlaceHolder);
     layout->setContentsMargins(0, 0, 0, 0);

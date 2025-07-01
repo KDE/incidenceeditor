@@ -32,10 +32,19 @@ public:
 
     [[nodiscard]] QMimeData *mimeData() const;
 
+Q_SIGNALS:
+    void dropMimeDataRequested(const QMimeData *data);
+
 protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;
     void startDrag(Qt::DropActions supportedActions) override;
     void keyPressEvent(QKeyEvent *event) override;
+
+    [[nodiscard]] Qt::DropActions supportedDropActions() const override;
+
+    [[nodiscard]] QStringList mimeTypes() const override;
+
+    [[nodiscard]] bool dropMimeData(int index, const QMimeData *data, Qt::DropAction action) override;
 };
 
 class AttachmentIconItem : public QListWidgetItem

@@ -257,4 +257,23 @@ void AttachmentIconView::keyPressEvent(QKeyEvent *event)
     QListWidget::keyPressEvent(event);
 }
 
+Qt::DropActions AttachmentIconView::supportedDropActions() const
+{
+    return Qt::CopyAction;
+}
+
+QStringList AttachmentIconView::mimeTypes() const
+{
+    return {QStringLiteral("text/uri-list")};
+}
+
+bool AttachmentIconView::dropMimeData(int index, const QMimeData *data, Qt::DropAction action)
+{
+    if (action == Qt::IgnoreAction) {
+        return true;
+    }
+    Q_EMIT dropMimeDataRequested(data);
+    return true;
+}
+
 #include "moc_attachmenticonview.cpp"
