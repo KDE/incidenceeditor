@@ -189,10 +189,10 @@ void IncidenceAttachment::removeSelectedAttachments()
         return;
     }
 
-    QString labelsStr = labels.join("<nl/>"_L1);
+    const QString labelsStr = labels.join(u'\n');
 
     if (KMessageBox::questionTwoActions(nullptr,
-                                        xi18nc("@info", "Do you really want to remove these attachments?<nl/>%1", labelsStr),
+                                        i18nc("@info", "Do you really want to remove these attachments?\n%1", labelsStr),
                                         i18nc("@title:window", "Remove Attachments?"),
                                         KStandardGuiItem::remove(),
                                         KStandardGuiItem::cancel(),
