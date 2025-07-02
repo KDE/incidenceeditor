@@ -372,12 +372,12 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     }
     QList<QUrl> urls;
     bool probablyWeHaveUris = false;
-    QStringList labels;
 
     if (KContacts::VCardDrag::canDecode(mimeData)) {
         KContacts::Addressee::List addressees;
         KContacts::VCardDrag::fromMimeData(mimeData, addressees);
         urls.reserve(addressees.count());
+        QStringList labels;
         labels.reserve(addressees.count());
         const KContacts::Addressee::List::ConstIterator end(addressees.constEnd());
         for (KContacts::Addressee::List::ConstIterator it = addressees.constBegin(); it != end; ++it) {
