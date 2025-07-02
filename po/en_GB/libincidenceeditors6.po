@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-28 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 07:06+0000\n"
 "PO-Revision-Date: 2024-05-23 19:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -151,37 +151,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "New attachment"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:63
+#: attendeeline.cpp:145 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Request Response"
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:64
+#: attendeeline.cpp:146 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "Request No Response"
 
-#: attendeeline.cpp:149 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Enter the name or email address of the attendee."
 
-#: attendeeline.cpp:152 incidenceattendee.cpp:66
+#: attendeeline.cpp:151 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Edits the current attendance status of the attendee."
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "Edits the role of the attendee."
 
-#: attendeeline.cpp:157 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -191,13 +191,13 @@ msgstr ""
 "The email address or name of the attendee. An invitation can be sent to the "
 "user if an email address is provided."
 
-#: attendeeline.cpp:162 incidenceattendee.cpp:70
+#: attendeeline.cpp:161 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Request a response from the attendee"
 
-#: attendeeline.cpp:164 incidenceattendee.cpp:72
+#: attendeeline.cpp:163 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -222,54 +222,54 @@ msgstr "Busy"
 msgid "Accepted"
 msgstr "Accepted"
 
-#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#: attendeetablemodel.cpp:71
 #, kde-format
 msgid "Unknown"
 msgstr "Unknown"
 
-#: attendeetablemodel.cpp:151
+#: attendeetablemodel.cpp:150
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
 msgstr "Role"
 
-#: attendeetablemodel.cpp:153
+#: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
 msgstr "Name"
 
-#: attendeetablemodel.cpp:155
+#: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
 msgstr "Available"
 
-#: attendeetablemodel.cpp:157
+#: attendeetablemodel.cpp:156
 #, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Status"
 
-#: attendeetablemodel.cpp:159
+#: attendeetablemodel.cpp:158
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
 msgstr "User Type"
 
-#: attendeetablemodel.cpp:161
+#: attendeetablemodel.cpp:160
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
 msgstr "Response"
 
-#: attendeetablemodel.cpp:163
+#: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
 msgstr "Name"
 
-#: attendeetablemodel.cpp:165
+#: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
@@ -541,9 +541,13 @@ msgid "Add Attachment"
 msgstr "Add Attachment"
 
 #: incidenceattachment.cpp:195
-#, kde-kuit-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Do you really want to remove these attachments?<nl/>%1"
 msgctxt "@info"
-msgid "Do you really want to remove these attachments?<nl/>%1"
+msgid ""
+"Do you really want to remove these attachments?\n"
+"%1"
 msgstr "Do you really want to remove these attachments?<nl/>%1"
 
 #: incidenceattachment.cpp:196
@@ -558,49 +562,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Save Attachment"
 
-#: incidenceattachment.cpp:414
+#: incidenceattachment.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "&Link here"
 
-#: incidenceattachment.cpp:424 incidenceattachment.cpp:427
+#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "&Copy here"
 
-#: incidenceattachment.cpp:431
+#: incidenceattachment.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "C&ancel"
 
-#: incidenceattachment.cpp:478
+#: incidenceattachment.cpp:482
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Open"
 
-#: incidenceattachment.cpp:483
+#: incidenceattachment.cpp:487
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Save As…"
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:504
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Remove"
 
-#: incidenceattachment.cpp:508
+#: incidenceattachment.cpp:512
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Properties…"
 
-#: incidenceattachment.cpp:518
+#: incidenceattachment.cpp:522
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1249,49 +1253,49 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Do Not Send"
 
-#: individualmaildialog.cpp:28
+#: individualmaildialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "Group Scheduling Email"
 
-#: individualmaildialog.cpp:35
+#: individualmaildialog.cpp:37
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
 msgstr "Send update"
 
-#: individualmaildialog.cpp:36
+#: individualmaildialog.cpp:38
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
 msgstr "Send no update"
 
-#: individualmaildialog.cpp:37
+#: individualmaildialog.cpp:39
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
 msgstr "Edit mail"
 
-#: individualmaildialog.cpp:38
+#: individualmaildialog.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
 msgstr "Options for this particular attendee."
 
-#: individualmaildialog.cpp:39
+#: individualmaildialog.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
 msgstr "Choose an option for this attendee."
 
-#: individualmaildialog.cpp:112
+#: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
 msgstr "Individual mail settings <<"
 
-#: individualmaildialog.cpp:114
+#: individualmaildialog.cpp:115
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"

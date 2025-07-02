@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-28 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 07:06+0000\n"
 "PO-Revision-Date: 2024-06-16 19:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -147,37 +147,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "புதிய உடனிணைப்பு"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:63
+#: attendeeline.cpp:145 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "பதில் கோரு"
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:64
+#: attendeeline.cpp:146 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "பதில் கோராதே"
 
-#: attendeeline.cpp:149 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "பங்கேற்பவரின் பெயரையோ மின்னஞ்சல் முகவரியையோ உள்ளிடுங்கள்."
 
-#: attendeeline.cpp:152 incidenceattendee.cpp:66
+#: attendeeline.cpp:151 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "பங்கேற்பவரின் பங்கேற்பு நிலையை திருத்தும்"
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "பங்கேற்பவர் பங்கேற்கும் வித‍த்தை திருத்தும்."
 
-#: attendeeline.cpp:157 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -187,13 +187,13 @@ msgstr ""
 "பங்கேற்பவரின் பெயரோ மின்னஞ்சல் முகவரியோ. மின்னஞ்சல் முகவரி உள்ளிடப்பட்டால் அழைப்பிதழை "
 "அனுப்பலாம்."
 
-#: attendeeline.cpp:162 incidenceattendee.cpp:70
+#: attendeeline.cpp:161 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "பங்கேற்பவரிடமிருந்து பதிலை கோரும்"
 
-#: attendeeline.cpp:164 incidenceattendee.cpp:72
+#: attendeeline.cpp:163 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -218,54 +218,54 @@ msgstr "வேலையுண்டு"
 msgid "Accepted"
 msgstr "ஏற்றுல்லார்"
 
-#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#: attendeetablemodel.cpp:71
 #, kde-format
 msgid "Unknown"
 msgstr "தெரியாது"
 
-#: attendeetablemodel.cpp:151
+#: attendeetablemodel.cpp:150
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
 msgstr "பங்கு"
 
-#: attendeetablemodel.cpp:153
+#: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
 msgstr "பெயர்"
 
-#: attendeetablemodel.cpp:155
+#: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
 msgstr "வரமுடியுமா"
 
-#: attendeetablemodel.cpp:157
+#: attendeetablemodel.cpp:156
 #, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "நிலை"
 
-#: attendeetablemodel.cpp:159
+#: attendeetablemodel.cpp:158
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
 msgstr "பயனர் வகை"
 
-#: attendeetablemodel.cpp:161
+#: attendeetablemodel.cpp:160
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
 msgstr "பதில்"
 
-#: attendeetablemodel.cpp:163
+#: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
 msgstr "பெயர்"
 
-#: attendeetablemodel.cpp:165
+#: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
@@ -538,9 +538,13 @@ msgid "Add Attachment"
 msgstr "உடனிணைப்பை சேர்ப்பது"
 
 #: incidenceattachment.cpp:195
-#, kde-kuit-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Do you really want to remove these attachments?<nl/>%1"
 msgctxt "@info"
-msgid "Do you really want to remove these attachments?<nl/>%1"
+msgid ""
+"Do you really want to remove these attachments?\n"
+"%1"
 msgstr "இவ்வுடனிணைப்புகளை உறுதியாக நீக்க வேண்டுமா?<nl/>%1"
 
 #: incidenceattachment.cpp:196
@@ -555,49 +559,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "உடனிணைப்பை சேமிப்பது"
 
-#: incidenceattachment.cpp:414
+#: incidenceattachment.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "&இங்கு இணைப்பை இடு"
 
-#: incidenceattachment.cpp:424 incidenceattachment.cpp:427
+#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "இங்கு &நகலெடு"
 
-#: incidenceattachment.cpp:431
+#: incidenceattachment.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "&ரத்து செய்"
 
-#: incidenceattachment.cpp:478
+#: incidenceattachment.cpp:482
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&திற"
 
-#: incidenceattachment.cpp:483
+#: incidenceattachment.cpp:487
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "வேறு பெயரில் சேமி…"
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:504
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&நீக்கு"
 
-#: incidenceattachment.cpp:508
+#: incidenceattachment.cpp:512
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&பண்புகள்…"
 
-#: incidenceattachment.cpp:518
+#: incidenceattachment.cpp:522
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1242,49 +1246,49 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "அனுப்பாதே"
 
-#: individualmaildialog.cpp:28
+#: individualmaildialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "பலருக்கான மின்னஞ்சலை அனுப்புவது"
 
-#: individualmaildialog.cpp:35
+#: individualmaildialog.cpp:37
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
 msgstr "தகவல்களை அனுப்பு"
 
-#: individualmaildialog.cpp:36
+#: individualmaildialog.cpp:38
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
 msgstr "தகவல்களை அனுப்பாதே"
 
-#: individualmaildialog.cpp:37
+#: individualmaildialog.cpp:39
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
 msgstr "மின்னஞ்சலை திருத்து"
 
-#: individualmaildialog.cpp:38
+#: individualmaildialog.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
 msgstr "இப்பங்கேற்பவருக்கான தனிப்பட்ட அமைப்புகள்"
 
-#: individualmaildialog.cpp:39
+#: individualmaildialog.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
 msgstr "இப்பங்கேற்பவருக்கு எதையாவது தேர்ந்தெடுங்கள்"
 
-#: individualmaildialog.cpp:112
+#: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
 msgstr "தனிப்பட்ட அஞ்சல் அமைப்புகள் <<"
 
-#: individualmaildialog.cpp:114
+#: individualmaildialog.cpp:115
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"

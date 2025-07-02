@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-28 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 07:06+0000\n"
 "PO-Revision-Date: 2025-04-06 22:13+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -141,37 +141,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "새 첨부 파일"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:63
+#: attendeeline.cpp:145 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "응답 요청"
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:64
+#: attendeeline.cpp:146 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "응답 요청하지 않음"
 
-#: attendeeline.cpp:149 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "참석자의 이름이나 이메일 주소를 입력하십시오."
 
-#: attendeeline.cpp:152 incidenceattendee.cpp:66
+#: attendeeline.cpp:151 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "참석자의 현재 참석 상태를 편집합니다."
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "참석자의 역할을 편집합니다."
 
-#: attendeeline.cpp:157 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -181,13 +181,13 @@ msgstr ""
 "참석자의 이름이나 이메일 주소입니다. 이메일 주소를 입력하면 초대장을 보낼 수 "
 "있습니다."
 
-#: attendeeline.cpp:162 incidenceattendee.cpp:70
+#: attendeeline.cpp:161 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "참석자의 응답 요청"
 
-#: attendeeline.cpp:164 incidenceattendee.cpp:72
+#: attendeeline.cpp:163 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -210,54 +210,54 @@ msgstr "바쁨"
 msgid "Accepted"
 msgstr "수락함"
 
-#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#: attendeetablemodel.cpp:71
 #, kde-format
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: attendeetablemodel.cpp:151
+#: attendeetablemodel.cpp:150
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
 msgstr "역할"
 
-#: attendeetablemodel.cpp:153
+#: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
 msgstr "이름"
 
-#: attendeetablemodel.cpp:155
+#: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
 msgstr "참석 가능"
 
-#: attendeetablemodel.cpp:157
+#: attendeetablemodel.cpp:156
 #, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "상태"
 
-#: attendeetablemodel.cpp:159
+#: attendeetablemodel.cpp:158
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
 msgstr "사용자 종류"
 
-#: attendeetablemodel.cpp:161
+#: attendeetablemodel.cpp:160
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
 msgstr "응답"
 
-#: attendeetablemodel.cpp:163
+#: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
 msgstr "이름"
 
-#: attendeetablemodel.cpp:165
+#: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
@@ -525,9 +525,13 @@ msgid "Add Attachment"
 msgstr "첨부 파일 추가"
 
 #: incidenceattachment.cpp:195
-#, kde-kuit-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Do you really want to remove these attachments?<nl/>%1"
 msgctxt "@info"
-msgid "Do you really want to remove these attachments?<nl/>%1"
+msgid ""
+"Do you really want to remove these attachments?\n"
+"%1"
 msgstr "다음 첨부 파일을 삭제하시겠습니까?<nl/>%1"
 
 #: incidenceattachment.cpp:196
@@ -542,49 +546,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "첨부 파일 저장"
 
-#: incidenceattachment.cpp:414
+#: incidenceattachment.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "여기로 링크(&L)"
 
-#: incidenceattachment.cpp:424 incidenceattachment.cpp:427
+#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "여기로 복사(&C)"
 
-#: incidenceattachment.cpp:431
+#: incidenceattachment.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "취소(&A)"
 
-#: incidenceattachment.cpp:478
+#: incidenceattachment.cpp:482
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "열기(&O)"
 
-#: incidenceattachment.cpp:483
+#: incidenceattachment.cpp:487
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "다른 이름으로 저장…"
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:504
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "삭제(&R)"
 
-#: incidenceattachment.cpp:508
+#: incidenceattachment.cpp:512
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "속성(&P)…"
 
-#: incidenceattachment.cpp:518
+#: incidenceattachment.cpp:522
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1221,49 +1225,49 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "보내지 않음"
 
-#: individualmaildialog.cpp:28
+#: individualmaildialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "그룹 스케줄링 이메일"
 
-#: individualmaildialog.cpp:35
+#: individualmaildialog.cpp:37
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
 msgstr "업데이트 보내기"
 
-#: individualmaildialog.cpp:36
+#: individualmaildialog.cpp:38
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
 msgstr "업데이트 보내지 않기"
 
-#: individualmaildialog.cpp:37
+#: individualmaildialog.cpp:39
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
 msgstr "이메일 편집"
 
-#: individualmaildialog.cpp:38
+#: individualmaildialog.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
 msgstr "이 참석자에 대한 옵션입니다."
 
-#: individualmaildialog.cpp:39
+#: individualmaildialog.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
 msgstr "이 참석자에 대한 옵션을 선택하십시오."
 
-#: individualmaildialog.cpp:112
+#: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
 msgstr "개인 메일 설정 <<"
 
-#: individualmaildialog.cpp:114
+#: individualmaildialog.cpp:115
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"

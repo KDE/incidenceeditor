@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-28 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 07:06+0000\n"
 "PO-Revision-Date: 2025-03-10 07:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -164,37 +164,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "Nova priloga"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:63
+#: attendeeline.cpp:145 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Zahtevaj odgovor"
 
-#: attendeeline.cpp:147 incidenceattendee.cpp:64
+#: attendeeline.cpp:146 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "Ne zahtevaj odgovora"
 
-#: attendeeline.cpp:149 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Vnesite ime ali e-poštni naslov udeleženca."
 
-#: attendeeline.cpp:152 incidenceattendee.cpp:66
+#: attendeeline.cpp:151 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Uredi trenutno stanje udeležbe udeleženca."
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "Uredi vlogo udeleženca."
 
-#: attendeeline.cpp:157 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -204,13 +204,13 @@ msgstr ""
 "E-poštni naslov ali ime udeleženca. Če je naveden e-poštni naslov, se lahko "
 "uporabniku pošlje povabilo."
 
-#: attendeeline.cpp:162 incidenceattendee.cpp:70
+#: attendeeline.cpp:161 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Od udeleženca zahtevaj odgovor"
 
-#: attendeeline.cpp:164 incidenceattendee.cpp:72
+#: attendeeline.cpp:163 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -235,54 +235,54 @@ msgstr "Zaposlen"
 msgid "Accepted"
 msgstr "Sprejeto"
 
-#: attendeetablemodel.cpp:70 attendeetablemodel.cpp:72
+#: attendeetablemodel.cpp:71
 #, kde-format
 msgid "Unknown"
 msgstr "Neznano"
 
-#: attendeetablemodel.cpp:151
+#: attendeetablemodel.cpp:150
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
 msgstr "Vloga"
 
-#: attendeetablemodel.cpp:153
+#: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
 msgstr "Ime"
 
-#: attendeetablemodel.cpp:155
+#: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
 msgstr "Na voljo"
 
-#: attendeetablemodel.cpp:157
+#: attendeetablemodel.cpp:156
 #, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
 msgstr "Stanje"
 
-#: attendeetablemodel.cpp:159
+#: attendeetablemodel.cpp:158
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
 msgstr "Vrsta uporabnika"
 
-#: attendeetablemodel.cpp:161
+#: attendeetablemodel.cpp:160
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
 msgstr "Odgovor"
 
-#: attendeetablemodel.cpp:163
+#: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
 msgstr "Ime"
 
-#: attendeetablemodel.cpp:165
+#: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
@@ -560,9 +560,13 @@ msgid "Add Attachment"
 msgstr "Dodaj prilogo"
 
 #: incidenceattachment.cpp:195
-#, kde-kuit-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Do you really want to remove these attachments?<nl/>%1"
 msgctxt "@info"
-msgid "Do you really want to remove these attachments?<nl/>%1"
+msgid ""
+"Do you really want to remove these attachments?\n"
+"%1"
 msgstr "Ali res želite odstraniti te priloge?<nl/>%1"
 
 #: incidenceattachment.cpp:196
@@ -577,49 +581,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Shrani prilogo"
 
-#: incidenceattachment.cpp:414
+#: incidenceattachment.cpp:413
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "Poveži sem"
 
-#: incidenceattachment.cpp:424 incidenceattachment.cpp:427
+#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "Kopiraj sem"
 
-#: incidenceattachment.cpp:431
+#: incidenceattachment.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "Prekliči"
 
-#: incidenceattachment.cpp:478
+#: incidenceattachment.cpp:482
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Odpri"
 
-#: incidenceattachment.cpp:483
+#: incidenceattachment.cpp:487
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Shrani kot…"
 
-#: incidenceattachment.cpp:500
+#: incidenceattachment.cpp:504
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "Odst&rani"
 
-#: incidenceattachment.cpp:508
+#: incidenceattachment.cpp:512
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "Lastnosti…"
 
-#: incidenceattachment.cpp:518
+#: incidenceattachment.cpp:522
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1283,49 +1287,49 @@ msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
 msgstr "Ne pošlji"
 
-#: individualmaildialog.cpp:28
+#: individualmaildialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Group Scheduling Email"
 msgstr "E-pošta za razporejanje skupin"
 
-#: individualmaildialog.cpp:35
+#: individualmaildialog.cpp:37
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send update"
 msgstr "Pošlji posodobitev"
 
-#: individualmaildialog.cpp:36
+#: individualmaildialog.cpp:38
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
 msgstr "Ne pošlji posodobitve"
 
-#: individualmaildialog.cpp:37
+#: individualmaildialog.cpp:39
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
 msgstr "Uredi e-pošto"
 
-#: individualmaildialog.cpp:38
+#: individualmaildialog.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
 msgstr "Možnosti posebej za tega udeleženca."
 
-#: individualmaildialog.cpp:39
+#: individualmaildialog.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
 msgstr "Navedite mesto za datoteko priloge."
 
-#: individualmaildialog.cpp:112
+#: individualmaildialog.cpp:113
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings <<"
 msgstr "Nastavitve posameznikove e-pošte <<"
 
-#: individualmaildialog.cpp:114
+#: individualmaildialog.cpp:115
 #, kde-format
 msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
