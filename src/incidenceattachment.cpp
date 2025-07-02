@@ -387,15 +387,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         }
         probablyWeHaveUris = true;
     } else if (mimeData->hasUrls()) {
-        QMap<QString, QString> metadata;
-
         urls = mimeData->urls();
         probablyWeHaveUris = true;
-        labels = metadata[u"labels"_s].split(u':', Qt::SkipEmptyParts);
-        const QStringList::Iterator end(labels.end());
-        for (QStringList::Iterator it = labels.begin(); it != end; ++it) {
-            *it = QUrl::fromPercentEncoding((*it).toLatin1());
-        }
     } else if (mimeData->hasText()) {
         const QString text = mimeData->text();
         QStringList lst = text.split(u'\n', Qt::SkipEmptyParts);
@@ -444,10 +437,9 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
 
     const QAction *ret = menu.exec(QCursor::pos());
     if (linkAction == ret) {
-        QStringList::ConstIterator jt = labels.constBegin();
-        const QList<QUrl>::ConstIterator jtEnd = urls.constEnd();
-        for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != jtEnd; ++it) {
-            addUriAttachment((*it).url(), QString(), (jt == labels.constEnd() ? QString() : *(jt++)), true);
+        const QList<QUrl>::ConstIterator end = urls.constEnd();
+        for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
+            addUriAttachment((*it).url(), QString(), (*it).fileName(), true);
         }
     } else if (cancelAction != ret) {
         if (probablyWeHaveUris) {
