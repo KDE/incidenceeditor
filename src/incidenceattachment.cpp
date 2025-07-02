@@ -404,7 +404,6 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         for (QStringList::ConstIterator it = lst.constBegin(); it != end; ++it) {
             urls.append(QUrl(*it));
         }
-        probablyWeHaveUris = true;
     }
     QMenu menu;
     const QAction *linkAction = nullptr;
