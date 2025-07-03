@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2024-05-30 10:47+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -563,49 +563,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Uložit přílohu"
 
-#: incidenceattachment.cpp:413
+#: incidenceattachment.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "Od&kaz sem"
 
-#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
+#: incidenceattachment.cpp:415 incidenceattachment.cpp:418
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "&Kopírovat sem"
 
-#: incidenceattachment.cpp:430
+#: incidenceattachment.cpp:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "&Zrušit"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:473
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Otevřít"
 
-#: incidenceattachment.cpp:487
+#: incidenceattachment.cpp:478
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Uložit jako…"
 
-#: incidenceattachment.cpp:504
+#: incidenceattachment.cpp:495
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "Odst&ranit"
 
-#: incidenceattachment.cpp:512
+#: incidenceattachment.cpp:503
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Vlastnosti…"
 
-#: incidenceattachment.cpp:522
+#: incidenceattachment.cpp:513
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

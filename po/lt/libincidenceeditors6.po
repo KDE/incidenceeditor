@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -627,31 +627,31 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Įrašyti priesagą"
 
-#: incidenceattachment.cpp:413
+#: incidenceattachment.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr ""
 
-#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
+#: incidenceattachment.cpp:415 incidenceattachment.cpp:418
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "&Kopijuoti čia"
 
-#: incidenceattachment.cpp:430
+#: incidenceattachment.cpp:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "A&tšaukti"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:473
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&Atverti"
 
-#: incidenceattachment.cpp:487
+#: incidenceattachment.cpp:478
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu save the attachment to a file"
 #| msgid "Save As..."
@@ -659,13 +659,13 @@ msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Įrašyti kaip..."
 
-#: incidenceattachment.cpp:504
+#: incidenceattachment.cpp:495
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Pašalinti"
 
-#: incidenceattachment.cpp:512
+#: incidenceattachment.cpp:503
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu show a dialog used to edit the attachment"
 #| msgid "&Properties..."
@@ -673,7 +673,7 @@ msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Savybės..."
 
-#: incidenceattachment.cpp:522
+#: incidenceattachment.cpp:513
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

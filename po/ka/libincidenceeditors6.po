@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
-"PO-Revision-Date: 2025-03-11 03:26+0100\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
+"PO-Revision-Date: 2025-07-02 17:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -539,14 +539,14 @@ msgid "Add Attachment"
 msgstr "მიმაგრების დამატება"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to remove these attachments?<nl/>%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "მართლა გნებავთ ამ მიმაგრებული ფაილების წაშლა?<nl/>%1"
+msgstr ""
+"მართლა გნებავთ ამ მიმაგრებული ფაილების წაშლა?\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
@@ -560,49 +560,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "მიმაგრებული ფაილის შენახვა"
 
-#: incidenceattachment.cpp:413
+#: incidenceattachment.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "&ბმულის აქ შექმნა"
 
-#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
+#: incidenceattachment.cpp:415 incidenceattachment.cpp:418
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "აქ &ჩაკოპირება"
 
-#: incidenceattachment.cpp:430
+#: incidenceattachment.cpp:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "გაუქმება"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:473
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "&გახსნა"
 
-#: incidenceattachment.cpp:487
+#: incidenceattachment.cpp:478
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "შენახვა, როგორც…"
 
-#: incidenceattachment.cpp:504
+#: incidenceattachment.cpp:495
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&წაშლა"
 
-#: incidenceattachment.cpp:512
+#: incidenceattachment.cpp:503
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&თვისებები…"
 
-#: incidenceattachment.cpp:522
+#: incidenceattachment.cpp:513
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

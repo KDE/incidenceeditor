@@ -1,5 +1,5 @@
 # Spanish translations for libincidenceeditors6.po package.
-# Copyright (C) 2025 This_file_is_part_of_KDE
+# Copyright (C) 2010-2025 This file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
 #
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Javier Vinal <fjvinal@gmail.com>
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
-"PO-Revision-Date: 2025-03-10 12:40+0100\n"
+"POT-Creation-Date: 2025-07-03 06:56+0000\n"
+"PO-Revision-Date: 2025-07-02 12:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -541,14 +541,14 @@ msgid "Add Attachment"
 msgstr "Añadir adjunto"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to remove these attachments?<nl/>%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "¿Seguro que quiere eliminar estos adjuntos?<nl/>%1"
+msgstr ""
+"¿Seguro que quiere eliminar estos adjuntos?\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
@@ -562,49 +562,49 @@ msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Guardar adjunto"
 
-#: incidenceattachment.cpp:413
+#: incidenceattachment.cpp:405
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "En&lazar aquí"
 
-#: incidenceattachment.cpp:423 incidenceattachment.cpp:426
+#: incidenceattachment.cpp:415 incidenceattachment.cpp:418
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "&Copiar aquí"
 
-#: incidenceattachment.cpp:430
+#: incidenceattachment.cpp:422
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "C&ancelar"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:473
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "A&brir"
 
-#: incidenceattachment.cpp:487
+#: incidenceattachment.cpp:478
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Guardar como…"
 
-#: incidenceattachment.cpp:504
+#: incidenceattachment.cpp:495
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "Elimina&r"
 
-#: incidenceattachment.cpp:512
+#: incidenceattachment.cpp:503
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Propiedades…"
 
-#: incidenceattachment.cpp:522
+#: incidenceattachment.cpp:513
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2895,258 +2895,3 @@ msgstr ""
 "Muestra el estado de disponibilidad de todos los asistentes. Si hace doble "
 "clic sobre la entrada de un asistente en la lista, podrá introducir la "
 "situación de su información de disponibilidad."
-
-#~ msgctxt "@option:check"
-#~ msgid "Store attachment inline"
-#~ msgstr "Almacenar adjunto intercalado"
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Seleccionar asistentes..."
-
-#~ msgid "&New..."
-#~ msgstr "&Nuevo..."
-
-#~ msgctxt "Alarm action"
-#~ msgid "Send an email"
-#~ msgstr "Enviar un correo"
-
-#~ msgid "Send email"
-#~ msgstr "Enviar correo"
-
-#~ msgid "&To:"
-#~ msgstr "&Para:"
-
-#~ msgid ""
-#~ "Specify a list of addresses to send email when the reminder triggers.\n"
-#~ "If the 'To:' field stays empty the email reminder will be sent to the\n"
-#~ "default email configured in Kmail (Settings menu/Configure Kmail/"
-#~ "Identities)."
-#~ msgstr ""
-#~ "Especifique una lista de direcciones a las que enviar correo cuando se "
-#~ "active el recordatorio.\n"
-#~ "Si el campo «A:» permanece vacío, el correo de recordatorio se enviará a "
-#~ "la\n"
-#~ "dirección de correo predeterminada configurada en Kmail (Menú "
-#~ "configuración/Configurar Kmail/Identidades)."
-
-#~ msgid ""
-#~ "Enter a list comma-separated addresses to which an email will be sent "
-#~ "when the reminder triggers"
-#~ msgstr ""
-#~ "Introduzca una lista de direcciones separada por comas a los que se "
-#~ "enviará un correo cuando se active el recordatorio"
-
-#~ msgid "&Message:"
-#~ msgstr "&Mensaje:"
-
-#~ msgid "Specify text of an email message to send when the reminder triggers"
-#~ msgstr ""
-#~ "Indique el texto del correo a enviar cuando se active el recordatorio"
-
-#~ msgid ""
-#~ "Enter any text you desire for the email message that will be sent when "
-#~ "the alarm triggers."
-#~ msgstr ""
-#~ "Introduzca cualquier texto que desee para el correo que será enviado "
-#~ "cuando se active una alarma."
-
-#~ msgctxt "Alarm action"
-#~ msgid "Execute a script"
-#~ msgstr "Ejecutar un guion"
-
-#~ msgid "Run application / script"
-#~ msgstr "Ejecutar aplicación / guion"
-
-#~ msgid "&Application / Script:"
-#~ msgstr "&Aplicación / Guion:"
-
-#~ msgid ""
-#~ "Specify a file containing the application to run when the reminder "
-#~ "triggers"
-#~ msgstr ""
-#~ "Indique el archivo de la aplicación a ejecutar cuando se active el "
-#~ "recordatorio"
-
-#~ msgid ""
-#~ "Use the adjacent file browser to help you find the file you want to use "
-#~ "when running an application when the reminder triggers."
-#~ msgstr ""
-#~ "Utilice el navegador de archivos adyacente para buscar el que desee "
-#~ "ejecutar como aplicación cuando se active el recordatorio."
-
-#~ msgid "*|All files"
-#~ msgstr "*|Todos los archivos"
-
-#~ msgid "Ar&guments:"
-#~ msgstr "Ar&gumentos:"
-
-#~ msgid ""
-#~ "Specify arguments to pass to the application when the reminder triggers"
-#~ msgstr ""
-#~ "Indique los argumentos que pasar a la aplicación cuando se active el "
-#~ "recordatorio"
-
-#~ msgid ""
-#~ "Enter the application arguments to use when running an application when "
-#~ "the reminder triggers."
-#~ msgstr ""
-#~ "Introduzca los argumentos de la aplicación que se ejecutará cuando se "
-#~ "active el recordatorio."
-
-#~ msgctxt "@info"
-#~ msgid "Please specify a title."
-#~ msgstr "Por favor, especifique un título."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the title"
-#~ msgstr "Establecer el título"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Sets the Title of this event or to-do."
-#~ msgstr "Establece el título de este evento o tarea pendiente."
-
-#~ msgctxt "@label"
-#~ msgid "&Title:"
-#~ msgstr "&Título:"
-
-#~ msgctxt "@label"
-#~ msgid "Categories:"
-#~ msgstr "Categorías:"
-
-#~ msgid "Click to add a new category"
-#~ msgstr "Pulse para añadir una nueva categoría"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Categories"
-#~ msgstr "Seleccionar categorías"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Categories"
-#~ msgstr "Editar categorías"
-
-#~ msgid "Apply changes and close"
-#~ msgstr "Aplicar cambios y cerrar"
-
-#~ msgid ""
-#~ "When clicking <b>Ok</b>, the settings will be handed over to the program "
-#~ "and the dialog will be closed."
-#~ msgstr ""
-#~ "Al pulsar <b>Aceptar</b>, la configuración se entregará al programa y se "
-#~ "cerrará el diálogo."
-
-#~ msgid "Cancel changes and close"
-#~ msgstr "Cancelar cambios y cerrar"
-
-#~ msgid ""
-#~ "When clicking <b>Cancel</b>, the settings will be discarded and the "
-#~ "dialog will be closed."
-#~ msgstr ""
-#~ "Al pulsar <b>Cancelar</b>, se anularán los cambios de configuración y se "
-#~ "cerrará al dialogo."
-
-#~ msgid ""
-#~ "When clicking <b>Help</b>, a separate KHelpCenter window will open "
-#~ "providing more information about the settings."
-#~ msgstr ""
-#~ "Al pulsar <b>Ayuda</b>, se abrirá una ventana separada de KHelpCenter "
-#~ "proporcionando más información sobre la configuración."
-
-#~ msgid "New category"
-#~ msgstr "Nueva categoría"
-
-#~ msgid "New subcategory"
-#~ msgstr "Nueva subcategoría"
-
-#~ msgid "Select Categories"
-#~ msgstr "Seleccionar categorías"
-
-#~ msgid "Select categories"
-#~ msgstr "Seleccionar categorías"
-
-#~ msgid "Use this list to choose categories."
-#~ msgstr "Use esta lista para elegir categorías."
-
-#~ msgid "Category"
-#~ msgstr "Categoría"
-
-#~ msgid "Edit Categories"
-#~ msgstr "Editar categorías"
-
-#~ msgid "New category entry"
-#~ msgstr "Nueva entrada de categoría"
-
-#~ msgid "Type in any text you want to use as a new category or sub-category."
-#~ msgstr ""
-#~ "Teclee cualquier texto que desee usar como nueva categoría o subcategoría."
-
-#~ msgid "Add the entry to the category list"
-#~ msgstr "Agregar la entrada a la lista de categorías"
-
-#~ msgid "Click this button to insert the entry into the category list."
-#~ msgstr ""
-#~ "Pulse este botón para insertar la entrada en la lista de categorías."
-
-#~ msgid "A&dd"
-#~ msgstr "Aña&dir"
-
-#~ msgid "Add the entry as a subcategory of the selected category"
-#~ msgstr ""
-#~ "Agregar la entrada como una subcategoría de la categoría seleccionada"
-
-#~ msgid ""
-#~ "Click this button to insert the entry as a subcategory of the currently "
-#~ "selected category."
-#~ msgstr ""
-#~ "Pulse este botón para insertar la entrada como una subcategoría de la "
-#~ "categoría seleccionada actualmente."
-
-#~ msgid "Add &Subcategory"
-#~ msgstr "Añadir &subcategoría"
-
-#~ msgid "Remove the selected category"
-#~ msgstr "Eliminar la categoría seleccionada"
-
-#~ msgid ""
-#~ "Click this button to remove the selected category from the category list."
-#~ msgstr ""
-#~ "Pulse este botón para eliminar la categoría seleccionada de la lista de "
-#~ "categorías."
-
-#~ msgid "Category list"
-#~ msgstr "Lista de categorías"
-
-#~ msgid ""
-#~ "This is a list of all the categories available. You can create as many "
-#~ "sub-categories as you want here."
-#~ msgstr ""
-#~ "Esta es una lista de todas las categorías disponibles. Puede crear tantas "
-#~ "subcategorías como desee aquí."
-
-#~ msgid "Default Category"
-#~ msgstr "Categoría predeterminada"
-
-#~ msgid "Select incidence categories"
-#~ msgstr "Seleccionar categorías de incidencias"
-
-#~ msgid "Use this list to choose incidence categories."
-#~ msgstr "Use esta lista para elegir categorías de incidencias."
-
-#~ msgid "&Clear Selection"
-#~ msgstr "Borrar la sele&cción"
-
-#~ msgid "&Edit Categories..."
-#~ msgstr "&Editar categorías..."
-
-#~ msgid "The last selected folder."
-#~ msgstr "La última carpeta seleccionada."
-
-#~ msgctxt "errormessage: can't create a kontact process"
-#~ msgid "Can't create composer: Failed to start kontact."
-#~ msgstr "No se puede crear el editor: ha fallado al iniciar kontact."
-
-#~ msgctxt ""
-#~ "errormessage: No connection via dbus nor starting kontact process worked."
-#~ msgid "Can't create composer: Neither dbus nor kontact responded in time."
-#~ msgstr ""
-#~ "No se puede crear el editor: Ni dbus ni kontact respondieron a tiempo."
