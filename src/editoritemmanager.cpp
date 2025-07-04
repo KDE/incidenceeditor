@@ -58,7 +58,6 @@ public:
     EditorItemManager::SaveAction currentAction{EditorItemManager::None};
     Akonadi::IncidenceChanger *mChanger = nullptr;
 
-public:
     ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq);
     void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &);
     void itemFetchResult(KJob *job);

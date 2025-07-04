@@ -24,11 +24,10 @@ public:
     {
     }
 
-public:
     Ui::EventOrTodoDesktop *mUi = nullptr;
     int mOrigPercentCompleted = -1;
 
-public: // slots
+    // slots
     void sliderValueChanged(int);
 };
 

@@ -96,7 +96,6 @@ public:
     Akonadi::Item mItem;
     [[nodiscard]] QString typeToString(const int type) const;
 
-public:
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
     ~IncidenceDialogPrivate() override;
 
