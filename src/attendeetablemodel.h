@@ -52,12 +52,12 @@ public:
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
-    bool insertRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
-    bool removeRows(int position, int rows, const QModelIndex &index = QModelIndex()) override;
+    bool insertRows(int position, int rows, const QModelIndex &parent = QModelIndex()) override;
+    bool removeRows(int position, int rows, const QModelIndex &parent = QModelIndex()) override;
 
     bool insertAttendee(int position, const KCalendarCore::Attendee &attendee);
 
-    void setAttendees(const KCalendarCore::Attendee::List &resources);
+    void setAttendees(const KCalendarCore::Attendee::List &attendees);
     [[nodiscard]] KCalendarCore::Attendee::List attendees() const;
 
     void setKeepEmpty(bool keepEmpty);

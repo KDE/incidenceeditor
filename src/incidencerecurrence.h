@@ -95,7 +95,7 @@ private:
     void setExceptionDates(const KCalendarCore::DateList &dates);
     void setExceptionDateTimes(const KCalendarCore::DateTimeList &dateTimes);
     void setFrequency(int freq);
-    void toggleRecurrenceWidgets(int enable);
+    void toggleRecurrenceWidgets(int recurrenceType);
     /** Returns an array with the weekday on which the event occurs set to 1 */
     [[nodiscard]] QBitArray weekday() const;
 

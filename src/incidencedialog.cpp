@@ -106,7 +106,7 @@ public:
     void loadTemplate(const QString &templateName);
     void manageTemplates();
     void saveTemplate(const QString &templateName);
-    void storeTemplatesInConfig(const QStringList &newTemplates);
+    void storeTemplatesInConfig(const QStringList &templateNames);
     void updateAttachmentCount(int newCount);
     void updateAttendeeCount(int newCount);
     void updateResourceCount(int newCount);

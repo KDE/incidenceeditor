@@ -86,7 +86,7 @@ private:
     void slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first, int last);
     void slotConflictResolverAttendeeChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void slotConflictResolverLayoutChanged();
-    void slotFreeBusyAdded(const QModelIndex &index, int first, int last);
+    void slotFreeBusyAdded(const QModelIndex &parent, int first, int last);
     void slotFreeBusyChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight);
     void updateFBStatus();
     void updateFBStatus(const KCalendarCore::Attendee &attendee, const KCalendarCore::FreeBusy::Ptr &fb);
