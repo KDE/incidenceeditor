@@ -27,7 +27,6 @@ public:
     Ui::EventOrTodoDesktop *mUi = nullptr;
     int mOrigPercentCompleted = -1;
 
-    // slots
     void sliderValueChanged(int);
 };
 
