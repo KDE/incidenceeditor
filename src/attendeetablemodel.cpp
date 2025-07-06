@@ -84,6 +84,8 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
             return attendee.name();
         case Email:
             return attendee.email();
+        default:
+            break;
         }
     }
     if (role == AttendeeRole) {
@@ -162,6 +164,8 @@ QVariant AttendeeTableModel::headerData(int section, Qt::Orientation orientation
             return i18nc("Attendee name", "Name");
         case Email:
             return i18nc("Attendee email", "Email");
+        default:
+            break;
         }
     }
 

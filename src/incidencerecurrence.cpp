@@ -386,6 +386,8 @@ bool IncidenceRecurrence::isDirty() const
             return true;
         }
         break;
+    default:
+        break;
     }
 
     // Recurrence end
