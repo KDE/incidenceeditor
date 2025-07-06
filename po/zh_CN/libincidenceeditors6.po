@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/incidenceeditor/libincidenceeditors6."
+"X-Crowdin-File: /kf6-stable/messages/incidenceeditor/libincidenceeditors6."
 "pot\n"
-"X-Crowdin-File-ID: 49074\n"
+"X-Crowdin-File-ID: 52610\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -1657,7 +1657,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr ""
+msgstr "<html><head/><body><p>将附件文件的副本存储在日历中</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1679,7 +1679,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr ""
+msgstr "将附件的副本存储在日历中 "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
