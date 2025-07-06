@@ -407,7 +407,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         bool weCanCopy = true;
         QList<QUrl>::ConstIterator end(urls.constEnd());
         for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
-            if (!(weCanCopy = KProtocolManager::supportsReading(*it))) {
+            weCanCopy = KProtocolManager::supportsReading(*it);
+            if (!weCanCopy) {
                 break; // either we can copy them all, or no copying at all
             }
         }
