@@ -53,12 +53,12 @@ KCalendarCore::Attachment AttachmentIconItem::attachment() const
     return mAttachment;
 }
 
-const QString AttachmentIconItem::uri() const
+QString AttachmentIconItem::uri() const
 {
     return mAttachment.uri();
 }
 
-const QString AttachmentIconItem::savedUri() const
+QString AttachmentIconItem::savedUri() const
 {
     return mSaveUri;
 }
@@ -76,7 +76,7 @@ void AttachmentIconItem::setData(const QByteArray &data)
     readAttachment();
 }
 
-const QString AttachmentIconItem::mimeType() const
+QString AttachmentIconItem::mimeType() const
 {
     return mAttachment.mimeType();
 }
@@ -87,7 +87,7 @@ void AttachmentIconItem::setMimeType(const QString &mime)
     readAttachment();
 }
 
-const QString AttachmentIconItem::label() const
+QString AttachmentIconItem::label() const
 {
     return mAttachment.label();
 }

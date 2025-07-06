@@ -54,18 +54,18 @@ public:
     ~AttachmentIconItem() override;
 
     [[nodiscard]] KCalendarCore::Attachment attachment() const;
-    [[nodiscard]] const QString uri() const;
-    [[nodiscard]] const QString savedUri() const;
+    [[nodiscard]] QString uri() const;
+    [[nodiscard]] QString savedUri() const;
     void setUri(const QString &uri);
 
     using QListWidgetItem::setData;
 
     void setData(const QByteArray &data);
 
-    [[nodiscard]] const QString mimeType() const;
+    [[nodiscard]] QString mimeType() const;
     void setMimeType(const QString &mime);
 
-    [[nodiscard]] const QString label() const;
+    [[nodiscard]] QString label() const;
     void setLabel(const QString &description);
 
     [[nodiscard]] bool isBinary() const;
