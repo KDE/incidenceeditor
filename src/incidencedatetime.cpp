@@ -19,7 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 
 using namespace IncidenceEditorNG;
 
-static bool identical(QDateTime dt1, QDateTime dt2)
+static bool identical(const QDateTime &dt1, const QDateTime &dt2)
 {
     return dt1 == dt2 && dt1.timeSpec() == dt2.timeSpec() && dt1.timeZone() == dt2.timeZone();
 }
