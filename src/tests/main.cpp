@@ -60,6 +60,7 @@ int main(int argc, char **argv)
         defaults.setGroupWareDomain(QUrl(Akonadi::CalendarSettings::self()->freeBusyRetrieveUrl()).host());
     }
 
+    // NOLINTBEGIN(performance-avoid-endl)
     if (parser.isSet(u"new-event"_s)) {
         std::cout << "Creating new event..." << std::endl;
         KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
@@ -90,6 +91,7 @@ int main(int argc, char **argv)
         std::cerr << "Invalid usage." << std::endl << std::endl;
         return 1;
     }
+    // NOLINTEND(performance-avoid-endl)
 
     EditorConfig::setEditorConfig(new KOrganizerEditorConfig);
 
