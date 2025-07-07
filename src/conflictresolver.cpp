@@ -398,6 +398,7 @@ void ConflictResolver::findAllFreeSlots()
     if (free_found) {
         Q_EMIT freeSlotsAvailable(mAvailableSlots);
     }
+// NOLINTBEGIN(readability-avoid-unconditional-preprocessor-if)
 #if 0
     //DEBUG, dump the arrays. very helpful for debugging
     QTextStream dump(stdout);
@@ -425,6 +426,7 @@ void ConflictResolver::findAllFreeSlots()
     }
     dump << "\n";
 #endif
+    // NOLINTEND(readability-avoid-unconditional-preprocessor-if)
 }
 
 void ConflictResolver::calculateConflicts()

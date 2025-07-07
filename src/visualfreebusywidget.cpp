@@ -293,11 +293,13 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, 
 
 void VisualFreeBusyWidget::slotZoomToTime()
 {
+// NOLINTBEGIN(readability-avoid-unconditional-preprocessor-if)
 #if 0
     mGanttGraphicsView->zoomToFit();
 #else
     qCDebug(INCIDENCEEDITOR_LOG) << "Disabled code, port to KDGantt2";
 #endif
+    // NOLINTEND(readability-avoid-unconditional-preprocessor-if)
 }
 
 void VisualFreeBusyWidget::splitterMoved()
