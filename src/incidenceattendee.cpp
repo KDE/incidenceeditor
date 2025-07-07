@@ -367,7 +367,7 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
     }
 
     // TODO: Give the user the possibility to choose a group when there is more than one?!
-    KContacts::ContactGroup group = contactGroups.first();
+    const KContacts::ContactGroup &group = contactGroups.first();
 
     const int row = rowOfAttendee(uid);
     QModelIndex index = dataModel()->index(row, AttendeeTableModel::CuType);
@@ -941,7 +941,7 @@ void IncidenceAttendee::printDebugInfo() const
                                          << attendee.role() << attendee.uid() << attendee.cuType() << attendee.delegate() << attendee.delegator()
                                          << "; we have:";
             for (int i = 0, total = newList.count(); i < total; ++i) {
-                const KCalendarCore::Attendee newAttendee = newList[i];
+                const KCalendarCore::Attendee &newAttendee = newList[i];
                 qCDebug(INCIDENCEEDITOR_LOG) << "Attendee: " << newAttendee.email() << newAttendee.name() << newAttendee.status() << newAttendee.RSVP()
                                              << newAttendee.role() << newAttendee.uid() << newAttendee.cuType() << newAttendee.delegate()
                                              << newAttendee.delegator();

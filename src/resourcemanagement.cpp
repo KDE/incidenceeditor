@@ -207,7 +207,7 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
             continue;
         }
         QStringList list;
-        const QList<QByteArray> values = it.value();
+        const QList<QByteArray> &values = it.value();
         list.reserve(values.count());
         for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
@@ -249,7 +249,7 @@ void ResourceManagement::slotOwnerSearchFinished()
             continue;
         }
         QStringList list;
-        const QList<QByteArray> values = it.value();
+        const QList<QByteArray> &values = it.value();
         list.reserve(values.count());
         for (const QByteArray &value : values) {
             list << QString::fromUtf8(value);
