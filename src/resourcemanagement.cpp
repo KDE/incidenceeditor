@@ -32,7 +32,7 @@ using namespace IncidenceEditorNG;
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
-static const char myResourceManagementConfigGroupName[] = "ResourceManagement";
+const char myResourceManagementConfigGroupName[] = "ResourceManagement";
 }
 class FreebusyViewCalendar : public EventViews::ViewCalendar
 {

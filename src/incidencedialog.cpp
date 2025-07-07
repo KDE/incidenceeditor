@@ -55,7 +55,7 @@ using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 namespace
 {
-static const char myIncidenceDialogConfigGroupName[] = "IncidenceDialog";
+const char myIncidenceDialogConfigGroupName[] = "IncidenceDialog";
 
 IncidenceEditorNG::EditorItemManager::ItipPrivacyFlags toItemManagerFlags(bool sign, bool encrypt)
 {
