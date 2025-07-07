@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:43+0000\n"
+"POT-Creation-Date: 2025-07-07 00:42+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -265,25 +265,25 @@ msgstr "Aceite"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: attendeetablemodel.cpp:150
+#: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
 msgstr "Papel"
 
-#: attendeetablemodel.cpp:152
+#: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
 msgstr "Nome"
 
-#: attendeetablemodel.cpp:154
+#: attendeetablemodel.cpp:156
 #, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
 msgstr "Disponível"
 
-#: attendeetablemodel.cpp:156
+#: attendeetablemodel.cpp:158
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Status of attendee in an incidence (accepted, declined, delegated, ...)"
@@ -292,25 +292,25 @@ msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)
 msgid "Status"
 msgstr "Estado"
 
-#: attendeetablemodel.cpp:158
+#: attendeetablemodel.cpp:160
 #, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
 msgstr "Tipo de Utilizador"
 
-#: attendeetablemodel.cpp:160
+#: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
 msgstr "Resposta"
 
-#: attendeetablemodel.cpp:162
+#: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
 msgstr "Nome"
 
-#: attendeetablemodel.cpp:164
+#: attendeetablemodel.cpp:166
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
@@ -612,25 +612,25 @@ msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "Criar uma &ligação aqui"
 
-#: incidenceattachment.cpp:415 incidenceattachment.cpp:418
+#: incidenceattachment.cpp:416 incidenceattachment.cpp:419
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "&Copiar para aqui"
 
-#: incidenceattachment.cpp:422
+#: incidenceattachment.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "C&ancelar"
 
-#: incidenceattachment.cpp:473
+#: incidenceattachment.cpp:474
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "A&brir"
 
-#: incidenceattachment.cpp:478
+#: incidenceattachment.cpp:479
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu save the attachment to a file"
 #| msgid "Save As..."
@@ -638,13 +638,13 @@ msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Gravar Como..."
 
-#: incidenceattachment.cpp:495
+#: incidenceattachment.cpp:496
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "&Remover"
 
-#: incidenceattachment.cpp:503
+#: incidenceattachment.cpp:504
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu show a dialog used to edit the attachment"
 #| msgid "&Properties..."
@@ -652,7 +652,7 @@ msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Propriedades..."
 
-#: incidenceattachment.cpp:513
+#: incidenceattachment.cpp:514
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1156,7 +1156,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:460
+#: incidencerecurrence.cpp:462
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1165,84 +1165,84 @@ msgstr ""
 "Um evento ou item por-fazer recorrente deverá ocorrer pelo menos uma vez. "
 "Ajuste os parâmetros de recorrência."
 
-#: incidencerecurrence.cpp:466
+#: incidencerecurrence.cpp:468
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "A data de início do evento é inválida."
 
-#: incidencerecurrence.cpp:472
+#: incidencerecurrence.cpp:474
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "A data de fim da recorrência é inválida."
 
-#: incidencerecurrence.cpp:515
+#: incidencerecurrence.cpp:517
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "o dia %1"
 
-#: incidencerecurrence.cpp:518
+#: incidencerecurrence.cpp:520
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "o %1 antes ao último dia"
 
-#: incidencerecurrence.cpp:521
+#: incidencerecurrence.cpp:523
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "a %1 %2"
 
-#: incidencerecurrence.cpp:527
+#: incidencerecurrence.cpp:529
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "a última %1"
 
-#: incidencerecurrence.cpp:529
+#: incidencerecurrence.cpp:531
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "o %1 antes da última %2"
 
-#: incidencerecurrence.cpp:545
+#: incidencerecurrence.cpp:547
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 de %2"
 
-#: incidencerecurrence.cpp:548
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "o %1 antes do último dia de %2"
 
-#: incidencerecurrence.cpp:551
+#: incidencerecurrence.cpp:553
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "a %1 %2 de %3"
 
-#: incidencerecurrence.cpp:558
+#: incidencerecurrence.cpp:560
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "a última %1 de %2"
 
-#: incidencerecurrence.cpp:563
+#: incidencerecurrence.cpp:565
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "o %1 antes da última %2 de %3 "
 
-#: incidencerecurrence.cpp:570
+#: incidencerecurrence.cpp:572
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "o %1 dia do ano"
 
-#: incidencerecurrence.cpp:585
+#: incidencerecurrence.cpp:587
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1250,7 +1250,7 @@ msgid_plural "occurrences"
 msgstr[0] "ocorrência"
 msgstr[1] "ocorrências"
 
-#: incidencerecurrence.cpp:609
+#: incidencerecurrence.cpp:611
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1258,7 +1258,7 @@ msgid_plural "weeks"
 msgstr[0] "semana"
 msgstr[1] "semanas"
 
-#: incidencerecurrence.cpp:613
+#: incidencerecurrence.cpp:615
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1266,7 +1266,7 @@ msgid_plural "months"
 msgstr[0] "mês"
 msgstr[1] "meses"
 
-#: incidencerecurrence.cpp:617
+#: incidencerecurrence.cpp:619
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1274,7 +1274,7 @@ msgid_plural "years"
 msgstr[0] "ano"
 msgstr[1] "anos"
 
-#: incidencerecurrence.cpp:621
+#: incidencerecurrence.cpp:623
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1282,7 +1282,7 @@ msgid_plural "days"
 msgstr[0] "dia"
 msgstr[1] "dias"
 
-#: incidencerecurrence.cpp:629
+#: incidencerecurrence.cpp:631
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
