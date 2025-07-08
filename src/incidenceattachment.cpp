@@ -64,7 +64,7 @@ void IncidenceAttachment::load(const KCalendarCore::Incidence::Ptr &incidence)
     mLoadedIncidence = incidence;
     mAttachmentView->clear();
 
-    KCalendarCore::Attachment::List attachments = incidence->attachments();
+    KCalendarCore::Attachment::List const attachments = incidence->attachments();
     for (KCalendarCore::Attachment::List::ConstIterator it = attachments.constBegin(), end = attachments.constEnd(); it != end; ++it) {
         new AttachmentIconItem((*it), mAttachmentView);
     }
@@ -125,10 +125,10 @@ int IncidenceAttachment::attachmentCount() const
 
 void IncidenceAttachment::addAttachment()
 {
-    QPointer<QObject> that(this);
+    QPointer<QObject> const that(this);
     auto item = new AttachmentIconItem(KCalendarCore::Attachment(), mAttachmentView);
 
-    QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(item, mAttachmentView));
+    QPointer<AttachmentEditDialog> const dialog(new AttachmentEditDialog(item, mAttachmentView));
     dialog->setWindowTitle(i18nc("@title", "Add Attachment"));
     auto dialogResult = dialog->exec();
     /* cppcheck-suppress knownConditionTrueFalse */
@@ -155,7 +155,7 @@ void IncidenceAttachment::copyToClipboard()
 
 void IncidenceAttachment::openURL(const QUrl &url)
 {
-    QString uri = url.url();
+    QString const uri = url.url();
     CalendarSupport::UriHandler::process(uri);
 }
 
@@ -228,7 +228,7 @@ void IncidenceAttachment::saveAttachment(QListWidgetItem *item)
         return;
     }
 
-    KCalendarCore::Attachment att = attitem->attachment();
+    KCalendarCore::Attachment const att = attitem->attachment();
 
     // get the saveas file name
     const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title", "Save Attachment"), att.label());
@@ -334,7 +334,7 @@ void IncidenceAttachment::editSelectedAttachments()
                 return;
             }
 
-            QPointer<AttachmentEditDialog> dialog(new AttachmentEditDialog(attitem, mAttachmentView, false));
+            QPointer<AttachmentEditDialog> const dialog(new AttachmentEditDialog(attitem, mAttachmentView, false));
             dialog->setModal(false);
             dialog->setAttribute(Qt::WA_DeleteOnClose, true);
             dialog->show();
@@ -391,9 +391,9 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         probablyWeHaveUris = true;
     } else if (mimeData->hasText()) {
         const QString text = mimeData->text();
-        QStringList lst = text.split(u'\n', Qt::SkipEmptyParts);
+        QStringList const lst = text.split(u'\n', Qt::SkipEmptyParts);
         urls.reserve(lst.count());
-        QStringList::ConstIterator end(lst.constEnd());
+        QStringList::ConstIterator const end(lst.constEnd());
         for (QStringList::ConstIterator it = lst.constBegin(); it != end; ++it) {
             urls.append(QUrl(*it));
         }
@@ -405,7 +405,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         linkAction = menu.addAction(QIcon::fromTheme(u"insert-link"_s), i18nc("@action:inmenu", "&Link here"));
         // we need to check if we can reasonably expect to copy the objects
         bool weCanCopy = true;
-        QList<QUrl>::ConstIterator end(urls.constEnd());
+        QList<QUrl>::ConstIterator const end(urls.constEnd());
         for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
             weCanCopy = KProtocolManager::supportsReading(*it);
             if (!weCanCopy) {
@@ -429,8 +429,8 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
     if (!mimeData->formats().isEmpty() && !probablyWeHaveUris) {
         mimeType = mimeData->formats().first();
         data = mimeData->data(mimeType);
-        QMimeDatabase db;
-        QMimeType mime = db.mimeTypeForName(mimeType);
+        QMimeDatabase const db;
+        QMimeType const mime = db.mimeTypeForName(mimeType);
         if (mime.isValid()) {
             label = mime.comment();
         }
@@ -444,7 +444,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         }
     } else if (cancelAction != ret) {
         if (probablyWeHaveUris) {
-            QList<QUrl>::ConstIterator end = urls.constEnd();
+            QList<QUrl>::ConstIterator const end = urls.constEnd();
             for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
                 KIO::Job *job = KIO::storedGet(*it);
                 connect(job, &KIO::Job::result, this, &IncidenceAttachment::downloadComplete);
@@ -542,7 +542,7 @@ void IncidenceAttachment::addDataAttachment(const QByteArray &data, const QStrin
     item->setData(data);
     item->setLabel(nlabel);
     if (mimeType.isEmpty()) {
-        QMimeDatabase db;
+        QMimeDatabase const db;
         item->setMimeType(db.mimeTypeForData(data).name());
     } else {
         item->setMimeType(mimeType);
@@ -567,7 +567,7 @@ void IncidenceAttachment::addUriAttachment(const QString &uri, const QString &mi
             } else if (uri.startsWith("news:"_L1)) {
                 item->setMimeType(u"message/news"_s);
             } else {
-                QMimeDatabase db;
+                QMimeDatabase const db;
                 item->setMimeType(db.mimeTypeForUrl(QUrl(uri)).name());
             }
         }

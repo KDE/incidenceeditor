@@ -41,19 +41,19 @@ void KTimeZoneComboBoxTest::test_selectTimeZoneFor()
     IncidenceEditorNG::KTimeZoneComboBox combo;
 
     // Floating
-    QDateTime dt(QDate(2021, 12, 12), QTime(12, 0, 0));
+    QDateTime const dt(QDate(2021, 12, 12), QTime(12, 0, 0));
     QCOMPARE(dt.timeSpec(), Qt::LocalTime);
     combo.selectTimeZoneFor(dt);
     QVERIFY(combo.isFloating());
 
     // System time zone.
-    QDateTime dtSys(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone());
+    QDateTime const dtSys(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone());
     combo.selectTimeZoneFor(dtSys);
     QVERIFY(!combo.isFloating());
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::systemTimeZone());
 
     // UTC.
-    QDateTime dtUtc = QDateTime::currentDateTimeUtc();
+    QDateTime const dtUtc = QDateTime::currentDateTimeUtc();
     combo.selectTimeZoneFor(dtUtc);
     QVERIFY(!combo.isFloating());
     QCOMPARE(combo.selectedTimeZone(), QTimeZone::utc());

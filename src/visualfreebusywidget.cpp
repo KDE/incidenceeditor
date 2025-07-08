@@ -252,7 +252,7 @@ void VisualFreeBusyWidget::showAttendeeStatusMenu()
 void VisualFreeBusyWidget::slotCenterOnStart()
 {
     auto grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
-    int daysTo = grid->startDateTime().daysTo(mDtStart);
+    int const daysTo = grid->startDateTime().daysTo(mDtStart);
     mGanttGraphicsView->horizontalScrollBar()->setValue(daysTo * 800);
 }
 
@@ -275,7 +275,7 @@ void VisualFreeBusyWidget::slotScaleChanged(int newScale)
     const QVariant var = mScaleCombo->itemData(newScale);
     Q_ASSERT(var.isValid());
 
-    int value = var.toInt();
+    int const value = var.toInt();
     mGanttGrid->setScale((KGantt::DateTimeGrid::Scale)value);
 }
 
@@ -283,7 +283,7 @@ void VisualFreeBusyWidget::slotUpdateIncidenceStartEnd(const QDateTime &dtFrom, 
 {
     mDtStart = dtFrom;
     mDtEnd = dtTo;
-    QDateTime horizonStart = QDateTime(dtFrom.addDays(-15).date().startOfDay());
+    QDateTime const horizonStart = QDateTime(dtFrom.addDays(-15).date().startOfDay());
 
     auto grid = static_cast<KGantt::DateTimeGrid *>(mGanttGraphicsView->grid());
     grid->setStartDateTime(horizonStart);

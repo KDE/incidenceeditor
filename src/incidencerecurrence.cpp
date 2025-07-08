@@ -124,7 +124,7 @@ IncidenceRecurrence::IncidenceRecurrence(IncidenceDateTime *dateTime, Ui::EventO
 // that its message to translators appears before any usages of this method.
 KLocalizedString IncidenceRecurrence::subsOrdinal(const KLocalizedString &text, int number) const
 {
-    QString q = i18nc(
+    QString const q = i18nc(
         "In several of the messages below, "
         "an ordinal number is substituted into the message. "
         "Translate this as \"0\" if English ordinal suffixes "
@@ -411,7 +411,7 @@ bool IncidenceRecurrence::isDirty() const
 
 void IncidenceRecurrence::focusInvalidField()
 {
-    KCalendarCore::Incidence::Ptr incidence(mLoadedIncidence->clone());
+    KCalendarCore::Incidence::Ptr const incidence(mLoadedIncidence->clone());
     writeToIncidence(incidence);
     if (incidence->recurs()) {
         if (mUi->mRecurrenceEndCombo->currentIndex() == RecurrenceEndOn && !mUi->mRecurrenceEndDate->date().isValid()) {
@@ -427,7 +427,7 @@ bool IncidenceRecurrence::isValid() const
         // Nothing you can do wrong here
         return true;
     }
-    KCalendarCore::Incidence::Ptr incidence(mLoadedIncidence->clone());
+    KCalendarCore::Incidence::Ptr const incidence(mLoadedIncidence->clone());
 
     // Write start and end dates to the incidence
     mDateTime->save(incidence);
@@ -590,7 +590,7 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
     toggleRecurrenceWidgets(currentIndex);
     QString labelFreq;
     QString freqKey;
-    int frequency = mUi->mFrequencyEdit->value();
+    int const frequency = mUi->mFrequencyEdit->value();
     switch (currentIndex) {
     case 2:
         labelFreq = i18ncp("repeat every N >weeks<", "week", "weeks", frequency);
@@ -738,8 +738,8 @@ QString IncidenceRecurrence::numberToString(int number) const
     /* cppcheck-suppress constVariable */
     static QString _numSuffixes[] = {u"th"_s, u"st"_s, u"nd"_s, u"rd"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s};
 
-    int i = (number % 100);
-    int j = (i > 10 && i < 20) ? 0 : (number % 10);
+    int const i = (number % 100);
+    int const j = (i > 10 && i < 20) ? 0 : (number % 10);
     return QString::number(number) + _numSuffixes[j];
 }
 
@@ -910,7 +910,7 @@ void IncidenceRecurrence::setFrequency(int frequency)
 
 void IncidenceRecurrence::toggleRecurrenceWidgets(int recurrenceType)
 {
-    bool enable = (recurrenceType != RecurrenceTypeNone) && (recurrenceType != RecurrenceTypeException);
+    bool const enable = (recurrenceType != RecurrenceTypeNone) && (recurrenceType != RecurrenceTypeException);
     mUi->mRecurrenceTypeCombo->setVisible(recurrenceType != RecurrenceTypeException);
     mUi->mRepeatLabel->setVisible(recurrenceType != RecurrenceTypeException);
     mUi->mRecurrenceEndLabel->setVisible(enable);

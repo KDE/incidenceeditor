@@ -31,9 +31,9 @@ void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)
     dialog->load(item, QDate::currentDate());
     dialog->exec();
     dialog->deleteLater();
-    Akonadi::Item newItem = dialog->item();
+    Akonadi::Item const newItem = dialog->item();
     if (newItem.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-        KCalendarCore::IncidenceBase::Ptr newIncidence = newItem.payload<KCalendarCore::Incidence::Ptr>();
+        KCalendarCore::IncidenceBase::Ptr const newIncidence = newItem.payload<KCalendarCore::Incidence::Ptr>();
         *incidence.staticCast<KCalendarCore::IncidenceBase>() = *newIncidence;
     }
 }

@@ -29,7 +29,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     , m_templates(templates)
     , m_type(incidenceType)
 {
-    QString m_type_translated = i18n(qPrintable(m_type));
+    QString const m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     auto mainLayout = new QVBoxLayout(this);
@@ -62,7 +62,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     m_base.m_buttonRemove->setEnabled(false);
     m_base.m_buttonApply->setEnabled(false);
 
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView("IncidenceDialog"));
+    KConfigGroup const group(KSharedConfig::openStateConfig(), QLatin1StringView("IncidenceDialog"));
     const QSize size = group.readEntry("TemplateDialogSize", QSize(500, 400));
     if (size.isValid()) {
         resize(size);
@@ -89,7 +89,7 @@ void TemplateManagementDialog::slotAddTemplate()
 {
     bool ok;
     bool duplicate = false;
-    QString m_type_translated = i18n(qPrintable(m_type));
+    QString const m_type_translated = i18n(qPrintable(m_type));
     const QString newTemplate = QInputDialog::getText(this,
                                                       i18n("Template Name"),
                                                       i18n("Please enter a name for the new template:"),
@@ -101,10 +101,10 @@ void TemplateManagementDialog::slotAddTemplate()
     }
 
     if (m_templates.contains(newTemplate)) {
-        int rc = KMessageBox::warningContinueCancel(this,
-                                                    i18n("A template with that name already exists, do you want to overwrite it?"),
-                                                    i18nc("@title:window", "Duplicate Template Name"),
-                                                    KStandardGuiItem::overwrite());
+        int const rc = KMessageBox::warningContinueCancel(this,
+                                                          i18n("A template with that name already exists, do you want to overwrite it?"),
+                                                          i18nc("@title:window", "Duplicate Template Name"),
+                                                          KStandardGuiItem::overwrite());
         if (rc == KMessageBox::Cancel) {
             QTimer::singleShot(0, this, &TemplateManagementDialog::slotAddTemplate);
             return;
@@ -113,7 +113,7 @@ void TemplateManagementDialog::slotAddTemplate()
     }
 
     if (!duplicate) {
-        int count = m_base.m_listBox->count();
+        int const count = m_base.m_listBox->count();
         m_templates.append(newTemplate);
         m_base.m_listBox->addItem(newTemplate);
         QListWidgetItem *item = m_base.m_listBox->item(count);
@@ -136,16 +136,16 @@ void TemplateManagementDialog::slotRemoveTemplate()
         return; // can't happen (TM)
     }
 
-    int rc = KMessageBox::warningContinueCancel(this,
-                                                i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
-                                                i18nc("@title:window", "Remove Template"),
-                                                KStandardGuiItem::remove());
+    int const rc = KMessageBox::warningContinueCancel(this,
+                                                      i18n("Are you sure that you want to remove the template <b>%1</b>?", item->text()),
+                                                      i18nc("@title:window", "Remove Template"),
+                                                      KStandardGuiItem::remove());
 
     if (rc == KMessageBox::Cancel) {
         return;
     }
 
-    int current = m_base.m_listBox->row(item);
+    int const current = m_base.m_listBox->row(item);
 
     m_templates.removeAll(item->text());
     m_base.m_listBox->takeItem(current);

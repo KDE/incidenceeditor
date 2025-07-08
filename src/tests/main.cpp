@@ -29,7 +29,7 @@ using namespace IncidenceEditorNG;
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QApplication const app(argc, argv);
     QCoreApplication::setApplicationName(u"IncidenceEditorNGApp"_s);
     QCoreApplication::setApplicationVersion(u"0.1"_s);
 
@@ -63,22 +63,22 @@ int main(int argc, char **argv)
     // NOLINTBEGIN(performance-avoid-endl)
     if (parser.isSet(u"new-event"_s)) {
         std::cout << "Creating new event..." << std::endl;
-        KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
+        KCalendarCore::Event::Ptr const event(new KCalendarCore::Event);
         defaults.setDefaults(event);
         item.setPayload<KCalendarCore::Event::Ptr>(event);
     } else if (parser.isSet(u"new-todo"_s)) {
         std::cout << "Creating new todo..." << std::endl;
-        KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
+        KCalendarCore::Todo::Ptr const todo(new KCalendarCore::Todo);
         defaults.setDefaults(todo);
         item.setPayload<KCalendarCore::Todo::Ptr>(todo);
     } else if (parser.isSet(u"new-journal"_s)) {
         std::cout << "Creating new journal..." << std::endl;
-        KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
+        KCalendarCore::Journal::Ptr const journal(new KCalendarCore::Journal);
         defaults.setDefaults(journal);
         item.setPayload<KCalendarCore::Journal::Ptr>(journal);
     } else if (parser.isSet(u"item"_s)) {
         bool ok = false;
-        qint64 id = parser.value(u"item"_s).toLongLong(&ok);
+        qint64 const id = parser.value(u"item"_s).toLongLong(&ok);
         if (!ok) {
             std::cerr << "Invalid akonadi item id given." << std::endl;
             return 1;
@@ -97,7 +97,7 @@ int main(int argc, char **argv)
 
     auto dialog = new IncidenceDialog();
 
-    Akonadi::Collection collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    Akonadi::Collection const collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
 
     if (collection.isValid()) {
         dialog->selectCollection(collection);

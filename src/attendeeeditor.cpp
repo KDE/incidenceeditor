@@ -58,7 +58,7 @@ AttendeeData::List AttendeeEditor::attendees() const
     AttendeeData::List attList; // clazy:exclude=inefficient-qlist
     // qCDebug(INCIDENCEEDITOR_LOG) << "num attendees:" << dataList.size();
     for (const KPIM::MultiplyingLineData::Ptr &datum : dataList) {
-        AttendeeData::Ptr att = qSharedPointerDynamicCast<AttendeeData>(datum);
+        AttendeeData::Ptr const att = qSharedPointerDynamicCast<AttendeeData>(datum);
         if (!att) {
             continue;
         }

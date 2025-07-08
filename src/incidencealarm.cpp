@@ -74,7 +74,7 @@ void IncidenceAlarm::save(const KCalendarCore::Incidence::Ptr &incidence)
     incidence->clearAlarms();
     const KCalendarCore::Alarm::List::ConstIterator end(mAlarms.constEnd());
     for (KCalendarCore::Alarm::List::ConstIterator it = mAlarms.constBegin(); it != end; ++it) {
-        KCalendarCore::Alarm::Ptr al(new KCalendarCore::Alarm(*(*it)));
+        KCalendarCore::Alarm::Ptr const al(new KCalendarCore::Alarm(*(*it)));
         al->setParent(incidence.data());
         // We need to make sure that both lists are the same in the end for isDirty.
         Q_ASSERT(*al == *(*it));
@@ -122,9 +122,9 @@ bool IncidenceAlarm::isDirty() const
 
 void IncidenceAlarm::editCurrentAlarm()
 {
-    KCalendarCore::Alarm::Ptr currentAlarm = mAlarms.at(mUi->mAlarmList->currentRow());
+    KCalendarCore::Alarm::Ptr const currentAlarm = mAlarms.at(mUi->mAlarmList->currentRow());
 
-    QPointer<AlarmDialog> dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
+    QPointer<AlarmDialog> const dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
     dialog->load(currentAlarm);
 
     dialog->setAllowBeginReminders(mDateTime->startDateTimeEnabled());
@@ -153,7 +153,7 @@ void IncidenceAlarm::handleDateTimeToggle()
 
 void IncidenceAlarm::newAlarm()
 {
-    QPointer<AlarmDialog> dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
+    QPointer<AlarmDialog> const dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
     const int reminderOffset = KCalPrefs::instance()->reminderTime();
 
     if (reminderOffset >= 0) {
@@ -172,7 +172,7 @@ void IncidenceAlarm::newAlarm()
     dialog->setAllowEndReminders(mDateTime->endDateTimeEnabled());
 
     if (dialog->exec() == QDialog::Accepted) {
-        KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+        KCalendarCore::Alarm::Ptr const alarm(new KCalendarCore::Alarm(nullptr));
         dialog->save(alarm);
         alarm->setEnabled(true);
         mAlarms.append(alarm);
@@ -210,7 +210,7 @@ void IncidenceAlarm::toggleCurrentAlarm()
 {
     Q_ASSERT(mUi->mAlarmList->selectedItems().size() == 1);
     const int curAlarmIndex = mUi->mAlarmList->currentRow();
-    KCalendarCore::Alarm::Ptr alarm = mAlarms.at(curAlarmIndex);
+    KCalendarCore::Alarm::Ptr const alarm = mAlarms.at(curAlarmIndex);
     alarm->setEnabled(!alarm->enabled());
 
     updateButtons();

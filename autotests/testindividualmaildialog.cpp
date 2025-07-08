@@ -21,12 +21,12 @@ private Q_SLOTS:
     void testDialog()
     {
         KCalendarCore::Attendee::List attendees;
-        KGuiItem buttonYes = KGuiItem(u"Send Email"_s);
-        KGuiItem buttonNo = KGuiItem(u"Do not send"_s);
+        KGuiItem const buttonYes = KGuiItem(u"Send Email"_s);
+        KGuiItem const buttonNo = KGuiItem(u"Do not send"_s);
 
-        KCalendarCore::Attendee attendee1(u"test1"_s, QStringLiteral("test1@example.com"));
-        KCalendarCore::Attendee attendee2(u"test2"_s, QStringLiteral("test2@example.com"));
-        KCalendarCore::Attendee attendee3(u"test3"_s, QStringLiteral("test3@example.com"));
+        KCalendarCore::Attendee const attendee1(u"test1"_s, QStringLiteral("test1@example.com"));
+        KCalendarCore::Attendee const attendee2(u"test2"_s, QStringLiteral("test2@example.com"));
+        KCalendarCore::Attendee const attendee3(u"test3"_s, QStringLiteral("test3@example.com"));
 
         attendees << attendee1 << attendee2 << attendee3;
 

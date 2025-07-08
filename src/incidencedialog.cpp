@@ -315,7 +315,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
 {
     Q_Q(IncidenceDialog);
 
-    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    KCalendarCore::MemoryCalendar::Ptr const cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     const QString fileName =
         QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"/korganizer/templates/"_s + typeToString(mEditor->type()) + u'/' + templateName);
@@ -338,7 +338,7 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
     }
 
     mIeDateTime->setActiveDate(QDate());
-    KCalendarCore::Incidence::Ptr newInc = KCalendarCore::Incidence::Ptr(incidences.first()->clone());
+    KCalendarCore::Incidence::Ptr const newInc = KCalendarCore::Incidence::Ptr(incidences.first()->clone());
     newInc->setUid(KCalendarCore::CalFormat::createUniqueId());
 
     // We add a custom property so that some fields aren't loaded, dates for example
@@ -353,7 +353,7 @@ void IncidenceDialogPrivate::manageTemplates()
 
     const QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
 
-    QPointer<IncidenceEditorNG::TemplateManagementDialog> dialog(
+    QPointer<IncidenceEditorNG::TemplateManagementDialog> const dialog(
         new IncidenceEditorNG::TemplateManagementDialog(q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
 
     q->connect(dialog, &TemplateManagementDialog::loadTemplate, q, [this](const QString &templateName) {
@@ -373,23 +373,23 @@ void IncidenceDialogPrivate::saveTemplate(const QString &templateName)
 {
     Q_ASSERT(!templateName.isEmpty());
 
-    KCalendarCore::MemoryCalendar::Ptr cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+    KCalendarCore::MemoryCalendar::Ptr const cal(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
 
     switch (mEditor->type()) {
     case KCalendarCore::Incidence::TypeEvent: {
-        KCalendarCore::Event::Ptr event(new KCalendarCore::Event());
+        KCalendarCore::Event::Ptr const event(new KCalendarCore::Event());
         mEditor->save(event);
         cal->addEvent(KCalendarCore::Event::Ptr(event->clone()));
         break;
     }
     case KCalendarCore::Incidence::TypeTodo: {
-        KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
+        KCalendarCore::Todo::Ptr const todo(new KCalendarCore::Todo);
         mEditor->save(todo);
         cal->addTodo(KCalendarCore::Todo::Ptr(todo->clone()));
         break;
     }
     case KCalendarCore::Incidence::TypeJournal: {
-        KCalendarCore::Journal::Ptr journal(new KCalendarCore::Journal);
+        KCalendarCore::Journal::Ptr const journal(new KCalendarCore::Journal);
         mEditor->save(journal);
         cal->addJournal(KCalendarCore::Journal::Ptr(journal->clone()));
         break;
@@ -636,8 +636,8 @@ Akonadi::Item IncidenceDialogPrivate::save(const Akonadi::Item &item)
 {
     Q_ASSERT(mEditor->incidence<KCalendarCore::Incidence>());
 
-    KCalendarCore::Incidence::Ptr incidenceInEditor = mEditor->incidence<KCalendarCore::Incidence>();
-    KCalendarCore::Incidence::Ptr newIncidence(incidenceInEditor->clone());
+    KCalendarCore::Incidence::Ptr const incidenceInEditor = mEditor->incidence<KCalendarCore::Incidence>();
+    KCalendarCore::Incidence::Ptr const newIncidence(incidenceInEditor->clone());
 
     Akonadi::Item result = item;
     result.setMimeType(newIncidence->mimeType());
@@ -734,7 +734,7 @@ void IncidenceDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 500));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myIncidenceDialogConfigGroupName));
+    KConfigGroup const group(KSharedConfig::openStateConfig(), QLatin1StringView(myIncidenceDialogConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

@@ -73,7 +73,7 @@ private Q_SLOTS:
         const QDateTime dt{date, time, zone};
 
         // Put the dialog into a known, valid state.
-        KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
+        KCalendarCore::Event::Ptr const event(new KCalendarCore::Event);
         event->setSummary(u"e"_s);
         event->setDtStart(dt);
         event->setDtEnd(dt);
@@ -114,7 +114,7 @@ private Q_SLOTS:
 
     void testEventTimeOrdering()
     {
-        QLocale currentLocale;
+        QLocale const currentLocale;
         QLocale::setDefault(QLocale::c());
 
         const QDate date{2022, 04, 11};
@@ -123,7 +123,7 @@ private Q_SLOTS:
         const QDateTime dt{date, time, zone};
 
         // Put the dialog into a known, valid state.
-        KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
+        KCalendarCore::Event::Ptr const event(new KCalendarCore::Event);
         event->setSummary(u"e"_s);
         event->setDtStart(dt);
         event->setDtEnd(dt);
@@ -150,7 +150,7 @@ private Q_SLOTS:
 
     void testLoadingTimelessTodo()
     {
-        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr const todo{new KCalendarCore::Todo};
         todo->setDtStart(QDateTime());
         todo->setDtDue(QDateTime());
         todo->setAllDay(false);
@@ -175,7 +175,7 @@ private Q_SLOTS:
         const QTimeZone zone{"Africa/Abidjan"};
         const QDateTime dt{date, time, zone};
 
-        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr const todo{new KCalendarCore::Todo};
         todo->setDtStart(dt);
         todo->setDtDue(dt);
         todo->setAllDay(false);
@@ -207,7 +207,7 @@ private Q_SLOTS:
         const QTimeZone zone{"Africa/Abidjan"};
         const QDateTime dt{date, time, zone};
 
-        KCalendarCore::Todo::Ptr todo{new KCalendarCore::Todo};
+        KCalendarCore::Todo::Ptr const todo{new KCalendarCore::Todo};
         todo->setDtStart(dt);
         todo->setDtDue(dt);
         todo->setAllDay(true);

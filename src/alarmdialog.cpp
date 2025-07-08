@@ -135,7 +135,7 @@ void AlarmDialog::save(const KCalendarCore::Alarm::Ptr &alarm) const
 {
     // Offsets
     int offset = mUi->mAlarmOffset->value() * 60; // minutes
-    int offsetunit = mUi->mOffsetUnit->currentIndex();
+    int const offsetunit = mUi->mOffsetUnit->currentIndex();
     if (offsetunit >= 1) {
         offset *= 60; // hours
     }

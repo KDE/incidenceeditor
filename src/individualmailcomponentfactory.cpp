@@ -33,9 +33,9 @@ IndividualMessageQueueJob::IndividualMessageQueueJob(const KIdentityManagementCo
 void IndividualMessageQueueJob::start()
 {
     const auto to = addressAttribute().to();
-    QSet<QString> attendeesTo(to.begin(), to.end());
+    QSet<QString> const attendeesTo(to.begin(), to.end());
     const auto cc = addressAttribute().cc();
-    QSet<QString> attendeesCc(cc.begin(), cc.end());
+    QSet<QString> const attendeesCc(cc.begin(), cc.end());
 
     QStringList attendeesAutoTo;
     QStringList attendeesAutoCc;
@@ -73,7 +73,7 @@ void IndividualMessageQueueJob::start()
 
 void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc)
 {
-    KMime::Message::Ptr msg(message());
+    KMime::Message::Ptr const msg(message());
     msg->to()->fromUnicodeString(messageTo.join(QLatin1StringView(", ")));
     msg->cc()->fromUnicodeString(messageCc.join(QLatin1StringView(", ")));
     msg->assemble();
@@ -190,7 +190,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        KCalendarCore::Attendee const organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -206,7 +206,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(bool a
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        KCalendarCore::Attendee const organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }
@@ -220,7 +220,7 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceDeleted(Recipie
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
-        KCalendarCore::Attendee organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
+        KCalendarCore::Attendee const organizer(mIncidence->organizer().name(), mIncidence->organizer().email());
         openDialog(question, KCalendarCore::Attendee::List() << organizer, action, buttonYes, buttonNo);
     }
 }

@@ -74,7 +74,7 @@ static void initPresets(AlarmPresets::When when)
     case AlarmPresets::BeforeStart:
 
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+            KCalendarCore::Alarm::Ptr const alarm(new KCalendarCore::Alarm(nullptr));
             alarm->setType(KCalendarCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setStartOffset(-minutes * 60);
@@ -94,7 +94,7 @@ static void initPresets(AlarmPresets::When when)
 
     case AlarmPresets::BeforeEnd:
         for (int i = 0; i < hardcodedPresets.count(); ++i) {
-            KCalendarCore::Alarm::Ptr alarm(new KCalendarCore::Alarm(nullptr));
+            KCalendarCore::Alarm::Ptr const alarm(new KCalendarCore::Alarm(nullptr));
             alarm->setType(KCalendarCore::Alarm::Display);
             const int minutes = hardcodedPresets[i];
             alarm->setEndOffset(-minutes * 60);
@@ -194,7 +194,7 @@ int presetIndex(When when, const KCalendarCore::Alarm::Ptr &alarm)
     const QStringList presets = availablePresets(when);
 
     for (int i = 0; i < presets.size(); ++i) {
-        KCalendarCore::Alarm::Ptr presetAlarm(preset(when, presets.at(i)));
+        KCalendarCore::Alarm::Ptr const presetAlarm(preset(when, presets.at(i)));
         if (presetAlarm == alarm) {
             return i;
         }

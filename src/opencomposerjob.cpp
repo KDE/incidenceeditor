@@ -35,10 +35,10 @@ void OpenComposerJob::start()
 {
     Q_ASSERT(mMessage);
 
-    unsigned int identity = mIdentity.uoid();
+    unsigned int const identity = mIdentity.uoid();
 
-    QString subject = mMessage->subject()->asUnicodeString();
-    QString body = QString::fromUtf8(mMessage->contents()[0]->body());
+    QString const subject = mMessage->subject()->asUnicodeString();
+    QString const body = QString::fromUtf8(mMessage->contents()[0]->body());
 
     QList<QVariant> messages;
 
@@ -48,21 +48,21 @@ void OpenComposerJob::start()
         const QStringList customHeaders;
         const QString replyTo;
         const QString inReplyTo;
-        bool hidden = false;
+        bool const hidden = false;
 
         messages << mTo << mCc << mBcc << subject << body << hidden << messageFile << attachmentPaths << customHeaders << replyTo << inReplyTo;
     } else {
         KMime::Content *attachment(mMessage->contents().at(1));
-        QString attachName = attachment->contentType()->name();
-        QByteArray attachCte = attachment->contentTransferEncoding()->as7BitString(false);
-        QByteArray attachType = attachment->contentType()->mediaType();
-        QByteArray attachSubType = attachment->contentType()->subType();
-        QByteArray attachContDisp = attachment->contentDisposition()->as7BitString(false);
-        QByteArray attachCharset = attachment->contentType()->charset();
+        QString const attachName = attachment->contentType()->name();
+        QByteArray const attachCte = attachment->contentTransferEncoding()->as7BitString(false);
+        QByteArray const attachType = attachment->contentType()->mediaType();
+        QByteArray const attachSubType = attachment->contentType()->subType();
+        QByteArray const attachContDisp = attachment->contentDisposition()->as7BitString(false);
+        QByteArray const attachCharset = attachment->contentType()->charset();
 
-        QByteArray attachParamAttr = "method";
-        QString attachParamValue = attachment->contentType()->parameter("method");
-        QByteArray attachData = attachment->encodedBody();
+        QByteArray const attachParamAttr = "method";
+        QString const attachParamValue = attachment->contentType()->parameter("method");
+        QByteArray const attachData = attachment->encodedBody();
 
         messages << mTo << mCc << mBcc << subject << body << attachName << attachCte << attachData << attachType << attachSubType << attachParamAttr
                  << attachParamValue << attachContDisp << attachCharset << identity;
@@ -71,7 +71,7 @@ void OpenComposerJob::start()
     // with D-Bus autostart, this will start kmail if it's not running yet
     QDBusInterface kmailObj(u"org.kde.kmail"_s, u"/KMail"_s, QStringLiteral("org.kde.kmail.kmail"));
 
-    QDBusReply<int> composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, u"openComposer"_s, messages);
+    QDBusReply<int> const composerDbusPath = kmailObj.callWithArgumentList(QDBus::AutoDetect, u"openComposer"_s, messages);
 
     if (!composerDbusPath.isValid()) {
         setError(KJob::UserDefinedError);

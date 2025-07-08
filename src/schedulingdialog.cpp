@@ -115,7 +115,7 @@ void SchedulingDialog::fillCombos()
 
 void SchedulingDialog::slotStartDateChanged(const QDate &newDate)
 {
-    QDate oldDate = mStDate;
+    QDate const oldDate = mStDate;
     mStDate = newDate;
     if (newDate.isValid() && oldDate.isValid()) {
         updateWeekDays(oldDate);

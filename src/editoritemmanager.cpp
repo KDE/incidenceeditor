@@ -105,7 +105,7 @@ void ItemEditorPrivate::moveJobFinished(KJob *job)
         qCCritical(INCIDENCEEDITOR_LOG) << "Error while moving and modifying " << job->errorString();
         mItemUi->reject(ItemEditorUi::ItemMoveFailed, job->errorString());
     } else {
-        Akonadi::Item item(mItem.id());
+        Akonadi::Item const item(mItem.id());
         currentAction = EditorItemManager::MoveAndModify;
         q->load(item);
     }
@@ -116,7 +116,7 @@ void ItemEditorPrivate::itemFetchResult(KJob *job)
     Q_ASSERT(job);
     Q_Q(EditorItemManager);
 
-    EditorItemManager::SaveAction action = currentAction;
+    EditorItemManager::SaveAction const action = currentAction;
     currentAction = EditorItemManager::None;
 
     if (job->error()) {
@@ -130,7 +130,7 @@ void ItemEditorPrivate::itemFetchResult(KJob *job)
         return;
     }
 
-    Akonadi::Item item = fetchJob->items().at(0);
+    Akonadi::Item const item = fetchJob->items().at(0);
     if (mItemUi->hasSupportedPayload(item)) {
         setItem(item);
         if (action != EditorItemManager::None) {
@@ -167,7 +167,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
         Q_EMIT q->itemSaveFailed(EditorItemManager::Move, job->errorString());
     } else {
         // Fetch the item again, we want a new mItem, which has an updated parentCollection
-        Akonadi::Item item(mItem.id());
+        Akonadi::Item const item(mItem.id());
         // set currentAction, so the fetchResult slot emits itemSavedFinished(Move);
         // We could emit it here, but we should only enable ok/apply buttons after the loading
         // is complete
@@ -232,7 +232,7 @@ void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteA
 {
     Q_Q(EditorItemManager);
     if (mItemUi->containsPayloadIdentifiers(partIdentifiers)) {
-        QPointer<QMessageBox> dlg = new QMessageBox;
+        QPointer<QMessageBox> const dlg = new QMessageBox;
         dlg->setIcon(QMessageBox::Question);
         dlg->setInformativeText(
             i18n("The item has been changed by another application.\n"
@@ -327,13 +327,13 @@ void EditorItemManager::save(ItipPrivacyFlags itipPrivacy)
     d->mChanger->setGroupwareCommunication(CalendarSupport::KCalPrefs::instance()->useGroupwareCommunication());
     updateIncidenceChangerPrivacyFlags(d->mChanger, itipPrivacy);
 
-    Akonadi::Item updateItem = d->mItemUi->save(d->mItem);
+    Akonadi::Item const updateItem = d->mItemUi->save(d->mItem);
     Q_ASSERT(updateItem.id() == d->mItem.id());
     d->mItem = updateItem;
 
     if (d->mItem.isValid()) { // A valid item. Means we're modifying.
         Q_ASSERT(d->mItem.parentCollection().isValid());
-        KCalendarCore::Incidence::Ptr oldPayload = Akonadi::CalendarUtils::incidence(d->mPrevItem);
+        KCalendarCore::Incidence::Ptr const oldPayload = Akonadi::CalendarUtils::incidence(d->mPrevItem);
         if (d->mItem.parentCollection() == d->mItemUi->selectedCollection() || d->mItem.storageCollectionId() == d->mItemUi->selectedCollection().id()) {
             (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
         } else {

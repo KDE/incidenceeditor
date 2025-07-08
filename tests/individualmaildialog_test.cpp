@@ -13,15 +13,15 @@ using namespace IncidenceEditorNG;
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QApplication const app(argc, argv);
 
     KCalendarCore::Attendee::List attendees;
-    KGuiItem buttonYes = KGuiItem(QStringLiteral("Send Email"));
-    KGuiItem buttonNo = KGuiItem(QStringLiteral("Do not send"));
+    KGuiItem const buttonYes = KGuiItem(QStringLiteral("Send Email"));
+    KGuiItem const buttonNo = KGuiItem(QStringLiteral("Do not send"));
 
-    KCalendarCore::Attendee attendee1(QStringLiteral("test1"), QStringLiteral("test1@example.com"));
-    KCalendarCore::Attendee attendee2(QStringLiteral("test2"), QStringLiteral("test2@example.com"));
-    KCalendarCore::Attendee attendee3(QStringLiteral("test3"), QStringLiteral("test3@example.com"));
+    KCalendarCore::Attendee const attendee1(QStringLiteral("test1"), QStringLiteral("test1@example.com"));
+    KCalendarCore::Attendee const attendee2(QStringLiteral("test2"), QStringLiteral("test2@example.com"));
+    KCalendarCore::Attendee const attendee3(QStringLiteral("test3"), QStringLiteral("test3@example.com"));
 
     attendees << attendee1 << attendee2 << attendee3;
 

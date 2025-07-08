@@ -58,7 +58,7 @@ IncidenceDialog *IncidenceDialogFactory::createTodoEditor(const QString &summary
     defaults.setAttachments(attachments, attachmentMimetypes, attachmentLabels, inlineAttachment);
     defaults.setAttendees(attendees);
 
-    Todo::Ptr todo(new Todo);
+    Todo::Ptr const todo(new Todo);
     defaults.setDefaults(todo);
 
     todo->setSummary(summary);
@@ -97,7 +97,7 @@ IncidenceDialog *IncidenceDialogFactory::createEventEditor(const QString &summar
     defaults.setAttachments(attachments, attachmentMimetypes, attachmentLabels, inlineAttachment);
     defaults.setAttendees(attendees);
 
-    Event::Ptr event(new Event);
+    Event::Ptr const event(new Event);
     defaults.setDefaults(event);
 
     event->setSummary(summary);

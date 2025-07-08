@@ -161,7 +161,7 @@ void IncidenceAttendee::load(const KCalendarCore::Incidence::Ptr &incidence)
         const QString fullOrganizer = incidence->organizer().fullName();
         const QString organizerEmail = incidence->organizer().email();
         for (int i = 0; i < mUi->mOrganizerCombo->count(); ++i) {
-            KCalendarCore::Person organizerCandidate = KCalendarCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
+            KCalendarCore::Person const organizerCandidate = KCalendarCore::Person::fromFullName(mUi->mOrganizerCombo->itemText(i));
             if (organizerCandidate.email() == organizerEmail) {
                 found = i;
                 mUi->mOrganizerCombo->setCurrentIndex(i);
@@ -331,7 +331,7 @@ void IncidenceAttendee::fillOrganizerCombo()
 
 void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &attendee)
 {
-    QString fullname = attendee.fullName();
+    QString const fullname = attendee.fullName();
 
     // stop old job
     KJob *oldJob = mMightBeGroupJobs.key(attendee.uid());
@@ -370,7 +370,7 @@ void IncidenceAttendee::groupSearchResult(KJob *job)
     const KContacts::ContactGroup &group = contactGroups.first();
 
     const int row = rowOfAttendee(uid);
-    QModelIndex index = dataModel()->index(row, AttendeeTableModel::CuType);
+    QModelIndex const index = dataModel()->index(row, AttendeeTableModel::CuType);
     dataModel()->setData(index, KCalendarCore::Attendee::Group);
 
     mGroupList.insert(uid, group);
@@ -413,7 +413,7 @@ void IncidenceAttendee::expandResult(KJob *job)
     if (!wasACorrectEmail) {
         dataModel()->removeRow(row);
         for (const KContacts::Addressee &member : groupMembers) {
-            KCalendarCore::Attendee newAt(member.realName(), member.preferredEmail(), attendee.RSVP(), attendee.status(), attendee.role(), member.uid());
+            KCalendarCore::Attendee const newAt(member.realName(), member.preferredEmail(), attendee.RSVP(), attendee.status(), attendee.role(), member.uid());
             dataModel()->insertAttendee(row, newAt);
         }
     }
@@ -447,14 +447,14 @@ void IncidenceAttendee::slotSelectAddresses()
             if (selection.item().hasPayload<KContacts::ContactGroup>()) {
                 auto job = new Akonadi::ContactGroupExpandJob(selection.item().payload<KContacts::ContactGroup>(), this);
                 connect(job, &Akonadi::ContactGroupExpandJob::result, this, &IncidenceAttendee::expandResult);
-                KCalendarCore::Attendee::PartStat partStat = KCalendarCore::Attendee::NeedsAction;
-                bool rsvp = true;
+                KCalendarCore::Attendee::PartStat const partStat = KCalendarCore::Attendee::NeedsAction;
+                bool const rsvp = true;
 
-                int pos = 0;
+                int const pos = 0;
                 QString name;
                 QString email;
                 KEmailAddress::extractEmailAddressAndName(selection.email(), email, name);
-                KCalendarCore::Attendee newAt(selection.name(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant);
+                KCalendarCore::Attendee const newAt(selection.name(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant);
                 dataModel()->insertAttendee(pos, newAt);
 
                 mExpandGroupJobs.insert(job, newAt.uid());
@@ -477,7 +477,8 @@ void IncidenceAttendee::slotSelectAddresses()
 void IncidenceEditorNG::IncidenceAttendee::slotSolveConflictPressed()
 {
     const int duration = mDateTime->startTime().secsTo(mDateTime->endTime());
-    QScopedPointer<SchedulingDialog> dialog(new SchedulingDialog(mDateTime->startDate(), mDateTime->startTime(), duration, mConflictResolver, mParentWidget));
+    QScopedPointer<SchedulingDialog> const dialog(
+        new SchedulingDialog(mDateTime->startDate(), mDateTime->startTime(), duration, mConflictResolver, mParentWidget));
     dialog->slotUpdateIncidenceStartEnd(mDateTime->currentStartDateTime(), mDateTime->currentEndDateTime());
     if (dialog->exec() == QDialog::Accepted) {
         qCDebug(INCIDENCEEDITOR_LOG) << dialog->selectedStartDate() << dialog->selectedStartTime();
@@ -492,7 +493,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &t
 {
     if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
-            QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
+            QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
             auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             if (mConflictResolver->containsAttendee(attendee)) {
                 mConflictResolver->removeAttendee(attendee);
@@ -508,7 +509,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeChanged(const QModelIndex &t
 void IncidenceAttendee::slotConflictResolverAttendeeAdded(const QModelIndex &index, int first, int last)
 {
     for (int i = first; i <= last; ++i) {
-        QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
+        QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
             mConflictResolver->insertAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>());
         }
@@ -519,7 +520,7 @@ void IncidenceAttendee::slotConflictResolverAttendeeAdded(const QModelIndex &ind
 void IncidenceAttendee::slotConflictResolverAttendeeRemoved(const QModelIndex &index, int first, int last)
 {
     for (int i = first; i <= last; ++i) {
-        QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email, index);
+        QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email, index);
         if (!dataModel()->data(email).toString().isEmpty()) {
             mConflictResolver->removeAttendee(dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>());
         }
@@ -547,7 +548,7 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     }
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
-        QModelIndex index = model->index(i, 0, parent);
+        QModelIndex const index = model->index(i, 0, parent);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
@@ -564,7 +565,7 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
     }
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
-        QModelIndex index = model->index(i, 0);
+        QModelIndex const index = model->index(i, 0);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
@@ -577,7 +578,7 @@ void IncidenceAttendee::updateFBStatus()
 {
     QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
-        QModelIndex index = model->index(i, 0);
+        QModelIndex const index = model->index(i, 0);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         const KCalendarCore::FreeBusy::Ptr &fb = model->data(index, CalendarSupport::FreeBusyItemModel::FreeBusyRole).value<KCalendarCore::FreeBusy::Ptr>();
         if (!attendee.isNull()) {
@@ -588,12 +589,12 @@ void IncidenceAttendee::updateFBStatus()
 
 void IncidenceAttendee::updateFBStatus(const KCalendarCore::Attendee &attendee, const KCalendarCore::FreeBusy::Ptr &fb)
 {
-    KCalendarCore::Attendee::List attendees = mDataModel->attendees();
-    QDateTime startTime = mDateTime->currentStartDateTime();
-    QDateTime endTime = mDateTime->currentEndDateTime();
+    KCalendarCore::Attendee::List const attendees = mDataModel->attendees();
+    QDateTime const startTime = mDateTime->currentStartDateTime();
+    QDateTime const endTime = mDateTime->currentEndDateTime();
     if (attendees.contains(attendee)) {
-        int row = dataModel()->attendees().indexOf(attendee);
-        QModelIndex attendeeIndex = dataModel()->index(row, AttendeeTableModel::Available);
+        int const row = dataModel()->attendees().indexOf(attendee);
+        QModelIndex const attendeeIndex = dataModel()->index(row, AttendeeTableModel::Available);
         if (fb) {
             KCalendarCore::Period::List busyPeriods = fb->busyPeriods();
             for (auto it = busyPeriods.begin(); it != busyPeriods.end(); ++it) {
@@ -622,7 +623,7 @@ void IncidenceAttendee::slotUpdateConflictLabel(int count)
     if (attendeeCount() > 0) {
         mUi->mSolveButton->setEnabled(true);
         if (count > 0) {
-            QString label = i18ncp("@label Shows the number of scheduling conflicts", "%1 conflict", "%1 conflicts", count);
+            QString const label = i18ncp("@label Shows the number of scheduling conflicts", "%1 conflict", "%1 conflicts", count);
             mUi->mConflictsLabel->setText(label);
             mUi->mConflictsLabel->setVisible(true);
         } else {
@@ -638,7 +639,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &
 {
     if (AttendeeTableModel::FullName <= bottomRight.column() && AttendeeTableModel::FullName >= topLeft.column()) {
         for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
-            QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
+            QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
             auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
@@ -650,7 +651,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &in
 {
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
-        QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
+        QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
         auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         checkIfExpansionIsNeeded(attendee);
     }
@@ -661,7 +662,7 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &
 {
     Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
-        QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
+        QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
         auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
         KJob *job = mMightBeGroupJobs.key(attendee.uid());
         if (job) {
@@ -702,9 +703,9 @@ void IncidenceAttendee::slotGroupSubstitutionLayoutChanged()
         return;
     }
     for (int i = 0; i < model->rowCount(QModelIndex()); ++i) {
-        QModelIndex index = model->index(i, AttendeeTableModel::FullName);
+        QModelIndex const index = model->index(i, AttendeeTableModel::FullName);
         if (!model->data(index).toString().isEmpty()) {
-            QModelIndex email = dataModel()->index(i, AttendeeTableModel::Email);
+            QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
             auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
             checkIfExpansionIsNeeded(attendee);
         }
@@ -737,7 +738,7 @@ void IncidenceAttendee::insertAttendeeFromAddressee(const KContacts::Addressee &
     QString email;
     KEmailAddress::extractEmailAddressAndName(a.preferredEmail(), email, name);
 
-    KCalendarCore::Attendee newAt(a.realName(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant, a.uid());
+    KCalendarCore::Attendee const newAt(a.realName(), email, rsvp, partStat, KCalendarCore::Attendee::ReqParticipant, a.uid());
     if (pos < 0) {
         pos = dataModel()->rowCount() - 1;
     }
@@ -767,7 +768,7 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
 
     QString name;
     QString email;
-    bool success = KEmailAddress::extractEmailAddressAndName(newOrganizer, email, name);
+    bool const success = KEmailAddress::extractEmailAddressAndName(newOrganizer, email, name);
 
     if (!success) {
         qCWarning(INCIDENCEEDITOR_LOG) << "Could not extract email address and name";
@@ -778,8 +779,8 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
     int newOrganizerAttendee = -1;
 
     for (int i = 0; i < mDataModel->rowCount(); ++i) {
-        QModelIndex index = mDataModel->index(i, AttendeeTableModel::FullName);
-        QString fullName = mDataModel->data(index, Qt::DisplayRole).toString();
+        QModelIndex const index = mDataModel->index(i, AttendeeTableModel::FullName);
+        QString const fullName = mDataModel->data(index, Qt::DisplayRole).toString();
         if (fullName == mOrganizer) {
             currentOrganizerAttendee = i;
         }
@@ -809,10 +810,10 @@ void IncidenceAttendee::slotOrganizerChanged(const QString &newOrganizer)
         }
 
         if (newOrganizerAttendee == -1) {
-            bool rsvp = !iAmOrganizer(); // if it is the user, don't make him rsvp.
-            KCalendarCore::Attendee::PartStat status = iAmOrganizer() ? KCalendarCore::Attendee::Accepted : KCalendarCore::Attendee::NeedsAction;
+            bool const rsvp = !iAmOrganizer(); // if it is the user, don't make him rsvp.
+            KCalendarCore::Attendee::PartStat const status = iAmOrganizer() ? KCalendarCore::Attendee::Accepted : KCalendarCore::Attendee::NeedsAction;
 
-            KCalendarCore::Attendee newAt(name, email, rsvp, status, KCalendarCore::Attendee::ReqParticipant);
+            KCalendarCore::Attendee const newAt(name, email, rsvp, status, KCalendarCore::Attendee::ReqParticipant);
 
             mDataModel->insertAttendee(mDataModel->rowCount(), newAt);
         }

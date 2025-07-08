@@ -58,7 +58,7 @@ public:
     [[nodiscard]] QColor resourceColor(const KCalendarCore::Incidence::Ptr &incidence) const override
     {
         bool ok = false;
-        int status = incidence->customProperty(u"FREEBUSY"_s.toLatin1(), u"STATUS"_s.toLatin1()).toInt(&ok);
+        int const status = incidence->customProperty(u"FREEBUSY"_s.toLatin1(), u"STATUS"_s.toLatin1()).toInt(&ok);
 
         if (!ok) {
             return {85, 85, 85};
@@ -154,7 +154,7 @@ void ResourceManagement::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myResourceManagementConfigGroupName));
+    KConfigGroup const group(KSharedConfig::openStateConfig(), QLatin1StringView(myResourceManagementConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
@@ -215,10 +215,10 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
         mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(u'\n')));
     }
 
-    QString name = QString::fromUtf8(obj.attributes().value(u"cn"_s)[0]);
-    QString email = QString::fromUtf8(obj.attributes().value(u"mail"_s)[0]);
-    KCalendarCore::Attendee attendee(name, email);
-    CalendarSupport::FreeBusyItem::Ptr freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
+    QString const name = QString::fromUtf8(obj.attributes().value(u"cn"_s)[0]);
+    QString const email = QString::fromUtf8(obj.attributes().value(u"mail"_s)[0]);
+    KCalendarCore::Attendee const attendee(name, email);
+    CalendarSupport::FreeBusyItem::Ptr const freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
     mModel->addItem(freebusy);
 }

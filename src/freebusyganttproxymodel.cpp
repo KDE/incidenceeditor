@@ -29,7 +29,7 @@ QVariant FreeBusyGanttProxyModel::data(const QModelIndex &index, int role) const
     if (!index.isValid()) {
         return {};
     }
-    QModelIndex source_index = mapToSource(index);
+    QModelIndex const source_index = mapToSource(index);
 
     // if the index is not valid, then its a toplevel item, which is an attendee
     if (!source_index.parent().isValid()) {

@@ -141,7 +141,7 @@ void IncidenceResource::findResources()
 
 void IncidenceResource::dialogOkPressed()
 {
-    ResourceItem::Ptr item = resourceDialog->selectedItem();
+    ResourceItem::Ptr const item = resourceDialog->selectedItem();
     if (item) {
         const QString name = QString::fromLatin1(item->ldapObject().value(u"cn"_s));
         const QString email = QString::fromLatin1(item->ldapObject().value(u"mail"_s));

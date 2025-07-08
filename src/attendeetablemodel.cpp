@@ -57,7 +57,7 @@ QVariant AttendeeTableModel::data(const QModelIndex &index, int role) const
         case FullName:
             return attendee.fullName();
         case Available: {
-            AvailableStatus available = mAttendeeAvailable[index.row()];
+            AvailableStatus const available = mAttendeeAvailable[index.row()];
             if (role == Qt::DisplayRole) {
                 switch (available) {
                 case Free:
@@ -177,7 +177,7 @@ bool AttendeeTableModel::insertRows(int position, int rows, const QModelIndex &p
     beginInsertRows(parent, position, position + rows - 1);
 
     for (int row = 0; row < rows; ++row) {
-        KCalendarCore::Attendee attendee(QLatin1StringView(""), QLatin1StringView(""));
+        KCalendarCore::Attendee const attendee(QLatin1StringView(""), QLatin1StringView(""));
         mAttendeeList.insert(position, attendee);
         mAttendeeAvailable.insert(mAttendeeAvailable.begin() + position, AvailableStatus{});
     }
@@ -277,7 +277,7 @@ ResourceFilterProxyModel::ResourceFilterProxyModel(QObject *parent)
 bool ResourceFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
-    KCalendarCore::Attendee::CuType cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    KCalendarCore::Attendee::CuType const cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
     return cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room;
 }
@@ -290,7 +290,7 @@ AttendeeFilterProxyModel::AttendeeFilterProxyModel(QObject *parent)
 bool AttendeeFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     const QModelIndex cuTypeIndex = sourceModel()->index(sourceRow, AttendeeTableModel::CuType, sourceParent);
-    KCalendarCore::Attendee::CuType cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
+    KCalendarCore::Attendee::CuType const cuType = static_cast<KCalendarCore::Attendee::CuType>(sourceModel()->data(cuTypeIndex).toUInt());
 
     return !(cuType == KCalendarCore::Attendee::Resource || cuType == KCalendarCore::Attendee::Room);
 }

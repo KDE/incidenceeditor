@@ -173,7 +173,7 @@ void IncidenceDefaultsPrivate::journalDefaults(const KCalendarCore::Journal::Ptr
 
 void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo) const
 {
-    KCalendarCore::Todo::Ptr relatedTodo = mRelatedIncidence.dynamicCast<KCalendarCore::Todo>();
+    KCalendarCore::Todo::Ptr const relatedTodo = mRelatedIncidence.dynamicCast<KCalendarCore::Todo>();
     if (relatedTodo) {
         todo->setCategories(relatedTodo->categories());
     }

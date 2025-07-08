@@ -80,7 +80,7 @@ void AttendeeComboBox::setCurrentIndex(int index)
 
 void AttendeeComboBox::slotActionTriggered()
 {
-    int index = qobject_cast<QAction *>(sender())->data().toInt();
+    int const index = qobject_cast<QAction *>(sender())->data().toInt();
     setCurrentIndex(index);
 }
 
@@ -230,7 +230,7 @@ void AttendeeLine::dataFromFields()
         return;
     }
 
-    KCalendarCore::Attendee oldAttendee(mData->attendee());
+    KCalendarCore::Attendee const oldAttendee(mData->attendee());
 
     QString email;
     QString name;
@@ -260,7 +260,7 @@ void AttendeeLine::fieldsFromData()
 
     mEdit->setText(mData->fullName());
     mRoleCombo->setCurrentIndex(mData->role());
-    AttendeeData::PartStat partStat = mData->status();
+    AttendeeData::PartStat const partStat = mData->status();
     if (partStat != AttendeeData::None) {
         mStateCombo->setCurrentIndex(partStat);
     } else {
@@ -320,7 +320,7 @@ void AttendeeLine::setCompletionMode(KCompletion::CompletionMode mode)
 
 void AttendeeLine::setData(const KPIM::MultiplyingLineData::Ptr &data)
 {
-    AttendeeData::Ptr attendee = qSharedPointerDynamicCast<AttendeeData>(data);
+    AttendeeData::Ptr const attendee = qSharedPointerDynamicCast<AttendeeData>(data);
     if (!attendee) {
         return;
     }

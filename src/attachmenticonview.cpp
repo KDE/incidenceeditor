@@ -108,7 +108,7 @@ bool AttachmentIconItem::isBinary() const
 
 QIcon AttachmentIconItem::icon() const
 {
-    QMimeDatabase db;
+    QMimeDatabase const db;
     return icon(db.mimeTypeForName(mAttachment.mimeType()), mAttachment.uri(), mAttachment.isBinary());
 }
 
@@ -128,7 +128,7 @@ void AttachmentIconItem::readAttachment()
     setText(mAttachment.label());
     setFlags(flags() | Qt::ItemIsEditable);
 
-    QMimeDatabase db;
+    QMimeDatabase const db;
     if (mAttachment.mimeType().isEmpty() || !(db.mimeTypeForName(mAttachment.mimeType()).isValid())) {
         QMimeType attachmentMimeType;
         if (mAttachment.isUri()) {
@@ -167,7 +167,7 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     }
     QTemporaryFile *file = nullptr;
 
-    QMimeDatabase db;
+    QMimeDatabase const db;
     QStringList patterns = db.mimeTypeForName(mAttachment.mimeType()).globPatterns();
 
     if (!patterns.empty()) {

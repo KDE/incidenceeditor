@@ -98,7 +98,7 @@ void IncidenceCategories::createMissingCategories()
     for (const QString &category : std::as_const(mMissingCategories)) {
         // Either the tag doesn't exist, or Akonadi doesn't have a tag <-> item
         // relation for this category and instance. Try to create a PLAIN tag.
-        Akonadi::Tag missingTag = Akonadi::Tag(category);
+        Akonadi::Tag const missingTag = Akonadi::Tag(category);
         auto createJob = new Akonadi::TagCreateJob(missingTag, this);
         createJob->setMergeIfExisting(true);
         connect(createJob, &Akonadi::TagCreateJob::result, this, &IncidenceCategories::onMissingTagCreated);
@@ -124,7 +124,7 @@ void IncidenceCategories::onMissingTagCreated(KJob *job)
         return;
     }
     auto createJob = static_cast<Akonadi::TagCreateJob *>(job);
-    int count = mMissingCategories.removeAll(createJob->tag().name());
+    int const count = mMissingCategories.removeAll(createJob->tag().name());
 
     auto selectedTags{mUi->mTagWidget->selection()};
     selectedTags += createJob->tag();

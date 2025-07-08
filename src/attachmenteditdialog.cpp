@@ -40,7 +40,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     , mUi(new Ui::AttachmentEditDialog)
 {
     setWindowTitle(i18nc("@title:window", "Edit Attachment"));
-    QMimeDatabase db;
+    QMimeDatabase const db;
     mMimeType = db.mimeTypeForName(item->mimeType());
     auto page = new QWidget(this);
     auto mainLayout = new QVBoxLayout(this);
@@ -72,7 +72,7 @@ AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *pa
     } else {
         mUi->mInlineCheck->setEnabled(true);
         mUi->mStackedWidget->setCurrentIndex(1);
-        KFormat format;
+        KFormat const format;
         mUi->mSizeLabel->setText(u"%1 (%2)"_s.arg(format.formatByteSize(item->attachment().size()), QLocale().toString(item->attachment().size())));
     }
 
@@ -138,7 +138,7 @@ void AttachmentEditDialog::slotApply()
             auto job = KIO::storedGet(url);
             KJobWidgets::setWindow(job, nullptr);
             if (job->exec()) {
-                QByteArray data = job->data();
+                QByteArray const data = job->data();
                 mItem->setData(data);
             }
         } else {
@@ -169,7 +169,7 @@ void AttachmentEditDialog::urlChanged(const QString &url)
 
 void AttachmentEditDialog::urlChanged(const QUrl &url)
 {
-    QMimeDatabase db;
+    QMimeDatabase const db;
     mMimeType = db.mimeTypeForUrl(url);
     mUi->mTypeLabel->setText(mMimeType.comment());
     mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()).pixmap(KIconLoader::SizeSmallMedium));

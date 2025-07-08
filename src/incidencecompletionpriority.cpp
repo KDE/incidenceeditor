@@ -69,7 +69,7 @@ void IncidenceCompletionPriority::load(const KCalendarCore::Incidence::Ptr &inci
 
     // TODO priority might be valid for other incidence types as well
     // only for Todos
-    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
+    KCalendarCore::Todo::Ptr const todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
     if (todo == nullptr) {
         mWasDirty = false;
         return;
@@ -96,7 +96,7 @@ void IncidenceCompletionPriority::save(const KCalendarCore::Incidence::Ptr &inci
 {
     // TODO priority might be valid for other incidence types as well
     // only for Todos
-    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>(incidence);
+    KCalendarCore::Todo::Ptr const todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>(incidence);
     if (todo == nullptr) {
         return;
     }
@@ -121,7 +121,7 @@ void IncidenceCompletionPriority::save(const KCalendarCore::Incidence::Ptr &inci
 
 bool IncidenceCompletionPriority::isDirty() const
 {
-    KCalendarCore::Todo::Ptr todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
+    KCalendarCore::Todo::Ptr const todo = IncidenceCompletionPriority::incidence<KCalendarCore::Todo>();
 
     if (!todo) {
         return false;

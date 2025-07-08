@@ -99,7 +99,7 @@ QModelIndex ResourceModel::index(int row, int column, const QModelIndex &parent)
 {
     ResourceItem *parentItem = getItem(parent);
 
-    ResourceItem::Ptr childItem = parentItem->child(row);
+    ResourceItem::Ptr const childItem = parentItem->child(row);
     if (row < parentItem->childCount() && childItem) {
         return createIndex(row, column, childItem.data());
     } else {
@@ -113,7 +113,7 @@ QModelIndex ResourceModel::parent(const QModelIndex &index) const
         return {};
     }
     ResourceItem *childItem = getItem(index);
-    ResourceItem::Ptr parentItem = childItem->parent();
+    ResourceItem::Ptr const parentItem = childItem->parent();
 
     if (parentItem == mRootItem) {
         return {};
@@ -127,7 +127,7 @@ bool ResourceModel::removeRows(int position, int rows, const QModelIndex &parent
     ResourceItem *parentItem = getItem(parent);
 
     beginRemoveRows(parent, position, position + rows - 1);
-    bool success = parentItem->removeChildren(position, rows);
+    bool const success = parentItem->removeChildren(position, rows);
     endRemoveRows();
 
     return success;
@@ -154,7 +154,7 @@ void ResourceModel::startSearch()
     // Delete all resources -> only collection elements are shown
     for (int i = 0; i < mRootItem->childCount(); ++i) {
         if (mLdapCollections.contains(mRootItem->child(i))) {
-            QModelIndex parentIndex = index(i, 0, QModelIndex());
+            QModelIndex const parentIndex = index(i, 0, QModelIndex());
             beginRemoveRows(parentIndex, 0, mRootItem->child(i)->childCount() - 1);
             (void)mRootItem->child(i)->removeChildren(0, mRootItem->child(i)->childCount());
             endRemoveRows();
@@ -183,7 +183,7 @@ void ResourceModel::slotLDAPCollectionData(const KLDAPCore::LdapResultObject::Li
     // qDebug() <<  "Found ldapCollections";
 
     for (const KLDAPCore::LdapResultObject &result : std::as_const(results)) {
-        ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
+        ResourceItem::Ptr const item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));
         item->setLdapObject(result.object);
 
         (void)mRootItem->insertChild(mRootItem->childCount(), item);
@@ -211,7 +211,7 @@ void ResourceModel::slotLDAPSearchData(const KLDAPCore::LdapResultObject::List &
         }
 
         for (const ResourceItem::Ptr &p : std::as_const(parents)) {
-            ResourceItem::Ptr item(new ResourceItem(result.object.dn(), mHeaders, *result.client, p));
+            ResourceItem::Ptr const item(new ResourceItem(result.object.dn(), mHeaders, *result.client, p));
             item->setLdapObject(result.object);
 
             QModelIndex parentIndex;

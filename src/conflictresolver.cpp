@@ -135,7 +135,7 @@ int ConflictResolver::tryDate(QDateTime &tryFrom, QDateTime &tryTo)
 {
     int conflicts_count = 0;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
-        QModelIndex index = mFBModel->index(i);
+        QModelIndex const index = mFBModel->index(i);
         auto attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;
@@ -191,7 +191,7 @@ bool ConflictResolver::findFreeSlot(const KCalendarCore::Period &dateTimeRange)
 
     // Make sure that we never suggest a date in the past, even if the
     // user originally scheduled the meeting to be in the past.
-    QDateTime now = QDateTime::currentDateTimeUtc();
+    QDateTime const now = QDateTime::currentDateTimeUtc();
     if (tryFrom < now) {
         // The slot to look for is at least partially in the past.
         const qint64 secs = tryFrom.secsTo(tryTo);
@@ -253,7 +253,7 @@ void ConflictResolver::findAllFreeSlots()
     // and which don't match the mandatory role constraint
     QList<KCalendarCore::FreeBusy::Ptr> filteredFBItems;
     for (int i = 0; i < mFBModel->rowCount(); ++i) {
-        QModelIndex index = mFBModel->index(i);
+        QModelIndex const index = mFBModel->index(i);
         auto attendee = mFBModel->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
         if (!matchesRoleConstraint(attendee)) {
             continue;

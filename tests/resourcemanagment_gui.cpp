@@ -12,7 +12,7 @@ using namespace IncidenceEditorNG;
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QApplication const app(argc, argv);
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
