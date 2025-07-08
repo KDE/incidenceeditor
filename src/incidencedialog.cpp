@@ -774,6 +774,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
 {
     Q_D(IncidenceDialog);
 
+    // NOLINTBEGIN(bugprone-branch-clone)
     if (d->mUi->buttonBox->button(QDialogButtonBox::Ok) == button) {
         if (d->isDirty() || d->mInitiallyDirty) {
             d->mUi->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
@@ -810,12 +811,15 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
     } else {
         Q_ASSERT(false); // Shouldn't happen
     }
+    // NOLINTEND(bugprone-branch-clone)
 }
 
 void IncidenceDialog::reject()
 {
     /* cppcheck-suppress constVariablePointer */
     Q_D(IncidenceDialog);
+
+    // NOLINTBEGIN(bugprone-branch-clone)
     if (d->isDirty()
         && KMessageBox::questionTwoActions(this,
                                            i18nc("@info", "Do you really want to cancel?"),
@@ -827,12 +831,15 @@ void IncidenceDialog::reject()
     } else if (!d->isDirty()) {
         QDialog::reject(); // No pending changes, just close the dialog.
     }
+    // NOLINTEND(bugprone-branch-clone)
 }
 
 void IncidenceDialog::closeEvent(QCloseEvent *event)
 {
     /* cppcheck-suppress constVariablePointer */
     Q_D(IncidenceDialog);
+
+    // NOLINTBEGIN(bugprone-branch-clone)
     if (d->isDirty()
         && KMessageBox::questionTwoActions(this,
                                            i18nc("@info", "Do you really want to cancel?"),
@@ -848,6 +855,7 @@ void IncidenceDialog::closeEvent(QCloseEvent *event)
     } else {
         event->ignore();
     }
+    // NOLINTEND(bugprone-branch-clone)
 }
 
 void IncidenceDialog::setInitiallyDirty(bool initiallyDirty)

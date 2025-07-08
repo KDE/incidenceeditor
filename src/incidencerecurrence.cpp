@@ -357,11 +357,6 @@ bool IncidenceRecurrence::isDirty() const
         }
         break;
     case KCalendarCore::Recurrence::rMonthlyDay:
-        if (recurrenceType != RecurrenceTypeMonthly || mUi->mFrequencyEdit->value() != recurrence->frequency()
-            || mUi->mMonthlyCombo->currentIndex() != mMonthlyInitialType) {
-            return true;
-        }
-        break;
     case KCalendarCore::Recurrence::rMonthlyPos:
         if (recurrenceType != RecurrenceTypeMonthly || mUi->mFrequencyEdit->value() != recurrence->frequency()
             || mUi->mMonthlyCombo->currentIndex() != mMonthlyInitialType) {
@@ -369,17 +364,7 @@ bool IncidenceRecurrence::isDirty() const
         }
         break;
     case KCalendarCore::Recurrence::rYearlyDay:
-        if (recurrenceType != RecurrenceTypeYearly || mUi->mFrequencyEdit->value() != recurrence->frequency()
-            || mUi->mYearlyCombo->currentIndex() != mYearlyInitialType) {
-            return true;
-        }
-        break;
     case KCalendarCore::Recurrence::rYearlyMonth:
-        if (recurrenceType != RecurrenceTypeYearly || mUi->mFrequencyEdit->value() != recurrence->frequency()
-            || mUi->mYearlyCombo->currentIndex() != mYearlyInitialType) {
-            return true;
-        }
-        break;
     case KCalendarCore::Recurrence::rYearlyPos:
         if (recurrenceType != RecurrenceTypeYearly || mUi->mFrequencyEdit->value() != recurrence->frequency()
             || mUi->mYearlyCombo->currentIndex() != mYearlyInitialType) {

@@ -97,6 +97,7 @@ void KTimeZoneComboBox::selectTimeZoneFor(const QDateTime &dateTime)
 
 QTimeZone KTimeZoneComboBox::selectedTimeZone() const
 {
+    // NOLINTBEGIN(bugprone-branch-clone)
     QTimeZone zone;
     if (currentIndex() >= 0) {
         if (currentIndex() == 0) { // Local
@@ -109,6 +110,7 @@ QTimeZone KTimeZoneComboBox::selectedTimeZone() const
             zone = QTimeZone(d->mZones[currentIndex()]);
         }
     }
+    // NOLINTEND(bugprone-branch-clone)
 
     return zone;
 }

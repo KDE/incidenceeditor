@@ -157,8 +157,8 @@ void AlarmDialog::save(const KCalendarCore::Alarm::Ptr &alarm) const
 
     // TODO: Add possibility to specify a given time for the reminder
 
-    // We assume that if mAllowBeginReminders is not set, that mAllowBeginReminders
-    // is set.
+    // NOLINTBEGIN(bugprone-branch-clone)
+    // We assume that if mAllowBeginReminders is not set, that mAllowBeginReminders is set.
     if (!mAllowBeginReminders) { // before or after DTDUE
         alarm->setEndOffset(KCalendarCore::Duration(offset));
     } else if (beforeafterpos == 0 || beforeafterpos == 1) { // before or after DTSTART
@@ -166,6 +166,7 @@ void AlarmDialog::save(const KCalendarCore::Alarm::Ptr &alarm) const
     } else if (beforeafterpos == 2 || beforeafterpos == 3) { // before or after DTEND/DTDUE
         alarm->setEndOffset(KCalendarCore::Duration(offset));
     }
+    // NOLINTEND(bugprone-branch-clone)
 
     // Repeating
     if (mUi->mRepeats->isChecked()) {
