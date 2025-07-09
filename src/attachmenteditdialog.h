@@ -41,7 +41,6 @@ protected Q_SLOTS:
     virtual void slotApply();
 
 private:
-    KCalendarCore::Attachment mAttachment;
     AttachmentIconItem *const mItem;
     QMimeType mMimeType;
     Ui::AttachmentEditDialog *const mUi;

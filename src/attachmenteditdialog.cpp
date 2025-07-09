@@ -28,14 +28,6 @@ using namespace IncidenceEditorNG;
 
 AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *parent, bool modal)
     : QDialog(parent)
-    ,
-#if KDEPIM_ENTERPRISE_BUILD
-    mAttachment(KCalendarCore::Attachment('\0'))
-// use the non-uri constructor
-// as we want inline by default
-#else
-    mAttachment(KCalendarCore::Attachment(QString()))
-#endif
     , mItem(item)
     , mUi(new Ui::AttachmentEditDialog)
 {
