@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:42+0000\n"
+"POT-Creation-Date: 2025-07-09 00:43+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,42 +31,42 @@ msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Upraviť existujúcu pripomienku"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "Before the to-do starts"
 msgstr "Pred začatím úlohy"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "After the to-do starts"
 msgstr "Po začatí úlohy"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "Before the to-do is due"
 msgstr "Pred termínom úlohy"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "After the to-do is due"
 msgstr "Po termíne úlohy"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "Before the event starts"
 msgstr "Pred začatím udalosti"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "After the event starts"
 msgstr "Po začatí udalosti"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "Before the event ends"
 msgstr "Pred skončením udalosti"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "After the event ends"
 msgstr "Po skončení udalosti"
@@ -669,7 +669,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrať účastníkov"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:626
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -678,7 +678,7 @@ msgstr[0] "Konflikt"
 msgstr[1] "%1 konfliktov"
 msgstr[2] "%1 konfliktov"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -689,14 +689,14 @@ msgstr ""
 "Meníte organizátora tejto udalosti. Keďže aj organizátor je účastníkom tejto "
 "udalosti, chcete zmeniť aj korešpondujúceho účastníka?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Účastník"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:802
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1063,25 +1063,25 @@ msgstr ""
 "šablón. Šablóny uľahčia vytváranie nových položiek cez vloženie vašich "
 "obľúbených hodnôt do editora automaticky."
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:821 incidencedialog.cpp:838
+#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Chcete naozaj zrušiť?"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:822 incidencedialog.cpp:839
+#: incidencedialog.cpp:801 incidencedialog.cpp:826 incidencedialog.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer Potvrdenie"
 
-#: incidencedialog.cpp:801 incidencedialog.cpp:823 incidencedialog.cpp:840
+#: incidencedialog.cpp:802 incidencedialog.cpp:827 incidencedialog.cpp:847
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:802 incidencedialog.cpp:824 incidencedialog.cpp:841
+#: incidencedialog.cpp:803 incidencedialog.cpp:828 incidencedialog.cpp:848
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1141,7 +1141,7 @@ msgctxt ""
 msgid "0"
 msgstr "0"
 
-#: incidencerecurrence.cpp:462
+#: incidencerecurrence.cpp:447
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1150,85 +1150,85 @@ msgstr ""
 "Opakovaná udalosť alebo úloha sa musí opakovať aspoň raz. Upravte parametre "
 "opakovania."
 
-#: incidencerecurrence.cpp:468
+#: incidencerecurrence.cpp:453
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "Dátum začatia udalosti je neplatný."
 
-#: incidencerecurrence.cpp:474
+#: incidencerecurrence.cpp:459
 #, fuzzy, kde-format
 #| msgid "The incidence's start date is invalid."
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "Dátum začatia udalosti je neplatný."
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:502
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1"
 
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:505
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "%1 po posledný deň"
 
-#: incidencerecurrence.cpp:523
+#: incidencerecurrence.cpp:508
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:529
+#: incidencerecurrence.cpp:514
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "posledné %1"
 
-#: incidencerecurrence.cpp:531
+#: incidencerecurrence.cpp:516
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1 po posledný %2"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 z %2"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:535
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%1 po posledný deň %2"
 
-#: incidencerecurrence.cpp:553
+#: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%1 %2 z %3"
 
-#: incidencerecurrence.cpp:560
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "posledný %1 z %2"
 
-#: incidencerecurrence.cpp:565
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%1 po posledný %2 z %3 "
 
-#: incidencerecurrence.cpp:572
+#: incidencerecurrence.cpp:557
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "%1 deň roka"
 
-#: incidencerecurrence.cpp:587
+#: incidencerecurrence.cpp:572
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1237,7 +1237,7 @@ msgstr[0] "výskyt"
 msgstr[1] "výskytov"
 msgstr[2] "výskytov"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:596
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1246,7 +1246,7 @@ msgstr[0] "týždeň"
 msgstr[1] "týždne"
 msgstr[2] "týždne"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:600
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1255,7 +1255,7 @@ msgstr[0] "mesiac"
 msgstr[1] "mesiacov"
 msgstr[2] "mesiacov"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:604
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1264,7 +1264,7 @@ msgstr[0] "rok"
 msgstr[1] "rokov"
 msgstr[2] "rokov"
 
-#: incidencerecurrence.cpp:623
+#: incidencerecurrence.cpp:608
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1273,7 +1273,7 @@ msgstr[0] "deň"
 msgstr[1] "dni"
 msgstr[2] "dní"
 
-#: incidencerecurrence.cpp:631
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "

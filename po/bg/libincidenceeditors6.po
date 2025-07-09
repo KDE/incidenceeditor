@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:42+0000\n"
+"POT-Creation-Date: 2025-07-09 00:43+0000\n"
 "PO-Revision-Date: 2025-03-17 00:05+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -29,42 +29,42 @@ msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Редактиране на съществуващото напомняне"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "Before the to-do starts"
 msgstr "Преди започване на задачата"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "After the to-do starts"
 msgstr "След започване на задачата"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "Before the to-do is due"
 msgstr "Преди изпълнението на задачата"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "After the to-do is due"
 msgstr "След изпълнението на задачата"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "Before the event starts"
 msgstr "Преди началото на събитието"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "After the event starts"
 msgstr "След началото на събитието"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "Before the event ends"
 msgstr "Преди края на събитието"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "After the event ends"
 msgstr "След края на събитието"
@@ -646,7 +646,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Избор на участници"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:626
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -654,7 +654,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 конфликт"
 msgstr[1] "%1 конфликта"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -665,13 +665,13 @@ msgstr ""
 "Сменяте организатора на това събитие. Тъй като организаторът също присъства "
 "на това събитие, бихте ли искали да промените и съответния участник?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Промяна на участник"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1019,25 +1019,25 @@ msgstr ""
 "нови елементи по-лесно и по-бързо, като автоматично добавят любимите ви "
 "стойности по подразбиране в редактора."
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:821 incidencedialog.cpp:838
+#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Наистина ли искате операцията да бъде отменена?"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:822 incidencedialog.cpp:839
+#: incidencedialog.cpp:801 incidencedialog.cpp:826 incidencedialog.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Потвърждение на KOrganizer"
 
-#: incidencedialog.cpp:801 incidencedialog.cpp:823 incidencedialog.cpp:840
+#: incidencedialog.cpp:802 incidencedialog.cpp:827 incidencedialog.cpp:847
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Отмяна на редактиране"
 
-#: incidencedialog.cpp:802 incidencedialog.cpp:824 incidencedialog.cpp:841
+#: incidencedialog.cpp:803 incidencedialog.cpp:828 incidencedialog.cpp:848
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1096,7 +1096,7 @@ msgctxt ""
 msgid "0"
 msgstr "0"
 
-#: incidencerecurrence.cpp:462
+#: incidencerecurrence.cpp:447
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1105,84 +1105,84 @@ msgstr ""
 "Повтарящо се събитие или задължение трябва да се случи поне веднъж. "
 "Коригирайте повтарящите се параметри."
 
-#: incidencerecurrence.cpp:468
+#: incidencerecurrence.cpp:453
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "Началната дата на събитието е невалидна."
 
-#: incidencerecurrence.cpp:474
+#: incidencerecurrence.cpp:459
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "Крайната дата на повторението е невалидна."
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:502
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1"
 
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:505
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "%1 до последния ден"
 
-#: incidencerecurrence.cpp:523
+#: incidencerecurrence.cpp:508
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:529
+#: incidencerecurrence.cpp:514
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "последният %1"
 
-#: incidencerecurrence.cpp:531
+#: incidencerecurrence.cpp:516
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1 до последен %2"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%1 от %2"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:535
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%1 до последния ден на %2"
 
-#: incidencerecurrence.cpp:553
+#: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%1 %2 от %3"
 
-#: incidencerecurrence.cpp:560
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "последният %1 от %2"
 
-#: incidencerecurrence.cpp:565
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%1 до последен %2 от %3 "
 
-#: incidencerecurrence.cpp:572
+#: incidencerecurrence.cpp:557
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "%1 ден от годината"
 
-#: incidencerecurrence.cpp:587
+#: incidencerecurrence.cpp:572
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1190,7 +1190,7 @@ msgid_plural "occurrences"
 msgstr[0] "събитие"
 msgstr[1] "събития"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:596
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1198,7 +1198,7 @@ msgid_plural "weeks"
 msgstr[0] "седмица"
 msgstr[1] "седмици"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:600
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1206,7 +1206,7 @@ msgid_plural "months"
 msgstr[0] "месец"
 msgstr[1] "месеца"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:604
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1214,7 +1214,7 @@ msgid_plural "years"
 msgstr[0] "година"
 msgstr[1] "години"
 
-#: incidencerecurrence.cpp:623
+#: incidencerecurrence.cpp:608
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1222,7 +1222,7 @@ msgid_plural "days"
 msgstr[0] "ден"
 msgstr[1] "дена"
 
-#: incidencerecurrence.cpp:631
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "

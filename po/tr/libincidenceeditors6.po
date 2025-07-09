@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:42+0000\n"
+"POT-Creation-Date: 2025-07-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-02 16:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -33,42 +33,42 @@ msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "Var Olan Anımsatıcıyı Düzenle"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "Before the to-do starts"
 msgstr "Yapılacaklar başlamadan önce"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "After the to-do starts"
 msgstr "Yapılacaklar başladıktan sonra"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "Before the to-do is due"
 msgstr "Yapılacaklar bitmeden önce"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "After the to-do is due"
 msgstr "Yapılacaklar bittikten sonra"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "Before the event starts"
 msgstr "Etkinlik başlamadan önce"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "After the event starts"
 msgstr "Etkinlik başladıktan sorna"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "Before the event ends"
 msgstr "Etkinlik bitmeden önce"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "After the event ends"
 msgstr "Etkinlik başladıktan sonra"
@@ -647,7 +647,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Katılımcıları Seç"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:626
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -655,7 +655,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 çakışma"
 msgstr[1] "%1 çakışma"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -666,13 +666,13 @@ msgstr ""
 "Bu etkinliğin düzenleyicisini değiştiriyorsunuz. Düzenleyici de etkinliğe "
 "katılacağından, ilgili katılımcıyı da düzenlemek ister misiniz?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Katılımcıyı Değiştir"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1020,25 +1020,25 @@ msgstr ""
 "düzenleyiciye kendiliğinden koyarak ögeleri daha kolay ve daha hızlı "
 "oluşturmanızı sağlayabilir."
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:821 incidencedialog.cpp:838
+#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "İptal etmek istediğinizden emin misiniz?"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:822 incidencedialog.cpp:839
+#: incidencedialog.cpp:801 incidencedialog.cpp:826 incidencedialog.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "K Organizatör Onayı"
 
-#: incidencedialog.cpp:801 incidencedialog.cpp:823 incidencedialog.cpp:840
+#: incidencedialog.cpp:802 incidencedialog.cpp:827 incidencedialog.cpp:847
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Düzenlemeyi İptal Et"
 
-#: incidencedialog.cpp:802 incidencedialog.cpp:824 incidencedialog.cpp:841
+#: incidencedialog.cpp:803 incidencedialog.cpp:828 incidencedialog.cpp:848
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1096,7 +1096,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:462
+#: incidencerecurrence.cpp:447
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1105,84 +1105,84 @@ msgstr ""
 "Yinelenen etkinlik veya yapılacak iş en az bir kez yapılmalıdır. Yinelenme "
 "parametrelerini ayarlayın."
 
-#: incidencerecurrence.cpp:468
+#: incidencerecurrence.cpp:453
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "Etkinliğin başlama tarihi geçersiz."
 
-#: incidencerecurrence.cpp:474
+#: incidencerecurrence.cpp:459
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "Yeniden oluş bitiş tarihi geçersiz."
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:502
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1."
 
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:505
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "%1 gününden son güne"
 
-#: incidencerecurrence.cpp:523
+#: incidencerecurrence.cpp:508
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1 %2"
 
-#: incidencerecurrence.cpp:529
+#: incidencerecurrence.cpp:514
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "son %1"
 
-#: incidencerecurrence.cpp:531
+#: incidencerecurrence.cpp:516
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "%1 gününden son %2 gününe"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%2 ayının %1 günü"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:535
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%2 ayının %1. gününden son gününe"
 
-#: incidencerecurrence.cpp:553
+#: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%3 ayının %1. %2 günü"
 
-#: incidencerecurrence.cpp:560
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "%2 ayının son %1 günü"
 
-#: incidencerecurrence.cpp:565
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%3 ayının %1. gününden son %2 gününe"
 
-#: incidencerecurrence.cpp:572
+#: incidencerecurrence.cpp:557
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "yılın %1. günü"
 
-#: incidencerecurrence.cpp:587
+#: incidencerecurrence.cpp:572
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1190,7 +1190,7 @@ msgid_plural "occurrences"
 msgstr[0] "oluş"
 msgstr[1] "oluş"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:596
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1198,7 +1198,7 @@ msgid_plural "weeks"
 msgstr[0] "hafta"
 msgstr[1] "hafta"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:600
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1206,7 +1206,7 @@ msgid_plural "months"
 msgstr[0] "ay"
 msgstr[1] "ay"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:604
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1214,7 +1214,7 @@ msgid_plural "years"
 msgstr[0] "yıl"
 msgstr[1] "yıl"
 
-#: incidencerecurrence.cpp:623
+#: incidencerecurrence.cpp:608
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1222,7 +1222,7 @@ msgid_plural "days"
 msgstr[0] "gün"
 msgstr[1] "gün"
 
-#: incidencerecurrence.cpp:631
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "

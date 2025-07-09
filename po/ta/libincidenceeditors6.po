@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:42+0000\n"
+"POT-Creation-Date: 2025-07-09 00:43+0000\n"
 "PO-Revision-Date: 2024-06-16 19:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -29,42 +29,42 @@ msgctxt "@title:window"
 msgid "Edit existing reminder"
 msgstr "ஏற்கனவேயுள்ள நினைவூட்டவலை மாற்றுவது"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "Before the to-do starts"
 msgstr "செய்யவேண்டியது துவங்குமுன்"
 
-#: alarmdialog.cpp:193
+#: alarmdialog.cpp:194
 #, kde-format
 msgid "After the to-do starts"
 msgstr "செய்யவேண்டியது துவங்கிய பின்"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "Before the to-do is due"
 msgstr "செய்யவேண்டியதற்குரிய நேரத்திற்கு முன்"
 
-#: alarmdialog.cpp:197
+#: alarmdialog.cpp:198
 #, kde-format
 msgid "After the to-do is due"
 msgstr "செய்யவேண்டியதற்குரிய நேரத்திற்கு பின்"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "Before the event starts"
 msgstr "நிகழ்வு துவங்குமுன்"
 
-#: alarmdialog.cpp:201
+#: alarmdialog.cpp:202
 #, kde-format
 msgid "After the event starts"
 msgstr "நிகழ்வு துவங்கியபின்"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "Before the event ends"
 msgstr "நிகழ்வு முடியுமும்"
 
-#: alarmdialog.cpp:204
+#: alarmdialog.cpp:205
 #, kde-format
 msgid "After the event ends"
 msgstr "நிகழ்வு முடிந்தபின்"
@@ -642,7 +642,7 @@ msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "பங்கேற்போரை தேர்ந்தெடுப்பது"
 
-#: incidenceattendee.cpp:625
+#: incidenceattendee.cpp:626
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -650,7 +650,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 முரண்பாடு"
 msgstr[1] "%1 முரண்பாடுகள்"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:797
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -661,13 +661,13 @@ msgstr ""
 "இந்நிகழ்வை நடத்துபவரை மாற்றுகிறீர்கள். இந்நிகழ்வில் அவர் பங்கேற்கவும் செய்வதால், பங்கேற்பவரின் "
 "பட்டியலில் அவருக்குரிய பதிவையும் மாற்ற விரும்புகிறீர்களா?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "பங்கேற்பவரையும் மாற்று"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:802
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1014,25 +1014,25 @@ msgstr ""
 "உருவாக்கும்போது, நீங்கள் அமைக்கும் மதிப்புகளை நிகழ்வுத்திருத்தியில் தானாக நிரப்ப "
 "வார்ப்புருக்கள் உதவும்."
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:821 incidencedialog.cpp:838
+#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "உறுதியாக ரத்து செய்ய விரும்புகிறீர்களா?"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:822 incidencedialog.cpp:839
+#: incidencedialog.cpp:801 incidencedialog.cpp:826 incidencedialog.cpp:846
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "கேயார்கனைசர் உறுதிப்பாடு"
 
-#: incidencedialog.cpp:801 incidencedialog.cpp:823 incidencedialog.cpp:840
+#: incidencedialog.cpp:802 incidencedialog.cpp:827 incidencedialog.cpp:847
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "திருத்துவதை ரத்து செய்"
 
-#: incidencedialog.cpp:802 incidencedialog.cpp:824 incidencedialog.cpp:841
+#: incidencedialog.cpp:803 incidencedialog.cpp:828 incidencedialog.cpp:848
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1090,7 +1090,7 @@ msgctxt ""
 msgid "0"
 msgstr "1"
 
-#: incidencerecurrence.cpp:462
+#: incidencerecurrence.cpp:447
 #, kde-format
 msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
@@ -1099,84 +1099,84 @@ msgstr ""
 "மீளநிகழும் நிகழ்வு அல்லது உருப்படி, ஒருமுறையாவது நிகழ வேண்டும். மறுநிகழ்விற்கான "
 "அமைப்புகளை மாற்றுங்கள்."
 
-#: incidencerecurrence.cpp:468
+#: incidencerecurrence.cpp:453
 #, kde-format
 msgid "The incidence's start date is invalid."
 msgstr "நிகழ்வின் துவக்க தேதி செல்லுபடியாத‍து."
 
-#: incidencerecurrence.cpp:474
+#: incidencerecurrence.cpp:459
 #, kde-format
 msgctxt "@info"
 msgid "The recurrence end date is invalid."
 msgstr "முறுநிகழ்வின் துவக்க தேதி செல்லுபடியாகாத‍து."
 
-#: incidencerecurrence.cpp:517
+#: incidencerecurrence.cpp:502
 #, kde-format
 msgctxt "example: the 30th"
 msgid "the %1"
 msgstr "%1வது"
 
-#: incidencerecurrence.cpp:520
+#: incidencerecurrence.cpp:505
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
 msgstr "கடைசியிலிருந்து %1வது"
 
-#: incidencerecurrence.cpp:523
+#: incidencerecurrence.cpp:508
 #, kde-format
 msgctxt "example: the 5th Wednesday"
 msgid "the %1 %2"
 msgstr "%1வது %2"
 
-#: incidencerecurrence.cpp:529
+#: incidencerecurrence.cpp:514
 #, kde-format
 msgctxt "example: the last Wednesday"
 msgid "the last %1"
 msgstr "கடைசி %1"
 
-#: incidencerecurrence.cpp:531
+#: incidencerecurrence.cpp:516
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
 msgstr "கடைசியிலிருந்து %1வது %2"
 
-#: incidencerecurrence.cpp:547
+#: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
 msgstr "%2 %1வது"
 
-#: incidencerecurrence.cpp:550
+#: incidencerecurrence.cpp:535
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
 msgstr "%2-இன் கடைசியிலிருந்து %1வது நாள்"
 
-#: incidencerecurrence.cpp:553
+#: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
 msgstr "%3-இன் %1வது %2"
 
-#: incidencerecurrence.cpp:560
+#: incidencerecurrence.cpp:545
 #, kde-format
 msgctxt "example: the last Wednesday of June"
 msgid "the last %1 of %2"
 msgstr "%2-இன் கடைசி %1"
 
-#: incidencerecurrence.cpp:565
+#: incidencerecurrence.cpp:550
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
 msgstr "%3-இன் கடைசியிலிருந்து %1வது %2 "
 
-#: incidencerecurrence.cpp:572
+#: incidencerecurrence.cpp:557
 #, kde-format
 msgctxt "example: the 15th day of the year"
 msgid "the %1 day of the year"
 msgstr "ஆண்டின் %1வது நாள்"
 
-#: incidencerecurrence.cpp:587
+#: incidencerecurrence.cpp:572
 #, kde-format
 msgctxt "Recurrence ends after n occurrences"
 msgid "occurrence"
@@ -1184,7 +1184,7 @@ msgid_plural "occurrences"
 msgstr[0] "நிகழ்வு"
 msgstr[1] "நிகழ்வுகள்"
 
-#: incidencerecurrence.cpp:611
+#: incidencerecurrence.cpp:596
 #, kde-format
 msgctxt "repeat every N >weeks<"
 msgid "week"
@@ -1192,7 +1192,7 @@ msgid_plural "weeks"
 msgstr[0] "வாரம்"
 msgstr[1] "வாரங்கள்"
 
-#: incidencerecurrence.cpp:615
+#: incidencerecurrence.cpp:600
 #, kde-format
 msgctxt "repeat every N >months<"
 msgid "month"
@@ -1200,7 +1200,7 @@ msgid_plural "months"
 msgstr[0] "மாதம்"
 msgstr[1] "மாதங்கள்"
 
-#: incidencerecurrence.cpp:619
+#: incidencerecurrence.cpp:604
 #, kde-format
 msgctxt "repeat every N >years<"
 msgid "year"
@@ -1208,7 +1208,7 @@ msgid_plural "years"
 msgstr[0] "ஆண்டு"
 msgstr[1] "ஆண்டுகள்"
 
-#: incidencerecurrence.cpp:623
+#: incidencerecurrence.cpp:608
 #, kde-format
 msgctxt "repeat every N >days<"
 msgid "day"
@@ -1216,7 +1216,7 @@ msgid_plural "days"
 msgstr[0] "நாள்"
 msgstr[1] "நாட்கள்"
 
-#: incidencerecurrence.cpp:631
+#: incidencerecurrence.cpp:616
 #, kde-format
 msgctxt ""
 "repeat >every< N years/months/...; dynamic context 'type': 'd' days, 'w' "
