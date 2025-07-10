@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:43+0000\n"
+"POT-Creation-Date: 2025-07-10 02:34+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -161,7 +161,7 @@ msgstr[1] "%1 d. prieš pradžią"
 msgstr[2] "%1 d. prieš pradžią"
 msgstr[3] "%1 d. prieš pradžią"
 
-#: attachmenteditdialog.cpp:42
+#: attachmenteditdialog.cpp:34
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Add Attachment"
@@ -169,13 +169,13 @@ msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Pridėti priedą"
 
-#: attachmenteditdialog.cpp:61
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: attachmenteditdialog.cpp:115
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:43+0000\n"
+"POT-Creation-Date: 2025-07-10 02:34+0000\n"
 "PO-Revision-Date: 2025-02-06 07:59-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -134,19 +134,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 dia antes de terminar"
 msgstr[1] "%1 dias antes de terminar"
 
-#: attachmenteditdialog.cpp:42
+#: attachmenteditdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Editar anexo"
 
-#: attachmenteditdialog.cpp:61
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: attachmenteditdialog.cpp:115
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
