@@ -530,6 +530,8 @@ msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
 msgstr ""
+"您真的想要删除这些附件吗？\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
@@ -1657,7 +1659,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
-msgstr ""
+msgstr "<html><head/><body><p>将附件文件的副本存储在日历中</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1679,7 +1681,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr ""
+msgstr "将附件的副本存储在日历中 "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
