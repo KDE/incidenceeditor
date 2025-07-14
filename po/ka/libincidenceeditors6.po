@@ -967,7 +967,7 @@ msgstr "დავაყენო ნაგულისხმევი კალ�
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "ნაგულისხმებად დაყენება"
+msgstr "ნაგულისხმევად დაყენება"
 
 #: incidencedialog.cpp:512
 #, kde-format
@@ -1045,7 +1045,7 @@ msgstr "არ გააუქმო"
 #: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "ელფოსტაზე ფაილის მიმაგრების ნაგულისხმები მეთოდი"
+msgstr "ელფოსტაზე ფაილის მიმაგრების ნაგულისხმევი მეთოდი"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13

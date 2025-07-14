@@ -530,6 +530,8 @@ msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
 msgstr ""
+"您真的想要删除这些附件吗？\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
