@@ -243,8 +243,6 @@ void ConflictResolver::findAllFreeSlots()
     //          So, the array would have a length of 672
     const int range = begin.secsTo(end) / mSlotResolutionSeconds;
     if (range <= 0) {
-        qCWarning(INCIDENCEEDITOR_LOG) << "free slot calculation: invalid range. range( " << begin.secsTo(end) << ") / mSlotResolutionSeconds("
-                                       << mSlotResolutionSeconds << ") = " << range;
         return;
     }
 
