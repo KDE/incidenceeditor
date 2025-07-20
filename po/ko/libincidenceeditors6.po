@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-10 00:43+0000\n"
-"PO-Revision-Date: 2025-04-06 22:13+0200\n"
+"PO-Revision-Date: 2025-07-20 01:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -525,14 +525,14 @@ msgid "Add Attachment"
 msgstr "첨부 파일 추가"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to remove these attachments?<nl/>%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "다음 첨부 파일을 삭제하시겠습니까?<nl/>%1"
+msgstr ""
+"다음 첨부 파일을 삭제하시겠습니까?\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
