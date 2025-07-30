@@ -93,9 +93,6 @@ Q_SIGNALS:
 
     void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction action, const QString &message);
 
-    void revertFinished();
-    void revertFailed(const QString &message);
-
 private:
     std::unique_ptr<ItemEditorPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(ItemEditor)
