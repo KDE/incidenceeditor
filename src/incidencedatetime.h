@@ -13,6 +13,8 @@
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
 
+#include <KMessageWidget>
+
 #include <QDate>
 
 namespace Ui
@@ -78,6 +80,7 @@ Q_SIGNALS:
     void endTimeChanged(const QTime &newTime);
 
 private: /// General
+    void showMessage(const QString &message, KMessageWidget::MessageType type);
     void setTimeZonesVisibility(bool visible);
     void toggleTimeZoneVisibility();
     void updateStartTime(const QTime &newTime);

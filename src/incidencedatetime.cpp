@@ -123,6 +123,13 @@ bool IncidenceDateTime::eventFilter(QObject *obj, QEvent *event)
     }
 }
 
+void IncidenceDateTime::showMessage(const QString &message, KMessageWidget::MessageType type)
+{
+    mUi->mMessageWidget->setText(message);
+    mUi->mMessageWidget->setMessageType(type);
+    mUi->mMessageWidget->show();
+}
+
 void IncidenceDateTime::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (mLoadedIncidence && *mLoadedIncidence == *incidence) {
@@ -561,6 +568,14 @@ void IncidenceDateTime::load(const KCalendarCore::Event::Ptr &event, bool isTemp
     } else {
         QDateTime const startDT = event->dtStart();
         QDateTime const endDT = event->dtEnd();
+        const QDateTime rightNow = QDateTime::currentDateTime();
+        if (mLoadedIncidence->summary().isEmpty()) {
+            if ((mLoadedIncidence->allDay() && endDT.date() < rightNow.date()) || (!mLoadedIncidence->allDay() && endDT < rightNow)) {
+                showMessage(i18nc("@info", "The event you are creating ends in the past."), KMessageWidget::Information);
+            } else if ((mLoadedIncidence->allDay() && startDT.date() < rightNow.date()) || (!mLoadedIncidence->allDay() && startDT < rightNow)) {
+                showMessage(i18nc("@info", "The event you are creating starts in the past."), KMessageWidget::Information);
+            }
+        }
         setDateTimes(startDT, endDT);
     }
 
@@ -665,6 +680,15 @@ void IncidenceDateTime::load(const KCalendarCore::Todo::Ptr &todo, bool isTempla
     } else {
         const QDateTime endDT = todo->hasDueDate() ? todo->dtDue(true /** first */) : rightNow;
         const QDateTime startDT = todo->hasStartDate() ? todo->dtStart(true /** first */) : rightNow;
+        if (mLoadedIncidence->summary().isEmpty()) {
+            if ((mLoadedIncidence->allDay() && endDT.date() < rightNow.date()) || (!mLoadedIncidence->allDay() && endDT < rightNow)) {
+                showMessage(i18nc("@info", "The to-do you are creating is due in the past. Once saved, it will be adjusted for today's date"),
+                            KMessageWidget::Warning);
+            } else if ((mLoadedIncidence->allDay() && startDT.date() < rightNow.date()) || (!mLoadedIncidence->allDay() && startDT < rightNow)) {
+                showMessage(i18nc("@info", "The to-do you are creating starts in the past. Once saved, it will be adjusted for today's date"),
+                            KMessageWidget::Warning);
+            }
+        }
         setDateTimes(startDT, endDT);
     }
 }
