@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:43+0000\n"
+"POT-Creation-Date: 2025-08-03 00:42+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -704,82 +704,110 @@ msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Neposielať"
 
-#: incidencedatetime.cpp:217
+#: incidencedatetime.cpp:224
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Časové pásma"
 
-#: incidencedatetime.cpp:621
+#: incidencedatetime.cpp:574
+#, kde-format
+msgctxt "@info"
+msgid "The event you are creating ends in the past."
+msgstr ""
+
+#: incidencedatetime.cpp:576
+#, kde-format
+msgctxt "@info"
+msgid "The event you are creating starts in the past."
+msgstr ""
+
+#: incidencedatetime.cpp:636
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Termín:"
 
-#: incidencedatetime.cpp:749 incidencedatetime.cpp:750
+#: incidencedatetime.cpp:685
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do you are creating is due in the past. Once saved, it will be "
+"adjusted for today's date"
+msgstr ""
+
+#: incidencedatetime.cpp:688
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do you are creating starts in the past. Once saved, it will be "
+"adjusted for today's date"
+msgstr ""
+
+#: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, fuzzy, kde-format
 #| msgid "Starts: %1"
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Začína: %1"
 
-#: incidencedatetime.cpp:752
+#: incidencedatetime.cpp:776
 #, fuzzy, kde-format
 #| msgid "Starting Date"
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Dátum spustenia"
 
-#: incidencedatetime.cpp:753
+#: incidencedatetime.cpp:777
 #, fuzzy, kde-format
 #| msgid "Starting Time"
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Čas začatia"
 
-#: incidencedatetime.cpp:762 incidencedatetime.cpp:763
+#: incidencedatetime.cpp:786 incidencedatetime.cpp:787
 #, fuzzy, kde-format
 #| msgid "Due on: %1"
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Termín o: %1"
 
-#: incidencedatetime.cpp:765 incidencedatetime.cpp:766
+#: incidencedatetime.cpp:789 incidencedatetime.cpp:790
 #, fuzzy, kde-format
 #| msgid "Ends: %1"
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Končí: %1"
 
-#: incidencedatetime.cpp:770
+#: incidencedatetime.cpp:794
 #, fuzzy, kde-format
 #| msgid "Due Date"
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Dátum termínu"
 
-#: incidencedatetime.cpp:771
+#: incidencedatetime.cpp:795
 #, fuzzy, kde-format
 #| msgid "Due Time"
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Čas termínu"
 
-#: incidencedatetime.cpp:773
+#: incidencedatetime.cpp:797
 #, fuzzy, kde-format
 #| msgid "Ending Date"
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Dátum ukončenia"
 
-#: incidencedatetime.cpp:774
+#: incidencedatetime.cpp:798
 #, fuzzy, kde-format
 #| msgid "Ending Time"
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Čas skončenia"
 
-#: incidencedatetime.cpp:852
+#: incidencedatetime.cpp:876
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid start date and time."
@@ -787,7 +815,7 @@ msgctxt "@info"
 msgid "Invalid start date."
 msgstr "Neplatný dátum a čas začiatku."
 
-#: incidencedatetime.cpp:857
+#: incidencedatetime.cpp:881
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid start date and time."
@@ -795,7 +823,7 @@ msgctxt "@info"
 msgid "Invalid start time."
 msgstr "Neplatný dátum a čas začiatku."
 
-#: incidencedatetime.cpp:865
+#: incidencedatetime.cpp:889
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid end date and time."
@@ -803,7 +831,7 @@ msgctxt "@info"
 msgid "Invalid end date."
 msgstr "Neplatný dátum a čas ukončenia."
 
-#: incidencedatetime.cpp:870
+#: incidencedatetime.cpp:894
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid end date and time."
@@ -811,7 +839,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Neplatný dátum a čas ukončenia."
 
-#: incidencedatetime.cpp:879
+#: incidencedatetime.cpp:903
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -821,7 +849,7 @@ msgstr ""
 "Udalosť končí predtým, ako sa začne.\n"
 "Prosím opravte dátumy a časy."
 
-#: incidencedatetime.cpp:883
+#: incidencedatetime.cpp:907
 #, kde-format
 msgctxt "@info"
 msgid ""

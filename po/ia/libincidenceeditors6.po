@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:43+0000\n"
+"POT-Creation-Date: 2025-08-03 00:42+0000\n"
 "PO-Revision-Date: 2025-03-11 09:59+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -679,97 +679,125 @@ msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Non modifica"
 
-#: incidencedatetime.cpp:217
+#: incidencedatetime.cpp:224
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Fusos horari"
 
-#: incidencedatetime.cpp:621
+#: incidencedatetime.cpp:574
+#, kde-format
+msgctxt "@info"
+msgid "The event you are creating ends in the past."
+msgstr ""
+
+#: incidencedatetime.cpp:576
+#, kde-format
+msgctxt "@info"
+msgid "The event you are creating starts in the past."
+msgstr ""
+
+#: incidencedatetime.cpp:636
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Perimite:"
 
-#: incidencedatetime.cpp:749 incidencedatetime.cpp:750
+#: incidencedatetime.cpp:685
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do you are creating is due in the past. Once saved, it will be "
+"adjusted for today's date"
+msgstr ""
+
+#: incidencedatetime.cpp:688
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The to-do you are creating starts in the past. Once saved, it will be "
+"adjusted for today's date"
+msgstr ""
+
+#: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Initia: %1"
 
-#: incidencedatetime.cpp:752
+#: incidencedatetime.cpp:776
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Data de initio"
 
-#: incidencedatetime.cpp:753
+#: incidencedatetime.cpp:777
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Temmpore de initio"
 
-#: incidencedatetime.cpp:762 incidencedatetime.cpp:763
+#: incidencedatetime.cpp:786 incidencedatetime.cpp:787
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Expira le %1"
 
-#: incidencedatetime.cpp:765 incidencedatetime.cpp:766
+#: incidencedatetime.cpp:789 incidencedatetime.cpp:790
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Termina: %1"
 
-#: incidencedatetime.cpp:770
+#: incidencedatetime.cpp:794
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Data de expiration"
 
-#: incidencedatetime.cpp:771
+#: incidencedatetime.cpp:795
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Tempore perimite"
 
-#: incidencedatetime.cpp:773
+#: incidencedatetime.cpp:797
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Date final"
 
-#: incidencedatetime.cpp:774
+#: incidencedatetime.cpp:798
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Tempore final"
 
-#: incidencedatetime.cpp:852
+#: incidencedatetime.cpp:876
 #, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
 msgstr "Invalide data de initio."
 
-#: incidencedatetime.cpp:857
+#: incidencedatetime.cpp:881
 #, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
 msgstr "Invalide tempore de initio."
 
-#: incidencedatetime.cpp:865
+#: incidencedatetime.cpp:889
 #, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
 msgstr "Invalide data de fin."
 
-#: incidencedatetime.cpp:870
+#: incidencedatetime.cpp:894
 #, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Invalide tempore de fin."
 
-#: incidencedatetime.cpp:879
+#: incidencedatetime.cpp:903
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -779,7 +807,7 @@ msgstr ""
 "Le evento termina ante que il initia.\n"
 "Pro favor tu corrige datas e tempores."
 
-#: incidencedatetime.cpp:883
+#: incidencedatetime.cpp:907
 #, kde-format
 msgctxt "@info"
 msgid ""
