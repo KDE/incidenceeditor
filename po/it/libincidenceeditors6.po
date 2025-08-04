@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-02 14:23+0200\n"
+"PO-Revision-Date: 2025-08-03 23:18+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -695,13 +695,13 @@ msgstr "Fusi orari"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "L'evento che si sta creando termina in una data nel passato."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "L'evento che si sta creando inizia in una data nel passato."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -716,6 +716,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"L'evento che si sta creando ha scadenza in una data nel passato. Una volta "
+"salvato, la data sarà corretta con la data odierna"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -724,6 +726,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"L'evento che si sta creando inizia in una data nel passato. Una volta "
+"salvato, la data sarà corretta con la data odierna"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format

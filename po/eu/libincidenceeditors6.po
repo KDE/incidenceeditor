@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-23 13:58+0200\n"
+"PO-Revision-Date: 2025-08-03 20:29+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -35,22 +35,22 @@ msgstr "Editatu dagoen oroigarria"
 #: alarmdialog.cpp:194
 #, kde-format
 msgid "Before the to-do starts"
-msgstr "Zeregina hasi aurretik"
+msgstr "Egitekoa hasi aurretik"
 
 #: alarmdialog.cpp:194
 #, kde-format
 msgid "After the to-do starts"
-msgstr "Zeregina hasi ondoren"
+msgstr "Egitekoa hasi ondoren"
 
 #: alarmdialog.cpp:198
 #, kde-format
 msgid "Before the to-do is due"
-msgstr "Zereginaren epemuga baino lehen"
+msgstr "Egitekoaren epemuga baino lehen"
 
 #: alarmdialog.cpp:198
 #, kde-format
 msgid "After the to-do is due"
-msgstr "Zereginaren epemuga ondoren"
+msgstr "Egitekoaren epemuga ondoren"
 
 #: alarmdialog.cpp:202
 #, kde-format
@@ -417,7 +417,7 @@ msgstr "(Errepikatze)"
 #: incidencealarm.cpp:307
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "%1 zeregina hasi ondoren %2ra %3"
+msgstr "%1 egitekoa hasi ondoren %2ra %3"
 
 #: incidencealarm.cpp:309
 #, kde-format
@@ -427,7 +427,7 @@ msgstr "%1 ekitaldia hasi ondoren %2ra %3"
 #: incidencealarm.cpp:313
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "%1 zeregina hasi aurretik %2ra %3"
+msgstr "%1 egitekoa hasi aurretik %2ra %3"
 
 #: incidencealarm.cpp:315
 #, kde-format
@@ -437,7 +437,7 @@ msgstr "%1 ekitaldia hasi aurretik %2ra %3"
 #: incidencealarm.cpp:319
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
-msgstr "%1 zereginaren epemuga ondoren %2ra %3"
+msgstr "%1 egitekoaren epemuga ondoren %2ra %3"
 
 #: incidencealarm.cpp:321
 #, kde-format
@@ -447,7 +447,7 @@ msgstr "%1 ekitaldia bukatu ondoren %2ra %3"
 #: incidencealarm.cpp:325
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
-msgstr "%1 zereginaren epemuga aurretik %2ra %3"
+msgstr "%1 egitekoaren epemuga aurretik %2ra %3"
 
 #: incidencealarm.cpp:327
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "%1 ekitaldia bukatu aurretik %2ra %3"
 #: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr "%1 zeregina hasi ondoren %2ra %3 (Ezgaituta)"
+msgstr "%1 egitekoa hasi ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:335
 #, kde-format
@@ -467,7 +467,7 @@ msgstr "%1 ekitaldia hasi ondoren %2ra %3 (Ezgaituta)"
 #: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
-msgstr "%1 zeregina hasi aurretik %2ra %3 (Ezgaituta)"
+msgstr "%1 egitekoa hasi aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:341
 #, kde-format
@@ -477,7 +477,7 @@ msgstr "%1 ekitaldia hasi aurretik %2ra %3 (Ezgaituta)"
 #: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
-msgstr "%1 zereginaren epemugaren ondoren %2ra %3 (Ezgaituta)"
+msgstr "%1 egitekoaren epemugaren ondoren %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:347
 #, kde-format
@@ -487,7 +487,7 @@ msgstr "%1 ekitaldia bukatu ondoren %2ra %3 (Ezgaituta)"
 #: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
-msgstr "%1 zereginaren epemuga aurretik %2ra %3 (Ezgaituta)"
+msgstr "%1 egitekoaren epemuga aurretik %2ra %3 (Ezgaituta)"
 
 #: incidencealarm.cpp:353
 #, kde-format
@@ -497,7 +497,7 @@ msgstr "%1 ekitaldia bukatu aurretik %2ra %3 (Ezgaituta)"
 #: incidencealarm.cpp:361
 #, kde-format
 msgid "%1 when the to-do starts"
-msgstr "%1 zeregina hasten denean"
+msgstr "%1 egitekoa hasten denean"
 
 #: incidencealarm.cpp:363
 #, kde-format
@@ -507,7 +507,7 @@ msgstr "%1 ekitaldia hasten denean"
 #: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 when the to-do is due"
-msgstr "%1 zereginaren epemugan"
+msgstr "%1 egitekoaren epemugan"
 
 #: incidencealarm.cpp:367
 #, kde-format
@@ -517,7 +517,7 @@ msgstr "%1 ekitaldia bukatzen denean"
 #: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
-msgstr "%1 zereginaren hasten denean (Ezgaituta)"
+msgstr "%1 egitekoaren hasten denean (Ezgaituta)"
 
 #: incidencealarm.cpp:373
 #, kde-format
@@ -527,7 +527,7 @@ msgstr "%1 ekitaldia hasten denean (Ezgaituta)"
 #: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr "%1 zereginaren epemugan (Ezgaituta)"
+msgstr "%1 egitekoaren epemugan (Ezgaituta)"
 
 #: incidencealarm.cpp:377
 #, kde-format
@@ -611,7 +611,7 @@ msgid ""
 "Displays items (files, mail, etc.) that have been associated with this event "
 "or to-do."
 msgstr ""
-"Ekitaldi edo zerekin horrekin elkartu diren elementuak (fitxategiak, posta, "
+"Ekitaldi edo egiteko horrekin lotutako elementuak (fitxategiak, posta, "
 "etab.) azaltzen ditu."
 
 #: incidenceattendee.cpp:211
@@ -690,19 +690,19 @@ msgstr "Ordu-eremuak"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "Sortzen ari zaren egitekoa iraganean bukatzen da."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "Sortzen ari zaren egitekoa iraganean hasten da."
 
 #: incidencedatetime.cpp:636
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
-msgstr "Epe-muga:"
+msgstr "Epemuga:"
 
 #: incidencedatetime.cpp:685
 #, kde-format
@@ -711,6 +711,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Sortzen ari zaren egitekoak epemuga iraganean du. Gordetakoan, gaurko datara "
+"doituko da"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -719,6 +721,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Sortzen ari zaren egitekoak iraganean hasten da. Gordetakoan, gaurko datara "
+"doituko da"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
@@ -815,7 +819,7 @@ msgid ""
 "The to-do is due before it starts.\n"
 "Please correct dates and times."
 msgstr ""
-"Zeregina hasi aurretik bukatzen da.\n"
+"Egitekoa, hasi aurretik bukatzen da.\n"
 "Mesedez, zuzendu datak eta orduak."
 
 #: incidencedefaults.cpp:70
@@ -1132,8 +1136,8 @@ msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
 "parameters."
 msgstr ""
-"Zeregin errepikakor bat gutxienez behin gertatu behar da. Doitu errepikatze "
-"parametroak."
+"Ekitaldi edo egiteko errepikakor bat gutxienez behin gertatu behar da. Doitu "
+"errepikatze parametroak."
 
 #: incidencerecurrence.cpp:453
 #, kde-format
@@ -1911,7 +1915,7 @@ msgstr "Ezarri kokalekua"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
-msgstr "Ekitaldia edo zeregina non izango den ezartzen du."
+msgstr "Ekitaldia edo egitekoa non izango den ezartzen du."
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
 #: ui/dialogdesktop.ui:226
@@ -2011,7 +2015,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Set if this to-do's start and due dates have times associated with them."
 msgstr ""
-"Ezarri zeregin honen hasiera eta muga-egunak haiekin lotutako ordurik duten."
+"Ezarri egiteko honen hasiera eta muga-egunak haiekin lotutako ordurik duten."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:364
@@ -2046,14 +2050,14 @@ msgstr "Ezarri hasteko ordua"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
-msgstr "Zeregin hau hasteko ordua ezartzen du"
+msgstr "Egiteko hau hasteko ordua ezartzen du"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
 #: ui/dialogdesktop.ui:468
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
-msgstr "Zeregin hau hasteko ordua ezartzen du."
+msgstr "Egiteko hau hasteko ordua ezartzen du."
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
@@ -2083,14 +2087,14 @@ msgstr "B&ukatu:"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
-msgstr "Zeregin honen muga-eguna ezartzen du."
+msgstr "Egiteko honen muga-eguna ezartzen du."
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
 #: ui/dialogdesktop.ui:583
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
-msgstr "Zeregin honen muga-ordua ezartzen du."
+msgstr "Egiteko honen muga-ordua ezartzen du."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
 #: ui/dialogdesktop.ui:635
@@ -2118,11 +2122,11 @@ msgid ""
 "of the restrictions will depend on the groupware server. This means that "
 "events or to-dos marked as private or confidential may be visible to others."
 msgstr ""
-"Ekitaldi edo zeregin horretara sartzea murriztua dagoen ezartzen du. "
-"Mesedez, kontuan izan «KOrganizer»rek, egun, ez duela ezarpen hori "
+"Ekitaldi edo egiteko horretara sartzea murriztua dagoen ezartzen du. "
+"Mesedez, kontuan izan KOrganizer(r)ek, egun, ez duela ezarpen hori "
 "erabiltzen, eta beraz, murrizketaren inplementazioa talde-laneko "
 "zerbitzariaren menpe egongo dela. Horrek esan nahi du, pribatu edo isilpeko "
-"gisa markatutako ekitaldiak edo zereginak besteentzako ikusgai egon "
+"gisa markatutako ekitaldiak edo egitekoak besteentzako ikusgai egon "
 "litezkeela."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
@@ -2178,7 +2182,7 @@ msgid ""
 "and from your address book."
 msgstr ""
 "Zeregin edo ekitaldi horren antolatzaileari dagokion nortasuna ezartzen du. "
-"Nortasunak, «KOrganizer»ren konfigurazioaren 'Pertsonala' atalean ezar "
+"Nortasunak, KOrganizer(r)en konfigurazioaren 'Pertsonala' atalean ezar "
 "daitezke. Gainera, nortasunak zure KMail ezarpenetatik eta zure helbide-"
 "liburutik jasotzen dira."
 
@@ -2430,7 +2434,7 @@ msgstr "hau iraganda,"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Date after which the event or to-do should stop recurring"
-msgstr "Ekitaldia edo zeregina errepikatzeari uzteko data"
+msgstr "Ekitaldia edo egitekoa errepikatzeari uzteko data"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceOccurrencesLabel)
 #: ui/dialogdesktop.ui:1550
@@ -2489,7 +2493,7 @@ msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
 msgstr ""
-"Ekitaldi edo zeregin horretara, esteka gisa edo lerro barneko datuen gisa "
+"Ekitaldi edo egiteko horretara, esteka gisa edo lerro barneko datuen gisa "
 "gehitzeko, eranskin bat aukeratzeko elkarrizketa-koadro bat erakusten du."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
@@ -2513,7 +2517,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Removes the attachment selected in the list above from this event or to-do."
 msgstr ""
-"Goiko zerrendan hautatutako eranskina kentzen du ekitaldi edo zeregin "
+"Goiko zerrendan hautatutako eranskina kentzen du ekitaldi edo egiteko "
 "horretatik."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
@@ -2785,7 +2789,7 @@ msgstr ""
 ">'Ordua', zenbait orduko tartea erakusten du,<nl/>'Eguna', zenbait eguneko "
 "tartea erakusten du,<nl/>'Astea', zenbait asteteko tartea erakusten du,<nl/"
 ">eta 'Hilabetea', zenbait hilabeteko tartea erakusten du,<nl/>'Automatikoa'k "
-"berriz uneko ekitaldi edo zereginerako tarte egokiena aukeratzen du."
+"berriz uneko ekitaldi edo egitekorako tarte egokiena aukeratzen du."
 
 #: visualfreebusywidget.cpp:153
 #, kde-format

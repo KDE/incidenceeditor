@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-02 12:32+0100\n"
+"PO-Revision-Date: 2025-08-03 15:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -689,13 +689,13 @@ msgstr "Zonas horarias"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "El evento que está creando termina en el pasado."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "El evento que está creando empieza en el pasado."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -710,6 +710,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"La tarea pendiente que está creando vence en el pasado. Cuando la guarde, se "
+"ajustará a la fecha de hoy."
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -718,6 +720,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"La tarea pendiente que está creando empieza en el pasado. Cuando la guarde, "
+"se ajustará a la fecha de hoy."
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format

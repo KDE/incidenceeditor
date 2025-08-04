@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-03 14:15+0200\n"
+"PO-Revision-Date: 2025-08-03 09:19+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -685,13 +685,13 @@ msgstr "Tijdzones"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "De afspraak die u maakt eindigt in het verleden."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "De afspraak die u maakt begint in het verleden."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -706,6 +706,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"De taak die u maakt loopt af in het verleden. Na opslaan zal het aangepast "
+"worden op vandaag"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -714,6 +716,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"De taak die u maakt begint in het verleden. Na opslaan zal het aangepast "
+"worden op vandaag"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-03 15:37+0200\n"
+"PO-Revision-Date: 2025-08-03 09:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -687,13 +687,13 @@ msgstr "Tidszoner"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "Händelsen du skapar slutar i det förflutna."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "Händelsen du skapar börjar i det förflutna."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -708,6 +708,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Uppgiften du skapar har förfallit. När den har sparats justeras den till "
+"dagens datum."
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -716,6 +718,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Uppgiften du skapar börjar i det förflutna. När den sparas justeras den till "
+"dagens datum."
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format

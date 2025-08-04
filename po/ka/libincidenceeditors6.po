@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-02 17:24+0200\n"
+"PO-Revision-Date: 2025-08-03 04:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -686,13 +686,13 @@ msgstr "დროის სარტყლები"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "მოვლენა, რომელსაც ქმნით, წარსულში სრულდება."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "მოვლენა, რომელსაც ქმნით, წარსულში იწყება."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -707,6 +707,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"გეგმის, რომელსაც ქმნით, დრო წარსულში დგება როცა შეინახავთ, ის გასწორდება "
+"დღევანდელ თარიღზე"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -715,6 +717,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"გეგმა, რომელსაც ქმნით, წარსულში იწყება. როცა შეინახავთ, ის გასწორდება "
+"დღევანდელ თარიღზე"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format

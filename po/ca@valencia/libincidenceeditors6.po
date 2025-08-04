@@ -5,13 +5,13 @@
 #
 # Manuel Tortosa <manutortosa@chakra-project.org>, 2011.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
-# Josep M. Ferrer <txemaq@gmail.com>, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-02 11:36+0200\n"
+"PO-Revision-Date: 2025-08-03 10:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -693,13 +693,13 @@ msgstr "Zones horàries"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "L'esdeveniment que esteu creant acaba en el passat."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "L'esdeveniment que esteu creant comença en el passat."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -714,6 +714,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"La tasca pendent que esteu creant venç en el passat. Una vegada guardada, "
+"s'ajustarà a la data d'hui"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -722,6 +724,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"La tasca pendent que esteu creant comença en el passat. Una vegada guardada, "
+"s'ajustarà a la data d'hui"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
@@ -1322,7 +1326,7 @@ msgstr "Opcions per a este destinatari en particular."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
-msgstr "Seleccioneu una opció per a este destinatari."
+msgstr "Trieu una opció per a este destinatari."
 
 #: individualmaildialog.cpp:113
 #, kde-format
