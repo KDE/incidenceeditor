@@ -2538,8 +2538,7 @@ msgstr "أدخِل مصطلح البحث"
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
 msgstr ""
-"استخدم مربع النص هذا لإدخال بعض الكلمات الرئيسية للمورد الذي تريد العثور "
-"عليه."
+"استخدم مربع النص هذا لإدخال بعض الكلمات الرئيسة للمورد الذي تريد العثور عليه."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
