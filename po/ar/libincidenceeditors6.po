@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-10 02:34+0000\n"
-"PO-Revision-Date: 2025-07-03 09:54+0400\n"
+"PO-Revision-Date: 2025-08-03 23:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -380,7 +380,7 @@ msgstr "عطّل"
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
-msgstr "فعّل"
+msgstr "مكّن"
 
 #: incidencealarm.cpp:272
 #, kde-format
@@ -844,7 +844,7 @@ msgstr "invalid@email.address"
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Enable rich text"
-msgstr "فعّل النّصّ الغنيّ"
+msgstr "مكّن النّصّ الغنيّ"
 
 #: incidencedescription.cpp:105
 #, kde-format
@@ -1080,7 +1080,7 @@ msgstr "لا تُلغ"
 #: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "طريقة مرفقات البريد الافتراضيّة"
+msgstr "طريقة مرفقات البريد المبدئيّة"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
@@ -1681,7 +1681,7 @@ msgstr "اختر نوع التنبيه"
 #: ui/alarmdialog.ui:225
 #, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr "استخدم هذا المحدد لاختيار نوع المنبه لكل التنبيهات."
+msgstr "استخدم هذا المحدد لاختيار نوع المنبه للمُذكِرات."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
