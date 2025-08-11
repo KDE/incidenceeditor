@@ -666,13 +666,13 @@ msgstr "时区"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "您创建的事件的结束时间已过。"
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "您创建的事件的开始时间已过。"
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -686,7 +686,7 @@ msgctxt "@info"
 msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
-msgstr ""
+msgstr "您创建的待办事项已过期。保存后，日期将自动调整为今天。"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -694,7 +694,7 @@ msgctxt "@info"
 msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
-msgstr ""
+msgstr "您创建的待办事项开始时间已过。保存后，日期将自动调整为今天。"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
