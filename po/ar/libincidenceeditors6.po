@@ -1505,7 +1505,7 @@ msgstr "قالب %1 جديد"
 #: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
-msgstr "هناك قالب بالاسم هذا بالفعل. أتريد الكتابة فوقه؟"
+msgstr "هناك قالب بالاسم هذا فعلًا. أتريد الكتابة فوقه؟"
 
 #: templatemanagementdialog.cpp:106
 #, kde-format
