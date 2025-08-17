@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-11 23:35+0200\n"
+"PO-Revision-Date: 2025-08-16 22:38+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -687,13 +687,13 @@ msgstr "Часови зони"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "Събитието, което създавате, завършва в миналото."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "Събитието, което създавате, започва в миналото."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -708,6 +708,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Задачата, която създавате, е с краен срок в миналото. След като я запишете, "
+"тя ще бъде коригирана за днешната дата."
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -716,6 +718,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Задачата, която създавате, започва в миналото. След като я запишете, тя ще "
+"бъде коригирана за днешната дата."
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
