@@ -542,14 +542,12 @@ msgid "Add Attachment"
 msgstr "Přidat přílohu"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to cancel?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "Přejete si opravdu zrušit?"
+msgstr ""
 
 #: incidenceattachment.cpp:196
 #, kde-format
