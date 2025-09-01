@@ -66,7 +66,7 @@ void ConflictResolverTest::simpleTest()
     resolver->setLatestDateTime(end);
     resolver->findAllFreeSlots();
 
-    QVERIFY(resolver->availableSlots().size() == 2);
+    QCOMPARE(resolver->availableSlots().size(), 2);
 
     KCalendarCore::Period const first = resolver->availableSlots().at(0);
     QCOMPARE(first.start(), base);
@@ -97,7 +97,7 @@ void ConflictResolverTest::stillPrettySimpleTest()
     resolver->setLatestDateTime(end);
     resolver->findAllFreeSlots();
 
-    QVERIFY(resolver->availableSlots().size() == 2);
+    QCOMPARE(resolver->availableSlots().size(), 2);
 
     KCalendarCore::Period const first = resolver->availableSlots().at(0);
     QEXPECT_FAIL("", "Got broken in revision f17b9a8c975588ad7cf4ce8b94ab8e32ac193ed8", Continue);
@@ -180,7 +180,7 @@ void ConflictResolverTest::akademy2010()
     resolver->findAllFreeSlots();
     // }
 
-    QVERIFY(resolver->availableSlots().size() == 3);
+    QCOMPARE(resolver->availableSlots().size(), 3);
     QEXPECT_FAIL("", "Got broken in revision f17b9a8c975588ad7cf4ce8b94ab8e32ac193ed8", Abort);
     QCOMPARE(resolver->availableSlots().at(0).duration(), KCalendarCore::Duration(10 * 60));
     QCOMPARE(resolver->availableSlots().at(1).duration(), KCalendarCore::Duration(1 * 60 * 60 + 25 * 60));

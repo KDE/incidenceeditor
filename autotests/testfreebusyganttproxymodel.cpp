@@ -37,7 +37,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
 
     Q_UNUSED(modelTest)
 
-    QVERIFY(ganttModel->rowCount() == 0);
+    QCOMPARE(ganttModel->rowCount(), 0);
 
     const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), QTimeZone::utc());
     const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), QTimeZone::utc());
@@ -71,7 +71,7 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QModelIndex const parent2 = ganttModel->index(2, 0);
     QVERIFY(parent0.isValid());
     QVERIFY(parent1.isValid());
-    QVERIFY(parent2.isValid() == false);
+    QCOMPARE(parent2.isValid(), false);
 
     QModelIndex const source_parent0 = fbModel->index(0, 0);
     QCOMPARE(parent0.data(), source_parent0.data());
