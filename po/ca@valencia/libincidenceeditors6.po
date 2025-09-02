@@ -649,7 +649,7 @@ msgstr "No l'invites"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Seleccioneu els assistents"
+msgstr "Trieu els assistents"
 
 #: incidenceattendee.cpp:626
 #, kde-format
@@ -858,7 +858,7 @@ msgstr "Desactiva el text enriquit"
 #: incidencedialog.cpp:235
 #, kde-format
 msgid "Select a valid collection first."
-msgstr "Seleccioneu primer una col·lecció vàlida."
+msgstr "Trieu primer una col·lecció vàlida."
 
 #: incidencedialog.cpp:258
 #, kde-format
@@ -1549,8 +1549,7 @@ msgstr "dies"
 #, kde-format
 msgid "Select the reminder trigger relative to the start or end time"
 msgstr ""
-"Selecciona el disparador del recordatori en relació amb l'hora d'inici o "
-"final"
+"Tria el disparador del recordatori en relació amb l'hora d'inici o final"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:100
@@ -1609,7 +1608,7 @@ msgstr ""
 #: ui/alarmdialog.ui:160
 #, kde-format
 msgid "Select how often the reminder should repeat"
-msgstr "Selecciona amb quina freqüència s'ha de repetir el recordatori"
+msgstr "Tria amb quina freqüència s'ha de repetir el recordatori"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:163
@@ -1631,7 +1630,7 @@ msgstr " vegades"
 #: ui/alarmdialog.ui:182
 #, kde-format
 msgid "Select the time between reminder repeats"
-msgstr "Seleccioneu el temps entre repeticions del recordatori"
+msgstr "Trieu el temps entre repeticions del recordatori"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:185
@@ -1665,7 +1664,7 @@ msgstr "Què:"
 #: ui/alarmdialog.ui:222
 #, kde-format
 msgid "Select the alarm type"
-msgstr "Seleccioneu el tipus d'alarma"
+msgstr "Trieu el tipus d'alarma"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
@@ -1718,9 +1717,8 @@ msgid ""
 "Use the adjacent file browser to help you find the file you want to use when "
 "playing a sound when the reminder triggers."
 msgstr ""
-"Utilitzeu el navegador de fitxers adjacent per a ajudar-vos a trobar el "
-"fitxer que voleu utilitzar per a reproduir un so en disparar-se el "
-"recordatori."
+"Utilitzeu el navegador de fitxers adjacent per ajudar-vos a trobar el fitxer "
+"que voleu utilitzar per a reproduir un so en disparar-se el recordatori."
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:38
@@ -2080,8 +2078,7 @@ msgstr "Establix l'hora d'inici per a esta tasca pendent."
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr ""
-"Selecciona la zona horària per a este esdeveniment. També afectarà les "
-"repeticions"
+"Tria la zona horària per a este esdeveniment. També afectarà les repeticions"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:502
@@ -2243,7 +2240,7 @@ msgstr "Substituïx pels membres del grup"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
-msgstr "Seleccioneu els assistents des de la llibreta d'adreces."
+msgstr "Trieu els assistents des de la llibreta d'adreces."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:869
@@ -2257,7 +2254,7 @@ msgstr "Obri la llibreta d'adreces, permetent-vos seleccionar nous assistents."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Seleccioneu els assistents…"
+msgstr "Tria els assistents…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2637,7 +2634,7 @@ msgstr "Rols obligatoris:"
 #: ui/schedulingdialog.ui:154
 #, kde-format
 msgid "Select the search option"
-msgstr "Selecciona l'opció de busca"
+msgstr "Tria l'opció de busca"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
@@ -2689,9 +2686,9 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
-"Seleccioneu una plantilla i cliqueu damunt <i>Aplica</i> per a aplicar-la a "
-"este element. Cliqueu damunt <i>Nova</i> per a crear una plantilla nova "
-"basada en les preferències de l'element actual."
+"Trieu una plantilla i cliqueu damunt <i>Aplica</i> per a aplicar-la a este "
+"element. Cliqueu damunt <i>Nova</i> per a crear una plantilla nova basada en "
+"les preferències de l'element actual."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
@@ -2799,11 +2796,11 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
-"Seleccioneu el nivell d'ampliació del diagrama de Gantt d'un dels següents:"
-"<nl/>«Hora» mostra un interval de diverses hores,<nl/>«Dia» mostra un "
-"interval de dies,<nl/>«Setmana» mostra un interval de setmanes,<nl/>i «Mes» "
-"mostra un interval de mesos,<nl/>mentre que «Automàtic» selecciona "
-"l'interval més adequat per a l'esdeveniment o tasca pendent actual."
+"Trieu el nivell d'ampliació del diagrama de Gantt d'un dels següents:<nl/"
+">«Hora» mostra un interval de diverses hores,<nl/>«Dia» mostra un interval "
+"de dies,<nl/>«Setmana» mostra un interval de setmanes,<nl/>i «Mes» mostra un "
+"interval de mesos,<nl/>mentre que «Automàtic» selecciona l'interval més "
+"adequat per a l'esdeveniment o tasca pendent actual."
 
 #: visualfreebusywidget.cpp:153
 #, kde-format
@@ -2861,7 +2858,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
-msgstr "Selecciona una data"
+msgstr "Tria una data"
 
 #: visualfreebusywidget.cpp:174
 #, kde-format
