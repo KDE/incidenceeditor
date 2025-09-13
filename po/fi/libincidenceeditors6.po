@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:42+0000\n"
-"PO-Revision-Date: 2025-07-14 11:02+0300\n"
+"PO-Revision-Date: 2025-09-04 10:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -688,13 +688,13 @@ msgstr "Aikavyöhykkeet"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "Luomasi tapahtuma päättyy menneisyydessä."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "Luomasi tehtävä alkaa menneisyydessä."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -709,6 +709,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Luomasi tehtävän määräaika on menneisyydessä. Tallennuksen jälkeen se "
+"muutetaan tänäiseksi"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -717,6 +719,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Luomasi tehtävä alkaa menneisyydessä. Tallennuksen jälkeen se muutetaan "
+"tänäiseksi"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
