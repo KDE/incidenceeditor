@@ -18,8 +18,6 @@ namespace Akonadi
 class Item;
 }
 
-class KJob;
-
 namespace IncidenceEditorNG
 {
 class ItemEditorUi;
