@@ -157,6 +157,13 @@ void IncidenceDescription::setupToolBar()
     mEditToolBar->addAction(collection->action(u"format_painter"_s));
     mEditToolBar->addSeparator();
     mEditToolBar->addAction(collection->action(u"manage_link"_s));
+    mEditToolBar->addSeparator();
+    mEditToolBar->addAction(collection->action(u"add_emoticon"_s));
+
+    connect(mUi->mDescriptionEdit->richTextComposer(),
+            &KPIMTextEdit::RichTextComposer::insertEmoticon,
+            mUi->mDescriptionEdit->richTextComposer(),
+            &KPIMTextEdit::RichTextComposer::insertPlainText);
     mUi->mDescriptionEdit->richTextComposer()->setEnableActions(false);
 
     auto layout = new QGridLayout(mUi->mEditToolBarPlaceHolder);
