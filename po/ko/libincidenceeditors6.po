@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-15 00:42+0000\n"
-"PO-Revision-Date: 2025-07-20 01:03+0200\n"
+"PO-Revision-Date: 2025-10-09 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -669,13 +669,13 @@ msgstr "시간대"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "새로 만드는 이벤트의 종료 시간이 과거에 있습니다."
 
 #: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "새로 만드는 이벤트의 시작 시간이 과거에 있습니다."
 
 #: incidencedatetime.cpp:636
 #, kde-format
@@ -690,6 +690,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"새로 만드는 할 일의 만료 기한이 과거에 있습니다. 그대로 저장하면 오늘 날짜로 "
+"조정합니다"
 
 #: incidencedatetime.cpp:688
 #, kde-format
@@ -698,6 +700,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"새로 만드는 할 일의 시작 시간이 과거에 있습니다. 그대로 저장하면 오늘 날짜로 "
+"조정합니다"
 
 #: incidencedatetime.cpp:773 incidencedatetime.cpp:774
 #, kde-format
