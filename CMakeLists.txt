@@ -119,7 +119,7 @@ configure_file(config-enterprise.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-ent
 ########### Targets ###########
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.18.0)
+ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.19.0)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
