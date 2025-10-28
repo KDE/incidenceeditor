@@ -50,7 +50,12 @@ private:
     void rightPressed();
     void leftPressed();
     /** all entries to choose from */
-    QList<QPair<QIcon, QString>> mEntries;
+    struct IconPair {
+        QIcon icon;
+        QString name;
+    };
+
+    QList<IconPair> mEntries;
     QString mToolTip;
     QString mWhatsThis;
     /**fallback index */

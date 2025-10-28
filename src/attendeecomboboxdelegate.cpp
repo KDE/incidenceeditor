@@ -25,9 +25,10 @@ AttendeeComboBoxDelegate::AttendeeComboBoxDelegate(QObject *parent)
 
 void AttendeeComboBoxDelegate::addItem(const QIcon &icon, const QString &text)
 {
-    QPair<QIcon, QString> pair;
-    pair.first = icon;
-    pair.second = text;
+    const IconPair pair{
+        .icon = icon,
+        .name = text,
+    };
     mEntries << pair;
 }
 
@@ -55,8 +56,8 @@ QWidget *AttendeeComboBoxDelegate::createEditor(QWidget *parent, const QStyleOpt
 {
     auto editor = new AttendeeComboBox(parent);
 
-    for (const QPair<QIcon, QString> &pair : std::as_const(mEntries)) {
-        editor->addItem(pair.first, pair.second);
+    for (const IconPair &pair : std::as_const(mEntries)) {
+        editor->addItem(pair.icon, pair.name);
     }
 
     connect(editor, &AttendeeComboBox::leftPressed, this, &AttendeeComboBoxDelegate::leftPressed);
@@ -101,7 +102,7 @@ void AttendeeComboBoxDelegate::paint(QPainter *painter, const QStyleOptionViewIt
 
     myOption.rect = option.rect;
     myOption.state = option.state;
-    myOption.icon = mEntries[value].first;
+    myOption.icon = mEntries[value].icon;
     myOption.iconSize = myOption.icon.actualSize(option.rect.size());
 
     QApplication::style()->drawControl(QStyle::CE_PushButton, &myOption, painter);

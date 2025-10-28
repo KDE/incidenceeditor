@@ -22,7 +22,6 @@
 
 using namespace IncidenceEditorNG;
 using namespace Qt::Literals::StringLiterals;
-using TextIconPair = QPair<QString, QIcon>;
 
 AttendeeComboBox::AttendeeComboBox(QWidget *parent)
     : QToolButton(parent)
@@ -35,7 +34,7 @@ AttendeeComboBox::AttendeeComboBox(QWidget *parent)
 
 void AttendeeComboBox::addItem(const QIcon &icon, const QString &text)
 {
-    mList.append(TextIconPair(text, icon));
+    mList.append(IconPair{.icon = icon, .name = text});
     if (mCurrentIndex == -1) {
         setCurrentIndex(0);
     }
@@ -71,8 +70,8 @@ void AttendeeComboBox::setCurrentIndex(int index)
     Q_ASSERT(index < mList.size());
     const int old = mCurrentIndex;
     mCurrentIndex = index;
-    setIcon(mList.at(index).second);
-    setToolTip(mList.at(index).first);
+    setIcon(mList.at(index).icon);
+    setToolTip(mList.at(index).name);
     if (old != index) {
         Q_EMIT itemChanged();
     }

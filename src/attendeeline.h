@@ -50,7 +50,11 @@ protected:
 private:
     void slotActionTriggered();
     QMenu *mMenu = nullptr;
-    QList<QPair<QString, QIcon>> mList;
+    struct IconPair {
+        QIcon icon;
+        QString name;
+    };
+    QList<IconPair> mList;
     int mCurrentIndex = -1;
 };
 
