@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-15 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 09:01+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -149,37 +149,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "Ny bilaga"
 
-#: attendeeline.cpp:145 incidenceattendee.cpp:63
+#: attendeeline.cpp:144 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Begär svar"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:64
+#: attendeeline.cpp:145 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "Begär inte svar"
 
-#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Ange deltagarens namn eller e-postadress."
 
-#: attendeeline.cpp:151 incidenceattendee.cpp:66
+#: attendeeline.cpp:150 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Redigerar deltagarens nuvarande deltagarstatus."
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:152 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "Redigerar deltagarens roll."
 
-#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -189,13 +189,13 @@ msgstr ""
 "Deltagarens e-postadress eller namn. En inbjudan kan skickas till användaren "
 "om en e-postadress tillhandahålls."
 
-#: attendeeline.cpp:161 incidenceattendee.cpp:70
+#: attendeeline.cpp:160 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Begär ett svar från deltagaren"
 
-#: attendeeline.cpp:163 incidenceattendee.cpp:72
+#: attendeeline.cpp:162 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-15 00:42+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -142,37 +142,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "新附件"
 
-#: attendeeline.cpp:145 incidenceattendee.cpp:63
+#: attendeeline.cpp:144 incidenceattendee.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "请求回复"
 
-#: attendeeline.cpp:146 incidenceattendee.cpp:64
+#: attendeeline.cpp:145 incidenceattendee.cpp:64
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "请求不回复"
 
-#: attendeeline.cpp:148 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "输入该参加者的姓名或电子邮件地址。"
 
-#: attendeeline.cpp:151 incidenceattendee.cpp:66
+#: attendeeline.cpp:150 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "编辑参与者的当前状态。"
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:152 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "编辑选中参与者的角色。"
 
-#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -180,13 +180,13 @@ msgid ""
 "user if an email address is provided."
 msgstr "参与者的电子邮件地址或名字。若为电子邮件地址，则可直接向用户发送邀请。"
 
-#: attendeeline.cpp:161 incidenceattendee.cpp:70
+#: attendeeline.cpp:160 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "请求参与者的回复"
 
-#: attendeeline.cpp:163 incidenceattendee.cpp:72
+#: attendeeline.cpp:162 incidenceattendee.cpp:72
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
