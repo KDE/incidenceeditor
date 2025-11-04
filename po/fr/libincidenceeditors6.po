@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-10 02:34+0000\n"
-"PO-Revision-Date: 2025-07-03 11:02+0200\n"
+"PO-Revision-Date: 2025-08-04 09:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -371,7 +371,7 @@ msgstr "Activer"
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
-msgstr "Afficher une boîte de dialogue"
+msgstr "Afficher une boite de dialogue"
 
 #: incidencealarm.cpp:275
 #, kde-format
@@ -995,13 +995,13 @@ msgstr "Enregistrer les modifications actuelles"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
-msgstr "Enregistrer les modifications et fermer la boîte de dialogue"
+msgstr "Enregistrer les modifications et fermer la boite de dialogue"
 
 #: incidencedialog.cpp:694
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
-msgstr "Abandonner les modifications et fermer la boîte de dialogue"
+msgstr "Abandonner les modifications et fermer la boite de dialogue"
 
 #: incidencedialog.cpp:698
 #, kde-format
@@ -1023,7 +1023,7 @@ msgid ""
 "Templates can make creating new items easier and faster by putting your "
 "favorite default values into the editor automatically."
 msgstr ""
-"Cliquez sur ce bouton pour afficher une boîte de dialogue qui vous aidera à "
+"Cliquez sur ce bouton pour afficher une boite de dialogue qui vous aidera à "
 "gérer une série de modèles. Les modèles peuvent permettre de simplifier et "
 "accélérer la création de nouveaux éléments, en plaçant vos valeurs par "
 "défaut préférés dans dans l'éditeur automatiquement."
@@ -2193,7 +2193,7 @@ msgid ""
 "Opens the scheduling dialog, which will assist in picking a time slot that "
 "works for all attendees."
 msgstr ""
-"Ouvre la boîte de dialogue d'organisation qui vous aidera à trouver une "
+"Ouvre la boite de dialogue d'organisation qui vous aidera à trouver une "
 "plage horaire qui fonctionnera pour tout les participants."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
@@ -2479,7 +2479,7 @@ msgid ""
 "Shows a dialog used to select an attachment to add to this event or to-do as "
 "link or as inline data."
 msgstr ""
-"Affiche une boîte de dialogue utilisée pour sélectionner une pièce jointe à "
+"Affiche une boite de dialogue utilisée pour sélectionner une pièce jointe à "
 "ajouter à cet évènement ou cette tâche sous forme de lien ou de données "
 "incorporées."
 
