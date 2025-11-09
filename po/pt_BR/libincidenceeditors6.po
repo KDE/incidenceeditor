@@ -7,20 +7,21 @@
 # SPDX-FileCopyrightText: 2010, 2025 Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>
 # Aracele Torres <araceletorres@gmail.com>, 2010.
 # SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-08-29 09:14-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -592,7 +593,7 @@ msgstr "&Abrir"
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Salvar como..."
+msgstr "Salvar como…"
 
 #: incidenceattachment.cpp:496
 #, kde-format
@@ -604,7 +605,7 @@ msgstr "&Remover"
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Propriedades..."
+msgstr "&Propriedades…"
 
 #: incidenceattachment.cpp:514
 #, kde-format
@@ -1035,7 +1036,7 @@ msgstr "Descartar alterações e fechar o diálogo"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Modelos..."
+msgstr "&Modelos…"
 
 #: incidencedialog.cpp:698
 #, kde-format
@@ -2223,7 +2224,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Agendar..."
+msgstr "Agendar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:859
@@ -2287,7 +2288,7 @@ msgstr "Reservar o recurso"
 #: ui/dialogdesktop.ui:999
 #, kde-format
 msgid "Find Resources…"
-msgstr "Localizar recursos..."
+msgstr "Localizar recursos…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1013
