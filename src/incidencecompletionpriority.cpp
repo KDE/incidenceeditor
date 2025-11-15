@@ -11,6 +11,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "ui_dialogdesktop.h"
 
 #include <KCalendarCore/Todo>
+#include <KLocalizedString>
 
 using namespace IncidenceEditorNG;
 
@@ -36,7 +37,7 @@ void IncidenceCompletionPriorityPrivate::sliderValueChanged(int value)
         mOrigPercentCompleted = -1;
     }
 
-    mUi->mCompletedLabel->setText(u"%1%"_s.arg(value));
+    mUi->mCompletedLabel->setText(i18nc("Completion percentage label", "%1%", value));
     q->checkDirtyStatus();
 }
 
