@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-04 09:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -684,6 +684,14 @@ msgstr "Modifier un participant"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Ne pas modifier"
+
+#: incidencecompletionpriority.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "@label Day of the week name, example: Monday,"
+#| msgid "%1,"
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr "%1, "
 
 #: incidencedatetime.cpp:224
 #, kde-format
@@ -3558,10 +3566,6 @@ msgstr ""
 #~ msgctxt "attendee email"
 #~ msgid "email"
 #~ msgstr "Envoyer un courriel"
-
-#~ msgctxt "@label Day of the week name, example: Monday,"
-#~ msgid "%1,"
-#~ msgstr "%1, "
 
 #~ msgctxt ""
 #~ "@label A time period duration. It is preceded/followed (based on the "

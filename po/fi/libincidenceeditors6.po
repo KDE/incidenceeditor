@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-09-04 10:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -677,6 +677,14 @@ msgstr "Vaihda osallistuja"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Älä vaihda"
+
+#: incidencecompletionpriority.cpp:40
+#, fuzzy, kde-format
+#| msgctxt "@label Day of the week name, example: Monday,"
+#| msgid "%1,"
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr "%1"
 
 #: incidencedatetime.cpp:224
 #, kde-format
@@ -3532,10 +3540,6 @@ msgstr ""
 #~ msgctxt "attendee email"
 #~ msgid "email"
 #~ msgstr "sähköposti"
-
-#~ msgctxt "@label Day of the week name, example: Monday,"
-#~ msgid "%1,"
-#~ msgstr "%1"
 
 #~ msgctxt ""
 #~ "@label A time period duration. It is preceded/followed (based on the "

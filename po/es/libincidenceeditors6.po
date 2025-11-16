@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-03 15:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -678,6 +678,12 @@ msgstr "Cambiar asistente"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "No cambiar"
+
+#: incidencecompletionpriority.cpp:40
+#, kde-format
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr ""
 
 #: incidencedatetime.cpp:224
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -673,6 +673,12 @@ msgstr "उपस्थितः परिवर्तयतु"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "परिवर्तनं मा कुरुत"
+
+#: incidencecompletionpriority.cpp:40
+#, kde-format
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr ""
 
 #: incidencedatetime.cpp:224
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-03 16:04+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -699,6 +699,12 @@ msgstr "Змінити учасника"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Не змінювати"
+
+#: incidencecompletionpriority.cpp:40
+#, kde-format
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr ""
 
 #: incidencedatetime.cpp:224
 #, kde-format

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-08-03 19:00+0300\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
+"PO-Revision-Date: 2025-11-15 21:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:26
@@ -663,7 +663,7 @@ msgid ""
 "attending this event, would you like to change the corresponding attendee as "
 "well?"
 msgstr ""
-"Bu etkinliğin düzenleyicisini değiştiriyorsunuz. Düzenleyici de etkinliğe "
+"Bu etkinliğin organizatörünü değiştiriyorsunuz. Organizatör de etkinliğe "
 "katılacağından, ilgili katılımcıyı da düzenlemek ister misiniz?"
 
 #: incidenceattendee.cpp:801
@@ -677,6 +677,12 @@ msgstr "Katılımcıyı Değiştir"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Değiştirme"
+
+#: incidencecompletionpriority.cpp:40
+#, kde-format
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr ""
 
 #: incidencedatetime.cpp:224
 #, kde-format
@@ -2157,14 +2163,14 @@ msgstr "Katılımcılar"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
-msgstr "Toplantı düzenleyicisi:"
+msgstr "Toplantı organizatörü:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:776
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
-msgstr "Düzenleyici kimliğini belirle"
+msgstr "Organizatör kimliğini belirle"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:779
@@ -2176,7 +2182,7 @@ msgid ""
 "configuration. In addition, identities are gathered from your KMail settings "
 "and from your address book."
 msgstr ""
-"Yapılacaklar veya etkinliğin düzenleyicisine karşılık gelen kimliği ayarlar. "
+"Yapılacaklar veya etkinliğin organizatörüne karşılık gelen kimliği ayarlar. "
 "Kimlikler K Organizatör yapılandırmasının “Kişisel” bölümünden "
 "ayarlanabilir. Buna ek olarak kimlikler, K Posta ayarlarınızdan ve adres "
 "defterinizden toplanır."

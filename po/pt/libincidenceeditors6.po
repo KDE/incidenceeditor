@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -726,6 +726,12 @@ msgstr "Modificar o Participante"
 msgctxt "@action:button"
 msgid "Do Not Change"
 msgstr "Não Modificar"
+
+#: incidencecompletionpriority.cpp:40
+#, kde-format
+msgctxt "Completion percentage label"
+msgid "%1%"
+msgstr ""
 
 #: incidencedatetime.cpp:224
 #, kde-format
