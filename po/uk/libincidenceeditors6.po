@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-16 00:42+0000\n"
-"PO-Revision-Date: 2025-08-03 16:04+0300\n"
+"PO-Revision-Date: 2025-11-16 12:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -704,7 +704,7 @@ msgstr "Не змінювати"
 #, kde-format
 msgctxt "Completion percentage label"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: incidencedatetime.cpp:224
 #, kde-format
