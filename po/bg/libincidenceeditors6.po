@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-10-24 23:21+0200\n"
+"PO-Revision-Date: 2025-11-20 10:57+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -681,7 +681,7 @@ msgstr "Без промяна"
 #, kde-format
 msgctxt "Completion percentage label"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: incidencedatetime.cpp:224
 #, kde-format
