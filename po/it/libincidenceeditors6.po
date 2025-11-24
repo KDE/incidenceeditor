@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2025-08-03 23:18+0200\n"
+"PO-Revision-Date: 2025-11-19 14:10+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -686,8 +686,7 @@ msgid "Do Not Change"
 msgstr "Non cambiare"
 
 #: incidencecompletionpriority.cpp:40
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1%"
