@@ -918,7 +918,7 @@ msgstr "No s'ha pogut trobar la plantilla «%1»."
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
-msgstr "S'ha produït un error en carregar el fitxer de plantilla «%1»."
+msgstr "S'ha produït un error mentre es carregava el fitxer de plantilla «%1»."
 
 #: incidencedialog.cpp:334
 #, kde-format
