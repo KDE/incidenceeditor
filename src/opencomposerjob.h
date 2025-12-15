@@ -23,7 +23,7 @@ public:
                              const QString &to,
                              const QString &cc,
                              const QString &bcc,
-                             const KMime::Message::Ptr &message,
+                             const std::shared_ptr<KMime::Message> &message,
                              const KIdentityManagementCore::Identity &identity);
     ~OpenComposerJob() override;
 
@@ -33,7 +33,7 @@ private:
     QString mDBusService;
     QString mError;
     const QString mTo, mCc, mBcc;
-    const KMime::Message::Ptr mMessage;
+    const std::shared_ptr<KMime::Message> mMessage;
     const KIdentityManagementCore::Identity mIdentity;
 };
 }

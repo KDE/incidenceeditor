@@ -73,7 +73,7 @@ void IndividualMessageQueueJob::start()
 
 void IndividualMessageQueueJob::startQueueJob(const QStringList &messageTo, const QStringList &to, const QStringList &messageCc, const QStringList &cc)
 {
-    KMime::Message::Ptr const msg(message());
+    std::shared_ptr<KMime::Message> const msg(message());
     msg->to()->fromUnicodeString(messageTo.join(QLatin1StringView(", ")));
     msg->cc()->fromUnicodeString(messageCc.join(QLatin1StringView(", ")));
     msg->assemble();
