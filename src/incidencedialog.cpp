@@ -126,9 +126,7 @@ public:
     void reject(RejectReason reason, const QString &errorMessage = QString()) override;
 
 private:
-    // disable copy ctor
-    IncidenceDialogPrivate(const IncidenceDialogPrivate &) = delete;
-    IncidenceDialogPrivate &operator=(const IncidenceDialogPrivate &) = delete;
+    Q_DISABLE_COPY_MOVE(IncidenceDialogPrivate)
 };
 }
 
