@@ -14,6 +14,7 @@
 #include <config-enterprise.h>
 
 #include "attachmenticonview.h"
+#include "incidenceeditor_debug.h"
 
 #include <KIconLoader>
 #include <KIconUtils>
@@ -177,8 +178,11 @@ QUrl AttachmentIconItem::tempFileForAttachment()
     }
     file->setParent(listWidget());
 
+    if (!file->open()) {
+        qCWarning(INCIDENCEEDITOR_LOG) << " Impossible to create temporary file";
+        return {};
+    }
     file->setAutoRemove(true);
-    file->open();
     // read-only not to give the idea that it could be written to
     file->setPermissions(QFile::ReadUser);
     file->write(QByteArray::fromBase64(mAttachment.data()));
