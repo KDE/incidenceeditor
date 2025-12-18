@@ -54,10 +54,10 @@ void OpenComposerJob::start()
     } else {
         KMime::Content *attachment(mMessage->contents().at(1));
         QString const attachName = attachment->contentType()->name();
-        QByteArray const attachCte = attachment->contentTransferEncoding()->as7BitString(false);
+        QByteArray const attachCte = attachment->contentTransferEncoding()->as7BitString();
         QByteArray const attachType = attachment->contentType()->mediaType();
         QByteArray const attachSubType = attachment->contentType()->subType();
-        QByteArray const attachContDisp = attachment->contentDisposition()->as7BitString(false);
+        QByteArray const attachContDisp = attachment->contentDisposition()->as7BitString();
         QByteArray const attachCharset = attachment->contentType()->charset();
 
         QByteArray const attachParamAttr = "method";
