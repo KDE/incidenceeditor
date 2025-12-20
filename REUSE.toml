@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+
+version = 1
+SPDX-PackageName = "kimap"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/kimap"
+
+[[annotations]]
+path = ["src/incidenceeditor-index.qdoc", "src/incidenceeditor.qdoc", "src/incidenceeditor.qdocconf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
