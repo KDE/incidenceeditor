@@ -28,8 +28,8 @@ class AgendaView;
 
 namespace IncidenceEditorNG
 {
-/**
- * @brief The ResourceManagement class
+/*!
+ * \brief The ResourceManagement class
  */
 class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
@@ -61,7 +61,7 @@ private:
      */
     INCIDENCEEDITOR_NO_EXPORT void slotShowDetails(const QModelIndex &current);
 
-    /**
+    /*!
      * The Owner search is done
      */
     INCIDENCEEDITOR_NO_EXPORT void slotOwnerSearchFinished();

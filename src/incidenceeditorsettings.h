@@ -13,8 +13,8 @@
 
 namespace IncidenceEditorNG
 {
-/**
- * @brief The IncidenceEditorSettings class
+/*!
+ * \brief The IncidenceEditorSettings class
  */
 class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase
 {

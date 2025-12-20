@@ -23,19 +23,19 @@ class IncidenceDialog;
 
 namespace IncidenceDialogFactory
 {
-/**
+/*!
  * Creates a new IncidenceDialog for given type. Returns 0 for unsupported types.
  *
- * @param needsSaving If true, the editor will be initially dirty, and needs saving.
+ * \a needsSaving If true, the editor will be initially dirty, and needs saving.
  *                    Apply button will be turned on. This is used for example when
  *                    we fill the editor with data that's not yet in akonadi, like
  *                    the "Create To-do/Reminder" in KMail.
- * @param type   The Incidence type for which to create a dialog.
- * @param parent The parent widget of the dialog
- * @param flags  The window flags for the dialog.
+ * \a type   The Incidence type for which to create a dialog.
+ * \a parent The parent widget of the dialog
+ * \a flags  The window flags for the dialog.
  *
  * TODO: Implement support for Journals.
- * NOTE: There is no editor for Incidence::TypeFreeBusy
+ * Note There is no editor for Incidence::TypeFreeBusy
  */
 INCIDENCEEDITOR_EXPORT IncidenceDialog *create(bool needsSaving,
                                                KCalendarCore::IncidenceBase::IncidenceType type,

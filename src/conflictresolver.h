@@ -23,7 +23,7 @@ class FreeBusyItemModel;
 
 namespace IncidenceEditorNG
 {
-/**
+/*!
  * Takes a list of attendees and event info (e.g., min time start, max time end)
  * fetches their freebusy information, then identifies conflicts and periods of non-conflict.
  *
@@ -35,12 +35,12 @@ class INCIDENCEEDITOR_EXPORT ConflictResolver : public QObject
 {
     Q_OBJECT
 public:
-    /**
-     * @param parentWidget is passed to Akonadi when fetching free/busy data.
+    /*!
+     * \a parentWidget is passed to Akonadi when fetching free/busy data.
      */
     explicit ConflictResolver(QWidget *parentWidget, QObject *parent = nullptr);
 
-    /**
+    /*!
      *  Add an attendee
      * The attendees free busy info will be fetched
      * and integrated into the resolver.
@@ -48,7 +48,7 @@ public:
     void insertAttendee(const KCalendarCore::Attendee &attendee);
 
     void insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy);
-    /**
+    /*!
      * Removes an attendee
      * The attendee will no longer be considered when
      * resolving conflicts
@@ -56,44 +56,44 @@ public:
 
     void removeAttendee(const KCalendarCore::Attendee &attendee);
 
-    /**
+    /*!
      * Clear all attendees
      */
     void clearAttendees();
 
-    /**
+    /*!
      * Returns whether the resolver contains the attendee
      */
     [[nodiscard]] bool containsAttendee(const KCalendarCore::Attendee &attendee);
 
-    /**
+    /*!
      * Constrain the free time slot search to the weekdays
      * identified by their KCalendarSystem integer representation
      * Default is Monday - Friday
-     * @param weekdays a 7 bit array indicating the allowed days (bit 0=Monday, value 1=allowed).
-     * @see KCalendarSystem
+     * \a weekdays a 7 bit array indicating the allowed days (bit 0=Monday, value 1=allowed).
+     * \sa KCalendarSystem
      */
     void setAllowedWeekdays(const QBitArray &weekdays);
 
-    /**
+    /*!
      * Constrain the free time slot search to the set participant roles.
      * Mandatory roles are considered the minimum required to attend
      * the meeting, so only those attendees with the mandatory roles will
      * be considered  in the search.
      * Default is all roles are mandatory.
-     * @param roles the set of mandatory participant roles
+     * \a roles the set of mandatory participant roles
      */
     void setMandatoryRoles(const QSet<KCalendarCore::Attendee::Role> &roles);
 
-    /**
+    /*!
      * Returns a list of date time ranges that conform to the
      * search constraints.
-     * @see setMandatoryRoles
-     * @see setAllowedWeekdays
+     * \sa setMandatoryRoles
+     * \sa setAllowedWeekdays
      */
     [[nodiscard]] KCalendarCore::Period::List availableSlots() const;
 
-    /**
+    /*!
       Finds a free slot in the future which has at least the same size as
       the initial slot.
     */
@@ -102,25 +102,25 @@ public:
     CalendarSupport::FreeBusyItemModel *model() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when the user changes the start and end dateTimes
      * for the incidence.
      */
     void dateTimesChanged(const QDateTime &newStart, const QDateTime &newEnd);
 
-    /**
+    /*!
      * Emitted when there are conflicts
-     * @param number the number of conflicts
+     * \a number the number of conflicts
      */
     void conflictsDetected(int number);
 
-    /**
+    /*!
      * Emitted when the resolver locates new free slots.
      */
     void freeSlotsAvailable(const KCalendarCore::Period::List &);
 
 public Q_SLOTS:
-    /**
+    /*!
      * Set the timeframe constraints
      *
      * These control the timeframe for which conflicts are to be resolved.
@@ -140,7 +140,7 @@ public Q_SLOTS:
     void setResolution(int seconds);
 
 private:
-    /**
+    /*!
       Checks whether the slot specified by (tryFrom, tryTo) matches the
       search constraints. If yes, return true. The return value is the
       number of conflicts that were detected, and (tryFrom, tryTo) contain the next free slot for
@@ -149,7 +149,7 @@ private:
     */
     INCIDENCEEDITOR_NO_EXPORT int tryDate(QDateTime &tryFrom, QDateTime &tryTo);
 
-    /**
+    /*!
       Checks whether the slot specified by (tryFrom, tryTo) is available
       for the participant with specified fb. If yes, return true. If
       not, return false and change (tryFrom, tryTo) to contain the next
@@ -158,10 +158,10 @@ private:
     */
     INCIDENCEEDITOR_NO_EXPORT bool tryDate(const KCalendarCore::FreeBusy::Ptr &fb, QDateTime &tryFrom, QDateTime &tryTo);
 
-    /**
+    /*!
      * Checks whether the supplied attendee passes the
      * current mandatory role constraint.
-     * @return true if the attendee is of one of the mandatory roles, false if not
+     * Returns true if the attendee is of one of the mandatory roles, false if not
      */
     INCIDENCEEDITOR_NO_EXPORT bool matchesRoleConstraint(const KCalendarCore::Attendee &attendee);
 

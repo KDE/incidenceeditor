@@ -13,7 +13,7 @@
 #include <KCalendarCore/Incidence>
 namespace IncidenceEditorNG
 {
-/**
+/*!
  * KCal Incidences are complicated objects. The user interfaces to create/modify
  * are therefore complex too. The IncedenceEditor class is a divide and conquer
  * approach to this complexity. An IncidenceEditor is an editor for a specific
@@ -25,57 +25,57 @@ class INCIDENCEEDITOR_EXPORT IncidenceEditor : public QObject
 public:
     ~IncidenceEditor() override;
 
-    /**
-     * Load the values of @param incidence into the editor widgets. The passed
+    /*!
+     * Load the values of \a incidence into the editor widgets. The passed
      * incidence is kept for comparing with the current values of the editor.
      */
     virtual void load(const KCalendarCore::Incidence::Ptr &incidence) = 0;
     /// This was introduced to replace categories with Akonadi::Tags
     virtual void load(const Akonadi::Item &item);
 
-    /**
-     * Store the current values of the editor into @param incidence .
+    /*!
+     * Store the current values of the editor into \a incidence .
      */
     virtual void save(const KCalendarCore::Incidence::Ptr &incidence) = 0;
     /// This was introduced to replace categories with Akonadi::Tags
     virtual void save(Akonadi::Item &item);
 
-    /**
+    /*!
      * Returns whether or not the current values in the editor differ from the
      * initial values.
      */
     virtual bool isDirty() const = 0;
 
-    /**
+    /*!
      * Returns whether or not the content of this editor is valid. The default
      * implementation returns always true.
      */
     virtual bool isValid() const;
 
-    /**
+    /*!
        Returns the last error, which is set in isValid() on error,
        and cleared on success.
     */
     [[nodiscard]] QString lastErrorString() const;
 
-    /**
+    /*!
      * Sets focus on the invalid field.
      */
     virtual void focusInvalidField();
 
-    /**
+    /*!
      * Returns the type of the Incidence that is currently loaded.
      */
     [[nodiscard]] KCalendarCore::IncidenceBase::IncidenceType type() const;
 
-    /** Convenience method to get a pointer for a specific const Incidence Type. */
+    /*! Convenience method to get a pointer for a specific const Incidence Type. */
     template<typename IncidenceT>
     QSharedPointer<IncidenceT> incidence() const
     {
         return mLoadedIncidence.dynamicCast<IncidenceT>();
     }
 
-    /**
+    /*!
        Re-implement this and print important member values and widget
        enabled/disabled states that could have lead to isDirty() returning
        true when the user didn't do any interaction with the editor.
@@ -86,21 +86,21 @@ public:
     virtual void printDebugInfo() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Signals whether the dirty status of this editor has changed. The new dirty
      * status is passed as argument.
      */
     void dirtyStatusChanged(bool isDirty);
 
 public Q_SLOTS:
-    /**
+    /*!
      * Checks if the dirty status has changed until last check and emits the
      * dirtyStatusChanged signal if needed.
      */
     void checkDirtyStatus();
 
 protected:
-    /** Only subclasses can instantiate IncidenceEditors */
+    /*! Only subclasses can instantiate IncidenceEditors */
     IncidenceEditor(QObject *parent = nullptr);
 
     template<typename IncidenceT>

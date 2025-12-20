@@ -24,7 +24,7 @@ namespace IncidenceEditorNG
 {
 class EditorConfigPrivate;
 
-/**
+/*!
  * Configuration details. An application can inherit from this class
  * to provide application specific configurations to the editor.
  *

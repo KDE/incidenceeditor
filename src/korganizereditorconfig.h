@@ -12,8 +12,8 @@
 
 namespace IncidenceEditorNG
 {
-/**
- * @brief The KOrganizerEditorConfig class
+/*!
+ * \brief The KOrganizerEditorConfig class
  */
 class INCIDENCEEDITOR_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig
 {

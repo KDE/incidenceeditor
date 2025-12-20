@@ -18,15 +18,15 @@ class FreeBusyPeriod;
 
 namespace IncidenceEditorNG
 {
-/**
+/*!
  * This is a private proxy model, that wraps the free busy data exposed
  * by the FreeBusyItemModel for use by KDGantt2.
  *
  * This model exposes the FreeBusyPeriods, which are the child level nodes
  * in FreeBusyItemModel, as a list.
  *
- * @see FreeBusyItemMode
- * @see FreeBusyItem
+ * \sa FreeBusyItemMode
+ * \sa FreeBusyItem
  */
 class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
 {
