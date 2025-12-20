@@ -1,9 +1,9 @@
 /*!
-    \module KIMAP
-    \title KIMAP C++ Classes
+    \module IncidenceEditor
+    \title IncidenceEditor C++ Classes
     \ingroup modules
     \cmakepackage KPim6
-    \cmakecomponent IMAP
+    \cmakecomponent IncidenceEditor
 
-    \brief A job-based API for interacting with IMAP servers.
+    \brief Incidenceeditor library.
 */

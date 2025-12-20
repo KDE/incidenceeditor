@@ -1,8 +1,8 @@
 /*!
-    \page kimap-index.html
+    \page incidenceeditor-index.html
     \title KIMAP
 
-    A job-based API for interacting with IMAP servers.
+    Incidenceeditor library.
 
     \section1 Using the Module
 
@@ -10,11 +10,11 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {KPim6} {IMAP} {KPim6::IMAP}
+    \include {module-use.qdocinc} {building with cmake} {KPim6} {IncidenceEditor} {KPim6::IncidenceEditor}
 
     \section1 API Reference
 
     \list
-        \li \l{KIMAP C++ Classes}
+        \li \l{IncidenceEditor C++ Classes}
     \endlist
 */

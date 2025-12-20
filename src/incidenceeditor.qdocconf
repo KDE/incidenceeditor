@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
-project = KIMAP
-description = A job-based API for interacting with IMAP servers.
+project = IncidenceEditor
+description = Incidenceeditor library.
 
 
 documentationinheaders = true
@@ -14,20 +14,20 @@ outputformats = HTML
 depends += \
     qtcore
 
-navigation.landingpage = "KIMAP"
+navigation.landingpage = "IncidenceEditor"
 
-qhp.projects            = KIMAP
+qhp.projects            = IncidenceEditor
 
-qhp.kimap.file                = kimap.qhp
-qhp.kimap.namespace           = org.kde.kimap.$QT_VERSION_TAG
-qhp.kimap.virtualFolder       = kimap
-qhp.kimap.indexTitle          = kimap
-qhp.kimap.indexRoot           =
+qhp.incidenceeditor.file                = incidenceeditor.qhp
+qhp.incidenceeditor.namespace           = org.kde.incidenceeditor.$QT_VERSION_TAG
+qhp.incidenceeditor.virtualFolder       = incidenceeditor
+qhp.incidenceeditor.indexTitle          = incidenceeditor
+qhp.incidenceeditor.indexRoot           =
 
-qhp.kimap.subprojects         = classes
-qhp.kimap.subprojects.classes.title = C++ Classes
-qhp.kimap.subprojects.classes.indexTitle = KIMAP C++ Classes
-qhp.kimap.subprojects.classes.selectors = class fake:headerfile
-qhp.kimap.subprojects.classes.sortPages = true
+qhp.incidenceeditor.subprojects         = classes
+qhp.incidenceeditor.subprojects.classes.title = C++ Classes
+qhp.incidenceeditor.subprojects.classes.indexTitle = IncidenceEditor C++ Classes
+qhp.incidenceeditor.subprojects.classes.selectors = class fake:headerfile
+qhp.incidenceeditor.subprojects.classes.sortPages = true
 
-tagfile = kimap.tags
+tagfile = incidenceeditor.tags
