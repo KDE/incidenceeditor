@@ -36,7 +36,11 @@ class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit IncidenceDialog(Akonadi::IncidenceChanger *changer = nullptr, QWidget *parent = nullptr, Qt::WindowFlags flags = {});
+    /*!
+     */
     ~IncidenceDialog() override;
 
     /*!
@@ -57,6 +61,8 @@ public:
      */
     virtual void selectCollection(const Akonadi::Collection &collection);
 
+    /*!
+     */
     virtual void setIsCounterProposal(bool isCounterProposal);
 
     /*!
@@ -75,6 +81,8 @@ public:
     */
     void setInitiallyDirty(bool initiallyDirty);
 
+    /*!
+     */
     [[nodiscard]] Akonadi::Item item() const;
 
 Q_SIGNALS:

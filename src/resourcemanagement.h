@@ -35,12 +35,20 @@ class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ResourceManagement(QWidget *parent = nullptr);
+    /*!
+     */
     ~ResourceManagement() override;
 
+    /*!
+     */
     [[nodiscard]] ResourceItem::Ptr selectedItem() const;
 
 public Q_SLOTS:
+    /*!
+     */
     void slotDateChanged(const QDate &start, const QDate &end);
 
 private:

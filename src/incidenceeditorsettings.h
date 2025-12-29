@@ -21,6 +21,8 @@ class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG:
     Q_OBJECT
 
 public:
+    /*!
+     */
     static IncidenceEditorSettings *self();
 
 private:

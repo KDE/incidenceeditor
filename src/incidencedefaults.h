@@ -22,10 +22,18 @@ class IncidenceDefaultsPrivate;
 class INCIDENCEEDITOR_EXPORT IncidenceDefaults
 {
 public:
+    /*!
+     */
     explicit IncidenceDefaults(bool cleanupAttachmentTEmporaryFiles = false);
+    /*!
+     */
     IncidenceDefaults(const IncidenceDefaults &other);
+    /*!
+     */
     ~IncidenceDefaults();
 
+    /*!
+     */
     IncidenceDefaults &operator=(const IncidenceDefaults &other);
 
     /*!
@@ -100,6 +108,8 @@ public:
 
     // Returns the e-mail address used for the organizer when we can't find anything useful
     // This is something like "invalid@invalid"
+    /*!
+     */
     [[nodiscard]] static QString invalidEmailAddress();
 
 private:

@@ -25,6 +25,10 @@ namespace IncidenceEditorNG
 class EditorConfigPrivate;
 
 /*!
+ * \class IncidenceEditorNG::EditorConfig
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/EditorConfig
+ *
  * Configuration details. An application can inherit from this class
  * to provide application specific configurations to the editor.
  *
@@ -39,30 +43,50 @@ public:
         bool encrypt = false;
     };
 
+    /*!
+     */
     EditorConfig();
     virtual ~EditorConfig();
 
+    /*!
+     */
     static EditorConfig *instance();
+    /*!
+     */
     static void setEditorConfig(EditorConfig *);
 
+    /*!
+     */
     virtual KConfigSkeleton *config() const = 0;
 
-    /// Return the own full name.
+    /*!
+     * Return the own full name.
+     */
     [[nodiscard]] virtual QString fullName() const;
 
-    /// Return the own mail address.
+    /*!
+     * Return the own mail address.
+     */
     [[nodiscard]] virtual QString email() const;
 
-    /// Return true if the given email belongs to the user.
+    /*!
+     * Return true if the given email belongs to the user.
+     */
     virtual bool thatIsMe(const QString &email) const;
 
-    /// Returns all email addresses for the user.
+    /*!
+     * Returns all email addresses for the user.
+     */
     [[nodiscard]] virtual QStringList allEmails() const;
 
-    /// Returns all email addresses together with the full username for the user.
+    /*!
+     * Returns all email addresses together with the full username for the user.
+     */
     [[nodiscard]] virtual QList<Organizer> allOrganizers() const;
 
-    /// Show timezone selectors in the event and todo editor dialog.
+    /*!
+     * Show timezone selectors in the event and todo editor dialog.
+     */
     [[nodiscard]] virtual bool showTimeZoneSelectorInIncidenceEditor() const;
 
     [[nodiscard]] virtual QDateTime defaultDuration() const

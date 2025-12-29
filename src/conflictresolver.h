@@ -24,12 +24,16 @@ class FreeBusyItemModel;
 namespace IncidenceEditorNG
 {
 /*!
+ * \class IncidenceEditorNG::ConflictResolver
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/ConflictResolver
+ *
  * Takes a list of attendees and event info (e.g., min time start, max time end)
  * fetches their freebusy information, then identifies conflicts and periods of non-conflict.
  *
  * It exposes these periods so another class can display them to the user and allow
  * them to choose a correct time.
- * @author Casey Link
+ * \author Casey Link
  */
 class INCIDENCEEDITOR_EXPORT ConflictResolver : public QObject
 {
