@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-03-11 09:59+0100\n"
+"PO-Revision-Date: 2025-12-29 17:19+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -540,14 +540,14 @@ msgid "Add Attachment"
 msgstr "Adde attachamento"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to remove these attachments?<nl/>%1"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "Vermente tu vole remover iste attachamentos?<nl/>%1"
+msgstr ""
+"Tu realmente vole remover iste attachamentos?\n"
+"%1"
 
 #: incidenceattachment.cpp:196
 #, kde-format
