@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "incidenceeditor_export.h"
+#include "incidenceeditor_private_export.h"
 
 #include <QSortFilterProxyModel>
 
@@ -18,7 +18,11 @@ class FreeBusyPeriod;
 
 namespace IncidenceEditorNG
 {
-/*!
+/**
+ * \class IncidenceEditorNG::ConflictResolver
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/ConflictResolver
+ *
  * This is a private proxy model, that wraps the free busy data exposed
  * by the FreeBusyItemModel for use by KDGantt2.
  *
@@ -28,7 +32,7 @@ namespace IncidenceEditorNG
  * \sa FreeBusyItemMode
  * \sa FreeBusyItem
  */
-class INCIDENCEEDITOR_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
+class INCIDENCEEDITOR_TESTS_EXPORT FreeBusyGanttProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:

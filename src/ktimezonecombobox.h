@@ -18,7 +18,7 @@ namespace IncidenceEditorNG
 {
 class KTimeZoneComboBoxPrivate;
 
-/*!
+/**
  * A combobox that shows the system timezones available in QTimeZone
  * and provides methods to easily select the item corresponding to a given
  * QTimeZone or to retrieve the QTimeZone associated with the
