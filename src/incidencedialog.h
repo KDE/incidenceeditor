@@ -30,6 +30,10 @@ namespace IncidenceEditorNG
 {
 class IncidenceDialogPrivate;
 /*!
+ * \class IncidenceEditor::IncidenceDialog
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IncidenceDialog
+ *
  * \brief The IncidenceDialog class
  */
 class INCIDENCEEDITOR_EXPORT IncidenceDialog : public QDialog

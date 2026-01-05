@@ -14,6 +14,10 @@
 namespace IncidenceEditorNG
 {
 /*!
+ * \class IncidenceEditor::IncidenceEditorSettings
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IncidenceEditorSettings
+ *
  * \brief The IncidenceEditorSettings class
  */
 class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG::IncidenceEditorSettingsBase

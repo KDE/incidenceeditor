@@ -75,20 +75,34 @@ private:
     void onDialogClosed(int result);
     IndividualMailDialog *mDialog = nullptr;
 };
-
+/*!
+ * \class IncidenceEditor::IndividualMailComponentFactory
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IndividualMailComponentFactory
+ */
 class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::ITIPHandlerComponentFactory
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit IndividualMailComponentFactory(QObject *parent = nullptr);
+    /*!
+     */
     Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, QObject *parent) override;
 
+    /*!
+     */
     Akonadi::ITIPHandlerDialogDelegate *
     createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent) override;
 
 public Q_SLOTS:
+    /*!
+     */
     void onSetEdit(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &edit);
+    /*!
+     */
     void onSetUpdate(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &update);
 
 private:
