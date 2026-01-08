@@ -6,7 +6,7 @@
 */
 
 #pragma once
-#include "incidenceeditor_private_export.h"
+#include "incidenceeditor_export.h"
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
 namespace IncidenceEditorNG
@@ -17,7 +17,7 @@ namespace IncidenceEditorNG
  * approach to this complexity. An IncidenceEditor is an editor for a specific
  * part(s) of an Incidence.
  */
-class INCIDENCEEDITOR_TESTS_EXPORT IncidenceEditor : public QObject
+class INCIDENCEEDITOR_EXPORT IncidenceEditor : public QObject
 {
     Q_OBJECT
 public:
