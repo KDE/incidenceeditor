@@ -2899,7 +2899,7 @@ msgid ""
 "reloaded from their corresponding servers."
 msgstr ""
 "Prémer este botó causarà que es tornen a carregar les dades de lliure/ocupat "
-"de tots els assistents des del seu corresponent servidor."
+"de tots els assistents des del seu servidor corresponent."
 
 #: visualfreebusywidget.cpp:200
 #, kde-format
