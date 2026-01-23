@@ -30,7 +30,7 @@ namespace IncidenceEditorNG
 {
 class IncidenceDialogPrivate;
 /*!
- * \class IncidenceEditor::IncidenceDialog
+ * \class IncidenceEditorNG::IncidenceDialog
  * \inmodule IncidenceEditor
  * \inheaderfile IncidenceEditor/IncidenceDialog
  *

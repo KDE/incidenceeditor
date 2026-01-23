@@ -76,7 +76,7 @@ private:
     IndividualMailDialog *mDialog = nullptr;
 };
 /*!
- * \class IncidenceEditor::IndividualMailComponentFactory
+ * \class IncidenceEditorNG::IndividualMailComponentFactory
  * \inmodule IncidenceEditor
  * \inheaderfile IncidenceEditor/IndividualMailComponentFactory
  */

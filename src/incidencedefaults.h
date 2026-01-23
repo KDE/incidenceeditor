@@ -16,8 +16,9 @@
 namespace IncidenceEditorNG
 {
 class IncidenceDefaultsPrivate;
+
 /*!
- * \class IncidenceEditor::IncidenceDefaults
+ * \class IncidenceEditorNG::IncidenceDefaults
  * \inmodule IncidenceEditor
  * \inheaderfile IncidenceEditor/IncidenceDefaults
  *

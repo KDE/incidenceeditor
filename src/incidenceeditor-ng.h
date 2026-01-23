@@ -12,6 +12,10 @@
 namespace IncidenceEditorNG
 {
 /**
+ * \class IncidenceEditorNG::IncidenceEditor
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IncidenceEditor
+ *
  * KCal Incidences are complicated objects. The user interfaces to create/modify
  * are therefore complex too. The IncedenceEditor class is a divide and conquer
  * approach to this complexity. An IncidenceEditor is an editor for a specific

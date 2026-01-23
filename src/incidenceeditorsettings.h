@@ -14,7 +14,7 @@
 namespace IncidenceEditorNG
 {
 /*!
- * \class IncidenceEditor::IncidenceEditorSettings
+ * \class IncidenceEditorNG::IncidenceEditorSettings
  * \inmodule IncidenceEditor
  * \inheaderfile IncidenceEditor/IncidenceEditorSettings
  *
