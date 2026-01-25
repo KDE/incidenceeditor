@@ -740,6 +740,9 @@ QString IncidenceRecurrence::numberToString(int number) const
 
     int const i = (number % 100);
     int const j = (i > 10 && i < 20) ? 0 : (number % 10);
+    if (j < 0) {
+        return {};
+    }
     return QString::number(number) + _numSuffixes[j];
 }
 
