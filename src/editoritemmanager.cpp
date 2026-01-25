@@ -280,20 +280,22 @@ Akonadi::Item EditorItemManager::item(ItemState state) const
         if (d->mItem.hasPayload()) {
             return d->mItem;
         } else {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Won't return mItem because isValid = " << d->mItem.isValid() << "; and haPayload is " << d->mItem.hasPayload();
+            qCDebug(INCIDENCEEDITOR_LOG) << "Won't return mItem because isValid = " << d->mItem.isValid() << "; and hasPayload is " << d->mItem.hasPayload();
         }
         break;
     case EditorItemManager::BeforeSave:
         if (d->mPrevItem.hasPayload()) {
             return d->mPrevItem;
         } else {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Won't return mPrevItem because isValid = " << d->mPrevItem.isValid() << "; and haPayload is "
+            qCDebug(INCIDENCEEDITOR_LOG) << "Won't return mPrevItem because isValid = " << d->mPrevItem.isValid() << "; and hasPayload is "
                                          << d->mPrevItem.hasPayload();
         }
         break;
+    default:
+        qCDebug(INCIDENCEEDITOR_LOG) << "ItemState = " << state;
+        Q_ASSERT_X(false, "EditorItemManager::item", "Unsupported ItemState value");
+        break;
     }
-    qCDebug(INCIDENCEEDITOR_LOG) << "state = " << state;
-    Q_ASSERT_X(false, "EditorItemManager::item", "Unknown enum value");
     return {};
 }
 
