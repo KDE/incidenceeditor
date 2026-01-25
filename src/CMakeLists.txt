@@ -155,11 +155,11 @@ target_link_libraries(
         KPim6::CalendarUtils
         KPim6::CalendarSupport # For KCalPrefs
         KPim6::EventViews
-        KPim6::LdapWidgets
     PRIVATE
         KGantt6 # For FreeBusy Editor
         KPim6::PimTextEdit
         KF6::Codecs
+        KPim6::LdapWidgets
         KPim6::AkonadiWidgets
         KF6::IconThemes
         KF6::Completion
