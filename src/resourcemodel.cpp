@@ -59,7 +59,7 @@ QVariant ResourceModel::data(const QModelIndex &index, int role) const
         ResourceItem *p = getItem(parent(index));
         return QVariant::fromValue(p->child(index.row()));
     } else if (role == FullName) {
-        ResourceItem *item = getItem(index);
+        const ResourceItem *item = getItem(index);
         return KEmailAddress::normalizedAddress(item->data(u"cn"_s).toString(), item->data(u"mail"_s).toString());
     }
 

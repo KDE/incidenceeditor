@@ -131,7 +131,7 @@ void TemplateManagementDialog::slotAddTemplate()
 
 void TemplateManagementDialog::slotRemoveTemplate()
 {
-    QListWidgetItem *const item = m_base.m_listBox->selectedItems().first();
+    const QListWidgetItem *const item = m_base.m_listBox->selectedItems().first();
     if (!item) {
         return; // can't happen (TM)
     }
@@ -172,7 +172,7 @@ void TemplateManagementDialog::slotApplyTemplate()
     // Once the user has applied the current template to the event,
     // it makes no sense to add it again
     m_base.m_buttonAdd->setEnabled(false);
-    QListWidgetItem *item = m_base.m_listBox->currentItem();
+    const QListWidgetItem *item = m_base.m_listBox->currentItem();
     if (item) {
         const QString &cur = item->text();
         if (!cur.isEmpty() && cur != m_newTemplate) {

@@ -286,7 +286,7 @@ void IncidenceAttachment::showContextMenu(const QPoint &pos) // clazy:exclude=fu
 
     int numSelected = 0;
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
-        QListWidgetItem *item = mAttachmentView->item(itemIndex);
+        const QListWidgetItem *item = mAttachmentView->item(itemIndex);
         if (item->isSelected()) {
             numSelected++;
         }
@@ -354,7 +354,7 @@ void IncidenceAttachment::slotSelectionChanged()
 {
     bool selected = false;
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
-        QListWidgetItem *item = mAttachmentView->item(itemIndex);
+        const QListWidgetItem *item = mAttachmentView->item(itemIndex);
         if (item->isSelected()) {
             selected = true;
             break;
@@ -446,7 +446,7 @@ void IncidenceAttachment::handlePasteOrDrop(const QMimeData *mimeData)
         if (probablyWeHaveUris) {
             QList<QUrl>::ConstIterator const end = urls.constEnd();
             for (QList<QUrl>::ConstIterator it = urls.constBegin(); it != end; ++it) {
-                KIO::Job *job = KIO::storedGet(*it);
+                const KIO::Job *job = KIO::storedGet(*it);
                 connect(job, &KIO::Job::result, this, &IncidenceAttachment::downloadComplete);
             }
         } else { // we take anything

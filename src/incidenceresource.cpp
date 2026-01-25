@@ -173,7 +173,7 @@ int IncidenceResource::resourceCount() const
 {
     int c = 0;
     QModelIndex index;
-    QAbstractItemModel *model = mUi->mResourcesTable->model();
+    const QAbstractItemModel *model = mUi->mResourcesTable->model();
     if (!model) {
         return 0;
     }

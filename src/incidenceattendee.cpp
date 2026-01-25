@@ -546,7 +546,7 @@ void IncidenceAttendee::slotFreeBusyAdded(const QModelIndex &parent, int first, 
     if (parent.isValid()) {
         return;
     }
-    QAbstractItemModel *model = mConflictResolver->model();
+    const QAbstractItemModel *model = mConflictResolver->model();
     for (int i = first; i <= last; ++i) {
         QModelIndex const index = model->index(i, 0, parent);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
@@ -563,7 +563,7 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
     if (topLeft.parent().isValid()) {
         return;
     }
-    QAbstractItemModel *model = mConflictResolver->model();
+    const QAbstractItemModel *model = mConflictResolver->model();
     for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
         QModelIndex const index = model->index(i, 0);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
@@ -576,7 +576,7 @@ void IncidenceAttendee::slotFreeBusyChanged(const QModelIndex &topLeft, const QM
 
 void IncidenceAttendee::updateFBStatus()
 {
-    QAbstractItemModel *model = mConflictResolver->model();
+    const QAbstractItemModel *model = mConflictResolver->model();
     for (int i = 0; i < model->rowCount(); ++i) {
         QModelIndex const index = model->index(i, 0);
         const KCalendarCore::Attendee &attendee = model->data(index, CalendarSupport::FreeBusyItemModel::AttendeeRole).value<KCalendarCore::Attendee>();
@@ -698,7 +698,7 @@ void IncidenceAttendee::slotGroupSubstitutionLayoutChanged()
     mExpandGroupJobs.clear();
     mGroupList.clear();
 
-    QAbstractItemModel *model = mUi->mAttendeeTable->model();
+    const QAbstractItemModel *model = mUi->mAttendeeTable->model();
     if (!model) {
         return;
     }
@@ -870,7 +870,7 @@ int IncidenceAttendee::attendeeCount() const
 {
     int c = 0;
     QModelIndex index;
-    QAbstractItemModel *model = mUi->mAttendeeTable->model();
+    const QAbstractItemModel *model = mUi->mAttendeeTable->model();
     if (!model) {
         return 0;
     }

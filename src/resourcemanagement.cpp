@@ -186,7 +186,7 @@ void ResourceManagement::slotShowDetails(const QModelIndex &current)
 void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLDAPCore::LdapClient &client)
 {
     // Clean up formDetails
-    QLayoutItem *child = nullptr;
+    const QLayoutItem *child = nullptr;
     while ((child = mUi->formDetails->takeAt(0)) != nullptr) {
         delete child->widget();
         delete child;
@@ -234,7 +234,7 @@ void ResourceManagement::slotLayoutChanged()
 void ResourceManagement::slotOwnerSearchFinished()
 {
     // Clean up formDetails
-    QLayoutItem *child = nullptr;
+    const QLayoutItem *child = nullptr;
     while ((child = mUi->formOwner->takeAt(0)) != nullptr) {
         delete child->widget();
         delete child;

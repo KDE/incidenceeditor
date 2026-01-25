@@ -627,7 +627,7 @@ void IncidenceRecurrence::handleRecurrenceTypeChange(int currentIndex)
 void IncidenceRecurrence::removeExceptions()
 {
     const QList<QListWidgetItem *> selectedExceptions = mUi->mExceptionList->selectedItems();
-    for (QListWidgetItem *selectedException : selectedExceptions) {
+    for (const QListWidgetItem *selectedException : selectedExceptions) {
         const int row = mUi->mExceptionList->row(selectedException);
         mExceptionDates.removeAt(row);
         delete mUi->mExceptionList->takeItem(row);
