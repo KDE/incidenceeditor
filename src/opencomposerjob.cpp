@@ -38,7 +38,7 @@ void OpenComposerJob::start()
     unsigned int const identity = mIdentity.uoid();
 
     QString const subject = mMessage->subject()->asUnicodeString();
-    QString const body = QString::fromUtf8(mMessage->contents()[0]->body());
+    QString const body = QString::fromUtf8(mMessage->contents().at(0)->body());
 
     QList<QVariant> messages;
 

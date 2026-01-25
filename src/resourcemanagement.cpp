@@ -215,8 +215,8 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
         mUi->formDetails->addRow(translateLDAPAttributeForDisplay(key), new QLabel(list.join(u'\n')));
     }
 
-    QString const name = QString::fromUtf8(obj.attributes().value(u"cn"_s)[0]);
-    QString const email = QString::fromUtf8(obj.attributes().value(u"mail"_s)[0]);
+    QString const name = QString::fromUtf8(obj.attributes().value(u"cn"_s).at(0));
+    QString const email = QString::fromUtf8(obj.attributes().value(u"mail"_s).at(0));
     KCalendarCore::Attendee const attendee(name, email);
     CalendarSupport::FreeBusyItem::Ptr const freebusy(new CalendarSupport::FreeBusyItem(attendee, this));
     mModel->clear();
