@@ -11,8 +11,6 @@
         kdepim/incidenceeditors/editorattachments.{h,cpp}
 */
 
-#include <config-enterprise.h>
-
 #include "attachmenticonview.h"
 #include "incidenceeditor_debug.h"
 
@@ -35,13 +33,7 @@ AttachmentIconItem::AttachmentIconItem(const KCalendarCore::Attachment &att, QLi
     if (!att.isEmpty()) {
         mAttachment = att;
     } else {
-        // for the enterprise, inline attachments are the default
-#if KDEPIM_ENTERPRISE_BUILD
-        mAttachment = KCalendarCore::Attachment(QByteArray()); // use the non-uri constructor
-        // as we want inline by default
-#else
         mAttachment = KCalendarCore::Attachment(QString());
-#endif
     }
     readAttachment();
     setFlags(flags() | Qt::ItemIsDragEnabled);

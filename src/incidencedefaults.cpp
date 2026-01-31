@@ -5,10 +5,8 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <config-enterprise.h>
-
-#include "alarmpresets.h"
 #include "incidencedefaults.h"
+#include "alarmpresets.h"
 #include "incidenceeditor_debug.h"
 
 #include <CalendarSupport/KCalPrefs>
@@ -382,9 +380,6 @@ void IncidenceDefaults::setDefaults(const KCalendarCore::Incidence::Ptr &inciden
     incidence->clearRecurrence();
 
     const KCalendarCore::Person organizerAsPerson = d->organizerAsPerson();
-#if KDEPIM_ENTERPRISE_BUILD
-    incidence->addAttendee(d->organizerAsAttendee(organizerAsPerson));
-#endif
     for (const KCalendarCore::Attendee &attendee : std::as_const(d->mAttendees)) {
         incidence->addAttendee(attendee);
     }

@@ -124,15 +124,6 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
                         SOVERSION 6
 )
 
-option(
-    KDEPIM_ENTERPRISE_BUILD
-    "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client."
-    FALSE
-)
-
-# config-enterprise.h is needed for both ENTERPRISE_BUILD and BUILD_EVERYTHING
-configure_file(config-enterprise.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-enterprise.h)
-
 ########### Targets ###########
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)

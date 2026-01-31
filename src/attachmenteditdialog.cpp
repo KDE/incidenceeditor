@@ -12,7 +12,6 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "attachmenticonview.h"
-#include "config-enterprise.h"
 #include "ui_attachmenteditdialog.h"
 #include <KFormat>
 #include <KIO/StoredTransferJob>
