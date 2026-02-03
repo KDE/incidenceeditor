@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 06:51+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2025-11-30 14:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -129,19 +129,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "உரிய நேரத்திற்கு %1 நாள் முன்"
 msgstr[1] "உரிய நேரத்திற்கு %1 நாட்கள் முன்"
 
-#: attachmenteditdialog.cpp:34
+#: attachmenteditdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "உடனிணைப்பை திருத்துவது"
 
-#: attachmenteditdialog.cpp:53
+#: attachmenteditdialog.cpp:52
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "தெரியாதது"
 
-#: attachmenteditdialog.cpp:107
+#: attachmenteditdialog.cpp:106
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -817,19 +817,19 @@ msgstr ""
 "செய்யவேண்டியதற்குரிய நேரம், அதன் துவக்க நேரத்திற்கு முந்தையதாக உள்ளது.\n"
 "நேரங்களையும் தேதிகளையும் சரிபாருங்கள்."
 
-#: incidencedefaults.cpp:70
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "செல்லுபடியாகும் அடையாளங்கள் இல்லை"
 
-#: incidencedefaults.cpp:305
+#: incidencedefaults.cpp:303
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[இருமத் தரவு]"
 
-#: incidencedefaults.cpp:438
+#: incidencedefaults.cpp:433
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

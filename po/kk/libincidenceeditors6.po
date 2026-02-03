@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 06:51+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -138,7 +138,7 @@ msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] "Бітуіне %1 күн қалды"
 
-#: attachmenteditdialog.cpp:34
+#: attachmenteditdialog.cpp:33
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Add Attachment"
@@ -146,13 +146,13 @@ msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Тіркеме қосу"
 
-#: attachmenteditdialog.cpp:53
+#: attachmenteditdialog.cpp:52
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Беймәлім"
 
-#: attachmenteditdialog.cpp:107
+#: attachmenteditdialog.cpp:106
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -881,19 +881,19 @@ msgstr ""
 "Іс жоспарының бітуі басталудан ерте.\n"
 "Күн мен уақытын түзеңіз."
 
-#: incidencedefaults.cpp:70
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "(дұрыс) іс-әлпеттері табылған жоқ"
 
-#: incidencedefaults.cpp:305
+#: incidencedefaults.cpp:303
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Бинарлы дерек]"
 
-#: incidencedefaults.cpp:438
+#: incidencedefaults.cpp:433
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

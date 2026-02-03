@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 06:51+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2025-10-19 19:54+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -140,19 +140,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 Tag vor Fälligkeit"
 msgstr[1] "%1 Tage vor Fälligkeit"
 
-#: attachmenteditdialog.cpp:34
+#: attachmenteditdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Anhang bearbeiten"
 
-#: attachmenteditdialog.cpp:53
+#: attachmenteditdialog.cpp:52
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: attachmenteditdialog.cpp:107
+#: attachmenteditdialog.cpp:106
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -837,19 +837,19 @@ msgstr ""
 "Die Aufgabe endet, bevor sie beginnt.\n"
 "Bitte korrigieren Sie Datum/Uhrzeit."
 
-#: incidencedefaults.cpp:70
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "keine (gültige) Identität gefunden"
 
-#: incidencedefaults.cpp:305
+#: incidencedefaults.cpp:303
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Binärdaten]"
 
-#: incidencedefaults.cpp:438
+#: incidencedefaults.cpp:433
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

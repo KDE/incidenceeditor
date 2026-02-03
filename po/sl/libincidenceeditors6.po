@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 06:51+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2025-11-16 08:17+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -146,19 +146,19 @@ msgstr[1] "%1 dan pred zapadlostjo"
 msgstr[2] "%1 dneva pred zapadlostjo"
 msgstr[3] "%1 dni pred zapadlostjo"
 
-#: attachmenteditdialog.cpp:34
+#: attachmenteditdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Uredi prilogo"
 
-#: attachmenteditdialog.cpp:53
+#: attachmenteditdialog.cpp:52
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Neznana"
 
-#: attachmenteditdialog.cpp:107
+#: attachmenteditdialog.cpp:106
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -848,19 +848,19 @@ msgstr ""
 "Opravilo zapade pred začetkom.\n"
 "Popravite datume in čase."
 
-#: incidencedefaults.cpp:70
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "najdene ni bilo nobene (veljavne) istovetnosti"
 
-#: incidencedefaults.cpp:305
+#: incidencedefaults.cpp:303
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Dvojiški podatki]"
 
-#: incidencedefaults.cpp:438
+#: incidencedefaults.cpp:433
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
