@@ -2,11 +2,29 @@
 # SPDX-License-Identifier: BSD-3-Clause
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(KPim6EventViews "@EVENTVIEW_LIB_VERSION@")
-find_dependency(KPim6CalendarSupport "@CALENDARSUPPORT_LIB_VERSION@")
-find_dependency(KPim6CalendarUtils "@CALENDARUTILS_LIB_VERSION@")
-find_dependency(KF6CalendarCore "@KF_MIN_VERSION@")
-find_dependency(KPim6Mime "@KMIME_LIB_VERSION@")
-find_dependency(KPim6AkonadiMime "@AKONADI_MIMELIB_VERSION@")
+find_dependency(
+    KPim6EventViews
+    "@EVENTVIEW_LIB_VERSION@"
+)
+find_dependency(
+    KPim6CalendarSupport
+    "@CALENDARSUPPORT_LIB_VERSION@"
+)
+find_dependency(
+    KPim6CalendarUtils
+    "@CALENDARUTILS_LIB_VERSION@"
+)
+find_dependency(
+    KF6CalendarCore
+    "@KF_MIN_VERSION@"
+)
+find_dependency(
+    KPim6Mime
+    "@KMIME_LIB_VERSION@"
+)
+find_dependency(
+    KPim6AkonadiMime
+    "@AKONADI_MIMELIB_VERSION@"
+)
 
 include("${CMAKE_CURRENT_LIST_DIR}/KPim6IncidenceEditorTargets.cmake")
