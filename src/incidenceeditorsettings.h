@@ -26,6 +26,7 @@ class INCIDENCEEDITOR_EXPORT IncidenceEditorSettings : public IncidenceEditorNG:
 
 public:
     /*!
+     * Returns the singleton instance of IncidenceEditorSettings.
      */
     static IncidenceEditorSettings *self();
 

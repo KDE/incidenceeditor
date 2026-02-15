@@ -40,18 +40,25 @@ class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
     Q_OBJECT
 public:
     /*!
+     * Creates a new ResourceManagement dialog.
+     * \a parent The parent widget.
      */
     explicit ResourceManagement(QWidget *parent = nullptr);
     /*!
+     * Destroys the ResourceManagement dialog.
      */
     ~ResourceManagement() override;
 
     /*!
+     * Returns the currently selected resource item.
      */
     [[nodiscard]] ResourceItem::Ptr selectedItem() const;
 
 public Q_SLOTS:
     /*!
+     * Sets the date range for resource availability display.
+     * \a start The start date.
+     * \a end The end date.
      */
     void slotDateChanged(const QDate &start, const QDate &end);
 

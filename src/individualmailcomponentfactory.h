@@ -85,23 +85,41 @@ class INCIDENCEEDITOR_EXPORT IndividualMailComponentFactory : public Akonadi::IT
     Q_OBJECT
 public:
     /*!
+     * Creates a new IndividualMailComponentFactory.
+     * \a parent The parent object.
      */
     explicit IndividualMailComponentFactory(QObject *parent = nullptr);
     /*!
+     * Creates a message queue job for sending iTIP messages.
+     * \a incidence The incidence to create messages for.
+     * \a identity The identity to use for sending.
+     * \a parent The parent object.
+     * \return A new MessageQueueJob instance.
      */
     Akonadi::MessageQueueJob *
     createMessageQueueJob(const KCalendarCore::IncidenceBase::Ptr &incidence, const KIdentityManagementCore::Identity &identity, QObject *parent) override;
 
     /*!
+     * Creates an iTIP handler dialog delegate.
+     * \a incidence The incidence to handle.
+     * \a method The iTIP method (request, reply, etc.).
+     * \a parent The parent widget.
+     * \return A new ITIPHandlerDialogDelegate instance.
      */
     Akonadi::ITIPHandlerDialogDelegate *
     createITIPHanderDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent) override;
 
 public Q_SLOTS:
     /*!
+     * Sets the attendees to edit for the incidence.
+     * \a incidence The incidence being edited.
+     * \a edit The list of attendees to edit.
      */
     void onSetEdit(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &edit);
     /*!
+     * Sets the attendees to update for the incidence.
+     * \a incidence The incidence being updated.
+     * \a update The list of attendees to update.
      */
     void onSetUpdate(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &update);
 

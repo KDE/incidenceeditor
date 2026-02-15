@@ -25,6 +25,9 @@ class INCIDENCEEDITOR_EXPORT IncidenceEditor : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * Destructor
+     */
     ~IncidenceEditor() override;
 
     /*!
@@ -32,14 +35,20 @@ public:
      * incidence is kept for comparing with the current values of the editor.
      */
     virtual void load(const KCalendarCore::Incidence::Ptr &incidence) = 0;
-    /// This was introduced to replace categories with Akonadi::Tags
+    /*!
+     * Load the values from an Akonadi item into the editor widgets.
+     * This was introduced to replace categories with Akonadi::Tags
+     */
     virtual void load(const Akonadi::Item &item);
 
     /*!
      * Store the current values of the editor into \a incidence .
      */
     virtual void save(const KCalendarCore::Incidence::Ptr &incidence) = 0;
-    /// This was introduced to replace categories with Akonadi::Tags
+    /*!
+     * Store the current values of the editor into an Akonadi item.
+     * This was introduced to replace categories with Akonadi::Tags
+     */
     virtual void save(Akonadi::Item &item);
 
     /*!

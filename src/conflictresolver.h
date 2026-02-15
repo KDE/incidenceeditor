@@ -51,6 +51,9 @@ public:
      */
     void insertAttendee(const KCalendarCore::Attendee &attendee);
 
+    /*!
+     * Add an attendee using their free/busy information
+     */
     void insertAttendee(const CalendarSupport::FreeBusyItem::Ptr &freebusy);
     /*!
      * Removes an attendee
@@ -103,6 +106,9 @@ public:
     */
     [[nodiscard]] bool findFreeSlot(const KCalendarCore::Period &dateTimeRange);
 
+    /*!
+     * Returns the free/busy model used for storing attendee information.
+     */
     CalendarSupport::FreeBusyItemModel *model() const;
 
 Q_SIGNALS:
@@ -130,17 +136,41 @@ public Q_SLOTS:
      * These control the timeframe for which conflicts are to be resolved.
      */
     void setEarliestDate(QDate newDate);
+    /*!
+     * Set the earliest time constraint for the timeframe.
+     */
     void setEarliestTime(QTime newTime);
+    /*!
+     * Set the latest date constraint for the timeframe.
+     */
     void setLatestDate(QDate newDate);
+    /*!
+     * Set the latest time constraint for the timeframe.
+     */
     void setLatestTime(QTime newTime);
 
+    /*!
+     * Set the earliest date and time constraint for the timeframe.
+     */
     void setEarliestDateTime(const QDateTime &newDateTime);
+    /*!
+     * Set the latest date and time constraint for the timeframe.
+     */
     void setLatestDateTime(const QDateTime &newDateTime);
 
+    /*!
+     * Called when free/busy data has changed. Recalculates conflicts.
+     */
     void freebusyDataChanged();
 
+    /*!
+     * Find all free slots matching the current constraints.
+     */
     void findAllFreeSlots();
 
+    /*!
+     * Set the resolution for the free slot search in seconds.
+     */
     void setResolution(int seconds);
 
 private:
