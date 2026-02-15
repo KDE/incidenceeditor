@@ -28,21 +28,32 @@ class INCIDENCEEDITOR_EXPORT IncidenceDefaults
 {
 public:
     /*!
+     * Creates a new IncidenceDefaults object.
+     * \a cleanupAttachmentTEmporaryFiles If true, temporary attachment files will be cleaned up.
      */
     explicit IncidenceDefaults(bool cleanupAttachmentTEmporaryFiles = false);
     /*!
+     * Copy constructor.
+     * \a other The IncidenceDefaults object to copy.
      */
     IncidenceDefaults(const IncidenceDefaults &other);
     /*!
+     * Destructor.
      */
     ~IncidenceDefaults();
 
     /*!
+     * Assignment operator.
+     * \a other The IncidenceDefaults object to assign.
      */
     IncidenceDefaults &operator=(const IncidenceDefaults &other);
 
     /*!
       Sets the attachments that are added by default to incidences.
+      \a attachments The list of attachment file paths.
+      \a attachmentMimetypes Optional list of MIME types for each attachment.
+      \a attachmentLabels Optional list of labels for each attachment.
+      \a inlineAttachment If true, attachments are embedded inline.
     */
     void setAttachments(const QStringList &attachments,
                         const QStringList &attachmentMimetypes = QStringList(),
@@ -76,6 +87,7 @@ public:
     /*!
       Sets the incidence related to the incidence for which to set the defaults. For
       example the parent todo of a new sub todo.
+      \a incidence The related incidence.
     */
     void setRelatedIncidence(const KCalendarCore::Incidence::Ptr &incidence);
 
@@ -108,12 +120,13 @@ public:
      *
      * TODO: See if this is always called when using IncidenceDefaults.
      * If yes, this should be done inside ctor.
+     * \a cleanupAttachmentTempFiles If true, temporary attachment files will be cleaned up.
      */
     [[nodiscard]] static IncidenceDefaults minimalIncidenceDefaults(bool cleanupAttachmentTempFiles = false);
 
-    // Returns the e-mail address used for the organizer when we can't find anything useful
-    // This is something like "invalid@invalid"
     /*!
+     * Returns the e-mail address used for the organizer when we can't find anything useful
+     * This is something like "invalid@invalid"
      */
     [[nodiscard]] static QString invalidEmailAddress();
 

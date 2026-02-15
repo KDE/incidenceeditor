@@ -23,12 +23,17 @@ class INCIDENCEEDITOR_EXPORT GroupwareUiDelegate : public Akonadi::GroupwareUiDe
 {
 public:
     /*!
+     * Requests to open an incidence editor for the given item.
+     * \a item The Akonadi item to edit.
      */
     void requestIncidenceEditor(const Akonadi::Item &item) override;
     /*!
+     * Sets the calendar to use for groupware operations.
+     * \a calendar The ETM calendar instance.
      */
     void setCalendar(const Akonadi::ETMCalendar::Ptr &calendar) override;
     /*!
+     * Creates a new calendar for groupware operations.
      */
     void createCalendar() override;
 };

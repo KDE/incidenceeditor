@@ -31,6 +31,7 @@ namespace IncidenceDialogFactory
  *                    we fill the editor with data that's not yet in akonadi, like
  *                    the "Create To-do/Reminder" in KMail.
  * \a type   The Incidence type for which to create a dialog.
+ * \a changer The IncidenceChanger to use for modifications.
  * \a parent The parent widget of the dialog
  * \a flags  The window flags for the dialog.
  *
@@ -43,6 +44,22 @@ INCIDENCEEDITOR_EXPORT IncidenceDialog *create(bool needsSaving,
                                                QWidget *parent = nullptr,
                                                Qt::WindowFlags flags = {});
 
+/*!
+ * Creates a new IncidenceDialog for editing a To-Do with default values.
+ *
+ * \a summary The title of the To-Do.
+ * \a description The description of the To-Do.
+ * \a attachments List of attachment file paths.
+ * \a attendees List of attendee email addresses.
+ * \a attachmentMimetypes MIME types for each attachment.
+ * \a attachmentLabels Labels for each attachment.
+ * \a inlineAttachment If true, attachments are embedded inline.
+ * \a defaultCollection The default collection for saving the item.
+ * \a cleanupAttachmentTemp If true, temporary attachment files will be cleaned up.
+ * \a parent The parent widget.
+ * \a flags The window flags.
+ * \return A new IncidenceDialog instance for To-Do editing.
+ */
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(const QString &summary,
                                                          const QString &description,
                                                          const QStringList &attachments,
@@ -55,6 +72,22 @@ INCIDENCEEDITOR_EXPORT IncidenceDialog *createTodoEditor(const QString &summary,
                                                          QWidget *parent = nullptr,
                                                          Qt::WindowFlags flags = {});
 
+/*!
+ * Creates a new IncidenceDialog for editing an Event with default values.
+ *
+ * \a summary The title of the Event.
+ * \a description The description of the Event.
+ * \a attachments List of attachment file paths.
+ * \a attendees List of attendee email addresses.
+ * \a attachmentMimetypes MIME types for each attachment.
+ * \a attachmentLabels Labels for each attachment.
+ * \a inlineAttachment If true, attachments are embedded inline.
+ * \a defaultCollection The default collection for saving the item.
+ * \a cleanupAttachmentTempFiles If true, temporary attachment files will be cleaned up.
+ * \a parent The parent widget.
+ * \a flags The window flags.
+ * \return A new IncidenceDialog instance for Event editing.
+ */
 INCIDENCEEDITOR_EXPORT IncidenceDialog *createEventEditor(const QString &summary,
                                                           const QString &description,
                                                           const QStringList &attachments,
