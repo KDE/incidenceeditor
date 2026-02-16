@@ -52,7 +52,7 @@ public:
 
     /// Methods
     [[nodiscard]] KCalendarCore::Person organizerAsPerson() const;
-    [[nodiscard]] KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer) const;
+    [[nodiscard]] static KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer);
 
     void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;
     void eventDefaults(const KCalendarCore::Event::Ptr &event) const;
@@ -107,7 +107,7 @@ KCalendarCore::Person IncidenceDefaultsPrivate::organizerAsPerson() const
     return organizer;
 }
 
-KCalendarCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(const KCalendarCore::Person &organizer) const
+KCalendarCore::Attendee IncidenceDefaultsPrivate::organizerAsAttendee(const KCalendarCore::Person &organizer)
 {
     KCalendarCore::Attendee organizerAsAttendee;
     // Really, the appropriate values (even the fall back values) should come from

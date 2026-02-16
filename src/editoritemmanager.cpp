@@ -46,6 +46,7 @@ namespace IncidenceEditorNG
 class ItemEditorPrivate
 {
     EditorItemManager *q_ptr;
+    /* cppcheck-suppress functionStatic */
     Q_DECLARE_PUBLIC(EditorItemManager)
 
 public:

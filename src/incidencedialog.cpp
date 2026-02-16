@@ -77,6 +77,7 @@ enum Tabs {
 class IncidenceDialogPrivate : public ItemEditorUi
 {
     IncidenceDialog *q_ptr;
+    /* cppcheck-suppress functionStatic */
     Q_DECLARE_PUBLIC(IncidenceDialog)
 
 public:
@@ -92,7 +93,7 @@ public:
     IncidenceResource *mIeResource = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
-    [[nodiscard]] QString typeToString(const int type) const;
+    [[nodiscard]] static QString typeToString(const int type);
 
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
     ~IncidenceDialogPrivate() override;
@@ -292,7 +293,7 @@ void IncidenceDialogPrivate::handleRecurrenceChange(IncidenceEditorNG::Recurrenc
     mUi->mTabWidget->setTabText(RecurrenceTab, tabText);
 }
 
-QString IncidenceDialogPrivate::typeToString(const int type) const
+QString IncidenceDialogPrivate::typeToString(const int type)
 {
     // Do not translate.
     switch (type) {
