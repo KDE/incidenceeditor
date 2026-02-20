@@ -82,9 +82,6 @@ msgid "%1 minute before start"
 msgid_plural "%1 minutes before start"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: alarmpresets.cpp:87
 #, kde-format
@@ -93,9 +90,6 @@ msgid "%1 hour before start"
 msgid_plural "%1 hours before start"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: alarmpresets.cpp:89
 #, kde-format
@@ -104,16 +98,12 @@ msgid "%1 day before start"
 msgid_plural "%1 days before start"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: alarmpresets.cpp:103
-#, fuzzy, kde-format
-#| msgid "When:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "When due"
-msgstr "Cathain:"
+msgstr ""
 
 #: alarmpresets.cpp:105
 #, kde-format
@@ -122,9 +112,6 @@ msgid "%1 minute before due"
 msgid_plural "%1 minutes before due"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: alarmpresets.cpp:107
 #, kde-format
@@ -133,9 +120,6 @@ msgid "%1 hour before due"
 msgid_plural "%1 hours before due"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: alarmpresets.cpp:109
 #, kde-format
@@ -144,17 +128,12 @@ msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: attachmenteditdialog.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Add Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "Cuir Iatán Leis"
+msgstr ""
 
 #: attachmenteditdialog.cpp:52
 #, kde-format
@@ -236,11 +215,9 @@ msgid "Accepted"
 msgstr ""
 
 #: attendeetablemodel.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "@label unknown mimetype"
-#| msgid "Unknown"
+#, kde-format
 msgid "Unknown"
-msgstr "Anaithnid"
+msgstr ""
 
 #: attendeetablemodel.cpp:152
 #, kde-format
@@ -255,11 +232,10 @@ msgid "Name"
 msgstr ""
 
 #: attendeetablemodel.cpp:156
-#, fuzzy, kde-format
-#| msgid "Disable"
+#, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
-msgstr "Díchumasaigh"
+msgstr ""
 
 #: attendeetablemodel.cpp:158
 #, kde-format
@@ -268,11 +244,10 @@ msgid "Status"
 msgstr ""
 
 #: attendeetablemodel.cpp:160
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
-msgstr "Cineál"
+msgstr ""
 
 #: attendeetablemodel.cpp:162
 #, kde-format
@@ -287,11 +262,10 @@ msgid "Name"
 msgstr ""
 
 #: attendeetablemodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Send email"
+#, kde-format
 msgctxt "Attendee email"
 msgid "Email"
-msgstr "Seol ríomhphost"
+msgstr ""
 
 #: editoritemmanager.cpp:239
 #, kde-format
@@ -301,18 +275,16 @@ msgid ""
 msgstr ""
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "Coinnigh na hathruithe"
+msgstr ""
 
 #: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Ignore and Overwrite changes"
-msgstr "Ná bac leis na hathruithe agus forscríobh"
+msgstr ""
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -386,32 +358,24 @@ msgid "Display a dialog"
 msgstr ""
 
 #: incidencealarm.cpp:275
-#, fuzzy, kde-format
-#| msgid "Sound &file:"
+#, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
-msgstr "Comhad &fuaime:"
+msgstr ""
 
 #: incidencealarm.cpp:278
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Invalid Email Address"
+#, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
-msgstr "Seoladh Ríomhphoist Neamhbhailí"
+msgstr ""
 
 #: incidencealarm.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox repeat interval expressed in minutes"
-#| msgid " Minute(s)"
+#, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] " Nóiméad"
-msgstr[1] " Nóiméad"
-msgstr[2] " Nóiméad"
-msgstr[3] " Nóiméad"
-msgstr[4] " Nóiméad"
+msgstr[0] ""
+msgstr[1] ""
 
 #: incidencealarm.cpp:289
 #, kde-format
@@ -420,9 +384,6 @@ msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: incidencealarm.cpp:292
 #, kde-format
@@ -431,9 +392,6 @@ msgid "1 hour"
 msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: incidencealarm.cpp:297
 #, kde-format
@@ -446,28 +404,24 @@ msgstr ""
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
 #: incidencealarm.cpp:307
-#, fuzzy, kde-format
-#| msgid "after the event starts"
+#, kde-format
 msgid "%1 %2 after the to-do started %3"
-msgstr "tar éis thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:309
-#, fuzzy, kde-format
-#| msgid "after the event starts"
+#, kde-format
 msgid "%1 %2 after the event started %3"
-msgstr "tar éis thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:313
-#, fuzzy, kde-format
-#| msgid "before the event starts"
+#, kde-format
 msgid "%1 %2 before the to-do starts %3"
-msgstr "roimh thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:315
-#, fuzzy, kde-format
-#| msgid "before the event starts"
+#, kde-format
 msgid "%1 %2 before the event starts %3"
-msgstr "roimh thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:319
 #, kde-format
@@ -475,10 +429,9 @@ msgid "%1 %2 after the to-do is due %3"
 msgstr ""
 
 #: incidencealarm.cpp:321
-#, fuzzy, kde-format
-#| msgid "after the event ends"
+#, kde-format
 msgid "%1 %2 after the event ends %3"
-msgstr "tar éis dheireadh an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:325
 #, kde-format
@@ -486,10 +439,9 @@ msgid "%1 %2 before the to-do is due %3"
 msgstr ""
 
 #: incidencealarm.cpp:327
-#, fuzzy, kde-format
-#| msgid "before the event ends"
+#, kde-format
 msgid "%1 %2 before the event ends %3"
-msgstr "roimh dheireadh an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:333
 #, kde-format
@@ -497,10 +449,9 @@ msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr ""
 
 #: incidencealarm.cpp:335
-#, fuzzy, kde-format
-#| msgid "after the event starts"
+#, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
-msgstr "tar éis thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:339
 #, kde-format
@@ -508,10 +459,9 @@ msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr ""
 
 #: incidencealarm.cpp:341
-#, fuzzy, kde-format
-#| msgid "before the event starts"
+#, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
-msgstr "roimh thús an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:345
 #, kde-format
@@ -519,10 +469,9 @@ msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr ""
 
 #: incidencealarm.cpp:347
-#, fuzzy, kde-format
-#| msgid "after the event ends"
+#, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
-msgstr "tar éis dheireadh an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:351
 #, kde-format
@@ -530,10 +479,9 @@ msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr ""
 
 #: incidencealarm.cpp:353
-#, fuzzy, kde-format
-#| msgid "before the event ends"
+#, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
-msgstr "roimh dheireadh an imeachta"
+msgstr ""
 
 #: incidencealarm.cpp:361
 #, kde-format
@@ -582,13 +530,12 @@ msgid "Add Attachment"
 msgstr "Cuir Iatán Leis"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgid "Are you sure that you want to remove the template <b>%1</b>?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "An bhfuil tú cinnte gur mian leat teimpléad <b>%1</b> a bhaint?"
+msgstr ""
 
 #: incidenceattachment.cpp:196
 #, kde-format
@@ -639,12 +586,10 @@ msgid "&Remove"
 msgstr ""
 
 #: incidenceattachment.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Airíonna..."
+msgstr ""
 
 #: incidenceattachment.cpp:514
 #, kde-format
@@ -681,11 +626,10 @@ msgid "Do Not Invite"
 msgstr ""
 
 #: incidenceattendee.cpp:442
-#, fuzzy, kde-format
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Roghnaigh Catagóirí"
+msgstr ""
 
 #: incidenceattendee.cpp:626
 #, kde-format
@@ -705,11 +649,10 @@ msgid ""
 msgstr ""
 
 #: incidenceattendee.cpp:801
-#, fuzzy, kde-format
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "Roghnaigh Catagóirí"
+msgstr ""
 
 #: incidenceattendee.cpp:802
 #, kde-format
@@ -770,18 +713,16 @@ msgid "Starts: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:776
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
-msgstr "Dáta Tosaigh"
+msgstr ""
 
 #: incidencedatetime.cpp:777
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
-msgstr "Dáta Tosaigh"
+msgstr ""
 
 #: incidencedatetime.cpp:786 incidencedatetime.cpp:787
 #, kde-format
@@ -796,25 +737,22 @@ msgid "Ends: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:794
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
-msgstr "Spriocdháta"
+msgstr ""
 
 #: incidencedatetime.cpp:795
-#, fuzzy, kde-format
-#| msgid "Due Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr "Sprioc-am"
+msgstr ""
 
 #: incidencedatetime.cpp:797
-#, fuzzy, kde-format
-#| msgid "Starting Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
-msgstr "Dáta Tosaigh"
+msgstr ""
 
 #: incidencedatetime.cpp:798
 #, kde-format
@@ -823,36 +761,28 @@ msgid "Ending Time"
 msgstr ""
 
 #: incidencedatetime.cpp:876
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Invalid Email Address"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "Seoladh Ríomhphoist Neamhbhailí"
+msgstr ""
 
 #: incidencedatetime.cpp:881
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Invalid Email Address"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "Seoladh Ríomhphoist Neamhbhailí"
+msgstr ""
 
 #: incidencedatetime.cpp:889
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Invalid Email Address"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "Seoladh Ríomhphoist Neamhbhailí"
+msgstr ""
 
 #: incidencedatetime.cpp:894
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Invalid Email Address"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "Seoladh Ríomhphoist Neamhbhailí"
+msgstr ""
 
 #: incidencedatetime.cpp:903
 #, kde-format
@@ -895,11 +825,10 @@ msgid "Enable rich text"
 msgstr ""
 
 #: incidencedescription.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Display"
+#, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
-msgstr "&Taispeáin"
+msgstr ""
 
 #: incidencedialog.cpp:232
 #, kde-format
@@ -1035,18 +964,16 @@ msgid ""
 msgstr ""
 
 #: incidencedialog.cpp:507
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default Calendar?"
-msgstr "Catagóir Réamhshocraithe"
+msgstr ""
 
 #: incidencedialog.cpp:508
-#, fuzzy, kde-format
-#| msgid "Default Category"
+#, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Catagóir Réamhshocraithe"
+msgstr ""
 
 #: incidencedialog.cpp:509
 #, kde-format
@@ -1073,12 +1000,10 @@ msgid "Discard changes and close dialog"
 msgstr ""
 
 #: incidencedialog.cpp:695
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Teimpléid..."
+msgstr ""
 
 #: incidencedialog.cpp:697
 #, kde-format
@@ -1145,10 +1070,9 @@ msgstr "Fiafraigh díom i gcónaí"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:20
-#, fuzzy, kde-format
-#| msgid "Attach complete message"
+#, kde-format
 msgid "Only attach link to message"
-msgstr "Ceangail teachtaireacht iomlán"
+msgstr ""
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:23
@@ -1314,11 +1238,10 @@ msgstr ""
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
-#, fuzzy, kde-format
-#| msgid "Send email"
+#, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr "Seol ríomhphost"
+msgstr ""
 
 #: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
 #: individualmailcomponentfactory.h:64
@@ -1346,11 +1269,10 @@ msgid "Send no update"
 msgstr ""
 
 #: individualmaildialog.cpp:39
-#, fuzzy, kde-format
-#| msgid "Send email"
+#, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Edit mail"
-msgstr "Seol ríomhphost"
+msgstr ""
 
 #: individualmaildialog.cpp:40
 #, kde-format
@@ -1383,11 +1305,10 @@ msgid "Common name"
 msgstr ""
 
 #: ldaputils.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send email"
+#, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
-msgstr "Seol ríomhphost"
+msgstr ""
 
 #: ldaputils.cpp:21
 #, kde-format
@@ -1396,19 +1317,16 @@ msgid "Given name"
 msgstr ""
 
 #: ldaputils.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
+#, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
-msgstr "Kevin Scannell"
+msgstr ""
 
 #: ldaputils.cpp:25
-#, fuzzy, kde-format
-#| msgid "Organizer:"
+#, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
-msgstr "Eagraí:"
+msgstr ""
 
 #: ldaputils.cpp:27
 #, kde-format
@@ -1441,11 +1359,10 @@ msgid "Cannot connect to email service"
 msgstr ""
 
 #: resourcemanagement.cpp:97
-#, fuzzy, kde-format
-#| msgid "Template Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "Bainisteoireacht na dTeimpléad"
+msgstr ""
 
 #: resourcemanagement.cpp:102
 #, kde-format
@@ -1502,11 +1419,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:106
-#, fuzzy, kde-format
-#| msgid "Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Ainm an Teimpléid"
+msgstr ""
 
 #: templatemanagementdialog.cpp:140
 #, kde-format
@@ -1514,11 +1430,10 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "An bhfuil tú cinnte gur mian leat teimpléad <b>%1</b> a bhaint?"
 
 #: templatemanagementdialog.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr "Bain Teimpléad"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -1562,12 +1477,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:79
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox repeat interval expressed in minutes"
-#| msgid " Minute(s)"
+#, kde-format
 msgctxt "@item:inlistbox alarm offset expressed in minutes"
 msgid "minute(s)"
-msgstr " Nóiméad"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:84
@@ -1655,11 +1568,9 @@ msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox repeat interval expressed in minutes"
-#| msgid " Minute(s)"
+#, kde-format
 msgid " time(s)"
-msgstr " Nóiméad"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:182
@@ -1695,11 +1606,9 @@ msgstr "Céard:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Select the alarm type"
-msgstr "Socraigh an dáta tosaigh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
@@ -1709,17 +1618,15 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
-#, fuzzy, kde-format
-#| msgid "&Display"
+#, kde-format
 msgid "Display text"
-msgstr "&Taispeáin"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:240
-#, fuzzy, kde-format
-#| msgid "Sound &file:"
+#, kde-format
 msgid "Play sound file"
-msgstr "Comhad &fuaime:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KTextEdit, mDisplayText)
 #: ui/alarmdialog.ui:273
@@ -1731,10 +1638,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
 #: ui/alarmdialog.ui:296
-#, fuzzy, kde-format
-#| msgid "Sound &file:"
+#, kde-format
 msgid "Audio File:"
-msgstr "Comhad &fuaime:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:309
@@ -1773,12 +1679,10 @@ msgstr "Ainm an iatáin"
 
 #. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
 #: ui/attachmenteditdialog.ui:65
-#, fuzzy, kde-format
-#| msgctxt "@label unknown mimetype"
-#| msgid "Unknown"
+#, kde-format
 msgctxt "@label File type of attachment is unknown"
 msgid "Unknown"
-msgstr "Anaithnid"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
@@ -1803,12 +1707,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Give the attachment a name"
+#, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Cuir ainm ar an iatán"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -1879,12 +1781,10 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:88
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the location"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Accept the invitation"
-msgstr "Socraigh an suíomh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:91
@@ -1910,12 +1810,10 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "Socraigh an dáta tosaigh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1957,11 +1855,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
 #: ui/dialogdesktop.ui:226
-#, fuzzy, kde-format
-#| msgid "Location:"
+#, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
-msgstr "Suíomh:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
 #: ui/dialogdesktop.ui:279
@@ -2064,11 +1961,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
 #: ui/dialogdesktop.ui:390
-#, fuzzy, kde-format
-#| msgid "before the event ends"
+#, kde-format
 msgctxt "@option:check"
 msgid "Blocks me for other events"
-msgstr "roimh dheireadh an imeachta"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
 #: ui/dialogdesktop.ui:421
@@ -2086,21 +1982,17 @@ msgstr "Socraigh an dáta tosaigh"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:452
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
-msgstr "Socraigh an dáta tosaigh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
 #: ui/dialogdesktop.ui:468
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
-msgstr "Socraigh an dáta tosaigh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
@@ -2195,11 +2087,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/dialogdesktop.ui:735
-#, fuzzy, kde-format
-#| msgid "Organizer:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
-msgstr "Eagraí:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
 #: ui/dialogdesktop.ui:776
@@ -2271,11 +2162,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
-#, fuzzy, kde-format
-#| msgid "Select Categories"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Roghnaigh Catagóirí"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:885
@@ -2329,19 +2219,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
 #: ui/dialogdesktop.ui:1048
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
-msgstr "Cuir Leis"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #: ui/dialogdesktop.ui:1079
-#, fuzzy, kde-format
-#| msgid "&New..."
+#, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
-msgstr "&Nua..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
 #: ui/dialogdesktop.ui:1090
@@ -2352,19 +2240,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1101
-#, fuzzy, kde-format
-#| msgid "Disable"
+#, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
-msgstr "Díchumasaigh"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
 #: ui/dialogdesktop.ui:1108
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
-msgstr "Bain"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
 #: ui/dialogdesktop.ui:1133
@@ -2375,20 +2261,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
 #: ui/dialogdesktop.ui:1145
-#, fuzzy, kde-format
-#| msgid "Repeat:"
+#, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
-msgstr "Arís:"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1164
-#, fuzzy, kde-format
-#| msgctxt "repeat every X minutes"
-#| msgid "every "
+#, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
-msgstr "gach "
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1169
@@ -2399,21 +2282,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1174
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox range in weeks"
-#| msgid "Week"
+#, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
-msgstr "Seachtain"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1179
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox range in months"
-#| msgid "Month"
+#, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
-msgstr "Mí"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1184
@@ -2424,12 +2303,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
 #: ui/dialogdesktop.ui:1198
-#, fuzzy, kde-format
-#| msgctxt "repeat every X minutes"
-#| msgid "every "
+#, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
-msgstr "gach "
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
 #: ui/dialogdesktop.ui:1230
@@ -2453,12 +2330,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
-#, fuzzy, kde-format
-#| msgctxt "repeat every X minutes"
-#| msgid "every "
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr "gach "
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
@@ -2490,19 +2365,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mExceptionsLabel)
 #: ui/dialogdesktop.ui:1569
-#, fuzzy, kde-format
-#| msgid "Exceptions:"
+#, kde-format
 msgctxt "@label exceptions for the recurrence"
 msgid "Exceptions:"
-msgstr "Eisceachtaí:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionAddButton)
 #: ui/dialogdesktop.ui:1594
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button adds an exception on the recurrence"
 msgid "Add"
-msgstr "Cuir Leis"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
 #: ui/dialogdesktop.ui:1633
@@ -2513,20 +2386,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
 #: ui/dialogdesktop.ui:1648
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
-msgstr "Bain"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
 #: ui/dialogdesktop.ui:1675
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Add Attachment"
+#, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
-msgstr "Cuir Iatán Leis"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1697
@@ -2546,11 +2416,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1703
-#, fuzzy, kde-format
-#| msgid "Add"
+#, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
-msgstr "Cuir Leis"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1723
@@ -2569,19 +2438,16 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1729
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
-msgstr "Bain"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the start date"
+#, kde-format
 msgid "Enter the search term"
-msgstr "Socraigh an dáta tosaigh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:42
@@ -2616,10 +2482,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/schedulingdialog.ui:59
-#, fuzzy, kde-format
-#| msgid "after the event ends"
+#, kde-format
 msgid "Latest time to end:"
-msgstr "tar éis dheireadh an imeachta"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2666,11 +2531,9 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Set the location"
+#, kde-format
 msgid "Select the search option"
-msgstr "Socraigh an suíomh"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
@@ -2680,11 +2543,9 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox range is computed automatically"
-#| msgid "Automatic"
+#, kde-format
 msgid "Automatic Search"
-msgstr "Uathoibríoch"
+msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGanttTab)
 #: ui/schedulingdialog.ui:199
@@ -2762,10 +2623,9 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
-#, fuzzy, kde-format
-#| msgid "Remove the selected category"
+#, kde-format
 msgid "Remove the currently selected template"
-msgstr "Bain an chatagóir roghnaithe"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:75
@@ -2940,263 +2800,3 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Select Categories"
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Roghnaigh Catagóirí"
-
-#~ msgid "&New..."
-#~ msgstr "&Nua..."
-
-#, fuzzy
-#~| msgid "Send email"
-#~ msgctxt "Alarm action"
-#~ msgid "Send an email"
-#~ msgstr "Seol ríomhphost"
-
-#~ msgid "Send email"
-#~ msgstr "Seol ríomhphost"
-
-#~ msgid "&To:"
-#~ msgstr "&Go:"
-
-#~ msgid "&Message:"
-#~ msgstr "&Teachtaireacht:"
-
-#, fuzzy
-#~| msgid "Application / script"
-#~ msgid "Run application / script"
-#~ msgstr "Feidhmchlár / script"
-
-#~ msgid "&Application / Script:"
-#~ msgstr "F&eidhmchlár / Script:"
-
-#~ msgid "*|All files"
-#~ msgstr "*|Gach comhad"
-
-#~ msgid "Ar&guments:"
-#~ msgstr "Ar&góintí:"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the title"
-#~ msgstr "Socraigh an teideal"
-
-#~ msgctxt "@label"
-#~ msgid "Categories:"
-#~ msgstr "Catagóirí:"
-
-#, fuzzy
-#~| msgid "Select Categories"
-#~ msgctxt "@title:window"
-#~ msgid "Select Categories"
-#~ msgstr "Roghnaigh Catagóirí"
-
-#, fuzzy
-#~| msgid "Edit Categories"
-#~ msgctxt "@title:window"
-#~ msgid "Edit Categories"
-#~ msgstr "Cuir Catagóirí in Eagar"
-
-#~ msgid "New category"
-#~ msgstr "Catagóir nua"
-
-#~ msgid "New subcategory"
-#~ msgstr "Fochatagóir nua"
-
-#~ msgid "Select Categories"
-#~ msgstr "Roghnaigh Catagóirí"
-
-#, fuzzy
-#~| msgid "Select Categories"
-#~ msgid "Select categories"
-#~ msgstr "Roghnaigh Catagóirí"
-
-#~ msgid "Category"
-#~ msgstr "Catagóir"
-
-#~ msgid "Edit Categories"
-#~ msgstr "Cuir Catagóirí in Eagar"
-
-#, fuzzy
-#~| msgid "New category"
-#~ msgid "New category entry"
-#~ msgstr "Catagóir nua"
-
-#~ msgid "A&dd"
-#~ msgstr "C&uir Leis"
-
-#~ msgid "Add &Subcategory"
-#~ msgstr "Cuir Fochatagóir Lei&s"
-
-#~ msgid "Remove the selected category"
-#~ msgstr "Bain an chatagóir roghnaithe"
-
-#~ msgid "Category list"
-#~ msgstr "Liosta catagóirí"
-
-#~ msgid "Default Category"
-#~ msgstr "Catagóir Réamhshocraithe"
-
-#, fuzzy
-#~| msgid "Select Categories"
-#~ msgid "Select incidence categories"
-#~ msgstr "Roghnaigh Catagóirí"
-
-#~ msgid "&Clear Selection"
-#~ msgstr "&Glan Roghnúchán"
-
-#~ msgid "&Edit Categories..."
-#~ msgstr "Cuir Catagóirí in &Eagar..."
-
-#, fuzzy
-#~| msgid "Configure"
-#~ msgctxt "@action:button Configures selected reminder"
-#~ msgid "Configure"
-#~ msgstr "Cumraigh"
-
-#~ msgid "Overwrite"
-#~ msgstr "Forscríobh"
-
-#~ msgid "Remove"
-#~ msgstr "Bain"
-
-#~ msgid "KOrganizer"
-#~ msgstr "KOrganizer"
-
-#~ msgid "(C) 2010 Bertjan Broeksema"
-#~ msgstr "© 2010 Bertjan Broeksema"
-
-#~ msgid "Bertjan Broeksema"
-#~ msgstr "Bertjan Broeksema"
-
-#~ msgid "Author"
-#~ msgstr "Údar"
-
-#~ msgid "Organizer:"
-#~ msgstr "Eagraí:"
-
-#~ msgid "Add"
-#~ msgstr "Cuir Leis"
-
-#~ msgid "Configure"
-#~ msgstr "Cumraigh"
-
-#~ msgid "Disable"
-#~ msgstr "Díchumasaigh"
-
-#, fuzzy
-#~| msgid "Repeat"
-#~ msgid "Repeat never"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgid "Repeat"
-#~ msgid "Repeat daily"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgid "Repeat"
-#~ msgid "Repeat weekly"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgid "Repeat"
-#~ msgid "Repeat monthly"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgid "Repeat"
-#~ msgid "Repeat yearly"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgctxt "repeat every X minutes"
-#~| msgid "every "
-#~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
-#~ msgid "every"
-#~ msgstr "gach "
-
-#, fuzzy
-#~| msgid "dd.MM.yyyy"
-#~ msgid "MM.dd.yyyy"
-#~ msgstr "MM.dd.yyyy"
-
-#~ msgid "Exceptions:"
-#~ msgstr "Eisceachtaí:"
-
-#~ msgid "dd.MM.yyyy"
-#~ msgstr "MM.dd.yyyy"
-
-#~ msgid "Time"
-#~ msgstr "Am"
-
-#~ msgid "&Interval:"
-#~ msgstr "&Eatramh:"
-
-#, fuzzy
-#~| msgid "Repeat:"
-#~ msgid "&Repeating:"
-#~ msgstr "Arís:"
-
-#~ msgid "Type"
-#~ msgstr "Cineál"
-
-#~ msgid "&Display"
-#~ msgstr "&Taispeáin"
-
-#~ msgid "&Sound"
-#~ msgstr "&Fuaim"
-
-#~ msgid "Application / script"
-#~ msgstr "Feidhmchlár / script"
-
-#, fuzzy
-#~| msgid "&Display"
-#~ msgid "Display &text:"
-#~ msgstr "&Taispeáin"
-
-#~ msgid "Sound &file:"
-#~ msgstr "Comhad &fuaime:"
-
-#~ msgid "&Text of the message:"
-#~ msgstr "&Téacs na teachtaireachta:"
-
-#, fuzzy
-#~| msgid "Remove the selected category"
-#~ msgid "Remove the currently selected reminder"
-#~ msgstr "Bain an chatagóir roghnaithe"
-
-#~ msgid "D&uplicate"
-#~ msgstr "&Dúblach"
-
-#~ msgid "Offset"
-#~ msgstr "Fritháireamh"
-
-#~ msgid "Repeat"
-#~ msgstr "Arís"
-
-#, fuzzy
-#~| msgid "Type"
-#~ msgctxt "Type of resource (vCard attribute)"
-#~ msgid "cuType"
-#~ msgstr "Cineál"
-
-#, fuzzy
-#~| msgid "Send email"
-#~ msgctxt "attendee email"
-#~ msgid "email"
-#~ msgstr "Seol ríomhphost"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Select Categories"
-#~ msgstr "Roghnaigh Catagóirí"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Categories..."
-#~ msgstr "&Catagóirí..."
