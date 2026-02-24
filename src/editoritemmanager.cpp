@@ -160,7 +160,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     if (job->error()) {
         auto moveJob = qobject_cast<Akonadi::ItemMoveJob *>(job);
         Q_ASSERT(moveJob);
-        Q_UNUSED(moveJob)
+        (void)moveJob; // Assertion ensures moveJob is valid
         // Q_ASSERT(!moveJob->items().isEmpty());
         // TODO: What is reasonable behavior at this point?
         qCCritical(INCIDENCEEDITOR_LOG) << "Error while moving item "; // << moveJob->items().first().id() << " to collection "

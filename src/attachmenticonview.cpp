@@ -221,9 +221,8 @@ QMimeData *AttachmentIconView::mimeData() const
     return mimeData(selectedItems());
 }
 
-void AttachmentIconView::startDrag(Qt::DropActions supportedActions)
+void AttachmentIconView::startDrag([[maybe_unused]] Qt::DropActions supportedActions) // unused
 {
-    Q_UNUSED(supportedActions)
 #ifndef QT_NO_DRAGANDDROP
     QPixmap pixmap;
     if (selectedItems().size() > 1) {
@@ -263,9 +262,8 @@ QStringList AttachmentIconView::mimeTypes() const
     return {QStringLiteral("text/uri-list")};
 }
 
-bool AttachmentIconView::dropMimeData(int index, const QMimeData *data, Qt::DropAction action)
+bool AttachmentIconView::dropMimeData([[maybe_unused]] int index, const QMimeData *data, Qt::DropAction action) // index unused
 {
-    Q_UNUSED(index);
     if (action == Qt::IgnoreAction) {
         return true;
     }

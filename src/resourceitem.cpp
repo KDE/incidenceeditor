@@ -137,9 +137,8 @@ const KLDAPCore::LdapClient &ResourceItem::ldapClient() const
     return mLdapClient;
 }
 
-void ResourceItem::slotLDAPResult(const KLDAPCore::LdapClient &client, const KLDAPCore::LdapObject &obj)
+void ResourceItem::slotLDAPResult([[maybe_unused]] const KLDAPCore::LdapClient &client, const KLDAPCore::LdapObject &obj) // client unused
 {
-    Q_UNUSED(client)
     mLdapObject = obj;
     const auto ldapAttributes = mLdapObject.attributes();
     for (const QString &header : std::as_const(mAttrs)) {

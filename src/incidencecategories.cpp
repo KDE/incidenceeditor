@@ -27,16 +27,14 @@ IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)
     connect(mUi->mTagWidget, &Akonadi::TagWidget::selectionChanged, this, &IncidenceCategories::onSelectionChanged);
 }
 
-void IncidenceCategories::onSelectionChanged(const Akonadi::Tag::List &list)
+void IncidenceCategories::onSelectionChanged([[maybe_unused]] const Akonadi::Tag::List &list)
 {
-    Q_UNUSED(list)
     mDirty = true;
     checkDirtyStatus();
 }
 
-void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
+void IncidenceCategories::load([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(incidence)
     mDirty = false;
     mWasDirty = false;
 }

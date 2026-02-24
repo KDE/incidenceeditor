@@ -49,9 +49,8 @@ public:
         return incidenceIdentifier.startsWith("fb-"_L1);
     }
 
-    [[nodiscard]] QString displayName(const KCalendarCore::Incidence::Ptr &incidence) const override
+    [[nodiscard]] QString displayName([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence) const override
     {
-        Q_UNUSED(incidence)
         return u"Freebusy"_s;
     }
 
@@ -77,9 +76,8 @@ public:
         }
     }
 
-    [[nodiscard]] QString iconForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override
+    [[nodiscard]] QString iconForIncidence([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence) const override
     {
-        Q_UNUSED(incidence)
         return {};
     }
 

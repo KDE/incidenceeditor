@@ -665,10 +665,8 @@ Akonadi::Collection IncidenceDialogPrivate::selectedCollection() const
     return mCalSelector->currentCollection();
 }
 
-void IncidenceDialogPrivate::reject(RejectReason reason, const QString &errorMessage)
+void IncidenceDialogPrivate::reject([[maybe_unused]] RejectReason reason, const QString &errorMessage)
 {
-    Q_UNUSED(reason)
-
     Q_Q(IncidenceDialog);
     qCCritical(INCIDENCEEDITOR_LOG) << "Rejecting:" << errorMessage;
     q->deleteLater();

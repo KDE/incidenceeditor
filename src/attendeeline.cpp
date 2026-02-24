@@ -306,9 +306,8 @@ int AttendeeLine::setColumnWidth(int w)
     return w;
 }
 
-void AttendeeLine::setActions(AttendeeActions actions)
+void AttendeeLine::setActions([[maybe_unused]] AttendeeActions actions) // actions unused
 {
-    Q_UNUSED(actions);
     mStateCombo->clear();
 }
 
@@ -339,9 +338,8 @@ void AttendeeLine::slotHandleChange()
     }
 }
 
-void AttendeeLine::slotTextChanged(const QString &str)
+void AttendeeLine::slotTextChanged([[maybe_unused]] const QString &str)
 {
-    Q_UNUSED(str)
     mModified = true;
     Q_EMIT changed(); // TODO: This doesn't seem connected to anywhere in incidenceattendee.cpp.
     // but the important code is run in slotHandleChange() anyway so we don't see any bug

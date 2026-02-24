@@ -150,9 +150,8 @@ void SchedulingDialog::slotMandatoryRolesChanged()
     mResolver->setMandatoryRoles(roles);
 }
 
-void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current, const QModelIndex &previous)
+void SchedulingDialog::slotRowSelectionChanged(const QModelIndex &current, [[maybe_unused]] const QModelIndex &previous)
 {
-    Q_UNUSED(previous)
     if (!current.isValid()) {
         mMoveApptGroupBox->hide();
         return;

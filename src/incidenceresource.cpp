@@ -98,9 +98,8 @@ IncidenceResource::~IncidenceResource()
     delete resourceDialog;
 }
 
-void IncidenceResource::load(const KCalendarCore::Incidence::Ptr &incidence)
+void IncidenceResource::load([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(incidence)
     slotDateChanged();
 }
 
@@ -109,9 +108,8 @@ void IncidenceResource::slotDateChanged()
     resourceDialog->slotDateChanged(mDateTime->startDate(), mDateTime->endDate());
 }
 
-void IncidenceResource::save(const KCalendarCore::Incidence::Ptr &incidence)
+void IncidenceResource::save([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence)
 {
-    Q_UNUSED(incidence)
     // all logic inside IncidenceAtendee (using same model)
 }
 

@@ -647,9 +647,8 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeChanged(const QModelIndex &
     updateGroupExpand();
 }
 
-void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded([[maybe_unused]] const QModelIndex &index, int first, int last)
 {
-    Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
         auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();
@@ -658,9 +657,8 @@ void IncidenceAttendee::slotGroupSubstitutionAttendeeAdded(const QModelIndex &in
     updateGroupExpand();
 }
 
-void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved(const QModelIndex &index, int first, int last)
+void IncidenceAttendee::slotGroupSubstitutionAttendeeRemoved([[maybe_unused]] const QModelIndex &index, int first, int last)
 {
-    Q_UNUSED(index)
     for (int i = first; i <= last; ++i) {
         QModelIndex const email = dataModel()->index(i, AttendeeTableModel::Email);
         auto attendee = dataModel()->data(email, AttendeeTableModel::AttendeeRole).value<KCalendarCore::Attendee>();

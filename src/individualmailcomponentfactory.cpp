@@ -195,14 +195,14 @@ void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceCreated(Recipie
     }
 }
 
-void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified(bool attendeeStatusChanged,
+void IndividualMailITIPHandlerDialogDelegate::openDialogIncidenceModified([[maybe_unused]] bool attendeeStatusChanged,
                                                                           Recipient recipient,
                                                                           const QString &question,
                                                                           Action action,
                                                                           const KGuiItem &buttonYes,
                                                                           const KGuiItem &buttonNo)
 {
-    Q_UNUSED(attendeeStatusChanged)
+    // attendeeStatusChanged parameter is not used
     if (recipient == Attendees) {
         openDialog(question, mIncidence->attendees(), action, buttonYes, buttonNo);
     } else {
