@@ -52,6 +52,7 @@ public:
 
     /// Methods
     [[nodiscard]] KCalendarCore::Person organizerAsPerson() const;
+    /* cppcheck-suppress functionStatic */
     [[nodiscard]] static KCalendarCore::Attendee organizerAsAttendee(const KCalendarCore::Person &organizer);
 
     void todoDefaults(const KCalendarCore::Todo::Ptr &todo) const;

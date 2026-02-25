@@ -93,6 +93,7 @@ public:
     IncidenceResource *mIeResource = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
+    /* cppcheck-suppress functionStatic */
     [[nodiscard]] static QString typeToString(const int type);
 
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);
