@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:46+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-11-19 20:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -689,7 +689,7 @@ msgstr[3] "%1 تضاربات"
 msgstr[4] "%1 تضاربًا"
 msgstr[5] "%1 تضارب"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -700,13 +700,13 @@ msgstr ""
 "أنت تغيّر منظّم هذا الحدث. بما أنّ المنظّم سيحضر الحدث أيضًا، أتريد تغيير الحاضر "
 "المقابل أيضًا؟"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:799
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "غيّر الحضور"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1044,37 +1044,37 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "لا تعيّن"
 
-#: incidencedialog.cpp:689
+#: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "احفظ التّغييرات الحاليّة"
 
-#: incidencedialog.cpp:690
+#: incidencedialog.cpp:688
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "احفظ التّغييرات وأغلق الحواريّ"
 
-#: incidencedialog.cpp:691
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "أهمل التّغييرات وأغلق الحواريّ"
 
-#: incidencedialog.cpp:695
+#: incidencedialog.cpp:693
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "ال&قوالب…"
 
-#: incidencedialog.cpp:697
+#: incidencedialog.cpp:695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "أدِر قوالب هذا العنصر"
 
-#: incidencedialog.cpp:699
+#: incidencedialog.cpp:697
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1086,25 +1086,25 @@ msgstr ""
 "القوالب من إنشاء العناصر أسهل وأسرع وذلك بوضع القيم المبدئيّة التي تريدها في "
 "المحرّر آليًّا."
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
+#: incidencedialog.cpp:795 incidencedialog.cpp:820 incidencedialog.cpp:840
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "أمتأكّد من الإلغاء؟"
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
+#: incidencedialog.cpp:796 incidencedialog.cpp:821 incidencedialog.cpp:841
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "تأكيد «منظّمك»"
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:824 incidencedialog.cpp:844
+#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "ألغ التحرير"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
+#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1453,13 +1453,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "تعذّر الاتّصال بخدمة البريد الإلكترونيّ"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:95
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "إدارة الموارد"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:100
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -1471,7 +1471,7 @@ msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "الجدولة"
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:166
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1479,7 +1479,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%1، %2 %3"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:187
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "

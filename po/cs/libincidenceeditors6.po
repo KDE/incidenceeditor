@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:46+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-12-01 10:16+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -656,7 +656,7 @@ msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikty"
 msgstr[2] "%1 konfliktů"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -665,13 +665,13 @@ msgid ""
 "well?"
 msgstr ""
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:799
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Změnit účastníka"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1000,37 +1000,37 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Nenastavovat"
 
-#: incidencedialog.cpp:689
+#: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Uložit aktuální změny"
 
-#: incidencedialog.cpp:690
+#: incidencedialog.cpp:688
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Uložit změny a zavřít dialogové okno"
 
-#: incidencedialog.cpp:691
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Zrušit změny a zavřít"
 
-#: incidencedialog.cpp:695
+#: incidencedialog.cpp:693
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Š&ablony…"
 
-#: incidencedialog.cpp:697
+#: incidencedialog.cpp:695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Spravovat šablony pro tuto položku"
 
-#: incidencedialog.cpp:699
+#: incidencedialog.cpp:697
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1039,25 +1039,25 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
+#: incidencedialog.cpp:795 incidencedialog.cpp:820 incidencedialog.cpp:840
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Přejete si opravdu zrušit?"
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
+#: incidencedialog.cpp:796 incidencedialog.cpp:821 incidencedialog.cpp:841
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer - potvrzení"
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:824 incidencedialog.cpp:844
+#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Zrušit úpravy"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
+#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1383,13 +1383,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Nelze se připojit k e-mailové službě"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:95
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Správa zdrojů"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:100
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -1401,7 +1401,7 @@ msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "Plánování"
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:166
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1409,7 +1409,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%1, %2 %3"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:187
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:46+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -662,7 +662,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 konflikt"
 msgstr[1] "%1 konflikti"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -673,7 +673,7 @@ msgstr ""
 "Kavatsed muuta selle sündmuse korraldajat, kes samuti sellel osaleb. Kas "
 "soovid siis muuta ka tema osalemist?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:799
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "One attendee"
@@ -682,7 +682,7 @@ msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "1 osaleja"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "No Changes"
@@ -1046,25 +1046,25 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Ära saada"
 
-#: incidencedialog.cpp:689
+#: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Salvestab aktiivsed muudatused"
 
-#: incidencedialog.cpp:690
+#: incidencedialog.cpp:688
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Unusta muudatused ja sulge dialoog"
 
-#: incidencedialog.cpp:691
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Unusta muudatused ja sulge dialoog"
 
-#: incidencedialog.cpp:695
+#: incidencedialog.cpp:693
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Templates..."
@@ -1072,13 +1072,13 @@ msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Malli&d..."
 
-#: incidencedialog.cpp:697
+#: incidencedialog.cpp:695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Selle elemendi mallide haldamine"
 
-#: incidencedialog.cpp:699
+#: incidencedialog.cpp:697
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1090,25 +1090,25 @@ msgstr ""
 "muuta uute elementide loomise hõlpsamaks ja kiiremaks, asetades automaatselt "
 "redaktorisse sulle vajalikud väärtused."
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
+#: incidencedialog.cpp:795 incidencedialog.cpp:820 incidencedialog.cpp:840
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Kas tõesti loobuda?"
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
+#: incidencedialog.cpp:796 incidencedialog.cpp:821 incidencedialog.cpp:841
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizeri kinnitus"
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:824 incidencedialog.cpp:844
+#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
+#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1433,13 +1433,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Ühendumine e-posti teenusega nurjus"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:95
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Ressursihaldus"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:100
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -1451,7 +1451,7 @@ msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "Ajastamine"
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:166
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1459,7 +1459,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%1, %2. %3"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:187
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "

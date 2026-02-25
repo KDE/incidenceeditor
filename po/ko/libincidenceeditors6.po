@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:46+0000\n"
+"POT-Creation-Date: 2026-02-25 00:47+0000\n"
 "PO-Revision-Date: 2025-10-09 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -636,7 +636,7 @@ msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "충돌 %1개"
 
-#: incidenceattendee.cpp:797
+#: incidenceattendee.cpp:795
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -647,13 +647,13 @@ msgstr ""
 "이 이벤트의 주최자를 변경하려고 합니다. 주최자도 이벤트에 참석하므로, 해당하"
 "는 참석자도 변경하시겠습니까?"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:799
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "참석자 변경"
 
-#: incidenceattendee.cpp:802
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -995,37 +995,37 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "설정하지 않기"
 
-#: incidencedialog.cpp:689
+#: incidencedialog.cpp:687
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "현재 변경 사항 저장"
 
-#: incidencedialog.cpp:690
+#: incidencedialog.cpp:688
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "변경 사항을 저장하고 대화 상자 닫기"
 
-#: incidencedialog.cpp:691
+#: incidencedialog.cpp:689
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "변경 사항을 버리고 대화 상자 닫기"
 
-#: incidencedialog.cpp:695
+#: incidencedialog.cpp:693
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "템플릿(&T)…"
 
-#: incidencedialog.cpp:697
+#: incidencedialog.cpp:695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "이 항목의 템플릿 관리"
 
-#: incidencedialog.cpp:699
+#: incidencedialog.cpp:697
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1037,25 +1037,25 @@ msgstr ""
 "면 자주 사용하는 기본값을 자동으로 편집기에 입력해서 새 항목을 쉽고 빠르게 만"
 "들 수 있습니다."
 
-#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
+#: incidencedialog.cpp:795 incidencedialog.cpp:820 incidencedialog.cpp:840
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "정말로 취소하시겠습니까?"
 
-#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
+#: incidencedialog.cpp:796 incidencedialog.cpp:821 incidencedialog.cpp:841
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
-#: incidencedialog.cpp:799 incidencedialog.cpp:824 incidencedialog.cpp:844
+#: incidencedialog.cpp:797 incidencedialog.cpp:822 incidencedialog.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "편집 취소"
 
-#: incidencedialog.cpp:800 incidencedialog.cpp:825 incidencedialog.cpp:845
+#: incidencedialog.cpp:798 incidencedialog.cpp:823 incidencedialog.cpp:843
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1371,13 +1371,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "이메일 서비스에 연결할 수 없음"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:95
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "리소스 관리"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:100
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -1389,7 +1389,7 @@ msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "스케줄링"
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:166
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1397,7 +1397,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%3 %2일 %1"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:187
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
