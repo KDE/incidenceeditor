@@ -230,7 +230,7 @@ IncidenceDialogPrivate::~IncidenceDialogPrivate()
 
 void IncidenceDialogPrivate::slotInvalidCollection()
 {
-    showMessage(i18n("Select a valid collection first."), KMessageWidget::Warning);
+    showMessage(i18nc("@info", "Select a valid collection first."), KMessageWidget::Warning);
 }
 
 void IncidenceDialogPrivate::setCalendarCollection(const Akonadi::Collection &collection)
