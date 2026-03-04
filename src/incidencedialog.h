@@ -14,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_export.h"
 
+#include <KCalendarCore/Incidence>
+
 #include <QDate>
 #include <QDialog>
 
@@ -29,6 +31,7 @@ class IncidenceChanger;
 namespace IncidenceEditorNG
 {
 class IncidenceDialogPrivate;
+
 /*!
  * \class IncidenceEditorNG::IncidenceDialog
  * \inmodule IncidenceEditor
@@ -100,6 +103,11 @@ public:
      * Returns the Akonadi item currently being edited.
      */
     [[nodiscard]] Akonadi::Item item() const;
+
+    /*!
+     * Returns the dialog type (event, todo, journal, etc)
+     */
+    [[nodiscard]] KCalendarCore::IncidenceBase::IncidenceType type();
 
 Q_SIGNALS:
     /*!

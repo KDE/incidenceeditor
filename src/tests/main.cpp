@@ -97,7 +97,12 @@ int main(int argc, char **argv)
 
     auto dialog = new IncidenceDialog();
 
-    Akonadi::Collection const collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    Akonadi::Collection collection;
+    if (dialog->type() == KCalendarCore::Incidence::TypeTodo) {
+        collection.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
+    } else if (dialog->type() == KCalendarCore::Incidence::TypeEvent) {
+        collection.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    }
 
     if (collection.isValid()) {
         dialog->selectCollection(collection);

@@ -187,7 +187,12 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mEditor->combine(mIeResource);
 
     // Set the default collection
-    const Akonadi::Collection col(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    Akonadi::Collection col;
+    if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
+        col.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
+    } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
+        col.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    }
     if (col.isValid()) {
         setCalendarCollection(col);
     }
@@ -493,24 +498,39 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
-    const Akonadi::Collection defaultCollection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
-    if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) && (mCalSelector->count() > 1) && !defaultCollection.isValid()) {
+    Akonadi::Collection defaultCollection;
+    QString calType;
+    if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
+        calType = i18nc("@info/plain the calendar contains todos", "Todo");
+        defaultCollection.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
+    } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
+        calType = i18nc("@info/plain the calendar contains events", "Event");
+        defaultCollection.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    }
+
+    if ((mCalSelector->count() > 1) && !defaultCollection.isValid()) {
         const QString collectionName = mCalSelector->currentText();
         const QString message = xi18nc("@info",
-                                       "<para>You have not set a default calendar for your events yet.</para>"
-                                       "<para>Setting a default calendar will make creating new events faster and "
+                                       "<para>You have not set a default %1 calendar yet.</para>"
+                                       "<para>Setting a default calendar will make creating new incidences faster and "
                                        "easier with less chance of filing them into the wrong folder.</para>"
-                                       "<para>Would you like to set your default events calendar to "
-                                       "<resource>%1</resource>?</para>",
+                                       "<para>Would you like to set your default %2 calendar to "
+                                       "<resource>%3</resource>?</para>",
+                                       calType,
+                                       calType,
                                        collectionName);
         const int answer = KMessageBox::questionTwoActions(q,
                                                            message,
-                                                           i18nc("@title:window", "Set Default Calendar?"),
+                                                           i18nc("@title:window", "Set Default %1 Calendar?", calType),
                                                            KGuiItem(i18nc("@action:button", "Set As Default"), u"dialog-ok"_s),
                                                            KGuiItem(i18nc("@action:button", "Do Not Set"), u"dialog-cancel"_s),
                                                            u"setDefaultCalendarCollection"_s);
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-            CalendarSupport::KCalPrefs::instance()->setDefaultEventCalendarId(mItem.storageCollectionId());
+            if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
+                CalendarSupport::KCalPrefs::instance()->setDefaultTodoCalendarId(mItem.storageCollectionId());
+            } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
+                CalendarSupport::KCalPrefs::instance()->setDefaultEventCalendarId(mItem.storageCollectionId());
+            }
         }
     }
 
@@ -872,6 +892,12 @@ void IncidenceDialog::handleSelectedCollectionChange(const Akonadi::Collection &
     if (d->mItem.parentCollection().isValid()) {
         d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(collection.id() != d->mItem.parentCollection().id());
     }
+}
+
+KCalendarCore::IncidenceBase::IncidenceType IncidenceDialog::type()
+{
+    Q_D(IncidenceDialog);
+    return d->mEditor->type();
 }
 
 #include "moc_incidencedialog.cpp"
