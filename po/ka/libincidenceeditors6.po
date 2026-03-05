@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-26 00:44+0000\n"
+"POT-Creation-Date: 2026-03-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-16 06:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -855,7 +855,9 @@ msgid "Disable rich text"
 msgstr "მდიდარი ტექსტის გამორთვა"
 
 #: incidencedialog.cpp:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a valid collection first."
+msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "ჯერ აირჩიეთ სწორი კოლექცია."
 

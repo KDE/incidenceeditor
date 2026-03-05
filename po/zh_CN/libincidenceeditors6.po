@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-26 00:44+0000\n"
+"POT-Creation-Date: 2026-03-05 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -831,7 +831,9 @@ msgid "Disable rich text"
 msgstr "禁用富文本"
 
 #: incidencedialog.cpp:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a valid collection first."
+msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "请先选择一个有效的集合。"
 

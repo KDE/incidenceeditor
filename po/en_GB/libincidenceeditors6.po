@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-26 00:44+0000\n"
+"POT-Creation-Date: 2026-03-05 00:44+0000\n"
 "PO-Revision-Date: 2024-05-23 19:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -856,7 +856,9 @@ msgid "Disable rich text"
 msgstr "Disable rich text"
 
 #: incidencedialog.cpp:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a valid collection first."
+msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Select a valid collection first."
 

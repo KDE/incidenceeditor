@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-26 00:44+0000\n"
+"POT-Creation-Date: 2026-03-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-16 07:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -861,7 +861,9 @@ msgid "Disable rich text"
 msgstr "Desabilitar formatação de texto"
 
 #: incidencedialog.cpp:233
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select a valid collection first."
+msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Primeiro selecione uma coleção válida."
 
