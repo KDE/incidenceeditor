@@ -97,7 +97,7 @@ int main(int argc, char **argv)
 
     auto dialog = new IncidenceDialog();
 
-    Akonadi::Collection const collection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    Akonadi::Collection const collection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
 
     if (collection.isValid()) {
         dialog->selectCollection(collection);

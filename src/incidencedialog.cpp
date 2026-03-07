@@ -187,7 +187,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mEditor->combine(mIeResource);
 
     // Set the default collection
-    const Akonadi::Collection col(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    const Akonadi::Collection col(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
     if (col.isValid()) {
         setCalendarCollection(col);
     }
@@ -493,7 +493,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
-    const Akonadi::Collection defaultCollection(CalendarSupport::KCalPrefs::instance()->defaultCalendarId());
+    const Akonadi::Collection defaultCollection(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
     if ((mEditor->type() == KCalendarCore::Incidence::TypeEvent) && (mCalSelector->count() > 1) && !defaultCollection.isValid()) {
         const QString collectionName = mCalSelector->currentText();
         const QString message = xi18nc("@info",
@@ -510,7 +510,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
                                                            KGuiItem(i18nc("@action:button", "Do Not Set"), u"dialog-cancel"_s),
                                                            u"setDefaultCalendarCollection"_s);
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-            CalendarSupport::KCalPrefs::instance()->setDefaultCalendarId(mItem.storageCollectionId());
+            CalendarSupport::KCalPrefs::instance()->setDefaultEventCalendarId(mItem.storageCollectionId());
         }
     }
 
