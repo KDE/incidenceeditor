@@ -832,7 +832,6 @@ msgstr "禁用富文本"
 
 #: incidencedialog.cpp:233
 #, fuzzy, kde-format
-#| msgid "Select a valid collection first."
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "请先选择一个有效的集合。"
@@ -1638,7 +1637,7 @@ msgstr "播放声音文件"
 msgid ""
 "Specify any text you desire to display in the popup notice when the reminder "
 "triggers."
-msgstr "指定在提醒被触发时，您想要显示在弹出提示里的文字。"
+msgstr "指定在提醒被触发时，您想要显示在弹出提示里的文本。"
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
 #: ui/alarmdialog.ui:296
