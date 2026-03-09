@@ -93,6 +93,8 @@ public:
     IncidenceResource *mIeResource = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
+    Akonadi::Collection::Id mDefaultCalendarId = -1;
+
     /* cppcheck-suppress functionStatic */
     [[nodiscard]] static QString typeToString(const int type);
 
@@ -185,17 +187,6 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
 
     mIeResource = new IncidenceResource(mIeAttendee, mIeDateTime, mUi);
     mEditor->combine(mIeResource);
-
-    // Set the default collection
-    Akonadi::Collection col;
-    if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
-        col.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
-    } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
-        col.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
-    }
-    if (col.isValid()) {
-        setCalendarCollection(col);
-    }
 
     q->connect(mEditor, &CombinedIncidenceEditor::showMessage, q, [this](const QString &reason, KMessageWidget::MessageType msgType) {
         showMessage(reason, msgType);
@@ -498,14 +489,12 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
 {
     Q_Q(IncidenceDialog);
 
-    Akonadi::Collection defaultCollection;
+    const Akonadi::Collection defaultCollection(mDefaultCalendarId);
     QString calType;
     if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
         calType = i18nc("@info/plain the calendar contains todos", "Todo");
-        defaultCollection.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
     } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
         calType = i18nc("@info/plain the calendar contains events", "Event");
-        defaultCollection.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
     }
 
     if ((mCalSelector->count() > 1) && !defaultCollection.isValid()) {
@@ -526,10 +515,11 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
                                                            KGuiItem(i18nc("@action:button", "Do Not Set"), u"dialog-cancel"_s),
                                                            u"setDefaultCalendarCollection"_s);
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+            mDefaultCalendarId = mItem.storageCollectionId();
             if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
-                CalendarSupport::KCalPrefs::instance()->setDefaultTodoCalendarId(mItem.storageCollectionId());
+                CalendarSupport::KCalPrefs::instance()->setDefaultTodoCalendarId(mDefaultCalendarId);
             } else if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
-                CalendarSupport::KCalPrefs::instance()->setDefaultEventCalendarId(mItem.storageCollectionId());
+                CalendarSupport::KCalPrefs::instance()->setDefaultEventCalendarId(mDefaultCalendarId);
             }
         }
     }
@@ -605,6 +595,19 @@ void IncidenceDialogPrivate::load(const Akonadi::Item &item)
 
     mEditor->load(Akonadi::CalendarUtils::incidence(item));
     mEditor->load(item);
+
+    // Set the default collection
+    Akonadi::Collection col;
+    if (mEditor->type() == KCalendarCore::Incidence::TypeEvent) {
+        col.setId(CalendarSupport::KCalPrefs::instance()->defaultEventCalendarId());
+    } else if (mEditor->type() == KCalendarCore::Incidence::TypeTodo) {
+        col.setId(CalendarSupport::KCalPrefs::instance()->defaultTodoCalendarId());
+    }
+
+    if (col.isValid()) {
+        mDefaultCalendarId = col.id();
+        setCalendarCollection(col);
+    }
 
     const KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item);
     const QStringList allEmails = IncidenceEditorNG::EditorConfig::instance()->allEmails();
