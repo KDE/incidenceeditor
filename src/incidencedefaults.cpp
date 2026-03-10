@@ -178,7 +178,13 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
     }
 
     // Now, but not in the "floating" time zone.
-    auto const systemNow = QDateTime::currentDateTime().toTimeZone(QTimeZone::systemTimeZone());
+    auto systemNow = QDateTime::currentDateTime().toTimeZone(QTimeZone::systemTimeZone());
+    // Adjust to next quarter-hour
+    auto systemNowTime = systemNow.time();
+    if (systemNowTime.second() % 900) {
+        systemNowTime = systemNowTime.addSecs(900 - (systemNowTime.minute() * 60 + systemNowTime.second()) % 900);
+    }
+    systemNow.setTime(systemNowTime);
 
     if (mEndDt.isValid()) {
         if (mEndDt.timeSpec() == Qt::LocalTime) {
