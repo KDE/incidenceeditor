@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/incidenceeditor/libincidenceeditors6."
+"X-Crowdin-File: /kf6-stable/messages/incidenceeditor/libincidenceeditors6."
 "pot\n"
-"X-Crowdin-File-ID: 49074\n"
+"X-Crowdin-File-ID: 52610\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -831,10 +831,10 @@ msgid "Disable rich text"
 msgstr "禁用富文本"
 
 #: incidencedialog.cpp:233
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
-msgstr "请先选择一个有效的集合。"
+msgstr ""
 
 #: incidencedialog.cpp:256
 #, kde-format
