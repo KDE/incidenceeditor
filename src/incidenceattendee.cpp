@@ -240,11 +240,12 @@ bool IncidenceAttendee::isDirty() const
     if (iAmOrganizer()) {
         KCalendarCore::Event tmp;
         tmp.setOrganizer(mUi->mOrganizerCombo->currentText());
-
-        if (mLoadedIncidence->organizer().email() != tmp.organizer().email()) {
-            qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was " << mLoadedIncidence->organizer().name() << mLoadedIncidence->organizer().email()
-                                         << "; new is " << tmp.organizer().name() << tmp.organizer().email();
-            return true;
+        if (!mLoadedIncidence->organizer().email().isEmpty()) {
+            if (mLoadedIncidence->organizer().email() != tmp.organizer().email()) {
+                qCDebug(INCIDENCEEDITOR_LOG) << "Organizer changed. Old was " << mLoadedIncidence->organizer().name() << mLoadedIncidence->organizer().email()
+                                             << "; new is " << tmp.organizer().name() << tmp.organizer().email();
+                return true;
+            }
         }
     }
 
