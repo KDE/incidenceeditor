@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-11 02:45+0000\n"
 "PO-Revision-Date: 2026-03-05 10:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -837,13 +837,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "no s'han trobat cap identitat (vàlida)"
 
-#: incidencedefaults.cpp:304
+#: incidencedefaults.cpp:310
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "(Dades binàries)"
 
-#: incidencedefaults.cpp:434
+#: incidencedefaults.cpp:440
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
@@ -2939,14 +2939,3 @@ msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer clic doble "
 "sobre una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seva informació de lliure/ocupat."
-
-#~ msgctxt "@option:check"
-#~ msgid "Store attachment inline"
-#~ msgstr "Emmagatzema l'adjunt inclòs"
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Selecciona els assistents..."
-
-#~ msgid "&New..."
-#~ msgstr "&Nova..."

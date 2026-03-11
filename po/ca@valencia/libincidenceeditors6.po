@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-11 02:45+0000\n"
 "PO-Revision-Date: 2026-03-05 10:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -837,13 +837,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "no s'han trobat cap identitat (vàlida)"
 
-#: incidencedefaults.cpp:304
+#: incidencedefaults.cpp:310
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "(Dades binàries)"
 
-#: incidencedefaults.cpp:434
+#: incidencedefaults.cpp:440
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
@@ -997,8 +997,8 @@ msgid ""
 "para><para>Would you like to set your default events calendar to <resource>"
 "%1</resource>?</para>"
 msgstr ""
-"<para>Encara no heu definit cap calendari predeterminat per als "
-"esdeveniments.</para><para>Definir un calendari predeterminat farà que la "
+"<para>Encara no heu establit cap calendari predeterminat per als "
+"esdeveniments.</para><para>Establir un calendari predeterminat farà que la "
 "creació d'esdeveniments nous siga més ràpida i fàcil, amb menys "
 "possibilitats d'afegir-los a la carpeta incorrecta.</para><para>Voleu "
 "definir el calendari predeterminat d'esdeveniments a <resource>%1</resource>?"
