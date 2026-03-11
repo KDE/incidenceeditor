@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 00:44+0000\n"
+"POT-Creation-Date: 2026-03-11 00:47+0000\n"
 "PO-Revision-Date: 2025-11-09 07:40+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -831,13 +831,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "nem találhatók (érvényes) azonosítók"
 
-#: incidencedefaults.cpp:304
+#: incidencedefaults.cpp:310
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Bináris adat]"
 
-#: incidencedefaults.cpp:434
+#: incidencedefaults.cpp:440
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

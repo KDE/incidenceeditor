@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 00:44+0000\n"
+"POT-Creation-Date: 2026-03-11 00:47+0000\n"
 "PO-Revision-Date: 2025-03-20 07:51+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -833,13 +833,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "non se atopou ningunha identidade (correcta)"
 
-#: incidencedefaults.cpp:304
+#: incidencedefaults.cpp:310
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Datos binarios]"
 
-#: incidencedefaults.cpp:434
+#: incidencedefaults.cpp:440
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

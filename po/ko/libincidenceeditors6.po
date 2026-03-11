@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-10 00:44+0000\n"
+"POT-Creation-Date: 2026-03-11 00:47+0000\n"
 "PO-Revision-Date: 2025-10-09 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -813,13 +813,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "(올바른) 프로필을 찾을 수 없음"
 
-#: incidencedefaults.cpp:304
+#: incidencedefaults.cpp:310
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[이진 데이터]"
 
-#: incidencedefaults.cpp:434
+#: incidencedefaults.cpp:440
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
