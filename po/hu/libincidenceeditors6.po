@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:47+0000\n"
+"POT-Creation-Date: 2026-03-12 00:44+0000\n"
 "PO-Revision-Date: 2025-11-09 07:40+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -638,13 +638,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Ne hívja meg"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Résztvevők kiválasztása"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -652,7 +652,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 ütközés"
 msgstr[1] "%1 ütközés"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -663,13 +663,13 @@ msgstr ""
 "Megváltoztatja az esemény szervezőjét. Mivel a szervező is részt vesz ezen "
 "az eseményen, szeretné a megfelelő résztvevőt is módosítani?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Résztvevő módosítása"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

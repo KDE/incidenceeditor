@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:47+0000\n"
+"POT-Creation-Date: 2026-03-12 00:44+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -662,14 +662,14 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Neposielať"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, fuzzy, kde-format
 #| msgid "Select Attendees"
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrať účastníkov"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -678,7 +678,7 @@ msgstr[0] "Konflikt"
 msgstr[1] "%1 konfliktov"
 msgstr[2] "%1 konfliktov"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -689,14 +689,14 @@ msgstr ""
 "Meníte organizátora tejto udalosti. Keďže aj organizátor je účastníkom tejto "
 "udalosti, chcete zmeniť aj korešpondujúceho účastníka?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, fuzzy, kde-format
 #| msgid "Attendee"
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Účastník"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"

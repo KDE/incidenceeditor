@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:47+0000\n"
+"POT-Creation-Date: 2026-03-12 00:44+0000\n"
 "PO-Revision-Date: 2026-03-08 15:51+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -642,13 +642,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Ez gonbidatu"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Hautatu parte-hartzaileak"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -656,7 +656,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "Gatazka %1"
 msgstr[1] "%1 gatazka"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -668,13 +668,13 @@ msgstr ""
 "parte-hartzaile ere badenez, dagokion parte-hartzailea ere aldatu nahi "
 "zenuke?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Aldatu parte-hartzailea"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

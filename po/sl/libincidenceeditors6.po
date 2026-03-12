@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:47+0000\n"
+"POT-Creation-Date: 2026-03-12 00:44+0000\n"
 "PO-Revision-Date: 2026-03-09 07:06+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -661,13 +661,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Ne povabi"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Izberite udeležence"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -677,7 +677,7 @@ msgstr[1] "%1 spor"
 msgstr[2] "%1 spora"
 msgstr[3] "%1 spori"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -688,13 +688,13 @@ msgstr ""
 "Spreminjate organizatorja tega dogodka, ki se bo udeležil tega dogodka. Ali "
 "želite spremeniti tudi ustreznega udeleženca?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Spremeni udeleženca"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

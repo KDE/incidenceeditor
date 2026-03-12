@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:47+0000\n"
+"POT-Creation-Date: 2026-03-12 00:44+0000\n"
 "PO-Revision-Date: 2010-12-26 08:44+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -633,13 +633,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr ""
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr ""
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -647,7 +647,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -656,13 +656,13 @@ msgid ""
 "well?"
 msgstr ""
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr ""
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
