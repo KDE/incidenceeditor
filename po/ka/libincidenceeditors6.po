@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 02:45+0000\n"
+"POT-Creation-Date: 2026-03-12 02:37+0000\n"
 "PO-Revision-Date: 2026-03-05 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -639,13 +639,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "არ მოიწვიო"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "აირჩიეთ დამსწრეები"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -653,7 +653,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 კონფლიქტი"
 msgstr[1] "%1 კონფლიქტი"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -664,13 +664,13 @@ msgstr ""
 "ცვლით ამ მოვლენის ორგანიზატორს. რადგან ორგანიზატორი ასევე ესწრება მოვლენას, "
 "გნებავთ, შესაბამისი დამსწრეც შეცვალოთ?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "დამსწრის შეცვლა"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"

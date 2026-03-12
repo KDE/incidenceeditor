@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 02:45+0000\n"
+"POT-Creation-Date: 2026-03-12 02:37+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -637,13 +637,13 @@ msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "मा आमन्त्रयतु"
 
-#: incidenceattendee.cpp:442
+#: incidenceattendee.cpp:443
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "उपस्थितानां चयनं कुर्वन्तु"
 
-#: incidenceattendee.cpp:626
+#: incidenceattendee.cpp:627
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -651,7 +651,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 विग्रहः"
 msgstr[1] "%1 विग्रहः"
 
-#: incidenceattendee.cpp:795
+#: incidenceattendee.cpp:796
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -662,13 +662,13 @@ msgstr ""
 "भवान् अस्य आयोजनस्य आयोजकं परिवर्तयति। यतः आयोजकः अपि अस्मिन् कार्यक्रमे उपस्थितः अस्ति, "
 "तस्मात् तत्सम्बद्धं उपस्थितं अपि परिवर्तयितुम् इच्छति वा?"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "उपस्थितः परिवर्तयतु"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
