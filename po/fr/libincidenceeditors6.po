@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-12 12:26+0100\n"
+"PO-Revision-Date: 2026-03-13 20:44+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1002,14 +1002,7 @@ msgid "Event"
 msgstr "Évènement"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1017,20 +1010,18 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Vous n'avez pas encore défini un calendrier par défaut pour vos "
-"évènements.</para><para>Le paramétrage d'un calendrier par défaut rendra la "
+"<para>Vous n'avez pas encore défini un agenda %1 par défaut pour vos "
+"évènements.</para><para>La configuration d'un agenda par défaut rendra la "
 "création de nouveaux évènement plus rapide et plus facile, avec moins de "
-"chances de les remplir dans le mauvais dossier</para><para>Voulez-vous "
-"définir votre calendrier d'évènements par défaut à <resource>%1</resource> ?"
-"</para>"
+"chances de les insérer dans le mauvais dossier</para><para>Voulez-vous "
+"définir votre agenda %2 d'évènements par défaut à <resource>%3</resource> ?</"
+"para>"
 
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Définir le calendrier par défaut ?"
+msgstr "Définir %1 comme agenda par défaut ?"
 
 #: incidencedialog.cpp:514
 #, kde-format
