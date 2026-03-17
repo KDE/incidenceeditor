@@ -97,7 +97,6 @@ include(ECMAddTests)
 include(ECMCheckOutboundLicense)
 include(ECMGenerateQDoc)
 
-set(INCIDENCEEDITOR_LIB_VERSION ${PIM_VERSION})
 set(AKONADI_MIMELIB_VERSION "6.6.40")
 set(KDEPIM_LIB_VERSION "6.6.40")
 set(KMIME_LIB_VERSION "6.6.40")
