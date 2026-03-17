@@ -4,13 +4,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2015.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2010.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2025-11-20 21:04+0900\n"
+"PO-Revision-Date: 2026-03-16 16:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -835,8 +835,7 @@ msgid "Disable rich text"
 msgstr "關閉 Rich Text"
 
 #: incidencedialog.cpp:229
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "請先選擇一個有效的收藏。"
@@ -965,23 +964,16 @@ msgstr "重試"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "待辦事項"
 
 #: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "事件"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -989,17 +981,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>您尚未選取您的事件的預設行事曆。</para><para>設定一個預設行事曆會讓建立"
-"新事件更快、更簡單，也更不容易將它們加入錯誤的資料夾。</para><para>您是否要設"
-"定您的預設事件行事曆為 <resource>%1</resource>？</para>"
+"<para>您尚未選取預設的%1行事曆。</para><para>設定一個預設行事曆會讓建立新事件"
+"更快、更簡單，也更不容易將它們加入錯誤的資料夾。</para><para>您是否要將您的預"
+"設%2行事曆為 <resource>%3</resource>？</para>"
 
+# 這個%1是譯文。
+# --Kisaragi
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "設定預設行事曆？"
+msgstr "設定預設%1行事曆？"
 
 #: incidencedialog.cpp:514
 #, kde-format
