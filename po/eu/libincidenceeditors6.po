@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-08 15:51+0100\n"
+"PO-Revision-Date: 2026-03-19 20:57+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -988,23 +988,16 @@ msgstr "Berriz saiatu"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "Zeregina"
 
 #: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "Ekitaldia"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1012,19 +1005,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Oraindik ez duzu zure ekitaldietarako egutegi lehenetsi bat ezarri.</"
-"para><para>Egutegi lehenetsi bat ezartzeak, ekitaldi berriak sortzea "
-"azkarrago eta errazago egingo du, haiek okerreko karpetan betetzeko aukerak "
-"murriztuz.</para><para>Zure ekitaldien egutegi lehenetsi gisa <resource>%1</"
-"resource> ezarri nahi zenuke?</para>"
+"<para>Oraindik ez duzu %1 egutegi lehenetsi bat ezarri.</para><para>Egutegi "
+"lehenetsi bat ezartzeak, gertakizun berriak sortzea azkarrago eta errazago "
+"egingo du, haiek okerreko karpetan betetzeko aukerak murriztuz.</"
+"para><para>Zure %2 egutegi lehenetsi gisa <resource>%3</resource> ezarri "
+"nahi zenuke?</para>"
 
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Ezarri egutegi lehenetsia?"
+msgstr "%1 egutegi lehenetsia ezarri?"
 
 #: incidencedialog.cpp:514
 #, kde-format
