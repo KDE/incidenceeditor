@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-09 11:15+0100\n"
+"PO-Revision-Date: 2026-03-29 13:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -693,7 +693,7 @@ msgstr "%1%"
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
-msgstr "Zones horàries"
+msgstr "Fusos horaris"
 
 #: incidencedatetime.cpp:574
 #, kde-format
@@ -2095,14 +2095,14 @@ msgstr "Establix l'hora d'inici per a esta tasca pendent."
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr ""
-"Tria la zona horària per a este esdeveniment. També afectarà les repeticions"
+"Tria el fus horari per a este esdeveniment. També afectarà les repeticions"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:502
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\"hide\">&lt;&lt; Zones horàries</a>"
+msgstr "<a href=\"hide\">&lt;&lt; Fusos horaris</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:539
