@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2025-11-20 10:57+0100\n"
+"PO-Revision-Date: 2026-04-03 02:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Poedit 3.8\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -856,8 +856,7 @@ msgid "Disable rich text"
 msgstr "Деактивиране на форматиран текст"
 
 #: incidencedialog.cpp:229
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Първо изберете валидна колекция."
@@ -986,23 +985,16 @@ msgstr "Повторен опит"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "Задачи"
 
 #: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "Събитие"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1010,19 +1002,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Все още не сте задали календар по подразбиране за вашите събития.</"
+"<para>Все още не сте задали календар по подразбиране %1 за вашите събития.</"
 "para><para>Задаването на календар по подразбиране ще направи създаването на "
 "нови събития по -бързо и по -лесно, с по -малък шанс да ги подадете в грешна "
 "папка.</para><para>Искате ли да зададете календара си за събития по "
-"подразбиране <resource>%1</resource>?</para>"
+"подразбиране %2 на <resource>%3</resource>?</para>"
 
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Да се зададе ли календар по подразбиране?"
+msgstr "Да се зададе ли календар %1 по подразбиране?"
 
 #: incidencedialog.cpp:514
 #, kde-format
