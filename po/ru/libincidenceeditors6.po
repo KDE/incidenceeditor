@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:44+0000\n"
-"PO-Revision-Date: 2026-03-06 14:06+0200\n"
+"PO-Revision-Date: 2026-04-03 21:57+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1021,23 +1021,16 @@ msgstr "Повторить"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "Задачи"
 
 #: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "Событие"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1045,19 +1038,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Календарь, который по умолчанию будет использоваться для событий, ещё "
-"не указан.</para><para>Установка используемого по умолчанию календаря "
-"ускорит и упростит создание новых событий, а также снизит вероятность их "
-"размещения в неверной папке.</para><para>Установить <resource>%1</resource> "
-"в качестве календаря по умолчанию для событий?</para>"
+"<para>Календарь по умолчанию для событий типа «%1» ещё не задан.</"
+"para><para>Назначение календаря по умолчанию ускорит и упростит создание "
+"новых событий, снизив вероятность их размещения в неверной папке.</"
+"para><para>Назначить календарь <resource>%3</resource> календарём по "
+"умолчанию для событий типа «%2»?</para>"
 
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Установка календаря по умолчанию"
+msgstr "Установить календарь «%1» по умолчанию?"
 
 #: incidencedialog.cpp:514
 #, kde-format
