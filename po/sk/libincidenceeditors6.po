@@ -1010,12 +1010,16 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
+"<para>You have not set a default %1 calendar yet.</para><para>Setting a "
+"default calendar will make creating new incidences faster and easier with "
+"less chance of filing them into the wrong folder.</para><para>Would you like "
+"to set your default %2 calendar to <resource>%3</resource>?</para>"
 
 #: incidencedialog.cpp:513
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr ""
+msgstr "Set Default %1 Calendar?"
 
 #: incidencedialog.cpp:514
 #, kde-format
