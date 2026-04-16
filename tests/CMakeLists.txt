@@ -7,7 +7,7 @@ target_link_libraries(
     resourcemanagement_gui
     Qt::Core
     Qt::Gui
-    KPim6::Mime
+    KF6::Mime
     KPim6::IncidenceEditor
     KPim6::Libkdepim
     KPim6::LdapWidgets
