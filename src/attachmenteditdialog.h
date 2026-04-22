@@ -13,10 +13,9 @@
 #include <KCalendarCore/Attachment>
 #include <QDialog>
 #include <QMimeType>
-#include <QUrl>
 
 class QPushButton;
-
+class QUrl;
 namespace Ui
 {
 class AttachmentEditDialog;

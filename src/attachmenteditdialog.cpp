@@ -9,7 +9,6 @@
 */
 
 #include "attachmenteditdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "attachmenticonview.h"
 #include "ui_attachmenteditdialog.h"
@@ -22,7 +21,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLocale>
 #include <QMimeDatabase>
 #include <QPushButton>
+#include <QUrl>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 AttachmentEditDialog::AttachmentEditDialog(AttachmentIconItem *item, QWidget *parent, bool modal)

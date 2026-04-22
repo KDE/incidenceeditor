@@ -6,12 +6,11 @@
 
 #pragma once
 
-#include <QModelIndex>
 #include <QString>
 #include <QStyledItemDelegate>
 
 #include <KCompletion>
-
+class QModelIndex;
 namespace IncidenceEditorNG
 {
 /** show a AttendeeLineEdit as editor */

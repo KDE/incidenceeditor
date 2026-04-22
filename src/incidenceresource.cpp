@@ -5,7 +5,6 @@
  */
 
 #include "incidenceresource.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "attendeecomboboxdelegate.h"
 #include "attendeelineeditdelegate.h"
@@ -15,10 +14,12 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 
+#include "attendeetablemodel.h"
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
 #include <QCompleter>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 class SwitchRoleProxy : public QSortFilterProxyModel

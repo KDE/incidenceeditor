@@ -9,6 +9,7 @@
 
 #include <KEmailAddress>
 #include <QDebug>
+#include <QModelIndex>
 
 using namespace IncidenceEditorNG;
 using namespace Qt::Literals::StringLiterals;

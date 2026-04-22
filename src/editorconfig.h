@@ -10,14 +10,12 @@
 
 #include <KCalendarCore/IncidenceBase>
 
-#include <QUrl>
-
 #include <QDateTime>
 #include <QList>
 #include <QStringList>
 
 #include <memory>
-
+class QUrl;
 class KConfigSkeleton;
 
 namespace IncidenceEditorNG
