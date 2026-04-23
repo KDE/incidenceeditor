@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-23 00:44+0000\n"
 "PO-Revision-Date: 2026-03-09 21:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -156,19 +156,19 @@ msgstr[3] "%1 أيّام قبل الاستحقاق"
 msgstr[4] "%1 يومًا قبل الاستحقاق"
 msgstr[5] "%1 يوم قبل الاستحقاق"
 
-#: attachmenteditdialog.cpp:33
+#: attachmenteditdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "حرّر المرفق"
 
-#: attachmenteditdialog.cpp:52
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "مجهول"
 
-#: attachmenteditdialog.cpp:106
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -186,7 +186,7 @@ msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "لا تطلب الرّدّ"
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
@@ -204,7 +204,7 @@ msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "يحرّر دور الحاضر."
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

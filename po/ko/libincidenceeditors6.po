@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-23 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -123,19 +123,19 @@ msgid "%1 day before due"
 msgid_plural "%1 days before due"
 msgstr[0] "만료 기한 %1일 전"
 
-#: attachmenteditdialog.cpp:33
+#: attachmenteditdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "첨부 파일 편집"
 
-#: attachmenteditdialog.cpp:52
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: attachmenteditdialog.cpp:106
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -153,7 +153,7 @@ msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "응답 요청하지 않음"
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
@@ -171,7 +171,7 @@ msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "참석자의 역할을 편집합니다."
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

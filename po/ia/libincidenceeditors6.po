@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-23 00:44+0000\n"
 "PO-Revision-Date: 2026-04-06 19:09+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -130,19 +130,19 @@ msgid_plural "%1 days before due"
 msgstr[0] "%1 dies ante expiration"
 msgstr[1] "%1 dies ante expiration"
 
-#: attachmenteditdialog.cpp:33
+#: attachmenteditdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Editar attachamento"
 
-#: attachmenteditdialog.cpp:52
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Incognite"
 
-#: attachmenteditdialog.cpp:106
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -160,7 +160,7 @@ msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "Require nulle responsa"
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
@@ -178,7 +178,7 @@ msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "Modifica le rolo del participante."
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

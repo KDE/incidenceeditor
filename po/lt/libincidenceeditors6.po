@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-23 00:44+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -161,7 +161,7 @@ msgstr[1] "%1 d. prieš pradžią"
 msgstr[2] "%1 d. prieš pradžią"
 msgstr[3] "%1 d. prieš pradžią"
 
-#: attachmenteditdialog.cpp:33
+#: attachmenteditdialog.cpp:34
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Add Attachment"
@@ -169,13 +169,13 @@ msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "Pridėti priedą"
 
-#: attachmenteditdialog.cpp:52
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: attachmenteditdialog.cpp:106
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -193,7 +193,7 @@ msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "Neklausti atsakymo"
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
@@ -211,7 +211,7 @@ msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "Keičia dalyvio rolę."
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

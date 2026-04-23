@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:44+0000\n"
+"POT-Creation-Date: 2026-04-23 00:44+0000\n"
 "PO-Revision-Date: 2010-09-24 16:28+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -131,7 +131,7 @@ msgid_plural "%1 days before due"
 msgstr[0] ""
 msgstr[1] ""
 
-#: attachmenteditdialog.cpp:33
+#: attachmenteditdialog.cpp:34
 #, fuzzy, kde-format
 #| msgctxt "@title:tab configure attachments of an event or todo"
 #| msgid "Attachments"
@@ -139,13 +139,13 @@ msgctxt "@title:window"
 msgid "Edit Attachment"
 msgstr "संलग्नक"
 
-#: attachmenteditdialog.cpp:52
+#: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: attachmenteditdialog.cpp:106
+#: attachmenteditdialog.cpp:107
 #, kde-format
 msgctxt "@label"
 msgid "New attachment"
@@ -163,7 +163,7 @@ msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr ""
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:22
+#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
@@ -181,7 +181,7 @@ msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr ""
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:24
+#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
