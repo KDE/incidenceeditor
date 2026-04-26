@@ -39,6 +39,18 @@ IncidenceAlarm::IncidenceAlarm(IncidenceDateTime *dateTime, Ui::EventOrTodoDeskt
     connect(mUi->mAlarmRemoveButton, &QPushButton::clicked, this, &IncidenceAlarm::removeCurrentAlarm);
 }
 
+void IncidenceAlarm::setIsGoogleCollection(bool enable)
+{
+    mIsGoogleCollection = enable;
+}
+
+void IncidenceAlarm::showMessage(const QString &message, KMessageWidget::MessageType type)
+{
+    mUi->mMessageWidget->setText(message);
+    mUi->mMessageWidget->setMessageType(type);
+    mUi->mMessageWidget->show();
+}
+
 void IncidenceAlarm::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
@@ -151,6 +163,15 @@ void IncidenceAlarm::handleDateTimeToggle()
     mUi->mQuickAddReminderLabel->setEnabled(mDateTime->endDateTimeEnabled());
 }
 
+bool IncidenceAlarm::tooManyAlarms()
+{
+    if (mIsGoogleCollection && mUi->mAlarmList->count() > 3) {
+        showMessage(i18nc("@info", "Google allows at most 4 reminders"), KMessageWidget::Information);
+        return true;
+    }
+    return false;
+}
+
 void IncidenceAlarm::newAlarm()
 {
     QPointer<AlarmDialog> const dialog(new AlarmDialog(mLoadedIncidence->type(), mUi->mTabWidget));
@@ -184,6 +205,9 @@ void IncidenceAlarm::newAlarm()
 
 void IncidenceAlarm::newAlarmFromPreset()
 {
+    if (tooManyAlarms()) {
+        return;
+    }
     if (mIsTodo) {
         mAlarms.append(AlarmPresets::preset(AlarmPresets::BeforeEnd, mUi->mAlarmPresetCombo->currentText()));
     } else {
@@ -379,4 +403,14 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
     }
 }
 
+bool IncidenceAlarm::isValid() const
+{
+    if (mIsGoogleCollection && mUi->mAlarmList->count() > 3) {
+        mLastErrorString = i18nc("@info", "Google allows at most 4 reminders. Please remove some reminders before continuing.");
+        return false;
+    } else {
+        mLastErrorString.clear();
+        return true;
+    }
+}
 #include "moc_incidencealarm.cpp"

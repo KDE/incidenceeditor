@@ -91,9 +91,11 @@ public:
     IncidenceAttendee *mIeAttendee = nullptr;
     IncidenceRecurrence *mIeRecurrence = nullptr;
     IncidenceResource *mIeResource = nullptr;
+    IncidenceAlarm *mIeAlarm = nullptr;
     bool mInitiallyDirty = false;
     Akonadi::Item mItem;
     Akonadi::Collection::Id mDefaultCalendarId = -1;
+    bool mIsGoogleCollection = false;
 
     /* cppcheck-suppress functionStatic */
     [[nodiscard]] static QString typeToString(const int type);
@@ -169,8 +171,8 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     auto ieDescription = new IncidenceDescription(mUi);
     mEditor->combine(ieDescription);
 
-    auto ieAlarm = new IncidenceAlarm(mIeDateTime, mUi);
-    mEditor->combine(ieAlarm);
+    mIeAlarm = new IncidenceAlarm(mIeDateTime, mUi);
+    mEditor->combine(mIeAlarm);
 
     auto ieAttachments = new IncidenceAttachment(mUi);
     mEditor->combine(ieAttachments);
@@ -200,7 +202,7 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     q->connect(mItemManager, &EditorItemManager::itemSaveFailed, q, [this](EditorItemManager::SaveAction action, const QString &message) {
         handleItemSaveFail(action, message);
     });
-    q->connect(ieAlarm, &IncidenceAlarm::alarmCountChanged, q, [this](int newCount) {
+    q->connect(mIeAlarm, &IncidenceAlarm::alarmCountChanged, q, [this](int newCount) {
         handleAlarmCountChange(newCount);
     });
     q->connect(mIeRecurrence, &IncidenceRecurrence::recurrenceChanged, q, [this](IncidenceEditorNG::RecurrenceType type) {
@@ -895,6 +897,11 @@ void IncidenceDialog::handleSelectedCollectionChange(const Akonadi::Collection &
     if (d->mItem.parentCollection().isValid()) {
         d->mUi->buttonBox->button(QDialogButtonBox::Apply)->setEnabled(collection.id() != d->mItem.parentCollection().id());
     }
+    d->mIsGoogleCollection = false;
+    if (collection.isValid() && collection.resource().contains(QLatin1StringView("akonadi_google_resource_"))) {
+        d->mIsGoogleCollection = true;
+    }
+    d->mIeAlarm->setIsGoogleCollection(d->mIsGoogleCollection);
 }
 
 KCalendarCore::IncidenceBase::IncidenceType IncidenceDialog::type()

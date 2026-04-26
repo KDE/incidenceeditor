@@ -9,6 +9,8 @@
 
 #include "incidenceeditor-ng.h"
 
+#include <KMessageWidget>
+
 namespace Ui
 {
 class EventOrTodoDesktop;
@@ -29,11 +31,15 @@ public:
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;
     void save(const KCalendarCore::Incidence::Ptr &incidence) override;
     [[nodiscard]] bool isDirty() const override;
+    void setIsGoogleCollection(bool enable);
+    bool tooManyAlarms();
+    [[nodiscard]] bool isValid() const override;
 
 Q_SIGNALS:
     void alarmCountChanged(int newCount);
 
 private:
+    void showMessage(const QString &message, KMessageWidget::MessageType type);
     void editCurrentAlarm();
     void handleDateTimeToggle();
     void newAlarm();
@@ -50,5 +56,6 @@ private:
     IncidenceDateTime *const mDateTime;
     int mEnabledAlarmCount = 0;
     bool mIsTodo = false;
+    bool mIsGoogleCollection = false;
 };
 }
