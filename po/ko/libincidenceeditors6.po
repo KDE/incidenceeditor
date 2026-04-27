@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2015, 2019, 2021, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2013, 2015, 2019, 2021, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-10-09 00:19+0200\n"
+"PO-Revision-Date: 2026-04-26 21:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -663,7 +663,7 @@ msgstr "변경하지 않음"
 #, kde-format
 msgctxt "Completion percentage label"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: incidencedatetime.cpp:224
 #, kde-format
@@ -838,8 +838,7 @@ msgid "Disable rich text"
 msgstr "서식 있는 텍스트 비활성화"
 
 #: incidencedialog.cpp:229
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "먼저 올바른 모음집을 선택하십시오."
@@ -968,23 +967,16 @@ msgstr "다시 시도"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "할 일"
 
 #: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "이벤트"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -992,18 +984,16 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>이벤트를 저장할 기본 캘린더를 선택하지 않았습니다.</para><para>기본 캘"
-"린더를 지정하면 새 이벤트를 더 빠르게 만들 수 있으며, 잘못된 폴더에 배치할 가"
-"능성을 줄여 줍니다.</para><para>기본 이벤트 캘린더를 <resource>%1</"
-"resource>(으)로 설정하시겠습니까?</para>"
+"<para>기본 %1 캘린더를 선택하지 않았습니다.</para><para>기본 캘린더를 지정하"
+"면 새 항목을 더 빠르게 만들 수 있으며, 잘못된 폴더에 배치할 가능성을 줄여 줍"
+"니다.</para><para>기본 %2 캘린더를 <resource>%3</resource>(으)로 설정하시겠습"
+"니까?</para>"
 
 #: incidencedialog.cpp:513
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "기본 캘린더를 설정하시겠습니까?"
+msgstr "기본 %1 캘린더를 설정하시겠습니까?"
 
 #: incidencedialog.cpp:514
 #, kde-format
