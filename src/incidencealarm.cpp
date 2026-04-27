@@ -165,8 +165,8 @@ void IncidenceAlarm::handleDateTimeToggle()
 
 bool IncidenceAlarm::tooManyAlarms()
 {
-    if (mIsGoogleCollection && mUi->mAlarmList->count() > 3) {
-        showMessage(i18nc("@info", "Google allows at most 4 reminders"), KMessageWidget::Information);
+    if (mIsGoogleCollection && mUi->mAlarmList->count() > 4) {
+        showMessage(i18nc("@info", "Google allows at most 5 reminders"), KMessageWidget::Information);
         return true;
     }
     return false;
@@ -405,8 +405,8 @@ QString IncidenceAlarm::stringForAlarm(const KCalendarCore::Alarm::Ptr &alarm)
 
 bool IncidenceAlarm::isValid() const
 {
-    if (mIsGoogleCollection && mUi->mAlarmList->count() > 3) {
-        mLastErrorString = i18nc("@info", "Google allows at most 4 reminders. Please remove some reminders before continuing.");
+    if (mIsGoogleCollection && mUi->mAlarmList->count() > 4) {
+        mLastErrorString = i18nc("@info", "Google allows at most 5 reminders. Please remove some reminders before continuing.");
         return false;
     } else {
         mLastErrorString.clear();
