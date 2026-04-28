@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:44+0000\n"
+"POT-Creation-Date: 2026-04-28 00:45+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -352,37 +352,43 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr "Zadajte umiestnenie informácií."
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid "Google allows at most 5 reminders"
+msgstr ""
+
+#: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "Zakázať"
 
-#: incidencealarm.cpp:254
+#: incidencealarm.cpp:278
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "Povoliť"
 
-#: incidencealarm.cpp:272
+#: incidencealarm.cpp:296
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "Zobraziť dialógové okno"
 
-#: incidencealarm.cpp:275
+#: incidencealarm.cpp:299
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "Prehrať zvukový súbor"
 
-#: incidencealarm.cpp:278
+#: incidencealarm.cpp:302
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "Neplatná pripomienka."
 
-#: incidencealarm.cpp:284
+#: incidencealarm.cpp:308
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
@@ -391,7 +397,7 @@ msgstr[0] "1 minúta"
 msgstr[1] "%1 minút"
 msgstr[2] "%1 minút"
 
-#: incidencealarm.cpp:289
+#: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
@@ -400,7 +406,7 @@ msgstr[0] "1 deň"
 msgstr[1] "%1 dni"
 msgstr[2] "%1 dní"
 
-#: incidencealarm.cpp:292
+#: incidencealarm.cpp:316
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
@@ -409,7 +415,7 @@ msgstr[0] "1 hodina"
 msgstr[1] "%1 hodiny"
 msgstr[2] "%1 hodín"
 
-#: incidencealarm.cpp:297
+#: incidencealarm.cpp:321
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -419,125 +425,133 @@ msgstr "(Opakovaní)"
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
 msgstr "%1 %2 po začatí úlohy %3"
 
-#: incidencealarm.cpp:309
+#: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3"
 msgstr "%1 %2 po začatí udalosti %3"
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
 msgstr "%1 %2 pred začatím úlohy %3"
 
-#: incidencealarm.cpp:315
+#: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3"
 msgstr "%1 %2 pred začatím udalosti %3"
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
 msgstr "%1 %2 po termíne úlohy %3"
 
-#: incidencealarm.cpp:321
+#: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3"
 msgstr "%1 %2 po skončení udalosti %3"
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
 msgstr "%1 %2 pred termínom úlohy %3"
 
-#: incidencealarm.cpp:327
+#: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3"
 msgstr "%1 %2 pred skončením udalosti %3"
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:357
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr "%1 %2 po začatí úlohy %3 (Zakázané)"
 
-#: incidencealarm.cpp:335
+#: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr "%1 %2 po začatí udalosti %3 (Zakázané)"
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr "%1 %2 pred začatím úlohy %3 (Zakázané)"
 
-#: incidencealarm.cpp:341
+#: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr "%1 %2 pred začatím udalosti %3 (Zakázané)"
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr "%1 %2 po termíne úlohy %3 (Zakázané)"
 
-#: incidencealarm.cpp:347
+#: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr "%1 %2 po skončení udalosti %3 (Zakázané)"
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr "%1 %2 pred termínom úlohy %3 (Zakázané)"
 
-#: incidencealarm.cpp:353
+#: incidencealarm.cpp:377
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr "%1 %2 pred skončením udalosti %3 (Zakázané)"
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr "%1 keď úloha začne"
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
 msgstr "%1 keď udalosť začne"
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr "%1 keď úloha má termín"
 
-#: incidencealarm.cpp:367
+#: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
 msgstr "%1 keď udalosť končí"
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr "%1 pri začatí úlohy (zakázané)"
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr "%1 keď udalosť začne (zakázané)"
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr "%1 keď úloha má termín (zakázané)"
 
-#: incidencealarm.cpp:377
+#: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr "%1 keď udalosť končí (zakázané)"
+
+#: incidencealarm.cpp:409
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Google allows at most 5 reminders. Please remove some reminders before "
+"continuing."
+msgstr ""
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -863,115 +877,115 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Zakázať formátovaný text"
 
-#: incidencedialog.cpp:229
+#: incidencedialog.cpp:231
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Najprv vyberte platnú kolekciu."
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Pripomienka (%1)"
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Pripomienka"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Opakovanie"
 
-#: incidencedialog.cpp:272
+#: incidencedialog.cpp:274
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (D)"
 
-#: incidencedialog.cpp:275
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (T)"
 
-#: incidencedialog.cpp:278
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (M)"
 
-#: incidencedialog.cpp:281
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (R)"
 
-#: incidencedialog.cpp:284
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (E)"
 
-#: incidencedialog.cpp:318
+#: incidencedialog.cpp:320
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Nemôžem nájsť šablónu '%1'."
 
-#: incidencedialog.cpp:324
+#: incidencedialog.cpp:326
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Nemôžem načítať súbor šablóny '%1'."
 
-#: incidencedialog.cpp:330
+#: incidencedialog.cpp:332
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Šablóna neobsahuje platný výskyt."
 
-#: incidencedialog.cpp:429
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "Prílohy (%1)"
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Prílohy"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "Úč&astníci (%1)"
 
-#: incidencedialog.cpp:440
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "Úč&astníci"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:449
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "Zdroje (%1)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "&Zdroje"
 
-#: incidencedialog.cpp:471
+#: incidencedialog.cpp:473
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -983,25 +997,25 @@ msgstr ""
 "\n"
 " Dôvod: %1"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "Skúsiť znova"
 
-#: incidencedialog.cpp:495
+#: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "Todo"
 
-#: incidencedialog.cpp:497
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "Udalosť"
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:505
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1015,55 +1029,55 @@ msgstr ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:515
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Set Default %1 Calendar?"
 
-#: incidencedialog.cpp:514
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Nastaviť ako predvolený"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Nenastavovať"
 
-#: incidencedialog.cpp:711
+#: incidencedialog.cpp:713
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Uloží aktuálne zmeny"
 
-#: incidencedialog.cpp:712
+#: incidencedialog.cpp:714
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Uložiť zmeny a zavrieť dialóg"
 
-#: incidencedialog.cpp:713
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Zahodiť zmeny a zavrieť dialóg"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Ša&blóny..."
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Spravovať šablóny pre túto položku"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1075,25 +1089,25 @@ msgstr ""
 "šablón. Šablóny uľahčia vytváranie nových položiek cez vloženie vašich "
 "obľúbených hodnôt do editora automaticky."
 
-#: incidencedialog.cpp:819 incidencedialog.cpp:844 incidencedialog.cpp:864
+#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Chcete naozaj zrušiť?"
 
-#: incidencedialog.cpp:820 incidencedialog.cpp:845 incidencedialog.cpp:865
+#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer Potvrdenie"
 
-#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Zrušiť úpravy"
 
-#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"

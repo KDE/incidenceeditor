@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:44+0000\n"
+"POT-Creation-Date: 2026-04-28 00:45+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -352,37 +352,43 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr "Εισάγετε τη θέση της πληροφορίας."
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid "Google allows at most 5 reminders"
+msgstr ""
+
+#: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "Απενεργοποίηση"
 
-#: incidencealarm.cpp:254
+#: incidencealarm.cpp:278
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "Ενεργοποίηση"
 
-#: incidencealarm.cpp:272
+#: incidencealarm.cpp:296
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "Εμφάνιση ενός διαλόγου"
 
-#: incidencealarm.cpp:275
+#: incidencealarm.cpp:299
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "Εκτέλεση ενός αρχείου ήχου"
 
-#: incidencealarm.cpp:278
+#: incidencealarm.cpp:302
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "Μη έγκυρη υπενθύμιση."
 
-#: incidencealarm.cpp:284
+#: incidencealarm.cpp:308
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
@@ -390,7 +396,7 @@ msgid_plural "%1 minutes"
 msgstr[0] "1 λεπτό"
 msgstr[1] "%1 λεπτά"
 
-#: incidencealarm.cpp:289
+#: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
@@ -398,7 +404,7 @@ msgid_plural "%1 days"
 msgstr[0] "1 ημέρα"
 msgstr[1] "%1 ημέρες"
 
-#: incidencealarm.cpp:292
+#: incidencealarm.cpp:316
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
@@ -406,7 +412,7 @@ msgid_plural "%1 hours"
 msgstr[0] "1 ώρα"
 msgstr[1] "%1 ώρες"
 
-#: incidencealarm.cpp:297
+#: incidencealarm.cpp:321
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -416,125 +422,133 @@ msgstr "(Επαναλήψεις)"
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
 msgstr "%1 %2 μετά την έναρξη της εργασίας %3"
 
-#: incidencealarm.cpp:309
+#: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3"
 msgstr "%1 %2 μετά την έναρξη του γεγονότος %3"
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
 msgstr "%1 %2 πριν την έναρξη της εργασίας %3"
 
-#: incidencealarm.cpp:315
+#: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3"
 msgstr "%1 %2 πριν την έναρξη του γεγονότος %3"
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
 msgstr "%1 %2 μετά τη λήξη της εργασίας %3"
 
-#: incidencealarm.cpp:321
+#: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3"
 msgstr "%1 %2 μετά το τέλος του γεγονότος %3"
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
 msgstr "%1 %2 πριν τη λήξη της εργασίας %3"
 
-#: incidencealarm.cpp:327
+#: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3"
 msgstr "%1 %2 πριν το τέλος του γεγονότος %3"
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:357
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr "%1 %2 μετά την έναρξη της εργασίας %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:335
+#: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr "%1 %2 μετά την έναρξη του γεγονότος %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr "%1 %2 πριν την έναρξη της εργασίας %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:341
+#: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr "%1 %2 πριν την έναρξη του γεγονότος %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr "%1 %2 μετά τη λήξη της εργασίας %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:347
+#: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr "%1 %2 μετά το τέλος του γεγονότος %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr "%1 %2 πριν τη λήξη της εργασίας %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:353
+#: incidencealarm.cpp:377
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr "%1 %2 πριν το τέλος του γεγονότος %3 (Απενεργοποιημένο)"
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr "%1 όταν η προς υλοποίηση εργασία ξεκινάει"
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
 msgstr "%1 όταν το γεγονός ξεκινάει"
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr "%1 όταν η προς υλοποίηση εργασία λήγει"
 
-#: incidencealarm.cpp:367
+#: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
 msgstr "%1 όταν το γεγονός λήγει"
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr "%1 όταν η προς υλοποίηση εργασία ξεκινάει (ανενεργό)"
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr "%1 όταν το γεγονός ξεκινάει (ανενεργό)"
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr "%1 όταν η προς υλοποίηση εργασία λήγει (ανενεργό)"
 
-#: incidencealarm.cpp:377
+#: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr "%1 όταν το γεγονός λήγει (ανενεργό)"
+
+#: incidencealarm.cpp:409
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Google allows at most 5 reminders. Please remove some reminders before "
+"continuing."
+msgstr ""
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -859,116 +873,116 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Απενεργοποίηση εμπλουτισμένου κειμένου"
 
-#: incidencedialog.cpp:229
+#: incidencedialog.cpp:231
 #, fuzzy, kde-format
 #| msgid "Select a valid collection first."
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Επιλογή μιας έγκυρης συλλογής πρώτα."
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Υπενθύμιση: (%1)"
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Υπενθύμιση"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Επα&νάληψη"
 
-#: incidencedialog.cpp:272
+#: incidencedialog.cpp:274
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (Η)"
 
-#: incidencedialog.cpp:275
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:278
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (Μ)"
 
-#: incidencedialog.cpp:281
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:284
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:318
+#: incidencedialog.cpp:320
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Αδυναμία εύρεσης του προτύπου «%1»."
 
-#: incidencedialog.cpp:324
+#: incidencedialog.cpp:326
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Σφάλμα κατά την φόρτωση του αρχείου προτύπου «%1». "
 
-#: incidencedialog.cpp:330
+#: incidencedialog.cpp:332
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Το πρότυπο δεν περιέχει κάποιο έγκυρο περιστατικό."
 
-#: incidencedialog.cpp:429
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "%1 Συ&νημμένα (%1)"
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Συ&νημμένα"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&Συμμετέχοντες (%1)"
 
-#: incidencedialog.cpp:440
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&Συμμετέχοντες"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:449
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "Πό&ροι (%1)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "Πό&ροι"
 
-#: incidencedialog.cpp:471
+#: incidencedialog.cpp:473
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -980,25 +994,25 @@ msgstr ""
 "\n"
 " Αιτία: %1"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "Επανάληψη"
 
-#: incidencedialog.cpp:495
+#: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr ""
 
-#: incidencedialog.cpp:497
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr ""
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:505
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1020,7 +1034,7 @@ msgstr ""
 "να εντάσσονται σε λάθος φάκελο.</para><para>Θέλετε να ρυθμίσετε το "
 "προκαθορισμένο ημερολόγιο γεγονότων στο <resource>%1</resource>;</para>"
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:515
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Set Default Calendar?"
@@ -1028,49 +1042,49 @@ msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Να ρυθμιστεί το προκαθορισμένο ημερολόγιο;"
 
-#: incidencedialog.cpp:514
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Να ρυθμιστεί ως προκαθορισμένο"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Να μη ρυθμιστεί"
 
-#: incidencedialog.cpp:711
+#: incidencedialog.cpp:713
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Αποθήκευση τρεχουσών αλλαγών"
 
-#: incidencedialog.cpp:712
+#: incidencedialog.cpp:714
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Αποθήκευση αλλαγών και κλείσιμο διαλόγου"
 
-#: incidencedialog.cpp:713
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Απόρριψη αλλαγών και κλείσιμο διαλόγου"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Πρό&τυπα…"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Διαχείριση προτύπων για το αντικείμενο αυτό"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1083,25 +1097,25 @@ msgstr ""
 "τη δημιουργία νέων αντικειμένων εισάγοντας αυτόματα τις προκαθορισμένες "
 "τιμές της προτίμησής σας στον επεξεργαστή."
 
-#: incidencedialog.cpp:819 incidencedialog.cpp:844 incidencedialog.cpp:864
+#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Επιθυμείτε πραγματικά την ακύρωση;"
 
-#: incidencedialog.cpp:820 incidencedialog.cpp:845 incidencedialog.cpp:865
+#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer επιβεβαίωση"
 
-#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Ακύρωση επεξεργασίας"
 
-#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"

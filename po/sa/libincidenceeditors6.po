@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:44+0000\n"
+"POT-Creation-Date: 2026-04-28 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -345,37 +345,43 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr "सूचनायाः स्थानं प्रविशतु।"
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid "Google allows at most 5 reminders"
+msgstr ""
+
+#: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "अक्षम"
 
-#: incidencealarm.cpp:254
+#: incidencealarm.cpp:278
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "सक्रियं करोतु"
 
-#: incidencealarm.cpp:272
+#: incidencealarm.cpp:296
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "एकं संवादं प्रदर्शयन्तु"
 
-#: incidencealarm.cpp:275
+#: incidencealarm.cpp:299
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "श्रव्यसञ्चिकां वादयन्तु"
 
-#: incidencealarm.cpp:278
+#: incidencealarm.cpp:302
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "अमान्य स्मरणम्।"
 
-#: incidencealarm.cpp:284
+#: incidencealarm.cpp:308
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
@@ -383,7 +389,7 @@ msgid_plural "%1 minutes"
 msgstr[0] "१ मिनिट्"
 msgstr[1] "%1 निमेषाः"
 
-#: incidencealarm.cpp:289
+#: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
@@ -391,7 +397,7 @@ msgid_plural "%1 days"
 msgstr[0] "१ दिवसे"
 msgstr[1] "%1 दिवसाः"
 
-#: incidencealarm.cpp:292
+#: incidencealarm.cpp:316
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
@@ -399,7 +405,7 @@ msgid_plural "%1 hours"
 msgstr[0] "१ घण्टा"
 msgstr[1] "%1 घण्टा"
 
-#: incidencealarm.cpp:297
+#: incidencealarm.cpp:321
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -409,125 +415,133 @@ msgstr "(पुनरावृत्तिः)"
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
 msgstr "%1 %2 कार्यस्य आरम्भस्य अनन्तरं %3"
 
-#: incidencealarm.cpp:309
+#: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3"
 msgstr "%1 %2 घटना आरब्धस्य अनन्तरं %3"
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
 msgstr "%1 %2 कार्यस्य आरम्भात् पूर्वं %3"
 
-#: incidencealarm.cpp:315
+#: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3"
 msgstr "%1 %2 घटनायाः आरम्भात् पूर्वं %3"
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
 msgstr "%1 %2 कर्तव्यस्य देयस्य अनन्तरं %3"
 
-#: incidencealarm.cpp:321
+#: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3"
 msgstr "%1 %2 घटना समाप्तेः अनन्तरं %3"
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
 msgstr "%1 %2 कर्तव्यस्य समयात् पूर्वं %3"
 
-#: incidencealarm.cpp:327
+#: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3"
 msgstr "%1 %2 घटना समाप्तेः पूर्वं %3"
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:357
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr "%1 %2 कार्यस्य आरम्भस्य अनन्तरं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:335
+#: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr "%1 %2 घटना आरब्धस्य अनन्तरं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr "%1 %2 कार्यस्य आरम्भात् पूर्वं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:341
+#: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr "%1 %2 घटनायाः आरम्भात् पूर्वं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr "%1 %2 कर्तव्यस्य नियतानन्तरं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:347
+#: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr "%1 %2 घटना समाप्तेः अनन्तरं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr "%1 %2 कर्तव्यस्य समयात् पूर्वं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:353
+#: incidencealarm.cpp:377
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr "%1 %2 घटना समाप्तेः पूर्वं %3 (अक्षमम्)"
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr "%1 यदा कर्तव्यं आरभ्यते"
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
 msgstr "%1 यदा घटना आरभ्यते"
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr "%1 यदा कर्तव्यं भवति"
 
-#: incidencealarm.cpp:367
+#: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
 msgstr "%1 यदा घटना समाप्तं भवति"
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr "%1 यदा कर्तव्यं आरभ्यते (अक्षमम्)"
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr "%1 यदा घटना आरभ्यते (अक्षमम्)"
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr "%1 यदा कर्तव्यं भवति (Disabled)"
 
-#: incidencealarm.cpp:377
+#: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr "%1 यदा घटना समाप्तं भवति (अक्षमम्)"
+
+#: incidencealarm.cpp:409
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Google allows at most 5 reminders. Please remove some reminders before "
+"continuing."
+msgstr ""
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -848,116 +862,116 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "समृद्धं पाठं निष्क्रियं कुर्वन्तु"
 
-#: incidencedialog.cpp:229
+#: incidencedialog.cpp:231
 #, fuzzy, kde-format
 #| msgid "Select a valid collection first."
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "प्रथमं वैधसङ्ग्रहं चिनोतु।"
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "स्मरणं (%1) 1.1."
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "स्मरणम्"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Rec&urrence इति"
 
-#: incidencedialog.cpp:272
+#: incidencedialog.cpp:274
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (घ)"
 
-#: incidencedialog.cpp:275
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (इत्यस्मिन्‌)"
 
-#: incidencedialog.cpp:278
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (म)"
 
-#: incidencedialog.cpp:281
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (तथा)"
 
-#: incidencedialog.cpp:284
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (तथा)"
 
-#: incidencedialog.cpp:318
+#: incidencedialog.cpp:320
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "'%1' टेम्पलेट् अन्वेष्टुं असमर्थः ।"
 
-#: incidencedialog.cpp:324
+#: incidencedialog.cpp:326
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "'%1' टेम्पलेट् सञ्चिकां लोड् करणं त्रुटिः ।"
 
-#: incidencedialog.cpp:330
+#: incidencedialog.cpp:332
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "टेम्पलेट् मध्ये वैधघटना नास्ति ।"
 
-#: incidencedialog.cpp:429
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "आक्रमण&hments (%1) 1.1."
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "अटैक&ह्मेण्ट्स्"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&उपस्थिताः (%1) 1.1."
 
-#: incidencedialog.cpp:440
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&उपस्थिताः"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:449
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "&संसाधनम् (%1) ."
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "&संसाधनाः"
 
-#: incidencedialog.cpp:471
+#: incidencedialog.cpp:473
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -969,25 +983,25 @@ msgstr ""
 "\n"
 " कारणम् : %1"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "पुनः प्रयासं कुर्वन्तु"
 
-#: incidencedialog.cpp:495
+#: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr ""
 
-#: incidencedialog.cpp:497
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr ""
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:505
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1009,7 +1023,7 @@ msgstr ""
 "स्वस्य पूर्वनिर्धारितघटनानां पञ्चाङ्गं <resource>%1</resource> इति सेट् कर्तुम् इच्छति?</"
 "para>"
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:515
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Set Default Calendar?"
@@ -1017,49 +1031,49 @@ msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "पूर्वनिर्धारितं पञ्चाङ्गं सेट् कुर्वन्तु?"
 
-#: incidencedialog.cpp:514
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "पूर्वनिर्धारितरूपेण सेट् कुर्वन्तु"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "सेट् न कुर्वन्तु"
 
-#: incidencedialog.cpp:711
+#: incidencedialog.cpp:713
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "वर्तमानपरिवर्तनानि रक्षन्तु"
 
-#: incidencedialog.cpp:712
+#: incidencedialog.cpp:714
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "परिवर्तनं रक्षन्तु संवादं च बन्दं कुर्वन्तु"
 
-#: incidencedialog.cpp:713
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "परिवर्तनं परित्यज्य संवादं बन्दं कुर्वन्तु"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&टेम्पलेट्स…"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "अस्य द्रव्यस्य टेम्पलेट् प्रबन्धयन्तु"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1071,25 +1085,25 @@ msgstr ""
 "स्वयमेव सम्पादके स्वस्य प्रियं पूर्वनिर्धारितं मूल्यं स्थापयित्वा नूतनानां वस्तूनाम् निर्माणं सुलभं "
 "द्रुतं च कर्तुं शक्नोति ।"
 
-#: incidencedialog.cpp:819 incidencedialog.cpp:844 incidencedialog.cpp:864
+#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "किं भवन्तः वास्तवमेव रद्दं कर्तुम् इच्छन्ति ?"
 
-#: incidencedialog.cpp:820 incidencedialog.cpp:845 incidencedialog.cpp:865
+#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer पुष्टिकरण"
 
-#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "सम्पादनं रद्दं कुर्वन्तु"
 
-#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"

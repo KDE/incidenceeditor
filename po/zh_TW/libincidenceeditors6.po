@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:44+0000\n"
+"POT-Creation-Date: 2026-04-28 00:45+0000\n"
 "PO-Revision-Date: 2026-03-16 16:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -338,58 +338,64 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr "輸入資訊的位置。"
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid "Google allows at most 5 reminders"
+msgstr ""
+
+#: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "關閉"
 
-#: incidencealarm.cpp:254
+#: incidencealarm.cpp:278
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "開啟"
 
-#: incidencealarm.cpp:272
+#: incidencealarm.cpp:296
 #, kde-format
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "顯示對話框"
 
-#: incidencealarm.cpp:275
+#: incidencealarm.cpp:299
 #, kde-format
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "播放音效檔"
 
-#: incidencealarm.cpp:278
+#: incidencealarm.cpp:302
 #, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "無效的提醒。"
 
-#: incidencealarm.cpp:284
+#: incidencealarm.cpp:308
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 分鐘"
 
-#: incidencealarm.cpp:289
+#: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
 msgstr[0] "%1 天"
 
-#: incidencealarm.cpp:292
+#: incidencealarm.cpp:316
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 小時"
 
-#: incidencealarm.cpp:297
+#: incidencealarm.cpp:321
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -404,125 +410,133 @@ msgstr "（重複）"
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:331
 #, kde-format
 msgid "%1 %2 after the to-do started %3"
 msgstr "於待辦事項開始 %2後%1%3"
 
-#: incidencealarm.cpp:309
+#: incidencealarm.cpp:333
 #, kde-format
 msgid "%1 %2 after the event started %3"
 msgstr "於事件開始 %2後%1%3"
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:337
 #, kde-format
 msgid "%1 %2 before the to-do starts %3"
 msgstr "於待辦事項開始 %2前%1%3"
 
-#: incidencealarm.cpp:315
+#: incidencealarm.cpp:339
 #, kde-format
 msgid "%1 %2 before the event starts %3"
 msgstr "於事件開始 %2前%1%3"
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:343
 #, kde-format
 msgid "%1 %2 after the to-do is due %3"
 msgstr "於待辦事項到期 %2後%1%3"
 
-#: incidencealarm.cpp:321
+#: incidencealarm.cpp:345
 #, kde-format
 msgid "%1 %2 after the event ends %3"
 msgstr "於事件結束 %2後%1%3"
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:349
 #, kde-format
 msgid "%1 %2 before the to-do is due %3"
 msgstr "於待辦事項到期 %2前%1%3"
 
-#: incidencealarm.cpp:327
+#: incidencealarm.cpp:351
 #, kde-format
 msgid "%1 %2 before the event ends %3"
 msgstr "於事件結束 %2前%1%3"
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:357
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr "於待辦事項開始 %2後%1%3（已關閉）"
 
-#: incidencealarm.cpp:335
+#: incidencealarm.cpp:359
 #, kde-format
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr "於事件開始 %2後%1%3（已關閉）"
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:363
 #, kde-format
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr "於待辦事項開始 %2前%1%3（已關閉）"
 
-#: incidencealarm.cpp:341
+#: incidencealarm.cpp:365
 #, kde-format
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr "於事件開始 %2前%1%3（已關閉）"
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:369
 #, kde-format
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr "於待辦事項到期 %2後%1%3（已關閉）"
 
-#: incidencealarm.cpp:347
+#: incidencealarm.cpp:371
 #, kde-format
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr "於事件結束 %2後%1%3（已關閉）"
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:375
 #, kde-format
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr "於待辦事項到期 %2前%1%3（已關閉）"
 
-#: incidencealarm.cpp:353
+#: incidencealarm.cpp:377
 #, kde-format
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr "於事件結束 %2前%1%3（已關閉）"
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr "%1 工作開始時"
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
 msgstr "%1 事件開始時"
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr "%1 待辦事項到期時"
 
-#: incidencealarm.cpp:367
+#: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
 msgstr "%1 事件結束時"
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr "%1 待辦事項開始時 （已關閉）"
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr "%1 事件開始時 （已關閉）"
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr "%1 待辦事項到期時 （已關閉）"
 
-#: incidencealarm.cpp:377
+#: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr "%1 事件結束時 （已關閉）"
+
+#: incidencealarm.cpp:409
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Google allows at most 5 reminders. Please remove some reminders before "
+"continuing."
+msgstr ""
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -834,115 +848,115 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "關閉 Rich Text"
 
-#: incidencedialog.cpp:229
+#: incidencedialog.cpp:231
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "請先選擇一個有效的收藏。"
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "提醒（%1）"
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "提醒"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "循環(&U)"
 
-#: incidencedialog.cpp:272
+#: incidencedialog.cpp:274
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr "(天)"
 
-#: incidencedialog.cpp:275
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr "(週)"
 
-#: incidencedialog.cpp:278
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr "(月)"
 
-#: incidencedialog.cpp:281
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr "(年)"
 
-#: incidencedialog.cpp:284
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (例外)"
 
-#: incidencedialog.cpp:318
+#: incidencedialog.cpp:320
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "找不到樣本 %1。"
 
-#: incidencedialog.cpp:324
+#: incidencedialog.cpp:326
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "載入樣本檔案 %1 時發生錯誤。"
 
-#: incidencedialog.cpp:330
+#: incidencedialog.cpp:332
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "樣本未包含有效的事件。"
 
-#: incidencedialog.cpp:429
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "附加檔(%1)(&H)"
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "附加檔(&H)"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "參加者(%1)(&A)"
 
-#: incidencedialog.cpp:440
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "參加者(&A)"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:449
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "資源 (%1) (&R)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "資源(&R)"
 
-#: incidencedialog.cpp:471
+#: incidencedialog.cpp:473
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -954,25 +968,25 @@ msgstr ""
 "\n"
 "理由：%1"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "重試"
 
-#: incidencedialog.cpp:495
+#: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "待辦事項"
 
-#: incidencedialog.cpp:497
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "事件"
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:505
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -987,55 +1001,55 @@ msgstr ""
 
 # 這個%1是譯文。
 # --Kisaragi
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:515
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "設定預設%1行事曆？"
 
-#: incidencedialog.cpp:514
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "設為預設"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:517
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "不要設定"
 
-#: incidencedialog.cpp:711
+#: incidencedialog.cpp:713
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "儲存目前的變更"
 
-#: incidencedialog.cpp:712
+#: incidencedialog.cpp:714
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "儲存變更並關閉對話框"
 
-#: incidencedialog.cpp:713
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "丟棄變更並關閉對話框"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "樣本(&T)…"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "管理此項目的樣本"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1046,25 +1060,25 @@ msgstr ""
 "按下此鍵會顯示一個對話框，讓您管理樣本集。樣本可以自動將您常用的預設值放入編"
 "輯器內，讓您更快更容易建立新的項目。"
 
-#: incidencedialog.cpp:819 incidencedialog.cpp:844 incidencedialog.cpp:864
+#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "您確定要取消嗎？"
 
-#: incidencedialog.cpp:820 incidencedialog.cpp:845 incidencedialog.cpp:865
+#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 確認"
 
-#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "取消編輯"
 
-#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"

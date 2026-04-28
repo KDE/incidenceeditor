@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:44+0000\n"
+"POT-Creation-Date: 2026-04-28 00:45+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -367,40 +367,46 @@ msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
 msgstr ""
 
-#: incidencealarm.cpp:252
+#: incidencealarm.cpp:169
+#, kde-format
+msgctxt "@info"
+msgid "Google allows at most 5 reminders"
+msgstr ""
+
+#: incidencealarm.cpp:276
 #, kde-format
 msgctxt "Disable currently selected reminder"
 msgid "Disable"
 msgstr "Utmaken"
 
-#: incidencealarm.cpp:254
+#: incidencealarm.cpp:278
 #, kde-format
 msgctxt "Enable currently selected reminder"
 msgid "Enable"
 msgstr "Anmaken"
 
-#: incidencealarm.cpp:272
+#: incidencealarm.cpp:296
 #, fuzzy, kde-format
 #| msgid "Display a dialog"
 msgctxt "Alarm action"
 msgid "Display a dialog"
 msgstr "En Dialoog wiesen"
 
-#: incidencealarm.cpp:275
+#: incidencealarm.cpp:299
 #, fuzzy, kde-format
 #| msgid "Play an audio file"
 msgctxt "Alarm action"
 msgid "Play an audio file"
 msgstr "En Klangdatei afspelen"
 
-#: incidencealarm.cpp:278
+#: incidencealarm.cpp:302
 #, fuzzy, kde-format
 #| msgid "Invalid Reminder."
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "Leeg Alarm"
 
-#: incidencealarm.cpp:284
+#: incidencealarm.cpp:308
 #, fuzzy, kde-format
 #| msgctxt "The reminder is set to X minutes before/after the event"
 #| msgid "minutes"
@@ -410,7 +416,7 @@ msgid_plural "%1 minutes"
 msgstr[0] "Minuten"
 msgstr[1] "Minuten"
 
-#: incidencealarm.cpp:289
+#: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
@@ -418,7 +424,7 @@ msgid_plural "%1 days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: incidencealarm.cpp:292
+#: incidencealarm.cpp:316
 #, fuzzy, kde-format
 #| msgctxt "The reminder is set to X hours before/after the event"
 #| msgid "hours"
@@ -428,7 +434,7 @@ msgid_plural "%1 hours"
 msgstr[0] "Stünnen"
 msgstr[1] "Stünnen"
 
-#: incidencealarm.cpp:297
+#: incidencealarm.cpp:321
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
@@ -438,141 +444,149 @@ msgstr "(Wedderhalen)"
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
 #. one of the time units above, %3 is the (Repeats) part that will be used
 #. in case of repetition of the alarm.
-#: incidencealarm.cpp:307
+#: incidencealarm.cpp:331
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the to-do started %4"
 msgid "%1 %2 after the to-do started %3"
 msgstr "%1 %2 %3 nadem de Opgaav anfungen hett %4"
 
-#: incidencealarm.cpp:309
+#: incidencealarm.cpp:333
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the event started %4"
 msgid "%1 %2 after the event started %3"
 msgstr "%1 %2 %3 nadem dat Begeefnis anfungen hett %4"
 
-#: incidencealarm.cpp:313
+#: incidencealarm.cpp:337
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the to-do starts %4"
 msgid "%1 %2 before the to-do starts %3"
 msgstr "%1 %2 %3 ehrdat de Opgaav anfangen deit %4"
 
-#: incidencealarm.cpp:315
+#: incidencealarm.cpp:339
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the event starts %4"
 msgid "%1 %2 before the event starts %3"
 msgstr "%1 %2 %3 ehrdat dat Begeefnis anfangen deit %4"
 
-#: incidencealarm.cpp:319
+#: incidencealarm.cpp:343
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the to-do is due %4"
 msgid "%1 %2 after the to-do is due %3"
 msgstr "%1 %2 %3 nadem de Opgaav anstahn deit %4"
 
-#: incidencealarm.cpp:321
+#: incidencealarm.cpp:345
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the event ends %4"
 msgid "%1 %2 after the event ends %3"
 msgstr "%1 %2 %3 nadem dat Begeefnis ophören deit %4"
 
-#: incidencealarm.cpp:325
+#: incidencealarm.cpp:349
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the to-do is due %4"
 msgid "%1 %2 before the to-do is due %3"
 msgstr "%1 %2 %3 ehrdat de Opgaav anstahn deit %4"
 
-#: incidencealarm.cpp:327
+#: incidencealarm.cpp:351
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the event ends %4"
 msgid "%1 %2 before the event ends %3"
 msgstr "%1 %2 %3 ehrdat dat Begeefnis ophören deit %4"
 
-#: incidencealarm.cpp:333
+#: incidencealarm.cpp:357
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the to-do started %4 (Disabled)"
 msgid "%1 %2 after the to-do started %3 (Disabled)"
 msgstr "%1 %2 %3 nadem de Opgaav anfungen hett %4 (utmaakt)"
 
-#: incidencealarm.cpp:335
+#: incidencealarm.cpp:359
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the event started %4 (Disabled)"
 msgid "%1 %2 after the event started %3 (Disabled)"
 msgstr "%1 %2 %3 nadem dat Begeefnis anfungen hett %4 (utmaakt)"
 
-#: incidencealarm.cpp:339
+#: incidencealarm.cpp:363
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the to-do starts %4 (Disabled)"
 msgid "%1 %2 before the to-do starts %3 (Disabled)"
 msgstr "%1 %2 %3 ehrdat de Opgaav anfangen deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:341
+#: incidencealarm.cpp:365
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the event starts %4 (Disabled)"
 msgid "%1 %2 before the event starts %3 (Disabled)"
 msgstr "%1 %2 %3 ehrdat dat Begeefnis anfangen deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:345
+#: incidencealarm.cpp:369
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the to-do is due %4 (Disabled)"
 msgid "%1 %2 after the to-do is due %3 (Disabled)"
 msgstr "%1 %2 %3 nadem de Opgaav anstahn deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:347
+#: incidencealarm.cpp:371
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 after the event ends %4 (Disabled)"
 msgid "%1 %2 after the event ends %3 (Disabled)"
 msgstr "%1 %2 %3 nadem dat Begeefnis ophören deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:351
+#: incidencealarm.cpp:375
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the to-do is due %4 (Disabled)"
 msgid "%1 %2 before the to-do is due %3 (Disabled)"
 msgstr "%1 %2 %3 ehrdat de Opgaav anstahn deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:353
+#: incidencealarm.cpp:377
 #, fuzzy, kde-format
 #| msgid "%1 %2 %3 before the event ends %4 (Disabled)"
 msgid "%1 %2 before the event ends %3 (Disabled)"
 msgstr "%1 %2 %3 ehrdat dat Begeefnis ophören deit %4 (utmaakt)"
 
-#: incidencealarm.cpp:361
+#: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
 msgstr "%1 sodraad de Opgaav anfangen deit"
 
-#: incidencealarm.cpp:363
+#: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
 msgstr "%1 sodraad dat Begeefnis starten deit"
 
-#: incidencealarm.cpp:365
+#: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
 msgstr "%1 sodraad de Opgaav anstahn deit"
 
-#: incidencealarm.cpp:367
+#: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
 msgstr "%1 sodraad dat Begeefnis ophören deit"
 
-#: incidencealarm.cpp:371
+#: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
 msgstr "%1 sodraad de Opgaav anfangen deit (utmaakt)"
 
-#: incidencealarm.cpp:373
+#: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
 msgstr "%1 sodraad dat Begeefnis starten deit (utmaakt)"
 
-#: incidencealarm.cpp:375
+#: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
 msgstr "%1 sodraad de Opgaav anstahn deit (utmaakt)"
 
-#: incidencealarm.cpp:377
+#: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
 msgstr "%1 sodraad dat Begeefnis ophören deit (utmaakt)"
+
+#: incidencealarm.cpp:409
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Google allows at most 5 reminders. Please remove some reminders before "
+"continuing."
+msgstr ""
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -923,103 +937,103 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Formaattext utmaken"
 
-#: incidencedialog.cpp:229
+#: incidencedialog.cpp:231
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr ""
 
-#: incidencedialog.cpp:252
+#: incidencedialog.cpp:254
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Vöranstoot (%1)"
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Vöranstoot"
 
-#: incidencedialog.cpp:262
+#: incidencedialog.cpp:264
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "&Wedderhalen"
 
-#: incidencedialog.cpp:272
+#: incidencedialog.cpp:274
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (D)"
 
-#: incidencedialog.cpp:275
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (W)"
 
-#: incidencedialog.cpp:278
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (M)"
 
-#: incidencedialog.cpp:281
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (J)"
 
-#: incidencedialog.cpp:284
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (U)"
 
-#: incidencedialog.cpp:318
+#: incidencedialog.cpp:320
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Vörlaag \"%1\" lett sik nich finnen."
 
-#: incidencedialog.cpp:324
+#: incidencedialog.cpp:326
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Fehler bi't Laden vun de Vörlaag-Datei \"%1\"."
 
-#: incidencedialog.cpp:330
+#: incidencedialog.cpp:332
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Vörlaag bargt keen gellen Begeefnis."
 
-#: incidencedialog.cpp:429
+#: incidencedialog.cpp:431
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "&Bilagen (%1)"
 
-#: incidencedialog.cpp:431
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "&Bilagen"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:440
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&Deelnehmers (%1)"
 
-#: incidencedialog.cpp:440
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&Deelnehmers"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:449
 #, fuzzy, kde-format
 #| msgctxt "@title:tab Tab to modify attendees of an event or todo"
 #| msgid "&Attendees (%1)"
@@ -1027,13 +1041,13 @@ msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "&Deelnehmers (%1)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr ""
 
-#: incidencedialog.cpp:471
+#: incidencedialog.cpp:473
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1045,25 +1059,25 @@ msgstr ""
 "\n"
 " Oorsaak: %1"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr ""
 
-#: incidencedialog.cpp:495
+#: incidencedialog.cpp:497
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr ""
 
-#: incidencedialog.cpp:497
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr ""
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:505
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1073,21 +1087,21 @@ msgid ""
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:515
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Standardkategorie"
 
-#: incidencedialog.cpp:514
+#: incidencedialog.cpp:516
 #, fuzzy, kde-format
 #| msgid "Default Category"
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Standardkategorie"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:517
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
@@ -1095,25 +1109,25 @@ msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Nich loosstüern"
 
-#: incidencedialog.cpp:711
+#: incidencedialog.cpp:713
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Aktuelle Ännern sekern"
 
-#: incidencedialog.cpp:712
+#: incidencedialog.cpp:714
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Ännern sekern un Dialoog tomaken"
 
-#: incidencedialog.cpp:713
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Ännern wegsmieten un Dialoog tomaken"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:719
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Templates..."
@@ -1121,13 +1135,13 @@ msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&Vörlagen..."
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Vörlagen för dissen Indrag plegen"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1139,25 +1153,25 @@ msgstr ""
 "opropen wullt. Mit Vörlagen laat sik nieg Indrääg gauer un eenfacher "
 "opstellen, Dien vörtrocken Weerten staht denn al binnen den Editor."
 
-#: incidencedialog.cpp:819 incidencedialog.cpp:844 incidencedialog.cpp:864
+#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Wullt Du redig afbreken?"
 
-#: incidencedialog.cpp:820 incidencedialog.cpp:845 incidencedialog.cpp:865
+#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Beglöven - KOrganizer"
 
-#: incidencedialog.cpp:821 incidencedialog.cpp:846 incidencedialog.cpp:866
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr ""
 
-#: incidencedialog.cpp:822 incidencedialog.cpp:847 incidencedialog.cpp:867
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, fuzzy, kde-format
 #| msgctxt "@action:button dialog negative answer"
 #| msgid "Do Not Send"
