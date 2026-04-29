@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:45+0000\n"
-"PO-Revision-Date: 2026-03-09 07:06+0100\n"
+"PO-Revision-Date: 2026-04-28 07:32+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -367,7 +367,7 @@ msgstr "Vnesite lokacijo informacij."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google dovoljuje največ 5 opomnikov"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -566,6 +566,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google dovoljuje največ 5 opomnikov. Pred nadaljevanjem odstranite nekaj "
+"opomnikov."
 
 #: incidenceattachment.cpp:132
 #, kde-format

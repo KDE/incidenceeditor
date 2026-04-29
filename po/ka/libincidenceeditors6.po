@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:45+0000\n"
-"PO-Revision-Date: 2026-03-09 06:17+0100\n"
+"PO-Revision-Date: 2026-04-28 05:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -352,7 +352,7 @@ msgstr "შეიყვანეთ ინფორმაციის მდე�
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google მაქს. 5 შეხსენების საშუალებას იძლევა"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -545,6 +545,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google მაქს. 5 შეხსენების საშუალებას იძლევა. გაგრძელებამდე წაშალეთ რამდენიმე "
+"შეხსენება."
 
 #: incidenceattachment.cpp:132
 #, kde-format

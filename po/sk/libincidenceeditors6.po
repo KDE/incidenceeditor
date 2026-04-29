@@ -356,7 +356,7 @@ msgstr "Zadajte umiestnenie informácií."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google povoľuje najviac 5 pripomienok"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -552,6 +552,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google povoľuje najviac 5 pripomienok. Prosím, odstráňte niektoré "
+"pripomienky pred pokračovaním."
 
 #: incidenceattachment.cpp:132
 #, kde-format
