@@ -1,6 +1,7 @@
 /*
   SPDX-FileCopyrightText: 2010 Bertjan Broeksema <broeksema@kde.org>
   SPDX-FileCopyrightText: 2010 Klaralvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
+  SPDX-FileCopyrightText: Allen Winter <winter@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -24,14 +25,19 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
 
 void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    mLoadedIncidence = incidence;
-    if (mLoadedIncidence) {
-        Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
-        mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
-    } else {
-        mUi->mSecrecyCombo->setCurrentIndex(0);
-    }
+    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == "true"_L1;
 
+    mLoadedIncidence = incidence;
+    if (isTemplate) {
+        mUi->mSecrecyCombo->setCurrentIndex(incidence->secrecy());
+    } else {
+        if (mLoadedIncidence) {
+            Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
+            mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
+        } else {
+            mUi->mSecrecyCombo->setCurrentIndex(0);
+        }
+    }
     mWasDirty = false;
 }
 
