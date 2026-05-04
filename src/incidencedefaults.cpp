@@ -157,6 +157,18 @@ void IncidenceDefaultsPrivate::eventDefaults(const KCalendarCore::Event::Ptr &ev
     if (KCalPrefs::instance()->defaultEventReminders()) {
         event->addAlarm(AlarmPresets::defaultAlarm(AlarmPresets::BeforeStart));
     }
+
+    switch (KCalPrefs::instance()->eventSecrecyPolicy()) {
+    case 1:
+        event->setSecrecy(KCalendarCore::Incidence::SecrecyConfidential);
+        break;
+    case 2:
+        event->setSecrecy(KCalendarCore::Incidence::SecrecyPrivate);
+        break;
+    default:
+        event->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
+        break;
+    }
 }
 
 void IncidenceDefaultsPrivate::journalDefaults(const KCalendarCore::Journal::Ptr &journal) const
@@ -168,6 +180,18 @@ void IncidenceDefaultsPrivate::journalDefaults(const KCalendarCore::Journal::Ptr
     }
     journal->setDtStart(startDT);
     journal->setAllDay(true);
+
+    switch (KCalPrefs::instance()->journalSecrecyPolicy()) {
+    case 1:
+        journal->setSecrecy(KCalendarCore::Incidence::SecrecyConfidential);
+        break;
+    case 2:
+        journal->setSecrecy(KCalendarCore::Incidence::SecrecyPrivate);
+        break;
+    default:
+        journal->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
+        break;
+    }
 }
 
 void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo) const
@@ -231,6 +255,18 @@ void IncidenceDefaultsPrivate::todoDefaults(const KCalendarCore::Todo::Ptr &todo
 
     if (KCalPrefs::instance()->defaultTodoReminders()) {
         todo->addAlarm(AlarmPresets::defaultAlarm(AlarmPresets::BeforeEnd));
+    }
+
+    switch (KCalPrefs::instance()->todoSecrecyPolicy()) {
+    case 1:
+        todo->setSecrecy(KCalendarCore::Incidence::SecrecyConfidential);
+        break;
+    case 2:
+        todo->setSecrecy(KCalendarCore::Incidence::SecrecyPrivate);
+        break;
+    default:
+        todo->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
+        break;
     }
 }
 
