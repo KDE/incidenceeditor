@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:45+0000\n"
-"PO-Revision-Date: 2026-03-10 15:22+0100\n"
+"PO-Revision-Date: 2026-04-28 23:28+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -360,7 +360,7 @@ msgstr "Inserisci l'indirizzo delle informazioni."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google permette al massimo 5 promemoria"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -553,6 +553,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google permette al massimo 5 promemoria. Rimuovere alcuni promemoria prima "
+"di continuare."
 
 #: incidenceattachment.cpp:132
 #, kde-format
