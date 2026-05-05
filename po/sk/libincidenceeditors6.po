@@ -2192,7 +2192,7 @@ msgid ""
 msgstr ""
 "Nastaví identitu zodpovedajúcu organizátorovi tejto úlohy alebo udalosti. "
 "Identity sa dajú nastaviť v sekcii 'Osobné' v nastavení KOrganizer, alebo v "
-"sekcii 'Osobné'->'Heslo & účet používateľa' v Systémových nastaveniach. "
+"sekcii 'Osobné'->'Heslo a účet používateľa' v Systémových nastaveniach. "
 "Okrem toho, identity sa zbierajú z vášho nastavenia KMail a z vášho adresára "
 "kontaktov."
 
