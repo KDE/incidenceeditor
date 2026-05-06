@@ -336,7 +336,9 @@ void IncidenceDialogPrivate::loadTemplate(const QString &templateName)
     mIeDateTime->setActiveDate(QDate());
     KCalendarCore::Incidence::Ptr const newInc = KCalendarCore::Incidence::Ptr(incidences.first()->clone());
     newInc->setUid(KCalendarCore::CalFormat::createUniqueId());
-
+    if (newInc->summary().isEmpty()) {
+        newInc->setSummary(i18nc("@info/plain", "New from template: %1", templateName));
+    }
     // We add a custom property so that some fields aren't loaded, dates for example
     newInc->setCustomProperty(QByteArray("kdepim"), "isTemplate", u"true"_s);
     mEditor->load(newInc);
