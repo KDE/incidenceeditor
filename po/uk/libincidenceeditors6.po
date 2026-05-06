@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-06 00:46+0000\n"
 "PO-Revision-Date: 2026-04-28 08:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -870,13 +870,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "не знайдено (коректних) профілів"
 
-#: incidencedefaults.cpp:310
+#: incidencedefaults.cpp:346
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Двійкові дані]"
 
-#: incidencedefaults.cpp:440
+#: incidencedefaults.cpp:476
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

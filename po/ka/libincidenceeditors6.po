@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-06 00:46+0000\n"
 "PO-Revision-Date: 2026-04-28 05:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -846,13 +846,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "(სწორი) იდენტიფიკატორები აღმოჩენილი არაა"
 
-#: incidencedefaults.cpp:310
+#: incidencedefaults.cpp:346
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[ბინარული მონაცემები]"
 
-#: incidencedefaults.cpp:440
+#: incidencedefaults.cpp:476
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

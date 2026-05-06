@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-06 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -838,13 +838,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "न (वैध) तादात्मयः प्राप्ताः"
 
-#: incidencedefaults.cpp:310
+#: incidencedefaults.cpp:346
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[द्विचक्रीयदत्तांशः] ।"
 
-#: incidencedefaults.cpp:440
+#: incidencedefaults.cpp:476
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:45+0000\n"
+"POT-Creation-Date: 2026-05-06 00:46+0000\n"
 "PO-Revision-Date: 2026-02-22 13:02+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -856,13 +856,13 @@ msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "keine (gültige) Identität gefunden"
 
-#: incidencedefaults.cpp:310
+#: incidencedefaults.cpp:346
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[Binärdaten]"
 
-#: incidencedefaults.cpp:440
+#: incidencedefaults.cpp:476
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
