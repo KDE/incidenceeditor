@@ -14,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/TagAttribute>
+#include <Akonadi/TagCache>
 #include <Akonadi/TagCreateJob>
 #include <Akonadi/TagFetchJob>
 #include <Akonadi/TagFetchScope>
@@ -45,14 +46,19 @@ void IncidenceCategories::load([[maybe_unused]] const KCalendarCore::Incidence::
         if (isTemplate) {
             if (mLoadedIncidence) {
                 mLoadedIncidence->setCategories(incidence->categories());
-                const QStringList cats = mLoadedIncidence->categories();
-                Akonadi::Tag::List tags;
-                tags.reserve(cats.count());
-                for (const auto &cat : cats) {
-                    tags << Akonadi::Tag(cat);
+                mMissingCategories = mLoadedIncidence->categories();
+
+                Akonadi::Tag::List selectedTags;
+                selectedTags.reserve(mMissingCategories.count());
+                for (const auto &cat : mMissingCategories) {
+                    const auto tag = Akonadi::TagCache::instance()->tagByName(cat);
+                    if (mMissingCategories.removeAll(tag.name()) > 0) {
+                        selectedTags << tag;
+                    }
                 }
+                createMissingCategories();
                 mUi->mTagWidget->blockSignals(true);
-                mUi->mTagWidget->setSelection(tags);
+                mUi->mTagWidget->setSelection(selectedTags);
                 mUi->mTagWidget->blockSignals(false);
             }
         }
