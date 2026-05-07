@@ -350,9 +350,9 @@ void IncidenceDialogPrivate::manageTemplates()
     Q_Q(IncidenceDialog);
 
     const QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
-
+    const QString typeStr = KCalUtils::Stringify::incidenceType(mEditor->type());
     QPointer<IncidenceEditorNG::TemplateManagementDialog> const dialog(
-        new IncidenceEditorNG::TemplateManagementDialog(q, templates, KCalUtils::Stringify::incidenceType(mEditor->type())));
+        new IncidenceEditorNG::TemplateManagementDialog(q, templates, typeStr, mEditor->isDirty()));
 
     q->connect(dialog, &TemplateManagementDialog::loadTemplate, q, [this](const QString &templateName) {
         loadTemplate(templateName);

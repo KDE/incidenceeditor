@@ -16,7 +16,7 @@ class TemplateManagementDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType);
+    explicit TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType, bool isDirty);
 
 Q_SIGNALS:
     /* Emitted whenever the user hits apply, indicating that the currently
@@ -52,5 +52,6 @@ private:
     QString m_type;
     QString m_newTemplate;
     bool m_changed = false;
+    bool m_isdirty = false;
 };
 }

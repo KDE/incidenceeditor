@@ -24,10 +24,11 @@ using namespace Qt::Literals::StringLiterals;
 
 using namespace IncidenceEditorNG;
 
-TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType)
+TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType, bool isDirty)
     : QDialog(parent)
     , m_templates(templates)
     , m_type(incidenceType)
+    , m_isdirty(isDirty)
 {
     QString const m_type_translated = i18n(qPrintable(m_type));
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
@@ -169,6 +170,18 @@ void TemplateManagementDialog::updateButtons()
 
 void TemplateManagementDialog::slotApplyTemplate()
 {
+    if (m_isdirty) {
+        int const rc = KMessageBox::warningContinueCancel(
+            this,
+            i18nc("@info", "Applying the template will overwrite changes you made to this incidence. Are you sure that you want to apply the template?"),
+            i18nc("@title:window", "Apply Template"),
+            KStandardGuiItem::apply());
+
+        if (rc == KMessageBox::Cancel) {
+            return;
+        }
+    }
+
     // Once the user has applied the current template to the event,
     // it makes no sense to add it again
     m_base.m_buttonAdd->setEnabled(false);
