@@ -50,7 +50,7 @@ void IncidenceCategories::load([[maybe_unused]] const KCalendarCore::Incidence::
 
                 Akonadi::Tag::List selectedTags;
                 selectedTags.reserve(mMissingCategories.count());
-                for (const auto &cat : mMissingCategories) {
+                for (const auto &cat : std::as_const(mMissingCategories)) {
                     const auto tag = Akonadi::TagCache::instance()->tagByName(cat);
                     if (mMissingCategories.removeAll(tag.name()) > 0) {
                         selectedTags << tag;
