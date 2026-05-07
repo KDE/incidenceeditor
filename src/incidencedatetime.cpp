@@ -896,25 +896,27 @@ bool IncidenceDateTime::isValid() const
         }
     }
 
-    if (startDateTimeEnabled() && endDateTimeEnabled() && currentStartDateTime() > currentEndDateTime()) {
-        if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeEvent) {
-            mLastErrorString = i18nc("@info",
-                                     "The event ends before it starts.\n"
-                                     "Please correct dates and times.");
-        } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
-            mLastErrorString = i18nc("@info",
-                                     "The to-do is due before it starts.\n"
-                                     "Please correct dates and times.");
-        } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeJournal) {
-            return true;
-        }
+    if (startDateTimeEnabled() && endDateTimeEnabled()) {
+        if ((!mUi->mWholeDayCheck->isChecked() && (currentStartDateTime() > currentEndDateTime()))
+            || (mUi->mWholeDayCheck->isChecked() && (currentStartDateTime().date() > currentEndDateTime().date()))) {
+            if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeEvent) {
+                mLastErrorString = i18nc("@info",
+                                         "The event ends before it starts.\n"
+                                         "Please correct dates and times.");
+            } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
+                mLastErrorString = i18nc("@info",
+                                         "The to-do is due before it starts.\n"
+                                         "Please correct dates and times.");
+            } else if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeJournal) {
+                return true;
+            }
 
-        qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
-        return false;
-    } else {
-        mLastErrorString.clear();
-        return true;
+            qCDebug(INCIDENCEEDITOR_LOG) << mLastErrorString;
+            return false;
+        }
     }
+    mLastErrorString.clear();
+    return true;
 }
 
 void IncidenceDateTime::printDebugInfo() const
