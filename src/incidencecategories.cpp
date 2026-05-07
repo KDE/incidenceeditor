@@ -1,6 +1,7 @@
 /*
   SPDX-FileCopyrightText: 2010 Bertjan Broeksema <broeksema@kde.org>
   SPDX-FileCopyrightText: 2010 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+  SPDX-FileCopyrightText: Allen Winter <winter@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -37,6 +38,25 @@ void IncidenceCategories::load([[maybe_unused]] const KCalendarCore::Incidence::
 {
     mDirty = false;
     mWasDirty = false;
+
+    // If we're here then we're most likely applying a template
+    if (incidence) {
+        const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == "true"_L1;
+        if (isTemplate) {
+            if (mLoadedIncidence) {
+                mLoadedIncidence->setCategories(incidence->categories());
+                const QStringList cats = mLoadedIncidence->categories();
+                Akonadi::Tag::List tags;
+                tags.reserve(cats.count());
+                for (const auto &cat : cats) {
+                    tags << Akonadi::Tag(cat);
+                }
+                mUi->mTagWidget->blockSignals(true);
+                mUi->mTagWidget->setSelection(tags);
+                mUi->mTagWidget->blockSignals(false);
+            }
+        }
+    }
 }
 
 void IncidenceCategories::load(const Akonadi::Item &item)
