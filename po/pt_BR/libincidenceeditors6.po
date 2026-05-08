@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:37+0000\n"
+"POT-Creation-Date: 2026-05-08 02:40+0000\n"
 "PO-Revision-Date: 2026-03-05 06:15-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -810,7 +810,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Hora final inválida."
 
-#: incidencedatetime.cpp:903
+#: incidencedatetime.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -820,7 +820,7 @@ msgstr ""
 "O evento termina antes de começar.\n"
 "Corrija as datas e horários."
 
-#: incidencedatetime.cpp:907
+#: incidencedatetime.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid ""

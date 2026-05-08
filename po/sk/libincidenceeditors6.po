@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:37+0000\n"
+"POT-Creation-Date: 2026-05-08 02:40+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -813,7 +813,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Neplatný čas ukončenia."
 
-#: incidencedatetime.cpp:903
+#: incidencedatetime.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -823,7 +823,7 @@ msgstr ""
 "Udalosť končí predtým, ako sa začne.\n"
 "Prosím opravte dátumy a časy."
 
-#: incidencedatetime.cpp:907
+#: incidencedatetime.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid ""

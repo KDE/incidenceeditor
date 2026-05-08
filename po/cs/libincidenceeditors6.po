@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:37+0000\n"
+"POT-Creation-Date: 2026-05-08 02:40+0000\n"
 "PO-Revision-Date: 2026-03-17 10:20+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -801,7 +801,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Neplatný čas ukončení."
 
-#: incidencedatetime.cpp:903
+#: incidencedatetime.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -811,7 +811,7 @@ msgstr ""
 "Tato událost končí dřív než začíná.\n"
 "Prosím opravte datum a čas."
 
-#: incidencedatetime.cpp:907
+#: incidencedatetime.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid ""

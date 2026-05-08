@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:37+0000\n"
+"POT-Creation-Date: 2026-05-08 02:40+0000\n"
 "PO-Revision-Date: 2026-03-06 08:58+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -813,7 +813,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Heure de fin non valable."
 
-#: incidencedatetime.cpp:903
+#: incidencedatetime.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -823,7 +823,7 @@ msgstr ""
 "L'évènement prend fin avant qu'il ne commence.\n"
 "Veuillez corriger les dates et heures."
 
-#: incidencedatetime.cpp:907
+#: incidencedatetime.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid ""

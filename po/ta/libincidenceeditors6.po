@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 02:37+0000\n"
+"POT-Creation-Date: 2026-05-08 02:40+0000\n"
 "PO-Revision-Date: 2025-11-30 14:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -797,7 +797,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "முடியும் நேரம் செல்லுபடியாகாதது."
 
-#: incidencedatetime.cpp:903
+#: incidencedatetime.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -807,7 +807,7 @@ msgstr ""
 "நிகழ்வு துவங்குமுன்னரே முடியவுள்ளது.\n"
 "நேரங்களையும் தேதிகளையும் சரிபாருங்கள்."
 
-#: incidencedatetime.cpp:907
+#: incidencedatetime.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid ""
