@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:45+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-22 22:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -835,7 +835,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Nieprawidłowy czas zakończenia."
 
-#: incidencedatetime.cpp:902
+#: incidencedatetime.cpp:904
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -845,7 +845,7 @@ msgstr ""
 "Zdarzenie kończy się przed rozpoczęciem.\n"
 "Proszę poprawić daty i godziny."
 
-#: incidencedatetime.cpp:906
+#: incidencedatetime.cpp:908
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1500,48 +1500,63 @@ msgctxt ""
 msgid "to %1"
 msgstr "do %1"
 
-#: templatemanagementdialog.cpp:33
+#: templatemanagementdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Zarządzaj wzorcami %1"
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Template Name"
 msgstr "Nazwa wzorca"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Proszę podać nazwę dla nowego wzorca:"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nowy %1 wzorzec"
 
-#: templatemanagementdialog.cpp:105
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Wzorzec o tej nazwie już istnieje. Czy go zastąpić?"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Nazwa wzorca powtarza się"
 
-#: templatemanagementdialog.cpp:140
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Czy na pewno chcesz usunąć wzorzec <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:142
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Usuń wzorzec"
+
+#: templatemanagementdialog.cpp:176
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applying the template will overwrite changes you made to this incidence. Are "
+"you sure that you want to apply the template?"
+msgstr ""
+
+#: templatemanagementdialog.cpp:177
+#, fuzzy, kde-format
+#| msgid "Apply Template"
+msgctxt "@title:window"
+msgid "Apply Template"
+msgstr "Zastosuj wzorzec"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -11382,9 +11397,6 @@ msgstr ""
 
 #~ msgid "Select &Addressee..."
 #~ msgstr "Wybierz &adresata..."
-
-#~ msgid "Apply Template"
-#~ msgstr "Zastosuj wzorzec"
 
 #~ msgid "2008-07-14"
 #~ msgstr "2008-07-14"

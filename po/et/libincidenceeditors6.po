@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:45+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -847,7 +847,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Vigane lõppemise kuupäev ja kellaaeg."
 
-#: incidencedatetime.cpp:902
+#: incidencedatetime.cpp:904
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -857,7 +857,7 @@ msgstr ""
 "Sündmus lõpeb enne algamist.\n"
 "Palun korrigeeri kuupäeva ja kellaaega."
 
-#: incidencedatetime.cpp:906
+#: incidencedatetime.cpp:908
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1512,50 +1512,65 @@ msgctxt ""
 msgid "to %1"
 msgstr "kuni %1"
 
-#: templatemanagementdialog.cpp:33
+#: templatemanagementdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 mallide haldamine"
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Template Name"
 msgstr "Malli nimi"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Uue malli nimi:"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "New %1 Template"
 msgstr "Uus %1 mall"
 
-#: templatemanagementdialog.cpp:105
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Sellise nimega mall on juba olemas. Kas kirjutada see üle?"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:107
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Korduv mallinimi"
 
-#: templatemanagementdialog.cpp:140
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Kas tõesti eemaldada mall <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:142
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Malli kustutamine"
+
+#: templatemanagementdialog.cpp:176
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applying the template will overwrite changes you made to this incidence. Are "
+"you sure that you want to apply the template?"
+msgstr ""
+
+#: templatemanagementdialog.cpp:177
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgctxt "@title:window"
+msgid "Apply Template"
+msgstr "Uus %1 mall"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

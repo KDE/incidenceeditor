@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:45+0000\n"
-"PO-Revision-Date: 2026-04-29 00:12+0100\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"PO-Revision-Date: 2026-05-07 12:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -823,7 +823,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Hora de finalización no válida."
 
-#: incidencedatetime.cpp:902
+#: incidencedatetime.cpp:904
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -833,7 +833,7 @@ msgstr ""
 "El evento termina antes empezar.\n"
 "Corrija las fechas y las horas."
 
-#: incidencedatetime.cpp:906
+#: incidencedatetime.cpp:908
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -946,11 +946,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "La plantilla no contiene una incidencia válida."
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Nueva plantilla %1"
+msgstr "Nueva desde plantilla: %1"
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1468,48 +1467,63 @@ msgctxt ""
 msgid "to %1"
 msgstr "a %1"
 
-#: templatemanagementdialog.cpp:33
+#: templatemanagementdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Gestionar plantillas %1"
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Template Name"
 msgstr "Nombre de la plantilla"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Introduzca un nombre para la plantilla nueva:"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nueva plantilla %1"
 
-#: templatemanagementdialog.cpp:105
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Ya existe una plantilla con ese nombre. ¿Desea sobrescribirla?"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplicar el nombre de la plantilla"
 
-#: templatemanagementdialog.cpp:140
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "¿Seguro que desea eliminar la plantilla <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:142
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Eliminar plantilla"
+
+#: templatemanagementdialog.cpp:176
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applying the template will overwrite changes you made to this incidence. Are "
+"you sure that you want to apply the template?"
+msgstr ""
+
+#: templatemanagementdialog.cpp:177
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgctxt "@title:window"
+msgid "Apply Template"
+msgstr "Nueva plantilla %1"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

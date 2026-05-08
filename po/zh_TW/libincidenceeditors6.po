@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:45+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2026-03-16 16:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -802,7 +802,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "無效的結束時間。"
 
-#: incidencedatetime.cpp:902
+#: incidencedatetime.cpp:904
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -810,7 +810,7 @@ msgid ""
 "Please correct dates and times."
 msgstr "這個事件在開始前結束。請更正日期和時間。"
 
-#: incidencedatetime.cpp:906
+#: incidencedatetime.cpp:908
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1433,48 +1433,63 @@ msgctxt ""
 msgid "to %1"
 msgstr "到 %1"
 
-#: templatemanagementdialog.cpp:33
+#: templatemanagementdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "管理 %1 個樣本"
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Template Name"
 msgstr "樣本名稱"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "請輸入新樣本名稱："
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "New %1 Template"
 msgstr "新增 %1 樣本"
 
-#: templatemanagementdialog.cpp:105
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "此樣本名稱已存在。要覆寫它嗎？"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "重複的樣本名稱"
 
-#: templatemanagementdialog.cpp:140
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<qt>您確定要移除樣本<b>%1</b> 嗎？</qt>"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:142
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "移除樣本"
+
+#: templatemanagementdialog.cpp:176
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applying the template will overwrite changes you made to this incidence. Are "
+"you sure that you want to apply the template?"
+msgstr ""
+
+#: templatemanagementdialog.cpp:177
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgctxt "@title:window"
+msgid "Apply Template"
+msgstr "新增 %1 樣本"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

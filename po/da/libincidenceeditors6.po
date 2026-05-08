@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:45+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2020-11-17 19:50+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -840,7 +840,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Ugyldigt sluttidspunkt."
 
-#: incidencedatetime.cpp:902
+#: incidencedatetime.cpp:904
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -850,7 +850,7 @@ msgstr ""
 "Begivenheden slutter før den starter.\n"
 "Korrigér venligst datoer og klokkeslæt."
 
-#: incidencedatetime.cpp:906
+#: incidencedatetime.cpp:908
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1505,50 +1505,65 @@ msgctxt ""
 msgid "to %1"
 msgstr "til %1"
 
-#: templatemanagementdialog.cpp:33
+#: templatemanagementdialog.cpp:34
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Håndtér %1 skabeloner"
 
-#: templatemanagementdialog.cpp:94
+#: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Template Name"
 msgstr "Skabelonnavn"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:96
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Angiv et navn til den ny skabelon:"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "New %1 Template"
 msgstr "Ny %1 skabelon"
 
-#: templatemanagementdialog.cpp:105
+#: templatemanagementdialog.cpp:106
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "En skabelon med det navn findes allerede. Vil du overskrive den?"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:107
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplikeret skabelonnavn"
 
-#: templatemanagementdialog.cpp:140
+#: templatemanagementdialog.cpp:141
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Vil du virkelig fjerne skabelonen <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:142
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Fjern skabelon"
+
+#: templatemanagementdialog.cpp:176
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Applying the template will overwrite changes you made to this incidence. Are "
+"you sure that you want to apply the template?"
+msgstr ""
+
+#: templatemanagementdialog.cpp:177
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgctxt "@title:window"
+msgid "Apply Template"
+msgstr "Ny %1 skabelon"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
