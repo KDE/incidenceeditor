@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:45+0000\n"
-"PO-Revision-Date: 2026-05-07 07:35+0200\n"
+"PO-Revision-Date: 2026-05-08 05:16+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1513,13 +1513,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"ნიმუშის გადატარება თავზე გადააწერს ცვლილებებს, რომლებიც ამ შემთხვევაში "
+"შეიტანეთ. მართლა გნებავთ ნიმუშის გადატარება?"
 
 #: templatemanagementdialog.cpp:177
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "ახალი %1 ნიმუში"
+msgstr "ნიმუშის გადატარება"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:45+0000\n"
-"PO-Revision-Date: 2026-04-28 16:25+0200\n"
+"PO-Revision-Date: 2026-05-08 11:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -946,11 +946,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Patrono non contine un valide incidentia."
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Nove  %1 patrono"
+msgstr "Nove  ex patrono : %1 "
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1521,13 +1520,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Applicar le patrono superscribera le modificationes que tu ha facite  a iste "
+"incidentia. Es tu secur que tu vole applicar le patrono?"
 
 #: templatemanagementdialog.cpp:177
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "Nove  %1 patrono"
+msgstr "Applica patrono"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

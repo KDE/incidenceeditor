@@ -952,11 +952,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Šablóna neobsahuje platný výskyt."
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Nová šablóna %1"
+msgstr "Nová zo šablóny: %1"
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1528,13 +1527,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Použitím šablóny prepíšete zmeny, ktoré ste vykonali v tejto udalosti. "
+"Naozaj chcete šablónu použiť?"
 
 #: templatemanagementdialog.cpp:177
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "Nová šablóna %1"
+msgstr "Použiť šablónu"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14

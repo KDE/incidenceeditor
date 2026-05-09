@@ -917,11 +917,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "模板中并未包含有效的事件。"
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "新建 %1 模板"
+msgstr ""
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1476,11 +1475,10 @@ msgid ""
 msgstr ""
 
 #: templatemanagementdialog.cpp:177
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "新建 %1 模板"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
