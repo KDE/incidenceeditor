@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
 #
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 02:40+0000\n"
-"PO-Revision-Date: 2025-11-30 14:45+0530\n"
+"PO-Revision-Date: 2026-05-10 17:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -848,11 +848,10 @@ msgid "Disable rich text"
 msgstr "மேம்பட்ட உரையை முடக்கு"
 
 #: incidencedialog.cpp:233
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
-msgstr "செல்லுபடியாகும் தொகுப்பை முதலில் தேர்ந்தெடுங்கள்."
+msgstr "செல்லுபடியாகும் தொகுப்பை முதலில் தேர்ந்தெடுக்கவும்."
 
 #: incidencedialog.cpp:256
 #, kde-format
@@ -1428,17 +1427,17 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Manage %1 Templates"
-msgstr ""
+msgstr "%1 வார்ப்புருக்களை நிர்வகிப்பது"
 
 #: templatemanagementdialog.cpp:94
 #, kde-format
 msgid "Template Name"
-msgstr ""
+msgstr "வார்ப்புருவின் பெயர்"
 
 #: templatemanagementdialog.cpp:95
 #, kde-format
 msgid "Please enter a name for the new template:"
-msgstr ""
+msgstr "புதிய வார்ப்புருக்கான பெயரை உள்ளிடவும்:"
 
 #: templatemanagementdialog.cpp:97
 #, kde-format
@@ -1448,7 +1447,7 @@ msgstr "புதிய %1 வார்ப்புரு"
 #: templatemanagementdialog.cpp:105
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
-msgstr ""
+msgstr "அப்பெயரில் ஏற்கனவே ஓர் வார்ப்புரு உள்ளது. மேலெழுத வேண்டமா?"
 
 #: templatemanagementdialog.cpp:106
 #, kde-format
@@ -1465,19 +1464,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
-msgstr ""
+msgstr "வார்ப்புருவை நீக்கு"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
 #, kde-format
 msgid "Alarms"
-msgstr ""
+msgstr "அலாரங்கள்"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/alarmdialog.ui:32
 #, kde-format
 msgid "When:"
-msgstr ""
+msgstr "எப்போது:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mAlarmOffset)
 #: ui/alarmdialog.ui:47
@@ -1570,7 +1569,7 @@ msgstr ""
 #: ui/alarmdialog.ui:129
 #, kde-format
 msgid "Repeat:"
-msgstr ""
+msgstr "மீளநிகழ்வது:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:144
@@ -1634,7 +1633,7 @@ msgstr ""
 #: ui/alarmdialog.ui:212
 #, kde-format
 msgid "What:"
-msgstr ""
+msgstr "என்ன: "
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:222
@@ -1652,7 +1651,7 @@ msgstr ""
 #: ui/alarmdialog.ui:235
 #, kde-format
 msgid "Display text"
-msgstr ""
+msgstr "உரையைக் காட்டு"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:240
@@ -1672,7 +1671,7 @@ msgstr ""
 #: ui/alarmdialog.ui:296
 #, kde-format
 msgid "Audio File:"
-msgstr ""
+msgstr "ஒலிக்கோப்பு"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:309
@@ -1707,14 +1706,14 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Attachment name"
-msgstr ""
+msgstr "உடனிணைப்பின் பெயர்"
 
 #. i18n: ectx: property (text), widget (QLabel, mTypeLabel)
 #: ui/attachmenteditdialog.ui:65
 #, kde-format
 msgctxt "@label File type of attachment is unknown"
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
@@ -1748,7 +1747,7 @@ msgstr ""
 #: ui/attachmenteditdialog.ui:123
 #, kde-format
 msgid "Location:"
-msgstr ""
+msgstr "இடம்:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mURLRequester)
 #: ui/attachmenteditdialog.ui:133
@@ -1771,7 +1770,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Size:"
-msgstr ""
+msgstr "அளவு:"
 
 #. i18n: ectx: property (text), widget (QLabel, mSizeLabel)
 #: ui/attachmenteditdialog.ui:166
@@ -1783,7 +1782,7 @@ msgstr ""
 #: ui/attachmenteditdialog.ui:183
 #, kde-format
 msgid "Type:"
-msgstr ""
+msgstr "வகை:"
 
 #. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:20
@@ -1802,7 +1801,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox The calendar to which the todo or event must be added"
 msgid "Calen&dar:"
-msgstr ""
+msgstr "நாள்காட்டி:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/dialogdesktop.ui:81
@@ -1830,14 +1829,14 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Accept an invitation"
 msgid "Accept"
-msgstr ""
+msgstr "ஏற்றுக்கொள்"
 
 #. i18n: ectx: property (text), widget (QPushButton, mDeclineInvitationButton)
 #: ui/dialogdesktop.ui:104
 #, kde-format
 msgctxt "@action:button decline an invitation"
 msgid "Decline"
-msgstr ""
+msgstr "மறு"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
@@ -1862,14 +1861,14 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr ""
+msgstr "விவரணம்:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:187
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
-msgstr ""
+msgstr "இடம்:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:206
@@ -1904,77 +1903,77 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
-msgstr ""
+msgstr "முக்கியத்துவம்:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:297
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "unspecified"
-msgstr ""
+msgstr "குறிப்பிடப்படாத‍து"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:302
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
-msgstr ""
+msgstr "1 (அதிகப்படியானது)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:307
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:312
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:317
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:322
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
-msgstr ""
+msgstr "5 (medium)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:327
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:332
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:337
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:342
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
-msgstr ""
+msgstr "9 (lowest)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
 #: ui/dialogdesktop.ui:361
@@ -1989,7 +1988,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "All Day"
-msgstr ""
+msgstr "முழு நாளும்"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
 #: ui/dialogdesktop.ui:390
@@ -2067,7 +2066,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
-msgstr ""
+msgstr "பொதுவானவை"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
@@ -2108,7 +2107,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "குறிச்சொற்கள்:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:729
@@ -2203,7 +2202,7 @@ msgstr "பங்கேற்போரை தேர்ந்தெடு…"
 #: ui/dialogdesktop.ui:885
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "தனியுரிமை:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:897
@@ -2240,7 +2239,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
-msgstr ""
+msgstr "நினைவூட்டல்"
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
 #: ui/dialogdesktop.ui:1025
@@ -2254,42 +2253,42 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
-msgstr ""
+msgstr "சேர்"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #: ui/dialogdesktop.ui:1079
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
-msgstr ""
+msgstr "புதியது"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
 #: ui/dialogdesktop.ui:1090
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
-msgstr ""
+msgstr "திருத்து"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1101
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
-msgstr ""
+msgstr "முடக்கு"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
 #: ui/dialogdesktop.ui:1108
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
-msgstr ""
+msgstr "நீக்கு"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mRecurrenceTab)
 #: ui/dialogdesktop.ui:1133
 #, kde-format
 msgctxt "@title:tab"
 msgid "Recurrence"
-msgstr ""
+msgstr "மறுநிகழ்வு"
 
 #. i18n: ectx: property (text), widget (QLabel, mRepeatLabel)
 #: ui/dialogdesktop.ui:1145
@@ -2303,49 +2302,49 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Never"
-msgstr ""
+msgstr "ஒருபோதும் வேண்டாம்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1169
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Daily"
-msgstr ""
+msgstr "ஒவ்வொரு நாளும்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1174
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Weekly"
-msgstr ""
+msgstr "ஒவ்வொரு வாரமும்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1179
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Monthly"
-msgstr ""
+msgstr "ஒவ்வொரு மாதமும்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1184
 #, kde-format
 msgctxt "@item:inlistbox Lets the user chose how often an event recurs"
 msgid "Yearly"
-msgstr ""
+msgstr "ஒவ்வொரு ஆண்டும்"
 
 #. i18n: ectx: property (text), widget (QLabel, mFrequencyLabel)
 #: ui/dialogdesktop.ui:1198
 #, kde-format
 msgctxt "@label repeats every [various options]"
 msgid "every"
-msgstr ""
+msgstr "ஒவ்வொரு"
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceRuleLabel)
 #: ui/dialogdesktop.ui:1230
 #, kde-format
 msgctxt "@label Event or todo recurs every n day(s)"
 msgid "day(s)"
-msgstr ""
+msgstr "நாள்"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mThisAndFutureCheck)
 #: ui/dialogdesktop.ui:1237
@@ -2358,14 +2357,14 @@ msgstr ""
 #, kde-format
 msgctxt "@label recurrence ends on|after"
 msgid "Ends:"
-msgstr ""
+msgstr "முடிவது:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
 #, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr ""
+msgstr "ஒருபோதும் இல்லை"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
@@ -2407,7 +2406,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button adds an exception on the recurrence"
 msgid "Add"
-msgstr ""
+msgstr "சேர்"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
 #: ui/dialogdesktop.ui:1633
@@ -2421,21 +2420,21 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
-msgstr ""
+msgstr "நீக்கு"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
 #: ui/dialogdesktop.ui:1675
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
-msgstr ""
+msgstr "உடனிணைப்புகள்"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1697
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
-msgstr ""
+msgstr "உடனிணைப்பை சேர்"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
 #: ui/dialogdesktop.ui:1700
@@ -2451,7 +2450,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
-msgstr ""
+msgstr "சேர்"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
 #: ui/dialogdesktop.ui:1723
@@ -2473,7 +2472,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
-msgstr ""
+msgstr "நீக்கு"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:39
@@ -2492,13 +2491,13 @@ msgstr ""
 #: ui/resourcemanagement.ui:76
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "விவரங்கள்"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: ui/resourcemanagement.ui:94
 #, kde-format
 msgid "Owner"
-msgstr ""
+msgstr "உரிமையாளர்"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
 #: ui/schedulingdialog.ui:14
@@ -2691,7 +2690,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:91
 #, kde-format
 msgid "Apply"
-msgstr ""
+msgstr "செயல்படுத்து"
 
 #: visualfreebusywidget.cpp:140
 #, kde-format
@@ -2790,7 +2789,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
-msgstr ""
+msgstr "மீளேற்று"
 
 #: visualfreebusywidget.cpp:187
 #, kde-format
