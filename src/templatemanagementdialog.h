@@ -10,6 +10,8 @@
 #include "ui_template_management_dialog_base.h"
 
 #include <QDialog>
+class QPushBotton;
+
 namespace IncidenceEditorNG
 {
 class TemplateManagementDialog : public QDialog
@@ -49,9 +51,10 @@ private:
     void updateButtons();
     Ui::TemplateManagementDialog_base m_base;
     QStringList m_templates;
+    QStringList m_templatesSave;
     QString m_type;
     QString m_newTemplate;
-    bool m_changed = false;
     bool m_isdirty = false;
+    QPushButton *m_okButton;
 };
 }

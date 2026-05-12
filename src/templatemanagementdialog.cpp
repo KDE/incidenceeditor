@@ -34,9 +34,10 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     auto mainLayout = new QVBoxLayout(this);
-    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
-    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    m_okButton = buttonBox->button(QDialogButtonBox::Ok);
+    m_okButton->setEnabled(false);
+    m_okButton->setDefault(true);
+    m_okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TemplateManagementDialog::reject);
     setObjectName("template_management_dialog"_L1);
     connect(buttonBox->button(QDialogButtonBox::Help), &QPushButton::clicked, this, &TemplateManagementDialog::slotHelp);
@@ -47,6 +48,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     widget->setObjectName("template_management_dialog_base"_L1);
     m_base.setupUi(widget);
 
+    m_templatesSave = m_templates;
     m_base.m_listBox->addItems(m_templates);
     m_base.m_listBox->setSelectionMode(QAbstractItemView::SingleSelection);
 
@@ -56,9 +58,9 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
 
     connect(m_base.m_listBox, &QListWidget::itemSelectionChanged, this, &TemplateManagementDialog::slotItemSelected);
     connect(m_base.m_listBox, &QListWidget::itemDoubleClicked, this, &TemplateManagementDialog::slotApplyTemplate);
-    connect(okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotOk);
+    connect(m_okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotOk);
     // save dialog size on 'OK'
-    connect(okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotSaveSize);
+    connect(m_okButton, &QPushButton::clicked, this, &TemplateManagementDialog::slotSaveSize);
 
     m_base.m_buttonRemove->setEnabled(false);
     m_base.m_buttonApply->setEnabled(false);
@@ -121,7 +123,7 @@ void TemplateManagementDialog::slotAddTemplate()
         item->setSelected(true);
     }
     m_newTemplate = newTemplate;
-    m_changed = true;
+    m_okButton->setEnabled(true);
 
     // From this point on we need to keep the original event around until the
     // user has closed the dialog, applying a template would make little sense
@@ -156,8 +158,6 @@ void TemplateManagementDialog::slotRemoveTemplate()
     }
 
     updateButtons();
-
-    m_changed = true;
 }
 
 void TemplateManagementDialog::updateButtons()
@@ -166,6 +166,7 @@ void TemplateManagementDialog::updateButtons()
     const bool isNotEmpty = m_base.m_listBox->count() != 0;
     m_base.m_buttonRemove->setEnabled(isNotEmpty);
     m_base.m_buttonApply->setEnabled(isNotEmpty);
+    m_okButton->setEnabled(!(m_templates == m_templatesSave));
 }
 
 void TemplateManagementDialog::slotApplyTemplate()
@@ -201,9 +202,7 @@ void TemplateManagementDialog::slotOk()
     if (!m_newTemplate.isEmpty()) {
         Q_EMIT saveTemplate(m_newTemplate);
     }
-    if (m_changed) {
-        Q_EMIT templatesChanged(m_templates);
-    }
+    Q_EMIT templatesChanged(m_templates);
     accept();
 }
 
