@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-05-13 00:46+0000\n"
 "PO-Revision-Date: 2013-03-26 10:24+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -1473,46 +1473,46 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 नमूने व्यवस्थापीत करा"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "Template Name"
 msgstr "नमूना नाव"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "कृपया नवीन नमून्या करिता नाव दाखल करा:"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:100
 #, kde-format
 msgid "New %1 Template"
 msgstr "नवीन %1 नमूना"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:108
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:107
+#: templatemanagementdialog.cpp:109
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "प्रतिकृत नमूना नाव"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:143
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:142
+#: templatemanagementdialog.cpp:144
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "नवीन %1 नमूना"
 
-#: templatemanagementdialog.cpp:176
+#: templatemanagementdialog.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1520,7 +1520,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:178
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"

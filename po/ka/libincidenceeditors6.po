@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-05-13 00:46+0000\n"
 "PO-Revision-Date: 2026-05-08 05:16+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1469,44 +1469,44 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 ნიმუშების მართვა"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "Template Name"
 msgstr "შაბლონის სახელი"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "შეიყვანეთ სახელი ახალი ნიმუშისთვის:"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:100
 #, kde-format
 msgid "New %1 Template"
 msgstr "ახალი %1 ნიმუში"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:108
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "ნიმუში ასეთი სახელით უკვე არსებობს. მართლა გნებავთ, თავზე გადააწეროთ?"
 
-#: templatemanagementdialog.cpp:107
+#: templatemanagementdialog.cpp:109
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "დუბლიკატი ნიმუშის სახელი"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:143
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "მართლა გნებავთ, წაშალოთ ნიმუში <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:142
+#: templatemanagementdialog.cpp:144
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "ნიმუშის წაშლა"
 
-#: templatemanagementdialog.cpp:176
+#: templatemanagementdialog.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1516,7 +1516,7 @@ msgstr ""
 "ნიმუშის გადატარება თავზე გადააწერს ცვლილებებს, რომლებიც ამ შემთხვევაში "
 "შეიტანეთ. მართლა გნებავთ ნიმუშის გადატარება?"
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:178
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-05-13 00:46+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -1518,46 +1518,46 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1 mallide haldamine"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "Template Name"
 msgstr "Malli nimi"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Uue malli nimi:"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:100
 #, kde-format
 msgid "New %1 Template"
 msgstr "Uus %1 mall"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:108
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Sellise nimega mall on juba olemas. Kas kirjutada see üle?"
 
-#: templatemanagementdialog.cpp:107
+#: templatemanagementdialog.cpp:109
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Korduv mallinimi"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:143
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Kas tõesti eemaldada mall <b>%1</b>?"
 
-#: templatemanagementdialog.cpp:142
+#: templatemanagementdialog.cpp:144
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Malli kustutamine"
 
-#: templatemanagementdialog.cpp:176
+#: templatemanagementdialog.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1565,7 +1565,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:178
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"

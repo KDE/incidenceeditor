@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-05-13 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1429,44 +1429,44 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "管理 %1 个模板"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "Template Name"
 msgstr "模板名称"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "请输入新模板的名称："
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:100
 #, kde-format
 msgid "New %1 Template"
 msgstr "新建 %1 模板"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:108
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "已经存在该名称的模板，您是否想要覆盖？"
 
-#: templatemanagementdialog.cpp:107
+#: templatemanagementdialog.cpp:109
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "复制模板名称"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:143
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "您真的想要删除模板 <b>%1</b>吗？"
 
-#: templatemanagementdialog.cpp:142
+#: templatemanagementdialog.cpp:144
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "删除模板"
 
-#: templatemanagementdialog.cpp:176
+#: templatemanagementdialog.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1474,7 +1474,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:178
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

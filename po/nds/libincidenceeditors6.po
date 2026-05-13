@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-05-13 00:46+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1560,46 +1560,46 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "%1-Vörlagen plegen"
 
-#: templatemanagementdialog.cpp:95
+#: templatemanagementdialog.cpp:97
 #, kde-format
 msgid "Template Name"
 msgstr "Vörlaagnaam"
 
-#: templatemanagementdialog.cpp:96
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Giff bitte en Naam för de niege Vörlaag in:"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:100
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nieg %1-Vörlaag"
 
-#: templatemanagementdialog.cpp:106
+#: templatemanagementdialog.cpp:108
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Dat gifft al en Vörlaag mit dissen Naam, wullt Du ehr överschrieven?"
 
-#: templatemanagementdialog.cpp:107
+#: templatemanagementdialog.cpp:109
 #, fuzzy, kde-format
 #| msgid "Duplicate Template Name"
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Dubbelt Vörlaagnaam"
 
-#: templatemanagementdialog.cpp:141
+#: templatemanagementdialog.cpp:143
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Wullt Du de Vörlaag <b>%1</b> redig wegmaken?"
 
-#: templatemanagementdialog.cpp:142
+#: templatemanagementdialog.cpp:144
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Vörlaag wegmaken"
 
-#: templatemanagementdialog.cpp:176
+#: templatemanagementdialog.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1607,7 +1607,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:178
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"
