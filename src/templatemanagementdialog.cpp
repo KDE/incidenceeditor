@@ -48,6 +48,7 @@ TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStrin
     widget->setObjectName("template_management_dialog_base"_L1);
     m_base.setupUi(widget);
 
+    m_templates.sort();
     m_templatesSave = m_templates;
     m_base.m_listBox->addItems(m_templates);
     m_base.m_listBox->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -118,6 +119,7 @@ void TemplateManagementDialog::slotAddTemplate()
     if (!duplicate) {
         int const count = m_base.m_listBox->count();
         m_templates.append(newTemplate);
+        m_templates.sort();
         m_base.m_listBox->addItem(newTemplate);
         QListWidgetItem *item = m_base.m_listBox->item(count);
         item->setSelected(true);
@@ -151,6 +153,7 @@ void TemplateManagementDialog::slotRemoveTemplate()
     int const current = m_base.m_listBox->row(item);
 
     m_templates.removeAll(item->text());
+    m_templates.sort();
     m_base.m_listBox->takeItem(current);
     QListWidgetItem *newItem = m_base.m_listBox->item(qMax(current - 1, 0));
     if (newItem) {
