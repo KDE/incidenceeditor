@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-05-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-17 10:20+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1456,44 +1456,44 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Správa %1 šablon"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Template Name"
 msgstr "Název šablony"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:99
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Zadejte prosím název pro novou šablonu:"
 
-#: templatemanagementdialog.cpp:100
+#: templatemanagementdialog.cpp:101
 #, kde-format
 msgid "New %1 Template"
 msgstr "Nová šablona %1"
 
-#: templatemanagementdialog.cpp:108
+#: templatemanagementdialog.cpp:109
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Šablona zadaného jména již existuje. Přepsat?"
 
-#: templatemanagementdialog.cpp:109
+#: templatemanagementdialog.cpp:110
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Duplikovat název šablony"
 
-#: templatemanagementdialog.cpp:143
+#: templatemanagementdialog.cpp:145
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "<qt>Opravdu si přejete smazat šablonu <b>%1</b>?</qt>"
 
-#: templatemanagementdialog.cpp:144
+#: templatemanagementdialog.cpp:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Odstranit šablonu"
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1501,7 +1501,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:178
+#: templatemanagementdialog.cpp:181
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:46+0000\n"
+"POT-Creation-Date: 2026-05-19 00:45+0000\n"
 "PO-Revision-Date: 2026-03-19 20:57+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1473,44 +1473,44 @@ msgctxt "@title:window"
 msgid "Manage %1 Templates"
 msgstr "Kudeatu %1 txantiloiak"
 
-#: templatemanagementdialog.cpp:97
+#: templatemanagementdialog.cpp:98
 #, kde-format
 msgid "Template Name"
 msgstr "Txantiloiaren izena"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:99
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "Mesedez, sartu txantiloi berriarentzako izan bat:"
 
-#: templatemanagementdialog.cpp:100
+#: templatemanagementdialog.cpp:101
 #, kde-format
 msgid "New %1 Template"
 msgstr "%1 txantiloi berria"
 
-#: templatemanagementdialog.cpp:108
+#: templatemanagementdialog.cpp:109
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "Izen hori duen txantiloi bat dago, gainidatzi nahi duzu?"
 
-#: templatemanagementdialog.cpp:109
+#: templatemanagementdialog.cpp:110
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr "Bikoiztutako txantiloi izena"
 
-#: templatemanagementdialog.cpp:143
+#: templatemanagementdialog.cpp:145
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr "Ziur zaude <b>%1</b> txantiloia kendu nahi duzula?"
 
-#: templatemanagementdialog.cpp:144
+#: templatemanagementdialog.cpp:146
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Kendu txantiloia"
 
-#: templatemanagementdialog.cpp:177
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1518,7 +1518,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:178
+#: templatemanagementdialog.cpp:181
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"
