@@ -153,7 +153,6 @@ void TemplateManagementDialog::slotRemoveTemplate()
     int const current = m_base.m_listBox->row(item);
 
     m_templates.removeAll(item->text());
-    m_templates.sort();
     m_base.m_listBox->takeItem(current);
     QListWidgetItem *newItem = m_base.m_listBox->item(qMax(current - 1, 0));
     if (newItem) {
