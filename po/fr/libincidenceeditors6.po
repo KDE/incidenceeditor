@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2026-05-09 18:01+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -1521,7 +1521,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Supprimer le modèle"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1531,7 +1531,7 @@ msgstr ""
 "L'application du modèle écrasera les modifications que vous avez apportées à "
 "cette récurrence. Voulez-vous vraiment appliquer le modèle ?"
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

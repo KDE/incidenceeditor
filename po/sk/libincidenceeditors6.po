@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1520,7 +1520,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Odstrániť šablónu"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1530,7 +1530,7 @@ msgstr ""
 "Použitím šablóny prepíšete zmeny, ktoré ste vykonali v tejto udalosti. "
 "Naozaj chcete šablónu použiť?"
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

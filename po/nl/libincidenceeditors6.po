@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2026-05-08 15:18+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1508,7 +1508,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Sjabloon verwijderen"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1519,7 +1519,7 @@ msgstr ""
 "hebt aangebracht, overschreven. Weet u zeker dat u het sjabloon wilt "
 "toepassen?"
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

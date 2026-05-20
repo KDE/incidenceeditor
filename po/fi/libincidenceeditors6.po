@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2026-01-12 14:39+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1521,7 +1521,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Poista mallipohja"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1529,7 +1529,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"

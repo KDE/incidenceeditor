@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2026-05-08 11:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1513,7 +1513,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Remove patrono"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1523,7 +1523,7 @@ msgstr ""
 "Applicar le patrono superscribera le modificationes que tu ha facite  a iste "
 "incidentia. Es tu secur que tu vole applicar le patrono?"
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"

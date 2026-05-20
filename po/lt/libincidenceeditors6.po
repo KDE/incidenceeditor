@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:45+0000\n"
+"POT-Creation-Date: 2026-05-20 00:45+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1617,7 +1617,7 @@ msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "Pašalinti šabloną"
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1625,7 +1625,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:181
+#: templatemanagementdialog.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remove Template"
 msgctxt "@title:window"
