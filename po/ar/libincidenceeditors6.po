@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-20 00:45+0000\n"
-"PO-Revision-Date: 2026-04-30 09:04+0400\n"
+"PO-Revision-Date: 2026-05-21 11:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -973,11 +973,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "لا يحتوي القالب على حدوث صالح."
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "قالب %1 جديد"
+msgstr "جديد من القالب: %1"
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1570,13 +1569,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"تطبيق القالب سيتجاوز التغييرات التي أجريتها على هذه الحالة. هل أنت متأكد أنك "
+"تريد تطبيق القالب؟"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "قالب %1 جديد"
+msgstr "طبّق قالبًا"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
