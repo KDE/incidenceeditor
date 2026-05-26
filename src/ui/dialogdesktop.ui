@@ -47,13 +47,13 @@
         </sizepolicy>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="text">
         <string comment="@label:listbox The calendar to which the todo or event must be added">Calen&amp;dar:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -94,7 +94,7 @@
            <string comment="@action:button Accept an invitation">Accept</string>
           </property>
           <property name="icon">
-		  <iconset theme="dialog-ok"/>
+           <iconset theme="dialog-ok"/>
           </property>
          </widget>
         </item>
@@ -104,15 +104,14 @@
            <string comment="@action:button decline an invitation">Decline</string>
           </property>
           <property name="icon">
-		  <iconset theme="dialog-cancel"/>
-            
+           <iconset theme="dialog-cancel"/>
           </property>
          </widget>
         </item>
         <item>
          <spacer name="horizontalSpacer_13">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Orientation::Horizontal</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -140,13 +139,13 @@
         <string comment="@info:whatsthis">Sets brief information that will be displayed in many places in the user interface.</string>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="text">
         <string comment="@label">Summar&amp;y:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="buddy">
         <cstring>mSummaryEdit</cstring>
@@ -181,13 +180,13 @@
         </sizepolicy>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="text">
         <string comment="@label">&amp;Location:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="buddy">
         <cstring>mLocationEdit</cstring>
@@ -216,7 +215,7 @@
      <item row="4" column="0" colspan="2">
       <widget class="Line" name="line">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
       </widget>
      </item>
@@ -226,7 +225,7 @@
         <string comment="@label line containing to-do specific ui controls">Completion:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -257,10 +256,10 @@
            <bool>true</bool>
           </property>
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Orientation::Horizontal</enum>
           </property>
           <property name="tickPosition">
-           <enum>QSlider::TicksBelow</enum>
+           <enum>QSlider::TickPosition::TicksBelow</enum>
           </property>
           <property name="tickInterval">
            <number>10</number>
@@ -371,10 +370,10 @@
        <item>
         <spacer name="horizontalSpacer_7">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Policy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -394,7 +393,7 @@
        <item>
         <spacer name="horizontalSpacer_12">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -415,13 +414,13 @@
         </sizepolicy>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="text">
         <string comment="@label Start date/time of the event or todo">S&amp;tart:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="buddy">
         <cstring>mStartDateEdit</cstring>
@@ -502,17 +501,17 @@
           <string comment="@action">&lt;a href=&quot;hide&quot;&gt;&amp;lt;&amp;lt; Time zones&lt;/a&gt;</string>
          </property>
          <property name="textFormat">
-          <enum>Qt::RichText</enum>
+          <enum>Qt::TextFormat::RichText</enum>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
          </property>
         </widget>
        </item>
        <item>
         <spacer name="horizontalSpacer_2">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -533,13 +532,13 @@
         </sizepolicy>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
        </property>
        <property name="text">
         <string comment="@label end date/time for an event or to-do">E&amp;nd:</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
        <property name="buddy">
         <cstring>mEndDateEdit</cstring>
@@ -603,7 +602,7 @@
        <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -618,7 +617,7 @@
      <item row="11" column="0" colspan="2">
       <widget class="Line" name="line_2">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
       </widget>
      </item>
@@ -636,7 +635,14 @@
         </attribute>
         <layout class="QGridLayout" name="gridLayout_9">
          <item row="2" column="1">
-          <widget class="Akonadi::TagWidget" name="mTagWidget" native="true"/>
+          <widget class="Akonadi::TagWidget" name="mTagWidget" native="true">
+           <property name="toolTip">
+            <string>Select and manage tags</string>
+           </property>
+           <property name="whatsThis">
+            <string>Open a dialog that allows selecting as well as adding and removing tags</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="2">
           <widget class="QLabel" name="mSecrecyLabel">
@@ -656,7 +662,7 @@
             <string comment="@label:listbox sets the privacy option of the event or to-do">Access:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -677,14 +683,14 @@
               <string comment="@label">&lt;a href=\&quot;hide\&quot;&gt;Rich text &amp;gt;&amp;gt;&lt;/a&gt;</string>
              </property>
              <property name="textFormat">
-              <enum>Qt::RichText</enum>
+              <enum>Qt::TextFormat::RichText</enum>
              </property>
             </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_9">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -720,7 +726,7 @@
           </widget>
          </item>
          <item row="1" column="0" colspan="4">
-          <widget class="KPIMTextEdit::RichTextComposerWidget" name="mDescriptionEdit"/>
+          <widget class="KPIMTextEdit::RichTextComposerWidget" name="mDescriptionEdit" native="true"/>
          </item>
         </layout>
        </widget>
@@ -735,7 +741,7 @@
             <string comment="@label:listbox">Meeting organizer:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -811,7 +817,7 @@
             <string comment="@label participants of this event or to-do">Participants:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -840,7 +846,7 @@
            <item>
             <spacer name="horizontalSpacer_5">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -872,8 +878,7 @@
               <string comment="@action:button">Select Attendees…</string>
              </property>
              <property name="icon">
-		     <iconset theme="select"/>
-               
+              <iconset theme="select"/>
              </property>
             </widget>
            </item>
@@ -885,7 +890,7 @@
             <string>Privacy:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -916,7 +921,7 @@
          <item row="3" column="0" colspan="2">
           <widget class="QTableView" name="mAttendeeTable">
            <property name="editTriggers">
-            <set>QAbstractItemView::AllEditTriggers</set>
+            <set>QAbstractItemView::EditTrigger::AllEditTriggers</set>
            </property>
            <attribute name="verticalHeaderVisible">
             <bool>false</bool>
@@ -933,13 +938,13 @@
          <item row="0" column="0">
           <widget class="QTableView" name="mResourcesTable">
            <property name="editTriggers">
-            <set>QAbstractItemView::AllEditTriggers</set>
+            <set>QAbstractItemView::EditTrigger::AllEditTriggers</set>
            </property>
            <property name="showGrid">
             <bool>true</bool>
            </property>
            <property name="gridStyle">
-            <enum>Qt::SolidLine</enum>
+            <enum>Qt::PenStyle::SolidLine</enum>
            </property>
            <property name="wordWrap">
             <bool>false</bool>
@@ -980,10 +985,10 @@
            <item>
             <spacer name="horizontalSpacer_14">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeType">
-              <enum>QSizePolicy::Preferred</enum>
+              <enum>QSizePolicy::Policy::Preferred</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -999,8 +1004,7 @@
               <string>Find Resources…</string>
              </property>
              <property name="icon">
-		     <iconset theme="search"/>
-               
+              <iconset theme="search"/>
              </property>
             </widget>
            </item>
@@ -1048,15 +1052,14 @@
             <string comment="@action:button Adds an reminder">Add</string>
            </property>
            <property name="icon">
-		   <iconset theme="list-add"/>
-             
+            <iconset theme="list-add"/>
            </property>
           </widget>
          </item>
          <item row="0" column="3">
           <spacer name="horizontalSpacer_3">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1069,7 +1072,7 @@
          <item row="1" column="0" rowspan="5" colspan="4">
           <widget class="QListWidget" name="mAlarmList">
            <property name="editTriggers">
-            <set>QAbstractItemView::NoEditTriggers</set>
+            <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
            </property>
           </widget>
          </item>
@@ -1079,8 +1082,7 @@
             <string comment="@action:button create a new reminder">New</string>
            </property>
            <property name="icon">
-		   <iconset theme="entry-new"/>
-             
+            <iconset theme="entry-new"/>
            </property>
           </widget>
          </item>
@@ -1090,8 +1092,7 @@
             <string comment="@action:button modify the selected reminder">Modify</string>
            </property>
            <property name="icon">
-		   <iconset theme="entry-edit"/>
-             
+            <iconset theme="entry-edit"/>
            </property>
           </widget>
          </item>
@@ -1108,15 +1109,14 @@
             <string comment="@action:button removes selected reminders">Remove</string>
            </property>
            <property name="icon">
-		   <iconset theme="list-remove"/>
-             
+            <iconset theme="list-remove"/>
            </property>
           </widget>
          </item>
          <item row="5" column="4">
           <spacer name="verticalSpacer">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1145,7 +1145,7 @@
             <string comment="@label whether or not this event or to-do repeats">Repeats:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -1241,7 +1241,7 @@
            <item>
             <spacer name="horizontalSpacer_10">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -1304,7 +1304,7 @@
                 </sizepolicy>
                </property>
                <property name="sizeAdjustPolicy">
-                <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+                <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
                </property>
               </widget>
              </item>
@@ -1333,14 +1333,14 @@
                 </sizepolicy>
                </property>
                <property name="sizeAdjustPolicy">
-                <enum>QComboBox::AdjustToContents</enum>
+                <enum>QComboBox::SizeAdjustPolicy::AdjustToContents</enum>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
               <spacer name="horizontalSpacer_11">
                <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -1375,14 +1375,14 @@
                 </sizepolicy>
                </property>
                <property name="sizeAdjustPolicy">
-                <enum>QComboBox::AdjustToContents</enum>
+                <enum>QComboBox::SizeAdjustPolicy::AdjustToContents</enum>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
               <spacer name="horizontalSpacer_8">
                <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -1408,7 +1408,7 @@
             <string comment="@label recurrence ends on|after">Ends:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -1499,7 +1499,7 @@
                <item row="0" column="1">
                 <spacer name="horizontalSpacer_6">
                  <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
+                  <enum>Qt::Orientation::Horizontal</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -1569,7 +1569,7 @@
             <string comment="@label exceptions for the recurrence">Exceptions:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -1594,15 +1594,14 @@
               <string comment="@action:button adds an exception on the recurrence">Add</string>
              </property>
              <property name="icon">
-		     <iconset theme="list-add"/>
-               
+              <iconset theme="list-add"/>
              </property>
             </widget>
            </item>
            <item>
             <spacer name="horizontalSpacer_4">
              <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+              <enum>Qt::Orientation::Horizontal</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -1623,7 +1622,7 @@
             </sizepolicy>
            </property>
            <property name="selectionMode">
-            <enum>QAbstractItemView::ExtendedSelection</enum>
+            <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
            </property>
           </widget>
          </item>
@@ -1633,7 +1632,7 @@
             <string comment="@label The event ends on [different options]">on:</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -1648,15 +1647,14 @@
               <string comment="@action:button removes an exception">Remove</string>
              </property>
              <property name="icon">
-		     <iconset theme="list-remove"/>
-               
+              <iconset theme="list-remove"/>
              </property>
             </widget>
            </item>
            <item>
             <spacer name="verticalSpacer_5">
              <property name="orientation">
-              <enum>Qt::Vertical</enum>
+              <enum>Qt::Orientation::Vertical</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -1703,8 +1701,7 @@
             <string comment="@action:button adds an attachment">Add</string>
            </property>
            <property name="icon">
-		   <iconset theme="list-add"/>
-             
+            <iconset theme="list-add"/>
            </property>
           </widget>
          </item>
@@ -1729,15 +1726,14 @@
             <string comment="@action:button remove an attachment">Remove</string>
            </property>
            <property name="icon">
-		   <iconset theme="list-remove"/>
-             
+            <iconset theme="list-remove"/>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
           <spacer name="verticalSpacer_4">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1756,7 +1752,7 @@
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="standardButtons">
-      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok|QDialogButtonBox::RestoreDefaults</set>
+      <set>QDialogButtonBox::StandardButton::Apply|QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok|QDialogButtonBox::StandardButton::RestoreDefaults</set>
      </property>
     </widget>
    </item>
@@ -1774,16 +1770,6 @@
    <header>klineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>KPIM::KCheckComboBox</class>
-   <extends>KComboBox</extends>
-   <header>Libkdepim/KCheckComboBox</header>
-  </customwidget>
-  <customwidget>
-   <class>KPIMTextEdit::RichTextComposerWidget</class>
-   <extends>QWidget</extends>
-   <header>kpimtextedit/richtextcomposerwidget.h</header>
-  </customwidget>
-  <customwidget>
    <class>KDateComboBox</class>
    <extends>QComboBox</extends>
    <header>kdatecombobox.h</header>
@@ -1798,6 +1784,16 @@
    <class>KTimeComboBox</class>
    <extends>QComboBox</extends>
    <header>ktimecombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPIM::KCheckComboBox</class>
+   <extends>KComboBox</extends>
+   <header>Libkdepim/KCheckComboBox</header>
+  </customwidget>
+  <customwidget>
+   <class>KPIMTextEdit::RichTextComposerWidget</class>
+   <extends>QWidget</extends>
+   <header>kpimtextedit/richtextcomposerwidget.h</header>
   </customwidget>
   <customwidget>
    <class>IncidenceEditorNG::KWeekdayCheckCombo</class>
