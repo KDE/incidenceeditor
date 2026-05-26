@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-20 00:45+0000\n"
-"PO-Revision-Date: 2026-04-26 21:47+0200\n"
+"PO-Revision-Date: 2026-05-25 19:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -341,7 +341,7 @@ msgstr "정보의 위치를 입력하십시오."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google은 최대 5회까지만 알림을 허용함"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -531,6 +531,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google은 최대 5회까지만 알림을 허용합니다. 계속 진행하기 전에 일부 알림을 삭"
+"제하십시오."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -924,11 +926,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "템플릿에 올바른 항목이 없습니다."
 
 #: incidencedialog.cpp:340
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "새 %1 템플릿"
+msgstr "템플릿에서 새로 만들기: %1"
 
 #: incidencedialog.cpp:433
 #, kde-format
@@ -1488,13 +1489,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"템플릿을 적용하면 이 반복 항목에 대한 변경 사항을 덮어씁니다. 계속 진행하시겠"
+"습니까?"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "새 %1 템플릿"
+msgstr "템플릿 적용"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
