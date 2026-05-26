@@ -637,7 +637,7 @@
          <item row="2" column="1">
           <widget class="Akonadi::TagWidget" name="mTagWidget" native="true">
            <property name="toolTip">
-            <string>Select and manage tags</string>
+            <string>Click here to add, select and manage tags</string>
            </property>
            <property name="whatsThis">
             <string>Open a dialog that allows selecting as well as adding and removing tags</string>
