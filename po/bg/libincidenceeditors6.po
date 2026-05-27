@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 00:46+0000\n"
 "PO-Revision-Date: 2026-04-03 02:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1926,7 +1926,7 @@ msgstr "Отказване"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
+#: ui/dialogdesktop.ui:136 ui/dialogdesktop.ui:164
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
@@ -1934,7 +1934,7 @@ msgstr "Задаване на описанието"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:140 ui/dialogdesktop.ui:168
+#: ui/dialogdesktop.ui:139 ui/dialogdesktop.ui:167
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1945,126 +1945,126 @@ msgstr ""
 "потребителския интерфейс."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/dialogdesktop.ui:146
+#: ui/dialogdesktop.ui:145
 #, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
 msgstr "Опис&ание:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
-#: ui/dialogdesktop.ui:187
+#: ui/dialogdesktop.ui:186
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
 msgstr "&Местоположение:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:206
+#: ui/dialogdesktop.ui:205
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
 msgstr "Задаване на местоположението"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:209
+#: ui/dialogdesktop.ui:208
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
 msgstr "Задава къде да се проведе събитието или задачата."
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
-#: ui/dialogdesktop.ui:226
+#: ui/dialogdesktop.ui:225
 #, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
 msgstr "Завършване:"
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
-#: ui/dialogdesktop.ui:279
+#: ui/dialogdesktop.ui:278
 #, kde-format
 msgctxt "@label:slider Showed after the to-do percentage completed slider"
 msgid "completed"
 msgstr "завършен"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ui/dialogdesktop.ui:286
+#: ui/dialogdesktop.ui:285
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
 msgstr "Приоритет:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:297
+#: ui/dialogdesktop.ui:296
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "unspecified"
 msgstr "неопределен"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:302
+#: ui/dialogdesktop.ui:301
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
 msgstr "1 (най-висок)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:307
+#: ui/dialogdesktop.ui:306
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
 msgstr "2"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:312
+#: ui/dialogdesktop.ui:311
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
 msgstr "3"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:317
+#: ui/dialogdesktop.ui:316
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
 msgstr "4"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:322
+#: ui/dialogdesktop.ui:321
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
 msgstr "5 (среден)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:327
+#: ui/dialogdesktop.ui:326
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
 msgstr "6"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:332
+#: ui/dialogdesktop.ui:331
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
 msgstr "7"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:337
+#: ui/dialogdesktop.ui:336
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
 msgstr "8"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:342
+#: ui/dialogdesktop.ui:341
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
 msgstr "9 (най-нисък)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:361
+#: ui/dialogdesktop.ui:360
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2074,42 +2074,42 @@ msgstr ""
 "часове."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:364
+#: ui/dialogdesktop.ui:363
 #, kde-format
 msgctxt "@option:check"
 msgid "All Day"
 msgstr "През целия ден"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
-#: ui/dialogdesktop.ui:390
+#: ui/dialogdesktop.ui:389
 #, kde-format
 msgctxt "@option:check"
 msgid "Blocks me for other events"
 msgstr "Блокира ме за други събития"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
-#: ui/dialogdesktop.ui:421
+#: ui/dialogdesktop.ui:420
 #, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
 msgstr "&Начало:"
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:449
+#: ui/dialogdesktop.ui:448
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the start date"
 msgstr "Задаване на начална дата"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:452
+#: ui/dialogdesktop.ui:451
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
 msgstr "Задава началната дата за тази задача"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
-#: ui/dialogdesktop.ui:468
+#: ui/dialogdesktop.ui:467
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
@@ -2117,50 +2117,62 @@ msgstr "Задава началния час за това."
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
-#: ui/dialogdesktop.ui:484 ui/dialogdesktop.ui:599
+#: ui/dialogdesktop.ui:483 ui/dialogdesktop.ui:598
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr "Изберете часовата зона за това събитие. То ще повлияе и на повторения"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
-#: ui/dialogdesktop.ui:502
+#: ui/dialogdesktop.ui:501
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
 msgstr "<a href=\"hide\"> &lt; &lt; Часови зони </a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
-#: ui/dialogdesktop.ui:539
+#: ui/dialogdesktop.ui:538
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
 msgstr "Край:"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
-#: ui/dialogdesktop.ui:567
+#: ui/dialogdesktop.ui:566
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
 msgstr "Задава датата за крайния срок на изпълнение на задачата."
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
-#: ui/dialogdesktop.ui:583
+#: ui/dialogdesktop.ui:582
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
 msgstr "Задава часа за крайния срок на изпълнение на задачата."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
-#: ui/dialogdesktop.ui:635
+#: ui/dialogdesktop.ui:634
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
 msgstr "Общи"
 
+#. i18n: ectx: property (toolTip), widget (Akonadi::TagWidget, mTagWidget)
+#: ui/dialogdesktop.ui:640
+#, kde-format
+msgid "Click here to add, select and manage tags"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
+#: ui/dialogdesktop.ui:643
+#, kde-format
+msgid "Open a dialog that allows selecting as well as adding and removing tags"
+msgstr ""
+
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:650 ui/dialogdesktop.ui:715
+#: ui/dialogdesktop.ui:656 ui/dialogdesktop.ui:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
@@ -2168,7 +2180,7 @@ msgstr "Задаване на ниво на секретност"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:653 ui/dialogdesktop.ui:718
+#: ui/dialogdesktop.ui:659 ui/dialogdesktop.ui:724
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2184,49 +2196,49 @@ msgstr ""
 "може да бъде видимо за другите."
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
-#: ui/dialogdesktop.ui:656
+#: ui/dialogdesktop.ui:662
 #, kde-format
 msgctxt "@label:listbox sets the privacy option of the event or to-do"
 msgid "Access:"
 msgstr "Достъп:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
-#: ui/dialogdesktop.ui:677
+#: ui/dialogdesktop.ui:683
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
 msgstr "<a href=\\\"hide\\\">Форматиран текст &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
-#: ui/dialogdesktop.ui:708
+#: ui/dialogdesktop.ui:714
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
 msgstr "Етикети:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
-#: ui/dialogdesktop.ui:729
+#: ui/dialogdesktop.ui:735
 #, kde-format
 msgctxt "@title:tab attendees of this event or to-do"
 msgid "Attendees"
 msgstr "Участници"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ui/dialogdesktop.ui:735
+#: ui/dialogdesktop.ui:741
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
 msgstr "Организатор на срещата:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:776
+#: ui/dialogdesktop.ui:782
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
 msgstr "Задаване на самоличност на организатора"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:779
+#: ui/dialogdesktop.ui:785
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2241,21 +2253,21 @@ msgstr ""
 "настройките на KMail и от адресната ви книга."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ui/dialogdesktop.ui:811
+#: ui/dialogdesktop.ui:817
 #, kde-format
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
 msgstr "Участници:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:830
+#: ui/dialogdesktop.ui:836
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
 msgstr "Насрочете срещата с участниците."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:833
+#: ui/dialogdesktop.ui:839
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2266,27 +2278,27 @@ msgstr ""
 "времеви интервал, който работи за всички участници."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:836
+#: ui/dialogdesktop.ui:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
 msgstr "График…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
-#: ui/dialogdesktop.ui:859
+#: ui/dialogdesktop.ui:865
 #, kde-format
 msgid "Substitute with group members"
 msgstr "Заместване с членове на групата"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:866
+#: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
 msgstr "Изберете участници от вашата адресна книга."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:869
+#: ui/dialogdesktop.ui:875
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
@@ -2295,92 +2307,92 @@ msgstr ""
 "нея."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:872
+#: ui/dialogdesktop.ui:878
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
 msgstr "Избор на участници…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ui/dialogdesktop.ui:885
+#: ui/dialogdesktop.ui:890
 #, kde-format
 msgid "Privacy:"
 msgstr "Защита на личните данни:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
-#: ui/dialogdesktop.ui:897
+#: ui/dialogdesktop.ui:902
 #, kde-format
 msgid "Sign Invitation Email"
 msgstr "Подписване на е–поща с покана"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
-#: ui/dialogdesktop.ui:907
+#: ui/dialogdesktop.ui:912
 #, kde-format
 msgid "Encrypt Invitation Email"
 msgstr "Шифроване на е–поща с покана"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
-#: ui/dialogdesktop.ui:930
+#: ui/dialogdesktop.ui:935
 #, kde-format
 msgid "Resources"
 msgstr "Ресурси"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
-#: ui/dialogdesktop.ui:970
+#: ui/dialogdesktop.ui:975
 #, kde-format
 msgid "Book Resource"
 msgstr "Книжен ресурс"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
-#: ui/dialogdesktop.ui:999
+#: ui/dialogdesktop.ui:1004
 #, kde-format
 msgid "Find Resources…"
 msgstr "Намиране на ресурси…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
-#: ui/dialogdesktop.ui:1013
+#: ui/dialogdesktop.ui:1017
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
 msgstr "Напомняне"
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
-#: ui/dialogdesktop.ui:1025
+#: ui/dialogdesktop.ui:1029
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
 msgstr "Добавяне на напомняне по подразбиране:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
-#: ui/dialogdesktop.ui:1048
+#: ui/dialogdesktop.ui:1052
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
 msgstr "Добавяне"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: ui/dialogdesktop.ui:1079
+#: ui/dialogdesktop.ui:1082
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "&Добавяне"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: ui/dialogdesktop.ui:1090
+#: ui/dialogdesktop.ui:1092
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
 msgstr "Промяна"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: ui/dialogdesktop.ui:1101
+#: ui/dialogdesktop.ui:1102
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
 msgstr "Деактивиране"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
-#: ui/dialogdesktop.ui:1108
+#: ui/dialogdesktop.ui:1109
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
@@ -2512,35 +2524,35 @@ msgid "Add"
 msgstr "Добавяне"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
-#: ui/dialogdesktop.ui:1633
+#: ui/dialogdesktop.ui:1632
 #, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
 msgstr "на:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
-#: ui/dialogdesktop.ui:1648
+#: ui/dialogdesktop.ui:1647
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
 msgstr "Изтриване"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
-#: ui/dialogdesktop.ui:1675
+#: ui/dialogdesktop.ui:1673
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
 msgstr "Прикачени файлове"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1697
+#: ui/dialogdesktop.ui:1695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr "Добавяне на прикачен файл"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1700
+#: ui/dialogdesktop.ui:1698
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2551,21 +2563,21 @@ msgstr ""
 "добави към това събитие или задача като връзка или като вградени данни."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1703
+#: ui/dialogdesktop.ui:1701
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
 msgstr "Добавяне"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1723
+#: ui/dialogdesktop.ui:1720
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr "Премахване на избрания прикачен файл"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1726
+#: ui/dialogdesktop.ui:1723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2574,7 +2586,7 @@ msgstr ""
 "Премахва прикачения файл, избран в горния списък, от това събитие или задача."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1729
+#: ui/dialogdesktop.ui:1726
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"

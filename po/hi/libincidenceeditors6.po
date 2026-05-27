@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -1907,7 +1907,7 @@ msgstr "गिरावट"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:137 ui/dialogdesktop.ui:165
+#: ui/dialogdesktop.ui:136 ui/dialogdesktop.ui:164
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
@@ -1915,7 +1915,7 @@ msgstr "सारांश सेट करें"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
-#: ui/dialogdesktop.ui:140 ui/dialogdesktop.ui:168
+#: ui/dialogdesktop.ui:139 ui/dialogdesktop.ui:167
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1925,126 +1925,126 @@ msgstr ""
 "संक्षिप्त जानकारी सेट करता है जो उपयोगकर्ता इंटरफ़ेस में कई स्थानों पर प्रदर्शित की जाएगी।"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/dialogdesktop.ui:146
+#: ui/dialogdesktop.ui:145
 #, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
 msgstr "सारांश:"
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
-#: ui/dialogdesktop.ui:187
+#: ui/dialogdesktop.ui:186
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
 msgstr "&जगह:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:206
+#: ui/dialogdesktop.ui:205
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
 msgstr "स्थान निर्धारित करें"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
-#: ui/dialogdesktop.ui:209
+#: ui/dialogdesktop.ui:208
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
 msgstr "यह निर्धारित करता है कि कार्यक्रम या कार्य कहाँ होगा।"
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
-#: ui/dialogdesktop.ui:226
+#: ui/dialogdesktop.ui:225
 #, kde-format
 msgctxt "@label line containing to-do specific ui controls"
 msgid "Completion:"
 msgstr "समापन:"
 
 #. i18n: ectx: property (text), widget (QLabel, mCompletedLabel)
-#: ui/dialogdesktop.ui:279
+#: ui/dialogdesktop.ui:278
 #, kde-format
 msgctxt "@label:slider Showed after the to-do percentage completed slider"
 msgid "completed"
 msgstr "पुरा होना"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ui/dialogdesktop.ui:286
+#: ui/dialogdesktop.ui:285
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
 msgstr "प्राथमिकता:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:297
+#: ui/dialogdesktop.ui:296
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "unspecified"
 msgstr "अनिर्दिष्ट"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:302
+#: ui/dialogdesktop.ui:301
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "1 (highest)"
 msgstr "1 (उच्चतम)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:307
+#: ui/dialogdesktop.ui:306
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "2"
 msgstr "2"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:312
+#: ui/dialogdesktop.ui:311
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "3"
 msgstr "3"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:317
+#: ui/dialogdesktop.ui:316
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "4"
 msgstr "4"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:322
+#: ui/dialogdesktop.ui:321
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "5 (medium)"
 msgstr "5 (मध्यम)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:327
+#: ui/dialogdesktop.ui:326
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
 msgstr "6"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:332
+#: ui/dialogdesktop.ui:331
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "7"
 msgstr "7"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:337
+#: ui/dialogdesktop.ui:336
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
 msgstr "8"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
-#: ui/dialogdesktop.ui:342
+#: ui/dialogdesktop.ui:341
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "9 (lowest)"
 msgstr "9 (सबसे कम)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:361
+#: ui/dialogdesktop.ui:360
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2052,42 +2052,42 @@ msgid ""
 msgstr "निर्धारित करें कि क्या इस कार्य की आरंभिक और नियत तिथियों के साथ समय संबद्ध है।"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mWholeDayCheck)
-#: ui/dialogdesktop.ui:364
+#: ui/dialogdesktop.ui:363
 #, kde-format
 msgctxt "@option:check"
 msgid "All Day"
 msgstr "पूरे दिन"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mFreeBusyCheck)
-#: ui/dialogdesktop.ui:390
+#: ui/dialogdesktop.ui:389
 #, kde-format
 msgctxt "@option:check"
 msgid "Blocks me for other events"
 msgstr "मुझे अन्य ईवेंट के लिए ब्लॉक करता है"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
-#: ui/dialogdesktop.ui:421
+#: ui/dialogdesktop.ui:420
 #, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
 msgstr "अनुसूचित जनजाति:"
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:449
+#: ui/dialogdesktop.ui:448
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the start date"
 msgstr "आरंभ तिथि निर्धारित करें"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
-#: ui/dialogdesktop.ui:452
+#: ui/dialogdesktop.ui:451
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
 msgstr "इस कार्य के लिए आरंभ तिथि निर्धारित करता है"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
-#: ui/dialogdesktop.ui:468
+#: ui/dialogdesktop.ui:467
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
@@ -2095,50 +2095,62 @@ msgstr "इस कार्य के लिए आरंभ समय निर
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
-#: ui/dialogdesktop.ui:484 ui/dialogdesktop.ui:599
+#: ui/dialogdesktop.ui:483 ui/dialogdesktop.ui:598
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr "इस इवेंट के लिए समय क्षेत्र चुनें। यह पुनरावृत्तियों को भी प्रभावित करेगा"
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
-#: ui/dialogdesktop.ui:502
+#: ui/dialogdesktop.ui:501
 #, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
 msgstr "<a href=\"hide\">&lt;&lt; समय क्षेत्र</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
-#: ui/dialogdesktop.ui:539
+#: ui/dialogdesktop.ui:538
 #, kde-format
 msgctxt "@label end date/time for an event or to-do"
 msgid "E&nd:"
 msgstr "अंत:"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mEndDateEdit)
-#: ui/dialogdesktop.ui:567
+#: ui/dialogdesktop.ui:566
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due date for this to-do."
 msgstr "इस कार्य हेतु नियत तिथि निर्धारित करता है।"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mEndTimeEdit)
-#: ui/dialogdesktop.ui:583
+#: ui/dialogdesktop.ui:582
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the due time for this to-do."
 msgstr "इस कार्य के लिए नियत समय निर्धारित करता है।"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mGeneralTab)
-#: ui/dialogdesktop.ui:635
+#: ui/dialogdesktop.ui:634
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
 msgstr "सामान्य"
 
+#. i18n: ectx: property (toolTip), widget (Akonadi::TagWidget, mTagWidget)
+#: ui/dialogdesktop.ui:640
+#, kde-format
+msgid "Click here to add, select and manage tags"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
+#: ui/dialogdesktop.ui:643
+#, kde-format
+msgid "Open a dialog that allows selecting as well as adding and removing tags"
+msgstr ""
+
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:650 ui/dialogdesktop.ui:715
+#: ui/dialogdesktop.ui:656 ui/dialogdesktop.ui:721
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
@@ -2146,7 +2158,7 @@ msgstr "गोपनीयता स्तर निर्धारित कर
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
-#: ui/dialogdesktop.ui:653 ui/dialogdesktop.ui:718
+#: ui/dialogdesktop.ui:659 ui/dialogdesktop.ui:724
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2161,49 +2173,49 @@ msgstr ""
 "या टू-डू दूसरों को दिखाई दे सकते हैं।"
 
 #. i18n: ectx: property (text), widget (QLabel, mSecrecyLabel)
-#: ui/dialogdesktop.ui:656
+#: ui/dialogdesktop.ui:662
 #, kde-format
 msgctxt "@label:listbox sets the privacy option of the event or to-do"
 msgid "Access:"
 msgstr "पहुँच:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
-#: ui/dialogdesktop.ui:677
+#: ui/dialogdesktop.ui:683
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
 msgstr "<a href=\\\"hide\\\">रिच टेक्स्ट &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
-#: ui/dialogdesktop.ui:708
+#: ui/dialogdesktop.ui:714
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
 msgstr "टैग:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
-#: ui/dialogdesktop.ui:729
+#: ui/dialogdesktop.ui:735
 #, kde-format
 msgctxt "@title:tab attendees of this event or to-do"
 msgid "Attendees"
 msgstr "सहभागी"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ui/dialogdesktop.ui:735
+#: ui/dialogdesktop.ui:741
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Meeting organizer:"
 msgstr "बैठक आयोजक:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:776
+#: ui/dialogdesktop.ui:782
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the organizer identity"
 msgstr "आयोजक पहचान सेट करें"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOrganizerCombo)
-#: ui/dialogdesktop.ui:779
+#: ui/dialogdesktop.ui:785
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2217,21 +2229,21 @@ msgstr ""
 "पता पुस्तिका से एकत्रित की जाती है।"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ui/dialogdesktop.ui:811
+#: ui/dialogdesktop.ui:817
 #, kde-format
 msgctxt "@label participants of this event or to-do"
 msgid "Participants:"
 msgstr "प्रतिभागी:"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:830
+#: ui/dialogdesktop.ui:836
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
 msgstr "अपने सहभागियों के साथ बैठक का समय निर्धारित करें।"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:833
+#: ui/dialogdesktop.ui:839
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2242,119 +2254,119 @@ msgstr ""
 "करेगा।"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
-#: ui/dialogdesktop.ui:836
+#: ui/dialogdesktop.ui:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
 msgstr "अनुसूची…"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
-#: ui/dialogdesktop.ui:859
+#: ui/dialogdesktop.ui:865
 #, kde-format
 msgid "Substitute with group members"
 msgstr "समूह के सदस्यों के साथ स्थानापन्न"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:866
+#: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
 msgstr "अपनी पता पुस्तिका से उपस्थित लोगों का चयन करें।"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:869
+#: ui/dialogdesktop.ui:875
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Opens your address book, allowing you to select new attendees from it."
 msgstr "आपकी पता पुस्तिका खोलता है, जिससे आप उसमें से नए सहभागियों का चयन कर सकते हैं।"
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
-#: ui/dialogdesktop.ui:872
+#: ui/dialogdesktop.ui:878
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
 msgstr "उपस्थित लोगों का चयन करें…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ui/dialogdesktop.ui:885
+#: ui/dialogdesktop.ui:890
 #, kde-format
 msgid "Privacy:"
 msgstr "गोपनीयता:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
-#: ui/dialogdesktop.ui:897
+#: ui/dialogdesktop.ui:902
 #, kde-format
 msgid "Sign Invitation Email"
 msgstr "आमंत्रण ईमेल पर हस्ताक्षर करें"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
-#: ui/dialogdesktop.ui:907
+#: ui/dialogdesktop.ui:912
 #, kde-format
 msgid "Encrypt Invitation Email"
 msgstr "आमंत्रण ईमेल एन्क्रिप्ट करें"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mResourceTab)
-#: ui/dialogdesktop.ui:930
+#: ui/dialogdesktop.ui:935
 #, kde-format
 msgid "Resources"
 msgstr "संसाधन"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
-#: ui/dialogdesktop.ui:970
+#: ui/dialogdesktop.ui:975
 #, kde-format
 msgid "Book Resource"
 msgstr "पुस्तक संसाधन"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
-#: ui/dialogdesktop.ui:999
+#: ui/dialogdesktop.ui:1004
 #, kde-format
 msgid "Find Resources…"
 msgstr "संसाधन खोजें…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
-#: ui/dialogdesktop.ui:1013
+#: ui/dialogdesktop.ui:1017
 #, kde-format
 msgctxt "@title:tab Tab to configure reminders for events or to-do"
 msgid "Reminder"
 msgstr "अनुस्मारक"
 
 #. i18n: ectx: property (text), widget (QLabel, mQuickAddReminderLabel)
-#: ui/dialogdesktop.ui:1025
+#: ui/dialogdesktop.ui:1029
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
 msgstr "डिफ़ॉल्ट अनुस्मारक जोड़ें:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
-#: ui/dialogdesktop.ui:1048
+#: ui/dialogdesktop.ui:1052
 #, kde-format
 msgctxt "@action:button Adds an reminder"
 msgid "Add"
 msgstr "जोड़ना"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
-#: ui/dialogdesktop.ui:1079
+#: ui/dialogdesktop.ui:1082
 #, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "नया"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmConfigureButton)
-#: ui/dialogdesktop.ui:1090
+#: ui/dialogdesktop.ui:1092
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
 msgstr "संशोधित"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
-#: ui/dialogdesktop.ui:1101
+#: ui/dialogdesktop.ui:1102
 #, kde-format
 msgctxt "@action:button disables selected reminder"
 msgid "Disable"
 msgstr "अक्षम करना"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmRemoveButton)
-#: ui/dialogdesktop.ui:1108
+#: ui/dialogdesktop.ui:1109
 #, kde-format
 msgctxt "@action:button removes selected reminders"
 msgid "Remove"
@@ -2486,35 +2498,35 @@ msgid "Add"
 msgstr "जोड़ना"
 
 #. i18n: ectx: property (text), widget (QLabel, mOnLabel)
-#: ui/dialogdesktop.ui:1633
+#: ui/dialogdesktop.ui:1632
 #, kde-format
 msgctxt "@label The event ends on [different options]"
 msgid "on:"
 msgstr "पर:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mExceptionRemoveButton)
-#: ui/dialogdesktop.ui:1648
+#: ui/dialogdesktop.ui:1647
 #, kde-format
 msgctxt "@action:button removes an exception"
 msgid "Remove"
 msgstr "निकालना"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttachmentsTab)
-#: ui/dialogdesktop.ui:1675
+#: ui/dialogdesktop.ui:1673
 #, kde-format
 msgctxt "@title:tab configure attachments of an event or todo"
 msgid "Attachments"
 msgstr "संलग्नक"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1697
+#: ui/dialogdesktop.ui:1695
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add an attachment"
 msgstr "अनुलग्नक जोड़ें"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1700
+#: ui/dialogdesktop.ui:1698
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2525,21 +2537,21 @@ msgstr ""
 "उपयोग किया जाने वाला संवाद दिखाता है।"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAddButton)
-#: ui/dialogdesktop.ui:1703
+#: ui/dialogdesktop.ui:1701
 #, kde-format
 msgctxt "@action:button adds an attachment"
 msgid "Add"
 msgstr "जोड़ना"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1723
+#: ui/dialogdesktop.ui:1720
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove the selected attachment"
 msgstr "चयनित अनुलग्नक हटाएँ"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1726
+#: ui/dialogdesktop.ui:1723
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2547,7 +2559,7 @@ msgid ""
 msgstr "उपरोक्त सूची में चयनित अनुलग्नक को इस ईवेंट या कार्य से हटाता है."
 
 #. i18n: ectx: property (text), widget (QPushButton, mRemoveButton)
-#: ui/dialogdesktop.ui:1729
+#: ui/dialogdesktop.ui:1726
 #, kde-format
 msgctxt "@action:button remove an attachment"
 msgid "Remove"
