@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2026-05-08 13:05+0300\n"
+"PO-Revision-Date: 2026-05-27 12:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2158,13 +2158,15 @@ msgstr "Genel"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Künyeler eklemek, seçmek ve yönetmek için buraya tıklayın"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Künyeler eklemeye, onları seçmeye ve gerekirse kaldırmaya izin veren bir "
+"iletişim kutusu açar."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2026-05-08 09:34+0200\n"
+"PO-Revision-Date: 2026-05-27 09:04+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -2176,13 +2176,13 @@ msgstr "General"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Feu clic aquí per a afegir, seleccionar i gestionar etiquetes"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
-msgstr ""
+msgstr "Obre un diàleg que permet seleccionar, afegir i eliminar etiquetes"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)

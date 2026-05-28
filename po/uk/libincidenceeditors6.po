@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2026-05-08 07:56+0300\n"
+"PO-Revision-Date: 2026-05-27 08:05+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -2200,12 +2200,15 @@ msgstr "Загальне"
 #, kde-format
 msgid "Click here to add, select and manage tags"
 msgstr ""
+"Натисніть тут, щоб отримати доступ до додавання і вибору міток та керування "
+"мітками"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Відкрити вікно, за допомогою якого можна вибирати, додавати та вилучати мітки"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
