@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-30 16:33-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Create a new reminder"
-msgstr ""
+msgstr "يېڭى ئەسكەرتكۈچ قۇر"
 
 #: alarmdialog.cpp:69
 #, kde-format
@@ -124,18 +125,16 @@ msgid_plural "%1 days before due"
 msgstr[0] ""
 
 #: attachmenteditdialog.cpp:34
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Add Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit Attachment"
-msgstr "قوشۇلما قوش"
+msgstr ""
 
 #: attachmenteditdialog.cpp:53
 #, kde-format
 msgctxt "@label unknown mimetype"
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: attachmenteditdialog.cpp:107
 #, kde-format
@@ -198,77 +197,70 @@ msgstr ""
 #: attendeetablemodel.cpp:64
 #, kde-format
 msgid "Free"
-msgstr ""
+msgstr "بوش"
 
 #: attendeetablemodel.cpp:66
 #, kde-format
 msgid "Busy"
-msgstr ""
+msgstr "ئالدىراش"
 
 #: attendeetablemodel.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "@action:button Accept an invitation"
-#| msgid "Accept"
+#, kde-format
 msgid "Accepted"
-msgstr "قوشۇل"
+msgstr "قوشۇلغان"
 
 #: attendeetablemodel.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "@label unknown mimetype"
-#| msgid "Unknown"
+#, kde-format
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: attendeetablemodel.cpp:152
 #, kde-format
 msgctxt "vCard attendee role"
 msgid "Role"
-msgstr ""
+msgstr "رول"
 
 #: attendeetablemodel.cpp:154
 #, kde-format
 msgctxt "Attendees  (name+emailaddress)"
 msgid "Name"
-msgstr ""
+msgstr "ئاتى"
 
 #: attendeetablemodel.cpp:156
-#, fuzzy, kde-format
-#| msgid "Disable"
+#, kde-format
 msgctxt "Is attendee available for incidence"
 msgid "Available"
-msgstr "چەكلە"
+msgstr "ئىشلەتكىلى بولىدۇ"
 
 #: attendeetablemodel.cpp:158
 #, kde-format
 msgctxt "Status of attendee in an incidence (accepted, declined, delegated, …)"
 msgid "Status"
-msgstr ""
+msgstr "ھالىتى"
 
 #: attendeetablemodel.cpp:160
-#, fuzzy, kde-format
-#| msgid "Type"
+#, kde-format
 msgctxt "Type of calendar user (vCard attribute)"
 msgid "User Type"
-msgstr "تىپى"
+msgstr ""
 
 #: attendeetablemodel.cpp:162
 #, kde-format
 msgctxt "Has attendee to respond to the invitation"
 msgid "Response"
-msgstr ""
+msgstr "ئىنكاس"
 
 #: attendeetablemodel.cpp:164
 #, kde-format
 msgctxt "Attendee name"
 msgid "Name"
-msgstr ""
+msgstr "ئاتى"
 
 #: attendeetablemodel.cpp:166
-#, fuzzy, kde-format
-#| msgid "Send an email"
+#, kde-format
 msgctxt "Attendee email"
 msgid "Email"
-msgstr "ئېلخەتتىن بىرنى يوللا"
+msgstr "ئېلخەت"
 
 #: editoritemmanager.cpp:239
 #, kde-format
@@ -278,11 +270,10 @@ msgid ""
 msgstr ""
 
 #: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
+#, kde-format
 msgctxt "@action:button"
 msgid "Take over changes"
-msgstr "ئۆزگىرىشلەرنى ئىشلەت"
+msgstr ""
 
 #: editoritemmanager.cpp:242
 #, kde-format
@@ -300,7 +291,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Summary:"
-msgstr "ئۈزۈندى:"
+msgstr "ئۈزۈندە:"
 
 #: freebusyganttproxymodel.cpp:78
 #, kde-format
@@ -374,37 +365,31 @@ msgid "Play an audio file"
 msgstr ""
 
 #: incidencealarm.cpp:302
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
-#| msgid "Reminder"
+#, kde-format
 msgctxt "Alarm action"
 msgid "Invalid Reminder."
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: incidencealarm.cpp:308
-#, fuzzy, kde-format
-#| msgctxt "The reminder is set to X minutes before/after the event"
-#| msgid "minutes"
+#, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
 msgid "1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "مىنۇت"
+msgstr[0] "%1 مىنۇت"
 
 #: incidencealarm.cpp:313
 #, kde-format
 msgctxt "The reminder is set to X days before/after the event"
 msgid "1 day"
 msgid_plural "%1 days"
-msgstr[0] ""
+msgstr[0] "%1 كۈن"
 
 #: incidencealarm.cpp:316
-#, fuzzy, kde-format
-#| msgctxt "The reminder is set to X hours before/after the event"
-#| msgid "hours"
+#, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
 msgid "1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "سائەت"
+msgstr[0] "‏%1‎‏ سائەت"
 
 #: incidencealarm.cpp:321
 #, kde-format
@@ -551,14 +536,12 @@ msgid "Add Attachment"
 msgstr "قوشۇلما قوش"
 
 #: incidenceattachment.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Do you really want to cancel?"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Do you really want to remove these attachments?\n"
 "%1"
-msgstr "راستلا ۋاز كېچەمسىز؟"
+msgstr ""
 
 #: incidenceattachment.cpp:196
 #, kde-format
@@ -597,12 +580,10 @@ msgid "&Open"
 msgstr "ئاچ(&O)"
 
 #: incidenceattachment.cpp:479
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu save the attachment to a file"
-#| msgid "Save As..."
+#, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "باشقا ئاتتا ساقلا…"
+msgstr ""
 
 #: incidenceattachment.cpp:496
 #, kde-format
@@ -611,12 +592,10 @@ msgid "&Remove"
 msgstr "چىقىرىۋەت(&R)"
 
 #: incidenceattachment.cpp:504
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu show a dialog used to edit the attachment"
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "خاسلىق(&P)…"
+msgstr ""
 
 #: incidenceattachment.cpp:514
 #, kde-format
@@ -644,7 +623,7 @@ msgstr "ئىناۋەتسىز ئېلخەت ئادرېسى"
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
-msgstr ""
+msgstr "تەكلىپ"
 
 #: incidenceattendee.cpp:216
 #, kde-format
@@ -653,12 +632,10 @@ msgid "Do Not Invite"
 msgstr ""
 
 #: incidenceattendee.cpp:443
-#, fuzzy, kde-format
-#| msgctxt "@title:tab attendees of this event or to-do"
-#| msgid "Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "قاتناشقۇچىلار"
+msgstr ""
 
 #: incidenceattendee.cpp:627
 #, kde-format
@@ -677,11 +654,10 @@ msgid ""
 msgstr ""
 
 #: incidenceattendee.cpp:800
-#, fuzzy, kde-format
-#| msgid "Attendee"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
-msgstr "قاتناشقۇچى"
+msgstr ""
 
 #: incidenceattendee.cpp:801
 #, kde-format
@@ -693,7 +669,7 @@ msgstr ""
 #, kde-format
 msgctxt "Completion percentage label"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: incidencedatetime.cpp:223
 #, kde-format
@@ -736,12 +712,10 @@ msgid ""
 msgstr ""
 
 #: incidencedatetime.cpp:772 incidencedatetime.cpp:773
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip period start time"
-#| msgid "Start:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
-msgstr "باشلاش:"
+msgstr ""
 
 #: incidencedatetime.cpp:775
 #, kde-format
@@ -768,18 +742,16 @@ msgid "Ends: %1"
 msgstr ""
 
 #: incidencedatetime.cpp:793
-#, fuzzy, kde-format
-#| msgid "Due Date"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "مۆھلىتى(چېسلا)"
 
 #: incidencedatetime.cpp:794
-#, fuzzy, kde-format
-#| msgid "Time"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr "ۋاقىت"
+msgstr ""
 
 #: incidencedatetime.cpp:796
 #, kde-format
@@ -794,36 +766,28 @@ msgid "Ending Time"
 msgstr ""
 
 #: incidencedatetime.cpp:875
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start date."
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: incidencedatetime.cpp:880
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid start time."
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: incidencedatetime.cpp:888
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end date."
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: incidencedatetime.cpp:893
-#, fuzzy, kde-format
-#| msgctxt "@title:tab Tab to configure the reminders of an event or todo"
-#| msgid "Reminder"
+#, kde-format
 msgctxt "@info"
 msgid "Invalid end time."
-msgstr "ئەسكەرتكۈچ"
+msgstr ""
 
 #: incidencedatetime.cpp:904
 #, kde-format
@@ -983,7 +947,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
-msgstr ""
+msgstr "مەنبەلەر(&R)"
 
 #: incidencedialog.cpp:475
 #, kde-format
@@ -998,19 +962,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
-msgstr ""
+msgstr "قايتا سىنا"
 
 #: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "بېجىرىدىغان"
 
 #: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "ھادىسە"
 
 #: incidencedialog.cpp:507
 #, kde-kuit-format
@@ -1038,7 +1002,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
-msgstr ""
+msgstr "بەلگىلىمەسلىك"
 
 #: incidencedialog.cpp:715
 #, kde-format
@@ -1059,12 +1023,10 @@ msgid "Discard changes and close dialog"
 msgstr ""
 
 #: incidencedialog.cpp:721
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Templates..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "قېلىپلار(&T)…"
+msgstr ""
 
 #: incidencedialog.cpp:723
 #, kde-format
@@ -1085,7 +1047,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
-msgstr "راستلا ۋاز كېچەمسىز؟"
+msgstr "راستتىنلا ۋاز كېچەمسىز؟"
 
 #: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
@@ -1113,10 +1075,9 @@ msgstr "كۆڭۈلدىكى ئېلخەت قوشۇلمىسى ئۇسۇلى"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:13
-#, fuzzy, kde-format
-#| msgid "The default way of attaching dropped emails to an event"
+#, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
-msgstr "تاشلانغان ئېلخەتلەرنى ھادىسىگە قوشۇشنىڭ كۆڭۈلدىكى ئۇسۇلى"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:14
@@ -1294,18 +1255,17 @@ msgstr ""
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
-#, fuzzy, kde-format
-#| msgid "Send an email"
+#, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
-msgstr "ئېلخەتتىن بىرنى يوللا"
+msgstr "ئېلخەت يوللا"
 
 #: individualmailcomponentfactory.h:51 individualmailcomponentfactory.h:58
 #: individualmailcomponentfactory.h:64
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
-msgstr ""
+msgstr "يوللىما"
 
 #: individualmaildialog.cpp:30
 #, kde-format
@@ -1359,35 +1319,31 @@ msgstr ""
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
-msgstr ""
+msgstr "ئادەتتىكى ئاتى"
 
 #: ldaputils.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send an email"
+#, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
-msgstr "ئېلخەتتىن بىرنى يوللا"
+msgstr "ئېلخەت"
 
 #: ldaputils.cpp:21
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
-msgstr ""
+msgstr "ئاتى"
 
 #: ldaputils.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
+#, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "تەگات"
 
 #: ldaputils.cpp:25
-#, fuzzy, kde-format
-#| msgid "Organizer:"
+#, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
-msgstr "تەشكىللىگۈچى:"
+msgstr "تەشكىل"
 
 #: ldaputils.cpp:27
 #, kde-format
@@ -1399,19 +1355,19 @@ msgstr ""
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
-msgstr ""
+msgstr "چۈشەندۈرۈش"
 
 #: ldaputils.cpp:31
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
-msgstr ""
+msgstr "تېلېفون"
 
 #: ldaputils.cpp:33
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
-msgstr ""
+msgstr "يانفون"
 
 #: opencomposerjob.cpp:78
 #, kde-format
@@ -1420,11 +1376,10 @@ msgid "Cannot connect to email service"
 msgstr ""
 
 #: resourcemanagement.cpp:95
-#, fuzzy, kde-format
-#| msgid "Template Management"
+#, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
-msgstr "قېلىپ باشقۇر"
+msgstr ""
 
 #: resourcemanagement.cpp:100
 #, kde-format
@@ -1436,7 +1391,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
-msgstr ""
+msgstr "پىلان"
 
 #: schedulingdialog.cpp:166
 #, kde-format
@@ -1481,11 +1436,10 @@ msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:110
-#, fuzzy, kde-format
-#| msgid "Template Name"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "قېلىپ ئاتى"
+msgstr ""
 
 #: templatemanagementdialog.cpp:145
 #, kde-format
@@ -1493,8 +1447,7 @@ msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
 #: templatemanagementdialog.cpp:146
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "قېلىپنى چىقىرىۋېتىش"
@@ -1508,17 +1461,16 @@ msgid ""
 msgstr ""
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Remove Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "قېلىپنى چىقىرىۋېتىش"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
 #, kde-format
 msgid "Alarms"
-msgstr "قوڭغۇراقلار"
+msgstr "قوڭغۇراق"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/alarmdialog.ui:32
@@ -1761,7 +1713,7 @@ msgstr "قوشۇلما ئاتى"
 #, kde-format
 msgctxt "@label File type of attachment is unknown"
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:72
@@ -1830,7 +1782,7 @@ msgstr "0 كىلوبايت"
 #: ui/attachmenteditdialog.ui:183
 #, kde-format
 msgid "Type:"
-msgstr "تىپى:"
+msgstr "تۈرى:"
 
 #. i18n: ectx: property (toolTip), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:20
@@ -1846,13 +1798,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox The calendar to which the todo or event must be added"
-#| msgid "Calendar:"
+#, kde-format
 msgctxt "@label:listbox The calendar to which the todo or event must be added"
 msgid "Calen&dar:"
-msgstr "يىلنامە:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: ui/dialogdesktop.ui:81
@@ -1892,12 +1841,10 @@ msgstr "قوشۇلما"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mSummaryEdit)
 #: ui/dialogdesktop.ui:136 ui/dialogdesktop.ui:164
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "ئۈزۈندى:"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1911,12 +1858,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:145
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Summary:"
+#, kde-format
 msgctxt "@label"
 msgid "Summar&y:"
-msgstr "ئۈزۈندى:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mLocationLabel)
 #: ui/dialogdesktop.ui:186
@@ -1958,7 +1903,7 @@ msgstr "تاماملاندى"
 #, kde-format
 msgctxt "@label:listbox priority of a to-do"
 msgid "Priority:"
-msgstr "مەرتىۋىسى:"
+msgstr "ئالدىنلىق:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:296
@@ -2007,7 +1952,7 @@ msgstr "5 (ئوتتۇرا)"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:331
@@ -2021,7 +1966,7 @@ msgstr "7"
 #, kde-format
 msgctxt "@item:inlistbox Priority of a to-do"
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mPriorityCombo)
 #: ui/dialogdesktop.ui:341
@@ -2054,12 +1999,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
 #: ui/dialogdesktop.ui:420
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip period start time"
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label Start date/time of the event or todo"
 msgid "S&tart:"
-msgstr "باشلاش:"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:448
@@ -2092,13 +2035,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:501
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#, kde-format
 msgctxt "@action"
 msgid "<a href=\"hide\">&lt;&lt; Time zones</a>"
-msgstr "<a href=\\\"hide\\\"><font color='blue'>مول تېكىست &gt;&gt;</font></a>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mEndLabel)
 #: ui/dialogdesktop.ui:538
@@ -2169,20 +2109,17 @@ msgstr "زىيارەت:"
 
 #. i18n: ectx: property (text), widget (QLabel, mRichTextLabel)
 #: ui/dialogdesktop.ui:683
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "<a href=\\\"hide\\\"><font color='blue'>Rich text &gt;&gt;</font></a>"
+#, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr "<a href=\\\"hide\\\"><font color='blue'>مول تېكىست &gt;&gt;</font></a>"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:714
 #, kde-format
 msgctxt "@label"
 msgid "Tags:"
-msgstr ""
+msgstr "بەلگە:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mAttendeesTab)
 #: ui/dialogdesktop.ui:735
@@ -2268,18 +2205,16 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:878
-#, fuzzy, kde-format
-#| msgctxt "@title:tab attendees of this event or to-do"
-#| msgid "Attendees"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "قاتناشقۇچىلار"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:890
 #, kde-format
 msgid "Privacy:"
-msgstr ""
+msgstr "شەخسىيەت:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mSignItip)
 #: ui/dialogdesktop.ui:902
@@ -2297,7 +2232,7 @@ msgstr ""
 #: ui/dialogdesktop.ui:935
 #, kde-format
 msgid "Resources"
-msgstr ""
+msgstr "مەنبەلەر"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:975
@@ -2334,9 +2269,7 @@ msgstr "قوش"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmNewButton)
 #: ui/dialogdesktop.ui:1082
-#, fuzzy, kde-format
-#| msgctxt "@action:button Create a new reminder"
-#| msgid "New"
+#, kde-format
 msgctxt "@action:button create a new reminder"
 msgid "New"
 msgstr "يېڭى"
@@ -2346,7 +2279,7 @@ msgstr "يېڭى"
 #, kde-format
 msgctxt "@action:button modify the selected reminder"
 msgid "Modify"
-msgstr ""
+msgstr "ئۆزگەرت"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmToggleButton)
 #: ui/dialogdesktop.ui:1102
@@ -2440,27 +2373,21 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1430
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "never"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "never"
-msgstr "ھەرگىز"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1435
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "on"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "on"
 msgstr "قوزغات"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceEndCombo)
 #: ui/dialogdesktop.ui:1440
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Speficies when a recurring events end"
-#| msgid "after"
+#, kde-format
 msgctxt "@item:inlistbox Specifies when a recurring events end"
 msgid "after"
 msgstr "كېيىن"
@@ -2576,13 +2503,13 @@ msgstr ""
 #: ui/resourcemanagement.ui:76
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "تەپسىلاتى"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupOwner)
 #: ui/resourcemanagement.ui:94
 #, kde-format
 msgid "Owner"
-msgstr ""
+msgstr "ئىگىدار"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, Dialog)
 #: ui/schedulingdialog.ui:14
@@ -2735,7 +2662,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr ""
+msgstr "يېڭى(&N)…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
@@ -2920,7 +2847,6 @@ msgstr ""
 #~ msgid "&New..."
 #~ msgstr "يېڭى(&N)…"
 
-#, fuzzy
 #~| msgid "Send an email"
 #~ msgctxt "Alarm action"
 #~ msgid "Send an email"
@@ -2935,7 +2861,6 @@ msgstr ""
 #~ msgid "*|All files"
 #~ msgstr "*|بارلىق ھۆججەتلەر"
 
-#, fuzzy
 #~| msgctxt "@label"
 #~| msgid "T&itle:"
 #~ msgctxt "@label"
@@ -2946,13 +2871,11 @@ msgstr ""
 #~ msgid "Categories:"
 #~ msgstr "كاتېگورىيە:"
 
-#, fuzzy
 #~| msgid "Select Categories"
 #~ msgctxt "@title:window"
 #~ msgid "Select Categories"
 #~ msgstr "كاتېگورىيەلەرنى تاللاش"
 
-#, fuzzy
 #~| msgid "Edit Categories"
 #~ msgctxt "@title:window"
 #~ msgid "Edit Categories"
@@ -2964,7 +2887,6 @@ msgstr ""
 #~ msgid "Select Categories"
 #~ msgstr "كاتېگورىيەلەرنى تاللاش"
 
-#, fuzzy
 #~| msgid "Select Categories"
 #~ msgid "Select categories"
 #~ msgstr "كاتېگورىيەلەرنى تاللاش"
@@ -2981,7 +2903,6 @@ msgstr ""
 #~ msgid "Category list"
 #~ msgstr "كاتېگورىيە تىزىمى"
 
-#, fuzzy
 #~| msgid "Select Categories"
 #~ msgid "Select incidence categories"
 #~ msgstr "كاتېگورىيەلەرنى تاللاش"
@@ -3140,13 +3061,11 @@ msgstr ""
 #~ msgid "Repeat"
 #~ msgstr "قايتىلا"
 
-#, fuzzy
 #~| msgid "Type"
 #~ msgctxt "Type of resource (vCard attribute)"
 #~ msgid "cuType"
 #~ msgstr "تىپى"
 
-#, fuzzy
 #~| msgid "Send an email"
 #~ msgctxt "attendee email"
 #~ msgid "email"
