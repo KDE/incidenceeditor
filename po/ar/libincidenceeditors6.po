@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2026-05-21 11:17+0400\n"
+"PO-Revision-Date: 2026-06-05 13:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2197,13 +2197,13 @@ msgstr "عامّ"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "انقر هنا لإضافة الوسوم وتحديدها وإدارتها"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
-msgstr ""
+msgstr "افتح حوارًا يتيح اختيار الوسوم بالإضافة إلى إضافتها وإزالتها."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
