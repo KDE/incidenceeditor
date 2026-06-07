@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-27 00:46+0000\n"
-"PO-Revision-Date: 2026-05-25 19:00+0200\n"
+"PO-Revision-Date: 2026-06-06 11:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -2117,13 +2117,13 @@ msgstr "일반"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "태그를 추가, 선택, 관리하려면 여기를 클릭하십시오"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
-msgstr ""
+msgstr "태그를 선택, 추가, 삭제할 수 있는 대화 상자 열기"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
