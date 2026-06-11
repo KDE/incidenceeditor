@@ -99,13 +99,13 @@ bool AttachmentIconItem::isBinary() const
     return mAttachment.isBinary();
 }
 
-QIcon AttachmentIconItem::icon() const
+QIcon AttachmentIconItem::attachmentIcon() const
 {
     QMimeDatabase const db;
     return icon(db.mimeTypeForName(mAttachment.mimeType()), mAttachment.uri(), mAttachment.isBinary());
 }
 
-QIcon AttachmentIconItem::icon(const QMimeType &mimeType, const QString &uri, bool binary)
+QIcon AttachmentIconItem::attachmentIcon(const QMimeType &mimeType, const QString &uri, bool binary)
 {
     const QString iconStr = mimeType.iconName();
     QStringList overlays;

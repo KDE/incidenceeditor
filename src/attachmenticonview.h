@@ -70,8 +70,8 @@ public:
 
     [[nodiscard]] bool isBinary() const;
 
-    [[nodiscard]] static QIcon icon(const QMimeType &mimeType, const QString &uri, bool binary = false);
-    [[nodiscard]] QIcon icon() const;
+    [[nodiscard]] static QIcon attachmentIcon(const QMimeType &mimeType, const QString &uri, bool binary = false);
+    [[nodiscard]] QIcon attachmentIcon() const;
 
     void readAttachment();
 

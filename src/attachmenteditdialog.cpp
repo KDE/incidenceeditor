@@ -164,7 +164,7 @@ void AttachmentEditDialog::urlChanged(const QUrl &url)
     QMimeDatabase const db;
     mMimeType = db.mimeTypeForUrl(url);
     mUi->mTypeLabel->setText(mMimeType.comment());
-    mUi->mIcon->setPixmap(AttachmentIconItem::icon(mMimeType, url.path()).pixmap(KIconLoader::SizeSmallMedium));
+    mUi->mIcon->setPixmap(AttachmentIconItem::attachmentIcon(mMimeType, url.path()).pixmap(KIconLoader::SizeSmallMedium));
 }
 
 #include "moc_attachmenteditdialog.cpp"
