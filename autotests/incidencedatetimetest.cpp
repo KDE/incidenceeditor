@@ -14,6 +14,8 @@
 
 using namespace IncidenceEditorNG;
 
+namespace
+{
 class IncidenceDateTimeTest : public QObject
 {
     Q_OBJECT
@@ -231,6 +233,7 @@ private Q_SLOTS:
         QVERIFY(!mEndZone->isVisible());
     }
 };
+}
 
 QTEST_MAIN(IncidenceDateTimeTest)
 #include "incidencedatetimetest.moc"

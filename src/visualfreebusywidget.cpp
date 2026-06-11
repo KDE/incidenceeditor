@@ -109,6 +109,8 @@ private:
     int mRowHeight;
 };
 
+namespace
+{
 class GanttHeaderView : public QHeaderView
 {
 public:
@@ -124,6 +126,7 @@ public:
         return s;
     }
 };
+}
 }
 
 VisualFreeBusyWidget::VisualFreeBusyWidget(CalendarSupport::FreeBusyItemModel *model, int spacing, QWidget *parent)

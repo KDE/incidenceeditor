@@ -22,6 +22,8 @@
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
+namespace
+{
 class SwitchRoleProxy : public QSortFilterProxyModel
 {
 public:
@@ -41,6 +43,7 @@ public:
         return d;
     }
 };
+}
 
 IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(nullptr)

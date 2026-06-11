@@ -33,7 +33,7 @@ using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myResourceManagementConfigGroupName[] = "ResourceManagement";
-}
+
 class FreebusyViewCalendar : public EventViews::ViewCalendar
 {
 public:
@@ -88,6 +88,7 @@ public:
 
     KCalendarCore::Calendar::Ptr mCalendar;
 };
+}
 
 ResourceManagement::ResourceManagement(QWidget *parent)
     : QDialog(parent)
