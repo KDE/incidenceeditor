@@ -80,6 +80,8 @@ class ResourceFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit ResourceFilterProxyModel(QObject *parent = nullptr);
+
+protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
 
@@ -88,6 +90,8 @@ class AttendeeFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit AttendeeFilterProxyModel(QObject *parent = nullptr);
+
+protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
 }

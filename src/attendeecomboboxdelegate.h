@@ -30,8 +30,6 @@ public:
     void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 
-    bool eventFilter(QObject *editor, QEvent *event) override;
-
     virtual void addItem(const QIcon &, const QString &);
     virtual void clear();
 
@@ -41,6 +39,9 @@ public:
     /** choose this index, if the item in the model is unknown
      */
     void setStandardIndex(int);
+
+protected:
+    bool eventFilter(QObject *editor, QEvent *event) override;
 
 public Q_SLOTS:
     bool helpEvent(QHelpEvent *event, QAbstractItemView *view, const QStyleOptionViewItem &option, const QModelIndex &index) override;
