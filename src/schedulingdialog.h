@@ -37,10 +37,10 @@ public Q_SLOTS:
     void slotUpdateIncidenceStartEnd(const QDateTime &startDateTime, const QDateTime &endDateTime);
 
 Q_SIGNALS:
-    void startDateChanged(const QDate &newDate);
-    void startTimeChanged(const QTime &newTime);
-    void endDateChanged(const QDate &newDate);
-    void endTimeChanged(const QTime &newTime);
+    void startDateChanged(const QDate &);
+    void startTimeChanged(const QTime &);
+    void endDateChanged(const QDate &);
+    void endTimeChanged(const QTime &);
 
 private:
     void slotWeekdaysChanged();

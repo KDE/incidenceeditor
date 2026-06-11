@@ -33,7 +33,7 @@ public:
     [[nodiscard]] QMimeData *mimeData() const;
 
 Q_SIGNALS:
-    void dropMimeDataRequested(const QMimeData *data);
+    void dropMimeDataRequested(const QMimeData *);
 
 protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;

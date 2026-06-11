@@ -116,13 +116,13 @@ Q_SIGNALS:
      * Emitted when the user changes the start and end dateTimes
      * for the incidence.
      */
-    void dateTimesChanged(const QDateTime &newStart, const QDateTime &newEnd);
+    void dateTimesChanged(const QDateTime &, const QDateTime &);
 
     /*!
      * Emitted when there are conflicts
      * \a number the number of conflicts
      */
-    void conflictsDetected(int number);
+    void conflictsDetected(int);
 
     /*!
      * Emitted when the resolver locates new free slots.

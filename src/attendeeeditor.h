@@ -44,7 +44,7 @@ public:
 
 Q_SIGNALS:
     void countChanged(int);
-    void changed(const KCalendarCore::Attendee &oldAttendee, const KCalendarCore::Attendee &newAttendee);
+    void changed(const KCalendarCore::Attendee &, const KCalendarCore::Attendee &);
     void editingFinished(KPIM::MultiplyingLine *);
 
 protected Q_SLOTS:

@@ -50,7 +50,7 @@ public:
     [[nodiscard]] RecurrenceType currentRecurrenceType() const;
 
 Q_SIGNALS:
-    void recurrenceChanged(IncidenceEditorNG::RecurrenceType type);
+    void recurrenceChanged(IncidenceEditorNG::RecurrenceType);
 
 private:
     void addException();

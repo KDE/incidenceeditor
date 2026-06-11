@@ -66,18 +66,18 @@ public:
 
 Q_SIGNALS:
     // used to indicate that the widgets were activated
-    void startDateFocus(QObject *obj);
-    void endDateFocus(QObject *obj);
-    void startTimeFocus(QObject *obj);
-    void endTimeFocus(QObject *obj);
+    void startDateFocus(QObject *);
+    void endDateFocus(QObject *);
+    void startTimeFocus(QObject *);
+    void endTimeFocus(QObject *);
 
     // general
-    void startDateTimeToggled(bool enabled);
-    void startDateChanged(const QDate &newDate);
-    void startTimeChanged(const QTime &newTime);
-    void endDateTimeToggled(bool enabled);
-    void endDateChanged(const QDate &newDate);
-    void endTimeChanged(const QTime &newTime);
+    void startDateTimeToggled(bool);
+    void startDateChanged(const QDate &);
+    void startTimeChanged(const QTime &);
+    void endDateTimeToggled(bool);
+    void endDateChanged(const QDate &);
+    void endTimeChanged(const QTime &);
 
 private: /// General
     void showMessage(const QString &message, KMessageWidget::MessageType type);

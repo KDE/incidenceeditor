@@ -64,8 +64,8 @@ public:
                                     const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
 
 Q_SIGNALS:
-    void setEdit(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &edit);
-    void setUpdate(const KCalendarCore::Incidence::Ptr &incidence, const KCalendarCore::Attendee::List &update);
+    void setEdit(const KCalendarCore::Incidence::Ptr &, const KCalendarCore::Attendee::List &);
+    void setUpdate(const KCalendarCore::Incidence::Ptr &, const KCalendarCore::Attendee::List &);
 
 protected:
     void

@@ -113,7 +113,7 @@ public:
 
 Q_SIGNALS:
     void changed();
-    void changed(const KCalendarCore::Attendee &oldAttendee, const KCalendarCore::Attendee &newAttendee);
+    void changed(const KCalendarCore::Attendee &, const KCalendarCore::Attendee &);
     void editingFinished(KPIM::MultiplyingLine *);
 
 private:

@@ -42,7 +42,7 @@ public:
     [[nodiscard]] int attachmentCount() const;
 
 Q_SIGNALS:
-    void attachmentCountChanged(int newCount);
+    void attachmentCountChanged(int);
 
 private:
     void addAttachment();

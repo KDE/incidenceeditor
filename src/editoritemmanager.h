@@ -87,9 +87,9 @@ public:
     void setIsCounterProposal(bool isCounterProposal);
 
 Q_SIGNALS:
-    void itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction action);
+    void itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction);
 
-    void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction action, const QString &message);
+    void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction, const QString &);
 
 private:
     std::unique_ptr<ItemEditorPrivate> const d_ptr;

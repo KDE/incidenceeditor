@@ -52,7 +52,7 @@ public:
     void save(Akonadi::Item &item) override;
 
 Q_SIGNALS:
-    void showMessage(const QString &reason, KMessageWidget::MessageType) const;
+    void showMessage(const QString &, KMessageWidget::MessageType) const;
 
 private:
     void handleDirtyStatusChange(bool isDirty);

@@ -101,7 +101,7 @@ Q_SIGNALS:
      * Signals whether the dirty status of this editor has changed. The new dirty
      * status is passed as argument.
      */
-    void dirtyStatusChanged(bool isDirty);
+    void dirtyStatusChanged(bool);
 
 public Q_SLOTS:
     /*!

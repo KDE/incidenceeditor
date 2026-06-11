@@ -25,18 +25,18 @@ Q_SIGNALS:
        selected template should be loaded into to the incidence editor which
        triggered this.
     */
-    void loadTemplate(const QString &templateName);
+    void loadTemplate(const QString &);
 
     /* Emitted whenever the user wants to add the current incidence as a
        template with the given name.
     */
-    void saveTemplate(const QString &templateName);
+    void saveTemplate(const QString &);
 
     /* Emitted when the dialog changed the list of templates. Calling code
        can the replace the list that was handed in with the one this signal
        transports.
     */
-    void templatesChanged(const QStringList &templates);
+    void templatesChanged(const QStringList &);
 
 protected Q_SLOTS:
     void slotItemSelected();

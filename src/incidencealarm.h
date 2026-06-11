@@ -36,7 +36,7 @@ public:
     [[nodiscard]] bool isValid() const override;
 
 Q_SIGNALS:
-    void alarmCountChanged(int newCount);
+    void alarmCountChanged(int);
 
 private:
     void showMessage(const QString &message, KMessageWidget::MessageType type);
