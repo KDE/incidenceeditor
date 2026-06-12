@@ -99,13 +99,13 @@ bool AttachmentIconItem::isBinary() const
     return mAttachment.isBinary();
 }
 
-QIcon AttachmentIconItem::attachmentIcon() const
+QIcon AttachmentIconItem::itemIcon() const
 {
     QMimeDatabase const db;
-    return attachmentIcon(db.mimeTypeForName(mAttachment.mimeType()), mAttachment.uri(), mAttachment.isBinary());
+    return itemIcon(db.mimeTypeForName(mAttachment.mimeType()), mAttachment.uri(), mAttachment.isBinary());
 }
 
-QIcon AttachmentIconItem::attachmentIcon(const QMimeType &mimeType, const QString &uri, bool binary)
+QIcon AttachmentIconItem::itemIcon(const QMimeType &mimeType, const QString &uri, bool binary)
 {
     const QString iconStr = mimeType.iconName();
     QStringList overlays;
@@ -132,7 +132,7 @@ void AttachmentIconItem::readAttachment()
         mAttachment.setMimeType(attachmentMimeType.name());
     }
 
-    setIcon(attachmentIcon());
+    setIcon(itemIcon());
 }
 
 AttachmentIconView::AttachmentIconView(QWidget *parent)
@@ -229,7 +229,7 @@ void AttachmentIconView::startDrag([[maybe_unused]] Qt::DropActions supportedAct
         pixmap = QIcon::fromTheme(u"mail-attachment"_s).pixmap(64);
     }
     if (pixmap.isNull()) {
-        pixmap = static_cast<AttachmentIconItem *>(currentItem())->attachmentIcon().pixmap(64);
+        pixmap = static_cast<AttachmentIconItem *>(currentItem())->itemIcon().pixmap(64);
     }
 
     const QPoint hotspot(pixmap.width() / 2, pixmap.height() / 2);
