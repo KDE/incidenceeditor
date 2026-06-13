@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:44+0000\n"
 "PO-Revision-Date: 2026-03-17 10:20+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -863,122 +863,122 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr ""
 
-#: incidencedialog.cpp:231
+#: incidencedialog.cpp:234
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Nejdříve vyberte platnou sbírku."
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:257
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Upomínka (%1)"
 
-#: incidencedialog.cpp:256
+#: incidencedialog.cpp:259
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Upomínka"
 
-#: incidencedialog.cpp:264
+#: incidencedialog.cpp:267
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Opa&kování"
 
-#: incidencedialog.cpp:274
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (D)"
 
-#: incidencedialog.cpp:277
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (T)"
 
-#: incidencedialog.cpp:280
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (M)"
 
-#: incidencedialog.cpp:283
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (R)"
 
-#: incidencedialog.cpp:286
+#: incidencedialog.cpp:289
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (E)"
 
-#: incidencedialog.cpp:320
+#: incidencedialog.cpp:323
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Nelze najít šablonu '%1'."
 
-#: incidencedialog.cpp:326
+#: incidencedialog.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Chyba při načítání souboru se šablonou '%1'."
 
-#: incidencedialog.cpp:332
+#: incidencedialog.cpp:335
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Šablona neobsahuje platnou událost."
 
-#: incidencedialog.cpp:340
+#: incidencedialog.cpp:343
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "Nová šablona %1"
 
-#: incidencedialog.cpp:433
+#: incidencedialog.cpp:436
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "Přílo&hy (%1)"
 
-#: incidencedialog.cpp:435
+#: incidencedialog.cpp:438
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Přílo&hy"
 
-#: incidencedialog.cpp:442
+#: incidencedialog.cpp:445
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "Úč&astníci (%1)"
 
-#: incidencedialog.cpp:444
+#: incidencedialog.cpp:447
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "Úč&astníci"
 
-#: incidencedialog.cpp:451
+#: incidencedialog.cpp:454
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "Zd&roje (%1)"
 
-#: incidencedialog.cpp:453
+#: incidencedialog.cpp:456
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "Zd&roje"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -987,25 +987,25 @@ msgid ""
 " Reason: %1"
 msgstr ""
 
-#: incidencedialog.cpp:479
+#: incidencedialog.cpp:482
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "Zkusit znovu"
 
-#: incidencedialog.cpp:499
+#: incidencedialog.cpp:502
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "Úlohy"
 
-#: incidencedialog.cpp:501
+#: incidencedialog.cpp:504
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "Událost"
 
-#: incidencedialog.cpp:507
+#: incidencedialog.cpp:510
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1015,55 +1015,55 @@ msgid ""
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
 
-#: incidencedialog.cpp:517
+#: incidencedialog.cpp:520
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Nastavit výchozí %1 kalendář?"
 
-#: incidencedialog.cpp:518
+#: incidencedialog.cpp:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Nastavit jako výchozí"
 
-#: incidencedialog.cpp:519
+#: incidencedialog.cpp:522
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Nenastavovat"
 
-#: incidencedialog.cpp:715
+#: incidencedialog.cpp:718
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Uložit aktuální změny"
 
-#: incidencedialog.cpp:716
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Uložit změny a zavřít dialogové okno"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:720
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Zrušit změny a zavřít"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:724
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Š&ablony…"
 
-#: incidencedialog.cpp:723
+#: incidencedialog.cpp:726
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Spravovat šablony pro tuto položku"
 
-#: incidencedialog.cpp:725
+#: incidencedialog.cpp:728
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1072,25 +1072,25 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 
-#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
+#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Přejete si opravdu zrušit?"
 
-#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
+#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer - potvrzení"
 
-#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
+#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Zrušit úpravy"
 
-#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
+#: incidencedialog.cpp:829 incidencedialog.cpp:854 incidencedialog.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1416,13 +1416,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Nelze se připojit k e-mailové službě"
 
-#: resourcemanagement.cpp:95
+#: resourcemanagement.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Správa zdrojů"
 
-#: resourcemanagement.cpp:100
+#: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -2759,19 +2759,19 @@ msgstr ""
 msgid "Apply"
 msgstr "Použít"
 
-#: visualfreebusywidget.cpp:140
+#: visualfreebusywidget.cpp:143
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
 msgstr "Měřítko: "
 
-#: visualfreebusywidget.cpp:144
+#: visualfreebusywidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
 msgstr ""
 
-#: visualfreebusywidget.cpp:146
+#: visualfreebusywidget.cpp:149
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2782,49 +2782,49 @@ msgid ""
 "current event or to-do."
 msgstr ""
 
-#: visualfreebusywidget.cpp:153
+#: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
 msgstr "Hodina"
 
-#: visualfreebusywidget.cpp:154
+#: visualfreebusywidget.cpp:157
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
 msgstr "Den"
 
-#: visualfreebusywidget.cpp:155
+#: visualfreebusywidget.cpp:158
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
 msgstr "Týden"
 
-#: visualfreebusywidget.cpp:156
+#: visualfreebusywidget.cpp:159
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
 msgstr "Měsíc"
 
-#: visualfreebusywidget.cpp:157
+#: visualfreebusywidget.cpp:160
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
 msgstr "Automaticky"
 
-#: visualfreebusywidget.cpp:162
+#: visualfreebusywidget.cpp:165
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
 msgstr "Vycentrovat na začátek"
 
-#: visualfreebusywidget.cpp:163
+#: visualfreebusywidget.cpp:166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
 msgstr "Vycentruje Ganttův diagram podle začátečního data a času události"
 
-#: visualfreebusywidget.cpp:165
+#: visualfreebusywidget.cpp:168
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2832,19 +2832,19 @@ msgid ""
 "this event."
 msgstr ""
 
-#: visualfreebusywidget.cpp:172
+#: visualfreebusywidget.cpp:175
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
 msgstr "Vybrat datum"
 
-#: visualfreebusywidget.cpp:174
+#: visualfreebusywidget.cpp:177
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr "Přesune událost na datum a čas, ve kterém mají všichni účastníci volno"
 
-#: visualfreebusywidget.cpp:177
+#: visualfreebusywidget.cpp:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2852,19 +2852,19 @@ msgid ""
 "attendees have time available in their Free/Busy lists."
 msgstr ""
 
-#: visualfreebusywidget.cpp:186
+#: visualfreebusywidget.cpp:189
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
 msgstr "Znovu načíst"
 
-#: visualfreebusywidget.cpp:187
+#: visualfreebusywidget.cpp:190
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
 msgstr ""
 
-#: visualfreebusywidget.cpp:189
+#: visualfreebusywidget.cpp:192
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2872,25 +2872,25 @@ msgid ""
 "reloaded from their corresponding servers."
 msgstr ""
 
-#: visualfreebusywidget.cpp:200
+#: visualfreebusywidget.cpp:203
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
 msgstr ""
 
-#: visualfreebusywidget.cpp:201
+#: visualfreebusywidget.cpp:204
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
 msgstr ""
 
-#: visualfreebusywidget.cpp:207
+#: visualfreebusywidget.cpp:210
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
 msgstr "Zobrazí stav aktivity všech účastníků"
 
-#: visualfreebusywidget.cpp:209
+#: visualfreebusywidget.cpp:212
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""

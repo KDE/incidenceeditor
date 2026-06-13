@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:44+0000\n"
 "PO-Revision-Date: 2026-05-29 23:28+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -879,121 +879,121 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Disabilita testo formattato"
 
-#: incidencedialog.cpp:231
+#: incidencedialog.cpp:234
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Seleziona per prima cosa una collezione valida."
 
-#: incidencedialog.cpp:254
+#: incidencedialog.cpp:257
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Promemoria (%1)"
 
-#: incidencedialog.cpp:256
+#: incidencedialog.cpp:259
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Promemoria"
 
-#: incidencedialog.cpp:264
+#: incidencedialog.cpp:267
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Rico&rrenza"
 
-#: incidencedialog.cpp:274
+#: incidencedialog.cpp:277
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (G)"
 
-#: incidencedialog.cpp:277
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (S)"
 
-#: incidencedialog.cpp:280
+#: incidencedialog.cpp:283
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (M)"
 
-#: incidencedialog.cpp:283
+#: incidencedialog.cpp:286
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (A)"
 
-#: incidencedialog.cpp:286
+#: incidencedialog.cpp:289
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (E)"
 
-#: incidencedialog.cpp:320
+#: incidencedialog.cpp:323
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Impossibile trovare il modello «%1»."
 
-#: incidencedialog.cpp:326
+#: incidencedialog.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Errore di caricamento per il modello «%1»."
 
-#: incidencedialog.cpp:332
+#: incidencedialog.cpp:335
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Il modello non contiene un'occorrenza valida."
 
-#: incidencedialog.cpp:340
+#: incidencedialog.cpp:343
 #, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "Nuovo da modello: %1"
 
-#: incidencedialog.cpp:433
+#: incidencedialog.cpp:436
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "Alle&gati (%1)"
 
-#: incidencedialog.cpp:435
+#: incidencedialog.cpp:438
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Alle&gati"
 
-#: incidencedialog.cpp:442
+#: incidencedialog.cpp:445
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&Partecipanti (%1)"
 
-#: incidencedialog.cpp:444
+#: incidencedialog.cpp:447
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&Partecipanti"
 
-#: incidencedialog.cpp:451
+#: incidencedialog.cpp:454
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "&Risorse (%1)"
 
-#: incidencedialog.cpp:453
+#: incidencedialog.cpp:456
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "&Risorse"
 
-#: incidencedialog.cpp:475
+#: incidencedialog.cpp:478
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1005,25 +1005,25 @@ msgstr ""
 "\n"
 " Motivo: %1"
 
-#: incidencedialog.cpp:479
+#: incidencedialog.cpp:482
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "Riprova"
 
-#: incidencedialog.cpp:499
+#: incidencedialog.cpp:502
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "Da fare"
 
-#: incidencedialog.cpp:501
+#: incidencedialog.cpp:504
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "Evento"
 
-#: incidencedialog.cpp:507
+#: incidencedialog.cpp:510
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1038,55 +1038,55 @@ msgstr ""
 "nella cartella sbagliata.</para><para>Vuoi impostare il calendario "
 "predefinito %2 a <resource>%3</resource>?</para>"
 
-#: incidencedialog.cpp:517
+#: incidencedialog.cpp:520
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Imposta il calendario predefinito %1?"
 
-#: incidencedialog.cpp:518
+#: incidencedialog.cpp:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Imposta come predefinito"
 
-#: incidencedialog.cpp:519
+#: incidencedialog.cpp:522
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Non impostare"
 
-#: incidencedialog.cpp:715
+#: incidencedialog.cpp:718
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Salva le modifiche"
 
-#: incidencedialog.cpp:716
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Salva le modifiche e chiudi la finestra di dialogo"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:720
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Scarta le modifiche e chiudi la finestra di dialogo"
 
-#: incidencedialog.cpp:721
+#: incidencedialog.cpp:724
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&Modelli…"
 
-#: incidencedialog.cpp:723
+#: incidencedialog.cpp:726
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Gestisci i modelli per questo oggetto"
 
-#: incidencedialog.cpp:725
+#: incidencedialog.cpp:728
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1099,25 +1099,25 @@ msgstr ""
 "facile e veloce la creazione di nuovi oggetti inserendo automaticamente "
 "nell'editor un'insieme di valori predefiniti prescelti."
 
-#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
+#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Vuoi davvero annullare l'operazione?"
 
-#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
+#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "Conferma KOrganizer"
 
-#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
+#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Annulla modifica"
 
-#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
+#: incidencedialog.cpp:829 incidencedialog.cpp:854 incidencedialog.cpp:874
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1442,13 +1442,13 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Impossibile collegarsi al servizio di posta elettronica"
 
-#: resourcemanagement.cpp:95
+#: resourcemanagement.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Gestione delle risorse"
 
-#: resourcemanagement.cpp:100
+#: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
@@ -2846,19 +2846,19 @@ msgstr ""
 msgid "Apply"
 msgstr "Applica"
 
-#: visualfreebusywidget.cpp:140
+#: visualfreebusywidget.cpp:143
 #, kde-format
 msgctxt "@label"
 msgid "Scale: "
 msgstr "Scala: "
 
-#: visualfreebusywidget.cpp:144
+#: visualfreebusywidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
 msgstr "Imposta il livello di ingrandimento del grafico di Gantt"
 
-#: visualfreebusywidget.cpp:146
+#: visualfreebusywidget.cpp:149
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2875,43 +2875,43 @@ msgstr ""
 "seleziona l'intervallo più appropriato per l'evento o la cosa da fare "
 "attuale."
 
-#: visualfreebusywidget.cpp:153
+#: visualfreebusywidget.cpp:156
 #, kde-format
 msgctxt "@item:inlistbox range in hours"
 msgid "Hour"
 msgstr "Ora"
 
-#: visualfreebusywidget.cpp:154
+#: visualfreebusywidget.cpp:157
 #, kde-format
 msgctxt "@item:inlistbox range in days"
 msgid "Day"
 msgstr "Giorno"
 
-#: visualfreebusywidget.cpp:155
+#: visualfreebusywidget.cpp:158
 #, kde-format
 msgctxt "@item:inlistbox range in weeks"
 msgid "Week"
 msgstr "Settimana"
 
-#: visualfreebusywidget.cpp:156
+#: visualfreebusywidget.cpp:159
 #, kde-format
 msgctxt "@item:inlistbox range in months"
 msgid "Month"
 msgstr "Mese"
 
-#: visualfreebusywidget.cpp:157
+#: visualfreebusywidget.cpp:160
 #, kde-format
 msgctxt "@item:inlistbox range is computed automatically"
 msgid "Automatic"
 msgstr "Automatico"
 
-#: visualfreebusywidget.cpp:162
+#: visualfreebusywidget.cpp:165
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
 msgstr "Centra all'avvio"
 
-#: visualfreebusywidget.cpp:163
+#: visualfreebusywidget.cpp:166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
@@ -2919,7 +2919,7 @@ msgstr ""
 "Centra il diagramma di Gantt rispetto all'orario o alla data di inizio "
 "dell'evento"
 
-#: visualfreebusywidget.cpp:165
+#: visualfreebusywidget.cpp:168
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2929,19 +2929,19 @@ msgstr ""
 "Fai clic qui per centrare il diagramma di Gantt rispetto all'orario o alla "
 "data di inizio di questo evento."
 
-#: visualfreebusywidget.cpp:172
+#: visualfreebusywidget.cpp:175
 #, kde-format
 msgctxt "@action:button"
 msgid "Pick Date"
 msgstr "Prendi data"
 
-#: visualfreebusywidget.cpp:174
+#: visualfreebusywidget.cpp:177
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
 msgstr "Sposta l'evento in una data in cui tutti i partecipanti sono liberi"
 
-#: visualfreebusywidget.cpp:177
+#: visualfreebusywidget.cpp:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2951,19 +2951,19 @@ msgstr ""
 "Fai clic qui per spostare un evento in una data in cui tutti i partecipanti "
 "sono liberi in base alle loro liste libero/occupato."
 
-#: visualfreebusywidget.cpp:186
+#: visualfreebusywidget.cpp:189
 #, kde-format
 msgctxt "@action:button reload freebusy data"
 msgid "Reload"
 msgstr "Ricarica"
 
-#: visualfreebusywidget.cpp:187
+#: visualfreebusywidget.cpp:190
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
 msgstr "Ricarica le informazioni libero/occupato per tutti i partecipanti"
 
-#: visualfreebusywidget.cpp:189
+#: visualfreebusywidget.cpp:192
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -2973,25 +2973,25 @@ msgstr ""
 "Fare clic qui farà sì che le informazioni libero/occupato per tutti i "
 "partecipanti vengano ricaricate dai server corrispondenti."
 
-#: visualfreebusywidget.cpp:200
+#: visualfreebusywidget.cpp:203
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
 msgstr "Mostra un elenco ad albero di tutti i dati"
 
-#: visualfreebusywidget.cpp:201
+#: visualfreebusywidget.cpp:204
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
 msgstr "Mostra un elenco ad albero di tutti i dati"
 
-#: visualfreebusywidget.cpp:207
+#: visualfreebusywidget.cpp:210
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
 msgstr "Mostra lo stato di libero/occupato per tutti i partecipanti"
 
-#: visualfreebusywidget.cpp:209
+#: visualfreebusywidget.cpp:212
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
