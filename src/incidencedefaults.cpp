@@ -48,7 +48,7 @@ public:
     KCalendarCore::Incidence::Ptr mRelatedIncidence;
     QDateTime mStartDt;
     QDateTime mEndDt;
-    bool mCleanupTemporaryFiles;
+    bool mCleanupTemporaryFiles = false;
 
     /// Methods
     [[nodiscard]] KCalendarCore::Person organizerAsPerson() const;
