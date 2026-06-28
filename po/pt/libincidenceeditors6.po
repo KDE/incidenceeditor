@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:44+0000\n"
+"POT-Creation-Date: 2026-06-28 00:44+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -1182,43 +1182,43 @@ msgid "Do Not Cancel"
 msgstr "Não Cancelar"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:12
+#: incidenceeditor.kcfg:7
 #, kde-format
 msgid "Default Email Attachment Method"
 msgstr "Método de Anexação Predefinida do E-Mail"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:13
+#: incidenceeditor.kcfg:8
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
 msgstr "Escolha a forma predefinida de anexar os e-mails largados num evento"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:14
+#: incidenceeditor.kcfg:9
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr "A forma predefinida de anexar os e-mails largados num evento"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:17
+#: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Always ask"
 msgstr "Perguntar sempre"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:20
+#: incidenceeditor.kcfg:15
 #, kde-format
 msgid "Only attach link to message"
 msgstr "Só anexar a ligação à mensagem"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:23
+#: incidenceeditor.kcfg:18
 #, kde-format
 msgid "Attach complete message"
 msgstr "Anexar a mensagem completa"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:26
+#: incidenceeditor.kcfg:21
 #, kde-format
 msgid "Attach message without attachments"
 msgstr "Anexar a mensagem sem anexos"

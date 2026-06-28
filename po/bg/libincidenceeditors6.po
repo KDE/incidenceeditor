@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:44+0000\n"
+"POT-Creation-Date: 2026-06-28 00:44+0000\n"
 "PO-Revision-Date: 2026-05-28 22:47+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1116,44 +1116,44 @@ msgid "Do Not Cancel"
 msgstr "Да не се отменя"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:12
+#: incidenceeditor.kcfg:7
 #, kde-format
 msgid "Default Email Attachment Method"
 msgstr "Метод за прикачване на имейл по подразбиране"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:13
+#: incidenceeditor.kcfg:8
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
 msgstr ""
 "Изберете начина по подразбиране за прикачване на завлечени имейли към събитие"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:14
+#: incidenceeditor.kcfg:9
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr "Стандартният начин за прикачване на завлечени имейли към събитие"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:17
+#: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Always ask"
 msgstr "Запитване винаги"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:20
+#: incidenceeditor.kcfg:15
 #, kde-format
 msgid "Only attach link to message"
 msgstr "Прикачване само на връзка към съобщение"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:23
+#: incidenceeditor.kcfg:18
 #, kde-format
 msgid "Attach complete message"
 msgstr "Прикачване на пълно съобщение"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:26
+#: incidenceeditor.kcfg:21
 #, kde-format
 msgid "Attach message without attachments"
 msgstr "Прикачване на съобщение без прикачени файлове"

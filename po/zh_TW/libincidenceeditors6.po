@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:44+0000\n"
+"POT-Creation-Date: 2026-06-28 00:44+0000\n"
 "PO-Revision-Date: 2026-05-12 02:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1091,43 +1091,43 @@ msgid "Do Not Cancel"
 msgstr "不要取消"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:12
+#: incidenceeditor.kcfg:7
 #, kde-format
 msgid "Default Email Attachment Method"
 msgstr "預設電子郵件附加方法"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:13
+#: incidenceeditor.kcfg:8
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
 msgstr "選擇將電子郵件附加到事件的預設方法"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:14
+#: incidenceeditor.kcfg:9
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr "將電子郵件附加到事件的預設方法"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:17
+#: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Always ask"
 msgstr "總是詢問"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:20
+#: incidenceeditor.kcfg:15
 #, kde-format
 msgid "Only attach link to message"
 msgstr "只附加連結"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:23
+#: incidenceeditor.kcfg:18
 #, kde-format
 msgid "Attach complete message"
 msgstr "附加完整的信件"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:26
+#: incidenceeditor.kcfg:21
 #, kde-format
 msgid "Attach message without attachments"
 msgstr "附加信件但不含信件的附加檔"

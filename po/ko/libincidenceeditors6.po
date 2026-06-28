@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:44+0000\n"
+"POT-Creation-Date: 2026-06-28 00:44+0000\n"
 "PO-Revision-Date: 2026-06-06 11:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1096,43 +1096,43 @@ msgid "Do Not Cancel"
 msgstr "취소하지 않기"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:12
+#: incidenceeditor.kcfg:7
 #, kde-format
 msgid "Default Email Attachment Method"
 msgstr "기본 이메일 첨부 방식"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:13
+#: incidenceeditor.kcfg:8
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
 msgstr "이벤트에 끌어다 놓은 메일을 첨부할 기본 방식"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:14
+#: incidenceeditor.kcfg:9
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
 msgstr "이벤트에 끌어다 놓은 메일을 첨부할 기본 방식"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:17
+#: incidenceeditor.kcfg:12
 #, kde-format
 msgid "Always ask"
 msgstr "항상 묻기"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:20
+#: incidenceeditor.kcfg:15
 #, kde-format
 msgid "Only attach link to message"
 msgstr "메시지로 가는 링크만 첨부"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:23
+#: incidenceeditor.kcfg:18
 #, kde-format
 msgid "Attach complete message"
 msgstr "전체 메시지 첨부"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
-#: incidenceeditor.kcfg:26
+#: incidenceeditor.kcfg:21
 #, kde-format
 msgid "Attach message without attachments"
 msgstr "첨부 없이 메시지 첨부"
