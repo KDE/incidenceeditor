@@ -100,7 +100,6 @@ public:
     Akonadi::Collection::Id mDefaultCalendarId = -1;
     bool mIsGoogleCollection = false;
 
-    /* cppcheck-suppress functionStatic */
     [[nodiscard]] static QString typeToString(const int type);
 
     IncidenceDialogPrivate(Akonadi::IncidenceChanger *changer, IncidenceDialog *qq);

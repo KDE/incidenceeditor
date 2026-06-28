@@ -735,8 +735,7 @@ QString IncidenceRecurrence::numberToString(int number) const
     // The code in here was adapted from an article by Johnathan Wood, see:
     // https://www.blackbeltcoder.com/Articles/strings/converting-numbers-to-ordinal-strings
 
-    /* cppcheck-suppress constVariable */
-    static QString _numSuffixes[] = {u"th"_s, u"st"_s, u"nd"_s, u"rd"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s};
+    const static QString _numSuffixes[] = {u"th"_s, u"st"_s, u"nd"_s, u"rd"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s, u"th"_s};
 
     int const i = (number % 100);
     int const j = (i > 10 && i < 20) ? 0 : (number % 10);
@@ -953,7 +952,6 @@ QBitArray IncidenceRecurrence::weekday() const
 
 int IncidenceRecurrence::weekdayCountForMonth(const QDate &date) const
 {
-    /* cppcheck-suppress assertWithSideEffect */
     Q_ASSERT(date.isValid());
     // This methods returns how often the weekday specified by @param date occurs
     // in the month represented by @param date.
