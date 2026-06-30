@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-30 00:44+0000\n"
 "PO-Revision-Date: 2026-05-27 06:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -840,19 +840,19 @@ msgstr ""
 "ამ დაგეგმილის დრო მის დაწყებამდეა.\n"
 "შეასწორეთ დრო და თარიღი."
 
-#: incidencedefaults.cpp:69
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "(სწორი) იდენტიფიკატორები აღმოჩენილი არაა"
 
-#: incidencedefaults.cpp:346
+#: incidencedefaults.cpp:345
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[ბინარული მონაცემები]"
 
-#: incidencedefaults.cpp:476
+#: incidencedefaults.cpp:475
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
@@ -870,121 +870,121 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "მდიდარი ტექსტის გამორთვა"
 
-#: incidencedialog.cpp:234
+#: incidencedialog.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "ჯერ აირჩიეთ სწორი კოლექცია."
 
-#: incidencedialog.cpp:257
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "შემხსენებელი (%1)"
 
-#: incidencedialog.cpp:259
+#: incidencedialog.cpp:258
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "შემხსენებელი"
 
-#: incidencedialog.cpp:267
+#: incidencedialog.cpp:266
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "&გამეორება"
 
-#: incidencedialog.cpp:277
+#: incidencedialog.cpp:276
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (დ)"
 
-#: incidencedialog.cpp:280
+#: incidencedialog.cpp:279
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (კ)"
 
-#: incidencedialog.cpp:283
+#: incidencedialog.cpp:282
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (თ)"
 
-#: incidencedialog.cpp:286
+#: incidencedialog.cpp:285
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (წ)"
 
-#: incidencedialog.cpp:289
+#: incidencedialog.cpp:288
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (გ)"
 
-#: incidencedialog.cpp:323
+#: incidencedialog.cpp:322
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "ვერ ვიპოვე ნიმუში '%1'."
 
-#: incidencedialog.cpp:329
+#: incidencedialog.cpp:328
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "შეცდომა ნიმუშის ფაილის '%1' ჩატვირთვისას."
 
-#: incidencedialog.cpp:335
+#: incidencedialog.cpp:334
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "ნიმუში სწორ ინციდენტს არ შეიცავს."
 
-#: incidencedialog.cpp:343
+#: incidencedialog.cpp:342
 #, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "ახალი ნიმუშიდან: %1"
 
-#: incidencedialog.cpp:436
+#: incidencedialog.cpp:435
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "&მიმაგრებული ფაილები (%1)"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:437
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "&მიმაგრებული ფაილები"
 
-#: incidencedialog.cpp:445
+#: incidencedialog.cpp:444
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&დამსწრეები (%1)"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:446
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&დამსწრეები"
 
-#: incidencedialog.cpp:454
+#: incidencedialog.cpp:453
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "&რესურსები (%1)"
 
-#: incidencedialog.cpp:456
+#: incidencedialog.cpp:455
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "&რესურსები"
 
-#: incidencedialog.cpp:478
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -996,25 +996,25 @@ msgstr ""
 "\n"
 "მიზეზი: %1"
 
-#: incidencedialog.cpp:482
+#: incidencedialog.cpp:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "გამეორება"
 
-#: incidencedialog.cpp:502
+#: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "გეგმა"
 
-#: incidencedialog.cpp:504
+#: incidencedialog.cpp:503
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "მოვლენა"
 
-#: incidencedialog.cpp:510
+#: incidencedialog.cpp:509
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1029,55 +1029,55 @@ msgstr ""
 "para><para>გნებავთ თქვენს ნაგულისხმევ %2-ის კალენდრად დააყენოთ<resource>%3</"
 "resource>?</para>"
 
-#: incidencedialog.cpp:520
+#: incidencedialog.cpp:519
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "დავაყენო ნაგულისხმევი %1-ის კალენდარი?"
 
-#: incidencedialog.cpp:521
+#: incidencedialog.cpp:520
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "ნაგულისხმევად დაყენება"
 
-#: incidencedialog.cpp:522
+#: incidencedialog.cpp:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "არ დააყენო"
 
-#: incidencedialog.cpp:718
+#: incidencedialog.cpp:717
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "მიმდინარე ცვლილებების შენახვა"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:718
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "ცვლილებების შენახვა და ფანჯრის დახურვა"
 
-#: incidencedialog.cpp:720
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "ცვლილებების მოცილება და ფანჯრის დახურვა"
 
-#: incidencedialog.cpp:724
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&ნიმუშები…"
 
-#: incidencedialog.cpp:726
+#: incidencedialog.cpp:725
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "ნიმუშების მართვა ამ ელემენტისთვის"
 
-#: incidencedialog.cpp:728
+#: incidencedialog.cpp:727
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1089,25 +1089,25 @@ msgstr ""
 "დაგეხმარებათ. ნიმუშებს შეუძლია, ახალი ელემენტების შექმნა გაამარტივოს და "
 "გაასწრაფოს, რედაქტორში ზოგიერთი მნიშვნელობის ავტომატური შევსებით."
 
-#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
+#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "ნამდვილად გსურთ ამ ამოცანის გაუქმება?"
 
-#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
+#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer -ის დასტური"
 
-#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
+#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "ჩასწორების გაუქმება"
 
-#: incidencedialog.cpp:829 incidencedialog.cpp:854 incidencedialog.cpp:874
+#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-28 00:44+0000\n"
+"POT-Creation-Date: 2026-06-30 00:44+0000\n"
 "PO-Revision-Date: 2026-06-06 11:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -823,19 +823,19 @@ msgstr ""
 "할 일이 시작하기 전에 종료됩니다.\n"
 "날짜와 시간을 수정하십시오."
 
-#: incidencedefaults.cpp:69
+#: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
 msgstr "(올바른) 프로필을 찾을 수 없음"
 
-#: incidencedefaults.cpp:346
+#: incidencedefaults.cpp:345
 #, kde-format
 msgctxt "@label attachment contains binary data"
 msgid "[Binary data]"
 msgstr "[이진 데이터]"
 
-#: incidencedefaults.cpp:476
+#: incidencedefaults.cpp:475
 #, kde-format
 msgctxt "@label invalid email address marker"
 msgid "invalid@email.address"
@@ -853,121 +853,121 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "서식 있는 텍스트 비활성화"
 
-#: incidencedialog.cpp:234
+#: incidencedialog.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "먼저 올바른 모음집을 선택하십시오."
 
-#: incidencedialog.cpp:257
+#: incidencedialog.cpp:256
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "알림(%1)"
 
-#: incidencedialog.cpp:259
+#: incidencedialog.cpp:258
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "알림"
 
-#: incidencedialog.cpp:267
+#: incidencedialog.cpp:266
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "반복(&U)"
 
-#: incidencedialog.cpp:277
+#: incidencedialog.cpp:276
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr "(일)"
 
-#: incidencedialog.cpp:280
+#: incidencedialog.cpp:279
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr "(주)"
 
-#: incidencedialog.cpp:283
+#: incidencedialog.cpp:282
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr "(월)"
 
-#: incidencedialog.cpp:286
+#: incidencedialog.cpp:285
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr "(연)"
 
-#: incidencedialog.cpp:289
+#: incidencedialog.cpp:288
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr "(외)"
 
-#: incidencedialog.cpp:323
+#: incidencedialog.cpp:322
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "'%1' 템플릿을 찾을 수 없습니다."
 
-#: incidencedialog.cpp:329
+#: incidencedialog.cpp:328
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "'%1' 템플릿 파일을 불러오는 중 오류가 발생했습니다."
 
-#: incidencedialog.cpp:335
+#: incidencedialog.cpp:334
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "템플릿에 올바른 항목이 없습니다."
 
-#: incidencedialog.cpp:343
+#: incidencedialog.cpp:342
 #, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "템플릿에서 새로 만들기: %1"
 
-#: incidencedialog.cpp:436
+#: incidencedialog.cpp:435
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "첨부(%1)(&H)"
 
-#: incidencedialog.cpp:438
+#: incidencedialog.cpp:437
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "첨부(&H)"
 
-#: incidencedialog.cpp:445
+#: incidencedialog.cpp:444
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "참석자(%1)(&A)"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:446
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "참석자(&A)"
 
-#: incidencedialog.cpp:454
+#: incidencedialog.cpp:453
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "리소스(%1)(&R)"
 
-#: incidencedialog.cpp:456
+#: incidencedialog.cpp:455
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "리소스(&R)"
 
-#: incidencedialog.cpp:478
+#: incidencedialog.cpp:477
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -979,25 +979,25 @@ msgstr ""
 "\n"
 " 이유: %1"
 
-#: incidencedialog.cpp:482
+#: incidencedialog.cpp:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "다시 시도"
 
-#: incidencedialog.cpp:502
+#: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "할 일"
 
-#: incidencedialog.cpp:504
+#: incidencedialog.cpp:503
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "이벤트"
 
-#: incidencedialog.cpp:510
+#: incidencedialog.cpp:509
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1011,55 +1011,55 @@ msgstr ""
 "니다.</para><para>기본 %2 캘린더를 <resource>%3</resource>(으)로 설정하시겠습"
 "니까?</para>"
 
-#: incidencedialog.cpp:520
+#: incidencedialog.cpp:519
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "기본 %1 캘린더를 설정하시겠습니까?"
 
-#: incidencedialog.cpp:521
+#: incidencedialog.cpp:520
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "기본값으로 설정"
 
-#: incidencedialog.cpp:522
+#: incidencedialog.cpp:521
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "설정하지 않기"
 
-#: incidencedialog.cpp:718
+#: incidencedialog.cpp:717
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "현재 변경 사항 저장"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:718
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "변경 사항을 저장하고 대화 상자 닫기"
 
-#: incidencedialog.cpp:720
+#: incidencedialog.cpp:719
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "변경 사항을 버리고 대화 상자 닫기"
 
-#: incidencedialog.cpp:724
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "템플릿(&T)…"
 
-#: incidencedialog.cpp:726
+#: incidencedialog.cpp:725
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "이 항목의 템플릿 관리"
 
-#: incidencedialog.cpp:728
+#: incidencedialog.cpp:727
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1071,25 +1071,25 @@ msgstr ""
 "면 자주 사용하는 기본값을 자동으로 편집기에 입력해서 새 항목을 쉽고 빠르게 만"
 "들 수 있습니다."
 
-#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
+#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "정말로 취소하시겠습니까?"
 
-#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
+#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 확인"
 
-#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
+#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "편집 취소"
 
-#: incidencedialog.cpp:829 incidencedialog.cpp:854 incidencedialog.cpp:874
+#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
