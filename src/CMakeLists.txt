@@ -234,3 +234,20 @@ endif()
 
 ecm_qt_install_logging_categories(EXPORT INCIDENCEEDITOR FILE incidenceeditor.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 ecm_generate_qdoc(KPim6IncidenceEditor incidenceeditor.qdocconf)
+
+ecm_add_installed_library_check(KPim6IncidenceEditor
+    PACKAGE_NAME "KPim6IncidenceEditor"
+    PACKAGE_VERSION ${INCIDENCEEDITOR_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6IncidenceEditor
+    HEADERS          ${IncidenceEditor_HEADERS}
+    PREFIX incidenceeditor
+)
+
+ecm_installed_library_check_include_strings(KPim6IncidenceEditor
+   HEADERS
+   ${IncidenceEditor_CamelCase_HEADERS}
+    PREFIX IncidenceEditor
+)
