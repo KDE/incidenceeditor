@@ -60,7 +60,6 @@ public:
     Akonadi::IncidenceChanger *mChanger = nullptr;
 
     ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq);
-    void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &);
     void itemFetchResult(KJob *job);
     void itemMoveResult(KJob *job);
     void onModifyFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
@@ -70,6 +69,9 @@ public:
     void setupMonitor();
     void moveJobFinished(KJob *job);
     void setItem(const Akonadi::Item &item);
+
+public Q_SLOTS:
+    void itemChanged(const Akonadi::Item &, const QSet<QByteArray> &);
 };
 
 ItemEditorPrivate::ItemEditorPrivate(Akonadi::IncidenceChanger *changer, EditorItemManager *qq)
@@ -215,7 +217,7 @@ void ItemEditorPrivate::onCreateFinished(const Akonadi::Item &item, Akonadi::Inc
 
 void ItemEditorPrivate::setupMonitor()
 {
-    // Q_Q(EditorItemManager);
+    Q_Q(EditorItemManager); // NOLINT(misc-const-correctness)
     delete mItemMonitor;
     mItemMonitor = new Akonadi::Monitor;
     mItemMonitor->setObjectName("EditorItemManagerMonitor"_L1);
@@ -224,40 +226,13 @@ void ItemEditorPrivate::setupMonitor()
     if (mItem.isValid()) {
         mItemMonitor->setItemMonitored(mItem);
     }
-
-    //   q->connect(mItemMonitor, SIGNAL(itemChanged(Akonadi::Item,QSet<QByteArray>)),
-    //               SLOT(itemChanged(Akonadi::Item,QSet<QByteArray>)));
+    q->connect(mItemMonitor, &Akonadi::Monitor::itemChanged, q_ptr, [this](const Akonadi::Item &item, const QSet<QByteArray> &parts) {
+        itemChanged(item, parts);
+    });
 }
 
-void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, const QSet<QByteArray> &partIdentifiers)
+void ItemEditorPrivate::itemChanged(const Akonadi::Item &item, [[maybe_unused]] const QSet<QByteArray> &partIdentifiers)
 {
-    Q_Q(EditorItemManager);
-    if (mItemUi->containsPayloadIdentifiers(partIdentifiers)) {
-        QPointer<QMessageBox> const dlg = new QMessageBox;
-        dlg->setIcon(QMessageBox::Question);
-        dlg->setInformativeText(
-            i18n("The item has been changed by another application.\n"
-                 "What should be done?"));
-        dlg->addButton(i18nc("@action:button", "Take over changes"), QMessageBox::AcceptRole);
-        dlg->addButton(i18nc("@action:button", "Ignore and Overwrite changes"), QMessageBox::RejectRole);
-
-        if (dlg->exec() == QMessageBox::AcceptRole) {
-            auto job = new Akonadi::ItemFetchJob(mItem);
-            job->setFetchScope(mFetchScope);
-
-            mItem = item;
-
-            q->load(mItem);
-        } else {
-            mItem.setRevision(item.revision());
-            q->save();
-        }
-
-        delete dlg;
-    }
-
-    // Overwrite or not, we need to update the revision and the remote id to be able
-    // to store item later on.
     mItem.setRevision(item.revision());
 }
 
