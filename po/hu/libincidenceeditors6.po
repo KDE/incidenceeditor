@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-06-18 21:47+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -272,27 +272,6 @@ msgstr "Név"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-mail"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Az elemet egy másik alkalmazás megváltoztatta.\n"
-"Mi legyen?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Változtatások átvétele"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Mellőzés és változtatások felülírása"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2909,6 +2888,21 @@ msgstr ""
 "Megjeleníti az összes résztvevő szabad/foglalt állapotát. Duplán kattintva "
 "egy részvevő bejegyzésére a listában megadhatja a foglaltsági információi "
 "helyét."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Az elemet egy másik alkalmazás megváltoztatta.\n"
+#~ "Mi legyen?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Változtatások átvétele"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Mellőzés és változtatások felülírása"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

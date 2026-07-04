@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -315,29 +315,6 @@ msgstr "Nome"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-mail"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"O item foi alterado por outra aplicação.\n"
-"O que deseja fazer?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Sobrepor as alterações"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorar e sobrepor as alterações"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3006,6 +2983,25 @@ msgstr ""
 "Mostra a informação de Livre/Ocupado de todos os participantes. Se fizer "
 "duplo-click no item de um participante, poderá indicar a localização da "
 "informação de Livre/Ocupado dele."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "O item foi alterado por outra aplicação.\n"
+#~ "O que deseja fazer?"
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Sobrepor as alterações"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorar e sobrepor as alterações"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

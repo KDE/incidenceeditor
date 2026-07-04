@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-04-26 21:47+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -262,27 +262,6 @@ msgstr "이름"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "이메일"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"다른 앱에서 항목을 변경했습니다.\n"
-"무엇을 하시겠습니까?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "변경 사항 적용"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "무시하고 변경 사항 덮어쓰기"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2854,6 +2833,21 @@ msgid ""
 msgstr ""
 "모든 참석자의 바쁨/한가함 상태를 표시합니다. 목록에서 참가자 항목을 두 번 클"
 "릭하면 바쁨/한가함 정보 위치를 입력할 수 있습니다."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "다른 앱에서 항목을 변경했습니다.\n"
+#~ "무엇을 하시겠습니까?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "변경 사항 적용"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "무시하고 변경 사항 덮어쓰기"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

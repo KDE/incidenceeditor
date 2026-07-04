@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-03-07 11:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -295,27 +295,6 @@ msgstr "الاسم"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "البريد الإلكترونيّ"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"غيّر تطيبق آخر العنصر.\n"
-"ما الذي يجب فعله؟"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "خُذ بالتّغييرات"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "تجاهل التّغييرات واكتب فوقها"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2935,6 +2914,21 @@ msgid ""
 msgstr ""
 "يعرض حالة متفرّغ/مشغول لكلّ الحضور. يتيح لك النّقر مزدوجًا على أحد الحضور سيتيح "
 "لك إدخال مكان معلومات متفرّغ/مشغول له."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "غيّر تطيبق آخر العنصر.\n"
+#~ "ما الذي يجب فعله؟"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "خُذ بالتّغييرات"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "تجاهل التّغييرات واكتب فوقها"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-03-05 10:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -287,27 +287,6 @@ msgstr "Ime"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-pošta"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Drug program je spremenil ta predmet.\n"
-"Kaj želite storiti?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Prevzemi spremembe"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Prezri in prepiši spremembe"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2936,6 +2915,21 @@ msgstr ""
 "Pokaže stanje prostosti/zaposlenosti vseh udeležencev. Z dvoklikom na "
 "udeleženca boste lahko vnesli mesto njegovih podatkov o prostosti/"
 "zaposlenosti."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Drug program je spremenil ta predmet.\n"
+#~ "Kaj želite storiti?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Prevzemi spremembe"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Prezri in prepiši spremembe"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

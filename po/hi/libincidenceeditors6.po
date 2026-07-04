@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2024-12-15 17:37+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -270,25 +270,6 @@ msgstr "नाम"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "ईमेल"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr "आइटम को किसी अन्य एप्लिकेशन द्वारा बदल दिया गया है। क्या किया जाना चाहिए?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "परिवर्तनों को अपनाएं"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "परिवर्तनों को अनदेखा करें और अधिलेखित करें"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2875,6 +2856,19 @@ msgid ""
 msgstr ""
 "सभी उपस्थित लोगों की खाली/व्यस्त स्थिति दिखाता है। सूची में किसी उपस्थित व्यक्ति की "
 "प्रविष्टि पर डबल-क्लिक करने से आप उनकी खाली/व्यस्त जानकारी का स्थान दर्ज कर सकेंगे।"
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr "आइटम को किसी अन्य एप्लिकेशन द्वारा बदल दिया गया है। क्या किया जाना चाहिए?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "परिवर्तनों को अपनाएं"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "परिवर्तनों को अनदेखा करें और अधिलेखित करें"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -273,29 +273,6 @@ msgstr "Nimi"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-post"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Teine rakendus on elementi muutnud.\n"
-"Mida ette võtta?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Võta muudatused üle"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Eira muudatusi ja kirjuta nad üle"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2960,6 +2937,25 @@ msgid ""
 msgstr ""
 "Näitab kõigi osalejate vaba/hõivatud infot. Topeltklõps osaleja nimel lubab "
 "sisestada tema vaba/hõivatud info asukoha."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Teine rakendus on elementi muutnud.\n"
+#~ "Mida ette võtta?"
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Võta muudatused üle"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Eira muudatusi ja kirjuta nad üle"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -270,27 +270,6 @@ msgstr "नामः"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "ईमेल"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"अन्येन अनुप्रयोगेन द्रव्यं परिवर्तितम् अस्ति।\n"
-"किं कर्तव्यम् ?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "परिवर्तनं स्वीकुर्वन्तु"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "परिवर्तनं Ignore and Overwrite कुर्वन्तु"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2886,6 +2865,21 @@ msgid ""
 msgstr ""
 "सर्वेषां उपस्थितानां Free/Busy इति स्थितिं दर्शयति। सूचीयां उपस्थितस्य प्रविष्टौ द्विवारं "
 "क्लिक् करणेन तेषां निःशुल्क/व्यस्तसूचनायाः स्थानं प्रविष्टुं शक्यते।"
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "अन्येन अनुप्रयोगेन द्रव्यं परिवर्तितम् अस्ति।\n"
+#~ "किं कर्तव्यम् ?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "परिवर्तनं स्वीकुर्वन्तु"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "परिवर्तनं Ignore and Overwrite कुर्वन्तु"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

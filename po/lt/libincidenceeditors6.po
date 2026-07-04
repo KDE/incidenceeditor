@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2013-08-11 10:17+0300\n"
 "Last-Translator: Liudas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -311,27 +311,6 @@ msgstr ""
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Siųsti laišką"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Priimti pokyčius"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Praleisti ir perrašyti pakeitimus"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3026,6 +3005,18 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Priimti pokyčius"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Praleisti ir perrašyti pakeitimus"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

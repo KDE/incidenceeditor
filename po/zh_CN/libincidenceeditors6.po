@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -261,27 +261,6 @@ msgstr "姓名"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "电子邮件"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"此项目已被另一个应用程序更改。\n"
-"该怎么办？"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "应用更改"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "忽略并覆盖更改"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2820,3 +2799,18 @@ msgid ""
 msgstr ""
 "显示所有参与者的忙/闲状态。双击一名列表中的参与者将允许您输入他们的忙/闲信息"
 "字段。"
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "此项目已被另一个应用程序更改。\n"
+#~ "该怎么办？"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "应用更改"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "忽略并覆盖更改"

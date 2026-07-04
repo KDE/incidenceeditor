@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-02-22 13:02+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -281,27 +281,6 @@ msgstr "Name"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-Mail-Adresse"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Der Eintrag wurde von einer anderen Anwendung geändert.\n"
-"Was soll getan werden?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Änderungen übernehmen"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Änderungen ignorieren und überschreiben"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2946,6 +2925,21 @@ msgid ""
 msgstr ""
 "Zeigt die Frei/Belegt-Informationen aller Teilnehmer an. Nach einem "
 "Doppelklick auf einen Eintrag können Sie den Speicherort dafür eingeben."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Der Eintrag wurde von einer anderen Anwendung geändert.\n"
+#~ "Was soll getan werden?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Änderungen übernehmen"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Änderungen ignorieren und überschreiben"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

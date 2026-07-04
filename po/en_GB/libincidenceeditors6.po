@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2024-05-23 19:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -274,27 +274,6 @@ msgstr "Name"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Email"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"The item has been changed by another application.\n"
-"What should be done?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Take over changes"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignore and Overwrite changes"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2908,6 +2887,21 @@ msgstr ""
 "Shows the Free/Busy status of all attendees. Double-clicking on an "
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Take over changes"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignore and Overwrite changes"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

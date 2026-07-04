@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-01-12 14:39+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -276,27 +276,6 @@ msgstr "Nimi"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Sähköposti"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Toinen sovellus on muuttanut kohtaa.\n"
-"Mitä tehdään?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Hyväksy muutokset"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Sivuuta ja korvaa muutokset"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2913,6 +2892,21 @@ msgid ""
 msgstr ""
 "Näyttää kaikkien osallistujien varaustilanteen. Kaksoisnapsauttamalla "
 "osallistujaa luettelosta voi syöttää heidän varaustietoihinsa paikan."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Toinen sovellus on muuttanut kohtaa.\n"
+#~ "Mitä tehdään?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Hyväksy muutokset"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Sivuuta ja korvaa muutokset"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

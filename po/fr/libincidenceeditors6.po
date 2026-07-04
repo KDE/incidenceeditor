@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-03-06 08:58+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -277,27 +277,6 @@ msgstr "Nom"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Courriel"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"L'élément a été modifié par une autre application.\n"
-"Que faut-il faire ?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Reprendre les modifications"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorer et écraser les modifications"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2947,6 +2926,21 @@ msgstr ""
 "Affiche l'état de disponibilité de tous les participants. Double-cliquer sur "
 "un participant dans la liste, vous permettra de saisir l'emplacement pour "
 "l'information de disponibilité."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "L'élément a été modifié par une autre application.\n"
+#~ "Que faut-il faire ?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Reprendre les modifications"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorer et écraser les modifications"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

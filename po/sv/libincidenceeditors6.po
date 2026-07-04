@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-07-01 14:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -272,27 +272,6 @@ msgstr "Namn"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-post"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Objektet har ändrats av ett annat program.\n"
-"Vad ska göras?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Överta ändringar"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorera och skriv över ändringar"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2914,6 +2893,21 @@ msgstr ""
 "Visar ledig-upptagen status för alla deltagare. Genom att dubbelklicka på en "
 "deltagares post i listan får du möjlighet att skriva in platsen för deras "
 "ledig-upptagen information."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Objektet har ändrats av ett annat program.\n"
+#~ "Vad ska göras?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Överta ändringar"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorera och skriv över ändringar"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

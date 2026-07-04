@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2026-03-05 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -271,27 +271,6 @@ msgstr "სახელი"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Email"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"ეს ელემენტი სხვა აპლიკაციაში შეიცვალა.\n"
-"რა ვქნა?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "ცვლილებების ხელში აღება"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "გამოტოვება და ცვლილებების თავზე გადაწერა"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2918,6 +2897,21 @@ msgstr ""
 "ყველა დამსწრის თავისუფალი/დაკავებულობის სტატუსის ჩვენება. დამსრის ჩანაწერზე "
 "ორმაგი-წკაპი სიაში საშუალებას მოგცემთ, მათი თავისუფალი/დაკავებულობის "
 "ინფორმაციის მდებარეობა მიუთითოთ."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "ეს ელემენტი სხვა აპლიკაციაში შეიცვალა.\n"
+#~ "რა ვქნა?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "ცვლილებების ხელში აღება"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "გამოტოვება და ცვლილებების თავზე გადაწერა"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 02:40+0000\n"
+"POT-Creation-Date: 2026-07-04 02:36+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -273,27 +273,6 @@ msgstr "Όνομα"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Ηλ. αλληλογραφία"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Το αντικείμενο έχει αλλάξει από άλλη εφαρμογή.\n"
-"Τι πρέπει να γίνει;"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Ανάληψη αλλαγών"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Αγνόηση και αντικατάσταση αλλαγών"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2946,6 +2925,21 @@ msgstr ""
 "Εμφανίζει την κατάσταση διαθεσιμότητας για όλους τους συμμετέχοντες. "
 "Κάνοντας διπλό κλικ σε ένα συμμετέχοντα στη λίστα θα σας επιτρέψει την "
 "εισαγωγή της τοποθεσίας των πληροφοριών διαθεσιμότητας."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Το αντικείμενο έχει αλλάξει από άλλη εφαρμογή.\n"
+#~ "Τι πρέπει να γίνει;"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Ανάληψη αλλαγών"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Αγνόηση και αντικατάσταση αλλαγών"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"
