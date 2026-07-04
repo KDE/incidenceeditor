@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2014-09-13 18:13+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -272,27 +272,6 @@ msgstr ""
 msgctxt "Attendee email"
 msgid "Email"
 msgstr ""
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Et annet program har endret elementet.\n"
-"Hva skal gjøres?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Ta over endringer"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorer og overskriv endringer"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2953,3 +2932,20 @@ msgstr ""
 "Viser alle deltakeres ledig/opptatt-status. Du kan taste inn adressen til "
 "deres ledig/opptatt-informasjon ved å dobbeltklikke på deltakerens oppføring "
 "i lista."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Et annet program har endret elementet.\n"
+#~ "Hva skal gjøres?"
+
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Ta over endringer"
+
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorer og overskriv endringer"

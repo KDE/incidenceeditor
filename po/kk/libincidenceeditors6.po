@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -290,27 +290,6 @@ msgstr ""
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Эл.поштаны жіберу"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr "Басқа бағдарлама бұған өзгеріс енгізіп қойды. Не істеу керек?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Өзгерістерді мойындау"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Өзгерістерді елемей өзінше жаза беру"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3091,6 +3070,23 @@ msgstr ""
 "Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді. Қатысушының жазуынан "
 "қос түртіп, оның Бос/Істе туралы мәліметі орналасқан адресін келтіруге "
 "болады."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr "Басқа бағдарлама бұған өзгеріс енгізіп қойды. Не істеу керек?"
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Өзгерістерді мойындау"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Өзгерістерді елемей өзінше жаза беру"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

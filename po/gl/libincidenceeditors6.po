@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2025-03-20 07:51+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -273,27 +273,6 @@ msgstr "Nome"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Correo electrónico"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Outra aplicación cambiou este elemento.\n"
-"Que quere facer?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Asumir os cambios"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorar e substituír os cambios"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2988,6 +2967,21 @@ msgstr ""
 "Amosa o estado de dispoñibilidade de todos os asistentes. Se fai dobre clic "
 "nunha entrada dos asistentes na lista permitiráselle inserir o lugar no que "
 "está información de dispoñibilidade."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Outra aplicación cambiou este elemento.\n"
+#~ "Que quere facer?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Asumir os cambios"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorar e substituír os cambios"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

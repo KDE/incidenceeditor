@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2026-03-17 10:20+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -275,25 +275,6 @@ msgstr "Název"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-mail"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Převzít změny"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorovat a přepsat změny"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2900,3 +2881,11 @@ msgid ""
 msgstr ""
 "Ukazuje informace o aktivitě všech účastníků. Dvojklik na jméno v seznamu "
 "účastníků vám umožní zadat umístění informací o aktivitě daného člověka."
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Převzít změny"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorovat a přepsat změny"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2025-03-15 10:38+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -270,27 +270,6 @@ msgstr "Nomo"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Retpoŝto"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"La elemento estis ŝanĝita de alia aplikaĵo.\n"
-"Kion fari?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Alpreni ŝanĝojn"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignori kaj Anstataŭigi ŝanĝojn"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2976,3 +2955,18 @@ msgstr ""
 "Montras la staton de Libera/Okupita de ĉiuj partoprenantoj. Duobla klako sur "
 "la enskribo de ĉeestanto en la listo permesos al vi enigi la lokon de ilia "
 "Libera/Okupita Informo."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "La elemento estis ŝanĝita de alia aplikaĵo.\n"
+#~ "Kion fari?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Alpreni ŝanĝojn"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignori kaj Anstataŭigi ŝanĝojn"

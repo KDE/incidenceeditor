@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2026-05-08 11:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -271,27 +271,6 @@ msgstr "Nomine"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-posta"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Le elemento ha essite modificate per un altere application.\n"
-"Cosa on debe facer?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Acquire modificationes"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignora e superscribe modificationes"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2990,6 +2969,21 @@ msgstr ""
 "Monstra le stato de Libere/Occupate de omne participantes. Pulsar duple vice "
 "super un entrata de un participante in le lista permittera te insertar le "
 "location de lor information de Libere/Occupate."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Le elemento ha essite modificate per un altere application.\n"
+#~ "Cosa on debe facer?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Acquire modificationes"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignora e superscribe modificationes"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2015-01-09 11:55+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -289,29 +289,6 @@ msgstr ""
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Pošalji e-mail"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Stavka je promjenjena od strane druge aplikacije.\n"
-"Sta treba učiniti?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Preuzmi promjene"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignoriši i piši preko promjena"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3127,6 +3104,25 @@ msgstr ""
 "Prikazuje Slobodno/Zauzeto stanje svih učesnika. Duplim klikanjem na prijavu "
 "učesnika u listi omogućit će da se upiše informacija da li je Slobodan/"
 "Zauzet."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Stavka je promjenjena od strane druge aplikacije.\n"
+#~ "Sta treba učiniti?"
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Preuzmi promjene"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignoriši i piši preko promjena"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

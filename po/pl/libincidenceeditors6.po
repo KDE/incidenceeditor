@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2025-11-22 22:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -283,27 +283,6 @@ msgstr "Nazwa"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Email"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Element został zmieniony przez inny program.\n"
-"Co powinno zostać zrobione?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Przyjmij zmiany"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Pomiń i zastąp zmiany"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3007,6 +2986,21 @@ msgstr ""
 "Pokazuje stan czasu wolnego/zajętego dla wszystkich uczestników. Podwójne "
 "naciśnięcie na uczestniku na liście pozwala podać miejsce jego informacji o "
 "czasie wolnym i zajętym."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Element został zmieniony przez inny program.\n"
+#~ "Co powinno zostać zrobione?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Przyjmij zmiany"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Pomiń i zastąp zmiany"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2026-05-27 11:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -272,27 +272,6 @@ msgstr "Nombre"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Correo"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"El elemento ha sido cambiado por otra aplicación.\n"
-"¿Qué debería hacerse?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Asumir los cambios"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorar y sobrescribir los cambios"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2994,3 +2973,18 @@ msgstr ""
 "Muestra el estado de disponibilidad de todos los asistentes. Si hace doble "
 "clic sobre la entrada de un asistente en la lista, podrá introducir la "
 "situación de su información de disponibilidad."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "El elemento ha sido cambiado por otra aplicación.\n"
+#~ "¿Qué debería hacerse?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Asumir los cambios"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorar y sobrescribir los cambios"

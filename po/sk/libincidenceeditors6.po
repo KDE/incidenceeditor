@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -274,27 +274,6 @@ msgstr "Názov"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-mail"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Položka bola zmenená inou aplikáciou.\n"
-"Čo sa má urobiť?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Prevziať zmeny"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Ignorovať a prepísať zmeny"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -2985,6 +2964,21 @@ msgstr ""
 "Zobrazí stav voľný/zaneprázdnený pre všetkých účastníkov. Dvojklikom na "
 "položku účastníka v zozname môžete zadať umiestnenie ich informácií voľný/"
 "zaneprázdnený."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Položka bola zmenená inou aplikáciou.\n"
+#~ "Čo sa má urobiť?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Prevziať zmeny"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Ignorovať a prepísať zmeny"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

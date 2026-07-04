@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -286,29 +286,6 @@ msgstr ""
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Nettbreef bewerken"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"En anner Programm hett den Indrag ännert.\n"
-"Wat wullt Du nu doon?"
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Take over changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Ännern övernehmen"
-
-#: editoritemmanager.cpp:242
-#, fuzzy, kde-format
-#| msgid "Ignore and Overwrite changes"
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Övergahn un Ännern överschrieven"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3121,6 +3098,25 @@ msgstr ""
 "Wiest de Free-/Bunnen-Informatschonen vun all Deelnehmers. Wenn Du op den "
 "Listindrag vun en Deelnehmer dubbelklickst, kannst Du de Steed vun sien "
 "Free-/Bunnen-Informatschonen angeven."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "En anner Programm hett den Indrag ännert.\n"
+#~ "Wat wullt Du nu doon?"
+
+#, fuzzy
+#~| msgid "Take over changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Ännern övernehmen"
+
+#, fuzzy
+#~| msgid "Ignore and Overwrite changes"
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Övergahn un Ännern överschrieven"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

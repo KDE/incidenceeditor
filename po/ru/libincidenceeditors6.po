@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2026-04-03 21:57+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -292,27 +292,6 @@ msgstr "Имя"
 msgctxt "Attendee email"
 msgid "Email"
 msgstr "Адрес эл. почты"
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-"Этот элемент был изменён другим приложением.\n"
-"Что нужно сделать?"
-
-#: editoritemmanager.cpp:241
-#, kde-format
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "Принять изменения"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
-msgstr "Игнорировать чужие изменения"
 
 #: freebusyganttproxymodel.cpp:70
 #, kde-format
@@ -3040,6 +3019,21 @@ msgid ""
 msgstr ""
 "Показывает статус занятости всех участников. Двойной щелчок на участнике "
 "позволит ввести расположение информации о занятом времени."
+
+#~ msgid ""
+#~ "The item has been changed by another application.\n"
+#~ "What should be done?"
+#~ msgstr ""
+#~ "Этот элемент был изменён другим приложением.\n"
+#~ "Что нужно сделать?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "Принять изменения"
+
+#~ msgctxt "@action:button"
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Игнорировать чужие изменения"
 
 #~ msgctxt "@option:check"
 #~ msgid "Store attachment inline"

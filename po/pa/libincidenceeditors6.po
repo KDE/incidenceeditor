@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:44+0000\n"
+"POT-Creation-Date: 2026-07-04 00:44+0000\n"
 "PO-Revision-Date: 2010-12-26 08:44+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -269,27 +269,6 @@ msgstr ""
 #, kde-format
 msgctxt "Attendee email"
 msgid "Email"
-msgstr ""
-
-#: editoritemmanager.cpp:239
-#, kde-format
-msgid ""
-"The item has been changed by another application.\n"
-"What should be done?"
-msgstr ""
-
-#: editoritemmanager.cpp:241
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save current changes"
-msgctxt "@action:button"
-msgid "Take over changes"
-msgstr "ਮੌਜੂਦਾ ਬਦਲਾਅ ਸੰਭਾਲੋ"
-
-#: editoritemmanager.cpp:242
-#, kde-format
-msgctxt "@action:button"
-msgid "Ignore and Overwrite changes"
 msgstr ""
 
 #: freebusyganttproxymodel.cpp:70
@@ -2886,3 +2865,10 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Save current changes"
+#~ msgctxt "@action:button"
+#~ msgid "Take over changes"
+#~ msgstr "ਮੌਜੂਦਾ ਬਦਲਾਅ ਸੰਭਾਲੋ"
