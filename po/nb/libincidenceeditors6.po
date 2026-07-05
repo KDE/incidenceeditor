@@ -2873,20 +2873,3 @@ msgstr ""
 "Viser alle deltakeres ledig/opptatt-status. Du kan taste inn adressen til "
 "deres ledig/opptatt-informasjon ved å dobbeltklikke på deltakerens oppføring "
 "i lista."
-
-#~ msgid ""
-#~ "The item has been changed by another application.\n"
-#~ "What should be done?"
-#~ msgstr ""
-#~ "Et annet program har endret elementet.\n"
-#~ "Hva skal gjøres?"
-
-#, fuzzy
-#~ msgctxt "@action:button"
-#~ msgid "Take over changes"
-#~ msgstr "Ta over endringer"
-
-#, fuzzy
-#~ msgctxt "@action:button"
-#~ msgid "Ignore and Overwrite changes"
-#~ msgstr "Ignorer og overskriv endringer"

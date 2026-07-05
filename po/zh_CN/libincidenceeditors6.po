@@ -2799,18 +2799,3 @@ msgid ""
 msgstr ""
 "显示所有参与者的忙/闲状态。双击一名列表中的参与者将允许您输入他们的忙/闲信息"
 "字段。"
-
-#~ msgid ""
-#~ "The item has been changed by another application.\n"
-#~ "What should be done?"
-#~ msgstr ""
-#~ "此项目已被另一个应用程序更改。\n"
-#~ "该怎么办？"
-
-#~ msgctxt "@action:button"
-#~ msgid "Take over changes"
-#~ msgstr "应用更改"
-
-#~ msgctxt "@action:button"
-#~ msgid "Ignore and Overwrite changes"
-#~ msgstr "忽略并覆盖更改"
