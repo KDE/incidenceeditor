@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2024-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Arve Eriksson <031299870@telia.com>, 2011.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2025-11-21 01:38+0100\n"
+"PO-Revision-Date: 2026-07-06 13:58+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Ange informationens plats."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google tillåter som mest fem påminnelser"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -524,6 +524,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google tillåter som mest fem påminnelser. Ta bort några påminnelser innan du "
+"fortsätter."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -849,11 +851,10 @@ msgid "Disable rich text"
 msgstr "Inaktivera formaterad text"
 
 #: incidencedialog.cpp:233
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
-msgstr "Välj först en giltig samling."
+msgstr "Välj en giltig samling först."
 
 #: incidencedialog.cpp:256
 #, kde-format
@@ -922,11 +923,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Mallen innehåller inte en giltig förekomst."
 
 #: incidencedialog.cpp:342
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Ny %1 mall"
+msgstr "Ny från mall: %1"
 
 #: incidencedialog.cpp:435
 #, kde-format
@@ -986,24 +986,16 @@ msgstr "Försök igen"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "uppgifter"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr "Händelse:"
+msgstr "händelser"
 
 #: incidencedialog.cpp:509
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1011,19 +1003,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Du har inte ställt in en standardkalender för händelser ännu.</"
-"para><para>Att ställa in en standardkalender gör att det går snabbare och "
-"lättare att skapa nya händelser med mindre risk att lagra dem i fel katalog."
-"</para><para>Vill du ställa in standardkalender för händelser till <resource>"
-"%1</resource>?</para>"
+"<para>Du har inte ställt in en standardkalender med %1 ännu.</para><para>Att "
+"ställa in en standardkalender gör att det går snabbare och lättare att skapa "
+"nya förekomster med mindre risk att lagra dem i fel katalog.</"
+"para><para>Vill du ställa in standardkalender med %2 till <resource>%3</"
+"resource>?</para>"
 
 #: incidencedialog.cpp:519
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Ställ in standardkalender?"
+msgstr "Ställ in standardkalender med %1?"
 
 #: incidencedialog.cpp:520
 #, kde-format
@@ -1504,13 +1494,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Om mallen används skrivs ändringar som har gjorts i förekomsten över. Är du "
+"säker på att du vill använda mallen?"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "Ny %1 mall"
+msgstr "Verkställ mall"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -2144,13 +2135,14 @@ msgstr "Allmänt"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Klicka här för att lägga till, välja och hantera etiketter"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Öppna en dialogruta för att välja såväl som lägga till och ta bort etiketter"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
