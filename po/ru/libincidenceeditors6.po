@@ -5,22 +5,22 @@
 # Julia Dronova <juliette.tux@gmail.com>, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2018, 2020, 2024, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2024, 2025, 2026 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-04-03 21:57+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2026-07-14 11:42+0300\n"
+"Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -353,7 +353,7 @@ msgstr "Введите расположение информации"
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google допускает не более 5 напоминаний"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -554,6 +554,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google допускает не более 5 напоминаний. Удалите избыточные напоминания, "
+"чтобы продолжить."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -957,14 +959,10 @@ msgstr "Шаблон не содержит допустимое событие."
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: incidencedialog.cpp:342
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr ""
-"Новый шаблон %1|/|Новый шаблон $[replace-pairs-exact %1 'событие' 'события' "
-"'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' 'занятости "
-"времени']"
+msgstr "Создать на основе шаблона: %1"
 
 #: incidencedialog.cpp:435
 #, kde-format
@@ -1555,17 +1553,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"При применении шаблона внесённые изменения будет перезаписаны. Продолжить?"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr ""
-"Новый шаблон %1|/|Новый шаблон $[replace-pairs-exact %1 'событие' 'события' "
-"'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' 'занятости "
-"времени']"
+msgstr "Применение шаблона"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -1593,7 +1588,7 @@ msgid ""
 "set in the combobox immediately adjacent."
 msgstr ""
 "Этот счетчик позволит установить время срабатывания напоминания. Единицы "
-"времени задаются в соседнем выпадающем списке."
+"времени задаются в соседнем раскрывающемся списке."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:72
@@ -1608,7 +1603,7 @@ msgid ""
 "This combobox allows you to set the units for the reminder trigger time. The "
 "trigger time value is set in the spinbox immediately adjacent."
 msgstr ""
-"Этот выпадающий список позволит выбрать единицы времени для времени "
+"Этот раскрывающийся список позволит выбрать единицы времени для времени "
 "срабатывания напоминания. Значение времени срабатывания устанавливается в "
 "соседнем окне счетчика."
 
@@ -1650,7 +1645,7 @@ msgid ""
 "Use this combobox to specify if you want the reminder to trigger before or "
 "after the start or end time."
 msgstr ""
-"Используйте этот выпадающий список, чтобы указать напоминание, которое "
+"Используйте этот раскрывающийся список, чтобы указать напоминание, которое "
 "должно сработать до или после времени начала или конца."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
@@ -2207,13 +2202,13 @@ msgstr "Основное"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Нажмите здесь для добавления, выбора и управления метками"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
-msgstr ""
+msgstr "Открыть окно для выбора, а также добавления или удаления меток"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)

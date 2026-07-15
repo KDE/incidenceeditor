@@ -4,21 +4,22 @@
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2021, 2022, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-03-17 10:20+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-07-14 22:30+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -166,25 +167,25 @@ msgstr "Vyžádat odpověď"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
-msgstr ""
+msgstr "Požadavek bez odpovědi"
 
 #: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
-msgstr ""
+msgstr "Zadejte jméno nebo e-mailovou adresu účastníka."
 
 #: attendeeline.cpp:150 incidenceattendee.cpp:66
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
-msgstr ""
+msgstr "Upraví aktuální stav přítomnosti účastníka."
 
 #: attendeeline.cpp:152 incidenceattendee.cpp:68 schedulingdialog.cpp:98
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
-msgstr ""
+msgstr "Upraví roli účastníka."
 
 #: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
 #, kde-format
@@ -193,12 +194,14 @@ msgid ""
 "The email address or name of the attendee. An invitation can be sent to the "
 "user if an email address is provided."
 msgstr ""
+"E-mailová adresa nebo jméno účastníka. Pokud je uvedena e-mailová adresa, "
+"lze uživateli zaslat pozvánku."
 
 #: attendeeline.cpp:160 incidenceattendee.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
-msgstr ""
+msgstr "Požádat účastníka o odpověď"
 
 #: attendeeline.cpp:162 incidenceattendee.cpp:72
 #, kde-format
@@ -207,6 +210,7 @@ msgid ""
 "Edits whether to send an email to the attendee to request a response "
 "concerning attendance."
 msgstr ""
+"Určuje, zda se má účastníkovi zaslat e-mail s žádostí o potvrzení účasti."
 
 #: attendeetablemodel.cpp:64
 #, kde-format
@@ -310,7 +314,7 @@ msgstr "Ukončit:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
-msgstr ""
+msgstr "Upravit umístění dostupnosti"
 
 #: freebusyurldialog.cpp:64
 #, kde-kuit-format
@@ -322,18 +326,19 @@ msgstr "Umístění informací o aktivitě pro '%1' <placeholder>%2</placeholder
 msgctxt "@info:whatsthis"
 msgid "Enter the location of the Free/Busy information for the attendee."
 msgstr ""
+"Zadejte umístění, kde jsou k dispozici informace o dostupnosti účastníka."
 
 #: freebusyurldialog.cpp:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the location of the information."
-msgstr ""
+msgstr "Zadejte umístění informací."
 
 #: incidencealarm.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google umožňuje nastavit maximálně 5 upomínek"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -485,42 +490,42 @@ msgstr "%1 %2 před ukončením události %3 (Vypnuto)"
 #: incidencealarm.cpp:385
 #, kde-format
 msgid "%1 when the to-do starts"
-msgstr ""
+msgstr "%1 při započetí úkolu"
 
 #: incidencealarm.cpp:387
 #, kde-format
 msgid "%1 when the event starts"
-msgstr ""
+msgstr "%1 při započetí události"
 
 #: incidencealarm.cpp:389
 #, kde-format
 msgid "%1 when the to-do is due"
-msgstr ""
+msgstr "%1 po uplynutí termínu úkolu"
 
 #: incidencealarm.cpp:391
 #, kde-format
 msgid "%1 when the event ends"
-msgstr ""
+msgstr "%1 po uplynutí termínu události"
 
 #: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
-msgstr ""
+msgstr "%1 při započetí úkolu (Vypnuto)"
 
 #: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
-msgstr ""
+msgstr "%1 při započetí události (Vypnuto)"
 
 #: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr ""
+msgstr "%1 po uplynutí termínu úkolu (Vypnuto)"
 
 #: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
-msgstr ""
+msgstr "%1 po uplynutí termínu události (Vypnuto)"
 
 #: incidencealarm.cpp:409
 #, kde-format
@@ -529,6 +534,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google umožňuje nastavit maximálně 5 upomínek. Než budete pokračovat, "
+"odstraňte prosím některé z nich."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -617,6 +624,8 @@ msgid ""
 "%1 does not look like a valid email address. Are you sure you want to invite "
 "this participant?"
 msgstr ""
+"%1 nevypadá jako platná e-mailová adresa. Opravdu chcete tohoto účastníka "
+"pozvat?"
 
 #: incidenceattendee.cpp:214
 #, kde-format
@@ -659,6 +668,8 @@ msgid ""
 "attending this event, would you like to change the corresponding attendee as "
 "well?"
 msgstr ""
+"Měníte organizátora této akce. Vzhledem k tomu, že se organizátor této akce "
+"také účastní, chcete změnit i příslušného účastníka?"
 
 #: incidenceattendee.cpp:800
 #, kde-format
@@ -688,13 +699,13 @@ msgstr "Časová pásma"
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
-msgstr ""
+msgstr "Událost, kterou vytváříte, končí v minulosti."
 
 #: incidencedatetime.cpp:575
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
-msgstr ""
+msgstr "Událost, kterou vytváříte, začíná v minulosti."
 
 #: incidencedatetime.cpp:635
 #, kde-format
@@ -709,6 +720,8 @@ msgid ""
 "The to-do you are creating is due in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Úkol, který právě vytváříte, má termín splnění v minulosti. Po uložení bude "
+"datum upraveno na dnešní den"
 
 #: incidencedatetime.cpp:687
 #, kde-format
@@ -717,6 +730,8 @@ msgid ""
 "The to-do you are creating starts in the past. Once saved, it will be "
 "adjusted for today's date"
 msgstr ""
+"Úkol, který právě vytváříte, začíná v minulosti. Po uložení bude datum "
+"upraveno na dnešní den"
 
 #: incidencedatetime.cpp:772 incidencedatetime.cpp:773
 #, kde-format
@@ -740,7 +755,7 @@ msgstr "Čas zahájení"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
-msgstr ""
+msgstr "Termín: %1"
 
 #: incidencedatetime.cpp:788 incidencedatetime.cpp:789
 #, kde-format
@@ -752,25 +767,25 @@ msgstr "Končí: %1"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Date"
-msgstr "Datum dokončení"
+msgstr "Datum termínu"
 
 #: incidencedatetime.cpp:794
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Due Time"
-msgstr "K času"
+msgstr "Čas termínu"
 
 #: incidencedatetime.cpp:796
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Date"
-msgstr ""
+msgstr "Datum konce"
 
 #: incidencedatetime.cpp:797
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Ending Time"
-msgstr ""
+msgstr "Čas konce"
 
 #: incidencedatetime.cpp:875
 #, kde-format
@@ -813,12 +828,14 @@ msgid ""
 "The to-do is due before it starts.\n"
 "Please correct dates and times."
 msgstr ""
+"Úkol je třeba splnit ještě předtím, než začne.\n"
+"Prosím, opravte data a časy."
 
 #: incidencedefaults.cpp:68
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
-msgstr ""
+msgstr "nebyly nalezeny žádné (platné) identity"
 
 #: incidencedefaults.cpp:345
 #, kde-format
@@ -842,7 +859,7 @@ msgstr "Povolit formátovaný text"
 #, kde-format
 msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
-msgstr ""
+msgstr "Vypnout formátovaný text"
 
 #: incidencedialog.cpp:233
 #, kde-format
@@ -917,11 +934,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Šablona neobsahuje platnou událost."
 
 #: incidencedialog.cpp:342
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Nová šablona %1"
+msgstr "Nový ze šablony: %1"
 
 #: incidencedialog.cpp:435
 #, kde-format
@@ -967,6 +983,9 @@ msgid ""
 "\n"
 " Reason: %1"
 msgstr ""
+"Nelze uložit položku do kalendáře. Chcete to zkusit znovu?\n"
+"\n"
+" Důvod: %1"
 
 #: incidencedialog.cpp:481
 #, kde-format
@@ -995,6 +1014,10 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
+"<para>Ještě jste nenastavili výchozí kalendář %1.</para><para>Nastavení "
+"výchozího kalendáře urychlí a usnadní vytváření nových událostí a sníží "
+"riziko, že je zařadíte do nesprávné složky.</para><para>Chcete nastavit jako "
+"výchozí kalendář %2 <resource>%3</resource>?</para>"
 
 #: incidencedialog.cpp:519
 #, kde-format
@@ -1052,6 +1075,9 @@ msgid ""
 "Templates can make creating new items easier and faster by putting your "
 "favorite default values into the editor automatically."
 msgstr ""
+"Stisknutím tohoto tlačítka zobrazíte dialogové okno, které vám pomůže "
+"spravovat sadu šablon. Šablony mohou usnadnit a urychlit vytváření nových "
+"položek tím, že do editoru automaticky vloží vaše oblíbené výchozí hodnoty."
 
 #: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
 #, kde-format
@@ -1087,13 +1113,13 @@ msgstr "Výchozí metoda příloh emailů"
 #: incidenceeditor.kcfg:8
 #, kde-format
 msgid "Choose the default way of attaching dropped emails to an event"
-msgstr ""
+msgstr "Vyberte výchozí způsob přiřazování e-mailů přetažených do události"
 
 #. i18n: ectx: whatsthis, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:9
 #, kde-format
 msgid "The default way of attaching dropped emails to an event"
-msgstr ""
+msgstr "Výchozí způsob přiřazování doručených e-mailů k události"
 
 #. i18n: ectx: label, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:12
@@ -1135,11 +1161,13 @@ msgid ""
 "A recurring event or to-do must occur at least once. Adjust the recurring "
 "parameters."
 msgstr ""
+"Opakující se událost nebo úkol se musí uskutečnit alespoň jednou. Upravte "
+"parametry opakování."
 
 #: incidencerecurrence.cpp:453
 #, kde-format
 msgid "The incidence's start date is invalid."
-msgstr ""
+msgstr "Datum začátku je neplatné."
 
 #: incidencerecurrence.cpp:459
 #, kde-format
@@ -1157,7 +1185,7 @@ msgstr "%1"
 #, kde-format
 msgctxt "example: the 4th to last day"
 msgid "the %1 to last day"
-msgstr ""
+msgstr "%1 do posledního dne"
 
 #: incidencerecurrence.cpp:508
 #, kde-format
@@ -1175,25 +1203,25 @@ msgstr "poslední %1"
 #, kde-format
 msgctxt "example: the 5th to last Wednesday"
 msgid "the %1 to last %2"
-msgstr ""
+msgstr "%1 do posledního %2"
 
 #: incidencerecurrence.cpp:532
 #, kde-format
 msgctxt "example: the 5th of June"
 msgid "the %1 of %2"
-msgstr ""
+msgstr "%1 z %2"
 
 #: incidencerecurrence.cpp:535
 #, kde-format
 msgctxt "example: the 3rd to last day of June"
 msgid "the %1 to last day of %2"
-msgstr ""
+msgstr "%1 do posledního dne z %2"
 
 #: incidencerecurrence.cpp:538
 #, kde-format
 msgctxt "example: the 4th Wednesday of June"
 msgid "the %1 %2 of %3"
-msgstr ""
+msgstr "%1 %2 z %3"
 
 #: incidencerecurrence.cpp:545
 #, kde-format
@@ -1205,7 +1233,7 @@ msgstr "poslední %1 z %2"
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
-msgstr ""
+msgstr "%1 do posledního %2 z %3 "
 
 #: incidencerecurrence.cpp:557
 #, kde-format
@@ -1305,7 +1333,7 @@ msgstr "Odeslat aktualizaci"
 #, kde-format
 msgctxt "@item:inlistbox ITIP Messages for one attendee"
 msgid "Send no update"
-msgstr ""
+msgstr "Neodesílat aktualizaci"
 
 #: individualmaildialog.cpp:39
 #, kde-format
@@ -1317,13 +1345,13 @@ msgstr "Upravit e-mail"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Options for this particular attendee."
-msgstr ""
+msgstr "Možnosti pro tohoto konkrétního účastníka."
 
 #: individualmaildialog.cpp:41
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Choose an option for this attendee."
-msgstr ""
+msgstr "Vyberte možnost pro tohoto účastníka."
 
 #: individualmaildialog.cpp:113
 #, kde-format
@@ -1371,7 +1399,7 @@ msgstr "Organizace"
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
-msgstr ""
+msgstr "Třída objektu"
 
 #: ldaputils.cpp:29
 #, kde-format
@@ -1407,7 +1435,7 @@ msgstr "Správa zdrojů"
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
-msgstr ""
+msgstr "Knižní zdroj"
 
 #: schedulingdialog.cpp:30
 #, kde-format
@@ -1466,7 +1494,7 @@ msgstr "Duplikovat název šablony"
 #: templatemanagementdialog.cpp:145
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
-msgstr "<qt>Opravdu si přejete smazat šablonu <b>%1</b>?</qt>"
+msgstr "Opravdu si přejete smazat šablonu <b>%1</b>?"
 
 #: templatemanagementdialog.cpp:146
 #, kde-format
@@ -1481,13 +1509,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Použitím šablony dojde k přepsání změn, které jste v této události provedli. "
+"Opravdu chcete šablonu použít?"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "Nová šablona %1"
+msgstr "Použít šablonu"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -1505,7 +1534,7 @@ msgstr "Když:"
 #: ui/alarmdialog.ui:47
 #, kde-format
 msgid "Set the reminder trigger time"
-msgstr ""
+msgstr "Nastavit čas spuštění upomínky"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mAlarmOffset)
 #: ui/alarmdialog.ui:50
@@ -1514,12 +1543,15 @@ msgid ""
 "This spinbox allows you to set the reminder trigger time. The time unit is "
 "set in the combobox immediately adjacent."
 msgstr ""
+"Pomocí tohoto rolovacího seznamu můžete nastavit čas spuštění připomenutí. "
+"Jednotka času se nastavuje v rozevíracím seznamu, který se nachází hned "
+"vedle."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:72
 #, kde-format
 msgid "Select the reminder trigger time unit"
-msgstr ""
+msgstr "Vyberte jednotku času pro spouštění upomínky"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:75
@@ -1528,6 +1560,9 @@ msgid ""
 "This combobox allows you to set the units for the reminder trigger time. The "
 "trigger time value is set in the spinbox immediately adjacent."
 msgstr ""
+"Toto rozbalovací menu umožňuje nastavit jednotky pro čas spuštění "
+"připomenutí. Hodnota času spuštění se nastavuje v poličce s rolovacím "
+"seznamem, která se nachází hned vedle."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
 #: ui/alarmdialog.ui:79
@@ -1554,7 +1589,7 @@ msgstr "den(dnů)"
 #: ui/alarmdialog.ui:97
 #, kde-format
 msgid "Select the reminder trigger relative to the start or end time"
-msgstr ""
+msgstr "Vyberte spouštěč připomenutí vzhledem k času zahájení nebo ukončení"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:100
@@ -1563,6 +1598,8 @@ msgid ""
 "Use this combobox to specify if you want the reminder to trigger before or "
 "after the start or end time."
 msgstr ""
+"Pomocí tohoto rozbalovacího menu určete, zda se má připomenutí spustit před "
+"nebo po čase zahájení či ukončení."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:104
@@ -1598,19 +1635,21 @@ msgstr "Opakovat:"
 #: ui/alarmdialog.ui:144
 #, kde-format
 msgid "Set the reminder to repeat"
-msgstr ""
+msgstr "Nastavit opakování upomínky"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:147
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
 msgstr ""
+"Zaškrtněte toto políčko, pokud chcete, aby se upomínka opakovala v "
+"pravidelných intervalech."
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
 #, kde-format
 msgid "Select how often the reminder should repeat"
-msgstr ""
+msgstr "Zvolte, jak často se má upomínka opakovat"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:163
@@ -1618,7 +1657,7 @@ msgstr ""
 msgid ""
 "Use this selector to choose how many times you want the recurring reminder "
 "to repeat."
-msgstr ""
+msgstr "Pomocí tohoto seznamu vyberte, kolikrát se má upomínka opakovat."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:166
@@ -1630,13 +1669,14 @@ msgstr " krát"
 #: ui/alarmdialog.ui:182
 #, kde-format
 msgid "Select the time between reminder repeats"
-msgstr ""
+msgstr "Vybrat časový interval mezi opakováním upomínky"
 
 #. i18n: ectx: property (whatsThis), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:185
 #, kde-format
 msgid "Use this selector to choose the time between repeating reminders."
 msgstr ""
+"Pomocí tohoto přepínače vyberte časový interval mezi opakovanými upomínkami."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mRepeatInterval)
 #: ui/alarmdialog.ui:188
@@ -1650,7 +1690,7 @@ msgstr " minut(y)"
 #, kde-format
 msgctxt "repeat every X minutes"
 msgid "every "
-msgstr "každých"
+msgstr "každých "
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/alarmdialog.ui:212
@@ -1662,13 +1702,13 @@ msgstr "Co:"
 #: ui/alarmdialog.ui:222
 #, kde-format
 msgid "Select the alarm type"
-msgstr ""
+msgstr "Vybrat typ budíku"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:225
 #, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr ""
+msgstr "Pomocí tohoto přepínače vyberte typ budíku pro upomínky."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
@@ -1689,18 +1729,21 @@ msgid ""
 "Specify any text you desire to display in the popup notice when the reminder "
 "triggers."
 msgstr ""
+"Zadejte libovolný text, který se má zobrazit ve vyskakovacím okně, když se "
+"spustí upomínka."
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
 #: ui/alarmdialog.ui:296
 #, kde-format
 msgid "Audio File:"
-msgstr "Zvukový soubor"
+msgstr "Zvukový soubor:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:309
 #, kde-format
 msgid "Specify a file containing a sound to play when the reminder triggers"
 msgstr ""
+"Zadejte soubor obsahující zvuk, který se má přehrát při spuštění upomínky"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, mSoundFile)
 #: ui/alarmdialog.ui:312
@@ -1709,6 +1752,8 @@ msgid ""
 "Use the adjacent file browser to help you find the file you want to use when "
 "playing a sound when the reminder triggers."
 msgstr ""
+"Pomocí prohlížeče souborů vyberte soubor, který chcete použít pro přehrání "
+"zvuku při spuštění upomínky."
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:38
@@ -1722,7 +1767,7 @@ msgstr "Pojmenovat přílohu"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Type any string you desire here for the name of the attachment"
-msgstr ""
+msgstr "Zadejte sem libovolný řetězec, který chcete použít jako název přílohy"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, mLabelEdit)
 #: ui/attachmenteditdialog.ui:44
@@ -1760,13 +1805,18 @@ msgid ""
 "attachment will be stored.  Do not use a link for attachments that change "
 "often or may be moved (or removed) from their current location."
 msgstr ""
+"Zaškrtnutím této možnosti se příloha uloží přímo do vašeho kalendáře, což "
+"může v závislosti na velikosti přílohy zabírat značné množství místa. Pokud "
+"tuto možnost nezaškrtnete, uloží se pouze odkaz směřující na přílohu. "
+"Nepoužívejte odkazy u příloh, které se často mění nebo které mohou být "
+"přesunuty (či odstraněny) ze svého aktuálního umístění."
 
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
 #, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Uložit kopii přílohy v kalendáři"
+msgstr "Uložit kopii přílohy v kalendáři "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -1779,7 +1829,7 @@ msgstr "Umístění:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Provide a location for the attachment file"
-msgstr ""
+msgstr "Zadejte umístění souboru v příloze"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, mURLRequester)
 #: ui/attachmenteditdialog.ui:136
@@ -1789,6 +1839,8 @@ msgid ""
 "Enter the path to the attachment file or use the file browser by pressing "
 "the adjacent button"
 msgstr ""
+"Zadejte cestu k souboru přílohy nebo použijte prohlížeč souborů stisknutím "
+"sousedního tlačítka"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/attachmenteditdialog.ui:159
@@ -1813,13 +1865,13 @@ msgstr "Typ:"
 #: ui/dialogdesktop.ui:20
 #, kde-format
 msgid "A message on this incidence item"
-msgstr ""
+msgstr "Zpráva týkající se této položky"
 
 #. i18n: ectx: property (whatsThis), widget (CalendarSupport::MessageWidget, mMessageWidget)
 #: ui/dialogdesktop.ui:23
 #, kde-format
 msgid "Use this message to correct the item parameters."
-msgstr ""
+msgstr "Pomocí této zprávy opravte parametry položky."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
@@ -1833,7 +1885,7 @@ msgstr "Kalen&dář:"
 #, kde-format
 msgctxt "@info"
 msgid "You are Invited, what do you want to do?"
-msgstr ""
+msgstr "Jste pozváni, co byste chtěli dělat?"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:88
@@ -1847,7 +1899,7 @@ msgstr "Přijmout pozvánku"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Click this button to accept the invitation."
-msgstr ""
+msgstr "Klikněte na toto tlačítko, abyste pozvání přijali."
 
 #. i18n: ectx: property (text), widget (QPushButton, mAcceptInvitationButton)
 #: ui/dialogdesktop.ui:94
@@ -1869,7 +1921,7 @@ msgstr "Odmítnout"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the summary"
-msgstr "Nastavte shrnutí"
+msgstr "Nastavit shrnutí"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mSummaryEdit)
@@ -1880,6 +1932,8 @@ msgid ""
 "Sets brief information that will be displayed in many places in the user "
 "interface."
 msgstr ""
+"Nastaví stručné informace, které se budou zobrazovat na mnoha místech v "
+"uživatelském rozhraní."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/dialogdesktop.ui:145
@@ -1907,7 +1961,7 @@ msgstr "Nastavit umístění"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets where the event or to-do will take place."
-msgstr "Nastavuje, kde bude daná událost či úkol probíhat."
+msgstr "Nastaví, kde bude daná událost či úkol probíhat."
 
 #. i18n: ectx: property (text), widget (QLabel, mTaskLabel)
 #: ui/dialogdesktop.ui:225
@@ -2021,7 +2075,7 @@ msgstr "Celý den"
 #, kde-format
 msgctxt "@option:check"
 msgid "Blocks me for other events"
-msgstr ""
+msgstr "Zablokuje mě pro další události"
 
 #. i18n: ectx: property (text), widget (QLabel, mStartLabel)
 #: ui/dialogdesktop.ui:420
@@ -2035,21 +2089,21 @@ msgstr "Počá&tek:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the start date"
-msgstr ""
+msgstr "Nastaví datum zahájení"
 
 #. i18n: ectx: property (whatsThis), widget (KDateComboBox, mStartDateEdit)
 #: ui/dialogdesktop.ui:451
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start date for this to-do"
-msgstr "Nastavuje počáteční datum plnění tohoto úkolu."
+msgstr "Nastaví počáteční datum plnění tohoto úkolu"
 
 #. i18n: ectx: property (whatsThis), widget (KTimeComboBox, mStartTimeEdit)
 #: ui/dialogdesktop.ui:467
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Sets the start time for this to-do."
-msgstr ""
+msgstr "Nastaví konečné datum plnění tohoto úkolu"
 
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboStart)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KTimeZoneComboBox, mTimeZoneComboEnd)
@@ -2058,6 +2112,8 @@ msgstr ""
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr ""
+"Vyberte časové pásmo pro tuto událost. Toto nastavení se promítne i do "
+"opakujících se událostí."
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:501
@@ -2098,13 +2154,14 @@ msgstr "Obecné"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Klikněte zde pro přidání, výběr a správu štítků"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Otevřít dialogové okno, ve kterém lze vybírat, přidávat i odstraňovat štítky"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
@@ -2143,7 +2200,7 @@ msgstr "Přístup:"
 #, kde-format
 msgctxt "@label"
 msgid "<a href=\\\"hide\\\">Rich text &gt;&gt;</a>"
-msgstr ""
+msgstr "<a href=\\\"hide\\\">Formátovaný text &gt;&gt;</a>"
 
 #. i18n: ectx: property (text), widget (QLabel, mCategoryLabel)
 #: ui/dialogdesktop.ui:714
@@ -2199,7 +2256,7 @@ msgstr "Účastníci:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
-msgstr ""
+msgstr "Naplánujte si schůzku s účastníky."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:839
@@ -2209,6 +2266,8 @@ msgid ""
 "Opens the scheduling dialog, which will assist in picking a time slot that "
 "works for all attendees."
 msgstr ""
+"Otevře dialogové okno pro plánování, které vám pomůže vybrat časový úsek, "
+"který vyhovuje všem účastníkům."
 
 #. i18n: ectx: property (text), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:842
@@ -2221,14 +2280,14 @@ msgstr "Naplánovat…"
 #: ui/dialogdesktop.ui:865
 #, kde-format
 msgid "Substitute with group members"
-msgstr ""
+msgstr "Nahradit členy skupiny"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:872
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select attendees from your address book."
-msgstr ""
+msgstr "Vyberte účastníky ze své knihy adres."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSelectButton)
 #: ui/dialogdesktop.ui:875
@@ -2242,7 +2301,7 @@ msgstr "Otevře váš adresář, což vám umožní z něj vybrat nového účas
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Vybrat účastníky..."
+msgstr "Vybrat účastníky…"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:890
@@ -2272,13 +2331,13 @@ msgstr "Zdroje"
 #: ui/dialogdesktop.ui:975
 #, kde-format
 msgid "Book Resource"
-msgstr ""
+msgstr "Knižní zdroj"
 
 #. i18n: ectx: property (text), widget (QPushButton, mFindResourcesButton)
 #: ui/dialogdesktop.ui:1004
 #, kde-format
 msgid "Find Resources…"
-msgstr "Naít zdroje"
+msgstr "Najít zdroje…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1017
@@ -2396,7 +2455,7 @@ msgstr "den(dnů)"
 #: ui/dialogdesktop.ui:1237
 #, kde-format
 msgid "This and future occurrences."
-msgstr ""
+msgstr "Tento a budoucí výskyty."
 
 #. i18n: ectx: property (text), widget (QLabel, mRecurrenceEndLabel)
 #: ui/dialogdesktop.ui:1408
@@ -2526,7 +2585,7 @@ msgstr "Odstranit"
 #: ui/resourcemanagement.ui:39
 #, kde-format
 msgid "Enter the search term"
-msgstr ""
+msgstr "Zadat hledaný výraz"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, resourceSearch)
 #: ui/resourcemanagement.ui:42
@@ -2534,6 +2593,8 @@ msgstr ""
 msgid ""
 "Use this text box to enter some keyword for the resource you want to find."
 msgstr ""
+"Do tohoto textového pole zadejte klíčové slovo pro zdroj, který chcete "
+"vyhledat."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupDetails)
 #: ui/resourcemanagement.ui:76
@@ -2557,20 +2618,20 @@ msgstr "Naplánovat čas"
 #: ui/schedulingdialog.ui:39
 #, kde-format
 msgid "Earliest time to start:"
-msgstr ""
+msgstr "Nejdřívější možný termín začátku:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/schedulingdialog.ui:59
 #, kde-format
 msgid "Latest time to end:"
-msgstr ""
+msgstr "Nejpozdější možný termín konce:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr ""
+msgstr "Zvolte pracovní dny, které chcete zahrnout do vyhledávání."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2579,19 +2640,20 @@ msgstr ""
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
+"Do vyhledávání volných termínů budou zahrnuty pouze zaškrtnuté pracovní dny."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
 #, kde-format
 msgid "Allowed weekdays:"
-msgstr ""
+msgstr "Povolené pracovní dny:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
 #: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
 #, kde-format
 msgid "Check the roles to include in the search."
-msgstr ""
+msgstr "Zkontrolujte role, které mají být zahrnuty do vyhledávání."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2601,24 +2663,26 @@ msgid ""
 "Only the participants with the checked roles will be considered in the free "
 "time slot search."
 msgstr ""
+"Při vyhledávání volných časových úseků budou zohledněni pouze účastníci s "
+"zaškrtnutými rolemi."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: ui/schedulingdialog.ui:124
 #, kde-format
 msgid "Mandatory roles:"
-msgstr ""
+msgstr "Závazné role:"
 
 #. i18n: ectx: property (toolTip), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:154
 #, kde-format
 msgid "Select the search option"
-msgstr ""
+msgstr "Vyberte možnost vyhledávání"
 
 #. i18n: ectx: property (whatsThis), widget (QTabWidget, mTabWidget)
 #: ui/schedulingdialog.ui:157
 #, kde-format
 msgid "Use these tabs to choose the search option."
-msgstr ""
+msgstr "Pomocí těchto karet vyberte možnost vyhledávání."
 
 #. i18n: ectx: attribute (title), widget (QWidget, mTextTab)
 #: ui/schedulingdialog.ui:164
@@ -2630,13 +2694,13 @@ msgstr "Automatické hledání"
 #: ui/schedulingdialog.ui:199
 #, kde-format
 msgid "Visual Search"
-msgstr ""
+msgstr "Vizuální vyhledávání"
 
 #. i18n: ectx: property (title), widget (QGroupBox, mMoveApptGroupBox)
 #: ui/schedulingdialog.ui:207
 #, kde-format
 msgid "Move your appointment to:"
-msgstr ""
+msgstr "Přesuňte svůj termín na:"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
 #: ui/schedulingdialog.ui:228
@@ -2648,7 +2712,7 @@ msgstr "Pondělí, 12. června"
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr ""
+msgstr "do 10:00"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
@@ -2664,12 +2728,15 @@ msgid ""
 "Select a template and click <i>Apply</i> to apply it to this item. Click "
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
+"Vyberte šablonu a kliknutím na <i>Použít</i> ji použijte na tuto položku. "
+"Kliknutím na <i>Nová</i> vytvoříte novou šablonu na základě aktuálního "
+"nastavení této položky."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
 #, kde-format
 msgid "The list of managed templates"
-msgstr ""
+msgstr "Seznam spravovaných šablon"
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:45
@@ -2678,12 +2745,14 @@ msgid ""
 "This is a list of all the templates you have currently accessible for "
 "creating new calendar items."
 msgstr ""
+"Toto je seznam všech šablon, které máte v současné době k dispozici pro "
+"vytváření nových položek v kalendáři."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:56
 #, kde-format
 msgid "Create a new template from the current settings"
-msgstr ""
+msgstr "Vytvořit novou šablonu na základě aktuálních nastavení"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:59
@@ -2693,18 +2762,21 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
+"Kliknutím na toto tlačítko vytvoříte novou šablonu na základě aktuálního "
+"nastavení v editoru. Tuto šablonu můžete v budoucnu použít k rychlému "
+"přidávání nových položek."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr "&Nový…"
+msgstr "&Nová…"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
 #, kde-format
 msgid "Remove the currently selected template"
-msgstr ""
+msgstr "Odstranit aktuálně vybranou šablonu"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:75
@@ -2713,6 +2785,8 @@ msgid ""
 "Clicking this button will permanently remove the selected template from your "
 "list of managed templates."
 msgstr ""
+"Kliknutím na toto tlačítko trvale odstraníte vybranou šablonu ze seznamu "
+"spravovaných šablon."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:78
@@ -2724,7 +2798,7 @@ msgstr "Odst&ranit"
 #: ui/template_management_dialog_base.ui:85
 #, kde-format
 msgid "Apply the selected template settings"
-msgstr ""
+msgstr "Použít nastavení vybrané šablony"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:88
@@ -2733,6 +2807,8 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
+"Kliknutím na toto tlačítko se nastavení z vybrané šablony použije na "
+"položku, kterou právě upravujete."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:91
@@ -2750,7 +2826,7 @@ msgstr "Měřítko: "
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the Gantt chart zoom level"
-msgstr ""
+msgstr "Nastavení úrovně přiblížení Ganttova diagramu"
 
 #: visualfreebusywidget.cpp:149
 #, kde-kuit-format
@@ -2762,6 +2838,11 @@ msgid ""
 "months,<nl/>while 'Automatic' selects the range most appropriate for the "
 "current event or to-do."
 msgstr ""
+"Vyberte úroveň přiblížení Ganttova diagramu z následujících možností:<nl/"
+">'Hodina' zobrazuje rozsah několika hodin,<nl/>'Den' zobrazuje rozsah "
+"několika dnů,<nl/>'Týden' zobrazuje rozsah několika týdnů,<nl/>a 'Měsíc' "
+"zobrazuje rozsah několika měsíců,<nl/>zatímco volba 'Automaticky' vybere "
+"rozsah nejvhodnější pro aktuální událost nebo úkol."
 
 #: visualfreebusywidget.cpp:156
 #, kde-format
@@ -2812,6 +2893,8 @@ msgid ""
 "Click this button to center the Gantt chart on the start time and day of "
 "this event."
 msgstr ""
+"Kliknutím na toto tlačítko vycentrujete Ganttův diagram podle času a dne "
+"zahájení této události."
 
 #: visualfreebusywidget.cpp:175
 #, kde-format
@@ -2832,6 +2915,8 @@ msgid ""
 "Click this button to move the event to a date and time when all the "
 "attendees have time available in their Free/Busy lists."
 msgstr ""
+"Kliknutím na toto tlačítko přesunete událost na datum a čas, kdy mají "
+"všichni účastníci volno podle své dostupnosti."
 
 #: visualfreebusywidget.cpp:189
 #, kde-format
@@ -2843,7 +2928,7 @@ msgstr "Znovu načíst"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
-msgstr ""
+msgstr "Znovu načíst data o dostupnosti pro účastníky"
 
 #: visualfreebusywidget.cpp:192
 #, kde-format
@@ -2852,18 +2937,20 @@ msgid ""
 "Pressing this button will cause the Free/Busy data for all attendees to be "
 "reloaded from their corresponding servers."
 msgstr ""
+"Stisknutím tohoto tlačítka se znovu načtou údaje o dostupnosti všech "
+"účastníků z příslušných serverů."
 
 #: visualfreebusywidget.cpp:203
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the tree list of all data"
-msgstr ""
+msgstr "Zobrazí stromový seznam všech dat"
 
 #: visualfreebusywidget.cpp:204
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Shows the tree list of all data"
-msgstr ""
+msgstr "Zobrazí stromový seznam všech dat"
 
 #: visualfreebusywidget.cpp:210
 #, kde-format
