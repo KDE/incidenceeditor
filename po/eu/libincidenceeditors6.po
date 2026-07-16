@@ -1,7 +1,7 @@
 # Translation for libincidenceeditors.po to Euskara/Basque (eu).
 # Copyright (C) 2023-2026 file is copyright:
 # This file is distributed under the same license as the incidenceeditor package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023, 2024, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-03-19 20:57+0100\n"
+"PO-Revision-Date: 2026-07-15 23:36+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "Sartu informazioaren kokalekua."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Googlek gehienez 5 oroigarri onartzen ditu"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -526,6 +526,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Googlek gehienez 5 oroigarri onartzen ditu. Mesedez, jarraitu aurretik kendu "
+"oroigarri batzuk."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -924,11 +926,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Txantiloiak ez du intzidentzia baliodun bat."
 
 #: incidencedialog.cpp:342
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "%1 txantiloi berria"
+msgstr "Berria txantiloitik: %1"
 
 #: incidencedialog.cpp:435
 #, kde-format
@@ -1496,13 +1497,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Txantiloia aplikatzeak oroigarri honi egin zenizkion aldaketak gainidatziko "
+"ditu. Ziur zaude txantiloia aplikatu nahi duzula?"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "%1 txantiloi berria"
+msgstr "Txantiloia aplikatu"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -2140,13 +2142,15 @@ msgstr "Orokorra"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Egin klik hemen etiketak gehitu, hautatu eta kudeatzeko"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Ireki etiketak hautatzeko, gehitzeko eta kentzeko aukera ematen duen "
+"elkarrizketa-koadro bat"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
