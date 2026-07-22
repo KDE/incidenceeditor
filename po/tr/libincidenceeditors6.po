@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-05-27 12:59+0300\n"
+"PO-Revision-Date: 2026-07-21 21:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:26
@@ -215,7 +215,7 @@ msgstr "Uygun"
 #: attendeetablemodel.cpp:66
 #, kde-format
 msgid "Busy"
-msgstr "Meşgul"
+msgstr "Meşgûl"
 
 #: attendeetablemodel.cpp:68
 #, kde-format
@@ -279,7 +279,7 @@ msgstr "E-posta"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Free/Busy Period"
-msgstr "Uygun/Meşgul Periyodu"
+msgstr "Uygun/Meşgûl Periyodu"
 
 #: freebusyganttproxymodel.cpp:73
 #, kde-format
@@ -309,18 +309,18 @@ msgstr "Bitiş:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Free/Busy Location"
-msgstr "Uygun/Meşgul Konumunu Düzenle"
+msgstr "Uygun/Meşgûl Konumunu Düzenle"
 
 #: freebusyurldialog.cpp:64
 #, kde-kuit-format
 msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "%1 <placeholder>%2</placeholder> için Uygun/Meşgul konum bilgisi:"
+msgstr "%1 <placeholder>%2</placeholder> için Uygun/Meşgûl konum bilgisi:"
 
 #: freebusyurldialog.cpp:68
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Katılımcının Uygun/Meşgul bilgisinin konumunu girin."
+msgstr "Katılımcının Uygun/Meşgûl bilgisinin konumunu girin."
 
 #: freebusyurldialog.cpp:69
 #, kde-format
@@ -2900,7 +2900,7 @@ msgid ""
 "Click this button to move the event to a date and time when all the "
 "attendees have time available in their Free/Busy lists."
 msgstr ""
-"Etkinliği, tüm kullanıcıların Uygun/Meşgul listelerinde uygun olduğu tarihe "
+"Etkinliği, tüm kullanıcıların Uygun/Meşgûl listelerinde uygun olduğu tarihe "
 "ve zamana taşımak için bu düğmeye tıklayın."
 
 #: visualfreebusywidget.cpp:189
@@ -2913,7 +2913,7 @@ msgstr "Yeniden Yükle"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reload Free/Busy data for all attendees"
-msgstr "Tüm katılımcılar için Uygun/Meşgul verisini yeniden yükle"
+msgstr "Tüm katılımcılar için Uygun/Meşgûl verisini yeniden yükle"
 
 #: visualfreebusywidget.cpp:192
 #, kde-format
@@ -2922,7 +2922,7 @@ msgid ""
 "Pressing this button will cause the Free/Busy data for all attendees to be "
 "reloaded from their corresponding servers."
 msgstr ""
-"Bu düğmeye basmak, tüm katılımcıların Uygun/Meşgul verisini ilgili "
+"Bu düğmeye basmak, tüm katılımcıların Uygun/Meşgûl verisini ilgili "
 "sunucularından yeniden yükleyecektir."
 
 #: visualfreebusywidget.cpp:203
@@ -2941,7 +2941,7 @@ msgstr "Tüm verinin ağaç listesini gösterir"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Shows the Free/Busy status of all attendees"
-msgstr "Tüm katılımcıların Uygun/Meşgul durumlarını gösterir"
+msgstr "Tüm katılımcıların Uygun/Meşgûl durumlarını gösterir"
 
 #: visualfreebusywidget.cpp:212
 #, kde-format
@@ -2951,8 +2951,8 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
-"Tüm katılımcıların Uygun/Meşgul durumlarını gösterir. Listedeki bir "
-"katılımcının girdisine çift tıklamak, Uygun/Meşgul Bilgilerindeki konumu "
+"Tüm katılımcıların Uygun/Meşgûl durumlarını gösterir. Listedeki bir "
+"katılımcının girdisine çift tıklamak, Uygun/Meşgûl Bilgilerindeki konumu "
 "girmenizi sağlayacaktır."
 
 #~ msgid ""
