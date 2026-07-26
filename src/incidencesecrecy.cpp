@@ -25,19 +25,9 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
 
 void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
-    const bool isTemplate = incidence->customProperty("kdepim", "isTemplate") == "true"_L1;
-
     mLoadedIncidence = incidence;
-    if (isTemplate) {
-        mUi->mSecrecyCombo->setCurrentIndex(incidence->secrecy());
-    } else {
-        if (mLoadedIncidence) {
-            Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
-            mUi->mSecrecyCombo->setCurrentIndex(mLoadedIncidence->secrecy());
-        } else {
-            mUi->mSecrecyCombo->setCurrentIndex(0);
-        }
-    }
+    Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
+    mUi->mSecrecyCombo->setCurrentIndex(incidence->secrecy());
     mWasDirty = false;
 }
 
