@@ -35,7 +35,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/Item>
 
-#include <KCalUtils/Stringify>
 #include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/MemoryCalendar>
 
@@ -352,9 +351,8 @@ void IncidenceDialogPrivate::manageTemplates()
     Q_Q(IncidenceDialog);
 
     const QStringList &templates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
-    const QString typeStr = KCalUtils::Stringify::incidenceTypeCaps(mEditor->type());
     QPointer<IncidenceEditorNG::TemplateManagementDialog> const dialog(
-        new IncidenceEditorNG::TemplateManagementDialog(q, templates, typeStr, mEditor->isDirty()));
+        new IncidenceEditorNG::TemplateManagementDialog(q, templates, mEditor->type(), mEditor->isDirty()));
 
     q->connect(dialog, &TemplateManagementDialog::loadTemplate, q, [this](const QString &templateName) {
         loadTemplate(templateName);

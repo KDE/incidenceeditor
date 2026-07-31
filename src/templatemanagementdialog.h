@@ -9,6 +9,8 @@
 
 #include "ui_template_management_dialog_base.h"
 
+#include <KCalendarCore/Incidence>
+
 #include <QDialog>
 class QPushBotton;
 
@@ -18,7 +20,7 @@ class TemplateManagementDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType, bool isDirty);
+    explicit TemplateManagementDialog(QWidget *parent, const QStringList &templates, KCalendarCore::Incidence::IncidenceType incidenceType, bool isDirty);
 
 Q_SIGNALS:
     /* Emitted whenever the user hits apply, indicating that the currently
@@ -52,7 +54,7 @@ private:
     Ui::TemplateManagementDialog_base m_base;
     QStringList m_templates;
     QStringList m_templatesSave;
-    QString m_type;
+    KCalendarCore::Incidence::IncidenceType m_type;
     QString m_newTemplate;
     bool m_isdirty = false;
     QPushButton *m_okButton;

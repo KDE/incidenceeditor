@@ -24,14 +24,30 @@ using namespace Qt::Literals::StringLiterals;
 
 using namespace IncidenceEditorNG;
 
-TemplateManagementDialog::TemplateManagementDialog(QWidget *parent, const QStringList &templates, const QString &incidenceType, bool isDirty)
+TemplateManagementDialog::TemplateManagementDialog(QWidget *parent,
+                                                   const QStringList &templates,
+                                                   KCalendarCore::Incidence::IncidenceType incidenceType,
+                                                   bool isDirty)
     : QDialog(parent)
     , m_templates(templates)
     , m_type(incidenceType)
     , m_isdirty(isDirty)
 {
-    QString const m_type_translated = i18n(qPrintable(m_type));
-    setWindowTitle(i18nc("@title:window", "Manage %1 Templates", m_type_translated));
+    switch (m_type) {
+    case KCalendarCore::Incidence::TypeEvent:
+        setWindowTitle(i18nc("@title:window", "Manage Event Templates"));
+        break;
+    case KCalendarCore::Incidence::TypeTodo:
+        setWindowTitle(i18nc("@title:window", "Manage To-do Templates"));
+        break;
+    case KCalendarCore::Incidence::TypeJournal:
+        setWindowTitle(i18nc("@title:window", "Manage Journal Templates"));
+        break;
+    case KCalendarCore::Incidence::TypeUnknown:
+    case KCalendarCore::Incidence::TypeFreeBusy:
+        Q_UNREACHABLE(); // cannot be edited
+        break;
+    }
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
     auto mainLayout = new QVBoxLayout(this);
     m_okButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -93,13 +109,24 @@ void TemplateManagementDialog::slotAddTemplate()
 {
     bool ok;
     bool duplicate = false;
-    QString const m_type_translated = i18n(qPrintable(m_type));
-    const QString newTemplate = QInputDialog::getText(this,
-                                                      i18n("Template Name"),
-                                                      i18n("Please enter a name for the new template:"),
-                                                      QLineEdit::Normal,
-                                                      i18n("New %1 Template", m_type_translated),
-                                                      &ok);
+    QString text;
+    switch (m_type) {
+    case KCalendarCore::Incidence::TypeEvent:
+        text = i18n("New Event Template");
+        break;
+    case KCalendarCore::Incidence::TypeTodo:
+        text = i18n("New To-do Template");
+        break;
+    case KCalendarCore::Incidence::TypeJournal:
+        text = i18n("New Journal Template");
+        break;
+    case KCalendarCore::Incidence::TypeUnknown:
+    case KCalendarCore::Incidence::TypeFreeBusy:
+        Q_UNREACHABLE(); // cannot be edited
+        break;
+    }
+    const QString newTemplate =
+        QInputDialog::getText(this, i18n("Template Name"), i18n("Please enter a name for the new template:"), QLineEdit::Normal, text, &ok);
     if (newTemplate.isEmpty() || !ok) {
         return;
     }
