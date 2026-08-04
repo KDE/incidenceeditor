@@ -19,37 +19,31 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
     : mUi(ui)
 {
     setObjectName("IncidenceSecrecy"_L1);
-    mUi->mSecrecyCombo->addItems(KCalUtils::Stringify::incidenceSecrecyList());
+    for (const auto secrecy :
+         {KCalendarCore::Incidence::SecrecyPublic, KCalendarCore::Incidence::SecrecyPrivate, KCalendarCore::Incidence::SecrecyConfidential}) {
+        mUi->mSecrecyCombo->addItem(KCalUtils::Stringify::incidenceSecrecy(secrecy), secrecy);
+    }
     connect(mUi->mSecrecyCombo, &QComboBox::currentIndexChanged, this, &IncidenceSecrecy::checkDirtyStatus);
 }
 
 void IncidenceSecrecy::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mLoadedIncidence = incidence;
-    Q_ASSERT(mUi->mSecrecyCombo->count() == KCalUtils::Stringify::incidenceSecrecyList().count());
-    mUi->mSecrecyCombo->setCurrentIndex(incidence->secrecy());
+    mUi->mSecrecyCombo->setCurrentIndex(mUi->mSecrecyCombo->findData(mLoadedIncidence->secrecy()));
     mWasDirty = false;
 }
 
 void IncidenceSecrecy::save(const KCalendarCore::Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
-    switch (mUi->mSecrecyCombo->currentIndex()) {
-    case 1:
-        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyPrivate);
-        break;
-    case 2:
-        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyConfidential);
-        break;
-    default:
-        incidence->setSecrecy(KCalendarCore::Incidence::SecrecyPublic);
-    }
+    qDebug() << mUi->mSecrecyCombo->currentData();
+    incidence->setSecrecy(mUi->mSecrecyCombo->currentData().value<KCalendarCore::Incidence::Secrecy>());
 }
 
 bool IncidenceSecrecy::isDirty() const
 {
     if (mLoadedIncidence) {
-        if (mLoadedIncidence->secrecy() != mUi->mSecrecyCombo->currentIndex()) {
+        if (mLoadedIncidence->secrecy() != mUi->mSecrecyCombo->currentData().value<KCalendarCore::Incidence::Secrecy>()) {
             return true;
         }
     } else {
