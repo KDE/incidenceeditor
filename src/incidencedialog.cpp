@@ -155,6 +155,13 @@ IncidenceDialogPrivate::IncidenceDialogPrivate(Akonadi::IncidenceChanger *change
     mUi->label->setBuddy(mCalSelector);
     q->connect(mCalSelector, &Akonadi::CollectionComboBox::currentChanged, q, &IncidenceDialog::handleSelectedCollectionChange);
 
+    // The default calendars are stored by stable remote path; let KCalPrefs resolve them against
+    // our model. Needed because this dialog also runs outside korganizer (e.g. KMail's create-event
+    // and create-todo plugins), which otherwise would not resolve the path.
+    if (changer) {
+        CalendarSupport::KCalPrefs::instance()->setCollectionModel(changer->entityTreeModel());
+    }
+
     // Now instantiate the logic of the dialog. These editors update the ui, validate
     // fields and load/store incidences in the ui.
     auto ieGeneral = new IncidenceWhatWhere(mUi);
