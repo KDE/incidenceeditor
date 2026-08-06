@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:44+0000\n"
+"POT-Creation-Date: 2026-08-06 00:45+0000\n"
 "PO-Revision-Date: 2026-05-10 17:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -842,122 +842,122 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "மேம்பட்ட உரையை முடக்கு"
 
-#: incidencedialog.cpp:233
+#: incidencedialog.cpp:232
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "செல்லுபடியாகும் தொகுப்பை முதலில் தேர்ந்தெடுக்கவும்."
 
-#: incidencedialog.cpp:256
+#: incidencedialog.cpp:255
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "நினைவூட்டல் (%1)"
 
-#: incidencedialog.cpp:258
+#: incidencedialog.cpp:257
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "நினைவூட்டல்"
 
-#: incidencedialog.cpp:266
+#: incidencedialog.cpp:265
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "&மறுநிகழ்வு:"
 
-#: incidencedialog.cpp:276
+#: incidencedialog.cpp:275
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (தி)"
 
-#: incidencedialog.cpp:279
+#: incidencedialog.cpp:278
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (வா)"
 
-#: incidencedialog.cpp:282
+#: incidencedialog.cpp:281
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (மா)"
 
-#: incidencedialog.cpp:285
+#: incidencedialog.cpp:284
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (ஆ)"
 
-#: incidencedialog.cpp:288
+#: incidencedialog.cpp:287
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (வி)"
 
-#: incidencedialog.cpp:322
+#: incidencedialog.cpp:321
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "'%1' என்ற வார்ப்புருவை கண்டுபிடிக்க முடியவில்லை."
 
-#: incidencedialog.cpp:328
+#: incidencedialog.cpp:327
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "'%1' என்ற வார்ப்புருக்கோப்பை ஏற்றுவதில் சிக்கல்."
 
-#: incidencedialog.cpp:334
+#: incidencedialog.cpp:333
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "வார்ப்புருவில் செல்லுபடியாக‍க்கூடிய நிகழ்வு இல்லை."
 
-#: incidencedialog.cpp:342
+#: incidencedialog.cpp:341
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "புதிய %1 வார்ப்புரு"
 
-#: incidencedialog.cpp:435
+#: incidencedialog.cpp:433
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "&உடனிணைப்புகள் (%1)"
 
-#: incidencedialog.cpp:437
+#: incidencedialog.cpp:435
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "&உடனிணைப்புகள்"
 
-#: incidencedialog.cpp:444
+#: incidencedialog.cpp:442
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&பங்கேற்போர் (%1)"
 
-#: incidencedialog.cpp:446
+#: incidencedialog.cpp:444
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&பங்கேற்போர்"
 
-#: incidencedialog.cpp:453
+#: incidencedialog.cpp:451
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr ""
 
-#: incidencedialog.cpp:455
+#: incidencedialog.cpp:453
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr ""
 
-#: incidencedialog.cpp:477
+#: incidencedialog.cpp:475
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -969,25 +969,25 @@ msgstr ""
 "\n"
 " காரணம்: %1"
 
-#: incidencedialog.cpp:481
+#: incidencedialog.cpp:479
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
 
-#: incidencedialog.cpp:501
+#: incidencedialog.cpp:499
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "செய்யவேண்டியவற்றிற்கான"
 
-#: incidencedialog.cpp:503
+#: incidencedialog.cpp:501
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "நிகழ்வுகளுக்கான"
 
-#: incidencedialog.cpp:509
+#: incidencedialog.cpp:507
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1002,55 +1002,55 @@ msgstr ""
 "para><para><resource>%3</resource> என்பதை உங்கள் %2 இயல்பிருப்பு நாள்காட்டியாக "
 "அமைக்க விரும்புகிறீர்களா?</para>"
 
-#: incidencedialog.cpp:519
+#: incidencedialog.cpp:517
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "இயல்பிருப்பு %1 நாள்காட்டியாக இதை அமைக்கலாமா?"
 
-#: incidencedialog.cpp:520
+#: incidencedialog.cpp:518
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "இயல்பிருப்பாக அமை"
 
-#: incidencedialog.cpp:521
+#: incidencedialog.cpp:519
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "அமைக்காதே"
 
-#: incidencedialog.cpp:717
+#: incidencedialog.cpp:715
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "தற்போதைய மாற்றங்களை சேமிக்கும்"
 
-#: incidencedialog.cpp:718
+#: incidencedialog.cpp:716
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "மாற்றங்களை சேமித்து சாளரத்தை மூடு"
 
-#: incidencedialog.cpp:719
+#: incidencedialog.cpp:717
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "மாற்றங்களை கைவிட்டு சாளரத்தை மூடும்"
 
-#: incidencedialog.cpp:723
+#: incidencedialog.cpp:721
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "&வார்ப்புருகள்…"
 
-#: incidencedialog.cpp:725
+#: incidencedialog.cpp:723
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "இவ்வுருப்படிக்கான வார்ப்புருகளை நிர்வகிக்க விடும்"
 
-#: incidencedialog.cpp:727
+#: incidencedialog.cpp:725
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1062,25 +1062,25 @@ msgstr ""
 "உருவாக்கும்போது, நீங்கள் அமைக்கும் மதிப்புகளை நிகழ்வுத்திருத்தியில் தானாக நிரப்ப "
 "வார்ப்புருக்கள் உதவும்."
 
-#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
+#: incidencedialog.cpp:823 incidencedialog.cpp:848 incidencedialog.cpp:868
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "உறுதியாக ரத்து செய்ய விரும்புகிறீர்களா?"
 
-#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
+#: incidencedialog.cpp:824 incidencedialog.cpp:849 incidencedialog.cpp:869
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "கேயார்கனைசர் உறுதிப்பாடு"
 
-#: incidencedialog.cpp:827 incidencedialog.cpp:852 incidencedialog.cpp:872
+#: incidencedialog.cpp:825 incidencedialog.cpp:850 incidencedialog.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "திருத்துவதை ரத்து செய்"
 
-#: incidencedialog.cpp:828 incidencedialog.cpp:853 incidencedialog.cpp:873
+#: incidencedialog.cpp:826 incidencedialog.cpp:851 incidencedialog.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1436,50 +1436,81 @@ msgctxt ""
 msgid "to %1"
 msgstr ""
 
-#: templatemanagementdialog.cpp:34
-#, kde-format
+#: templatemanagementdialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Manage %1 Templates"
 msgctxt "@title:window"
-msgid "Manage %1 Templates"
+msgid "Manage Event Templates"
 msgstr "%1 வார்ப்புருக்களை நிர்வகிப்பது"
 
-#: templatemanagementdialog.cpp:98
+#: templatemanagementdialog.cpp:41
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Manage %1 Templates"
+msgctxt "@title:window"
+msgid "Manage To-do Templates"
+msgstr "%1 வார்ப்புருக்களை நிர்வகிப்பது"
+
+#: templatemanagementdialog.cpp:44
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Manage %1 Templates"
+msgctxt "@title:window"
+msgid "Manage Journal Templates"
+msgstr "%1 வார்ப்புருக்களை நிர்வகிப்பது"
+
+#: templatemanagementdialog.cpp:115
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgid "New Event Template"
+msgstr "புதிய %1 வார்ப்புரு"
+
+#: templatemanagementdialog.cpp:118
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgid "New To-do Template"
+msgstr "புதிய %1 வார்ப்புரு"
+
+#: templatemanagementdialog.cpp:121
+#, fuzzy, kde-format
+#| msgid "New %1 Template"
+msgid "New Journal Template"
+msgstr "புதிய %1 வார்ப்புரு"
+
+#: templatemanagementdialog.cpp:129
 #, kde-format
 msgid "Template Name"
 msgstr "வார்ப்புருவின் பெயர்"
 
-#: templatemanagementdialog.cpp:99
+#: templatemanagementdialog.cpp:129
 #, kde-format
 msgid "Please enter a name for the new template:"
 msgstr "புதிய வார்ப்புருக்கான பெயரை உள்ளிடவும்:"
 
-#: templatemanagementdialog.cpp:101
-#, kde-format
-msgid "New %1 Template"
-msgstr "புதிய %1 வார்ப்புரு"
-
-#: templatemanagementdialog.cpp:109
+#: templatemanagementdialog.cpp:136
 #, kde-format
 msgid "A template with that name already exists, do you want to overwrite it?"
 msgstr "அப்பெயரில் ஏற்கனவே ஓர் வார்ப்புரு உள்ளது. மேலெழுத வேண்டமா?"
 
-#: templatemanagementdialog.cpp:110
+#: templatemanagementdialog.cpp:137
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
 msgstr ""
 
-#: templatemanagementdialog.cpp:145
+#: templatemanagementdialog.cpp:172
 #, kde-format
 msgid "Are you sure that you want to remove the template <b>%1</b>?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:146
+#: templatemanagementdialog.cpp:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Template"
 msgstr "வார்ப்புருவை நீக்கு"
 
-#: templatemanagementdialog.cpp:179
+#: templatemanagementdialog.cpp:206
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1487,7 +1518,7 @@ msgid ""
 "you sure that you want to apply the template?"
 msgstr ""
 
-#: templatemanagementdialog.cpp:180
+#: templatemanagementdialog.cpp:207
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@title:window"
