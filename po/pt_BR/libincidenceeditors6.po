@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 00:45+0000\n"
-"PO-Revision-Date: 2026-05-27 06:30-0300\n"
+"PO-Revision-Date: 2026-08-06 07:11-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -1452,46 +1452,37 @@ msgid "to %1"
 msgstr "às %1"
 
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr "Gerenciar os modelos de %1"
+msgstr "Gerenciar os modelos de evento"
 
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr "Gerenciar os modelos de %1"
+msgstr "Gerenciar os modelos de tarefa"
 
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr "Gerenciar os modelos de %1"
+msgstr "Gerenciar os modelos de diário"
 
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr "Novo modelo %1"
+msgstr "Novo modelo de evento"
 
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr "Novo modelo %1"
+msgstr "Novo modelo de tarefa"
 
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr "Novo modelo %1"
+msgstr "Novo modelo de diário"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format

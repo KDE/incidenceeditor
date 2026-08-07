@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-06 00:45+0000\n"
-"PO-Revision-Date: 2026-07-21 21:09+0300\n"
+"PO-Revision-Date: 2026-08-06 20:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1445,46 +1445,37 @@ msgid "to %1"
 msgstr "%1 saatine"
 
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr "%1 Şablonlarını Yönet"
+msgstr "Etkinlik Şablonlarını Yönet"
 
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr "%1 Şablonlarını Yönet"
+msgstr "Yapılacak Şablonlarını Yönet"
 
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr "%1 Şablonlarını Yönet"
+msgstr "Günce Şablonlarını Yönet"
 
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr "Yeni %1 Şablonu"
+msgstr "Yeni Etkinlik Şablonu"
 
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr "Yeni %1 Şablonu"
+msgstr "Yeni Yapılacak Şablonu"
 
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr "Yeni %1 Şablonu"
+msgstr "Yeni Günce Şablonu"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
