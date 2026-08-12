@@ -1032,7 +1032,7 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para> لم تضبط تقويماً مبدئيًا لـ %1 بعد.</para> <para> ضبط تقويم مبدئي سيجعل "
+"<para> لم تضبط تقويمًا مبدئيًا لـ %1 بعد.</para> <para> ضبط تقويم مبدئي سيجعل "
 "إنشاء الأحداث الجديدة أسرع وأسهل، مع تقليل احتمالية حفظها في المجلد الخطأ. </"
 "para> <para> هل تود ضبط تقويم %2 المبدئي ليكون  <resource>%3</resource>؟</"
 "para>"
@@ -1340,7 +1340,7 @@ msgstr[5] "كلّ"
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a summary."
-msgstr "فضلاً أدخل ملخص."
+msgstr "فضلًا أدخل ملخص."
 
 #: individualmailcomponentfactory.h:50 individualmailcomponentfactory.h:57
 #: individualmailcomponentfactory.h:63
