@@ -23,6 +23,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/TagFetchScope>
 
 #include "incidenceeditor_debug.h"
+#include <KCompositeJob>
 #include <KJob>
 #include <KLocalizedString>
 
@@ -39,6 +40,134 @@ static void updateIncidenceChangerPrivacyFlags(Akonadi::IncidenceChanger *change
     privacyFlags.setFlag(Akonadi::IncidenceChanger::InvitationPrivacyEncrypt,
                          (flags & EditorItemManager::ItipPrivacyEncrypt) == EditorItemManager::ItipPrivacyEncrypt);
     changer->setInvitationPrivacy(privacyFlags);
+}
+
+namespace
+{
+class MoveItemAndDependentsJob : public KCompositeJob
+{
+public:
+    MoveItemAndDependentsJob(const Akonadi::Item &item, const Akonadi::Collection &destination, QObject *parent)
+        : KCompositeJob(parent)
+        , mItem(item)
+        , mDestination(destination)
+    {
+    }
+
+    void start() override
+    {
+        if (shouldOnlyMoveItem()) {
+            startMove({mItem});
+            return;
+        }
+
+        // Without any cache, we need to fetch all items to find dependent items
+        const auto fetchJob = new Akonadi::ItemFetchJob(getSourceCollection());
+        if (shouldFetchRemoteId()) {
+            // Fetching remoteIds should be faster than fetching all item's payloads
+            fetchJob->fetchScope().setFetchRemoteIdentification(true);
+            connect(fetchJob, &KJob::result, this, &MoveItemAndDependentsJob::onFetchRemoteIdJobResult);
+        } else {
+            // If we can't use remoteId, we need to fetch payloads and match event UID
+            fetchJob->fetchScope().fetchFullPayload();
+            connect(fetchJob, &KJob::result, this, &MoveItemAndDependentsJob::onFetchFullJobResult);
+        }
+        fetchJob->start();
+    }
+
+private:
+    bool shouldOnlyMoveItem() const
+    {
+        const auto incidence = Akonadi::CalendarUtils::incidence(mItem);
+        return !incidence || (!incidence->recurs() && !incidence->hasRecurrenceId());
+    }
+
+    bool shouldFetchRemoteId() const
+    {
+        return !mItem.remoteId().isEmpty();
+    }
+
+    Akonadi::Collection getSourceCollection() const
+    {
+        const auto sourceCollection = mItem.storageCollectionId() >= 0 ? Akonadi::Collection(mItem.storageCollectionId()) : mItem.parentCollection();
+        Q_ASSERT(sourceCollection.isValid());
+        return sourceCollection;
+    }
+
+    void onFetchRemoteIdJobResult(KJob *job)
+    {
+        if (job->error()) {
+            finishWithError(job);
+            return;
+        }
+
+        const auto fetchJob = static_cast<Akonadi::ItemFetchJob *>(job);
+        auto items = Akonadi::Item::List();
+        auto ridBase = mItem.remoteId();
+        const auto separator = ridBase.indexOf(u'#');
+        if (separator >= 0) {
+            ridBase.truncate(separator);
+        }
+        for (const auto &item : fetchJob->items()) {
+            if (item.remoteId().startsWith(ridBase)) {
+                items.append(item);
+            }
+        }
+
+        startMove(items);
+    }
+
+    void onFetchFullJobResult(KJob *job)
+    {
+        if (job->error()) {
+            finishWithError(job);
+            return;
+        }
+
+        const auto fetchJob = static_cast<Akonadi::ItemFetchJob *>(job);
+        // Note: incidence is not null, otherwise we'd entered the onlyMove path
+        auto incidence = Akonadi::CalendarUtils::incidence(mItem);
+        auto items = Akonadi::Item::List();
+        for (const auto &item : fetchJob->items()) {
+            auto itemIncidence = Akonadi::CalendarUtils::incidence(item);
+            if (!itemIncidence) {
+                continue;
+            }
+            if (itemIncidence->uid() == incidence->uid()) {
+                items.append(item);
+            }
+        }
+
+        startMove(items);
+    }
+
+    void startMove(const Akonadi::Item::List &items)
+    {
+        auto *moveJob = new Akonadi::ItemMoveJob(items, getSourceCollection(), mDestination);
+        connect(moveJob, &KJob::result, this, &MoveItemAndDependentsJob::onMoveJobResult);
+        moveJob->start();
+    }
+
+    void onMoveJobResult(KJob *job)
+    {
+        if (job->error()) {
+            finishWithError(job);
+            return;
+        }
+
+        emitResult();
+    }
+
+    void finishWithError(KJob *job)
+    {
+        setError(job->error());
+        setErrorText(job->errorText());
+        emitResult();
+    }
+
+    const Akonadi::Item mItem;
+    const Akonadi::Collection mDestination;
+};
 }
 
 namespace IncidenceEditorNG
@@ -67,6 +196,7 @@ public:
     void onCreateFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString);
 
     void setupMonitor();
+    KJob *moveItemAndExceptions();
     void moveJobFinished(KJob *job);
     void setItem(const Akonadi::Item &item);
 
@@ -160,13 +290,7 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     Q_Q(EditorItemManager);
 
     if (job->error()) {
-        auto moveJob = qobject_cast<Akonadi::ItemMoveJob *>(job);
-        Q_ASSERT(moveJob);
-        (void)moveJob; // Assertion ensures moveJob is valid
-        // Q_ASSERT(!moveJob->items().isEmpty());
-        // TODO: What is reasonable behavior at this point?
-        qCCritical(INCIDENCEEDITOR_LOG) << "Error while moving item "; // << moveJob->items().first().id() << " to collection "
-        //<< moveJob->destinationCollection() << job->errorString();
+        qCCritical(INCIDENCEEDITOR_LOG) << "Error while moving item" << job->errorString();
         Q_EMIT q->itemSaveFailed(EditorItemManager::Move, job->errorString());
     } else {
         // Fetch the item again, we want a new mItem, which has an updated parentCollection
@@ -179,6 +303,12 @@ void ItemEditorPrivate::itemMoveResult(KJob *job)
     }
 }
 
+KJob *ItemEditorPrivate::moveItemAndExceptions()
+{
+    Q_Q(EditorItemManager);
+    return new MoveItemAndDependentsJob(mItem, mItemUi->selectedCollection(), q);
+}
+
 void ItemEditorPrivate::onModifyFinished(const Akonadi::Item &item, Akonadi::IncidenceChanger::ResultCode resultCode, const QString &errorString)
 {
     Q_Q(EditorItemManager);
@@ -188,10 +318,11 @@ void ItemEditorPrivate::onModifyFinished(const Akonadi::Item &item, Akonadi::Inc
             Q_EMIT q->itemSaveFinished(EditorItemManager::Modify);
             setupMonitor();
         } else { // There's a collection move too.
-            auto moveJob = new Akonadi::ItemMoveJob(mItem, mItemUi->selectedCollection());
+            auto moveJob = moveItemAndExceptions();
             q->connect(moveJob, &KJob::result, q, [this](KJob *job) {
                 moveJobFinished(job);
             });
+            moveJob->start();
         }
     } else if (resultCode == Akonadi::IncidenceChanger::ResultCodeUserCanceled) {
         Q_EMIT q->itemSaveFailed(EditorItemManager::Modify, QString());
@@ -323,10 +454,11 @@ void EditorItemManager::save(ItipPrivacyFlags itipPrivacy)
             if (d->mItemUi->isDirty()) {
                 (void)d->mChanger->modifyIncidence(d->mItem, oldPayload);
             } else {
-                auto itemMoveJob = new Akonadi::ItemMoveJob(d->mItem, d->mItemUi->selectedCollection());
-                connect(itemMoveJob, &KJob::result, this, [d](KJob *job) {
+                auto moveJob = d->moveItemAndExceptions();
+                connect(moveJob, &KJob::result, this, [d](KJob *job) {
                     d->itemMoveResult(job);
                 });
+                moveJob->start();
             }
         }
     } else { // An invalid item. Means we're creating.
