@@ -11,7 +11,9 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
 #include <KCalUtils/Stringify>
+#endif
 
 using namespace IncidenceEditorNG;
 
@@ -21,7 +23,11 @@ IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)
     setObjectName("IncidenceSecrecy"_L1);
     for (const auto secrecy :
          {KCalendarCore::Incidence::SecrecyPublic, KCalendarCore::Incidence::SecrecyPrivate, KCalendarCore::Incidence::SecrecyConfidential}) {
+#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
         mUi->mSecrecyCombo->addItem(KCalUtils::Stringify::incidenceSecrecy(secrecy), secrecy);
+#else
+        mUi->mSecrecyCombo->addItem(KCalendarCore::Incidence::secrecyName(secrecy), secrecy);
+#endif
     }
     connect(mUi->mSecrecyCombo, &QComboBox::currentIndexChanged, this, &IncidenceSecrecy::checkDirtyStatus);
 }
