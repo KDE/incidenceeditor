@@ -1457,46 +1457,37 @@ msgid "to %1"
 msgstr "do %1"
 
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr "Spravovať šablóny %1"
+msgstr "Spravovať šablóny udalostí"
 
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr "Spravovať šablóny %1"
+msgstr "Spravovať šablóny úloh"
 
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr "Spravovať šablóny %1"
+msgstr "Spravovať šablóny denníka"
 
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr "Nová šablóna %1"
+msgstr "Nová šablóna udalosti"
 
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr "Nová šablóna %1"
+msgstr "Nová šablóna úlohy"
 
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr "Nová šablóna %1"
+msgstr "Nová šablóna denníka"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
