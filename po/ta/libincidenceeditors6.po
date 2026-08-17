@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-06 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:46+0000\n"
 "PO-Revision-Date: 2026-05-10 17:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -147,37 +147,37 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "புதிய உடனிணைப்பு"
 
-#: attendeeline.cpp:144 incidenceattendee.cpp:63
+#: attendeeline.cpp:153 incidenceattendee.cpp:73
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "பதில் கோரு"
 
-#: attendeeline.cpp:145 incidenceattendee.cpp:64
+#: attendeeline.cpp:154 incidenceattendee.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
 msgstr "பதில் கோராதே"
 
-#: attendeeline.cpp:147 attendeelineeditdelegate.cpp:23
+#: attendeeline.cpp:156 attendeelineeditdelegate.cpp:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "பங்கேற்பவரின் பெயரையோ மின்னஞ்சல் முகவரியையோ உள்ளிடுங்கள்."
 
-#: attendeeline.cpp:150 incidenceattendee.cpp:66
+#: attendeeline.cpp:159 incidenceattendee.cpp:76
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "பங்கேற்பவரின் பங்கேற்பு நிலையை திருத்தும்"
 
-#: attendeeline.cpp:152 incidenceattendee.cpp:68 schedulingdialog.cpp:98
+#: attendeeline.cpp:161 incidenceattendee.cpp:78 schedulingdialog.cpp:107
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
 msgstr "பங்கேற்பவர் பங்கேற்கும் வித‍த்தை திருத்தும்."
 
-#: attendeeline.cpp:155 attendeelineeditdelegate.cpp:25
+#: attendeeline.cpp:164 attendeelineeditdelegate.cpp:25
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -187,13 +187,13 @@ msgstr ""
 "பங்கேற்பவரின் பெயரோ மின்னஞ்சல் முகவரியோ. மின்னஞ்சல் முகவரி உள்ளிடப்பட்டால் அழைப்பிதழை "
 "அனுப்பலாம்."
 
-#: attendeeline.cpp:160 incidenceattendee.cpp:70
+#: attendeeline.cpp:169 incidenceattendee.cpp:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "பங்கேற்பவரிடமிருந்து பதிலை கோரும்"
 
-#: attendeeline.cpp:162 incidenceattendee.cpp:72
+#: attendeeline.cpp:171 incidenceattendee.cpp:82
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -604,7 +604,7 @@ msgid ""
 "or to-do."
 msgstr "இதனுடன் தொடர்புடைய உருப்படிகளை (கோப்புகள், அஞ்சல்கள் போன்றவற்றை) காட்டும்"
 
-#: incidenceattendee.cpp:211
+#: incidenceattendee.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -613,31 +613,31 @@ msgid ""
 msgstr ""
 "%1 முறையான மின்னஞ்சல் முகவரிபோல் தெரியவில்லை. உறுதியாக இவரிடம் அழைப்பனுப்ப வேண்டுமா?"
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:224
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "முறையற்ற மின்னஞ்சல் முகவரி"
 
-#: incidenceattendee.cpp:215
+#: incidenceattendee.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "அழை"
 
-#: incidenceattendee.cpp:216
+#: incidenceattendee.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "அழைக்காதே"
 
-#: incidenceattendee.cpp:443
+#: incidenceattendee.cpp:453
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "பங்கேற்போரை தேர்ந்தெடுப்பது"
 
-#: incidenceattendee.cpp:627
+#: incidenceattendee.cpp:637
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -645,7 +645,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 முரண்பாடு"
 msgstr[1] "%1 முரண்பாடுகள்"
 
-#: incidenceattendee.cpp:796
+#: incidenceattendee.cpp:806
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -656,13 +656,13 @@ msgstr ""
 "இந்நிகழ்வை நடத்துபவரை மாற்றுகிறீர்கள். இந்நிகழ்வில் அவர் பங்கேற்கவும் செய்வதால், பங்கேற்பவரின் "
 "பட்டியலில் அவருக்குரிய பதிவையும் மாற்ற விரும்புகிறீர்களா?"
 
-#: incidenceattendee.cpp:800
+#: incidenceattendee.cpp:810
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "பங்கேற்பவரையும் மாற்று"
 
-#: incidenceattendee.cpp:801
+#: incidenceattendee.cpp:811
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1414,13 +1414,13 @@ msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
 msgstr ""
 
-#: schedulingdialog.cpp:30
+#: schedulingdialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr ""
 
-#: schedulingdialog.cpp:166
+#: schedulingdialog.cpp:175
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1428,7 +1428,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%1, %3 %2"
 
-#: schedulingdialog.cpp:187
+#: schedulingdialog.cpp:196
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
