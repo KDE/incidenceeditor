@@ -2967,18 +2967,3 @@ msgstr ""
 "Показва състоянието на заетост на всички участници. Двойното щракване върху "
 "записа на участник в списъка ще ви позволи да въведете местоположението на "
 "информацията за заетост."
-
-#~ msgid ""
-#~ "The item has been changed by another application.\n"
-#~ "What should be done?"
-#~ msgstr ""
-#~ "Елементът е бил променен от друго приложение.\n"
-#~ "Какво трябва да се направи?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Take over changes"
-#~ msgstr "Приемане на промените"
-
-#~ msgctxt "@action:button"
-#~ msgid "Ignore and Overwrite changes"
-#~ msgstr "Игнориране и презаписване на промените"
