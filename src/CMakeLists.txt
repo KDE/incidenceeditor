@@ -159,7 +159,7 @@ target_link_libraries(
         KGantt6 # For FreeBusy Editor
         KPim6::PimTextEdit
         KF6::Codecs
-        KPim6::LdapWidgets
+        KPim6::LdapCore
         KPim6::AkonadiWidgets
         KF6::IconThemes
         KF6::Completion
