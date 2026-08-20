@@ -71,9 +71,11 @@ void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
     IncidenceEditorNG::KTimeZoneComboBox combo;
     QDateTime dt = QDateTime::currentDateTime();
 
+#if !defined(Q_OS_WIN) // always fails on Windows since qputenv("Asia/Tokyo") doesn't work there
     combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::LocalTime));
     combo.applyTimeZoneTo(dt);
     QCOMPARE(dt.timeZone(), QTimeZone("Asia/Tokyo"));
+#endif
 
     combo.selectTimeZoneFor(QDateTime(QDate(2021, 12, 12), QTime(12, 0, 0), QTimeZone::systemTimeZone()));
     combo.applyTimeZoneTo(dt);
