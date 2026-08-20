@@ -11,8 +11,9 @@ using namespace Qt::Literals::StringLiterals;
 class KTimeZoneComboBoxTest : public QObject
 {
     Q_OBJECT
+private:
+    void setTimeZone(const char *zonename);
 private Q_SLOTS:
-    void initTestCase();
     void test_timeSpec();
     void test_selectTimeZoneFor();
     void test_applyTimeZoneTo();

@@ -16,13 +16,18 @@ QTEST_MAIN(KTimeZoneComboBoxTest)
 
 const auto TEST_TZ = "Asia/Tokyo"; // Not UTC, not Paris.
 
-void KTimeZoneComboBoxTest::initTestCase()
+void KTimeZoneComboBoxTest::setTimeZone(const char *zonename)
 {
-    qputenv("TZ", TEST_TZ);
+    QVERIFY(QTimeZone(zonename).isValid());
+    qputenv("TZ", zonename);
+    const QDateTime currentDateTime = QDateTime::currentDateTime();
+    QVERIFY(currentDateTime.timeZone().isValid());
 }
 
 void KTimeZoneComboBoxTest::test_timeSpec()
 {
+    setTimeZone(TEST_TZ);
+
     IncidenceEditorNG::KTimeZoneComboBox combo;
     combo.selectLocalTimeZone();
     QVERIFY(!combo.isFloating());
@@ -38,6 +43,8 @@ void KTimeZoneComboBoxTest::test_timeSpec()
 
 void KTimeZoneComboBoxTest::test_selectTimeZoneFor()
 {
+    setTimeZone(TEST_TZ);
+
     IncidenceEditorNG::KTimeZoneComboBox combo;
 
     // Floating
@@ -68,6 +75,8 @@ void KTimeZoneComboBoxTest::test_selectTimeZoneFor()
 
 void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
 {
+    setTimeZone(TEST_TZ);
+
     IncidenceEditorNG::KTimeZoneComboBox combo;
     QDateTime dt = QDateTime::currentDateTime();
 
@@ -97,6 +106,8 @@ void KTimeZoneComboBoxTest::test_applyTimeZoneTo()
  */
 void KTimeZoneComboBoxTest::test_convenience()
 {
+    setTimeZone(TEST_TZ);
+
     IncidenceEditorNG::KTimeZoneComboBox combo;
     combo.setCurrentIndex(0);
     QVERIFY(!combo.isFloating());
