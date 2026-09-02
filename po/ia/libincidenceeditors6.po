@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:45+0000\n"
-"PO-Revision-Date: 2026-07-22 18:34+0200\n"
+"PO-Revision-Date: 2026-09-01 12:14+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1450,46 +1450,37 @@ msgid "to %1"
 msgstr "a %1"
 
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr "Gere %1 patronos"
+msgstr "Gere patronos de evento"
 
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr "Gere %1 patronos"
+msgstr "Gere patronos de action de facer"
 
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr "Gere %1 patronos"
+msgstr "Gere patronos de Jorna (diario)"
 
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr "Nove  %1 patrono"
+msgstr "Nove patrono de evento"
 
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr "Nove  %1 patrono"
+msgstr "Nove patrono de action (cosas) de facer"
 
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr "Nove  %1 patrono"
+msgstr "Nove patrono de Jornal (diario)"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
