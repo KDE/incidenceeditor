@@ -4,8 +4,8 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2011 Manuel Tortosa <manutortosa@chakra-project.org>
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2013-2021 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2011-2012, 2014-2018, 2020-2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
@@ -2976,18 +2976,3 @@ msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer doble clic "
 "damunt d'una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seua informació de lliure/ocupat."
-
-#~ msgid ""
-#~ "The item has been changed by another application.\n"
-#~ "What should be done?"
-#~ msgstr ""
-#~ "Una altra aplicació ha canviat l'element.\n"
-#~ "Què s'ha de fer?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Take over changes"
-#~ msgstr "Assumix els canvis"
-
-#~ msgctxt "@action:button"
-#~ msgid "Ignore and Overwrite changes"
-#~ msgstr "Ignora i sobreescriu els canvis"
