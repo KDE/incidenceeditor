@@ -2190,7 +2190,7 @@ msgstr ""
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
-"Ouvrir une boîte de dialogue permettant de sélectionner ainsi que d'ajouter "
+"Ouvrir une boite de dialogue permettant de sélectionner ainsi que d'ajouter "
 "et de supprimer des étiquettes"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
