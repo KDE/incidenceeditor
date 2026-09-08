@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 14:14+0200\n"
+"PO-Revision-Date: 2026-08-07 11:21+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -2168,7 +2168,7 @@ msgstr ""
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
-"Ouvrir une boîte de dialogue permettant de sélectionner ainsi que d'ajouter "
+"Ouvrir une boite de dialogue permettant de sélectionner ainsi que d'ajouter "
 "et de supprimer des étiquettes"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
