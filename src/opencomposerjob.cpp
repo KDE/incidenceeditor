@@ -38,11 +38,12 @@ void OpenComposerJob::start()
     unsigned int const identity = mIdentity.uoid();
 
     QString const subject = mMessage->subject()->asUnicodeString();
-    QString const body = QString::fromUtf8(mMessage->contents().at(0)->body());
+    const auto contents = mMessage->contents();
+    QString const body = QString::fromUtf8(contents.at(0)->body());
 
     QList<QVariant> messages;
 
-    if (mMessage->contents().count() == 1) {
+    if (contents.count() == 1) {
         const QString messageFile;
         const QStringList attachmentPaths;
         const QStringList customHeaders;
@@ -52,7 +53,7 @@ void OpenComposerJob::start()
 
         messages << mTo << mCc << mBcc << subject << body << hidden << messageFile << attachmentPaths << customHeaders << replyTo << inReplyTo;
     } else {
-        KMime::Content *attachment(mMessage->contents().at(1));
+        KMime::Content *attachment(contents.at(1));
         QString const attachName = attachment->contentType()->name();
         QByteArray const attachCte = attachment->contentTransferEncoding()->as7BitString();
         QByteArray const attachType = attachment->contentType()->mediaType();
