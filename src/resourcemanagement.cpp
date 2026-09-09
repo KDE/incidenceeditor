@@ -193,7 +193,7 @@ void ResourceManagement::showDetails(const KLDAPCore::LdapObject &obj, const KLD
     mUi->groupOwner->setHidden(true);
 
     // Fill formDetails with data
-    for (auto it = obj.attributes().cbegin(), end = obj.attributes().cbegin(); it != end; ++it) {
+    for (auto it = obj.attributes().cbegin(), end = obj.attributes().cend(); it != end; ++it) {
         const QString &key = it.key();
         if (key == "objectClass"_L1 || key == "email"_L1) {
             continue;
