@@ -10,7 +10,6 @@
 
 #pragma once
 
-#include <KCalendarCore/Attachment>
 #include <QDialog>
 #include <QMimeType>
 

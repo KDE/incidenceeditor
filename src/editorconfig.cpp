@@ -8,7 +8,6 @@
 #include "korganizereditorconfig.h"
 
 #include <QCoreApplication>
-#include <QUrl>
 
 using namespace IncidenceEditorNG;
 

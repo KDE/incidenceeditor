@@ -14,7 +14,6 @@
 
 #include <KCalendarCore/Attendee>
 
-#include <QCheckBox>
 #include <QToolButton>
 
 class QKeyEvent;
