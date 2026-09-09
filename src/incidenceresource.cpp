@@ -26,6 +26,7 @@ namespace
 {
 class SwitchRoleProxy : public QSortFilterProxyModel
 {
+    Q_OBJECT
 public:
     explicit SwitchRoleProxy(QObject *parent = nullptr)
         : QSortFilterProxyModel(parent)
@@ -188,5 +189,5 @@ int IncidenceResource::resourceCount() const
     }
     return c;
 }
-
+#include "incidenceresource.moc"
 #include "moc_incidenceresource.cpp"
