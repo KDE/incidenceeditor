@@ -347,7 +347,7 @@ void IncidenceAttendee::checkIfExpansionIsNeeded(const KCalendarCore::Attendee &
     // stop old job
     KJob *oldJob = mMightBeGroupJobs.key(attendee.uid());
     if (oldJob != nullptr) {
-        disconnect(oldJob);
+        oldJob->disconnect(this);
         oldJob->deleteLater();
         mMightBeGroupJobs.remove(oldJob);
     }
