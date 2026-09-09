@@ -981,7 +981,7 @@ void IncidenceAttendee::printDebugInfo() const
 int IncidenceAttendee::rowOfAttendee(const QString &uid) const
 {
     const auto attendees = dataModel()->attendees();
-    const auto it = std::find_if(attendees.begin(), attendees.end(), [uid](const KCalendarCore::Attendee &att) {
+    const auto it = std::find_if(attendees.begin(), attendees.end(), [&uid](const KCalendarCore::Attendee &att) {
         return att.uid() == uid;
     });
     return std::distance(attendees.begin(), it);
