@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: CC0-1.0
 
 version = 1
-SPDX-PackageName = "kimap"
+SPDX-PackageName = "incidenceeditor"
 SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
-SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/kimap"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/incidenceeditor"
 
 [[annotations]]
 path = ["src/incidenceeditor-index.qdoc", "src/incidenceeditor.qdoc", "src/incidenceeditor.qdocconf"]
