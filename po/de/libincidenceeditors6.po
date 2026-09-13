@@ -12,21 +12,22 @@
 # SPDX-FileCopyrightText: 2021, 2024, 2026 Frank Steinmetzger <dev@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2023-2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# Intevation GmbH, 2010.
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2010 Intevation GmbH
 msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:44+0000\n"
-"PO-Revision-Date: 2026-02-22 13:02+0100\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2026-09-10 21:01+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: alarmdialog.cpp:26
 #, kde-format
@@ -341,7 +342,7 @@ msgstr "Geben Sie den Ort der Information ein."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google erlaubt maximal 5 Erinnerungen"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -510,22 +511,22 @@ msgstr "%1 wenn der Termin endet"
 #: incidencealarm.cpp:395
 #, kde-format
 msgid "%1 when the to-do starts (Disabled)"
-msgstr "%1 wenn die Aufgabe beginnt (abgeschaltet)"
+msgstr "%1 wenn die Aufgabe beginnt (deaktiviert)"
 
 #: incidencealarm.cpp:397
 #, kde-format
 msgid "%1 when the event starts (Disabled)"
-msgstr "%1 wenn der Termin beginnt (abgeschaltet)"
+msgstr "%1 wenn der Termin beginnt (deaktiviert)"
 
 #: incidencealarm.cpp:399
 #, kde-format
 msgid "%1 when the to-do is due (Disabled)"
-msgstr "%1 wenn die Aufgabe fällig wird (abgeschaltet)"
+msgstr "%1 wenn die Aufgabe fällig wird (deaktiviert)"
 
 #: incidencealarm.cpp:401
 #, kde-format
 msgid "%1 when the event ends (Disabled)"
-msgstr "%1 wenn der Termin endet (abgeschaltet)"
+msgstr "%1 wenn der Termin endet (deaktiviert)"
 
 #: incidencealarm.cpp:409
 #, kde-format
@@ -534,6 +535,8 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google erlaubt maximal 5 Erinnerungen. Bitte entfernen Sie ein paar "
+"Erinnerungen, bevor Sie fortfahren."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -591,7 +594,7 @@ msgstr "Öff&nen"
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
-msgstr "Speichern unter …"
+msgstr "Speichern unter …"
 
 #: incidenceattachment.cpp:496
 #, kde-format
@@ -603,7 +606,7 @@ msgstr "&Entfernen"
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
-msgstr "&Eigenschaften …"
+msgstr "&Eigenschaften …"
 
 #: incidenceattachment.cpp:514
 #, kde-format
@@ -860,8 +863,7 @@ msgid "Disable rich text"
 msgstr "Rich-Text nicht anzeigen"
 
 #: incidencedialog.cpp:233
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Wählen Sie zuerst eine gültige Sammlung."
@@ -933,11 +935,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Die Vorlage enthält kein gültiges Ereignis."
 
 #: incidencedialog.cpp:342
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Neue „%1“-Vorlage"
+msgstr "Neu aus Vorlage: %1"
 
 #: incidencedialog.cpp:435
 #, kde-format
@@ -995,30 +996,19 @@ msgid "Retry"
 msgstr "Erneut versuchen"
 
 #: incidencedialog.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Todo View"
+#, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr "Aufgaben-Ansicht"
+msgstr "Aufgabe"
 
 #: incidencedialog.cpp:503
-#, fuzzy, kde-format
-#| msgctxt "@title:column event description"
-#| msgid "Event"
+#, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr "Ereignis"
+msgstr "Termin"
 
 #: incidencedialog.cpp:509
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1026,19 +1016,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Sie haben für Ihre Ereignisse noch keinen Standard-Kalender definiert."
-"</para><para>Das Einrichten eines Standard-Kalenders vereinfacht und "
-"beschleunigt das Anlegen von Ereignissen und verringert außerdem das Risiko, "
-"sie falsch einzuordnen.</para><para>Möchten Sie <resource>%1</resource> zu "
-"Ihrem Standard-Kalender machen?</para>"
+"<para>Sie haben noch keinen Standard-%1-Kalender festgelegt.</para><para>Das "
+"Einrichten eines Standard-Kalenders vereinfacht und beschleunigt das Anlegen "
+"von Ereignissen und verringert außerdem das Risiko, sie falsch einzuordnen.</"
+"para><para>Möchten Sie <resource>%3</resource> zu Ihrem Standard-%2-Kalender "
+"machen?</para>"
 
 #: incidencedialog.cpp:519
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Als Standard-Kalender benutzen?"
+msgstr "Standard-%1-Kalender festlegen?"
 
 #: incidencedialog.cpp:520
 #, kde-format
@@ -1074,7 +1062,7 @@ msgstr "Änderungen verwerfen und Dialog schließen"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
-msgstr "&Vorlagen …"
+msgstr "&Vorlagen …"
 
 #: incidencedialog.cpp:725
 #, kde-format
@@ -1525,10 +1513,12 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Durch das Anwenden der Vorlage werden die Änderungen, die Sie an diesem "
+"Ereignis vorgenommen haben, überschrieben. Möchten Sie die Vorlage wirklich "
+"anwenden?"
 
 #: templatemanagementdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Apply Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
 msgstr "Vorlage anwenden"
@@ -2173,12 +2163,15 @@ msgstr "Allgemein"
 #, kde-format
 msgid "Click here to add, select and manage tags"
 msgstr ""
+"Klicken Sie hier, um Stichwörter hinzuzufügen, auszuwählen und zu verwalten"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
 msgstr ""
+"Öffnet ein Fenster, in dem Sie Stichwörter auswählen, hinzufügen und "
+"entfernen können"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
@@ -2293,7 +2286,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Zeitplanung …"
+msgstr "Zeitplanung …"
 
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
 #: ui/dialogdesktop.ui:865
@@ -2321,7 +2314,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Select Attendees…"
-msgstr "Teilnehmer auswählen …"
+msgstr "Teilnehmer auswählen …"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ui/dialogdesktop.ui:890
@@ -2357,7 +2350,7 @@ msgstr "Ressource belegen"
 #: ui/dialogdesktop.ui:1004
 #, kde-format
 msgid "Find Resources…"
-msgstr "Ressourcen suchen …"
+msgstr "Ressourcen suchen …"
 
 #. i18n: ectx: attribute (title), widget (QWidget, mReminderTab)
 #: ui/dialogdesktop.ui:1017
@@ -2797,7 +2790,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:62
 #, kde-format
 msgid "&New…"
-msgstr "&Neu …"
+msgstr "&Neu …"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, m_buttonRemove)
 #: ui/template_management_dialog_base.ui:72
