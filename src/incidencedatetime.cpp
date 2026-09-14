@@ -13,8 +13,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <CalendarSupport/KCalPrefs>
 
-#include <KCalUtils/IncidenceFormatter>
-
 #include <QTimeZone>
 
 using namespace IncidenceEditorNG;
@@ -768,7 +766,8 @@ void IncidenceDateTime::setDateTimes(const QDateTime &start, const QDateTime &en
 void IncidenceDateTime::updateStartToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString const datetimeStr = KCalUtils::IncidenceFormatter::dateTimeToString(currentStartDateTime(), mUi->mWholeDayCheck->isChecked(), false);
+        QString const datetimeStr = mUi->mWholeDayCheck->isChecked() ? QLocale().toString(currentStartDateTime().date(), QLocale::LongFormat)
+                                                                     : QLocale().toString(currentStartDateTime(), QLocale::LongFormat);
         mUi->mStartDateEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
         mUi->mStartTimeEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
     } else {
@@ -780,7 +779,8 @@ void IncidenceDateTime::updateStartToolTips()
 void IncidenceDateTime::updateEndToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString const datetimeStr = KCalUtils::IncidenceFormatter::dateTimeToString(currentEndDateTime(), mUi->mWholeDayCheck->isChecked(), false);
+        QString const datetimeStr = mUi->mWholeDayCheck->isChecked() ? QLocale().toString(currentEndDateTime().date(), QLocale::LongFormat)
+                                                                     : QLocale().toString(currentEndDateTime(), QLocale::LongFormat);
         if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));
             mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));
