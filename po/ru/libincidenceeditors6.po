@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:47+0000\n"
-"PO-Revision-Date: 2026-07-14 11:42+0300\n"
-"Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
+"PO-Revision-Date: 2026-09-22 22:00+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -1497,69 +1497,42 @@ msgstr "до %1"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr ""
-"Управление шаблонами %1|/|Управление шаблонами $[replace-pairs-exact %1 "
-"'событие' 'событий' 'задача' 'задач' 'дневник' 'записей дневника' 'занятое "
-"время' 'занятости времени']"
+msgstr "Управление шаблонами событий"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr ""
-"Управление шаблонами %1|/|Управление шаблонами $[replace-pairs-exact %1 "
-"'событие' 'событий' 'задача' 'задач' 'дневник' 'записей дневника' 'занятое "
-"время' 'занятости времени']"
+msgstr "Управление шаблонами задач"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr ""
-"Управление шаблонами %1|/|Управление шаблонами $[replace-pairs-exact %1 "
-"'событие' 'событий' 'задача' 'задач' 'дневник' 'записей дневника' 'занятое "
-"время' 'занятости времени']"
+msgstr "Управление шаблонами записей дневника"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr ""
-"Новый шаблон %1|/|Новый шаблон $[replace-pairs-exact %1 'событие' 'события' "
-"'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' 'занятости "
-"времени']"
+msgstr "Новый шаблон события"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr ""
-"Новый шаблон %1|/|Новый шаблон $[replace-pairs-exact %1 'событие' 'события' "
-"'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' 'занятости "
-"времени']"
+msgstr "Новый шаблон задачи"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr ""
-"Новый шаблон %1|/|Новый шаблон $[replace-pairs-exact %1 'событие' 'события' "
-"'задача' 'задачи' 'дневник' 'записи дневника' 'занятое время' 'занятости "
-"времени']"
+msgstr "Новый шаблон записи дневника"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
