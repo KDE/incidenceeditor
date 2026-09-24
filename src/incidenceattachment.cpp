@@ -79,7 +79,7 @@ void IncidenceAttachment::save(const KCalendarCore::Incidence::Ptr &incidence)
     for (int itemIndex = 0; itemIndex < mAttachmentView->count(); ++itemIndex) {
         QListWidgetItem *item = mAttachmentView->item(itemIndex);
         auto attitem = dynamic_cast<AttachmentIconItem *>(item);
-        Q_ASSERT(item);
+        Q_ASSERT(attitem);
         incidence->addAttachment(attitem->attachment());
     }
 }

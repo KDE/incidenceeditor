@@ -35,7 +35,7 @@ void IncidenceCategories::onSelectionChanged([[maybe_unused]] const Akonadi::Tag
     checkDirtyStatus();
 }
 
-void IncidenceCategories::load([[maybe_unused]] const KCalendarCore::Incidence::Ptr &incidence)
+void IncidenceCategories::load(const KCalendarCore::Incidence::Ptr &incidence)
 {
     mDirty = false;
     mWasDirty = false;
