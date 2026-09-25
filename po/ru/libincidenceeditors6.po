@@ -1878,6 +1878,7 @@ msgstr ""
 "вложение. Не используйте ссылки на вложения, которые часто меняются или "
 "которые могут быть перенесены (или удалены) из их текущего местоположения."
 
+# BUGME: trailing space in the checkbox label --ayavorsky 2026-09-24
 #. i18n: ectx: property (text), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:78
 #, kde-format
