@@ -385,7 +385,6 @@ msgctxt "Alarm action"
 msgid "Invalid Reminder."
 msgstr "Некорректное напоминание."
 
-# BUGME: plurals --aspotashev
 #: incidencealarm.cpp:308
 #, kde-format
 msgctxt "The reminder is set to X minutes before/after the event"
@@ -406,7 +405,6 @@ msgstr[1] "%1 дня"
 msgstr[2] "%1 дней"
 msgstr[3] "%1 день"
 
-# BUGME: plurals --aspotashev
 #: incidencealarm.cpp:316
 #, kde-format
 msgctxt "The reminder is set to X hours before/after the event"
