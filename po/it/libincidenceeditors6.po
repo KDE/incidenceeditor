@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2026-08-08 02:00+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -686,31 +686,31 @@ msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1%"
 
-#: incidencedatetime.cpp:223
+#: incidencedatetime.cpp:221
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Fusi orari"
 
-#: incidencedatetime.cpp:573
+#: incidencedatetime.cpp:571
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
 msgstr "L'evento che si sta creando termina in una data nel passato."
 
-#: incidencedatetime.cpp:575
+#: incidencedatetime.cpp:573
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
 msgstr "L'evento che si sta creando inizia in una data nel passato."
 
-#: incidencedatetime.cpp:635
+#: incidencedatetime.cpp:633
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Scadenza:"
 
-#: incidencedatetime.cpp:684
+#: incidencedatetime.cpp:682
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -720,7 +720,7 @@ msgstr ""
 "L'evento che si sta creando ha scadenza in una data nel passato. Una volta "
 "salvato, la data sarà corretta con la data odierna"
 
-#: incidencedatetime.cpp:687
+#: incidencedatetime.cpp:685
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -730,19 +730,19 @@ msgstr ""
 "L'evento che si sta creando inizia in una data nel passato. Una volta "
 "salvato, la data sarà corretta con la data odierna"
 
-#: incidencedatetime.cpp:772 incidencedatetime.cpp:773
+#: incidencedatetime.cpp:771 incidencedatetime.cpp:772
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Inizia: %1"
 
-#: incidencedatetime.cpp:775
+#: incidencedatetime.cpp:774
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Data di inizio"
 
-#: incidencedatetime.cpp:776
+#: incidencedatetime.cpp:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -723,31 +723,31 @@ msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1,"
 
-#: incidencedatetime.cpp:223
+#: incidencedatetime.cpp:221
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Уақыт белдеулері"
 
-#: incidencedatetime.cpp:573
+#: incidencedatetime.cpp:571
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
 msgstr ""
 
-#: incidencedatetime.cpp:575
+#: incidencedatetime.cpp:573
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
 msgstr ""
 
-#: incidencedatetime.cpp:635
+#: incidencedatetime.cpp:633
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Бітуі:"
 
-#: incidencedatetime.cpp:684
+#: incidencedatetime.cpp:682
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -755,7 +755,7 @@ msgid ""
 "adjusted for today's date"
 msgstr ""
 
-#: incidencedatetime.cpp:687
+#: incidencedatetime.cpp:685
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -763,21 +763,21 @@ msgid ""
 "adjusted for today's date"
 msgstr ""
 
-#: incidencedatetime.cpp:772 incidencedatetime.cpp:773
+#: incidencedatetime.cpp:771 incidencedatetime.cpp:772
 #, fuzzy, kde-format
 #| msgid "Starts: %1"
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Басталуы: %1"
 
-#: incidencedatetime.cpp:775
+#: incidencedatetime.cpp:774
 #, fuzzy, kde-format
 #| msgid "Starting Date"
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Бастау күні"
 
-#: incidencedatetime.cpp:776
+#: incidencedatetime.cpp:775
 #, fuzzy, kde-format
 #| msgid "Starting Time"
 msgctxt "@info:tooltip"

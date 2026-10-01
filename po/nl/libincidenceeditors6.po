@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2026-08-06 12:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -676,31 +676,31 @@ msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1%"
 
-#: incidencedatetime.cpp:223
+#: incidencedatetime.cpp:221
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Tijdzones"
 
-#: incidencedatetime.cpp:573
+#: incidencedatetime.cpp:571
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
 msgstr "De afspraak die u maakt eindigt in het verleden."
 
-#: incidencedatetime.cpp:575
+#: incidencedatetime.cpp:573
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
 msgstr "De afspraak die u maakt begint in het verleden."
 
-#: incidencedatetime.cpp:635
+#: incidencedatetime.cpp:633
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Gereeddatum:"
 
-#: incidencedatetime.cpp:684
+#: incidencedatetime.cpp:682
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -710,7 +710,7 @@ msgstr ""
 "De taak die u maakt loopt af in het verleden. Na opslaan zal het aangepast "
 "worden op vandaag"
 
-#: incidencedatetime.cpp:687
+#: incidencedatetime.cpp:685
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -720,19 +720,19 @@ msgstr ""
 "De taak die u maakt begint in het verleden. Na opslaan zal het aangepast "
 "worden op vandaag"
 
-#: incidencedatetime.cpp:772 incidencedatetime.cpp:773
+#: incidencedatetime.cpp:771 incidencedatetime.cpp:772
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Start: %1"
 
-#: incidencedatetime.cpp:775
+#: incidencedatetime.cpp:774
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Startdatum"
 
-#: incidencedatetime.cpp:776
+#: incidencedatetime.cpp:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"

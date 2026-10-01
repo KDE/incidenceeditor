@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:46+0000\n"
 "PO-Revision-Date: 2026-09-15 15:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -663,31 +663,31 @@ msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1%"
 
-#: incidencedatetime.cpp:223
+#: incidencedatetime.cpp:221
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "時區"
 
-#: incidencedatetime.cpp:573
+#: incidencedatetime.cpp:571
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
 msgstr "您正在建立的事件在過去結束。"
 
-#: incidencedatetime.cpp:575
+#: incidencedatetime.cpp:573
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
 msgstr "您正在建立的事件在過去開始。"
 
-#: incidencedatetime.cpp:635
+#: incidencedatetime.cpp:633
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "到期日："
 
-#: incidencedatetime.cpp:684
+#: incidencedatetime.cpp:682
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -695,7 +695,7 @@ msgid ""
 "adjusted for today's date"
 msgstr "您正在建立的待辦事項在過去到期。儲存後它將被調整成今天的日期"
 
-#: incidencedatetime.cpp:687
+#: incidencedatetime.cpp:685
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -703,19 +703,19 @@ msgid ""
 "adjusted for today's date"
 msgstr "您正在建立的待辦事項在過去開始。儲存後它將被調整成今天的日期"
 
-#: incidencedatetime.cpp:772 incidencedatetime.cpp:773
+#: incidencedatetime.cpp:771 incidencedatetime.cpp:772
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "開始於：%1"
 
-#: incidencedatetime.cpp:775
+#: incidencedatetime.cpp:774
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "開始日期"
 
-#: incidencedatetime.cpp:776
+#: incidencedatetime.cpp:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starting Time"
