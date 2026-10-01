@@ -35,7 +35,7 @@ void ConflictResolverTest::addAttendee(const QString &email, const KCalendarCore
 
 void ConflictResolverTest::initTestCase()
 {
-    parent = new QWidget;
+    parent = std::make_unique<QWidget>();
     init();
 }
 
@@ -43,7 +43,7 @@ void ConflictResolverTest::init()
 {
     base = QDateTime::currentDateTime().addDays(1);
     end = base.addSecs(10 * 60 * 60);
-    resolver = new ConflictResolver(parent, parent);
+    resolver = new ConflictResolver(parent.get(), parent.get());
 }
 
 void ConflictResolverTest::cleanup()
