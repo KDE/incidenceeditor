@@ -26,7 +26,7 @@ public:
     using IncidenceEditorNG::IncidenceEditor::load; // So we don't trigger -Woverloaded-virtual
     using IncidenceEditorNG::IncidenceEditor::save; // So we don't trigger -Woverloaded-virtual
 
-    explicit IncidenceResource(IncidenceAttendee *mIeAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
+    explicit IncidenceResource(const IncidenceAttendee *mIeAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui);
     ~IncidenceResource() override;
 
     void load(const KCalendarCore::Incidence::Ptr &incidence) override;

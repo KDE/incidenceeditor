@@ -46,7 +46,7 @@ public:
 };
 }
 
-IncidenceResource::IncidenceResource(IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
+IncidenceResource::IncidenceResource(const IncidenceAttendee *ieAttendee, IncidenceDateTime *dateTime, Ui::EventOrTodoDesktop *ui)
     : IncidenceEditor(nullptr)
     , mUi(ui)
     , dataModel(ieAttendee->dataModel())

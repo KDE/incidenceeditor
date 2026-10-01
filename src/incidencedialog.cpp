@@ -915,6 +915,7 @@ void IncidenceDialog::handleSelectedCollectionChange(const Akonadi::Collection &
 
 KCalendarCore::IncidenceBase::IncidenceType IncidenceDialog::type()
 {
+    /* cppcheck-suppress constVariablePointer */
     Q_D(IncidenceDialog);
     return d->mEditor->type();
 }
