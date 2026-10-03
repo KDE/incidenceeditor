@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:46+0000\n"
-"PO-Revision-Date: 2026-01-12 14:39+0200\n"
+"PO-Revision-Date: 2026-09-05 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -334,7 +334,7 @@ msgstr "Anna tiedon sijainti."
 #, kde-format
 msgctxt "@info"
 msgid "Google allows at most 5 reminders"
-msgstr ""
+msgstr "Google sallii enintään 5 muistutusta"
 
 #: incidencealarm.cpp:276
 #, kde-format
@@ -527,6 +527,7 @@ msgid ""
 "Google allows at most 5 reminders. Please remove some reminders before "
 "continuing."
 msgstr ""
+"Google sallii enintään 5 muistutusta. Poista joitakin ennen kuin jatkat."
 
 #: incidenceattachment.cpp:132
 #, kde-format
@@ -850,8 +851,7 @@ msgid "Disable rich text"
 msgstr "Poista tekstin muotoilu käytöstä"
 
 #: incidencedialog.cpp:239
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Valitse ensin kelvollinen kokoelma."
@@ -923,11 +923,10 @@ msgid "Template does not contain a valid incidence."
 msgstr "Mallipohja ei sisällä kelvollista esiintymää."
 
 #: incidencedialog.cpp:348
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
-msgstr "Uusi %1-mallipohja"
+msgstr "Uusi mallista: %1"
 
 #: incidencedialog.cpp:440
 #, kde-format
@@ -987,23 +986,16 @@ msgstr "Yritä uudelleen"
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
-msgstr ""
+msgstr "Tehtävä"
 
 #: incidencedialog.cpp:508
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
-msgstr ""
+msgstr "Tapahtuma"
 
 #: incidencedialog.cpp:514
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You have not set a default calendar for your events yet.</"
-#| "para><para>Setting a default calendar will make creating new events "
-#| "faster and easier with less chance of filing them into the wrong folder.</"
-#| "para><para>Would you like to set your default events calendar to "
-#| "<resource>%1</resource>?</para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You have not set a default %1 calendar yet.</para><para>Setting a "
@@ -1011,19 +1003,17 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Et ole vielä asettanut tapahtumien oletuskalenteria.</"
+"<para>Et ole vielä asettanut %1-oletuskalenteria.</"
 "para><para>Oletuskalenterin asettamalla uusien tapahtumien luonti nopeutuu "
 "ja helpottuu eivätkä ne mene väärään kansioon niin helposti.</"
-"para><para>Haluatko, että <resource>%1</resource> asetetaan tapahtumien "
+"para><para>Haluatko, että %2 asetetaan tyypin <resource>%3</resource> "
 "oletuskalenteriksi?</para>"
 
 #: incidencedialog.cpp:524
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Set Default Calendar?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Asetetaanko oletuskalenteri?"
+msgstr "Asetetaanko %1-oletuskalenteri?"
 
 #: incidencedialog.cpp:525
 #, kde-format
@@ -1458,46 +1448,37 @@ msgid "to %1"
 msgstr "–%1"
 
 #: templatemanagementdialog.cpp:38
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Event Templates"
-msgstr "%1-mallipohjien hallinta"
+msgstr "Hallinnoi tapahtumamalleja"
 
 #: templatemanagementdialog.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage To-do Templates"
-msgstr "%1-mallipohjien hallinta"
+msgstr "Hallinnoi tehtävämalleja"
 
 #: templatemanagementdialog.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Manage %1 Templates"
+#, kde-format
 msgctxt "@title:window"
 msgid "Manage Journal Templates"
-msgstr "%1-mallipohjien hallinta"
+msgstr "Hallinnoi päiväkirjamalleja"
 
 #: templatemanagementdialog.cpp:115
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Event Template"
-msgstr "Uusi %1-mallipohja"
+msgstr "Uusi tapahtumamalli"
 
 #: templatemanagementdialog.cpp:118
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New To-do Template"
-msgstr "Uusi %1-mallipohja"
+msgstr "Uusi tehtävämalli"
 
 #: templatemanagementdialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgid "New Journal Template"
-msgstr "Uusi %1-mallipohja"
+msgstr "Uusi päiväkirjamalli"
 
 #: templatemanagementdialog.cpp:129
 #, kde-format
@@ -1538,13 +1519,14 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
+"Mallin käyttöönotto korvaa ilmentymään tekemäsi muutokset. Haluatko varmasti "
+"käyttää mallia?"
 
 #: templatemanagementdialog.cpp:207
-#, fuzzy, kde-format
-#| msgid "New %1 Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Template"
-msgstr "Uusi %1-mallipohja"
+msgstr "Käytä mallia"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AlarmDialog)
 #: ui/alarmdialog.ui:14
@@ -2172,13 +2154,13 @@ msgstr "Yleistä"
 #: ui/dialogdesktop.ui:640
 #, kde-format
 msgid "Click here to add, select and manage tags"
-msgstr ""
+msgstr "Lisää, valitse ja hallinnoi luokituksia napsauttamalla tästä"
 
 #. i18n: ectx: property (whatsThis), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:643
 #, kde-format
 msgid "Open a dialog that allows selecting as well as adding and removing tags"
-msgstr ""
+msgstr "Avaa ikkuna, josta voi valita, lisätä ja poistaa luokituksia"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (toolTip), widget (QComboBox, mSecrecyCombo)
