@@ -5,10 +5,10 @@
  *
  */
 #include "resourceitem.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLDAPCore/LdapServer>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 ResourceItem::ResourceItem(const KLDAPCore::LdapDN &dn, const QStringList &attrs, const KLDAPCore::LdapClient &ldapClient, const ResourceItem::Ptr &parent)

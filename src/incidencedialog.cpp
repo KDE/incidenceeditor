@@ -7,7 +7,6 @@
 */
 
 #include "incidencedialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "combinedincidenceeditor.h"
 #include "editorconfig.h"
@@ -49,6 +48,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTimeZone>
 #include <QWindow>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 namespace
 {

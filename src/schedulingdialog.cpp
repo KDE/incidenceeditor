@@ -6,7 +6,6 @@
 */
 
 #include "schedulingdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "conflictresolver.h"
 #include "visualfreebusywidget.h"
@@ -22,6 +21,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 SchedulingDialog::SchedulingDialog(QDate startDate, QTime startTime, int duration, ConflictResolver *resolver, QWidget *parent)

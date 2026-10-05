@@ -7,7 +7,6 @@
 */
 
 #include "incidencecategories.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
@@ -19,6 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/TagFetchJob>
 #include <Akonadi/TagFetchScope>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 IncidenceCategories::IncidenceCategories(Ui::EventOrTodoDesktop *ui)

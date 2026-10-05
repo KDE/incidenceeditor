@@ -11,7 +11,6 @@
 */
 
 #include "incidenceattendee.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "attendeecomboboxdelegate.h"
 #include "attendeeeditor.h"
@@ -40,6 +39,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <QPointer>
 #include <QTreeView>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(IncidenceEditorNG::EditorConfig::Organizer)
 

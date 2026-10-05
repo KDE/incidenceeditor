@@ -6,7 +6,6 @@
 */
 
 #include "templatemanagementdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -22,6 +21,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QUrlQuery>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 TemplateManagementDialog::TemplateManagementDialog(QWidget *parent,

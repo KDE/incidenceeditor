@@ -6,7 +6,6 @@
 */
 
 #include "editoritemmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "individualmailcomponentfactory.h"
 
@@ -28,6 +27,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QMessageBox>
 #include <QPointer>
+
+using namespace Qt::Literals::StringLiterals;
 
 /// ItemEditorPrivate
 

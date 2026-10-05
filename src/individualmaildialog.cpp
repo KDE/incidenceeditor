@@ -5,7 +5,6 @@
  */
 
 #include "individualmaildialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KGuiItem>
 #include <KLocalizedString>
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLabel>
 #include <QPushButton>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 IndividualMailDialog::IndividualMailDialog(const QString &question,

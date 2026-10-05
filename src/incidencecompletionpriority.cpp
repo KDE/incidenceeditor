@@ -6,13 +6,13 @@
 */
 
 #include "incidencecompletionpriority.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 
 #include <KCalendarCore/Todo>
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 class IncidenceEditorNG::IncidenceCompletionPriorityPrivate

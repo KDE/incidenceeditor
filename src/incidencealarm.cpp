@@ -6,7 +6,6 @@
 */
 
 #include "incidencealarm.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "alarmdialog.h"
 #include "alarmpresets.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <CalendarSupport/KCalPrefs>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 using namespace CalendarSupport;
 

@@ -6,7 +6,6 @@
 */
 
 #include "freebusyganttproxymodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <CalendarSupport/FreeBusyItemModel>
 
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QLocale>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 FreeBusyGanttProxyModel::FreeBusyGanttProxyModel(QObject *parent)

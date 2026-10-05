@@ -6,7 +6,6 @@
 */
 
 #include "incidencerecurrence.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidencedatetime.h"
 #include "ui_dialogdesktop.h"
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "incidenceeditor_debug.h"
 #include <QLocale>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 enum {

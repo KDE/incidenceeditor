@@ -6,7 +6,6 @@
 */
 
 #include "visualfreebusywidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "freebusyganttproxymodel.h"
 #include <CalendarSupport/FreeBusyItemModel>
@@ -29,6 +28,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTreeView>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 namespace IncidenceEditorNG

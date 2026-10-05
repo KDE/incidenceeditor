@@ -6,9 +6,10 @@
  */
 
 #include "ldaputils.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
+
+using namespace Qt::Literals::StringLiterals;
 
 QString IncidenceEditorNG::translateLDAPAttributeForDisplay(const QString &attribute)
 {

@@ -6,7 +6,6 @@
 */
 
 #include "incidencedescription.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 #include <KPIMTextEdit/RichTextComposer>
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <KToolBar>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 namespace IncidenceEditorNG

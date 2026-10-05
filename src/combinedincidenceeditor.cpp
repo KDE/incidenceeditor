@@ -6,10 +6,10 @@
 */
 
 #include "combinedincidenceeditor.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_debug.h"
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 /// public methods

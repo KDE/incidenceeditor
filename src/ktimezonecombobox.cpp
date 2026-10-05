@@ -6,12 +6,12 @@
 */
 
 #include "ktimezonecombobox.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
 #include <QList>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 class IncidenceEditorNG::KTimeZoneComboBoxPrivate

@@ -6,7 +6,6 @@
 */
 
 #include "incidencedefaults.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidencedialog.h"
 #include "korganizereditorconfig.h"
@@ -25,6 +24,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <iostream>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 int main(int argc, char **argv)

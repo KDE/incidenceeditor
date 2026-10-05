@@ -5,7 +5,6 @@
 */
 
 #include "freebusyurldialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLineEdit>
 #include <KLocalizedString>
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget *parent)

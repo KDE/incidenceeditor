@@ -6,7 +6,6 @@
 */
 
 #include "incidenceattachment.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "attachmenteditdialog.h"
 #include "attachmenticonview.h"
@@ -39,6 +38,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QMimeDatabase>
 #include <QMimeType>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 IncidenceAttachment::IncidenceAttachment(Ui::EventOrTodoDesktop *ui)

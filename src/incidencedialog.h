@@ -10,7 +10,6 @@
 #pragma once
 
 #include "editoritemmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_export.h"
 
@@ -20,6 +19,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialog>
 
 #include <memory>
+
+using namespace Qt::Literals::StringLiterals;
 
 class QAbstractButton;
 

@@ -7,7 +7,6 @@
 */
 
 #include "incidencesecrecy.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KCalUtils/Stringify>
 #endif
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 IncidenceSecrecy::IncidenceSecrecy(Ui::EventOrTodoDesktop *ui)

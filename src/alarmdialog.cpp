@@ -6,7 +6,6 @@
 */
 
 #include "alarmdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "editorconfig.h"
 #include "ui_alarmdialog.h"
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 AlarmDialog::AlarmDialog(KCalendarCore::Incidence::IncidenceType incidenceType, QWidget *parent)

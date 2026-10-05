@@ -6,7 +6,6 @@
 */
 
 #include "incidencedatetime.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "incidenceeditor_debug.h"
 #include "ui_dialogdesktop.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QTimeZone>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 static bool identical(const QDateTime &dt1, const QDateTime &dt2)

@@ -6,13 +6,13 @@
 */
 
 #include "incidencewhatwhere.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_dialogdesktop.h"
 
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 IncidenceWhatWhere::IncidenceWhatWhere(Ui::EventOrTodoDesktop *ui)

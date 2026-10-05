@@ -5,13 +5,13 @@
  */
 
 #include "opencomposerjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 
 OpenComposerJob::OpenComposerJob(QObject *parent,
