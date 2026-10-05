@@ -470,7 +470,7 @@ msgstr "%1 за %2 до конца события %3"
 #: incidencealarm.cpp:357
 #, kde-format
 msgid "%1 %2 after the to-do started %3 (Disabled)"
-msgstr "%1 через %2 после начала задачи %3 (выключено)"
+msgstr "%1 через %2 после начала задачи %3 (отключено)"
 
 #: incidencealarm.cpp:359
 #, kde-format
@@ -634,7 +634,7 @@ msgid ""
 "Displays items (files, mail, etc.) that have been associated with this event "
 "or to-do."
 msgstr ""
-"Отображает элементы (файлы, письма и др.), которые связаны с этим событием "
+"Показывает элементы (файлы, письма и др.), которые связаны с этим событием "
 "или задачей."
 
 #: incidenceattendee.cpp:211
@@ -857,7 +857,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "no (valid) identities found"
-msgstr "события и задачи не найдены"
+msgstr "действительные профили не найдены"
 
 #: incidencedefaults.cpp:345
 #, kde-format
@@ -1261,7 +1261,7 @@ msgstr "%1 последней недели месяца %2"
 #, kde-format
 msgctxt "example: the 4th to last Wednesday of June"
 msgid "the %1 to last %2 of %3 "
-msgstr "%1 по счёту %2 месяца %3"
+msgstr "%1 с конца %2 месяца %3"
 
 #: incidencerecurrence.cpp:557
 #, kde-format
@@ -1533,7 +1533,7 @@ msgstr "Шаблон с таким именем уже существует, з�
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Template Name"
-msgstr "Копирование имени шаблона"
+msgstr "Повторяющееся имя шаблона"
 
 #: templatemanagementdialog.cpp:145
 #, kde-format
@@ -1553,7 +1553,7 @@ msgid ""
 "Applying the template will overwrite changes you made to this incidence. Are "
 "you sure that you want to apply the template?"
 msgstr ""
-"При применении шаблона внесённые изменения будет перезаписаны. Продолжить?"
+"При применении шаблона внесённые изменения будут перезаписаны. Продолжить?"
 
 # %1 can be "event", "to-do", "journal" or "free/busy", translated in libkcalutils5.po. --aspotashev
 #: templatemanagementdialog.cpp:180
@@ -1587,7 +1587,7 @@ msgid ""
 "This spinbox allows you to set the reminder trigger time. The time unit is "
 "set in the combobox immediately adjacent."
 msgstr ""
-"Этот счетчик позволит установить время срабатывания напоминания. Единицы "
+"Этот счётчик позволит установить время срабатывания напоминания. Единицы "
 "времени задаются в соседнем раскрывающемся списке."
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, mOffsetUnit)
@@ -1605,7 +1605,7 @@ msgid ""
 msgstr ""
 "Этот раскрывающийся список позволит выбрать единицы времени для времени "
 "срабатывания напоминания. Значение времени срабатывания устанавливается в "
-"соседнем окне счетчика."
+"соседнем окне счётчика."
 
 # BUGME: plurals --aspotashev
 #. i18n: ectx: property (text), item, widget (QComboBox, mOffsetUnit)
@@ -1635,8 +1635,7 @@ msgstr "дн."
 #: ui/alarmdialog.ui:97
 #, kde-format
 msgid "Select the reminder trigger relative to the start or end time"
-msgstr ""
-"Выберите напоминание, которое сработает относительно времени начала или конца"
+msgstr "Выберите, относительно чего срабатывает напоминание: начала или конца"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:100
@@ -1645,8 +1644,8 @@ msgid ""
 "Use this combobox to specify if you want the reminder to trigger before or "
 "after the start or end time."
 msgstr ""
-"Используйте этот раскрывающийся список, чтобы указать напоминание, которое "
-"должно сработать до или после времени начала или конца."
+"Укажите в этом списке, срабатывает ли напоминание до или после времени "
+"начала или конца."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mBeforeAfter)
 #: ui/alarmdialog.ui:104
@@ -1689,7 +1688,7 @@ msgstr "Повторять напоминание"
 #, kde-format
 msgid "Check this if you want to the reminder to recur on a periodic interval."
 msgstr ""
-"Периодически повторять напоминание через определенный интервал времени."
+"Периодически повторять напоминание через определённый интервал времени."
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, mRepeatCount)
 #: ui/alarmdialog.ui:160
@@ -1755,7 +1754,7 @@ msgstr "Выберите тип напоминания"
 #: ui/alarmdialog.ui:225
 #, kde-format
 msgid "Use this selector to choose the alarm type for the reminders."
-msgstr "Этот список позволяет выбрать тип дополнительных напоминаний."
+msgstr "Этот список позволяет выбрать тип напоминаний."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mTypeCombo)
 #: ui/alarmdialog.ui:235
@@ -1776,7 +1775,7 @@ msgid ""
 "Specify any text you desire to display in the popup notice when the reminder "
 "triggers."
 msgstr ""
-"Текст, который отобразится во всплывающем уведомлении при срабатывании "
+"Текст, который будет показан во всплывающем уведомлении при срабатывании "
 "напоминания."
 
 #. i18n: ectx: property (text), widget (QLabel, mSoundFileLabel)
@@ -1838,8 +1837,8 @@ msgid ""
 "<html><head/><body><p>Store a copy of the attachment file inside the "
 "calendar</p></body></html>"
 msgstr ""
-"<html><head/><body><p>Сохранить файл вложения внутри календаря</p></body></"
-"html>"
+"<html><head/><body><p>Хранить копию файла вложения внутри календаря</p></"
+"body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, mInlineCheck)
 #: ui/attachmenteditdialog.ui:75
@@ -1853,7 +1852,7 @@ msgid ""
 "often or may be moved (or removed) from their current location."
 msgstr ""
 "Хранить вложения внутри календаря (для этого может потребоваться "
-"значительный объем дискового пространства в зависимости от размера "
+"значительный объём дискового пространства в зависимости от размера "
 "вложения). Если этот параметр выключен, то будет сохранена только ссылка на "
 "вложение. Не используйте ссылки на вложения, которые часто меняются или "
 "которые могут быть перенесены (или удалены) из их текущего местоположения."
@@ -1863,7 +1862,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Store a copy of the attachment in the calendar "
-msgstr "Сохранить файл вложения в календаре "
+msgstr "Хранить копию вложения в календаре "
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/attachmenteditdialog.ui:123
@@ -1918,7 +1917,7 @@ msgstr "Сообщение об этом событии"
 #: ui/dialogdesktop.ui:23
 #, kde-format
 msgid "Use this message to correct the item parameters."
-msgstr "Используйте это сообщения для изменения параметров записи."
+msgstr "Используйте это сообщение для изменения параметров записи."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/dialogdesktop.ui:53
@@ -1995,14 +1994,14 @@ msgstr "Описа&ние:"
 #, kde-format
 msgctxt "@label"
 msgid "&Location:"
-msgstr "&Расположение:"
+msgstr "&Место проведения:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:205
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the location"
-msgstr "Указать расположение"
+msgstr "Указать место проведения"
 
 #. i18n: ectx: property (whatsThis), widget (QLineEdit, mLocationEdit)
 #: ui/dialogdesktop.ui:208
@@ -2160,8 +2159,7 @@ msgstr "Время начала задачи."
 msgctxt "@info:whatsthis"
 msgid "Select the timezone for this event. It will also affect recurrences"
 msgstr ""
-"Выберите временную зону для этого события. Это действие также повлияет на "
-"повтор события."
+"Выберите часовой пояс для этого события. Это также повлияет на повторения."
 
 #. i18n: ectx: property (text), widget (QLabel, mTimeZoneLabel)
 #: ui/dialogdesktop.ui:501
@@ -2196,7 +2194,7 @@ msgstr "Время завершения задачи."
 #, kde-format
 msgctxt "@title:tab General settings for an event or to-do"
 msgid "General"
-msgstr "Основное"
+msgstr "Общие"
 
 #. i18n: ectx: property (toolTip), widget (Akonadi::TagWidget, mTagWidget)
 #: ui/dialogdesktop.ui:640
@@ -2216,7 +2214,7 @@ msgstr "Открыть окно для выбора, а также добавл�
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the secrecy level"
-msgstr "Укажите уровень безопасности"
+msgstr "Укажите уровень конфиденциальности"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, mSecrecyLabel)
 #. i18n: ectx: property (whatsThis), widget (QComboBox, mSecrecyCombo)
@@ -2304,7 +2302,7 @@ msgstr "Участники:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Schedule the meeting with your attendees."
-msgstr "Запланировать встречу со своими участниками"
+msgstr "Запланировать встречу с участниками"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, mSolveButton)
 #: ui/dialogdesktop.ui:839
@@ -2322,7 +2320,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Schedule…"
-msgstr "Расписание…"
+msgstr "Планирование…"
 
 # BUGME: what "group" is meant here? --aspotashev
 #. i18n: ectx: property (text), widget (QPushButton, mGroupSubstitution)
@@ -2362,7 +2360,7 @@ msgstr "Конфиденциальность:"
 #: ui/dialogdesktop.ui:902
 #, kde-format
 msgid "Sign Invitation Email"
-msgstr "Отправлять электронное письмо с приглашением"
+msgstr "Подписывать письмо с приглашением"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mEncryptItip)
 #: ui/dialogdesktop.ui:912
@@ -2374,7 +2372,7 @@ msgstr "Шифровать письмо с приглашением"
 #: ui/dialogdesktop.ui:935
 #, kde-format
 msgid "Resources"
-msgstr "Ресурс&ы"
+msgstr "Ресурсы"
 
 #. i18n: ectx: property (text), widget (QPushButton, mBookResourceButton)
 #: ui/dialogdesktop.ui:975
@@ -2400,7 +2398,7 @@ msgstr "Напоминания"
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
-msgstr "Стандартные напоминания:"
+msgstr "Добавить стандартное напоминание:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
 #: ui/dialogdesktop.ui:1052
@@ -2683,7 +2681,7 @@ msgstr "Самое позднее время завершения:"
 #: ui/schedulingdialog.ui:83 ui/schedulingdialog.ui:108
 #, kde-format
 msgid "Check the weekdays to include in the search."
-msgstr "Отметить будние дни для включения поиск"
+msgstr "Отметьте дни недели, включаемые в поиск."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #. i18n: ectx: property (whatsThis), widget (IncidenceEditorNG::KWeekdayCheckCombo, mWeekdayCombo)
@@ -2692,21 +2690,20 @@ msgstr "Отметить будние дни для включения поис�
 msgid ""
 "Only the checked weekdays will be included in the free time slot search."
 msgstr ""
-"Только отмеченные будни будут включены в поиск свободного временного "
-"интервала."
+"Свободный временной интервал будет искаться только в отмеченные дни недели."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: ui/schedulingdialog.ui:92
 #, kde-format
 msgid "Allowed weekdays:"
-msgstr "Допущенные будни:"
+msgstr "Допустимые дни недели:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_5)
 #. i18n: ectx: property (toolTip), widget (KPIM::KCheckComboBox, mRolesCombo)
 #: ui/schedulingdialog.ui:118 ui/schedulingdialog.ui:140
 #, kde-format
 msgid "Check the roles to include in the search."
-msgstr "Отметить роли для включения в поиск."
+msgstr "Отметьте роли для включения в поиск."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_5)
 #. i18n: ectx: property (whatsThis), widget (KPIM::KCheckComboBox, mRolesCombo)
@@ -2753,7 +2750,7 @@ msgstr "Визуальный поиск"
 #: ui/schedulingdialog.ui:207
 #, kde-format
 msgid "Move your appointment to:"
-msgstr "Изменить ваше назначение на:"
+msgstr "Перенести встречу на:"
 
 #. i18n: ectx: property (text), widget (QLabel, mMoveDayLabel)
 #: ui/schedulingdialog.ui:228
@@ -2765,7 +2762,7 @@ msgstr "Понедельник, 12 июня"
 #: ui/schedulingdialog.ui:241
 #, kde-format
 msgid "to 10:00am"
-msgstr "10:00 часов"
+msgstr "до 10:00"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, TemplateManagementDialog_base)
 #: ui/template_management_dialog_base.ui:14
@@ -2782,8 +2779,8 @@ msgid ""
 "<i>New</i> to create a new template based on the current item settings."
 msgstr ""
 "Выберите шаблон и щёлкните <i>Применить</i>, чтобы применить его к текущему "
-"объекту. Чтобы создать шаблон на базе текущего объекта, щёлкните "
-"<i>Создать...</i>."
+"объекту. Чтобы создать шаблон на базе текущего объекта, щёлкните <i>Создать…"
+"</i>."
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, m_listBox)
 #: ui/template_management_dialog_base.ui:42
@@ -2804,7 +2801,7 @@ msgstr ""
 #: ui/template_management_dialog_base.ui:56
 #, kde-format
 msgid "Create a new template from the current settings"
-msgstr "Создать новый шаблон с текущими настройками"
+msgstr "Создать новый шаблон на основе текущих параметров"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonAdd)
 #: ui/template_management_dialog_base.ui:59
@@ -2814,7 +2811,7 @@ msgid ""
 "in the editor. You can use this template to quickly add new items in the "
 "future."
 msgstr ""
-"Нажмите, чтобы создать новый шаблон на основе текущих настроек. В будущем "
+"Нажмите, чтобы создать новый шаблон на основе текущих параметров. В будущем "
 "можно будет использовать этот шаблон для быстрого добавления нового элемента."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonAdd)
@@ -2847,7 +2844,7 @@ msgstr "&Удалить"
 #: ui/template_management_dialog_base.ui:85
 #, kde-format
 msgid "Apply the selected template settings"
-msgstr "Применить настройки выделенного шаблона"
+msgstr "Применить параметры выделенного шаблона"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, m_buttonApply)
 #: ui/template_management_dialog_base.ui:88
@@ -2856,7 +2853,7 @@ msgid ""
 "Clicking this button will apply the settings from the selected template to "
 "the item you are currently editing."
 msgstr ""
-"Нажмите, чтобы применить настройки выделенного шаблона к редактируемому "
+"Нажмите, чтобы применить параметры выделенного шаблона к редактируемому "
 "элементу."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_buttonApply)
@@ -2889,7 +2886,7 @@ msgid ""
 msgstr ""
 "Выберите один из следующих уровней масштаба диаграммы Ганта:<nl/>«час» "
 "показывает диапазон в несколько часов,<nl/>«день» показывает диапазон в "
-"несколько дней,<nl/>«неделя» - диапазон в несколько месяцев,<nl/>«месяц» - "
+"несколько дней,<nl/>«неделя» — диапазон в несколько недель,<nl/>«месяц» — "
 "диапазон в несколько месяцев,<nl/>а «автоматически» выбирает наиболее "
 "подходящий диапазон для текущего события или задачи."
 
@@ -2927,13 +2924,13 @@ msgstr "Автоматически"
 #, kde-format
 msgctxt "@action:button"
 msgid "Center on Start"
-msgstr "Центрировать на начало"
+msgstr "Центрировать по началу"
 
 #: visualfreebusywidget.cpp:166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Center the Gantt chart on the event start date and time"
-msgstr "Центровать диаграмму Ганта на дату и время начала события"
+msgstr "Центрировать диаграмму Ганта по дате и время начала события"
 
 #: visualfreebusywidget.cpp:168
 #, kde-format
@@ -2942,7 +2939,7 @@ msgid ""
 "Click this button to center the Gantt chart on the start time and day of "
 "this event."
 msgstr ""
-"Нажмите, чтобы центрировать диаграмму Ганта на дату и время начала события."
+"Нажмите, чтобы центрировать диаграмму Ганта по дате и время начала события."
 
 #: visualfreebusywidget.cpp:175
 #, kde-format
@@ -2954,7 +2951,7 @@ msgstr "Выбрать дату"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move the event to a date and time when all attendees are available"
-msgstr "Переместите событие на дату и время, когда доступны все участники"
+msgstr "Переместить событие на дату и время, когда доступны все участники"
 
 #: visualfreebusywidget.cpp:180
 #, kde-format
