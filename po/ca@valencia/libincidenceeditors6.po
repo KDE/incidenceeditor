@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2026-08-06 10:09+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -152,13 +152,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "Adjunt nou"
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:73
+#: attendeeline.cpp:153 incidenceattendee.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Sol·licita resposta"
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:74
+#: attendeeline.cpp:154 incidenceattendee.cpp:75
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -170,13 +170,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Introduïu el nom o l'adreça de correu de l'assistent."
 
-#: attendeeline.cpp:159 incidenceattendee.cpp:76
+#: attendeeline.cpp:159 incidenceattendee.cpp:77
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Edita l'estat actual d'assistència de l'assistent."
 
-#: attendeeline.cpp:161 incidenceattendee.cpp:78 schedulingdialog.cpp:107
+#: attendeeline.cpp:161 incidenceattendee.cpp:79 schedulingdialog.cpp:107
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -192,13 +192,13 @@ msgstr ""
 "L'adreça de correu o el nom de l'assistent. Es pot enviar una invitació a "
 "l'usuari si es proporciona l'adreça de correu."
 
-#: attendeeline.cpp:169 incidenceattendee.cpp:80
+#: attendeeline.cpp:169 incidenceattendee.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Sol·licita una resposta de l'assistent"
 
-#: attendeeline.cpp:171 incidenceattendee.cpp:82
+#: attendeeline.cpp:171 incidenceattendee.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -612,7 +612,7 @@ msgstr ""
 "Mostra els elements (fitxers, correu, etc.) que s'han associat amb este "
 "esdeveniment o tasca pendent."
 
-#: incidenceattendee.cpp:221
+#: incidenceattendee.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -622,31 +622,31 @@ msgstr ""
 "%1 no pareix una adreça de correu vàlida. Segur que voleu invitar a este "
 "participant?"
 
-#: incidenceattendee.cpp:224
+#: incidenceattendee.cpp:225
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Adreça de correu no vàlida"
 
-#: incidenceattendee.cpp:225
+#: incidenceattendee.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "Invita"
 
-#: incidenceattendee.cpp:226
+#: incidenceattendee.cpp:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "No l'invites"
 
-#: incidenceattendee.cpp:453
+#: incidenceattendee.cpp:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Trieu els assistents"
 
-#: incidenceattendee.cpp:637
+#: incidenceattendee.cpp:638
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -654,7 +654,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 conflicte"
 msgstr[1] "%1 conflictes"
 
-#: incidenceattendee.cpp:806
+#: incidenceattendee.cpp:807
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -666,13 +666,13 @@ msgstr ""
 "també està assistint a este esdeveniment, voleu canviar la corresponent "
 "assistència també?"
 
-#: incidenceattendee.cpp:810
+#: incidenceattendee.cpp:811
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Canvia l'assistent"
 
-#: incidenceattendee.cpp:811
+#: incidenceattendee.cpp:812
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1358,55 +1358,55 @@ msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
 msgstr "Opcions individuals del correu >>"
 
-#: ldaputils.cpp:17
+#: ldaputils.cpp:18
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
 msgstr "Nom comú"
 
-#: ldaputils.cpp:19
+#: ldaputils.cpp:20
 #, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
 msgstr "Correu electrònic"
 
-#: ldaputils.cpp:21
+#: ldaputils.cpp:22
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
 msgstr "Nom de pila"
 
-#: ldaputils.cpp:23
+#: ldaputils.cpp:24
 #, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
 msgstr "Cognoms"
 
-#: ldaputils.cpp:25
+#: ldaputils.cpp:26
 #, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
 msgstr "Organització"
 
-#: ldaputils.cpp:27
+#: ldaputils.cpp:28
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
 msgstr "Classe d'objecte"
 
-#: ldaputils.cpp:29
+#: ldaputils.cpp:30
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
 msgstr "Descripció"
 
-#: ldaputils.cpp:31
+#: ldaputils.cpp:32
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
 msgstr "Telèfon"
 
-#: ldaputils.cpp:33
+#: ldaputils.cpp:34
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"

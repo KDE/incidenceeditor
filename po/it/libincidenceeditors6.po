@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2026-08-08 02:00+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -155,13 +155,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "Nuovo allegato"
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:73
+#: attendeeline.cpp:153 incidenceattendee.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Richiedi risposta"
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:74
+#: attendeeline.cpp:154 incidenceattendee.cpp:75
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -173,13 +173,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Inserisci il nome o l'indirizzo di posta elettronica del partecipante."
 
-#: attendeeline.cpp:159 incidenceattendee.cpp:76
+#: attendeeline.cpp:159 incidenceattendee.cpp:77
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Modifica lo stato attuale del partecipante."
 
-#: attendeeline.cpp:161 incidenceattendee.cpp:78 schedulingdialog.cpp:107
+#: attendeeline.cpp:161 incidenceattendee.cpp:79 schedulingdialog.cpp:107
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -196,13 +196,13 @@ msgstr ""
 "fornito l'indirizzo di posta elettronica è possibile spedire un invito "
 "all'utente."
 
-#: attendeeline.cpp:169 incidenceattendee.cpp:80
+#: attendeeline.cpp:169 incidenceattendee.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Richiedi una risposta dal partecipante"
 
-#: attendeeline.cpp:171 incidenceattendee.cpp:82
+#: attendeeline.cpp:171 incidenceattendee.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -615,7 +615,7 @@ msgstr ""
 "Mostra gli oggetti (file, messaggi di posta elettronica, ecc.) che sono "
 "stati associati a questo evento o cosa da fare."
 
-#: incidenceattendee.cpp:221
+#: incidenceattendee.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -625,31 +625,31 @@ msgstr ""
 "%1 non sembra essere un indirizzo di posta elettronica valido. Sei sicuro di "
 "voler invitare questo partecipante?"
 
-#: incidenceattendee.cpp:224
+#: incidenceattendee.cpp:225
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Indirizzo di posta elettronica non valido"
 
-#: incidenceattendee.cpp:225
+#: incidenceattendee.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "Invita"
 
-#: incidenceattendee.cpp:226
+#: incidenceattendee.cpp:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Non invitare"
 
-#: incidenceattendee.cpp:453
+#: incidenceattendee.cpp:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Seleziona partecipanti"
 
-#: incidenceattendee.cpp:637
+#: incidenceattendee.cpp:638
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -657,7 +657,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 conflitto"
 msgstr[1] "%1 conflitti"
 
-#: incidenceattendee.cpp:806
+#: incidenceattendee.cpp:807
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -668,13 +668,13 @@ msgstr ""
 "Stai modificando l'organizzatore dell'evento, che è anche un partecipante; "
 "vuoi modificare anche la sua partecipazione di conseguenza?"
 
-#: incidenceattendee.cpp:810
+#: incidenceattendee.cpp:811
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Cambia partecipante"
 
-#: incidenceattendee.cpp:811
+#: incidenceattendee.cpp:812
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1361,55 +1361,55 @@ msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
 msgstr "Impostazioni di posta individuali >>"
 
-#: ldaputils.cpp:17
+#: ldaputils.cpp:18
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
 msgstr "Nome comune"
 
-#: ldaputils.cpp:19
+#: ldaputils.cpp:20
 #, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
 msgstr "Posta elettronica"
 
-#: ldaputils.cpp:21
+#: ldaputils.cpp:22
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
 msgstr "Nome"
 
-#: ldaputils.cpp:23
+#: ldaputils.cpp:24
 #, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
 msgstr "Cognome"
 
-#: ldaputils.cpp:25
+#: ldaputils.cpp:26
 #, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
 msgstr "Organizzazione"
 
-#: ldaputils.cpp:27
+#: ldaputils.cpp:28
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
 msgstr "Classe oggetto"
 
-#: ldaputils.cpp:29
+#: ldaputils.cpp:30
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
 msgstr "Descrizione"
 
-#: ldaputils.cpp:31
+#: ldaputils.cpp:32
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
 msgstr "Telefono"
 
-#: ldaputils.cpp:33
+#: ldaputils.cpp:34
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"

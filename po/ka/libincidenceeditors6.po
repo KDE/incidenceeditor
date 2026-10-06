@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2026-08-06 05:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -148,13 +148,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "ახალი მიმაგრება"
 
-#: attendeeline.cpp:153 incidenceattendee.cpp:73
+#: attendeeline.cpp:153 incidenceattendee.cpp:74
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "მოთხოვნის პასუხი"
 
-#: attendeeline.cpp:154 incidenceattendee.cpp:74
+#: attendeeline.cpp:154 incidenceattendee.cpp:75
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -166,13 +166,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "დამსწრის ელფოსტის მისამართის ან სახელის ჩასწორება."
 
-#: attendeeline.cpp:159 incidenceattendee.cpp:76
+#: attendeeline.cpp:159 incidenceattendee.cpp:77
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "დამსწრის დასწრების მიმდნარე სტატუსის ჩასწორება."
 
-#: attendeeline.cpp:161 incidenceattendee.cpp:78 schedulingdialog.cpp:107
+#: attendeeline.cpp:161 incidenceattendee.cpp:79 schedulingdialog.cpp:107
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -188,13 +188,13 @@ msgstr ""
 "დამსწრის ელფოსტის მისამართი ან სახელი. მოსაწვევი მომხმარებლისთვის, მხოლოდ, "
 "მაშინ შეგიძლიათ, გააგზავნოთ, თუ ელფოსტის მისამართი მითითებულია."
 
-#: attendeeline.cpp:169 incidenceattendee.cpp:80
+#: attendeeline.cpp:169 incidenceattendee.cpp:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "დამსწრისგან პასუხის მოთხოვნა"
 
-#: attendeeline.cpp:171 incidenceattendee.cpp:82
+#: attendeeline.cpp:171 incidenceattendee.cpp:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 "ამ მოვლენასთან ან დაგეგმილთან ასოცირებული ელემენტების (ფაილების, ელფოსტის და "
 "ა.შ.) ჩვენება."
 
-#: incidenceattendee.cpp:221
+#: incidenceattendee.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -616,31 +616,31 @@ msgid ""
 msgstr ""
 "%1 სწორ ელფოსტის მისამართს არ წააგავს. მართლა გნებავთ ამ მონაწილის მოწვევა?"
 
-#: incidenceattendee.cpp:224
+#: incidenceattendee.cpp:225
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "ელფოსტის არასწორი მისამართი"
 
-#: incidenceattendee.cpp:225
+#: incidenceattendee.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "მოწვევა"
 
-#: incidenceattendee.cpp:226
+#: incidenceattendee.cpp:227
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "არ მოიწვიო"
 
-#: incidenceattendee.cpp:453
+#: incidenceattendee.cpp:454
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "აირჩიეთ დამსწრეები"
 
-#: incidenceattendee.cpp:637
+#: incidenceattendee.cpp:638
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -648,7 +648,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 კონფლიქტი"
 msgstr[1] "%1 კონფლიქტი"
 
-#: incidenceattendee.cpp:806
+#: incidenceattendee.cpp:807
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -659,13 +659,13 @@ msgstr ""
 "ცვლით ამ მოვლენის ორგანიზატორს. რადგან ორგანიზატორი ასევე ესწრება მოვლენას, "
 "გნებავთ, შესაბამისი დამსწრეც შეცვალოთ?"
 
-#: incidenceattendee.cpp:810
+#: incidenceattendee.cpp:811
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "დამსწრის შეცვლა"
 
-#: incidenceattendee.cpp:811
+#: incidenceattendee.cpp:812
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -1348,55 +1348,55 @@ msgctxt "@action:button show list of attendees"
 msgid "Individual mailsettings >>"
 msgstr "ინდივიდუალური ელფოსტისპარამეტრები >>"
 
-#: ldaputils.cpp:17
+#: ldaputils.cpp:18
 #, kde-format
 msgctxt "ldap attribute cn"
 msgid "Common name"
 msgstr "საერთო სახელი"
 
-#: ldaputils.cpp:19
+#: ldaputils.cpp:20
 #, kde-format
 msgctxt "ldap attribute mail"
 msgid "Email"
 msgstr "Email"
 
-#: ldaputils.cpp:21
+#: ldaputils.cpp:22
 #, kde-format
 msgctxt "ldap attribute givenname"
 msgid "Given name"
 msgstr "მინიჭებული სახელი"
 
-#: ldaputils.cpp:23
+#: ldaputils.cpp:24
 #, kde-format
 msgctxt "ldap attribute sn"
 msgid "Surname"
 msgstr "გვარი"
 
-#: ldaputils.cpp:25
+#: ldaputils.cpp:26
 #, kde-format
 msgctxt "ldap attribute ou"
 msgid "Organization"
 msgstr "ორგანიზაცია"
 
-#: ldaputils.cpp:27
+#: ldaputils.cpp:28
 #, kde-format
 msgctxt "ldap attribute objectClass"
 msgid "Object class"
 msgstr "ობიექტის კლასი"
 
-#: ldaputils.cpp:29
+#: ldaputils.cpp:30
 #, kde-format
 msgctxt "ldap attribute description"
 msgid "Description"
 msgstr "აღწერა"
 
-#: ldaputils.cpp:31
+#: ldaputils.cpp:32
 #, kde-format
 msgctxt "ldap attribute telephoneNumber"
 msgid "Telephone"
 msgstr "ტელეფონი"
 
-#: ldaputils.cpp:33
+#: ldaputils.cpp:34
 #, kde-format
 msgctxt "ldap attribute mobile"
 msgid "Mobile"
