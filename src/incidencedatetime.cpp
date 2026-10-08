@@ -12,6 +12,11 @@
 
 #include <CalendarSupport/KCalPrefs>
 
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KFormat>
+#endif
+
 #include <QTimeZone>
 
 using namespace Qt::Literals::StringLiterals;
@@ -766,8 +771,17 @@ void IncidenceDateTime::setDateTimes(const QDateTime &start, const QDateTime &en
 void IncidenceDateTime::updateStartToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString const datetimeStr = mUi->mWholeDayCheck->isChecked() ? QLocale().toString(currentStartDateTime().date(), QLocale::LongFormat)
-                                                                     : QLocale().toString(currentStartDateTime(), QLocale::ShortFormat);
+        QString datetimeStr;
+        if (mUi->mWholeDayCheck->isChecked()) {
+            datetimeStr = QLocale().toString(currentStartDateTime().date(), QLocale::LongFormat);
+        } else {
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+            const KFormat format;
+            datetimeStr = format.formatDateTime(currentStartDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+#else
+            dtStartStr = QLocale().toString(currentStartDateTime(), QLocale::ShortFormat);
+#endif
+        }
         mUi->mStartDateEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
         mUi->mStartTimeEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
     } else {
@@ -779,8 +793,17 @@ void IncidenceDateTime::updateStartToolTips()
 void IncidenceDateTime::updateEndToolTips()
 {
     if (mUi->mStartCheck->isChecked()) {
-        QString const datetimeStr = mUi->mWholeDayCheck->isChecked() ? QLocale().toString(currentEndDateTime().date(), QLocale::LongFormat)
-                                                                     : QLocale().toString(currentEndDateTime(), QLocale::ShortFormat);
+        QString datetimeStr;
+        if (mUi->mWholeDayCheck->isChecked()) {
+            datetimeStr = QLocale().toString(currentEndDateTime().date(), QLocale::LongFormat);
+        } else {
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+            const KFormat format;
+            datetimeStr = format.formatDateTime(currentEndDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+#else
+            dtStartStr = QLocale().toString(currentEndDateTime(), QLocale::ShortFormat);
+#endif
+        }
         if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
             mUi->mEndDateEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));
             mUi->mEndTimeEdit->setToolTip(i18nc("@info:tooltip", "Due on: %1", datetimeStr));

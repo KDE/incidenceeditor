@@ -13,6 +13,10 @@
 #include <KGanttGraphicsView>
 
 #include <KLocalizedString>
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <KFormat>
+#endif
 
 #include <QLocale>
 
@@ -80,10 +84,19 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod 
         toolTip += u"<br>"_s;
     }
     toolTip += u"<i>"_s + i18nc("@info:tooltip period start time", "Start:") + u"</i>"_s + QStringLiteral("&nbsp;");
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+    const KFormat format;
+    toolTip += format.formatDateTime(period.start().toLocalTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+#else
     toolTip += QLocale().toString(period.start().toLocalTime(), QLocale::ShortFormat);
+#endif
     toolTip += u"<br>"_s;
     toolTip += u"<i>"_s + i18nc("@info:tooltip period end time", "End:") + u"</i>"_s + QStringLiteral("&nbsp;");
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+    toolTip += format.formatDateTime(period.end().toLocalTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
+#else
     toolTip += QLocale().toString(period.end().toLocalTime(), QLocale::ShortFormat);
+#endif
     toolTip += u"<br>"_s;
     toolTip += u"</qt>"_s;
     return toolTip;
