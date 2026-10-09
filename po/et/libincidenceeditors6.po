@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:47+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -274,31 +274,31 @@ msgctxt "Attendee email"
 msgid "Email"
 msgstr "E-post"
 
-#: freebusyganttproxymodel.cpp:70
+#: freebusyganttproxymodel.cpp:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Free/Busy Period"
 msgstr "Vaba/hõivatud periood"
 
-#: freebusyganttproxymodel.cpp:73
+#: freebusyganttproxymodel.cpp:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Summary:"
 msgstr "Kokkuvõte:"
 
-#: freebusyganttproxymodel.cpp:78
+#: freebusyganttproxymodel.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Location:"
 msgstr "Asukoht:"
 
-#: freebusyganttproxymodel.cpp:82
+#: freebusyganttproxymodel.cpp:86
 #, kde-format
 msgctxt "@info:tooltip period start time"
 msgid "Start:"
 msgstr "Algus:"
 
-#: freebusyganttproxymodel.cpp:85
+#: freebusyganttproxymodel.cpp:94
 #, kde-format
 msgctxt "@info:tooltip period end time"
 msgid "End:"
@@ -689,31 +689,31 @@ msgctxt "Completion percentage label"
 msgid "%1%"
 msgstr "%1,"
 
-#: incidencedatetime.cpp:221
+#: incidencedatetime.cpp:226
 #, kde-format
 msgctxt "@action show or hide the time zone widgets"
 msgid "Time zones"
 msgstr "Ajavööndid"
 
-#: incidencedatetime.cpp:571
+#: incidencedatetime.cpp:576
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating ends in the past."
 msgstr ""
 
-#: incidencedatetime.cpp:573
+#: incidencedatetime.cpp:578
 #, kde-format
 msgctxt "@info"
 msgid "The event you are creating starts in the past."
 msgstr ""
 
-#: incidencedatetime.cpp:633
+#: incidencedatetime.cpp:638
 #, kde-format
 msgctxt "@label The due date/time of a to-do"
 msgid "Due:"
 msgstr "Tähtaeg:"
 
-#: incidencedatetime.cpp:682
+#: incidencedatetime.cpp:687
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -721,7 +721,7 @@ msgid ""
 "adjusted for today's date"
 msgstr ""
 
-#: incidencedatetime.cpp:685
+#: incidencedatetime.cpp:690
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -729,70 +729,70 @@ msgid ""
 "adjusted for today's date"
 msgstr ""
 
-#: incidencedatetime.cpp:771 incidencedatetime.cpp:772
+#: incidencedatetime.cpp:785 incidencedatetime.cpp:786
 #, fuzzy, kde-format
 #| msgid "Starts: %1"
 msgctxt "@info:tooltip"
 msgid "Starts: %1"
 msgstr "Algus: %1"
 
-#: incidencedatetime.cpp:774
+#: incidencedatetime.cpp:788
 #, fuzzy, kde-format
 #| msgid "Starting Date"
 msgctxt "@info:tooltip"
 msgid "Starting Date"
 msgstr "Alguskuupäev"
 
-#: incidencedatetime.cpp:775
+#: incidencedatetime.cpp:789
 #, fuzzy, kde-format
 #| msgid "Starting Time"
 msgctxt "@info:tooltip"
 msgid "Starting Time"
 msgstr "Algusaeg"
 
-#: incidencedatetime.cpp:785 incidencedatetime.cpp:786
+#: incidencedatetime.cpp:808 incidencedatetime.cpp:809
 #, fuzzy, kde-format
 #| msgid "Due on: %1"
 msgctxt "@info:tooltip"
 msgid "Due on: %1"
 msgstr "Tähtaeg: %1"
 
-#: incidencedatetime.cpp:788 incidencedatetime.cpp:789
+#: incidencedatetime.cpp:811 incidencedatetime.cpp:812
 #, fuzzy, kde-format
 #| msgid "Ends: %1"
 msgctxt "@info:tooltip"
 msgid "Ends: %1"
 msgstr "Lõpp: %1"
 
-#: incidencedatetime.cpp:793
+#: incidencedatetime.cpp:816
 #, fuzzy, kde-format
 #| msgid "Due Date"
 msgctxt "@info:tooltip"
 msgid "Due Date"
 msgstr "Tähtaeg"
 
-#: incidencedatetime.cpp:794
+#: incidencedatetime.cpp:817
 #, fuzzy, kde-format
 #| msgid "Due Time"
 msgctxt "@info:tooltip"
 msgid "Due Time"
 msgstr "Tähtaeg"
 
-#: incidencedatetime.cpp:796
+#: incidencedatetime.cpp:819
 #, fuzzy, kde-format
 #| msgid "Ending Date"
 msgctxt "@info:tooltip"
 msgid "Ending Date"
 msgstr "Lõppkuupäev"
 
-#: incidencedatetime.cpp:797
+#: incidencedatetime.cpp:820
 #, fuzzy, kde-format
 #| msgid "Ending Time"
 msgctxt "@info:tooltip"
 msgid "Ending Time"
 msgstr "Lõppaeg"
 
-#: incidencedatetime.cpp:875
+#: incidencedatetime.cpp:898
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid start date and time."
@@ -800,7 +800,7 @@ msgctxt "@info"
 msgid "Invalid start date."
 msgstr "Vigane alguse kuupäev ja kellaaeg."
 
-#: incidencedatetime.cpp:880
+#: incidencedatetime.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid start date and time."
@@ -808,7 +808,7 @@ msgctxt "@info"
 msgid "Invalid start time."
 msgstr "Vigane alguse kuupäev ja kellaaeg."
 
-#: incidencedatetime.cpp:888
+#: incidencedatetime.cpp:911
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid end date and time."
@@ -816,7 +816,7 @@ msgctxt "@info"
 msgid "Invalid end date."
 msgstr "Vigane lõppemise kuupäev ja kellaaeg."
 
-#: incidencedatetime.cpp:893
+#: incidencedatetime.cpp:916
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Invalid end date and time."
@@ -824,7 +824,7 @@ msgctxt "@info"
 msgid "Invalid end time."
 msgstr "Vigane lõppemise kuupäev ja kellaaeg."
 
-#: incidencedatetime.cpp:904
+#: incidencedatetime.cpp:927
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -834,7 +834,7 @@ msgstr ""
 "Sündmus lõpeb enne algamist.\n"
 "Palun korrigeeri kuupäeva ja kellaaega."
 
-#: incidencedatetime.cpp:908
+#: incidencedatetime.cpp:931
 #, kde-format
 msgctxt "@info"
 msgid ""
