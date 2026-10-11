@@ -779,7 +779,7 @@ void IncidenceDateTime::updateStartToolTips()
             const KFormat format;
             datetimeStr = format.formatDateTime(currentStartDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
 #else
-            dtStartStr = QLocale().toString(currentStartDateTime(), QLocale::ShortFormat);
+            datetimeStr = QLocale().toString(currentStartDateTime(), QLocale::ShortFormat);
 #endif
         }
         mUi->mStartDateEdit->setToolTip(i18nc("@info:tooltip", "Starts: %1", datetimeStr));
@@ -801,7 +801,7 @@ void IncidenceDateTime::updateEndToolTips()
             const KFormat format;
             datetimeStr = format.formatDateTime(currentEndDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
 #else
-            dtStartStr = QLocale().toString(currentEndDateTime(), QLocale::ShortFormat);
+            datetimeStr = QLocale().toString(currentEndDateTime(), QLocale::ShortFormat);
 #endif
         }
         if (mLoadedIncidence->type() == KCalendarCore::Incidence::TypeTodo) {
