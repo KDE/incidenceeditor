@@ -2,14 +2,14 @@ description: Incidenceeditor library
 tier: 3
 type: functional
 platforms:
-    - name: Linux
-    - name: FreeBSD
-    - name: Windows
-    - name: macOS
+  - name: Linux
+  - name: FreeBSD
+  - name: Windows
+  - name: macOS
 portingAid: false
 deprecated: false
 libraries:
-    - cmake: "KPim6::IncidenceEditor"
+  - cmake: "KPim6::IncidenceEditor"
 cmakename: KPim6IncidenceEditor
 group: kdepim
 public_lib: true
