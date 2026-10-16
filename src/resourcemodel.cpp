@@ -30,7 +30,7 @@ ResourceModel::ResourceModel(const QStringList &headers, QObject *parent)
                        "(|(cn=%1)(description=%1)(kolabDescAttribute=%1))"));
 
     connect(mLdapSearchCollections,
-            qOverload<const KLDAPCore::LdapResultObject::List &>(&KLDAPCore::LdapClientSearch ::searchData),
+            qOverload<const KLDAPCore::LdapResultObject::List &>(&KLDAPCore::LdapClientSearch::searchData),
             this,
             &ResourceModel::slotLDAPCollectionData);
     connect(mLdapSearch,
