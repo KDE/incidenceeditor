@@ -418,7 +418,7 @@ void IncidenceDialogPrivate::storeTemplatesInConfig(const QStringList &templateN
     // be changed by adding a setTemplates method.
     const QStringList origTemplates = IncidenceEditorNG::EditorConfig::instance()->templates(mEditor->type());
     const QString defaultPath =
-        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"korganizer/templates/"_s + typeToString(mEditor->type()) + u'/';
+        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/korganizer/templates/"_s + typeToString(mEditor->type()) + u'/';
     QDir().mkpath(defaultPath);
     for (const QString &tmpl : origTemplates) {
         if (!templateNames.contains(tmpl)) {
