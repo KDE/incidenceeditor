@@ -5,13 +5,11 @@
 */
 #include "ktimezonecomboboxtest.h"
 
-#include "../src/ktimezonecombobox.h"
+#include "ktimezonecombobox.h"
 
 #include <QTest>
 
 #include <QTimeZone>
-
-using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(KTimeZoneComboBoxTest)
 

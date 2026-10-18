@@ -8,6 +8,7 @@
 #include "attendeeline.h"
 #include "attendeedata.h"
 
+#include <kcalendarcore_version.h>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
 #include <KCalUtils/Stringify>
 #endif

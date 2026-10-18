@@ -8,8 +8,10 @@
 
 #include <KLocalizedString>
 
-#include <QDBusConnectionInterface>
+#include <KMime/Message>
+
 #include <QDBusInterface>
+#include <QDBusReply>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;

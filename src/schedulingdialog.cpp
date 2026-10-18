@@ -10,6 +10,8 @@
 #include "conflictresolver.h"
 #include "visualfreebusywidget.h"
 #include <CalendarSupport/FreePeriodModel>
+#include <KCalendarCore/Attendee>
+#include <kcalendarcore_version.h>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
 #include <KCalUtils/Stringify>
 #endif
@@ -17,6 +19,7 @@
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
+#include <QIcon>
 #include <QLocale>
 #include <QPushButton>
 #include <QVBoxLayout>

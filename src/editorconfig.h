@@ -13,9 +13,9 @@
 #include <QDateTime>
 #include <QList>
 #include <QStringList>
+#include <QUrl>
 
 #include <memory>
-class QUrl;
 class KConfigSkeleton;
 
 namespace IncidenceEditorNG

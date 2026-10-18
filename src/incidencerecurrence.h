@@ -11,6 +11,8 @@
 
 #include <KLocalizedString>
 #include <QDate>
+
+class QBitArray;
 namespace Ui
 {
 class EventOrTodoDesktop;

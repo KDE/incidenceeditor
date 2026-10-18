@@ -7,8 +7,6 @@
 #pragma once
 
 #include <QIcon>
-#include <QModelIndex>
-#include <QString>
 #include <QStyledItemDelegate>
 
 namespace IncidenceEditorNG

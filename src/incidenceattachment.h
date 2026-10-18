@@ -20,6 +20,7 @@ class QMenu;
 class QListWidgetItem;
 class QMimeData;
 class QAction;
+class QPoint;
 namespace IncidenceEditorNG
 {
 class AttachmentIconView;

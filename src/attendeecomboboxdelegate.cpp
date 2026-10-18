@@ -12,6 +12,8 @@
 #include <QApplication>
 #include <QHelpEvent>
 #include <QMenu>
+#include <QStyle>
+#include <QStyleOption>
 #include <QToolTip>
 #include <QWhatsThis>
 

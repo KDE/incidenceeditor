@@ -8,8 +8,6 @@
 #include "editorconfig.h"
 #include "incidenceeditor_private_export.h"
 
-#include <KCalendarCore/IncidenceBase>
-
 namespace IncidenceEditorNG
 {
 class INCIDENCEEDITOR_TESTS_EXPORT KOrganizerEditorConfig : public IncidenceEditorNG::EditorConfig

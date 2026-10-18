@@ -12,11 +12,15 @@
 
 #include <CalendarSupport/KCalPrefs>
 
+#include <KLocalizedString>
+
 #include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
 #include <KFormat>
 #endif
 
+#include <QLineEdit>
+#include <QLocale>
 #include <QTimeZone>
 
 using namespace Qt::Literals::StringLiterals;

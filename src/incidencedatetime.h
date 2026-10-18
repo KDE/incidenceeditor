@@ -16,6 +16,7 @@
 #include <KMessageWidget>
 
 #include <QDate>
+#include <QDateTime>
 
 namespace Ui
 {

@@ -9,6 +9,9 @@
 #include <KCalendarCore/Attendee>
 #include <QDialog>
 
+#include <utility>
+#include <vector>
+
 class KGuiItem;
 
 class TestIndividualMailDialog;

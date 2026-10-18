@@ -9,6 +9,7 @@
 #include "incidenceeditor_export.h"
 #include <Akonadi/Item>
 #include <KCalendarCore/Incidence>
+#include <QObject>
 namespace IncidenceEditorNG
 {
 /**

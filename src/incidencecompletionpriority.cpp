@@ -12,6 +12,8 @@
 #include <KCalendarCore/Todo>
 #include <KLocalizedString>
 
+#include <QFontMetrics>
+
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 

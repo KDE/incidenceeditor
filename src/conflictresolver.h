@@ -16,6 +16,7 @@
 #include <QSet>
 #include <QTimer>
 
+class QWidget;
 namespace CalendarSupport
 {
 class FreeBusyItemModel;

@@ -14,6 +14,10 @@
 
 #include <CalendarSupport/KCalPrefs>
 
+#include <KLocalizedString>
+
+#include <QPointer>
+
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 using namespace CalendarSupport;

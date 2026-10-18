@@ -18,7 +18,6 @@ class EventOrTodoDesktop;
 
 namespace KContacts
 {
-class Addressee;
 class ContactGroup;
 }
 

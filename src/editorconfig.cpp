@@ -8,6 +8,7 @@
 #include "korganizereditorconfig.h"
 
 #include <QCoreApplication>
+#include <QHash>
 
 using namespace IncidenceEditorNG;
 

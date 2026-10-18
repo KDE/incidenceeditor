@@ -24,6 +24,7 @@
 #include <QKeyEvent>
 #include <QMimeData>
 #include <QMimeDatabase>
+#include <QPixmap>
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 

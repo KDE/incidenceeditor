@@ -9,7 +9,6 @@
 #include "conflictresolver.h"
 
 #include <KCalendarCore/Duration>
-#include <KCalendarCore/Event>
 #include <KCalendarCore/Period>
 
 #include <QTest>

@@ -12,7 +12,13 @@
 #include <KCalendarCore/Attendee>
 #include <KCalendarCore/FreeBusy>
 
+#include <QDateTime>
+#include <QList>
 #include <QObject>
+
+#include <memory>
+
+class QWidget;
 
 namespace IncidenceEditorNG
 {

@@ -12,8 +12,10 @@
 #include <QComboBox>
 #include <QDialogButtonBox>
 #include <QGridLayout>
+#include <QIcon>
 #include <QLabel>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;

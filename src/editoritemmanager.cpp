@@ -13,7 +13,6 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/Item>
-#include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemMoveJob>
@@ -23,10 +22,6 @@
 
 #include "incidenceeditor_debug.h"
 #include <KJob>
-#include <KLocalizedString>
-
-#include <QMessageBox>
-#include <QPointer>
 
 using namespace Qt::Literals::StringLiterals;
 

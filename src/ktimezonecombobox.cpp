@@ -11,6 +11,9 @@
 
 #include <QList>
 
+#include <algorithm>
+#include <iterator>
+
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 

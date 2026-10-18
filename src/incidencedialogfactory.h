@@ -12,6 +12,8 @@
 #include <Akonadi/Collection>
 #include <KCalendarCore/IncidenceBase>
 
+class QWidget;
+
 namespace Akonadi
 {
 class IncidenceChanger;

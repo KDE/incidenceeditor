@@ -9,6 +9,12 @@
 
 #include "incidenceeditor-ng.h"
 
+#include <Akonadi/Tag>
+
+#include <QStringList>
+
+class KJob;
+
 namespace Ui
 {
 class EventOrTodoDesktop;

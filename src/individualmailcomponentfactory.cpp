@@ -12,8 +12,8 @@
 
 #include <KMessageBox>
 
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
+#include <QDialogButtonBox>
+#include <QSet>
 
 using namespace IncidenceEditorNG;
 

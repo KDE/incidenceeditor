@@ -11,7 +11,6 @@
 
 #include "incidenceeditor-ng.h"
 
-#include <Akonadi/Item>
 #include <KMessageWidget>
 
 namespace IncidenceEditorNG

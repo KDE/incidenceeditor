@@ -13,7 +13,7 @@
 #include "incidenceattendee.h"
 
 #include "attendeecomboboxdelegate.h"
-#include "attendeeeditor.h"
+#include "attendeedata.h"
 #include "attendeelineeditdelegate.h"
 #include "attendeetablemodel.h"
 #include "conflictresolver.h"
@@ -28,6 +28,8 @@
 #include <Akonadi/ContactGroupSearchJob>
 #include <Akonadi/EmailAddressSelectionDialog>
 
+#include <KCalendarCore/Event>
+#include <kcalendarcore_version.h>
 #if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
 #include <KCalUtils/Stringify>
 #endif
@@ -39,6 +41,8 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QTreeView>
+
+#include <algorithm>
 
 using namespace Qt::Literals::StringLiterals;
 

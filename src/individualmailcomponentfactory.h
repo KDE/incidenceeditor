@@ -11,6 +11,11 @@
 #include <Akonadi/IncidenceChanger>
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagementCore/Identity>
+
+#include <KGuiItem>
+#include <KLocalizedString>
+
+#include <QHash>
 namespace IncidenceEditorNG
 {
 class OpenComposerJob;

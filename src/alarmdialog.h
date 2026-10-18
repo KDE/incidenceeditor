@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <KCalendarCore/Alarm>
 #include <KCalendarCore/Incidence>
 
 #include <QDialog>

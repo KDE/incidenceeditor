@@ -30,20 +30,27 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/CollectionComboBox>
-#include <Akonadi/ETMCalendar>
 #include <Akonadi/EntityTreeModel>
+#include <Akonadi/IncidenceChanger>
 #include <Akonadi/Item>
 
+#include <KCalendarCore/Event>
 #include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Journal>
 #include <KCalendarCore/MemoryCalendar>
+#include <KCalendarCore/Todo>
 
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
 
 #include <KWindowConfig>
 #include <QCloseEvent>
 #include <QDir>
+#include <QFile>
 #include <QIcon>
+#include <QPointer>
 #include <QStandardPaths>
 #include <QTimeZone>
 #include <QWindow>

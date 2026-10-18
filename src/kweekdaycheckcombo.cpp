@@ -8,6 +8,7 @@
 
 #include "kweekdaycheckcombo.h"
 
+#include <QDate>
 #include <QLocale>
 
 using namespace IncidenceEditorNG;

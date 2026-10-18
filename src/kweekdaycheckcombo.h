@@ -11,7 +11,6 @@
 #include <Libkdepim/KCheckComboBox>
 
 #include <QBitArray>
-#include <QDate>
 
 namespace IncidenceEditorNG
 {

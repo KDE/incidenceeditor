@@ -15,6 +15,8 @@
 #include <KLocalizedString>
 #include <KToolBar>
 
+#include <QGridLayout>
+
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;
 

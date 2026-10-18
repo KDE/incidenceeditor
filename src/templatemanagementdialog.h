@@ -12,7 +12,7 @@
 #include <KCalendarCore/Incidence>
 
 #include <QDialog>
-class QPushBotton;
+class QPushButton;
 
 namespace IncidenceEditorNG
 {

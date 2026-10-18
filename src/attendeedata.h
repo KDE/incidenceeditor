@@ -11,6 +11,8 @@
 
 #include <KCalendarCore/Attendee>
 
+#include <QSharedPointer>
+
 namespace IncidenceEditorNG
 {
 class AttendeeData : public KPIM::MultiplyingLineData, public KCalendarCore::Attendee

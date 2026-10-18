@@ -14,7 +14,6 @@
 
 #include <KContacts/Addressee>
 
-#include <KCalendarCore/Alarm>
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
@@ -25,6 +24,7 @@
 #include <KLocalizedString>
 
 #include <QFile>
+#include <QTimeZone>
 #include <QUrl>
 
 using namespace CalendarSupport;

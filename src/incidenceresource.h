@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "incidenceattendee.h"
 #include "incidenceeditor-ng.h"
 
 namespace Ui
@@ -17,6 +16,8 @@ class QCompleter;
 namespace IncidenceEditorNG
 {
 class AttendeeTableModel;
+class IncidenceAttendee;
+class IncidenceDateTime;
 class ResourceManagement;
 
 class IncidenceResource : public IncidenceEditor

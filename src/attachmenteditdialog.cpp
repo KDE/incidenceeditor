@@ -18,10 +18,12 @@
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <QDialogButtonBox>
+#include <QDir>
 #include <QLocale>
 #include <QMimeDatabase>
 #include <QPushButton>
 #include <QUrl>
+#include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;

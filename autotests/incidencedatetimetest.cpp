@@ -7,12 +7,21 @@
 #include <QObject>
 #include <QTest>
 
-#include "combinedincidenceeditor.h"
-#include "incidencedatetime.h"
 #include "incidencedialog.h"
-#include "ui_dialogdesktop.h"
+#include "incidenceeditor-ng.h"
+#include "ktimezonecombobox.h"
+
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
+#include <KDateComboBox>
+#include <KTimeComboBox>
+
+#include <QCheckBox>
+#include <QLocale>
+#include <QTimeZone>
 
 using namespace IncidenceEditorNG;
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {

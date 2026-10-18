@@ -12,7 +12,6 @@
 
 #include <QAbstractItemView>
 #include <QHelpEvent>
-#include <QModelIndex>
 #include <QToolTip>
 #include <QWhatsThis>
 

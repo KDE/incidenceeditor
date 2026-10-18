@@ -6,10 +6,15 @@
 
 #pragma once
 
-#include <KMime/Message>
-
 #include <KIdentityManagementCore/Identity>
 #include <KJob>
+
+#include <memory>
+
+namespace KMime
+{
+class Message;
+}
 
 namespace IncidenceEditorNG
 {

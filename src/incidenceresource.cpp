@@ -8,6 +8,7 @@
 
 #include "attendeecomboboxdelegate.h"
 #include "attendeelineeditdelegate.h"
+#include "incidenceattendee.h"
 #include "incidencedatetime.h"
 #include "resourcemanagement.h"
 #include "resourcemodel.h"
@@ -18,6 +19,8 @@
 #include <KDescendantsProxyModel>
 #include <KEmailAddress>
 #include <QCompleter>
+#include <QHeaderView>
+#include <QSortFilterProxyModel>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;

@@ -12,11 +12,8 @@
 #include "ui_dialogdesktop.h"
 
 #include <Akonadi/CalendarUtils>
-#include <Akonadi/TagAttribute>
 #include <Akonadi/TagCache>
 #include <Akonadi/TagCreateJob>
-#include <Akonadi/TagFetchJob>
-#include <Akonadi/TagFetchScope>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace IncidenceEditorNG;

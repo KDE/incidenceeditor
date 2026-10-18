@@ -11,6 +11,8 @@
 
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/Item>
+
+#include <QDate>
 using namespace IncidenceEditorNG;
 
 void GroupwareUiDelegate::requestIncidenceEditor(const Akonadi::Item &item)

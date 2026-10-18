@@ -12,6 +12,8 @@
 #include <QDateTime>
 #include <QDialog>
 
+class QModelIndex;
+
 using namespace Qt::Literals::StringLiterals;
 
 namespace CalendarSupport

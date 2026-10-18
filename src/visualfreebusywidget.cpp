@@ -13,11 +13,11 @@
 #include <KGanttAbstractRowController>
 #include <KGanttDateTimeGrid>
 #include <KGanttGraphicsView>
-#include <KGanttView>
 
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
 #include <QComboBox>
+#include <QHBoxLayout>
 
 #include <QHeaderView>
 #include <QLabel>

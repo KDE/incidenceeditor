@@ -9,8 +9,9 @@
 #include <KCalendarCore/Attendee>
 
 #include <QAbstractTableModel>
-#include <QModelIndex>
 #include <QSortFilterProxyModel>
+
+#include <vector>
 
 namespace IncidenceEditorNG
 {

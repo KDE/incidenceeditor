@@ -7,8 +7,6 @@
 
 #include "incidenceeditor-ng.h"
 
-#include "incidenceeditor_debug.h"
-
 using namespace IncidenceEditorNG;
 
 IncidenceEditor::IncidenceEditor(QObject *parent)

@@ -10,7 +10,7 @@
 #include <CalendarSupport/FreeBusyItemModel>
 
 #include <KCalendarCore/FreeBusyPeriod>
-#include <KGanttGraphicsView>
+#include <KGanttGlobal>
 
 #include <KLocalizedString>
 #include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
@@ -18,6 +18,7 @@
 #include <KFormat>
 #endif
 
+#include <QColor>
 #include <QLocale>
 
 using namespace Qt::Literals::StringLiterals;

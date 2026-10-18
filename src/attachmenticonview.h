@@ -15,10 +15,13 @@
 
 #include <KCalendarCore/Attachment>
 
-#include <QMimeType>
 #include <QUrl>
 
 #include <QListWidget>
+
+class QKeyEvent;
+class QMimeData;
+class QMimeType;
 
 namespace IncidenceEditorNG
 {

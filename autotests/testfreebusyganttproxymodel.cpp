@@ -12,7 +12,9 @@
 #include <CalendarSupport/FreeBusyItemModel>
 
 #include <KCalendarCore/Attendee>
-#include <KGanttGraphicsView>
+#include <KCalendarCore/Duration>
+#include <KCalendarCore/FreeBusy>
+#include <KGanttGlobal>
 
 #include <QAbstractItemModelTester>
 #include <QStandardPaths>

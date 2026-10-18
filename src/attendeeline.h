@@ -14,9 +14,11 @@
 
 #include <KCalendarCore/Attendee>
 
+#include <QIcon>
 #include <QToolButton>
 
 class QKeyEvent;
+class QMenu;
 
 namespace IncidenceEditorNG
 {

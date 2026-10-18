@@ -8,8 +8,6 @@
 #include "ldaputils.h"
 
 #include <KEmailAddress>
-#include <QDebug>
-#include <QModelIndex>
 
 using namespace IncidenceEditorNG;
 using namespace Qt::Literals::StringLiterals;
@@ -180,8 +178,6 @@ void ResourceModel::slotLDAPCollectionData(const KLDAPCore::LdapResultObject::Li
     mFoundCollection = true;
     mLdapCollectionsMap.clear();
     mLdapCollections.clear();
-
-    // qDebug() <<  "Found ldapCollections";
 
     for (const KLDAPCore::LdapResultObject &result : std::as_const(results)) {
         ResourceItem::Ptr const item(new ResourceItem(result.object.dn(), mHeaders, *result.client, mRootItem));

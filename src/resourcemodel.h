@@ -12,8 +12,8 @@
 #include <KLDAPCore/LdapClientSearch>
 
 #include <QAbstractItemModel>
+#include <QMultiMap>
 #include <QSet>
-class QModelIndex;
 namespace IncidenceEditorNG
 {
 class ResourceModel : public QAbstractItemModel

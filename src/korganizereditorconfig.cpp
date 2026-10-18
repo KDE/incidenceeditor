@@ -11,6 +11,9 @@
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 
+#include <algorithm>
+#include <iterator>
+
 using namespace IncidenceEditorNG;
 
 KOrganizerEditorConfig::KOrganizerEditorConfig()

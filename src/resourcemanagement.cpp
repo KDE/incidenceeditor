@@ -10,11 +10,11 @@
 #include "ui_resourcemanagement.h"
 #include <CalendarSupport/FreeBusyItem>
 
-#include <Akonadi/FreeBusyManager>
-
 #include <EventViews/AgendaView>
 
+#include <KCalendarCore/Attendee>
 #include <KCalendarCore/Event>
+#include <KCalendarCore/FreeBusyPeriod>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -26,6 +26,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QStringList>
+#include <QVBoxLayout>
 #include <QWindow>
 
 using namespace IncidenceEditorNG;

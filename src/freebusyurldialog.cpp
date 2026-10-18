@@ -11,7 +11,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <QBoxLayout>
 #include <QDialogButtonBox>
 #include <QFrame>
 #include <QLabel>
@@ -38,7 +37,7 @@ FreeBusyUrlDialog::FreeBusyUrlDialog(const AttendeeData::Ptr &attendee, QWidget 
     mainLayout->addWidget(buttonBox);
     okButton->setDefault(true);
 
-    QBoxLayout *topLayout = new QVBoxLayout(topFrame);
+    auto topLayout = new QVBoxLayout(topFrame);
     topLayout->setContentsMargins(0, 0, 0, 0);
 
     mWidget = new FreeBusyUrlWidget(attendee, topFrame);
@@ -59,7 +58,7 @@ FreeBusyUrlWidget::FreeBusyUrlWidget(const AttendeeData::Ptr &attendee, QWidget 
     , mUrlEdit(new KLineEdit(this))
     , mAttendee(attendee)
 {
-    QBoxLayout *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
 
     auto label = new QLabel(xi18n("Location of Free/Busy information for %1 <placeholder>%2</placeholder>:", mAttendee->name(), mAttendee->email()), this);
     topLayout->addWidget(label);

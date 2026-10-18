@@ -11,6 +11,9 @@
 
 #include <KCalendarCore/Incidence>
 
+#include <QDateTime>
+#include <QStringList>
+
 #include <memory>
 
 namespace IncidenceEditorNG

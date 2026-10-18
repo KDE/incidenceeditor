@@ -19,7 +19,6 @@
 
 #include <KActionCollection>
 #include <KIO/FileCopyJob>
-#include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
 #include <KIO/StoredTransferJob>
@@ -28,9 +27,13 @@
 #include <KMessageBox>
 #include <KProtocolManager>
 #include <QAction>
+#include <QApplication>
+#include <QCursor>
 #include <QFileDialog>
+#include <QGridLayout>
 #include <QIcon>
 #include <QMenu>
+#include <QPointer>
 #include <QUrl>
 
 #include <QClipboard>

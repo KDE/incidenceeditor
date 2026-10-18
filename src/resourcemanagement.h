@@ -8,8 +8,6 @@
 
 #include "incidenceeditor_export.h"
 
-#include <KLDAPCore/LdapClient>
-
 #include "resourceitem.h"
 #include <CalendarSupport/FreeBusyCalendar>
 
@@ -20,6 +18,7 @@
 class Ui_resourceManagement;
 
 class QItemSelectionModel;
+class QModelIndex;
 
 namespace EventViews
 {

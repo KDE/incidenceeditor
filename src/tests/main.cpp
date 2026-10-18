@@ -10,6 +10,7 @@
 #include "incidencedialog.h"
 #include "korganizereditorconfig.h"
 
+#include <Akonadi/Collection>
 #include <Akonadi/Item>
 #include <CalendarSupport/KCalPrefs>
 #include <akonadi/calendarsettings.h>
@@ -21,6 +22,7 @@
 #include <QApplication>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
+#include <QUrl>
 
 #include <iostream>
 

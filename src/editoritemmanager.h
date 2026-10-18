@@ -10,6 +10,7 @@
 #include <Akonadi/Collection>
 #include <Akonadi/IncidenceChanger>
 #include <QObject>
+#include <QSet>
 
 #include <memory>
 

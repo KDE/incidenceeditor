@@ -10,6 +10,7 @@
 #include <CalendarSupport/KCalPrefs>
 
 #include <KLocalizedString>
+#include <QGlobalStatic>
 
 #include "incidenceeditor_debug.h"
 
