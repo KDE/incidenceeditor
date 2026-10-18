@@ -32,14 +32,14 @@ void FreeBusyGanttProxyModelTest::initTestCase()
 
 void FreeBusyGanttProxyModelTest::testModelValidity()
 {
-    auto fbModel = new CalendarSupport::FreeBusyItemModel();
-    auto ganttModel = new FreeBusyGanttProxyModel();
-    ganttModel->setSourceModel(fbModel);
-    auto modelTest = new QAbstractItemModelTester(ganttModel);
+    CalendarSupport::FreeBusyItemModel fbModel;
+    FreeBusyGanttProxyModel ganttModel;
+    ganttModel.setSourceModel(&fbModel);
+    QAbstractItemModelTester modelTest(&ganttModel);
 
     Q_UNUSED(modelTest)
 
-    QCOMPARE(ganttModel->rowCount(), 0);
+    QCOMPARE(ganttModel.rowCount(), 0);
 
     const QDateTime dt1(QDate(2010, 8, 24), QTime(7, 0, 0), QTimeZone::utc());
     const QDateTime dt2(QDate(2010, 8, 24), QTime(16, 0, 0), QTimeZone::utc());
@@ -63,28 +63,28 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     CalendarSupport::FreeBusyItem::Ptr const item2(new CalendarSupport::FreeBusyItem(a2, nullptr));
     item2->setFreeBusy(fb2);
 
-    fbModel->addItem(item1);
-    fbModel->addItem(item2);
+    fbModel.addItem(item1);
+    fbModel.addItem(item2);
 
-    QCOMPARE(ganttModel->rowCount(), 2);
+    QCOMPARE(ganttModel.rowCount(), 2);
 
-    QModelIndex const parent0 = ganttModel->index(0, 0);
-    QModelIndex const parent1 = ganttModel->index(1, 0);
-    QModelIndex const parent2 = ganttModel->index(2, 0);
+    QModelIndex const parent0 = ganttModel.index(0, 0);
+    QModelIndex const parent1 = ganttModel.index(1, 0);
+    QModelIndex const parent2 = ganttModel.index(2, 0);
     QVERIFY(parent0.isValid());
     QVERIFY(parent1.isValid());
     QCOMPARE(parent2.isValid(), false);
 
-    QModelIndex const source_parent0 = fbModel->index(0, 0);
+    QModelIndex const source_parent0 = fbModel.index(0, 0);
     QCOMPARE(parent0.data(), source_parent0.data());
     QCOMPARE(parent0.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeMulti);
 
-    QModelIndex const source_parent1 = fbModel->index(1, 0);
+    QModelIndex const source_parent1 = fbModel.index(1, 0);
     QCOMPARE(parent1.data(), source_parent1.data());
     QCOMPARE(parent1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeMulti);
 
-    QModelIndex const child0_0 = ganttModel->index(0, 0, parent0);
-    QModelIndex const child0_1 = ganttModel->index(1, 0, parent0);
+    QModelIndex const child0_0 = ganttModel.index(0, 0, parent0);
+    QModelIndex const child0_1 = ganttModel.index(1, 0, parent0);
     QVERIFY(child0_0.isValid());
     QVERIFY(child0_1.isValid());
 
@@ -93,8 +93,8 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QCOMPARE(child0_1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child0_1.data(KGantt::StartTimeRole).toDateTime(), dt2);
 
-    QModelIndex const child1_0 = ganttModel->index(0, 0, parent1);
-    QModelIndex const child1_1 = ganttModel->index(1, 0, parent1);
+    QModelIndex const child1_0 = ganttModel.index(0, 0, parent1);
+    QModelIndex const child1_1 = ganttModel.index(1, 0, parent1);
     QVERIFY(child1_0.isValid());
     QVERIFY(child1_1.isValid());
 
@@ -102,9 +102,6 @@ void FreeBusyGanttProxyModelTest::testModelValidity()
     QCOMPARE(child1_0.data(KGantt::StartTimeRole).toDateTime(), dt3);
     QCOMPARE(child1_1.data(KGantt::ItemTypeRole).toInt(), (int)KGantt::TypeTask);
     QCOMPARE(child1_1.data(KGantt::StartTimeRole).toDateTime(), dt4);
-    delete fbModel;
-    delete ganttModel;
-    delete modelTest;
 }
 
 #include "moc_testfreebusyganttproxymodel.cpp"
