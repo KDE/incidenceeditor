@@ -831,7 +831,7 @@ void IncidenceDialog::slotButtonClicked(QAbstractButton *button)
         } else if (!d->isDirty()) {
             QDialog::reject(); // No pending changes, just close the dialog.
         } // else { // the user wasn't finished editing after all }
-    } else if (d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults)) {
+    } else if (d->mUi->buttonBox->button(QDialogButtonBox::RestoreDefaults) == button) {
         d->manageTemplates();
     } else {
         Q_ASSERT(false); // Shouldn't happen
