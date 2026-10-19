@@ -503,7 +503,7 @@ void IncidenceDialogPrivate::handleItemSaveFinish(EditorItemManager::SaveAction 
         calType = i18nc("@info/plain the calendar contains events", "Event");
     }
 
-    if ((mCalSelector->count() > 1) && !defaultCollection.isValid()) {
+    if (!calType.isEmpty() && (mCalSelector->count() > 1) && !defaultCollection.isValid()) {
         const QString collectionName = mCalSelector->currentText();
         const QString message = xi18nc("@info",
                                        "<para>You have not set a default %1 calendar yet.</para>"
