@@ -9,7 +9,6 @@ target_link_libraries(
     KPim6::AkonadiCalendar
     KPim6::AkonadiCore
     KF6::CalendarCore
-    KPim6::CalendarUtils
     KPim6::IncidenceEditor
     KPim6::CalendarSupport
 )

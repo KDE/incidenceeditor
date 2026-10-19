@@ -152,7 +152,6 @@ target_link_libraries(
         KPim6::AkonadiCalendar
         KPim6::AkonadiMime
         KF6::CalendarCore
-        KPim6::CalendarUtils
         KPim6::CalendarSupport # For KCalPrefs
         KPim6::EventViews
     PRIVATE

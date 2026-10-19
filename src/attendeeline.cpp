@@ -8,11 +8,6 @@
 #include "attendeeline.h"
 #include "attendeedata.h"
 
-#include <kcalendarcore_version.h>
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-#include <KCalUtils/Stringify>
-#endif
-
 #include <KEmailAddress>
 
 #include "incidenceeditor_debug.h"
@@ -139,17 +134,10 @@ AttendeeLine::AttendeeLine(QWidget *parent)
 
     QBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setContentsMargins(0, 0, 0, 0);
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRoleCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
-#else
     mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::ReqParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::OptParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::NonParticipant));
     mRoleCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::Chair));
-#endif
 
     mResponseCombo->addItem(QIcon::fromTheme(u"meeting-participant-request-response"_s), i18nc("@item:inlistbox", "Request Response"));
     mResponseCombo->addItem(QIcon::fromTheme(u"meeting-participant-no-response"_s), i18nc("@item:inlistbox", "Request No Response"));

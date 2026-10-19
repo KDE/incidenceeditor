@@ -20,7 +20,6 @@ macro(IE_UNIT_TESTS)
             Qt::Test
             KPim6::AkonadiCore
             ${grant_lib}
-            KPim6::CalendarUtils
             KF6::CalendarCore
             KPim6::IncidenceEditor
             KPim6::Libkdepim

@@ -11,10 +11,6 @@
 #include "visualfreebusywidget.h"
 #include <CalendarSupport/FreePeriodModel>
 #include <KCalendarCore/Attendee>
-#include <kcalendarcore_version.h>
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-#include <KCalUtils/Stringify>
-#endif
 
 #include <KLocalizedString>
 
@@ -95,17 +91,10 @@ void SchedulingDialog::slotUpdateIncidenceStartEnd(const QDateTime &startDateTim
 void SchedulingDialog::fillCombos()
 {
     // Note: we depend on the following order
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::ReqParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::OptParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::NonParticipant));
-    mRolesCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalUtils::Stringify::attendeeRole(KCalendarCore::Attendee::Chair));
-#else
     mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::ReqParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(u"meeting-participant-optional"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::OptParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(u"meeting-observer"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::NonParticipant));
     mRolesCombo->addItem(QIcon::fromTheme(u"meeting-chair"_s), KCalendarCore::Attendee::roleName(KCalendarCore::Attendee::Chair));
-#endif
 
     mRolesCombo->setWhatsThis(i18nc("@info:whatsthis", "Edits the role of the attendee."));
 
