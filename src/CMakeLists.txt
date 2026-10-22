@@ -21,7 +21,6 @@ target_sources(
         ktimezonecombobox.cpp
         # TODO: Move the next two to akonadi libs when finished
         editoritemmanager.cpp
-        freebusyurldialog.cpp
         # Shared incidence editors code
         combinedincidenceeditor.cpp
         incidenceeditor.cpp
@@ -72,7 +71,6 @@ target_sources(
         freebusyganttproxymodel.h
         incidenceattendee.h
         korganizereditorconfig.h
-        freebusyurldialog.h
         ktimezonecombobox.h
         incidencedescription.h
         conflictresolver.h
