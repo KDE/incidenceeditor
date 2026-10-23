@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-21 13:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -303,31 +303,6 @@ msgstr "Hasi:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Bukatu:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Editatu Libre/Lanpetuta kokalekua"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"%1(e)ri <placeholder>%2</placeholder> buruzko Libre/Lanpetuta informazioaren "
-"kokalekua:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Sartu parte-hartzailearen Libre/Lanpetuta informazioaren kokalekua."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Sartu informazioaren kokalekua."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2987,6 +2962,24 @@ msgstr ""
 "Partaide guztien Libre/Lanpetuta egoera erakusten du. Zerrendan, partaide "
 "baten sarrerari klik bikoitza eginda, haien Libre/Lanpetuta informazioaren "
 "kokalekua sartzeko aukera emango dizu."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Editatu Libre/Lanpetuta kokalekua"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "%1(e)ri <placeholder>%2</placeholder> buruzko Libre/Lanpetuta "
+#~ "informazioaren kokalekua:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Sartu parte-hartzailearen Libre/Lanpetuta informazioaren kokalekua."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Sartu informazioaren kokalekua."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

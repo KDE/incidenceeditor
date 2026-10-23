@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2025-11-22 22:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -313,31 +313,6 @@ msgstr "Początek:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Koniec:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Zmień położenie wolny/zajęty"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Położenie informacji o czasie wolnym i zajętym dla %1 <placeholder>%2</"
-"placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Wpisz miejsce dla informacji wolny/zajęty dla uczestnika."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Wpisz miejsce dla informacji."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3017,6 +2992,24 @@ msgstr ""
 "Pokazuje stan czasu wolnego/zajętego dla wszystkich uczestników. Podwójne "
 "naciśnięcie na uczestniku na liście pozwala podać miejsce jego informacji o "
 "czasie wolnym i zajętym."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Zmień położenie wolny/zajęty"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Położenie informacji o czasie wolnym i zajętym dla %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Wpisz miejsce dla informacji wolny/zajęty dla uczestnika."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Wpisz miejsce dla informacji."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

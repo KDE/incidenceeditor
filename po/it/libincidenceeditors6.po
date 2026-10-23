@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-08 02:00+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -309,31 +309,6 @@ msgstr "Inizio:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Fine:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Modifica posizione libero/occupato"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Posizione informazioni libero/occupato per %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-"Inserisci l'indirizzo delle informazioni libero/occupato del partecipante."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Inserisci l'indirizzo delle informazioni."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3003,6 +2978,25 @@ msgstr ""
 "Mostra le informazioni libero/occupato per tutti i partecipanti. Facendo "
 "doppio clic su un partecipante nella lista potrai inserire l'indirizzo delle "
 "informazioni libero/occupato."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Modifica posizione libero/occupato"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Posizione informazioni libero/occupato per %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "Inserisci l'indirizzo delle informazioni libero/occupato del partecipante."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Inserisci l'indirizzo delle informazioni."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

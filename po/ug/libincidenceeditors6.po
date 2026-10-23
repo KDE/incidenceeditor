@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-09-23 06:56+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -291,29 +291,6 @@ msgstr "باشلاش:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "ئاخىرى:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr ""
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr ""
 
 #: incidencealarm.cpp:173
 #, kde-format

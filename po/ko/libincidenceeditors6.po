@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-09-21 15:38+0200\n"
 "Last-Translator: Shinjo Park <peremen@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -292,29 +292,6 @@ msgstr "시작:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "끝:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "바쁨/한가함 위치 편집"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "%1 <placeholder>%2</placeholder>의 바쁨/한가함 정보 위치:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "참석자의 바쁨/한가함 정보의 위치를 입력하십시오."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "정보의 위치를 입력하십시오."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2916,6 +2893,22 @@ msgid ""
 msgstr ""
 "모든 참석자의 바쁨/한가함 상태를 표시합니다. 목록에서 참가자 항목을 두 번 클"
 "릭하면 바쁨/한가함 정보 위치를 입력할 수 있습니다."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "바쁨/한가함 위치 편집"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "%1 <placeholder>%2</placeholder>의 바쁨/한가함 정보 위치:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "참석자의 바쁨/한가함 정보의 위치를 입력하십시오."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "정보의 위치를 입력하십시오."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

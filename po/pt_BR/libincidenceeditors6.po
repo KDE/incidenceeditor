@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-06 07:11-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -306,31 +306,6 @@ msgstr "Início:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Fim:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Editar localização da informação de livre/ocupado"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Localização da informação de livre/ocupado para %1 <placeholder>%2</"
-"placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Informe o local da informação de Livre/Ocupado do participante."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Digite a localização da informação."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2998,6 +2973,24 @@ msgstr ""
 "Mostra o status das informações de livre/ocupado de todos os participantes. "
 "Um clique duplo em um participante da lista permitirá que você informe a "
 "localização de suas informações de livre/ocupado."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Editar localização da informação de livre/ocupado"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Localização da informação de livre/ocupado para %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Informe o local da informação de Livre/Ocupado do participante."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Digite a localização da informação."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

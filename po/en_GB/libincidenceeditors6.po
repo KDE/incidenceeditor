@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2024-05-23 19:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -304,30 +304,6 @@ msgstr "Start:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "End:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Edit Free/Busy Location"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Enter the location of the Free/Busy information for the attendee."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Enter the location of the information."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2990,6 +2966,23 @@ msgstr ""
 "Shows the Free/Busy status of all attendees. Double-clicking on an "
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Edit Free/Busy Location"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Enter the location of the Free/Busy information for the attendee."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Enter the location of the information."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

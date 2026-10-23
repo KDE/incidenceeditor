@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2019-08-05 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -304,32 +304,6 @@ msgstr "Začiatok:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Koniec:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Upraviť umiestnenie voľný/zaneprázdnený"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Umiestnenie informácie voľný/zaneprázdnený pre %1 <placeholder>%2</"
-"placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-"Zadajte umiestnenie informácií o Dostupnosti/Zaneprázdnenosti účastníka."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Zadajte umiestnenie informácií."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2986,6 +2960,25 @@ msgstr ""
 "Zobrazí stav voľný/zaneprázdnený pre všetkých účastníkov. Dvojklikom na "
 "položku účastníka v zozname môžete zadať umiestnenie ich informácií voľný/"
 "zaneprázdnený."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Upraviť umiestnenie voľný/zaneprázdnený"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Umiestnenie informácie voľný/zaneprázdnený pre %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "Zadajte umiestnenie informácií o Dostupnosti/Zaneprázdnenosti účastníka."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Zadajte umiestnenie informácií."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

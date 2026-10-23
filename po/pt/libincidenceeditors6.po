@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2021-11-08 18:06+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -345,31 +345,6 @@ msgstr "Início:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Fim:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Editar a Localização de Livre/Ocupado"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Localização da informação de livre/ocupado para %1 <placeholder>%2</"
-"placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Indique a localização da informação Livre/Ocupado do participante."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Indique a localização da informação."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3082,6 +3057,24 @@ msgstr ""
 "Mostra a informação de Livre/Ocupado de todos os participantes. Se fizer "
 "duplo-click no item de um participante, poderá indicar a localização da "
 "informação de Livre/Ocupado dele."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Editar a Localização de Livre/Ocupado"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Localização da informação de livre/ocupado para %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Indique a localização da informação Livre/Ocupado do participante."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Indique a localização da informação."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-06-18 21:47+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -302,29 +302,6 @@ msgstr "Kezdés:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Befejezés:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Foglaltsági hely szerkesztése"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "A foglaltsági adatok helye - %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Adja meg a foglaltsági adatok helyét a résztvevőknek."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Adja meg az adatok helyét."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2987,6 +2964,22 @@ msgstr ""
 "Megjeleníti az összes résztvevő szabad/foglalt állapotát. Duplán kattintva "
 "egy részvevő bejegyzésére a listában megadhatja a foglaltsági információi "
 "helyét."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Foglaltsági hely szerkesztése"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "A foglaltsági adatok helye - %1 <placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Adja meg a foglaltsági adatok helyét a résztvevőknek."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Adja meg az adatok helyét."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

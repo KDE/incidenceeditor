@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -303,33 +303,6 @@ msgstr "Έναρξη:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Τέλος:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Επεξεργασία τοποθεσίας Ελεύθερος-η/Απασχολημένος-η"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Τοποθεσία της πληροφορίας Ελεύθερος-η/Απασχολημένος-η για %1 <placeholder>"
-"%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-"Εισάγετε τη θέση της πληροφορίας ελεύθερου/απασχολημένου για τον "
-"συμμετέχοντα."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Εισάγετε τη θέση της πληροφορίας."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3024,6 +2997,26 @@ msgstr ""
 "Εμφανίζει την κατάσταση διαθεσιμότητας για όλους τους συμμετέχοντες. "
 "Κάνοντας διπλό κλικ σε ένα συμμετέχοντα στη λίστα θα σας επιτρέψει την "
 "εισαγωγή της τοποθεσίας των πληροφοριών διαθεσιμότητας."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Επεξεργασία τοποθεσίας Ελεύθερος-η/Απασχολημένος-η"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Τοποθεσία της πληροφορίας Ελεύθερος-η/Απασχολημένος-η για %1 <placeholder>"
+#~ "%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "Εισάγετε τη θέση της πληροφορίας ελεύθερου/απασχολημένου για τον "
+#~ "συμμετέχοντα."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Εισάγετε τη θέση της πληροφορίας."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

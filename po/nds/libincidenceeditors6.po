@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2014-09-18 22:33+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -316,33 +316,6 @@ msgstr "Anfang:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Enn:"
-
-#: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Oort vun Free-/Bunneninformatschonen bewerken"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Oort vun de Free-/Bunneninformatschonen för %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Enter the name or email address of the attendee."
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Bitte den Deelnehmer sien Naam oder Nettpostadress ingeven."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr ""
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3125,6 +3098,25 @@ msgstr ""
 "Wiest de Free-/Bunnen-Informatschonen vun all Deelnehmers. Wenn Du op den "
 "Listindrag vun en Deelnehmer dubbelklickst, kannst Du de Steed vun sien "
 "Free-/Bunnen-Informatschonen angeven."
+
+#, fuzzy
+#~| msgid "Edit Free/Busy Location"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Oort vun Free-/Bunneninformatschonen bewerken"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Oort vun de Free-/Bunneninformatschonen för %1 <placeholder>%2</"
+#~ "placeholder>:"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Enter the name or email address of the attendee."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Bitte den Deelnehmer sien Naam oder Nettpostadress ingeven."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

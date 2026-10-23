@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libincidenceeditors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-09-05 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -306,29 +306,6 @@ msgstr "Alkaa:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Päättyy:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Muokkaa varaustiedon sijaintia"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "Varaustiedon sijainti henkilölle %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Anna osallistujan varaustietojen sijainti."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Anna tiedon sijainti."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2973,6 +2950,22 @@ msgid ""
 msgstr ""
 "Näyttää kaikkien osallistujien varaustilanteen. Kaksoisnapsauttamalla "
 "osallistujaa luettelosta voi syöttää heidän varaustietoihinsa paikan."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Muokkaa varaustiedon sijaintia"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "Varaustiedon sijainti henkilölle %1 <placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Anna osallistujan varaustietojen sijainti."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Anna tiedon sijainti."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

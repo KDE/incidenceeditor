@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-05-10 17:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -300,31 +300,6 @@ msgstr "துவக்கம்:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "முடிவு:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "வேலையுள்ள/இல்லாத விவரங்களின் இருப்பிடத்தை திருத்துவது"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"%1 <placeholder>%2</placeholder> என்பவரின் வேலையுள்ள/இல்லாத நேரத்தின் விவரங்களை "
-"கொண்ட முகவரி:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "பங்கேற்பவரின் வேலையுள்ள/இல்லாத நேரத்தின் விவரங்களை  கொண்டுள்ள முகவரியை உள்ளிடுங்கள்"
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "விவரங்குளுக்கான முகவரியை உள்ளிடுங்கள்."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2902,6 +2877,25 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "வேலையுள்ள/இல்லாத விவரங்களின் இருப்பிடத்தை திருத்துவது"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "%1 <placeholder>%2</placeholder> என்பவரின் வேலையுள்ள/இல்லாத நேரத்தின் விவரங்களை "
+#~ "கொண்ட முகவரி:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "பங்கேற்பவரின் வேலையுள்ள/இல்லாத நேரத்தின் விவரங்களை  கொண்டுள்ள முகவரியை உள்ளிடுங்கள்"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "விவரங்குளுக்கான முகவரியை உள்ளிடுங்கள்."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

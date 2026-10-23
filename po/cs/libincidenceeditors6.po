@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-06 23:18+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -309,30 +309,6 @@ msgstr "Spustit:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Ukončit:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Upravit umístění dostupnosti"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "Umístění informací o aktivitě pro '%1' <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-"Zadejte umístění, kde jsou k dispozici informace o dostupnosti účastníka."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Zadejte umístění informací."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2990,6 +2966,24 @@ msgid ""
 msgstr ""
 "Ukazuje informace o aktivitě všech účastníků. Dvojklik na jméno v seznamu "
 "účastníků vám umožní zadat umístění informací o aktivitě daného člověka."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Upravit umístění dostupnosti"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Umístění informací o aktivitě pro '%1' <placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "Zadejte umístění, kde jsou k dispozici informace o dostupnosti účastníka."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Zadejte umístění informací."
 
 #~ msgctxt "@action:button"
 #~ msgid "Take over changes"

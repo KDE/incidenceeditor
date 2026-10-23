@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -300,29 +300,6 @@ msgstr "प्रारंभः:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "अंत:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "निःशुल्क/व्यस्तस्थानं सम्पादयतु"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "%1 <placeholder>%2</placeholder> कृते मुक्त/व्यस्तसूचनायाः स्थानम्:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "उपस्थितस्य कृते Free/Busy इति सूचनायाः स्थानं प्रविशन्तु।"
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "सूचनायाः स्थानं प्रविशतु।"
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2964,6 +2941,22 @@ msgid ""
 msgstr ""
 "सर्वेषां उपस्थितानां Free/Busy इति स्थितिं दर्शयति। सूचीयां उपस्थितस्य प्रविष्टौ द्विवारं "
 "क्लिक् करणेन तेषां निःशुल्क/व्यस्तसूचनायाः स्थानं प्रविष्टुं शक्यते।"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "निःशुल्क/व्यस्तस्थानं सम्पादयतु"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "%1 <placeholder>%2</placeholder> कृते मुक्त/व्यस्तसूचनायाः स्थानम्:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "उपस्थितस्य कृते Free/Busy इति सूचनायाः स्थानं प्रविशन्तु।"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "सूचनायाः स्थानं प्रविशतु।"
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

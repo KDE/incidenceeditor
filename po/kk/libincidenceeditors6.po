@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2013-07-07 05:47+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -320,32 +320,6 @@ msgstr "Басталуы:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Аяқталуы:"
-
-#: freebusyurldialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Edit Free/Busy Location"
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Бос/Істе мәліметтің орынын өзгерту"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "%1 <placeholder>%2</placeholder> дегеннің Бос/Істе мәліметінің орны:"
-
-#: freebusyurldialog.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Enter the name or email address of the attendee."
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Қатысушының эл.пошта адресін келтіріңіз."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr ""
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3097,6 +3071,24 @@ msgstr ""
 "Бүкіл қатысушылардың Бос/Істе күй-жайларын көрсетеді. Қатысушының жазуынан "
 "қос түртіп, оның Бос/Істе туралы мәліметі орналасқан адресін келтіруге "
 "болады."
+
+#, fuzzy
+#~| msgid "Edit Free/Busy Location"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Бос/Істе мәліметтің орынын өзгерту"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "%1 <placeholder>%2</placeholder> дегеннің Бос/Істе мәліметінің орны:"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Enter the name or email address of the attendee."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Қатысушының эл.пошта адресін келтіріңіз."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

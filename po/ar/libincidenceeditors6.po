@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-10 14:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -325,29 +325,6 @@ msgstr "البداية:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "النّهاية:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "حرّر مكان متفرّغ/مشغول"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "مكان معلومات متفرّغ/مشغول لِ‍ %1 ‏<placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "أدخِل موقع معلومات متفرغ/مشغول للحاضر."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "أدخل موقع المعلومات."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2995,6 +2972,22 @@ msgid ""
 msgstr ""
 "يعرض حالة متفرّغ/مشغول لكلّ الحضور. يتيح لك النّقر مزدوجًا على أحد الحضور سيتيح "
 "لك إدخال مكان معلومات متفرّغ/مشغول له."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "حرّر مكان متفرّغ/مشغول"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "مكان معلومات متفرّغ/مشغول لِ‍ %1 ‏<placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "أدخِل موقع معلومات متفرغ/مشغول للحاضر."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "أدخل موقع المعلومات."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

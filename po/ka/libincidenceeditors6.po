@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-06 05:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -301,31 +301,6 @@ msgstr "დასაწყისი:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "დასასრული:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "თავისუფალი/დაკავებული მდებარეობის ჩასწორება"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"%1-ის თავისუფალი/დაკავებულობის ინფორმაციის მდებარეობაა <placeholder>%2</"
-"placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "შეიყვანეთ ამ დამსწრის თავისუფალი/დაკავებულობის ინფორმაციის მდებარეობა."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "შეიყვანეთ ინფორმაციის მდებარეობა."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2982,6 +2957,25 @@ msgstr ""
 "ყველა დამსწრის თავისუფალი/დაკავებულობის სტატუსის ჩვენება. დამსრის ჩანაწერზე "
 "ორმაგი-წკაპი სიაში საშუალებას მოგცემთ, მათი თავისუფალი/დაკავებულობის "
 "ინფორმაციის მდებარეობა მიუთითოთ."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "თავისუფალი/დაკავებული მდებარეობის ჩასწორება"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "%1-ის თავისუფალი/დაკავებულობის ინფორმაციის მდებარეობაა <placeholder>%2</"
+#~ "placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "შეიყვანეთ ამ დამსწრის თავისუფალი/დაკავებულობის ინფორმაციის მდებარეობა."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "შეიყვანეთ ინფორმაციის მდებარეობა."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2026-08-06 12:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -300,31 +300,6 @@ msgstr "Starten:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Einde:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Vrij/bezetlocatie bewerken"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr ""
-"Locatie van Vrij/bezetinformatie voor %1 <placeholder>%2</placeholder>:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr ""
-"Voer de locatie van de informatie over vrij/bezet voor de deelnemer in."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Voer de locatie van de informatie in."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -2988,6 +2963,24 @@ msgstr ""
 "Toont de vrij/bezetinformatie van alle deelnemers. Wanneer u dubbelklikt op "
 "de ingang van een deelnemer in deze lijst, kunt u de locatie invoeren van "
 "zijn/haar vrij/bezetinformatie."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Vrij/bezetlocatie bewerken"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr ""
+#~ "Locatie van Vrij/bezetinformatie voor %1 <placeholder>%2</placeholder>:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr ""
+#~ "Voer de locatie van de informatie over vrij/bezet voor de deelnemer in."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Voer de locatie van de informatie in."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"

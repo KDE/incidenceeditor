@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"POT-Creation-Date: 2026-10-23 00:49+0000\n"
 "PO-Revision-Date: 2020-05-14 12:39+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -303,29 +303,6 @@ msgstr "Algus:"
 msgctxt "@info:tooltip period end time"
 msgid "End:"
 msgstr "Lõpp:"
-
-#: freebusyurldialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Free/Busy Location"
-msgstr "Vaba/hõivatud info asukoha muutmine"
-
-#: freebusyurldialog.cpp:63
-#, kde-kuit-format
-msgid "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-msgstr "%1 <placeholder>%2</placeholder> vaba/hõivatud info asukoht:"
-
-#: freebusyurldialog.cpp:67
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "Enter the location of the Free/Busy information for the attendee."
-msgstr "Sisesta osaleja vaba/hõivatud teabe asukoht."
-
-#: freebusyurldialog.cpp:68
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Enter the location of the information."
-msgstr "Sisesta teabe asukoht."
 
 #: incidencealarm.cpp:173
 #, kde-format
@@ -3038,6 +3015,22 @@ msgid ""
 msgstr ""
 "Näitab kõigi osalejate vaba/hõivatud infot. Topeltklõps osaleja nimel lubab "
 "sisestada tema vaba/hõivatud info asukoha."
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Free/Busy Location"
+#~ msgstr "Vaba/hõivatud info asukoha muutmine"
+
+#~ msgid ""
+#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
+#~ msgstr "%1 <placeholder>%2</placeholder> vaba/hõivatud info asukoht:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Enter the location of the Free/Busy information for the attendee."
+#~ msgstr "Sisesta osaleja vaba/hõivatud teabe asukoht."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Enter the location of the information."
+#~ msgstr "Sisesta teabe asukoht."
 
 #~ msgid ""
 #~ "The item has been changed by another application.\n"
