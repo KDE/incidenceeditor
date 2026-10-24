@@ -2933,8 +2933,3 @@ msgstr ""
 "Viser alle deltakeres ledig/opptatt-status. Du kan taste inn adressen til "
 "deres ledig/opptatt-informasjon ved å dobbeltklikke på deltakerens oppføring "
 "i lista."
-
-#~ msgid ""
-#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-#~ msgstr ""
-#~ "Sted med ledig/opptatt-informasjon for %1 <placeholder>%2</placeholder>:"
