@@ -5,7 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "incidenceeditor-ng.h"
+#include "incidenceeditor.h"
 
 using namespace IncidenceEditorNG;
 
@@ -70,4 +70,4 @@ void IncidenceEditor::save([[maybe_unused]] Akonadi::Item &item) // unused
 {
 }
 
-#include "moc_incidenceeditor-ng.cpp"
+#include "moc_incidenceeditor.cpp"

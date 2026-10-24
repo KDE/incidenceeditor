@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "incidenceeditor-ng.h"
+#include "incidenceeditor.h"
 
 namespace Ui
 {

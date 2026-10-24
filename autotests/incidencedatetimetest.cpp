@@ -8,7 +8,7 @@
 #include <QTest>
 
 #include "incidencedialog.h"
-#include "incidenceeditor-ng.h"
+#include "incidenceeditor.h"
 #include "ktimezonecombobox.h"
 
 #include <KCalendarCore/Event>

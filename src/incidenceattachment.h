@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "incidenceeditor-ng.h"
+#include "incidenceeditor.h"
 class QUrl;
 class KJob;
 namespace Ui

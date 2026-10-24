@@ -90,7 +90,7 @@ target_sources(
         attendeecomboboxdelegate.h
         incidencedialogfactory.h
         templatemanagementdialog.h
-        incidenceeditor-ng.h
+        incidenceeditor.h
         incidencecategories.h
         attendeedata.h
         resourceitem.h
@@ -203,7 +203,7 @@ ecm_generate_headers(IncidenceEditor_CamelCase_HEADERS
   IndividualMailComponentFactory
   GroupwareUiDelegate
   EditorItemManager
-  IncidenceEditor-Ng
+  IncidenceEditor
   REQUIRED_HEADERS IncidenceEditor_HEADERS
   PREFIX IncidenceEditor
 )
