@@ -14,7 +14,6 @@ target_sources(
         attendeecomboboxdelegate.cpp
         attendeelineeditdelegate.cpp
         attendeetablemodel.cpp
-        attendeeeditor.cpp
         alarmpresets.cpp
         alarmdialog.cpp
         incidenceeditorsettings.cpp
@@ -53,7 +52,6 @@ target_sources(
         resourceitem.cpp
         resourcemodel.cpp
         kweekdaycheckcombo.cpp
-        attendeeeditor.h
         editorconfig.h
         alarmpresets.h
         individualmaildialog.h
