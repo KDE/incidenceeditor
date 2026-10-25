@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "incidenceeditor_export.h"
+#include "incidenceeditor_private_export.h"
 
 #include <KCalendarCore/IncidenceBase>
 
@@ -31,7 +31,7 @@ class EditorConfigPrivate;
  * to provide application specific configurations to the editor.
  *
  */
-class INCIDENCEEDITOR_EXPORT EditorConfig
+class INCIDENCEEDITOR_TESTS_EXPORT EditorConfig
 {
 public:
     struct Organizer {
