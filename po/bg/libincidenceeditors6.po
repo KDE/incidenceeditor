@@ -2963,22 +2963,3 @@ msgstr ""
 "Показва състоянието на заетост на всички участници. Двойното щракване върху "
 "записа на участник в списъка ще ви позволи да въведете местоположението на "
 "информацията за заетост."
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Free/Busy Location"
-#~ msgstr "Редактиране на свободно/заето място"
-
-#~ msgid ""
-#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-#~ msgstr ""
-#~ "Информация за местоположение на свободен/зает за %1 <placeholder> %2 </"
-#~ "placeholder>:"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Enter the location of the Free/Busy information for the attendee."
-#~ msgstr ""
-#~ "Въведете информацията за местоположението на свободен/зает на участника."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Enter the location of the information."
-#~ msgstr "Въведете местоположението на информацията."
