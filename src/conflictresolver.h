@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "incidenceeditor_export.h"
+#include "incidenceeditor_private_export.h"
 #include <CalendarSupport/FreeBusyItem>
 
 #include <QBitArray>
@@ -36,7 +36,7 @@ namespace IncidenceEditorNG
  * them to choose a correct time.
  * \author Casey Link
  */
-class INCIDENCEEDITOR_EXPORT ConflictResolver : public QObject
+class INCIDENCEEDITOR_TESTS_EXPORT ConflictResolver : public QObject
 {
     Q_OBJECT
 public:

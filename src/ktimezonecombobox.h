@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "incidenceeditor_export.h"
+#include "incidenceeditor_private_export.h"
 
 #include <QComboBox>
 #include <QTimeZone>
@@ -28,7 +28,7 @@ class KTimeZoneComboBoxPrivate;
  * QTimeZone or to retrieve the QTimeZone associated with the
  * selected item.
  */
-class INCIDENCEEDITOR_EXPORT KTimeZoneComboBox : public QComboBox
+class INCIDENCEEDITOR_TESTS_EXPORT KTimeZoneComboBox : public QComboBox
 {
     Q_OBJECT
 public:

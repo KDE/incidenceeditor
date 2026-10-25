@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "incidenceeditor_export.h"
+#include "incidenceeditor_private_export.h"
 
 #include "resourceitem.h"
 #include <CalendarSupport/FreeBusyCalendar>
@@ -34,7 +34,7 @@ namespace IncidenceEditorNG
  *
  * \brief The ResourceManagement class
  */
-class INCIDENCEEDITOR_EXPORT ResourceManagement : public QDialog
+class INCIDENCEEDITOR_TESTS_EXPORT ResourceManagement : public QDialog
 {
     Q_OBJECT
 public:
