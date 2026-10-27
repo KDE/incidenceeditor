@@ -366,7 +366,7 @@ msgstr[1] "%1 horas"
 #, kde-format
 msgctxt "The reminder is configured to repeat after snooze"
 msgid "(Repeats)"
-msgstr "(Repite)"
+msgstr "(Repete)"
 
 #. i18n: These series of strings are used to show the user a description of
 #. the alarm. %1 is replaced by one of the actions above, %2 is replaced by
@@ -1616,7 +1616,7 @@ msgstr "postea que le evento termina"
 #: ui/alarmdialog.ui:129
 #, kde-format
 msgid "Repeat:"
-msgstr "Repite:"
+msgstr "Repete:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, mRepeats)
 #: ui/alarmdialog.ui:144
@@ -2392,7 +2392,7 @@ msgstr "Recurrentia"
 #, kde-format
 msgctxt "@label whether or not this event or to-do repeats"
 msgid "Repeats:"
-msgstr "Repite:"
+msgstr "Repete:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, mRecurrenceTypeCombo)
 #: ui/dialogdesktop.ui:1164
@@ -3430,19 +3430,19 @@ msgstr ""
 #~ msgstr "Dishabilita"
 
 #~ msgid "Repeat never"
-#~ msgstr "Repite jammais"
+#~ msgstr "Repete jammais"
 
 #~ msgid "Repeat daily"
-#~ msgstr "Repite cata die"
+#~ msgstr "Repete cata die"
 
 #~ msgid "Repeat weekly"
-#~ msgstr "Repite cata septimana"
+#~ msgstr "Repete cata septimana"
 
 #~ msgid "Repeat monthly"
-#~ msgstr "Repite cata mense"
+#~ msgstr "Repete cata mense"
 
 #~ msgid "Repeat yearly"
-#~ msgstr "Repite cata anno"
+#~ msgstr "Repete cata anno"
 
 #~ msgctxt "@label Frequency of recurrence: every x [days|weeks|months|years]"
 #~ msgid "every"
@@ -3593,7 +3593,7 @@ msgstr ""
 #~ msgstr "Displaciamento"
 
 #~ msgid "Repeat"
-#~ msgstr "Repite"
+#~ msgstr "Repete"
 
 #, fuzzy
 #~| msgid "Type"
