@@ -16,12 +16,12 @@ depends += \
 
 navigation.landingpage = "IncidenceEditor"
 
-qhp.projects            = IncidenceEditor
+qhp.projects            = incidenceeditor
 
 qhp.incidenceeditor.file                = incidenceeditor.qhp
 qhp.incidenceeditor.namespace           = org.kde.incidenceeditor.$QT_VERSION_TAG
 qhp.incidenceeditor.virtualFolder       = incidenceeditor
-qhp.incidenceeditor.indexTitle          = incidenceeditor
+qhp.incidenceeditor.indexTitle          = IncidenceEditor
 qhp.incidenceeditor.indexRoot           =
 
 qhp.incidenceeditor.subprojects         = classes
