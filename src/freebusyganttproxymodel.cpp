@@ -73,16 +73,16 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod 
 {
     QString toolTip = u"<qt>"_s;
     toolTip += QLatin1StringView("<b>") + i18nc("@info:tooltip", "Free/Busy Period") + QLatin1StringView("</b>");
-    toolTip += u"<hr>"_s;
+    toolTip += u"<hr>";
     if (!period.summary().isEmpty()) {
         toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Summary:") + QLatin1StringView("</i>") + u"&nbsp;"_s;
         toolTip += period.summary();
-        toolTip += u"<br>"_s;
+        toolTip += u"<br>";
     }
     if (!period.location().isEmpty()) {
         toolTip += QLatin1StringView("<i>") + i18nc("@info:tooltip", "Location:") + QLatin1StringView("</i>") + u"&nbsp;"_s;
         toolTip += period.location();
-        toolTip += u"<br>"_s;
+        toolTip += u"<br>";
     }
     toolTip += u"<i>"_s + i18nc("@info:tooltip period start time", "Start:") + u"</i>"_s + QStringLiteral("&nbsp;");
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
@@ -91,15 +91,15 @@ QString FreeBusyGanttProxyModel::tooltipify(const KCalendarCore::FreeBusyPeriod 
 #else
     toolTip += QLocale().toString(period.start().toLocalTime(), QLocale::ShortFormat);
 #endif
-    toolTip += u"<br>"_s;
+    toolTip += u"<br>";
     toolTip += u"<i>"_s + i18nc("@info:tooltip period end time", "End:") + u"</i>"_s + QStringLiteral("&nbsp;");
 #if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
     toolTip += format.formatDateTime(period.end().toLocalTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
 #else
     toolTip += QLocale().toString(period.end().toLocalTime(), QLocale::ShortFormat);
 #endif
-    toolTip += u"<br>"_s;
-    toolTip += u"</qt>"_s;
+    toolTip += u"<br>";
+    toolTip += u"</qt>";
     return toolTip;
 }
 
