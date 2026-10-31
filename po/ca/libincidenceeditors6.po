@@ -2978,29 +2978,3 @@ msgstr ""
 "Mostra l'estat de lliure/ocupat de tots els assistents. En fer clic doble "
 "sobre una entrada d'un assistent a la llista us permetrà introduir la "
 "ubicació de la seva informació de lliure/ocupat."
-
-#~ msgid ""
-#~ "The item has been changed by another application.\n"
-#~ "What should be done?"
-#~ msgstr ""
-#~ "Una altra aplicació ha canviat l'element.\n"
-#~ "Què s'ha de fer?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Take over changes"
-#~ msgstr "Assumeix els canvis"
-
-#~ msgctxt "@action:button"
-#~ msgid "Ignore and Overwrite changes"
-#~ msgstr "Ignora i sobreescriu els canvis"
-
-#~ msgctxt "@option:check"
-#~ msgid "Store attachment inline"
-#~ msgstr "Emmagatzema l'adjunt inclòs"
-
-#~ msgctxt "@action:button"
-#~ msgid "Select Attendees..."
-#~ msgstr "Selecciona els assistents..."
-
-#~ msgid "&New..."
-#~ msgstr "&Nova..."
