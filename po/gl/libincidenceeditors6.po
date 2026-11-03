@@ -825,8 +825,7 @@ msgid "Disable rich text"
 msgstr "Desactivar o texto enriquecido"
 
 #: incidencedialog.cpp:246
-#, fuzzy, kde-format
-#| msgid "Select a valid collection first."
+#, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Seleccione primeiro unha colección correcta."
