@@ -13,7 +13,10 @@
 #include <CalendarSupport/FreeBusyItem>
 
 #include <QBitArray>
+#include <QDate>
+#include <QDateTime>
 #include <QSet>
+#include <QTime>
 #include <QTimer>
 
 class QWidget;

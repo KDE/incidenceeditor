@@ -8,7 +8,7 @@
 
 #include "incidenceeditor_export.h"
 
-#include <Akonadi/IncidenceChanger>
+#include <Akonadi/ITIPHandler>
 #include <Akonadi/MessageQueueJob>
 #include <KIdentityManagementCore/Identity>
 

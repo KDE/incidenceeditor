@@ -13,7 +13,6 @@
 #include <EventViews/AgendaView>
 
 #include <KCalendarCore/Attendee>
-#include <KCalendarCore/Event>
 #include <KCalendarCore/FreeBusyPeriod>
 
 #include <KConfigGroup>

@@ -12,6 +12,8 @@
 #include <Akonadi/Collection>
 #include <KCalendarCore/IncidenceBase>
 
+#include <QStringList>
+
 class QWidget;
 
 namespace Akonadi

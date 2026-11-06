@@ -11,7 +11,6 @@
 #include <KCalendarCore/IncidenceBase>
 
 #include <QDateTime>
-#include <QList>
 #include <QStringList>
 #include <QUrl>
 

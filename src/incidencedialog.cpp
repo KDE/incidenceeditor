@@ -49,6 +49,7 @@
 #include <QCloseEvent>
 #include <QDir>
 #include <QFile>
+#include <QGridLayout>
 #include <QIcon>
 #include <QPointer>
 #include <QStandardPaths>

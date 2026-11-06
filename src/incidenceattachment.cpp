@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KProtocolManager>
+#include <KStandardActions>
 #include <QAction>
 #include <QApplication>
 #include <QCursor>

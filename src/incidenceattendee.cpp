@@ -35,6 +35,8 @@
 #include "incidenceeditor_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QHeaderView>
+#include <QIcon>
 #include <QPointer>
 #include <QTreeView>
 

@@ -11,6 +11,7 @@
 #include "visualfreebusywidget.h"
 #include <CalendarSupport/FreePeriodModel>
 #include <KCalendarCore/Attendee>
+#include <KCalendarCore/Period>
 
 #include <KLocalizedString>
 
@@ -18,6 +19,7 @@
 #include <QIcon>
 #include <QLocale>
 #include <QPushButton>
+#include <QSet>
 #include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;

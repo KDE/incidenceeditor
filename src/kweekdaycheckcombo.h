@@ -12,6 +12,8 @@
 
 #include <QBitArray>
 
+class QDate;
+
 namespace IncidenceEditorNG
 {
 // FIXME: This class assumes all weeks have 7 days. We should use KCalenderSystem instead.

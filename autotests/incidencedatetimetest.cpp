@@ -11,6 +11,8 @@
 #include "incidenceeditor.h"
 #include "ktimezonecombobox.h"
 
+#include <Akonadi/Item>
+
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>
 #include <KDateComboBox>
