@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2024-09-19 15:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -149,13 +149,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "Νέο συνημμένο"
 
-#: attendeeline.cpp:142 incidenceattendee.cpp:66
+#: attendeeline.cpp:142 incidenceattendee.cpp:68
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "Απαιτεί μια απάντηση"
 
-#: attendeeline.cpp:143 incidenceattendee.cpp:67
+#: attendeeline.cpp:143 incidenceattendee.cpp:69
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -167,13 +167,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "Εισάγετε το όνομα ή την ηλ. διεύθυνση του συμμετέχοντα."
 
-#: attendeeline.cpp:148 incidenceattendee.cpp:69
+#: attendeeline.cpp:148 incidenceattendee.cpp:71
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "Επιτρέπει την επεξεργασία της κατάστασης παρουσίας του συμμετέχοντα."
 
-#: attendeeline.cpp:150 incidenceattendee.cpp:71 schedulingdialog.cpp:99
+#: attendeeline.cpp:150 incidenceattendee.cpp:73 schedulingdialog.cpp:101
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -190,13 +190,13 @@ msgstr ""
 "μπορεί να αποστέλλεται στο χρήστη εάν παρέχεται μια διεύθυνση ηλ. "
 "αλληλογραφίας."
 
-#: attendeeline.cpp:158 incidenceattendee.cpp:73
+#: attendeeline.cpp:158 incidenceattendee.cpp:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "Αίτηση απάντησης από τον συμμετέχοντα"
 
-#: attendeeline.cpp:160 incidenceattendee.cpp:75
+#: attendeeline.cpp:160 incidenceattendee.cpp:77
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -502,13 +502,13 @@ msgid ""
 "continuing."
 msgstr ""
 
-#: incidenceattachment.cpp:135
+#: incidenceattachment.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Add Attachment"
 msgstr "Προσθήκη συνημμένου"
 
-#: incidenceattachment.cpp:198
+#: incidenceattachment.cpp:199
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Do you really want to remove these attachments?<nl/>%1"
@@ -518,61 +518,61 @@ msgid ""
 "%1"
 msgstr "Επιθυμείτε πραγματικά την αφαίρεση αυτών των συνημμένων;<nl/>%1"
 
-#: incidenceattachment.cpp:199
+#: incidenceattachment.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Attachments?"
 msgstr "Αφαίρεση των συνημμένων;"
 
-#: incidenceattachment.cpp:237
+#: incidenceattachment.cpp:238
 #, kde-format
 msgctxt "@title"
 msgid "Save Attachment"
 msgstr "Αποθήκευση συνημμένου"
 
-#: incidenceattachment.cpp:408
+#: incidenceattachment.cpp:409
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "&Σύνδεσμος εδώ"
 
-#: incidenceattachment.cpp:419 incidenceattachment.cpp:422
+#: incidenceattachment.cpp:420 incidenceattachment.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "Αντι&γραφή εδώ"
 
-#: incidenceattachment.cpp:426
+#: incidenceattachment.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "Α&κύρωση"
 
-#: incidenceattachment.cpp:477
+#: incidenceattachment.cpp:478
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "Ά&νοιγμα"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:483
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "Αποθήκευση ως…"
 
-#: incidenceattachment.cpp:499
+#: incidenceattachment.cpp:500
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "Α&φαίρεση"
 
-#: incidenceattachment.cpp:507
+#: incidenceattachment.cpp:508
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "&Ιδιότητες…"
 
-#: incidenceattachment.cpp:517
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -582,7 +582,7 @@ msgstr ""
 "Εμφάνιση αντικειμένων (αρχεία, μηνύματα, κτλ.) που έχουν συσχετιστεί με αυτό "
 "το γεγονός ή την εργασία."
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -592,31 +592,31 @@ msgstr ""
 "%1 δεν φαίνεται να είναι μια έγκυρη διεύθυνση ηλ. αλληλογραφίας. Επιθυμείτε "
 "σίγουρα να προσκαλέσετε αυτόν τον συμμετέχοντα;"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "Μη έγκυρη διεύθυνση ηλ. αλληλογραφίας"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "Πρόσκληση"
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "Να μη γίνει πρόσκληση"
 
-#: incidenceattendee.cpp:446
+#: incidenceattendee.cpp:448
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Επιλογή συμμετεχόντων"
 
-#: incidenceattendee.cpp:630
+#: incidenceattendee.cpp:632
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
@@ -624,7 +624,7 @@ msgid_plural "%1 conflicts"
 msgstr[0] "%1 σύγκρουση"
 msgstr[1] "%1 συγκρούσεις"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -636,13 +636,13 @@ msgstr ""
 "συμμετέχει στο γεγονός αυτό, επιθυμείτε την τροποποίηση και του αντίστοιχου "
 "συμμετέχοντα;"
 
-#: incidenceattendee.cpp:803
+#: incidenceattendee.cpp:805
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "Αλλαγή συμμετέχοντος"
 
-#: incidenceattendee.cpp:804
+#: incidenceattendee.cpp:806
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -825,123 +825,123 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "Απενεργοποίηση εμπλουτισμένου κειμένου"
 
-#: incidencedialog.cpp:246
+#: incidencedialog.cpp:247
 #, fuzzy, kde-format
 #| msgid "Select a valid collection first."
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "Επιλογή μιας έγκυρης συλλογής πρώτα."
 
-#: incidencedialog.cpp:269
+#: incidencedialog.cpp:270
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "Υπενθύμιση: (%1)"
 
-#: incidencedialog.cpp:271
+#: incidencedialog.cpp:272
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "Υπενθύμιση"
 
-#: incidencedialog.cpp:279
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "Επα&νάληψη"
 
-#: incidencedialog.cpp:289
+#: incidencedialog.cpp:290
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr " (Η)"
 
-#: incidencedialog.cpp:292
+#: incidencedialog.cpp:293
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:295
+#: incidencedialog.cpp:296
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr " (Μ)"
 
-#: incidencedialog.cpp:298
+#: incidencedialog.cpp:299
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:301
+#: incidencedialog.cpp:302
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (Ε)"
 
-#: incidencedialog.cpp:335
+#: incidencedialog.cpp:336
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "Αδυναμία εύρεσης του προτύπου «%1»."
 
-#: incidencedialog.cpp:341
+#: incidencedialog.cpp:342
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "Σφάλμα κατά την φόρτωση του αρχείου προτύπου «%1». "
 
-#: incidencedialog.cpp:347
+#: incidencedialog.cpp:348
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "Το πρότυπο δεν περιέχει κάποιο έγκυρο περιστατικό."
 
-#: incidencedialog.cpp:355
+#: incidencedialog.cpp:356
 #, fuzzy, kde-format
 #| msgid "New %1 Template"
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "Νέο %1 πρότυπο"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:448
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "%1 Συ&νημμένα (%1)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:450
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "Συ&νημμένα"
 
-#: incidencedialog.cpp:456
+#: incidencedialog.cpp:457
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "&Συμμετέχοντες (%1)"
 
-#: incidencedialog.cpp:458
+#: incidencedialog.cpp:459
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "&Συμμετέχοντες"
 
-#: incidencedialog.cpp:465
+#: incidencedialog.cpp:466
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "Πό&ροι (%1)"
 
-#: incidencedialog.cpp:467
+#: incidencedialog.cpp:468
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "Πό&ροι"
 
-#: incidencedialog.cpp:489
+#: incidencedialog.cpp:490
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -953,25 +953,25 @@ msgstr ""
 "\n"
 " Αιτία: %1"
 
-#: incidencedialog.cpp:493
+#: incidencedialog.cpp:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "Επανάληψη"
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:514
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr ""
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr ""
 
-#: incidencedialog.cpp:521
+#: incidencedialog.cpp:522
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -993,7 +993,7 @@ msgstr ""
 "να εντάσσονται σε λάθος φάκελο.</para><para>Θέλετε να ρυθμίσετε το "
 "προκαθορισμένο ημερολόγιο γεγονότων στο <resource>%1</resource>;</para>"
 
-#: incidencedialog.cpp:531
+#: incidencedialog.cpp:532
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Set Default Calendar?"
@@ -1001,49 +1001,49 @@ msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "Να ρυθμιστεί το προκαθορισμένο ημερολόγιο;"
 
-#: incidencedialog.cpp:532
+#: incidencedialog.cpp:533
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "Να ρυθμιστεί ως προκαθορισμένο"
 
-#: incidencedialog.cpp:533
+#: incidencedialog.cpp:534
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "Να μη ρυθμιστεί"
 
-#: incidencedialog.cpp:729
+#: incidencedialog.cpp:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "Αποθήκευση τρεχουσών αλλαγών"
 
-#: incidencedialog.cpp:730
+#: incidencedialog.cpp:731
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "Αποθήκευση αλλαγών και κλείσιμο διαλόγου"
 
-#: incidencedialog.cpp:731
+#: incidencedialog.cpp:732
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "Απόρριψη αλλαγών και κλείσιμο διαλόγου"
 
-#: incidencedialog.cpp:735
+#: incidencedialog.cpp:736
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "Πρό&τυπα…"
 
-#: incidencedialog.cpp:737
+#: incidencedialog.cpp:738
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "Διαχείριση προτύπων για το αντικείμενο αυτό"
 
-#: incidencedialog.cpp:739
+#: incidencedialog.cpp:740
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1056,25 +1056,25 @@ msgstr ""
 "τη δημιουργία νέων αντικειμένων εισάγοντας αυτόματα τις προκαθορισμένες "
 "τιμές της προτίμησής σας στον επεξεργαστή."
 
-#: incidencedialog.cpp:837 incidencedialog.cpp:862 incidencedialog.cpp:882
+#: incidencedialog.cpp:838 incidencedialog.cpp:863 incidencedialog.cpp:883
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Επιθυμείτε πραγματικά την ακύρωση;"
 
-#: incidencedialog.cpp:838 incidencedialog.cpp:863 incidencedialog.cpp:883
+#: incidencedialog.cpp:839 incidencedialog.cpp:864 incidencedialog.cpp:884
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer επιβεβαίωση"
 
-#: incidencedialog.cpp:839 incidencedialog.cpp:864 incidencedialog.cpp:884
+#: incidencedialog.cpp:840 incidencedialog.cpp:865 incidencedialog.cpp:885
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "Ακύρωση επεξεργασίας"
 
-#: incidencedialog.cpp:840 incidencedialog.cpp:865 incidencedialog.cpp:885
+#: incidencedialog.cpp:841 incidencedialog.cpp:866 incidencedialog.cpp:886
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1397,25 +1397,25 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "Αδυναμία σύνδεσης στην υπηρεσία αλληλογραφίας"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "Διαχείριση πόρων"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
 msgstr "Κράτηση πόρου"
 
-#: schedulingdialog.cpp:31
+#: schedulingdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "Προγραμματισμός"
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:169
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1423,7 +1423,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%1, %2 %3"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:190
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
