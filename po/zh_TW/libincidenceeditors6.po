@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:49+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2026-09-15 15:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -144,13 +144,13 @@ msgctxt "@label"
 msgid "New attachment"
 msgstr "新增附件"
 
-#: attendeeline.cpp:142 incidenceattendee.cpp:66
+#: attendeeline.cpp:142 incidenceattendee.cpp:68
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request Response"
 msgstr "要求回覆"
 
-#: attendeeline.cpp:143 incidenceattendee.cpp:67
+#: attendeeline.cpp:143 incidenceattendee.cpp:69
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Request No Response"
@@ -162,13 +162,13 @@ msgctxt "@info:tooltip"
 msgid "Enter the name or email address of the attendee."
 msgstr "輸入參加者的名稱或電子郵件地址。"
 
-#: attendeeline.cpp:148 incidenceattendee.cpp:69
+#: attendeeline.cpp:148 incidenceattendee.cpp:71
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the current attendance status of the attendee."
 msgstr "編輯參加者目前的參加狀態。"
 
-#: attendeeline.cpp:150 incidenceattendee.cpp:71 schedulingdialog.cpp:99
+#: attendeeline.cpp:150 incidenceattendee.cpp:73 schedulingdialog.cpp:101
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Edits the role of the attendee."
@@ -182,13 +182,13 @@ msgid ""
 "user if an email address is provided."
 msgstr "參加者的電子郵件地址或姓名。若有電子郵件地址則會發送邀請函過去。"
 
-#: attendeeline.cpp:158 incidenceattendee.cpp:73
+#: attendeeline.cpp:158 incidenceattendee.cpp:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Request a response from the attendee"
 msgstr "要求參加者回覆"
 
-#: attendeeline.cpp:160 incidenceattendee.cpp:75
+#: attendeeline.cpp:160 incidenceattendee.cpp:77
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -494,13 +494,13 @@ msgid ""
 "continuing."
 msgstr "Google 只允許最多設定 5 個提醒。請先移除別的提醒再繼續。"
 
-#: incidenceattachment.cpp:135
+#: incidenceattachment.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Add Attachment"
 msgstr "新增附件"
 
-#: incidenceattachment.cpp:198
+#: incidenceattachment.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -510,61 +510,61 @@ msgstr ""
 "您確定要移除這些附件嗎？\n"
 "%1"
 
-#: incidenceattachment.cpp:199
+#: incidenceattachment.cpp:200
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove Attachments?"
 msgstr "要移除附件嗎？"
 
-#: incidenceattachment.cpp:237
+#: incidenceattachment.cpp:238
 #, kde-format
 msgctxt "@title"
 msgid "Save Attachment"
 msgstr "儲存附件"
 
-#: incidenceattachment.cpp:408
+#: incidenceattachment.cpp:409
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Link here"
 msgstr "連結到這裡(&L)"
 
-#: incidenceattachment.cpp:419 incidenceattachment.cpp:422
+#: incidenceattachment.cpp:420 incidenceattachment.cpp:423
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Copy here"
 msgstr "複製到這裡(&C)"
 
-#: incidenceattachment.cpp:426
+#: incidenceattachment.cpp:427
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&ancel"
 msgstr "取消(&A)"
 
-#: incidenceattachment.cpp:477
+#: incidenceattachment.cpp:478
 #, kde-format
 msgctxt "@action:inmenu open the attachment in a viewer"
 msgid "&Open"
 msgstr "開啟(&O)"
 
-#: incidenceattachment.cpp:482
+#: incidenceattachment.cpp:483
 #, kde-format
 msgctxt "@action:inmenu save the attachment to a file"
 msgid "Save As…"
 msgstr "另存為…"
 
-#: incidenceattachment.cpp:499
+#: incidenceattachment.cpp:500
 #, kde-format
 msgctxt "@action:inmenu remove the attachment"
 msgid "&Remove"
 msgstr "移除(&R)"
 
-#: incidenceattachment.cpp:507
+#: incidenceattachment.cpp:508
 #, kde-format
 msgctxt "@action:inmenu show a dialog used to edit the attachment"
 msgid "&Properties…"
 msgstr "屬性(&P)…"
 
-#: incidenceattachment.cpp:517
+#: incidenceattachment.cpp:518
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -572,7 +572,7 @@ msgid ""
 "or to-do."
 msgstr "顯示與目前事件或待辦事項相關的項目（檔案、郵件等等）。"
 
-#: incidenceattendee.cpp:214
+#: incidenceattendee.cpp:216
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -580,38 +580,38 @@ msgid ""
 "this participant?"
 msgstr "%1 看起來不像是有效的電子郵件地址。您確定您要邀請這個參加者嗎？"
 
-#: incidenceattendee.cpp:217
+#: incidenceattendee.cpp:219
 #, kde-format
 msgctxt "@title:window"
 msgid "Invalid Email Address"
 msgstr "無效的電子郵件地址"
 
-#: incidenceattendee.cpp:218
+#: incidenceattendee.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Invite"
 msgstr "邀請"
 
-#: incidenceattendee.cpp:219
+#: incidenceattendee.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Invite"
 msgstr "不要邀請"
 
-#: incidenceattendee.cpp:446
+#: incidenceattendee.cpp:448
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "選擇參加者"
 
-#: incidenceattendee.cpp:630
+#: incidenceattendee.cpp:632
 #, kde-format
 msgctxt "@label Shows the number of scheduling conflicts"
 msgid "%1 conflict"
 msgid_plural "%1 conflicts"
 msgstr[0] "%1 個衝突"
 
-#: incidenceattendee.cpp:799
+#: incidenceattendee.cpp:801
 #, kde-format
 msgctxt "@option"
 msgid ""
@@ -622,13 +622,13 @@ msgstr ""
 "您改變了此事件的發起者。既然他也是此事件的參加者，您也要順便變更相關的參加者"
 "嗎？"
 
-#: incidenceattendee.cpp:803
+#: incidenceattendee.cpp:805
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Attendee"
 msgstr "變更參加者"
 
-#: incidenceattendee.cpp:804
+#: incidenceattendee.cpp:806
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Change"
@@ -804,121 +804,121 @@ msgctxt "@action Enable or disable rich text editing"
 msgid "Disable rich text"
 msgstr "關閉 Rich Text"
 
-#: incidencedialog.cpp:246
+#: incidencedialog.cpp:247
 #, kde-format
 msgctxt "@info"
 msgid "Select a valid collection first."
 msgstr "請先選擇一個有效的收藏。"
 
-#: incidencedialog.cpp:269
+#: incidencedialog.cpp:270
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder (%1)"
 msgstr "提醒（%1）"
 
-#: incidencedialog.cpp:271
+#: incidencedialog.cpp:272
 #, kde-format
 msgctxt "@title:tab Tab to configure the reminders of an event or todo"
 msgid "Reminder"
 msgstr "提醒"
 
-#: incidencedialog.cpp:279
+#: incidencedialog.cpp:280
 #, kde-format
 msgctxt "@title:tab Tab to configure the recurrence of an event or todo"
 msgid "Rec&urrence"
 msgstr "循環(&U)"
 
-#: incidencedialog.cpp:289
+#: incidencedialog.cpp:290
 #, kde-format
 msgctxt "@title:tab Daily recurring event, capital first letter only"
 msgid " (D)"
 msgstr "(天)"
 
-#: incidencedialog.cpp:292
+#: incidencedialog.cpp:293
 #, kde-format
 msgctxt "@title:tab Weekly recurring event, capital first letter only"
 msgid " (W)"
 msgstr "(週)"
 
-#: incidencedialog.cpp:295
+#: incidencedialog.cpp:296
 #, kde-format
 msgctxt "@title:tab Monthly recurring event, capital first letter only"
 msgid " (M)"
 msgstr "(月)"
 
-#: incidencedialog.cpp:298
+#: incidencedialog.cpp:299
 #, kde-format
 msgctxt "@title:tab Yearly recurring event, capital first letter only"
 msgid " (Y)"
 msgstr "(年)"
 
-#: incidencedialog.cpp:301
+#: incidencedialog.cpp:302
 #, kde-format
 msgctxt "@title:tab Exception to a recurring event, capital first letter only"
 msgid " (E)"
 msgstr " (例外)"
 
-#: incidencedialog.cpp:335
+#: incidencedialog.cpp:336
 #, kde-format
 msgctxt "@info"
 msgid "Unable to find template '%1'."
 msgstr "找不到樣本 %1。"
 
-#: incidencedialog.cpp:341
+#: incidencedialog.cpp:342
 #, kde-format
 msgctxt "@info"
 msgid "Error loading template file '%1'."
 msgstr "載入樣本檔案 %1 時發生錯誤。"
 
-#: incidencedialog.cpp:347
+#: incidencedialog.cpp:348
 #, kde-format
 msgctxt "@info"
 msgid "Template does not contain a valid incidence."
 msgstr "樣本未包含有效的事件。"
 
-#: incidencedialog.cpp:355
+#: incidencedialog.cpp:356
 #, kde-format
 msgctxt "@info/plain"
 msgid "New from template: %1"
 msgstr "從樣本建立：%1"
 
-#: incidencedialog.cpp:447
+#: incidencedialog.cpp:448
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments (%1)"
 msgstr "附加檔(%1)(&H)"
 
-#: incidencedialog.cpp:449
+#: incidencedialog.cpp:450
 #, kde-format
 msgctxt "@title:tab Tab to modify attachments of an event or todo"
 msgid "Attac&hments"
 msgstr "附加檔(&H)"
 
-#: incidencedialog.cpp:456
+#: incidencedialog.cpp:457
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees (%1)"
 msgstr "參加者(%1)(&A)"
 
-#: incidencedialog.cpp:458
+#: incidencedialog.cpp:459
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Attendees"
 msgstr "參加者(&A)"
 
-#: incidencedialog.cpp:465
+#: incidencedialog.cpp:466
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources (%1)"
 msgstr "資源 (%1) (&R)"
 
-#: incidencedialog.cpp:467
+#: incidencedialog.cpp:468
 #, kde-format
 msgctxt "@title:tab Tab to modify attendees of an event or todo"
 msgid "&Resources"
 msgstr "資源(&R)"
 
-#: incidencedialog.cpp:489
+#: incidencedialog.cpp:490
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -930,25 +930,25 @@ msgstr ""
 "\n"
 "理由：%1"
 
-#: incidencedialog.cpp:493
+#: incidencedialog.cpp:494
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry"
 msgstr "重試"
 
-#: incidencedialog.cpp:513
+#: incidencedialog.cpp:514
 #, kde-format
 msgctxt "@info/plain the calendar contains todos"
 msgid "Todo"
 msgstr "待辦事項"
 
-#: incidencedialog.cpp:515
+#: incidencedialog.cpp:516
 #, kde-format
 msgctxt "@info/plain the calendar contains events"
 msgid "Event"
 msgstr "事件"
 
-#: incidencedialog.cpp:521
+#: incidencedialog.cpp:522
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -963,55 +963,55 @@ msgstr ""
 
 # 這個%1是譯文。
 # --Kisaragi
-#: incidencedialog.cpp:531
+#: incidencedialog.cpp:532
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
 msgstr "設定預設%1行事曆？"
 
-#: incidencedialog.cpp:532
+#: incidencedialog.cpp:533
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
 msgstr "設為預設"
 
-#: incidencedialog.cpp:533
+#: incidencedialog.cpp:534
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Set"
 msgstr "不要設定"
 
-#: incidencedialog.cpp:729
+#: incidencedialog.cpp:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Save current changes"
 msgstr "儲存目前的變更"
 
-#: incidencedialog.cpp:730
+#: incidencedialog.cpp:731
 #, kde-format
 msgctxt "@action:button"
 msgid "Save changes and close dialog"
 msgstr "儲存變更並關閉對話框"
 
-#: incidencedialog.cpp:731
+#: incidencedialog.cpp:732
 #, kde-format
 msgctxt "@action:button"
 msgid "Discard changes and close dialog"
 msgstr "丟棄變更並關閉對話框"
 
-#: incidencedialog.cpp:735
+#: incidencedialog.cpp:736
 #, kde-format
 msgctxt "@action:button"
 msgid "&Templates…"
 msgstr "樣本(&T)…"
 
-#: incidencedialog.cpp:737
+#: incidencedialog.cpp:738
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Manage templates for this item"
 msgstr "管理此項目的樣本"
 
-#: incidencedialog.cpp:739
+#: incidencedialog.cpp:740
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1022,25 +1022,25 @@ msgstr ""
 "按下此鍵會顯示一個對話框，讓您管理樣本集。樣本可以自動將您常用的預設值放入編"
 "輯器內，讓您更快更容易建立新的項目。"
 
-#: incidencedialog.cpp:837 incidencedialog.cpp:862 incidencedialog.cpp:882
+#: incidencedialog.cpp:838 incidencedialog.cpp:863 incidencedialog.cpp:883
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "您確定要取消嗎？"
 
-#: incidencedialog.cpp:838 incidencedialog.cpp:863 incidencedialog.cpp:883
+#: incidencedialog.cpp:839 incidencedialog.cpp:864 incidencedialog.cpp:884
 #, kde-format
 msgctxt "@title:window"
 msgid "KOrganizer Confirmation"
 msgstr "KOrganizer 確認"
 
-#: incidencedialog.cpp:839 incidencedialog.cpp:864 incidencedialog.cpp:884
+#: incidencedialog.cpp:840 incidencedialog.cpp:865 incidencedialog.cpp:885
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Editing"
 msgstr "取消編輯"
 
-#: incidencedialog.cpp:840 incidencedialog.cpp:865 incidencedialog.cpp:885
+#: incidencedialog.cpp:841 incidencedialog.cpp:866 incidencedialog.cpp:886
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
@@ -1354,25 +1354,25 @@ msgctxt "errormessage: dbus is running but still no connection kmail"
 msgid "Cannot connect to email service"
 msgstr "無法連接到電子郵件服務"
 
-#: resourcemanagement.cpp:97
+#: resourcemanagement.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Resource Management"
 msgstr "資源管理"
 
-#: resourcemanagement.cpp:102
+#: resourcemanagement.cpp:101
 #, kde-format
 msgctxt "@action:button add resource to attendeelist"
 msgid "Book resource"
 msgstr "預訂資源"
 
-#: schedulingdialog.cpp:31
+#: schedulingdialog.cpp:33
 #, kde-format
 msgctxt "@title:window"
 msgid "Scheduling"
 msgstr "排程.."
 
-#: schedulingdialog.cpp:167
+#: schedulingdialog.cpp:169
 #, kde-format
 msgctxt ""
 "@label Day of week followed by day of the month, then the month. Example: "
@@ -1380,7 +1380,7 @@ msgctxt ""
 msgid "%1, %2 %3"
 msgstr "%3 %2 日，%1"
 
-#: schedulingdialog.cpp:188
+#: schedulingdialog.cpp:190
 #, kde-format
 msgctxt ""
 "@label This is a suffix following a time selecting widget. Example: "
