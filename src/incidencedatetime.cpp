@@ -14,8 +14,8 @@
 
 #include <KLocalizedString>
 
-#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.31"
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#include <kcoreaddons_version.h> //remove when KF_MIN_VERSION is "6.32"
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
 #include <KFormat>
 #endif
 
@@ -779,7 +779,7 @@ void IncidenceDateTime::updateStartToolTips()
         if (mUi->mWholeDayCheck->isChecked()) {
             datetimeStr = QLocale().toString(currentStartDateTime().date(), QLocale::LongFormat);
         } else {
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
             const KFormat format;
             datetimeStr = format.formatDateTime(currentStartDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
 #else
@@ -801,7 +801,7 @@ void IncidenceDateTime::updateEndToolTips()
         if (mUi->mWholeDayCheck->isChecked()) {
             datetimeStr = QLocale().toString(currentEndDateTime().date(), QLocale::LongFormat);
         } else {
-#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 31, 0)
+#if KCOREADDONS_VERSION >= QT_VERSION_CHECK(6, 32, 0)
             const KFormat format;
             datetimeStr = format.formatDateTime(currentEndDateTime(), QLocale::LongFormat, KFormat::DoNotAddTimeZone);
 #else
