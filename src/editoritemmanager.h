@@ -95,7 +95,6 @@ Q_SIGNALS:
 private:
     std::unique_ptr<ItemEditorPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(ItemEditor)
-    Q_DISABLE_COPY(EditorItemManager)
 };
 
 class ItemEditorUi

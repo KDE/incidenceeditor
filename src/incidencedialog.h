@@ -146,7 +146,6 @@ protected Q_SLOTS:
 private:
     std::unique_ptr<IncidenceDialogPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(IncidenceDialog)
-    Q_DISABLE_COPY(IncidenceDialog)
 
     INCIDENCEEDITOR_NO_EXPORT void writeConfig();
     INCIDENCEEDITOR_NO_EXPORT void readConfig();
