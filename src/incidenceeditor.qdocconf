@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = IncidenceEditor
+moduleheader = incidenceeditor_qdocmoduleheader.h
 description = Incidenceeditor library.
 
 
