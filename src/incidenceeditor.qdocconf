@@ -7,7 +7,16 @@ description = Incidenceeditor library.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    editoritemmanager.h \
+    groupwareuidelegate.h \
+    incidencedefaults.h \
+    incidencedialog.h \
+    incidencedialogfactory.h \
+    incidenceeditor.h \
+    incidenceeditor_qdocmoduleheader.h \
+    incidenceeditorsettings.h \
+    individualmailcomponentfactory.h
 sourcedirs += .
 
 excludedirs += \
