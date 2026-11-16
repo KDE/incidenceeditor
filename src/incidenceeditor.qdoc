@@ -2,8 +2,8 @@
     \module IncidenceEditor
     \title IncidenceEditor C++ Classes
     \ingroup modules
-    \cmakepackage KPim6
-    \cmakecomponent IncidenceEditor
+    \cmakepackage KPim6IncidenceEditor
+    \cmaketargetitem KPim6::IncidenceEditor
 
     \brief Incidenceeditor library.
 */
