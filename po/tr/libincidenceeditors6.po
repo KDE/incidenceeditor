@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:58+0000\n"
-"PO-Revision-Date: 2026-10-12 10:41+0300\n"
+"PO-Revision-Date: 2026-11-23 18:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 "X-POOTLE-MTIME: 1413102212.000000\n"
 
 #: alarmdialog.cpp:27
@@ -980,23 +980,23 @@ msgid ""
 "less chance of filing them into the wrong folder.</para><para>Would you like "
 "to set your default %2 calendar to <resource>%3</resource>?</para>"
 msgstr ""
-"<para>Henüz öntanımlı bir %1 takvimi ayarlamadınız.</para><para>Öntanımlı "
+"<para>Henüz varsayılan bir %1 takvimi ayarlamadınız.</para><para>Varsayılan "
 "bir takvim ayarlamak, yeni etkinliklerin oluşturulmasını daha hızlı ve kolay "
 "hale getirecek ve yanlış klasöre kaydedilme olasılığını azaltacaktır.</"
-"para><para>Öntanımlı %2 takviminizi <resource>%3</resource> olarak ayarlamak "
-"ister misiniz?</para>"
+"para><para>Varsayılan %2 takviminizi <resource>%3</resource> olarak "
+"ayarlamak ister misiniz?</para>"
 
 #: incidencedialog.cpp:532
 #, kde-format
 msgctxt "@title:window"
 msgid "Set Default %1 Calendar?"
-msgstr "Öntanımlı %1 Takvimi Olarak Ayarla?"
+msgstr "Varsayılan %1 Takvimi Olarak Ayarla?"
 
 #: incidencedialog.cpp:533
 #, kde-format
 msgctxt "@action:button"
 msgid "Set As Default"
-msgstr "Öntanımlı Olarak Ayarla"
+msgstr "Varsayılan Olarak Ayarla"
 
 #: incidencedialog.cpp:534
 #, kde-format
@@ -1043,7 +1043,7 @@ msgid ""
 "favorite default values into the editor automatically."
 msgstr ""
 "Şablonların listesini düzenlemenizi sağlayacak iletişim kutusunu göstermek "
-"için bu düğmeye basın. Şablonlar, sık kullandığınız öntanımlı değerlerinizi "
+"için bu düğmeye basın. Şablonlar, sık kullandığınız varsayılan değerlerinizi "
 "düzenleyiciye kendiliğinden koyarak ögeleri daha kolay ve daha hızlı "
 "oluşturmanızı sağlayabilir."
 
@@ -1075,7 +1075,7 @@ msgstr "İptal Etme"
 #: incidenceeditor.kcfg:7
 #, kde-format
 msgid "Default Email Attachment Method"
-msgstr "Öntanımlı E-posta Ek Yöntemi"
+msgstr "Varsayılan E-posta Ek Yöntemi"
 
 #. i18n: ectx: tooltip, entry (DefaultEmailAttachMethod), group (AttachmentHandling)
 #: incidenceeditor.kcfg:8
@@ -2335,7 +2335,7 @@ msgstr "Anımsatıcı"
 #, kde-format
 msgctxt "@label"
 msgid "Add default reminder:"
-msgstr "Öntanımlı anımsatıcı ekle:"
+msgstr "Varsayılan anımsatıcı ekle:"
 
 #. i18n: ectx: property (text), widget (QPushButton, mAlarmAddPresetButton)
 #: ui/dialogdesktop.ui:1052
