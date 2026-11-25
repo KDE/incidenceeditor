@@ -12,7 +12,7 @@
 #include <QObject>
 namespace IncidenceEditorNG
 {
-/**
+/*!
  * \class IncidenceEditorNG::IncidenceEditor
  * \inmodule IncidenceEditor
  * \inheaderfile IncidenceEditor/IncidenceEditor
@@ -122,9 +122,17 @@ protected:
     }
 
 protected:
+    /*!
+     */
     KCalendarCore::Incidence::Ptr mLoadedIncidence;
+    /*!
+     */
     mutable QString mLastErrorString;
+    /*!
+     */
     bool mWasDirty = false;
+    /*!
+     */
     bool mLoadingIncidence = false;
 };
 } // IncidenceEditorNG

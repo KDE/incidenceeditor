@@ -7,3 +7,9 @@
 
     \brief Incidenceeditor library.
 */
+
+/*!
+    \namespace IncidenceEditorNG
+    \inmodule IncidenceEditor
+    \brief The IncidenceEditorNG namespace contains the classes of the IncidenceEditor module.
+*/

@@ -21,15 +21,24 @@ namespace IncidenceEditorNG
 class OpenComposerJob;
 class IndividualMailDialog;
 
+/*!
+ * \class IncidenceEditorNG::IndividualMessageQueueJob
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IndividualMailComponentFactory
+ */
 class IndividualMessageQueueJob : public Akonadi::MessageQueueJob
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit IndividualMessageQueueJob(const KIdentityManagementCore::Identity &identity,
                                        const KCalendarCore::Attendee::List &update,
                                        const KCalendarCore::Attendee::List &edit,
                                        QObject *parent);
 
+    /*!
+     */
     void start() override;
 
 private:
@@ -43,18 +52,29 @@ private:
     OpenComposerJob *mComposerJob = nullptr;
 };
 
+/*!
+ * \class IncidenceEditorNG::IndividualMailITIPHandlerDialogDelegate
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IndividualMailComponentFactory
+ */
 class IndividualMailITIPHandlerDialogDelegate : public Akonadi::ITIPHandlerDialogDelegate
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit IndividualMailITIPHandlerDialogDelegate(const KCalendarCore::Incidence::Ptr &incidence, KCalendarCore::iTIPMethod method, QWidget *parent);
 
+    /*!
+     */
     void openDialogIncidenceCreated(Recipient recipient,
                                     const QString &question,
                                     Action action = ActionAsk,
                                     const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                     const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
 
+    /*!
+     */
     void openDialogIncidenceModified(bool attendeeStatusChanged,
                                      Recipient recipient,
                                      const QString &question,
@@ -62,6 +82,8 @@ public:
                                      const KGuiItem &buttonYes = KGuiItem(i18nc("@action:button dialog positive answer", "Send Email")),
                                      const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
 
+    /*!
+     */
     void openDialogIncidenceDeleted(Recipient recipient,
                                     const QString &question,
                                     Action action = ActionAsk,
@@ -69,10 +91,16 @@ public:
                                     const KGuiItem &buttonNo = KGuiItem(i18nc("@action:button dialog negative answer", "Do Not Send"))) override;
 
 Q_SIGNALS:
+    /*!
+     */
     void setEdit(const KCalendarCore::Incidence::Ptr &, const KCalendarCore::Attendee::List &);
+    /*!
+     */
     void setUpdate(const KCalendarCore::Incidence::Ptr &, const KCalendarCore::Attendee::List &);
 
 protected:
+    /*!
+     */
     void
     openDialog(const QString &question, const KCalendarCore::Attendee::List &attendees, Action action, const KGuiItem &buttonYes, const KGuiItem &buttonNo);
 

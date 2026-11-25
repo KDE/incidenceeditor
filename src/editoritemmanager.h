@@ -24,17 +24,24 @@ namespace IncidenceEditorNG
 class ItemEditorUi;
 class ItemEditorPrivate;
 
-/**
+/*!
  * Helper class for creating dialogs that let the user create and edit the payload
  * of Akonadi items (e.g. events, contacts, etc). This class supports editing of
  * one item at a time and handles all Akonadi specific logic like Item creation,
  * Item modifying and monitoring of changes to the item during editing.
  */
 // template <typename PayloadT>
+/*!
+ * \class IncidenceEditorNG::EditorItemManager
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/EditorItemManager
+ */
 class EditorItemManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum ItipPrivacy {
         ItipPrivacyPlain = 0,
         ItipPrivacySign = 1,
@@ -42,41 +49,45 @@ public:
     };
     Q_DECLARE_FLAGS(ItipPrivacyFlags, ItipPrivacy)
 
-    /**
+    /*!
      * Creates an ItemEditor for a new Item.
      * Receives an option IncidenceChanger, so you can share the undo/redo stack with your
      * application.
      */
     explicit EditorItemManager(ItemEditorUi *ui, Akonadi::IncidenceChanger *changer = nullptr);
 
-    /**
+    /*!
      * Destructs the ItemEditor. Unsaved changes will get lost at this point.
      */
     ~EditorItemManager() override;
 
+    /*!
+     */
     enum ItemState {
         AfterSave, /**< Returns the last saved item */
         BeforeSave /**< Returns an item with the original payload before the last save call */
     };
 
-    /**
+    /*!
      * Returns the last saved item with payload or an invalid item when save is
      * not called yet.
      */
     [[nodiscard]] Akonadi::Item item(ItemState state = AfterSave) const;
 
-    /**
-     * Loads the @param item into the editor. The item passed must be
+    /*!
+     * Loads the \param item into the editor. The item passed must be
      * a valid item.
      */
     void load(const Akonadi::Item &item);
 
-    /**
+    /*!
      * Saves the new or modified item. This method does nothing when the
      * ui is not dirty.
      */
     void save(ItipPrivacyFlags itipPrivacy = ItipPrivacyPlain);
 
+    /*!
+     */
     enum SaveAction {
         Create, /**< A new item was created */
         Modify, /**< An existing item was modified */
@@ -85,11 +96,17 @@ public:
         MoveAndModify /**< An existing item was moved to another collection and modified */
     };
 
+    /*!
+     */
     void setIsCounterProposal(bool isCounterProposal);
 
 Q_SIGNALS:
+    /*!
+     */
     void itemSaveFinished(IncidenceEditorNG::EditorItemManager::SaveAction);
 
+    /*!
+     */
     void itemSaveFailed(IncidenceEditorNG::EditorItemManager::SaveAction, const QString &);
 
 private:
@@ -97,30 +114,39 @@ private:
     Q_DECLARE_PRIVATE(ItemEditor)
 };
 
+/*!
+ * \class IncidenceEditorNG::ItemEditorUi
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/EditorItemManager
+ */
 class ItemEditorUi
 {
 public:
+    /*!
+     */
     enum RejectReason {
         ItemFetchFailed, ///> Either the fetchjob failed or no items where returned
         ItemHasInvalidPayload, ///> The fetched item has an invalid payload
         ItemMoveFailed ///> Item move failed
     };
 
+    /*!
+     */
     virtual ~ItemEditorUi();
 
-    /**
+    /*!
      * Returns whether or not the identifier set contains payload identifiers that
      * are displayed/editable in the Gui.
      */
     virtual bool containsPayloadIdentifiers(const QSet<QByteArray> &partIdentifiers) const = 0;
 
-    /**
-     * Returns whether or not @param item has a payload type that is supported by
+    /*!
+     * Returns whether or not \param item has a payload type that is supported by
      * the gui.
      */
     virtual bool hasSupportedPayload(const Akonadi::Item &item) const = 0;
 
-    /**
+    /*!
      * Returns whether or not the values in the ui differ from the original (i.e.
      * either an empty or a loaded item). This method <em>only</em> involves
      * payload fields. I.e. if only the collection in which the item should be
@@ -128,7 +154,7 @@ public:
      */
     virtual bool isDirty() const = 0;
 
-    /**
+    /*!
      * Returns whether or not the values in the ui are valid. This method can also
      * be used to update the ui if necessary. The default implementation returns
      * true, so if the ui doesn't need validation there is no need to reimplement
@@ -136,25 +162,25 @@ public:
      */
     virtual bool isValid() const;
 
-    /**
-     * Fills the ui with the values of the payload of @param item. The item is
+    /*!
+     * Fills the ui with the values of the payload of \param item. The item is
      * guaranteed to have a payload.
      */
     virtual void load(const Akonadi::Item &item) = 0;
 
-    /**
-     * Stores the values of the ui into the payload of @param item and returns the
+    /*!
+     * Stores the values of the ui into the payload of \param item and returns the
      * item with an updated payload. The returned item must have a valid mimetype
      * too.
      */
     virtual Akonadi::Item save(const Akonadi::Item &item) = 0;
 
-    /**
+    /*!
      * Returns the currently selected collection in which the item will be stored.
      */
     virtual Akonadi::Collection selectedCollection() const = 0;
 
-    /**
+    /*!
      * This function is called if for some reason the creation or editing of the
      * item cannot be continued. The implementing class must abort editing at
      * this point.

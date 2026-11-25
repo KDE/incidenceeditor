@@ -25,6 +25,11 @@ namespace IncidenceEditorNG
 {
 class IncidenceDialog;
 
+/*!
+ * \namespace IncidenceEditorNG::IncidenceDialogFactory
+ * \inmodule IncidenceEditor
+ * \inheaderfile IncidenceEditor/IncidenceDialogFactory
+ */
 namespace IncidenceDialogFactory
 {
 /*!
