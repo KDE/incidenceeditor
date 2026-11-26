@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/incidenceeditor/libincidenceeditors6."
+"X-Crowdin-File: /kf6-stable/messages/incidenceeditor/libincidenceeditors6."
 "pot\n"
-"X-Crowdin-File-ID: 49074\n"
+"X-Crowdin-File-ID: 52610\n"
 
 #: alarmdialog.cpp:27
 #, kde-format
@@ -2850,21 +2850,5 @@ msgid ""
 "attendee's entry in the list will allow you to enter the location of their "
 "Free/Busy Information."
 msgstr ""
-"显示所有参与者的忙/闲状态。双击一名列表中的参与者将允许您输入他们的忙/闲信息"
-"字段。"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Free/Busy Location"
-#~ msgstr "编辑忙/闲位置"
-
-#~ msgid ""
-#~ "Location of Free/Busy information for %1 <placeholder>%2</placeholder>:"
-#~ msgstr "%1 <placeholder>%2</placeholder> 的忙/闲信息位置："
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Enter the location of the Free/Busy information for the attendee."
-#~ msgstr "输入参与者空闲或忙碌的位置。"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Enter the location of the information."
-#~ msgstr "输入相关信息的位置。"
+"显示所有参与者的空闲/忙碌状态。双击一名列表中的参与者将允许您输入他们的空闲/"
+"忙碌信息。"
