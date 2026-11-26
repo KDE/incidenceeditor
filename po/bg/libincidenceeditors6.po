@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: incidenceeditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"POT-Creation-Date: 2026-11-26 01:05+0000\n"
 "PO-Revision-Date: 2026-08-13 08:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1263,15 +1263,15 @@ msgctxt "@info"
 msgid "Please enter a summary."
 msgstr "Моля, въведете описание:"
 
-#: individualmailcomponentfactory.h:55 individualmailcomponentfactory.h:62
-#: individualmailcomponentfactory.h:68
+#: individualmailcomponentfactory.h:73 individualmailcomponentfactory.h:82
+#: individualmailcomponentfactory.h:90
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "Изпращане на имейл"
 
-#: individualmailcomponentfactory.h:56 individualmailcomponentfactory.h:63
-#: individualmailcomponentfactory.h:69
+#: individualmailcomponentfactory.h:74 individualmailcomponentfactory.h:83
+#: individualmailcomponentfactory.h:91
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"

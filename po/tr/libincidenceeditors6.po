@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"POT-Creation-Date: 2026-11-26 01:05+0000\n"
 "PO-Revision-Date: 2026-11-23 18:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1265,15 +1265,15 @@ msgctxt "@info"
 msgid "Please enter a summary."
 msgstr "Lütfen bir özet girin."
 
-#: individualmailcomponentfactory.h:55 individualmailcomponentfactory.h:62
-#: individualmailcomponentfactory.h:68
+#: individualmailcomponentfactory.h:73 individualmailcomponentfactory.h:82
+#: individualmailcomponentfactory.h:90
 #, kde-format
 msgctxt "@action:button dialog positive answer"
 msgid "Send Email"
 msgstr "E-posta Gönder"
 
-#: individualmailcomponentfactory.h:56 individualmailcomponentfactory.h:63
-#: individualmailcomponentfactory.h:69
+#: individualmailcomponentfactory.h:74 individualmailcomponentfactory.h:83
+#: individualmailcomponentfactory.h:91
 #, kde-format
 msgctxt "@action:button dialog negative answer"
 msgid "Do Not Send"
