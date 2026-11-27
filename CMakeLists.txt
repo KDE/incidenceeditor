@@ -149,6 +149,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX INCIDENCEEDITOR
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 if(ECM_VERSION VERSION_GREATER_EQUAL "6.33.0")
     add_definitions(-DQT_LEAN_HEADERS=2)
+    add_definitions(-DQT_NO_QPAIR)
 endif()
 add_definitions(-DQT_NO_JAVA_STYLE_ITERATORS)
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
